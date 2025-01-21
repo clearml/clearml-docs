@@ -24,7 +24,8 @@ See how to manage dataset version mask labels pythonically [here](dataset.md#man
 
 In the UI, you can view the mapping in a dataset version's [Metadata](webapp/webapp_datasets_versioning.md#metadata) tab.
 
-![Dataset metadata panel](../img/hyperdatasets/dataset_metadata.png)
+![Dataset metadata panel](../img/hyperdatasets/dataset_metadata.png#light-mode-only)
+![Dataset metadata panel](../img/hyperdatasets/dataset_metadata_dark.png#dark-mode-only)
 
 When viewing a frame with a mask corresponding with the version's mask-label mapping, the UI arbitrarily assigns a color 
 to each label. The color assignment can be [customized](webapp/webapp_datasets_frames.md#labels).
@@ -32,12 +33,14 @@ to each label. The color assignment can be [customized](webapp/webapp_datasets_f
 For example:
 * Original frame image:
 
-  ![Frame without mask](../img/hyperdatasets/dataset_pixel_masks_1.png)
+  ![Frame without mask](../img/hyperdatasets/dataset_pixel_masks_1.png#light-mode-only)
+  ![Frame without mask](../img/hyperdatasets/dataset_pixel_masks_1_dark.png#dark-mode-only)
 
 * Frame image with the semantic segmentation mask enabled. Labels are applied according to the dataset version's 
   mask-label mapping:
 
-  ![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2.png)
+  ![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2.png#light-mode-only)
+![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2_dark.png#dark-mode-only)
 
 The frame's sources array contains a masks list of dictionaries that looks something like this:
 
@@ -75,11 +78,13 @@ desired sections of the source are visible.
 For example:
 * Original frame:
   
-  ![Maskless frame](../img/hyperdatasets/dataset_alpha_masks_1.png)
+  ![Maskless frame](../img/hyperdatasets/dataset_alpha_masks_1.png#light-mode-only)
+  ![Maskless frame](../img/hyperdatasets/dataset_alpha_masks_1_dark.png#dark-mode-only)
 
 * Same frame with an alpha channel mask, emphasizing the troll doll:
   
-  ![Alpha mask frame](../img/hyperdatasets/dataset_alpha_masks_2.png)
+  ![Alpha mask frame](../img/hyperdatasets/dataset_alpha_masks_2.png#light-mode-only)
+  ![Alpha mask frame](../img/hyperdatasets/dataset_alpha_masks_2_dark.png#dark-mode-only)
 
 
 The frame's sources array contains a masks list of dictionaries that looks something like this:

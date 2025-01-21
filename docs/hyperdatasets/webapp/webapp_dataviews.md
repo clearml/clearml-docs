@@ -97,11 +97,13 @@ Select multiple Dataviews, then use either the context menu, or the batch action
 operations on the selected Dataviews. The context menu shows the number of Dataviews that can be affected by each action. 
 The same information can be found in the batch action bar, in a tooltip that appears when hovering over an action icon. 
 
-![Dataviews table batch operations](../../img/hyperdatasets/webapp_dataviews_context_menu.png)
+![Dataviews table batch operations](../../img/hyperdatasets/webapp_dataviews_context_menu.png#light-mode-only)
+![Dataviews table batch operations](../../img/hyperdatasets/webapp_dataviews_context_menu_dark.png#dark-mode-only)
 
 ## Creating a Dataview 
 
 Create a Dataview by clicking the **+ NEW DATAVIEW** button at the top right of the table, which opens a 
 **NEW DATAVIEW** window. 
 
-![New Dataview window](../../img/webapp_dataview_new.png)
+![New Dataview window](../../img/hyperdatasets/webapp_dataview_new.png#light-mode-only)
+![New Dataview window](../../img/hyperdatasets/webapp_dataview_new_dark.png#dark-mode-only)

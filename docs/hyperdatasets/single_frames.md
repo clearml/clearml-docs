@@ -147,7 +147,8 @@ object annotations, its metadata, and other details.
 
 This image shows a SingleFrame in the ClearML Enterprise WebApp (UI) [frame viewer](webapp/webapp_datasets_frames.md#frame-viewer). 
     
-![image](../img/hyperdatasets/frame_overview_01.png)
+![SingleFrame in WebApp](../img/hyperdatasets/frame_overview_01.png#light-mode-only)
+![SingleFrame in WebApp](../img/hyperdatasets/frame_overview_01_dark.png#dark-mode-only)
 
 </Collapsible>
 

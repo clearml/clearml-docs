@@ -7,14 +7,16 @@ of frames and enables viewing SingleFrames and FramesGroups, and editing SingleF
 Before opening the frame viewer, you can filter the frames by applying [simple](webapp_datasets_versioning.md#simple-frame-filtering) or [advanced](webapp_datasets_versioning.md#advanced-frame-filtering) 
 filtering logic. 
 
-![Dataset page](../../img/hyperdatasets/web-app/dataset_versions.png)
+![Dataset page](../../img/hyperdatasets/dataset_versions.png#light-mode-only)
+![Dataset page](../../img/hyperdatasets/dataset_versions_dark.png#dark-mode-only)
 
 ## Frame Viewer
 
 Use the frame viewer to view and edit annotations (ROIs and frame labels), frame details (see [frames](../frames.md)), 
 and frame metadata, as well as view frame masks of your dataset version frames.
 
-![Frame viewer](../../img/hyperdatasets/web-app/dataset_example_frame_editor.png)
+![Frame viewer](../../img/hyperdatasets/dataset_example_frame_editor.png#light-mode-only)
+![Frame viewer](../../img/hyperdatasets/dataset_example_frame_editor_dark.png#dark-mode-only)
 
 ### Frame Viewer Controls
 
@@ -93,13 +95,15 @@ Viewing and editing frames in a FrameGroup is similar to viewing and editing Sin
 Click the FrameGroup in the Hyper-Dataset. In the frame viewer, select SingleFrame to view / modify from 
 a dropdown list in the **Current Source** section.
 
-![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01.png)
+![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01.png#light-mode-only)
+![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01_dark.png#dark-mode-only)
 
 If an annotation applies to all frames in a FrameGroup, it is displayed with a `Multi Source` indicator:
 
 <div class="max-w-50">
 
-![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation.png)
+![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation.png#light-mode-only)
+![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation_dark.png#dark-mode-only)
 
 </div>
 

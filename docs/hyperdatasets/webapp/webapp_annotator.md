@@ -7,7 +7,8 @@ Use the Annotations page to access and manage annotation Tasks.
 Use annotation tasks to efficiently organize the annotation of frames in Dataset versions and manage the work of annotators 
 (see [Annotating Images and Videos](#annotating-images-and-video)).
 
-![Annotations page](../../img/annotation_page.png) 
+![Annotations page](../../img/hyperdatasets/annotation_page.png#light-mode-only)
+![Annotations page](../../img/hyperdatasets/annotation_page_dark.png#dark-mode-only) 
 
 Click on an annotation task card to open the frame viewer, where you can view the task's frames and annotate them.
 
@@ -15,7 +16,12 @@ Click on an annotation task card to open the frame viewer, where you can view th
 Click <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> on the top right 
 of an annotation task card to open its context menu and access annotation task actions.  
 
-![Annotation task card](../../img/annotation_task_card.png)
+<div class="max-w-50">
+
+![Annotation task card](../../img/hyperdatasets/annotation_task_card.png#light-mode-only)
+![Annotation task card](../../img/hyperdatasets/annotation_task_card_dark.png#dark-mode-only)
+
+</div>
 
 * **Annotate** - Go to annotation task frame viewer
 * **Info** - View annotation task's definitions: dataset versions, filters, and frame iteration specification
@@ -32,7 +38,8 @@ Sort the annotation tasks by either using **RECENT** or **NAME** option.
 
 ## Creating Annotation Tasks
 
-![Annotation task creation modal](../../img/hyperdatasets/annotation_task_01.png)
+![Annotation task creation modal](../../img/hyperdatasets/annotation_task_01.png#light-mode-only)
+![Annotation task creation modal](../../img/hyperdatasets/annotation_task_01_dark.png#dark-mode-only)
 
 **To create an annotation task:**
 

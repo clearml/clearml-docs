@@ -29,4 +29,5 @@ on the experiment that will be the new base.
 * Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base experiment and drag it all the way to the left
 
 
-![Dataview comparison](../../img/hyperdatasets/web-app/compare_dataviews.png)
+![Dataview comparison](../../img/hyperdatasets/compare_dataviews.png#light-mode-only)
+![Dataview comparison](../../img/hyperdatasets/compare_dataviews_dark.png#dark-mode-only)

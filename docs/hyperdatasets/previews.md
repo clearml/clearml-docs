@@ -90,8 +90,10 @@ The following is an example of preview metadata.
 
 Here's an example of Previews in the ClearML Enterprise WebApp (UI). Each thumbnail is a Preview:
 
-![Previews](../img/hyperdatasets/web-app/dataset_versions.png)
+![Previews](../img/hyperdatasets/dataset_versions.png#light-mode-only)
+![Previews](../img/hyperdatasets/dataset_versions_dark.png#dark-mode-only)
 
 If the preview's `uri` is for a video, the thumbnail will display the video with video controls:
 
-![Video previews](../img/hyperdatasets/video_preview.png)
+![Video previews](../img/hyperdatasets/video_preview.png#light-mode-only)
+![Video previews](../img/hyperdatasets/video_preview_dark.png#dark-mode-only)
