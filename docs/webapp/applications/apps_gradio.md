@@ -37,7 +37,9 @@ Once you start a Gradio launcher instance, you can view the following informatio
 * Live preview of the Gradio app
 * Console Log - The console log shows the launcher instance's activity, including server setup progress, server status 
   changes
- 
+
+![Gradio Dashboard](../../img/apps_gradio.png#light-mode-only)
+![Gradio Dashboard](../../img/apps_gradio_dark.png#dark-mode-only) 
 
 ## Gradio Launcher Instance Configuration
 When configuring a new Gradio launcher instance, you can fill in the required parameters or reuse the configuration of 

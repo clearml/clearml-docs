@@ -45,7 +45,8 @@ Once you start a Model Deployment instance, you can view the following informati
 * Console log - The console log shows the app instance's console output: setup progress, status changes, error messages,
 etc.
 
-![Model Deployment App](../../img/apps_model_deployment.png)
+![Model Deployment App](../../img/apps_model_deployment.png#light-mode-only)
+![Model Deployment App](../../img/apps_model_deployment_dark.png#dark-mode-only)
 
 ## Model Deployment Instance Configuration
 
@@ -144,4 +145,5 @@ instance task will be enqueued (make sure an agent is assigned to that queue)
 * Export Configuration - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![Model Deployment app form](../../img/apps_model_deployment_form.png)
+![Model Deployment app form](../../img/apps_model_deployment_form.png#light-mode-only)
+![Model Deployment app form](../../img/apps_model_deployment_form_dark.png#dark-mode-only)

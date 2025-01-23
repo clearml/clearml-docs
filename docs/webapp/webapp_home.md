@@ -9,7 +9,8 @@ The **Dashboard** provides the following options:
 * Open the [**Orchestration**](webapp_workers_queues.md) tab to autoscale, monitor, and manage your resource usage and 
   worker queues.
 
-![Dashboard](../img/webapp_dashboard.png)
+![Dashboard](../img/webapp_dashboard.png#light-mode-only)
+![Dashboard](../img/webapp_dashboard_dark.png#dark-mode-only)
 
 **To select a project, experiment, or model:**
 

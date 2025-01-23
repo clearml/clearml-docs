@@ -31,7 +31,8 @@ Reports are editable Markdown documents, supporting:
 * Embedded images uploaded from your computer
 * Embedded ClearML task, model, and [app](applications/apps_overview.md) content
 
-![Report](../img/webapp_report.png)
+![Report](../img/webapp_report.png#light-mode-only)
+![Report](../img/webapp_report_dark.png#dark-mode-only)
 
 Publishing a report locks it for future editing, so you can preserve its contents. You can also share your reports, 
 download a PDF copy, or simply copy the MarkDown content and reuse in your editor of choice.
@@ -49,16 +50,19 @@ To add a graphic resource:
 object comparison) 
 2. Hover over the resource and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Generate embed code" className="icon size-md space-sm" />. 
    
-   ![Reports step 2](../img/reports_step_2.png)
+   ![Reports step 2](../img/reports_step_2.png#light-mode-only)
+   ![Reports step 2](../img/reports_step_2_dark.png#dark-mode-only)
 
    Click `Embed in ClearML report`. This generates the embed code for accessing the resource, and copies 
    it to your clipboard. 
  
-   ![Reports step 2a](../img/reports_step_2a.png)
+   ![Reports step 2a](../img/reports_step_2a.png#light-mode-only)
+   ![Reports step 2a](../img/reports_step_2a_dark.png#dark-mode-only)
 
 3. Return to your report page and paste the code snippet
 
-   ![Reports step 3](../img/reports_step_3.png)
+   ![Reports step 3](../img/reports_step_3.png#light-mode-only)
+   ![Reports step 3](../img/reports_step_3_dark.png#dark-mode-only)
 
 Once embedded in the report, you can return to the resource's original location (e.g. comparison page, experiment/model/app page) 
 by clicking <img src="/docs/latest/icons/ico-resource-return.svg" alt="Return to resource" className="icon size-md" />.
@@ -171,14 +175,16 @@ or in List view <img src="/docs/latest/icons/ico-flat-view.svg" alt="List view" 
 view, all reports are shown side-by-side. In Project view, reports are organized according to their projects, and 
 top-level projects are displayed. Click on a project card to view the project's reports.
 
-![Report page](../img/webapp_report_page.png)
+![Report page](../img/webapp_report_page.png#light-mode-only)
+![Report page](../img/webapp_report_page_dark.png#dark-mode-only)
 
 ## Project Cards
 In Project view, project cards display a project's summarized report information:
 
 <div class="max-w-50">
 
-![Report project card](../img/webapp_report_project_card.png)
+![Report project card](../img/webapp_report_project_card.png#light-mode-only)
+![Report project card](../img/webapp_report_project_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -190,7 +196,8 @@ In List view, the report cards display summarized report information:
 
 <div class="max-w-50">
 
-![report card](../img/webapp_report_card.png)
+![report card](../img/webapp_report_card.png#light-mode-only)
+![report card](../img/webapp_report_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -209,7 +216,8 @@ of a report card to open its context menu and access report actions:
 
 <div class="max-w-50">
 
-![Report card context menu](../img/webapp_report_card_context_menu.png)
+![Report card context menu](../img/webapp_report_card_context_menu.png#light-mode-only)
+![Report card context menu](../img/webapp_report_card_context_menu_dark.png#dark-mode-only)
 
 </div>
 
@@ -225,7 +233,8 @@ of a report card to open its context menu and access report actions:
 To create a report, click the **+ NEW REPORT** button in the top right of the page, 
 which will open a **New Report** modal.
 
-![New project modal](../img/webapp_report_new_report.png)
+![New project modal](../img/webapp_report_new_report.png#light-mode-only)
+![New project modal](../img/webapp_report_new_report_dark.png#dark-mode-only)
 
 ## MarkDown Formatting Quick Guide
 
@@ -236,9 +245,9 @@ The following is a quick reference for the MarkDown syntax that can be used in C
 To create headings, add `#` in front of the phrases that you want to turn into
 headings. The number of `#` signs correspond to the heading level (i.e. `#` for level-1 heading, `##` for level-2, etc.): 
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code># H1</code><br/><code>## H2</code><br/><code>### H3</code><br/><code>#### H4</code><br/><code>##### H5</code><br/><code>###### H6</code>|![Report headings](../img/reports_headings.png)|
+| MarkDown | Rendered Output                                                                                                                     |
+|---|-------------------------------------------------------------------------------------------------------------------------------------|
+| <code># H1</code><br/><code>## H2</code><br/><code>### H3</code><br/><code>#### H4</code><br/><code>##### H5</code><br/><code>###### H6</code>| ![Report headings](../img/reports_headings.png#light-mode-only) ![Report headings](../img/reports_headings_dark.png#dark-mode-only) |
 
 ### Text Emphasis
 
@@ -256,9 +265,9 @@ The following table presents the text format options:
 To create a blockquote, add a `>` before each line of the quote. Nest blockquotes by adding additional 
 `>` signs before each line of the nested blockquote.  
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>\> Blockquote<br/>\>\> Nested quote 1<br/>\>\>\> Nested quote 2</code>|![Report Blockquotes](../img/reports_blockquotes.png)|
+| MarkDown | Rendered Output                                                                                                                                 |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>\> Blockquote<br/>\>\> Nested quote 1<br/>\>\>\> Nested quote 2</code>| ![Report Blockquotes](../img/reports_blockquotes.png#light-mode-only) ![Report Blockquotes](../img/reports_blockquotes_dark.png#dark-mode-only) |
 
 ### Lists
 
@@ -267,9 +276,9 @@ To create a blockquote, add a `>` before each line of the quote. Nest blockquote
 Create an ordered list by numbering the list items with numbers followed by periods. The list items do not have to be numbered 
 correctly, but the list will be rendered numerically starting with `1.`.
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>1. Item 1<br/>2. Item 2<br/>1. Item 3<br/>1. Item 4</code>|![Report ordered list](../img/reports_ordered_list.png)|
+| MarkDown | Rendered Output                                                                                                                                     |
+|---|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>1. Item 1<br/>2. Item 2<br/>1. Item 3<br/>1. Item 4</code>| ![Report ordered list](../img/reports_ordered_list.png#light-mode-only) ![Report ordered list](../img/reports_ordered_list_dark.png#dark-mode-only) |
 
 #### Unordered List
 
@@ -280,9 +289,9 @@ You can also use checkmarks (`* [x]`), following any of the bullet signs.
 
 To nest lists, indent nested items 2 spaces more than their parent list item.
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>+ Item 1<br/>+ Item 2<br/>&nbsp;&nbsp;- Sub-item a:<br/>&nbsp;&nbsp;&nbsp;&nbsp;\* Sub-sub-item x<br/>&nbsp;&nbsp;&nbsp;&nbsp;+ Sub-sub-item y<br/>&nbsp;&nbsp;&nbsp;&nbsp;- Sub-sub-item z<br/>\* [x] A checkmark </code>|![Report unordered list](../img/reports_unordered_list.png)|
+| MarkDown | Rendered Output                                                                                                                                             |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>+ Item 1<br/>+ Item 2<br/>&nbsp;&nbsp;- Sub-item a:<br/>&nbsp;&nbsp;&nbsp;&nbsp;\* Sub-sub-item x<br/>&nbsp;&nbsp;&nbsp;&nbsp;+ Sub-sub-item y<br/>&nbsp;&nbsp;&nbsp;&nbsp;- Sub-sub-item z<br/>\* [x] A checkmark </code>| ![Report unordered list](../img/reports_unordered_list.png#light-mode-only) ![Report unordered list](../img/reports_unordered_list_dark.png#dark-mode-only) |
 
 
 ### Tables
@@ -298,7 +307,8 @@ MarkDown code for a table looks like this:
 
 The rendered output should look like this:
 
-![Reports table](../img/reports_table.png)
+![Reports table](../img/reports_table.png#light-mode-only)
+![Reports table](../img/reports_table_dark.png#dark-mode-only)
 
 Add the table column names in the first row; each name is preceded and followed by a pipe (`|`).
 In the second row, add sets of at least three hyphens (`---`) for each column, and add a pipe before and after each set 
@@ -403,9 +413,9 @@ It is rendered like this:
 
 Create horizontal lines using three hyphens (`---`), underscores (`___`), or asterisks (`***`): 
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>---<br/><br/>___<br/><br/>***</code>|![Reports horizontal rules](../img/reports_horizontal_rules.png)|
+| MarkDown | Rendered Output                                                                                                                                                       |
+|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>---<br/><br/>___<br/><br/>***</code>| ![Reports horizontal rules](../img/reports_horizontal_rules.png#light-mode-only) ![Reports horizontal rules](../img/reports_horizontal_rules_dark.png#dark-mode-only) |
 
 
 ### Images

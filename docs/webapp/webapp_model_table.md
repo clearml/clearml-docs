@@ -22,7 +22,8 @@ and choosing one of these options:
 
 The downloaded data consists of the currently displayed table columns.
 
-![Models table](../img/webapp_models_01.png)
+![Models table](../img/webapp_models_01.png#light-mode-only)
+![Models table](../img/webapp_models_01_dark.png#dark-mode-only)
 
 ## Models Table Columns
 
@@ -108,7 +109,8 @@ Select multiple models, then use either the context menu, or the bar that appear
 operations on the selected models. The context menu shows the number of models that can be affected by each action. 
 The same information can be found in the bottom menu, in a tooltip that appears when hovering over an action icon.   
 
-![Models table batch operations](../img/webapp_models_table_batch_operations.png)
+![Models table batch operations](../img/webapp_models_table_batch_operations.png#light-mode-only)
+![Models table batch operations](../img/webapp_models_table_batch_operations_dark.png#dark-mode-only)
 
 ## Tagging Models
 

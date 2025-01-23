@@ -17,12 +17,14 @@ The comparison page opens in the **DETAILS** tab, with the models compared [side
 Click the `MODELS` button to view your currently compared models. Click `X` on a listed model to remove
 it from the comparison.
 
-![Models list](../img/webapp_compare_model_select_1.png)
+![Models list](../img/webapp_compare_model_select_1.png#light-mode-only)
+![Models list](../img/webapp_compare_model_select_1_dark.png#dark-mode-only)
 
 You can add/remove models to your comparison:
 1. Click the `+` button in any of the comparison tabs. This opens up a window with a model table with the currently 
 compared models at the top.
-   ![Adding models](../img/webapp_compare_model_select_2.png)
+   ![Adding models](../img/webapp_compare_model_select_2.png#light-mode-only)
+![Adding models](../img/webapp_compare_model_select_2_dark.png#dark-mode-only)
 1. Find the models to add by sorting and [filtering](webapp_model_table.md#filtering-columns) the models with the 
 appropriate column header controls. Alternatively, use the search bar to find models by name.
 1. Select models to include in the comparison (and/or clear the selection of any models you wish to remove).
@@ -62,7 +64,8 @@ on the model that will be the new base.
 The differences between the models are highlighted. You can obscure identical fields by switching on the
 **Hide Identical Fields** toggle.
 
-![Text comparison](../img/webapp_compare_models_text.png)
+![Text comparison](../img/webapp_compare_models_text.png#light-mode-only)
+![Text comparison](../img/webapp_compare_models_text_dark.png#dark-mode-only)
 
 ### Tabular Scalar Comparison 
 The **Scalars** tab (**Values** view) lays out the models' reported metric values in a table: a row per metric/variant and a 
@@ -75,7 +78,8 @@ You can download the scalar comparison table as a CSV file by clicking <img src=
 
 Switch on the **Show row extremes** toggle to highlight each variant's maximum and minimum values.  
 
-![side-by-side scalar comparison](../img/webapp_compare_models_scalar_table.png)
+![side-by-side scalar comparison](../img/webapp_compare_models_scalar_table.png#light-mode-only)
+![side-by-side scalar comparison](../img/webapp_compare_models_scalar_table_dark.png#dark-mode-only)
 
 
 ### Graphic Comparison
@@ -86,15 +90,18 @@ metric/variant combination per compared model.
 Line, scatter, box, and bar graphs are compared by a single plot per metric/variant into which the plots of all compared 
 models are combined.
 
-![Merged plots](../img/webapp_compare_models_merge_plots.png)
+![Merged plots](../img/webapp_compare_models_merge_plots.png#light-mode-only)
+![Merged plots](../img/webapp_compare_models_merge_plots_dark.png#dark-mode-only)
 
 Other plot types are displayed separately for each model.
 
-![Side-by-side plots](../img/webapp_compare_models_side_plots.png)
+![Side-by-side plots](../img/webapp_compare_models_side_plots.png#light-mode-only)
+![Side-by-side plots](../img/webapp_compare_models_side_plots_dark.png#dark-mode-only)
 
 All single value scalars are plotted into a single clustered bar chart under the "Summary" title, where each cluster 
 represents a reported metric, and each bar in the cluster represents a model.
 
-![Single scalar comparison](../img/webapp_compare_model_single_scalars.png)
+![Single scalar comparison](../img/webapp_compare_model_single_scalars.png#light-mode-only)
+![Single scalar comparison](../img/webapp_compare_model_single_scalars_dark.png#dark-mode-only)
 
 For better plot analysis, see [Plot Controls](webapp_exp_track_visual.md#plot-controls).

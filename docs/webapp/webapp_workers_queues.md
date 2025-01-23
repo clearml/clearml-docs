@@ -42,7 +42,8 @@ For more information about how autoscalers work, see the [Cloud Autoscaling Over
 For more information about a specific autoscaler, see [AWS Autoscaler](applications/apps_aws_autoscaler.md)
 and/or [GCP Autoscaler](applications/apps_gcp_autoscaler.md).
 
-![Cloud autoscalers](../img/webapp_orchestration_autoscalers.png)
+![Cloud autoscalers](../img/webapp_orchestration_autoscalers.png#light-mode-only)
+![Cloud autoscalers](../img/webapp_orchestration_autoscalers_dark.png#dark-mode-only)
 
 ## Workers
 
@@ -76,7 +77,8 @@ The worker's details panel includes the following two tabs:
     * Next experiment - The next experiment available in this queue
     * In Queue - The number of experiments currently enqueued
 
-![Worker management](../img/agents_queues_resource_management.png)
+![Worker management](../img/agents_queues_resource_management.png#light-mode-only)
+![Worker management](../img/agents_queues_resource_management_dark.png#dark-mode-only)
 
 
 
@@ -98,12 +100,14 @@ To create a new queue - Click **+ NEW QUEUE** (top left).
 Hover over a queue and click <img src="/docs/latest/icons/ico-copy-to-clipboard.svg" alt="Copy" className="icon size-md space-sm" /> 
 to copy the queue's ID. 
 
-![image](../img/4100.png)
+![Queues](../img/4100.png#light-mode-only)
+![Queues](../img/4100_dark.png#dark-mode-only)
 
 Right-click on a queue or hover and click its action button <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" /> 
 to access queue actions:
 
-![Queue context menu](../img/webapp_workers_queues_context.png)
+![Queue context menu](../img/webapp_workers_queues_context.png#light-mode-only)
+![Queue context menu](../img/webapp_workers_queues_context_dark.png#dark-mode-only)
    
 * Delete - Delete the queue. Any pending tasks will be dequeued.
 * Rename - Change the queue's name
@@ -130,7 +134,8 @@ The queue's details panel includes the following two tabs:
 Click on an experiment's menu button <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" /> 
 in the **EXPERIMENTS** tab to reorganize your queue:
 
-![Queue experiment's menu](../img/workers_queues_experiment_actions.png)  
+![Queue experiment's menu](../img/workers_queues_experiment_actions.png#light-mode-only)
+![Queue experiment's menu](../img/workers_queues_experiment_actions_dark.png#dark-mode-only)  
   
 * Move a task to the top or bottom of the queue
 * Move the task to a different queue

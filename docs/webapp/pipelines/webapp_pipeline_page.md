@@ -21,14 +21,16 @@ Filter the pipelines to find the one you're looking for more easily. These filte
   * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
 
 
-![Pipelines page](../../img/webapp_pipeline_table.png)
+![Pipelines page](../../img/webapp_pipeline_table.png#light-mode-only)
+![Pipelines page](../../img/webapp_pipeline_table_dark.png#dark-mode-only)
 
 ## Project Cards
 In Project view, project cards display a project's summarized pipeline information:
 
 <div class="max-w-50">
 
-![Pipeline project card](../../img/webapp_pipeline_project_card.png)
+![Pipeline project card](../../img/webapp_pipeline_project_card.png#light-mode-only)
+![Pipeline project card](../../img/webapp_pipeline_project_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -41,7 +43,8 @@ In List view, the pipeline cards display summarized pipeline information:
 
 <div class="max-w-50">
 
-![Pipeline card](../../img/webapp_pipeline_card.png)
+![Pipeline card](../../img/webapp_pipeline_card.png#light-mode-only)
+![Pipeline card](../../img/webapp_pipeline_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -58,7 +61,8 @@ of a pipeline card to open its context menu and access pipeline actions.
 
 <div class="max-w-50">
 
-![Project context menu](../../img/webapp_pipeline_context_menu.png)
+![Project context menu](../../img/webapp_pipeline_context_menu.png#light-mode-only)
+![Project context menu](../../img/webapp_pipeline_context_menu_dark.png#dark-mode-only)
 
 </div>
 

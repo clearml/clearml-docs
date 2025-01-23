@@ -12,7 +12,8 @@ Use the orchestration dashboard to monitor all of your available and in-use comp
 * Resource history event log
 * Detailed resource performance metrics
 
-![Orchestration Dashboard](../img/webapp_orchestration_dash.png)
+![Orchestration Dashboard](../img/webapp_orchestration_dash.png#light-mode-only)
+![Orchestration Dashboard](../img/webapp_orchestration_dash_dark.png#dark-mode-only)
 
 ## Resource Categories and Groups
 The orchestration dashboard shows your workers by groups and categories, specified by the following naming 
@@ -82,7 +83,8 @@ to access the worker's information panel.
 
 The table highlights values that cross user configured thresholds. 
 
-![Resource groups](../img/webapp_orch_dash_resource_groups.png)
+![Resource groups](../img/webapp_orch_dash_resource_groups.png#light-mode-only)
+![Resource groups](../img/webapp_orch_dash_resource_groups_dark.png#dark-mode-only)
 
 Click <img src="/docs/latest/icons/ico-tune.svg" alt="Tune" className="icon size-md" /> to define the threshold values. 
 
@@ -90,12 +92,18 @@ Click <img src="/docs/latest/icons/ico-tune.svg" alt="Tune" className="icon size
 The threshold values applied to the dashboard table affect all workspace users who view the page 
 :::
 
-![Threshold modal](../img/webapp_orch_dash_threshold_modal.png)
+<div class="max-w-50">
+
+![Threshold modal](../img/webapp_orch_dash_threshold_modal.png#light-mode-only)
+![Threshold modal](../img/webapp_orch_dash_threshold_modal_dark.png#dark-mode-only)
+
+</div>
 
 Clicking on a resource group opens the group's info panel and replace the **Overview** graph with that resource's usage
 history. 
 
-![Resource group info panel](../img/webapp_orch_dash_resource_group_info.png)
+![Resource group info panel](../img/webapp_orch_dash_resource_group_info.png#light-mode-only)
+![Resource group info panel](../img/webapp_orch_dash_resource_group_info_dark.png#dark-mode-only)
 
 The info panel displays the group's:
 * Total GPU count

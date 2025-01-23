@@ -9,7 +9,8 @@ projects in your workspace. Projects that contain nested subprojects are identif
 An exception is the **All Experiments** folder, which shows all projects' and subprojects' contents in a single, flat
 list.
 
-![Projects page](../img/webapp_project_page.png)
+![Projects page](../img/webapp_project_page.png#light-mode-only)
+![Projects page](../img/webapp_project_page_dark.png#dark-mode-only)
 
 If a project has any subprojects, clicking its folder will open its own project page. Access the projects' top-level 
 contents (i.e. experiments, models etc.) via the folder with the bracketed (`[ ]`) project name.
@@ -23,7 +24,8 @@ Project folders display summarized project information:
 
 <div class="max-w-50">
 
-![Project card](../img/webapp_project_card.png)
+![Project card](../img/webapp_project_card.png#light-mode-only)
+![Project card](../img/webapp_project_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -32,7 +34,8 @@ Project folders display summarized project information:
 
   <div class="max-w-50">
   
-  ![Subproject tab](../img/webapp_sub_project_card.png)
+  ![Subproject tab](../img/webapp_sub_project_card.png#light-mode-only)
+  ![Subproject tab](../img/webapp_sub_project_card_dark.png#dark-mode-only)
 
   </div>
   
@@ -47,7 +50,8 @@ are labeled with <img src="/docs/latest/icons/ico-ghost.svg" alt="Hidden project
 
 <br/>
 
-![Hidden project configuration](../img/settings_hidden_projects.png)
+![Hidden project configuration](../img/settings_hidden_projects.png#light-mode-only)
+![Hidden project configuration](../img/settings_hidden_projects_dark.png#dark-mode-only)
 
 </Collapsible>
 
@@ -56,7 +60,12 @@ are labeled with <img src="/docs/latest/icons/ico-ghost.svg" alt="Hidden project
 Click <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> on the top right
 of a project folder to open its context menu and access the following project actions:  
 
-![Project context menu](../img/webapp_projects_context_menu.png)
+<div class="max-w-50">
+
+![Project context menu](../img/webapp_projects_context_menu.png#light-mode-only)
+![Project context menu](../img/webapp_projects_context_menu_dark.png#dark-mode-only)
+
+</div>
 
 * **Edit** - Rename the project and/or modify its default output destination.
 * **New Project** - Create a new project (by default a subproject). 
@@ -75,7 +84,12 @@ action. For more information see [Custom UI Context Menu Actions](../deploying_c
 To create a project, click the **+ NEW PROJECT** button in the top right of the page or in a project's context menu, 
 which will open a **New Project** modal. 
 
-![New project modal](../img/webapp_projects_new_project.png)
+<div class="max-w-75">
+
+![New project modal](../img/webapp_projects_new_project.png#light-mode-only)
+![New project modal](../img/webapp_projects_new_project_dark.png#dark-mode-only)
+
+</div>
 
 * Project name
 * Create in - Where the project should be created, either as a top-level project (create in `Projects root`) or as a 

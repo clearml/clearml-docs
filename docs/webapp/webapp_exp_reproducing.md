@@ -25,7 +25,8 @@ have a parent, in which case the original task is set as the parent. Select `Set
 the original experiment to become the clone's parent. 
 :::
 
-![Clone modal](../img/webapp_clone.png)
+![Clone modal](../img/webapp_clone.png#light-mode-only)
+![Clone modal](../img/webapp_clone_dark.png#dark-mode-only)
 
 
 ## Resetting
@@ -36,7 +37,8 @@ To reset an experiment:
    ClearML file server, click the checkbox
 1. Click **Reset**
 
-![Reset modal](../img/webapp_reset.png)
+![Reset modal](../img/webapp_reset.png#light-mode-only)
+![Reset modal](../img/webapp_reset_dark.png#dark-mode-only)
 
 ## Final Steps 
 
