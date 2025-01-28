@@ -1,25 +1,25 @@
 ---
-title: Model Deployment
+title: vLLM Model Deployment
 ---
 
 :::important Enterprise Feature
-The Model Deployment App is available under the ClearML Enterprise plan.
+The vLLM Model Deployment App is available under the ClearML Enterprise plan.
 :::
 
-The Model Deployment application enables users to quickly deploy LLM models as networking services over a secure 
+The vLLM Model Deployment application enables users to quickly deploy LLM models as networking services over a secure 
 endpoint. This application supports various model configurations and customizations to optimize performance and resource 
-usage. The Model Deployment application serves your model on a machine of your choice. Once an app instance is running, 
+usage. The vLLM Model Deployment application serves your model on a machine of your choice. Once an app instance is running, 
 it serves your model through a secure, publicly accessible network endpoint. The app monitors endpoint activity and 
 shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway
-The Model Deployment app makes use of the ClearML Traffic Router which implements a secure, authenticated 
+The vLLM Model Deployment app makes use of the ClearML Traffic Router which implements a secure, authenticated 
 network endpoint for the model.
 
 If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.
 :::
 
-Once you start a Model Deployment instance, you can view the following information in its dashboard:
+Once you start a vLLM Model Deployment instance, you can view the following information in its dashboard:
 * Status indicator
   * <img src="/docs/latest/icons/ico-model-active.svg" alt="Active instance" className="icon size-md space-sm" /> - App instance is running and is actively in use
   * <img src="/docs/latest/icons/ico-model-loading.svg" alt="Loading instance" className="icon size-md space-sm" /> - App instance is setting up
@@ -45,11 +45,11 @@ Once you start a Model Deployment instance, you can view the following informati
 * Console log - The console log shows the app instance's console output: setup progress, status changes, error messages,
 etc.
 
-![Model Deployment App](../../img/apps_model_deployment.png)
+![vLLM Model Deployment App](../../img/apps_model_deployment.png)
 
-## Model Deployment Instance Configuration
+## vLLM Model Deployment Instance Configuration
 
-When configuring a new Model Deployment instance, you can fill in the required parameters or reuse the 
+When configuring a new vLLM Model Deployment instance, you can fill in the required parameters or reuse the 
 configuration of a previously launched instance. 
 
 Launch an app instance with the configuration of a previously launched instance using one of the following options:
@@ -67,8 +67,8 @@ to open the app's configuration form.
 * Import Configuration - Import an app instance configuration file. This will fill the instance launch form with the 
 values from the file, which can be modified before launching the app instance
 * Project name - ClearML Project Name
-* Task name - Name of ClearML Task for your Model Deployment app instance
-* Queue - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the Model Deployment app 
+* Task name - Name of ClearML Task for your vLLM Model Deployment app instance
+* Queue - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the vLLM Model Deployment app 
 instance task will be enqueued (make sure an agent is assigned to that queue)
 * Model - A ClearML Model ID or a HuggingFace model name (e.g. `openai-community/gpt2`)
 * Model Configuration
@@ -144,4 +144,4 @@ instance task will be enqueued (make sure an agent is assigned to that queue)
 * Export Configuration - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![Model Deployment app form](../../img/apps_model_deployment_form.png)
+![vLLM Model Deployment app form](../../img/apps_model_deployment_form.png)
