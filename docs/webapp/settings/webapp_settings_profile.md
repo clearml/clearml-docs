@@ -62,7 +62,7 @@ to switch to.
  
 ![Workspace configuration page](../../img/settings_workspace_configuration.png)
 
-### ClearML App Credentials
+### ClearML API Credentials
 
 Generate ClearML credentials, made up of an access and secret key pair, and insert them into your [configuration file](../../configs/clearml_conf.md) 
 or Jupyter Notebook to grant the ClearML SDK and the ClearML Agent API access to the server. 
@@ -73,7 +73,7 @@ You can create credentials for any workspace that you are a member of.
 
 1. In **WORKSPACE**, expand the desired workspace's panel (self-deployed ClearML Server users have one workspace)
 
-1. In **App Credentials**, click **+ Create new credentials**
+1. In **API Credentials**, click **+ Create new credentials**
 
 1. In the dialog that pops up, you can input a label for the new credentials 
 
@@ -108,7 +108,7 @@ Generate tokens providing API access to the AI Application Gateway endpoints:
 
 ### Changing Your Workspace Name
 To change the name of your own workspace, click **Edit workspace name**  <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> 
-(under App credentials) **>** modify the name **>** click <img src="/docs/latest/icons/ico-save.svg" alt="Check Mark" className="icon size-md" />. 
+(under API credentials) **>** modify the name **>** click <img src="/docs/latest/icons/ico-save.svg" alt="Check Mark" className="icon size-md" />. 
 
 ### Adding Users to Your Workspace
 
