@@ -1,5 +1,5 @@
 ---
-title: Storage Credentials 
+title: Storage Cleanup 
 ---
 
 :::important Enterprise Feature 
@@ -11,7 +11,7 @@ To enable ClearML to delete task artifacts stored in cloud storage when a task i
 * [AWS S3 Storage](#aws-s3-storage)
 * [Azure](#azure)
 
-![Storage Credentials page](../../img/webapp_settings_storage_credentials.png)
+![Storage Cleanup page](../../img/webapp_settings_storage_credentials.png)
 
 ## Google Cloud Storage
 Set up credentials for Google Cloud buckets: 
