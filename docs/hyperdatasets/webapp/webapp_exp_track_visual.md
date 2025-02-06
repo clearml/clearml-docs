@@ -14,7 +14,6 @@ In a task's page, go to the **DATAVIEWS** tab to view all the task's Dataview de
 * Input data [selection](#input) and [filtering](#filtering)
 * ROI [mapping](#mapping) (label translation)
 * [Label enumeration](#label-enumeration)
-* On-the-fly [data augmentation](#augmentation)
 * [Iteration controls](#iteration-control)
 
 ![Dataview tab](../../img/hyperdatasets/web-app/dataview_tab.png)
@@ -51,13 +50,6 @@ For detailed information, see [Mapping ROI labels](../dataviews.md#mapping-roi-l
 ### Label Enumeration
 
 Assign label enumeration in the **LABELS ENUMERATION** area.
-
-### Augmentation
-
-On-the-fly data augmentation applied to SingleFrames, which does not create new data. Apply data Augmentation in steps, 
-where each step is composed of a method, an operation, and a strength.
- 
-For detailed information, see [Data augmentation](../dataviews.md#data-augmentation).
 
 ### Iteration Control
 

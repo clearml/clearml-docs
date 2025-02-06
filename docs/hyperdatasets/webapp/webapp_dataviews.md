@@ -78,7 +78,7 @@ Access these actions with the context menu in any of the following ways:
 
 | ClearML Action | Description |
 |---|---|
-| Details | View Dataview details, including input datasets, label mapping, augmentation operations, and iteration control. Can also be accessed by double-clicking a Dataview in the Dataviews table. |
+| Details | View Dataview details, including input datasets, label mapping, and iteration control. Can also be accessed by double-clicking a Dataview in the Dataviews table. |
 | Archive | Move Dataview to the Dataview's archive. | 
 | Restore | Action available in the archive. Restore a Dataview to the active Dataviews table. |
 | Delete | Action available in the archive. Permanently delete a Dataview. |

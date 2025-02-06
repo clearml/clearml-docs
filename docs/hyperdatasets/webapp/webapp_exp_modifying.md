@@ -12,7 +12,6 @@ enables modifying [Dataviews](webapp_dataviews.md), including:
 * [Frame filtering](#filtering-frames)
 * [Label mapping](#mapping-labels-label-translation)
 * [Class label enumeration](#label-enumeration)
-* [Data augmentation](#data-augmentation)
 * [Input frame iteration controls](#iteration-controls)
 
 ## Selecting Dataviews
@@ -22,7 +21,7 @@ enables modifying [Dataviews](webapp_dataviews.md), including:
 * Create a new Dataview  
     
     * Click **+** and then follow the instructions below to select Hyper-Dataset versions, filter frames, map labels (label translation), 
-      and set label enumeration, data augmentation, and iteration controls.
+      and set label enumeration and iteration controls.
       
 * Select a different Dataview already associated with the task. 
     
@@ -118,22 +117,6 @@ Modify the label enumeration assigned to output models.
 
 1. Click **SAVE**.
 
-## Data Augmentation
-
-Modify the on-the-fly data augmentation applied to frame input from the select Hyper-Dataset versions and filtered by the frame filters. Data augmentation is applied in steps, where each step applies a method, operation, and strength.
- 
-For more detailed information, see [Data Augmentation](../dataviews.md#data-augmentation).
-
-**To modify data augmentation**
-
-1. In the **AUGMENTATION** section, click **EDIT**.
-
-    * Add (**+**) or edit an augmentation step - Select a **METHOD**, **OPERATION**, and **STRENGTH**.
-        
-    * Remove (<img src="/docs/latest/icons/ico-trash.svg" alt="Trash" className="icon size-md space-sm" />)  an augmentation step.
-    
-1. Click **SAVE**.    
-    
 ## Iteration Controls
 
 Modify the frame iteration performed by the Dataview to control the order, number, timing, and reproducibility of frames 

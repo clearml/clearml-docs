@@ -71,40 +71,6 @@ ROI label mapping (label translation) applies to the new model. For example, app
 Define class labels for the new model and assign integers to each in order to maintain data conformity across multiple 
 codebases and datasets. It is important to set enumeration values for all labels of importance. 
 
-## Data Augmentation
-
-On-the-fly data augmentation is applied to SingleFrames, transforming images without creating new data. Apply data augmentation 
-in steps, where each step is composed of a method, an operation, and a strength as follows: 
-
-* **Affine** augmentation method - Transform an image's geometric shape to another position on a 2-dimensional plane. 
-  Use any of the following operations:
-
-    * Rotate
-    * Reflect-horiz - Flip images horizontally
-    * Reflect-vert - Flip images vertically
-    * Scale
-    * Shear - Skew
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the task runs again, and 
-      the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
-    
-* **Pixel** augmentation method - Transform images by modifying pixel values while retaining shape and perspective.  
-  Use any of the following operations:
-
-    * Blur - Gaussian smoothing 
-    * Noise - ClearML Enterprise's own noise augmentation consisting of: 
-      * **high** noise - like snow on analog televisions with a weak TV signal 
-      * **low** noise - like a low resolution image magnified in localized areas on the image
-    * Recolor - using an internal RGB lookup-table
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the task runs again, and 
-      the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
-    
-* Strength - A number applied to adjust the degree of transformation. The recommended strengths are the following:
-
-    * 0.0 - No effect
-    * 0.5 - Low (weak)
-    * 1.0 - Medium (recommended)
-    * 2.0 - High (strong)
-
 ## Iteration Control
 
 The input data **iteration control** settings determine the order, number, timing, and reproducibility of the Dataview iterating 

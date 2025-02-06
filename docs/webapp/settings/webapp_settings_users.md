@@ -19,6 +19,9 @@ Each row of the table includes:
 * If the user's invitation is pending, the date the user was added
 * [User groups](#user-groups) (ClearML Enterprise feature)
 
+Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-md" />
+to find a specific user by their name, email, or user ID. 
+
 ![Users table](../../img/settings_user_table.png#light-mode-only)
 ![Users table](../../img/settings_user_table_dark.png#dark-mode-only)
 
@@ -67,6 +70,9 @@ Each row of the table includes:
 * User ID
 * Credentials - Number of credentials currently available to the account
 * Last active time
+
+Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-md" /> 
+to find a specific service account by its name or ID.
 
 Hover over a service account in the table to **Edit** or **Delete** it.
 
@@ -163,6 +169,8 @@ The system includes three pre-configured groups that can't be removed:
 * `Queue admins` - Can create / delete / rename queues
 
 The user group table lists all the active user groups. Each row includes a group's name, description, member list, and ID. 
+Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-md" /> 
+to find a specific user group by its name, description, or ID.
 
 ![User Management Page](../../img/settings_user_management_table.png#light-mode-only)
 ![User Management Page](../../img/settings_user_management_table_dark.png#dark-mode-only)
