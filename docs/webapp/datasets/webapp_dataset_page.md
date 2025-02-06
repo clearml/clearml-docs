@@ -25,7 +25,8 @@ Filter the datasets to find the one you're looking for more easily. These filter
   respectively. These options appear on the top of the tag list.
   * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
 
-![Dataset page](../../img/webapp_dataset_page.png)
+![Dataset page](../../img/webapp_dataset_page.png#light-mode-only)
+![Dataset page](../../img/webapp_dataset_page_dark.png#dark-mode-only)
 
 ## Project Cards
 
@@ -33,7 +34,8 @@ In Project view, project cards display a project's summarized dataset informatio
 
 <div class="max-w-50">
 
-![Project card](../../img/webapp_dataset_project_card.png)
+![Project card](../../img/webapp_dataset_project_card.png#light-mode-only)
+![Project card](../../img/webapp_dataset_project_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -51,7 +53,8 @@ In List view, the dataset cards display summarized dataset information:
 
 <div class="max-w-50">
 
-![Dataset card](../../img/webapp_dataset_card.png)
+![Dataset card](../../img/webapp_dataset_card.png#light-mode-only)
+![Dataset card](../../img/webapp_dataset_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -70,7 +73,8 @@ of a dataset card to open its context menu and access dataset actions.
 
 <div class="max-w-50">
 
-![Dataset context menu](../../img/webapp_dataset_card_context_menu.png)
+![Dataset context menu](../../img/webapp_dataset_card_context_menu.png#light-mode-only)
+![Dataset context menu](../../img/webapp_dataset_card_context_menu_dark.png#dark-mode-only)
 
 </div>
 

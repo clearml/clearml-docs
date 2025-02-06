@@ -44,7 +44,8 @@ After starting an Embedding Model Deployment instance, you can view the followin
   * GPU temperature
 * Console log - The console log shows the app instance's console output: setup progress, status changes, error messages, etc.
 
-![Embedding Model Deployment app](../../img/apps_embedding_model_deployment.png)
+![Embedding Model Deployment app](../../img/apps_embedding_model_deployment.png#light-mode-only)
+![Embedding Model Deployment app](../../img/apps_embedding_model_deployment_dark.png#dark-mode-only)
 
 ## Embedding Model Deployment Instance Configuration
 
@@ -90,4 +91,5 @@ Deployment app instance task will be enqueued (make sure an agent is assigned to
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![Embedding Model Deployment form](../../img/apps_embedding_model_deployment_form.png)
+![Embedding Model Deployment form](../../img/apps_embedding_model_deployment_form.png#light-mode-only)
+![Embedding Model Deployment form](../../img/apps_embedding_model_deployment_form_dark.png#dark-mode-only)

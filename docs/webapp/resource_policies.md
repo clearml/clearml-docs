@@ -19,7 +19,8 @@ Set resource reservation and limits for user groups
 * Connect resource profiles to a policy, making them available to its user group via ClearML queues
 * Non-administrator users can see the resource policies currently applied to them.
 
-![Resource Policy dashboard](../img/resource_policies_dashboard.png)
+![Resource Policy dashboard](../img/resource_policies_dashboard.png#light-mode-only)
+![Resource Policy dashboard](../img/resource_policies_dashboard_dark.png#dark-mode-only)
 
 ## Create a Policy
 
@@ -70,7 +71,8 @@ The top card displays the policy information:
 * Resource limit
 * User group that the policy applies to - click to show list of users in the group
 
-![Resource policy card](../img/resource_policies_policy_card.png)
+![Resource policy card](../img/resource_policies_policy_card.png#light-mode-only)
+![Resource policy card](../img/resource_policies_policy_card_dark.png#dark-mode-only)
 
 The cards below the policy card display the profiles that are connected to the policy:
 * Resource profile name
@@ -79,11 +81,13 @@ of resources consumed by each job enqueued through this profile's queue
 * <img src="/docs/latest/icons/ico-queued-jobs.svg" alt="Queued jobs" className="icon size-md space-sm" /> - Currently queued jobs
 * <img src="/docs/latest/icons/ico-running-jobs.svg" alt="Running jobs" className="icon size-md space-sm" /> - Currently running jobs 
 
-![Resource profile card non-admin view](../img/resource_policies_profile_card_non_admin.png)
+![Resource profile card non-admin view](../img/resource_policies_profile_card_non_admin.png#light-mode-only)
+![Resource profile card non-admin view](../img/resource_policies_profile_card_non_admin_dark.png#dark-mode-only)
 
 Administrators can also see each resource profile’s resource pool links listed in order of routing priority.
 
-![Resource profile card admin view](../img/resource_policies_profile_card_admin.png)
+![Resource profile card admin view](../img/resource_policies_profile_card_admin.png#light-mode-only)
+![Resource profile card admin view](../img/resource_policies_profile_card_admin_dark.png#dark-mode-only)
 
 The arrow connecting the policy card with a profile card is labeled with the name of the queue the policy’s users should 
 use to run tasks through that resource profile.
@@ -112,7 +116,8 @@ and description
 
 **To remove a resource profile:** On the relevant resource profile box, click `X`.
 
-![Remove resource profile](../img/resource_policies_remove_profile.png)
+![Remove resource profile](../img/resource_policies_remove_profile.png#light-mode-only)
+![Remove resource profile](../img/resource_policies_remove_profile_dark.png#dark-mode-only)
 
 Removing a profile from a policy will also delete the queue which made this profile available to the policy’s users. 
 Any tasks enqueued on this queue will be set to `draft` status.

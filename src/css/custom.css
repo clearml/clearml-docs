@@ -601,6 +601,10 @@ html[data-theme=dark] .medium-zoom-image.medium-zoom-image--opened {border-radiu
 .medium-zoom--opened .medium-zoom-overlay {z-index: 1000;}
 .medium-zoom-image.medium-zoom-image--opened {z-index: 1001;}
 
+[data-theme='light'] img[src$='#dark-mode-only'],
+[data-theme='dark'] img[src$='#light-mode-only'] {
+  display: none;
+}
 /* table */
 .markdown table {
   border-spacing: 0;

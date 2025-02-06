@@ -895,7 +895,8 @@ task.connect(me)
 task.connect(params_dictionary)
 ```
 
-![Task parameters](../img/fundamentals_task_config_hyperparams.png)
+![Task parameters](../img/fundamentals_task_config_hyperparams.png#light-mode-only)
+![Task parameters](../img/fundamentals_task_config_hyperparams_dark.png#dark-mode-only)
 
 ### Configuration Objects
 
@@ -918,7 +919,8 @@ config_file_yaml = task.connect_configuration(
 )
 ```
 
-![Task configuration objects](../img/fundamentals_task_config_object.png)
+![Task configuration objects](../img/fundamentals_task_config_object.png#light-mode-only)
+![Task configuration objects](../img/fundamentals_task_config_object_dark.png#dark-mode-only)
 
 ### User Properties
 A task's user properties do not impact task execution, so you can add / modify the properties at any stage. Add user 
@@ -932,7 +934,8 @@ task.set_user_properties(
 )
 ```
 
-![Task user properties](../img/fundamentals_task_config_properties.png)
+![Task user properties](../img/fundamentals_task_config_properties.png#light-mode-only)
+![Task user properties](../img/fundamentals_task_config_properties_dark.png#dark-mode-only)
 
 ## Scalars
 

@@ -7,7 +7,8 @@ The **Billing & Usage** section displays your ClearML workspace usage informatio
 * Available storage
 * Number of monthly API calls  
 
-![Billing and Usage free](../../img/settings_billing_usage_free.png)
+![Billing and Usage free](../../img/settings_billing_usage_free.png#light-mode-only)
+![Billing and Usage free](../../img/settings_billing_usage_free_dark.png#dark-mode-only)
 
 To add users to your workspace, click **INVITE USERS** in the **USERS** section. This will redirect you to the 
 **USER MANAGEMENT** page, where you can invite users (see details [here](webapp_settings_users.md#inviting-new-teammates)).
@@ -20,7 +21,8 @@ for additional plans information.
 With the ClearML Pro plan, the **Billing & Usage** page additionally shows estimated charges for the current billing 
 period and provides access to billing information.
 
-![Billing and Usage pro](../../img/settings_billing_usage.png)
+![Billing and Usage pro](../../img/settings_billing_usage.png#light-mode-only)
+![Billing and Usage pro](../../img/settings_billing_usage_dark.png#dark-mode-only)
 
 **To Upgrade your account to ClearML Pro**, click **UPGRADE** in the top right corner of the page. This will open a 
 wizard where you will be able to read the terms and conditions and input your billing information. 

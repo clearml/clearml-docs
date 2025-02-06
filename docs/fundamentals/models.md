@@ -68,7 +68,8 @@ label enumeration, lineage, and general information, click the model name, which
 Models can also be accessed through their associated project's [Model Table](../webapp/webapp_model_table.md), where all 
 the models associated with a project are listed.
 
-![WebApp Model](../img/fundamentals_models.png) 
+![WebApp Model](../img/webapp_model_general.png#light-mode-only) 
+![WebApp Model](../img/webapp_model_general_dark.png#dark-mode-only) 
 
 ## SDK Interface
 

@@ -143,7 +143,8 @@ Since not all metrics are tracked that way, you can also manually report metrics
 
 You can log everything, from time series data and confusion matrices to HTML, Audio, and Video, to custom plotly graphs! Everything goes!
 
-![Experiment plots](../../img/report_plotly.png)
+![Experiment plots](../../img/report_plotly.png#light-mode-only)
+![Experiment plots](../../img/report_plotly_dark.png#dark-mode-only)
 
 Once everything is neatly logged and displayed, use the [comparison tool](../../webapp/webapp_exp_comparing.md) to find the best configuration!
 
@@ -152,7 +153,8 @@ Once everything is neatly logged and displayed, use the [comparison tool](../../
 
 The experiments table is a powerful tool for creating dashboards and views of your own projects, your team's projects, or the entire development.
 
-![Experiments table](../../img/webapp_experiment_table.png)
+![Experiments table](../../img/webapp_experiment_table.png#light-mode-only)
+![Experiments table](../../img/webapp_experiment_table_dark.png#dark-mode-only)
 
 
 ### Creating Leaderboards

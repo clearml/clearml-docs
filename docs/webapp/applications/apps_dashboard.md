@@ -38,7 +38,8 @@ of the chosen metric over time.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration.
   
-![Dashboard app instance launch form](../../img/apps_dashboard_wizard.png)
+![Dashboard app instance launch form](../../img/apps_dashboard_wizard.png#light-mode-only)
+![Dashboard app instance launch form](../../img/apps_dashboard_wizard_dark.png#dark-mode-only)
 
 ## Dashboard
 
@@ -62,4 +63,5 @@ external tools (e.g. Notion). Hover over the plot and click <img src="/docs/late
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
-![App dashboard](../../img/apps_dashboard.png)
+![App dashboard](../../img/apps_dashboard.png#light-mode-only)
+![App dashboard](../../img/apps_dashboard_dark.png#dark-mode-only)

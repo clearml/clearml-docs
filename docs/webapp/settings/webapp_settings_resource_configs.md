@@ -8,7 +8,8 @@ reservations for different user groups to prioritize workload usage across avail
 Under the **Resource Configuration** section, administrators define the available resources and the way in which they 
 will be allocated to different workloads. 
 
-![Resource configuration page](../../img/resource_configuration.png)
+![Resource configuration page](../../img/resource_configuration.png#light-mode-only)
+![Resource configuration page](../../img/resource_configuration_dark.png#dark-mode-only)
 
 The Resource Configuration settings page shows the [currently provisioned](#applying-resource-configuration) configuration: 
 the defined resource pools, resource profiles, and the resource allocation architecture. 
@@ -25,7 +26,12 @@ versa).
 The resource pool cards are displayed on the top of the Resource Configuration settings page. Each card displays the 
 following information: 
 
-![Resource pool card](../../img/resource_configuration_pool_card.png)
+<div class="max-w-50">
+
+![Resource pool card](../../img/resource_configuration_pool_card.png#light-mode-only)
+![Resource pool card](../../img/resource_configuration_pool_card_dark.png#dark-mode-only)
+
+</div>
 
 * Pool name
 * Number of resources currently in use out of the total available resources
@@ -45,7 +51,17 @@ R&D team and DevOps team both have pending jobs - run the R&D team's jobs first 
 The resource profile cards are displayed on the bottom of the Resource Configuration settings page. Each card displays 
 the following information: 
 
-![Resource profile card](../../img/resource_configuration_profile_card.png)
+<div class="max-w-50">
+
+![Resource profile card](../../img/resource_configuration_profile_card.png#light-mode-only)
+
+</div>
+
+<div class="max-w-50">
+
+![Resource profile card](../../img/resource_configuration_profile_card_dark.png#dark-mode-only)
+
+</div>
 
 * Profile name
 * <img src="/docs/latest/icons/ico-resource-number.svg" alt="Number of resources" className="icon size-md space-sm" /> - Number
@@ -61,18 +77,21 @@ You have GPUs spread across a local H100 and additional bare metal servers, as w
 by an autoscaler). Assume that currently most of your resources are already assigned to jobs, and only 16 resources are available: 8 in the 
 H100 resource pool and 8 in the Bare Metal pool:
 
-![Example resource pools](../../img/resource_example_pools.png)
+![Example resource pools](../../img/resource_example_pools.png#light-mode-only)
+![Example resource pools](../../img/resource_example_pools_dark.png#dark-mode-only)
 
 Teams' jobs have varying resource requirements of 0.5, 2, 4, and 8 GPUs. Resource profiles are defined to reflect these:
 
-![Example resource profiles](../../img/resource_example_profile.png)
+![Example resource profiles](../../img/resource_example_profile.png#light-mode-only)
+![Example resource profiles](../../img/resource_example_profile_dark.png#dark-mode-only)
 
 The different jobs will be routed to different resource pools by connecting the profiles to the resource pools. Jobs 
 enqueued through the profiles will be run in the pools where there are available resources in order of their priority. 
 For example, the H100 pool will run jobs with the following precedence: 2 GPU jobs first, then 4 GPU ones, then 8 GPU, 
 and lastly 0.5 GPU. 
 
-![Example profile priority](../../img/resource_example_profile_priority.png)
+![Example profile priority](../../img/resource_example_profile_priority.png#light-mode-only)
+![Example profile priority](../../img/resource_example_profile_priority_dark.png#dark-mode-only)
 
 Resource policies are implemented for two teams:
 * Dev team
@@ -81,21 +100,33 @@ Resource policies are implemented for two teams:
 Each team has a resource policy configured with 8 reserved resources and a 16 resource limit. Both teams make use of the
 4xGPU profile (i.e. each job running through this profile requires 4 resources). 
 
-![Example resource policy](../../img/resource_example_policy.png)
+![Example resource policy](../../img/resource_example_policy.png#light-mode-only)
+![Example resource policy](../../img/resource_example_policy_dark.png#dark-mode-only)
 
 The Dev team is prioritized over the Research team by placing it higher in the Resource Profile's Policies Priority list:
 
-![Example resource policy priority](../../img/resource_example_policy_priority.png)
+<div class="max-w-75">
+
+![Example resource policy priority](../../img/resource_example_policy_priority.png#light-mode-only)
+![Example resource policy priority](../../img/resource_example_policy_priority_dark.png#dark-mode-only)
+
+</div>
 
 Both the Dev team and the Research team enqueue four 4-resource jobs each: Dev team jobs will be allocated resources 
 first. The `4xGPU` resource profile is connected to two resource pools: `Bare Metal Low END GPUs` (with the 
 `4 GPU Low End` link) and `H100 Half a Superpod` (with the `4 GPU H100 link`). 
 
-![Example resource profile-pool connections](../../img/resource_example_profile_pool_links.png)
+![Example resource profile-pool connections](../../img/resource_example_profile_pool_links.png#light-mode-only)
+![Example resource profile-pool connections](../../img/resource_example_profile_pool_links_dark.png#dark-mode-only)
 
 Resources are assigned from the `Bare Metal` pool first (precedence set on the resource profile card):
 
-![Example resource pool precedence](../../img/resource_example_pool_priority.png)
+<div class="max-w-50">
+
+![Example resource pool precedence](../../img/resource_example_pool_priority.png#light-mode-only)
+![Example resource pool precedence](../../img/resource_example_pool_priority_dark.png#dark-mode-only)
+
+</div>
 
 If the first pool cannot currently satisfy the profile’s resource requirements, resources are assigned from the next 
 listed pool. Let's look at the first pool in the image below. Notice that the pool has 8 available resources, therefore 
@@ -103,7 +134,8 @@ it can run two 4-resource jobs.
 
 <div class="max-w-50">
 
-![Example resource pool card](../../img/resource_example_pool_card.png)
+![Example resource pool card](../../img/resource_example_pool_card.png#light-mode-only)
+![Example resource pool card](../../img/resource_example_pool_card_dark.png#dark-mode-only)
 
 </div>
 

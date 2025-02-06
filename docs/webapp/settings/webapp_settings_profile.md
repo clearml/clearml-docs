@@ -60,7 +60,8 @@ ClearML Hosted Service users can be members of multiple workspaces, which are li
 To switch to another workspace, click on the **SWITCH TO WORKSPACE** button next to the name of the workspace you want 
 to switch to. 
  
-![Workspace configuration page](../../img/settings_workspace_configuration.png)
+![Workspace configuration page](../../img/settings_workspace_configuration.png#light-mode-only)
+![Workspace configuration page](../../img/settings_workspace_configuration_dark.png#dark-mode-only)
 
 ### ClearML App Credentials
 
@@ -80,7 +81,12 @@ You can create credentials for any workspace that you are a member of.
 The dialog displays new credentials, formatted as a ready-to-copy configuration file section (including server configuration 
 information).
 
-![ClearML credentials](../../img/settings_configuration_creation.png)
+<div class="max-w-75">
+
+![ClearML credentials](../../img/settings_configuration_creation.png#light-mode-only)
+![ClearML credentials](../../img/settings_configuration_creation_dark.png#dark-mode-only)
+
+</div>
 
 You can edit the labels of credentials in your own workspace, or credentials that you created in other workspaces.
 
@@ -161,4 +167,5 @@ Fill in values using any of ClearML supported configuration formats: HOCON / JSO
 * Click the toggle atop the vault to enable / disable the configurations
 * Once enabled, the configurations will be merged to the configuration file during ClearML and ClearML Agent usage 
 
-![Configuration vault](../../img/settings_configuration_vault.png)
+![Configuration vault](../../img/settings_configuration_vault.png#light-mode-only)
+![Configuration vault](../../img/settings_configuration_vault_dark.png#dark-mode-only)

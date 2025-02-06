@@ -39,7 +39,8 @@ modified hyperparameters
 
 
 
-![Task](../img/fundamentals_task.png)
+![Task](../img/fundamentals_task.png#light-mode-only)
+![Task](../img/fundamentals_task_dark.png#dark-mode-only)
 
 ## Task Sections
 

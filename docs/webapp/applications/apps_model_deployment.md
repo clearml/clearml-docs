@@ -45,7 +45,9 @@ Once you start a vLLM Model Deployment instance, you can view the following info
 * Console log - The console log shows the app instance's console output: setup progress, status changes, error messages,
 etc.
 
-![vLLM Model Deployment App](../../img/apps_model_deployment.png)
+![vLLM Model Deployment App](../../img/apps_model_deployment.png#light-mode-only)
+![vLLM Model Deployment App](../../img/apps_model_deployment_dark.png#dark-mode-only)
+
 
 ## vLLM Model Deployment Instance Configuration
 
@@ -144,4 +146,6 @@ instance task will be enqueued (make sure an agent is assigned to that queue)
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![vLLM Model Deployment app form](../../img/apps_model_deployment_form.png)
+![vLLM Model Deployment app form](../../img/apps_model_deployment_form.png#light-mode-only)
+![vLLM Model Deployment app form](../../img/apps_model_deployment_form_dark.png#dark-mode-only)
+ 

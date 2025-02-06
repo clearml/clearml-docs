@@ -124,7 +124,9 @@ The configuration panel is split into three sections according to type:
   
 These sections are further broken down into subsections based on how the parameters were logged (General / Args / TF_Define / Environment).
 
-![Task hyperparameters sections](../img/hyperparameters_sections.png)
+![Task hyperparameters sections](../img/hyperparameters_sections.png#light-mode-only)
+![Task hyperparameters sections](../img/hyperparameters_sections_dark.png#dark-mode-only)
+
 
 ## SDK Interface
 

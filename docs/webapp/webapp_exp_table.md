@@ -28,7 +28,8 @@ and choosing one of these options:
 
 The downloaded data consists of the currently displayed table columns.
 
-![Task table](../img/webapp_experiment_table.png)
+![Task table](../img/webapp_experiment_table.png#light-mode-only)
+![Task table](../img/webapp_experiment_table_dark.png#dark-mode-only)
 
 ## Creating Tasks
 
@@ -162,7 +163,8 @@ all the tasks in the project. The customizations of these two views are saved se
 
 ### Adding Metrics and/or Hyperparameters
 
-![Task table customization gif](../img/gif/webapp_exp_table_cust.gif)
+![Task table customization gif](../img/gif/webapp_exp_table_cust.gif#light-mode-only)
+![Task table customization gif](../img/gif/webapp_exp_table_cust_dark.gif#dark-mode-only)
 
 Add metrics and/or hyperparameters columns to the task table. The metrics and hyperparameters depend upon the
 tasks in the table.
@@ -184,7 +186,8 @@ tooltip that appears. To view all precise values in a column, hover over a float
 
 ### Filtering Columns
 
-![Filtering table gif](../img/gif/filter_screenshots.gif)
+![Filtering table gif](../img/gif/filter_screenshots.gif#light-mode-only)
+![Filtering table gif](../img/gif/filter_screenshots_dark.gif#dark-mode-only)
 
 Filters can be applied by clicking <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" /> 
 on a column, and the relevant filter appears.
@@ -252,7 +255,8 @@ operations on the selected tasks. Actions can be performed only on the tasks tha
 of tasks that can be affected by each action. The same information can be found in the batch action bar, in a tooltip that
 appears when hovering over an action icon. 
 
-![Task table batch operations](../img/webapp_experiment_table_context_menu.png)
+![Task table batch operations](../img/webapp_experiment_table_context_menu.png#light-mode-only)
+![Task table batch operations](../img/webapp_experiment_table_context_menu_dark.png#dark-mode-only)
 
 ## Selecting Multiple Tasks
 
@@ -277,12 +281,14 @@ In the dropdown menu, select to view **Scalars** or **Plots**.
 
 **Scalars** shows task scalar results as time series line graphs. 
 
-![Merged comparison plots](../img/webapp_compare_view_1.png)
+![Merged comparison plots](../img/webapp_compare_view_1.png#light-mode-only)
+![Merged comparison plots](../img/webapp_compare_view_1_dark.png#dark-mode-only)
 
 All single value scalars are plotted into a single clustered bar chart under the "Summary" title, where each cluster 
 represents a reported metric, and each bar in the cluster represents a task.
 
-![Single scalar comparison](../img/webapp_compare_view_3.png)
+![Single scalar comparison](../img/webapp_compare_view_3.png#light-mode-only)
+![Single scalar comparison](../img/webapp_compare_view_3_dark.png#dark-mode-only)
 
 Click <img src="/docs/latest/icons/ico-settings.svg" alt="Setting Gear" className="icon size-md" /> to customize which 
 metrics to view.
@@ -296,11 +302,13 @@ task.
 Line, scatter, box, and bar graphs are compared by overlaying each metric/variant from all compared tasks' into a 
 single comparative plot. 
 
-![Merged comparison plots](../img/webapp_compare_view_4.png)
+![Merged comparison plots](../img/webapp_compare_view_4.png#light-mode-only)
+![Merged comparison plots](../img/webapp_compare_view_4_dark.png#dark-mode-only)
 
 Other plot types are displayed separately for each task.
 
-![Separate comparison plots](../img/webapp_compare_view_2.png)
+![Separate comparison plots](../img/webapp_compare_view_2.png#light-mode-only)
+![Separate comparison plots](../img/webapp_compare_view_2_dark.png#dark-mode-only)
 
 ## Creating a Task Leaderboard
 
@@ -321,4 +329,5 @@ based on their name by using the search bar.
 The final dashboard can be shared by copying the URL from the address bar, this address will replicate the exact same dashboard on any browser.
 The dashboard can also be bookmarked for later use.
 
-![Task table sharing](../img/webapp_exp_table_sharing.png)
+![Task table sharing](../img/webapp_exp_table_sharing.png#light-mode-only)
+![Task table sharing](../img/webapp_exp_table_sharing_dark.png#dark-mode-only)

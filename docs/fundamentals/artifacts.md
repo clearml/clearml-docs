@@ -50,7 +50,8 @@ Artifacts appear under the **ARTIFACTS** tab of a Task. Each artifact's location
 applications are prohibited from accessing the local disk for security reasons)
 * **Network stored artifacts**: Display a download action to retrieve files from URLs (e.g., `https://`, `s3://`).
 
-![WebApp Artifacts section](../img/webapp_tracking_30.png)
+![WebApp Artifacts section](../img/webapp_tracking_30.png#light-mode-only)
+![WebApp Artifacts section](../img/webapp_tracking_30_dark.png#dark-mode-only)
 
 ## SDK Interface
 See the [Artifacts](../clearml_sdk/task_sdk.md#artifacts) section in the Task SDK page for an overview of how to work 

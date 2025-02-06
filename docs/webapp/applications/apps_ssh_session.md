@@ -41,7 +41,8 @@ Once you have launched an app instance, you can view the following information i
   * GPU memory usage 
 * Console - The console log shows the instance's activity, including session setup progress and SSH server status changes
 
-![SSH Session Dashboard](../../img/apps_ssh_session_dashboard.png)
+![SSH Session Dashboard](../../img/apps_ssh_session_dashboard.png#light-mode-only)
+![SSH Session Dashboard](../../img/apps_ssh_session_dashboard_dark.png#dark-mode-only)
 
 ## SSH Session Instance Configuration
 
@@ -92,4 +93,5 @@ closed and restored into a new instance when the session app instance is cloned 
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![SSH Session form](../../img/apps_ssh_session_wizard.png)
+![SSH Session form](../../img/apps_ssh_session_wizard.png#light-mode-only)
+![SSH Session form](../../img/apps_ssh_session_wizard_dark.png#dark-mode-only)

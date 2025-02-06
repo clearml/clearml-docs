@@ -25,7 +25,8 @@ Once you have launched an app instance, you can view the following information i
 * Server's resources monitoring (CPU / GPU / vMem utilization)
 * Console - The console log shows the instance's activity, including server setup progress, server status changes
 
-![Jupyter Lab Dashboard](../../img/apps_jupyter_lab.png)
+![Jupyter Lab Dashboard](../../img/apps_jupyter_lab.png#light-mode-only)
+![Jupyter Lab Dashboard](../../img/apps_jupyter_lab_dark.png#dark-mode-only)
 
 ## Jupyter Lab Instance Configuration
 When configuring a new Jupyter Lab instance, you can fill in the required parameters or reuse the configuration of 
