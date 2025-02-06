@@ -108,7 +108,7 @@ Want a more in depth introduction to ClearML? Choose where you want to get start
 ## What Can You Do with ClearML?
 
 - [Track and upload](../fundamentals/task.md) metrics and models with only 2 lines of code
-- [Reproduce](../webapp/webapp_exp_reproducing.md) experiments with 3 mouse clicks
+- [Reproduce](../webapp/webapp_exp_reproducing.md) tasks with 3 mouse clicks
 - [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on experiment behavior (for example,
 alert you whenever your model improves in accuracy)
 - Manage your [data](../clearml_data/clearml_data.md) - store, track, and version control 

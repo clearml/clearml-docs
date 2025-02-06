@@ -12,7 +12,7 @@ which you then need to be able to share, reproduce, and track.
 
 ClearML Data Management solves two important challenges:
 - Accessibility - Making data easily accessible from every machine,
-- Versioning - Linking data and experiments for better **traceability**.
+- Versioning - Linking data and tasks for better **traceability**.
 
 ![Dataset lineage and preview](../img/webapp_dataset_lineage_preview.png)
 

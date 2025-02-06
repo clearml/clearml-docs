@@ -75,13 +75,13 @@ values. The **Details** tab displays the tasks' execution details (source code, 
 models, artifacts, configuration objects, and additional general information. **Hyperparameters** (Values view) displays the 
 tasks' hyperparameter and their values. 
 
-The experiments are laid out in vertical cards, so each field is lined up side-by-side. The task on the 
-left is used as the base task, to which the other experiments are compared. You can set a new base task in 
+The tasks are laid out in vertical cards, so each field is lined up side-by-side. The task on the 
+left is used as the base task, to which the other tasks are compared. You can set a new base task in 
 one of the following ways:
 * Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base task" className="icon size-md space-sm" /> on the task that will be the new base.
 * Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan" className="icon size-md space-sm" /> on the new base task and drag it all the way to the left
 
-The differences between the experiments are highlighted. Easily locate 
+The differences between the tasks are highlighted. Easily locate 
 value differences by clicking click <img src="/docs/latest/icons/ico-previous-diff.svg" alt="Up arrow" className="icon size-md" />
 (previous diff) or <img src="/docs/latest/icons/ico-next-diff.svg" alt="Down arrow" className="icon size-md space-sm" /> (next diff) 
 in the tab header. Obscure identical fields by switching on the **Hide Identical Fields** toggle. 
@@ -93,7 +93,7 @@ navigate between search results.
 ![Side-by-side textual comparison](../img/webapp_compare_05_dark.png#dark-mode-only)
 
 ### Tabular Scalar Comparison
-The **Scalars** tab **Values** view lays out the experiments' metric values in a table: a row per metric/variant and a 
+The **Scalars** tab **Values** view lays out the tasks' metric values in a table: a row per metric/variant and a 
 column for each task. Select from the dropdown menu which metric values to display:
 * Last Values: The last reported values for each task
 * Min Values: The minimal value reported throughout the task execution
@@ -108,11 +108,11 @@ Switch on the **Show row extremes** toggle to highlight each variant's maximum a
 
 ### Parallel Coordinates Mode
 
-The **Hyperparameters** tab's **Parallel Coordinates** comparison shows experiments' hyperparameter impact on specified 
+The **Hyperparameters** tab's **Parallel Coordinates** comparison shows tasks' hyperparameter impact on specified 
 metrics:
 1. Under **Performance Metrics**, select metrics to compare for
 1. Select the values to use for each metric in the plot (can select multiple):
-    * LAST - The final value, or the most recent value, for currently running experiments 
+    * LAST - The final value, or the most recent value, for currently running tasks 
     * MIN - Minimal value 
     * MAX - Maximal value
 1. In **Parameters**, select the hyperparameters to compare.
@@ -129,13 +129,13 @@ To focus on a specific task, hover over its name in the graph legend.
 To hide a task, click its name in the graph legend (click again to bring back).
 
 ### Scatter Plot
-The **Hyperparameters** tab's **Scatter Plot** comparison shows experiments' correlation between a selected 
+The **Hyperparameters** tab's **Scatter Plot** comparison shows tasks' correlation between a selected 
 hyperparameter and metric.
 
 To show the value distribution:
 * Select the **Plot Axes**:
    1. Under Y-axis select the metric and the metric values to use in the plot:
-      * **LAST** - The final value, or the most recent value, for currently running experiments
+      * **LAST** - The final value, or the most recent value, for currently running tasks
       * **MIN** - Minimal value
       * **MAX** - Maximal value
    1. Under X-axis select the hyperparameter.
@@ -147,12 +147,12 @@ point. You can add additional metrics and hyperparameters values to the datapoin
 ![Comparison scatter plot](../img/webapp_compare_scatter_dark.png#dark-mode-only)
 
 ### Plot Comparison
-The **Scalars** (Graph view) and **Plots** tabs compare experiments' plots.
+The **Scalars** (Graph view) and **Plots** tabs compare tasks' plots.
 
 The **Scalars** tab displays scalar values as time series line charts. The **Plots** tab compares the last reported 
 iteration sample of each metric/variant combination per compared task.
 
-Line, scatter, box, and bar graphs are compared by overlaying each metric/variant from all compared experiments' into a single
+Line, scatter, box, and bar graphs are compared by overlaying each metric/variant from all compared tasks' into a single
 comparative plot. 
 
 For overlaid plots, use **Group by** to select how to group plots:
@@ -180,7 +180,7 @@ represents a reported metric, and each bar in the cluster represents a task.
 Hover over plots to access plot controls (see [Scalar Plot Tools](webapp_exp_track_visual.md#scalar-plot-tools)).
 
 ### Side-by-side Debug Sample Comparison
-Compare debug samples at different iterations to examine how your experiments perform throughout their execution.
+Compare debug samples at different iterations to examine how your tasks perform throughout their execution.
 
 You can view debug samples by metric in the reported iterations. Filter the samples by metric 
 by selecting a metric from the dropdown menu above the samples. The most recent iteration appears first. To navigate 
@@ -189,8 +189,8 @@ between iterations, click <img src="/docs/latest/icons/ico-circle-older.svg" alt
 or <img src="/docs/latest/icons/ico-circle-newest.svg" alt="right arrow, newest image" className="icon size-md space-sm" /> (newest images).
 
 Click <img src="/docs/latest/icons/ico-disconnect.svg" alt="Sync selection" className="icon size-md space-sm" /> in order 
-to synchronize iteration and metric selection across experiments. For example, if you select a metric for one 
-task's debug samples, the same metric will be automatically selected for the rest of the experiments in the 
+to synchronize iteration and metric selection across tasks. For example, if you select a metric for one 
+task's debug samples, the same metric will be automatically selected for the rest of the tasks in the 
 comparison.
 
 ![Debug sample comparison](../img/webapp_compare_30.png#light-mode-only)

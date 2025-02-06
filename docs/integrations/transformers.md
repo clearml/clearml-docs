@@ -15,7 +15,7 @@ All you have to do is install and set up ClearML:
    pip install clearml
    ``` 
    
-1. To keep track of your experiments and/or data, ClearML needs to communicate to a server. You have 2 server options:
+1. To keep track of your tasks and/or data, ClearML needs to communicate to a server. You have 2 server options:
     * Sign up for free to the [ClearML Hosted Service](https://app.clear.ml/) 
     * Set up your own server, see [here](../deploying_clearml/clearml_server.md).  
 1. Connect the ClearML SDK to the server by creating credentials (go to the top right in the UI to **Settings > Workspace > Create new credentials**), 
@@ -52,9 +52,9 @@ You can see all the captured data in the task's page of the ClearML [WebApp](../
 
 ![transformers scalars](../img/integrations_transformers_scalars.png)
 
-Additionally, you can view all of your Transformers runs tracked by ClearML in the [Experiments Table](../webapp/webapp_model_table.md). 
+Additionally, you can view all of your Transformers runs tracked by ClearML in the [Task Table](../webapp/webapp_model_table.md). 
 Add custom columns to the table, such as mAP values, so you can easily sort and see what is the best performing model. 
-You can also select multiple experiments and directly [compare](../webapp/webapp_exp_comparing.md) them.   
+You can also select multiple tasks and directly [compare](../webapp/webapp_exp_comparing.md) them.   
 
 See an example of Transformers and ClearML in action [here](../guides/frameworks/huggingface/transformers.md). 
 

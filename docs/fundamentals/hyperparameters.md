@@ -6,12 +6,12 @@ Hyperparameters are a script's configuration options. Since hyperparameters can 
 model performance, it is crucial to efficiently track and manage them.
 
 ClearML supports tracking and managing hyperparameters in each task and provides a dedicated [hyperparameter 
-optimization module](hpo.md). With ClearML's logging and tracking capabilities, experiments can be reproduced, and their 
+optimization module](hpo.md). With ClearML's logging and tracking capabilities, tasks can be reproduced, and their 
 hyperparameters and results can be saved and compared, which is key to understanding model behavior.
 
 ClearML lets you easily try out different hyperparameter values without changing your original code. ClearML's [execution
 agent](../clearml_agent.md) will override the original values with any new ones you specify through the web UI (see 
-[Configuration](../webapp/webapp_exp_tuning.md#configuration) in the Tuning Experiments page). You can also
+[Configuration](../webapp/webapp_exp_tuning.md#configuration) in the Tuning Tasks page). You can also
 programmatically set task parameters.
 
 ## Tracking Hyperparameters 
@@ -102,7 +102,7 @@ ClearML does not automatically track changes to explicitly set parameters.
 ### User Properties
 User properties do not impact task execution and can be modified at any stage. They are convenient for setting 
 helpful values which are displayed in the [task table](../webapp/webapp_exp_table.md) (i.e. customize columns), 
-making it easier to search / filter experiments. Add user properties to a task with the 
+making it easier to search / filter tasks. Add user properties to a task with the 
 [`Task.set_user_properties`](../references/sdk/task.md#set_user_properties) method.
 
 ### Accessing Parameters

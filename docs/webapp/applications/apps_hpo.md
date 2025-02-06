@@ -62,13 +62,13 @@ limits.
 * **Advanced Configuration** (optional)
     * Limit Total HPO Experiments - Maximum total number of optimization tasks
     * Number of Top Experiments to Save - Number of best performing tasks to save (the rest are archived)
-    * Limit Single Experiment Running Time (Minutes) - Time limit per optimization task. Experiments will be 
+    * Limit Single Experiment Running Time (Minutes) - Time limit per optimization task. Tasks will be 
       stopped after the specified time elapsed
     * Minimal Number of Iterations Per Single Experiment - Some search methods, such as Optuna, prune underperforming 
-      experiments. This is the minimum number of iterations per experiment before it can be stopped. Iterations are 
-      based on the experiments' own reporting (for example, if experiments report every epoch, then iterations=epochs)
-    * Maximum Number of Iterations Per Single Experiment - Maximum iterations per experiment after which it will be 
-      stopped. Iterations are based on the experiments' own reporting (for example, if experiments report every epoch, 
+      tasks. This is the minimum number of iterations per task before it can be stopped. Iterations are 
+      based on the tasks' own reporting (for example, if tasks report every epoch, then iterations=epochs)
+    * Maximum Number of Iterations Per Single Experiment - Maximum iterations per task after which it will be 
+      stopped. Iterations are based on the tasks' own reporting (for example, if tasks report every epoch, 
       then iterations=epochs)
     * Limit Total Optimization Instance Time (Minutes) - Time limit for the whole optimization process (in minutes)
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 

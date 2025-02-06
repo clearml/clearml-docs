@@ -21,7 +21,7 @@ only changed pointers are initialized. The pointers that did not change are reus
 ## Dataview State
 Dataviews can be in either *Draft* or *Published* state.
 
-A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible experiments and 
+A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible tasks and 
 preserves the Dataview's settings. 
 
 ## Filtering

@@ -40,7 +40,7 @@ clearml-agent build --id <task-id> --docker --target <new-docker-name>
 You can add the Docker container as the base Docker image to a task, using one of the following methods:
 
 - Using the **ClearML Web UI** - See [Base Docker image](../webapp/webapp_exp_tuning.md#base-docker-image) on the "Tuning
-  Experiments" page.
+  Tasks" page.
 - In the ClearML configuration file - Use the ClearML configuration file [`agent.default_docker`](../configs/clearml_conf.md#agentdefault_docker)
   options.
 

@@ -28,7 +28,7 @@ segmentation, and classification. Get the most out of YOLOv8 with ClearML:
    pip install clearml
    ``` 
    
-1. To keep track of your experiments and/or data, ClearML needs to communicate to a server. You have 2 server options:
+1. To keep track of your tasks and/or data, ClearML needs to communicate to a server. You have 2 server options:
     * Sign up for free to the [ClearML Hosted Service](https://app.clear.ml/) 
     * Set up your own server, see [here](../deploying_clearml/clearml_server.md).  
 1. Connect the ClearML SDK to the server by creating credentials (go to the top right in the UI to **Settings > Workspace > Create new credentials**), 
@@ -90,9 +90,9 @@ task within the `example` project.
 :::
 
 You can see all the captured data in the task's page of the ClearML [WebApp](../webapp/webapp_exp_track_visual.md). 
-Additionally, you can view all of your YOLOv8 runs tracked by ClearML in the [Experiments Table](../webapp/webapp_model_table.md). 
+Additionally, you can view all of your YOLOv8 runs tracked by ClearML in the [Task Table](../webapp/webapp_model_table.md). 
 Add custom columns to the table, such as mAP values, so you can easily sort and see what is the best performing model. 
-You can also select multiple experiments and directly [compare](../webapp/webapp_exp_comparing.md) them.   
+You can also select multiple tasks and directly [compare](../webapp/webapp_exp_comparing.md) them.   
 
 ## Remote Execution
 ClearML logs all the information required to reproduce a task on a different machine (installed packages, 

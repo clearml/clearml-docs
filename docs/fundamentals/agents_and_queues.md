@@ -108,7 +108,7 @@ in parallel (each task will register itself as a sub-agent, visible in the [Orch
 This mode is intended for running maintenance tasks. Some suitable tasks include:
 
 - [Pipeline controller](../guides/pipeline/pipeline_controller.md) - Implementing the pipeline scheduling and logic
-- [Hyperparameter Optimization](../guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt.md) - Implementing an active selection of experiments
+- [Hyperparameter Optimization](../guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt.md) - Implementing an active selection of tasks
 - [Control Service](../guides/services/aws_autoscaler.md) - AWS Autoscaler for example
 - [External services](../guides/services/slack_alerts.md) - Such as Slack integration alert service
 
