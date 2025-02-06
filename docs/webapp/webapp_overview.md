@@ -9,7 +9,8 @@ The **ClearML Web UI** is the graphical user interface for the ClearML platform,
 * Profile management
 * Direct access to the ClearML community (Slack channel, YouTube, and GitHub).
 
-![WebApp screenshots gif](../img/gif/webapp_screenshots.gif)
+![WebApp screenshots gif](../img/gif/webapp_screenshots.gif#light-mode-only)
+![WebApp screenshots gif](../img/gif/webapp_screenshots_dark.gif#dark-mode-only)
 
 ## UI Modules 
 The WebApp's sidebar provides access to the following modules:
@@ -36,7 +37,7 @@ Click the profile menu button <img src="/docs/latest/icons/ico-me.svg" alt="Prof
 in the top right corner of the web UI screen to access the following:
 * **Settings** - Navigate to ClearML's user [Settings](settings/webapp_settings_profile.md) page:
   * Set [WebApp preferences](settings/webapp_settings_profile.md)
-  * Manage [workspace API credentials](settings/webapp_settings_profile.md#clearml-credentials)
+  * Manage [workspace API credentials](settings/webapp_settings_profile.md#clearml-api-credentials)
   * Configure [cloud storage access credentials](settings/webapp_settings_profile.md#browser-cloud-storage-access) for the ClearML Web UI
   * ClearML Hosted service specific options
     * Manage [users and workspaces](settings/webapp_settings_users.md)
@@ -45,7 +46,7 @@ in the top right corner of the web UI screen to access the following:
     * Manage [server identity providers](settings/webapp_settings_id_providers.md) (available in the ClearML Enterprise plan)
     * Define the [available resources](settings/webapp_settings_resource_configs.md) and the way in which they will be 
     allocated to different workloads (available in the ClearML Enterprise plan)
-    * View [usage and billing](settings/webapp_settings_usage_billing.md) information
+    * View [billing and usage](settings/webapp_settings_usage_billing.md) information
 * **Invite a User** to your workspace (supported in hosted service). Click **Invite a User** > input user's 
 email > click **ADD** > page redirects to the [Users & Groups](settings/webapp_settings_users.md#user-groups) section of 
   the **Settings** page 

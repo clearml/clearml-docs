@@ -4,7 +4,7 @@ title: Version 1.1
 
 ### ClearML Agent 1.1.2
 
-**Bug Fixes**
+**Bug Fix**
 
 - Fix the `six` conflict with the new `pathlib2` version 2.3.7 and up.
 

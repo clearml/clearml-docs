@@ -95,13 +95,13 @@ title: Version 1.0
 
 ### ClearML 1.0.2
 
-**Bug Fixes**
+**Bug Fix**
 
 - Fix in rare scenarios process stuck on exit, again :)
 
 ### ClearML 1.0.1
 
-**Bug Fixes**
+**Bug Fix**
 
 - Fix in rare scenarios process stuck on exit
 

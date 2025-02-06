@@ -134,6 +134,15 @@ Use with care! This might introduce security risks by allowing access to keys/se
 the same argument is passed in both. If set to `False`, a task's docker arguments will override the `extra_docker_arguments`.
 
 ---
+
+**`agent.docker_args_filters`** (*list*)
+
+* Set a whitelist of allowed Docker arguments. Only arguments matching the specified patterns can be used when running
+a task. For example: `docker_args_filters: ["^--env$", "^-e$"]`.
+
+
+---
+
 **`agent.docker_container_name_format`** (*string*)
 
 :::note Compatibility Required
@@ -831,7 +840,8 @@ This configuration option is experimental, and has not been vigorously tested, s
     The values are:
 
     * `true` - Verify   
-    * `false` - Do not verify. 
+    * `false` - Do not verify.
+    * `path/to/certificate` - The certificate file to use for verification.
 
 :::warning
 Set to False only if required.

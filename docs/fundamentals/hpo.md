@@ -31,13 +31,17 @@ The preceding diagram demonstrates the typical flow of hyperparameter optimizati
    summary of the optimization results in tabular and parallel coordinate formats, and in a scalar plot. 
  
 
-![Optimization results summary chart](../img/fundamentals_hpo_summary.png)
+![Optimization results summary chart](../img/fundamentals_hpo_summary.png#light-mode-only)
+![Optimization results summary chart](../img/fundamentals_hpo_summary_dark.png#dark-mode-only)
+
 
 <Collapsible title="Parallel coordinate and scalar plots" type="screenshot">
 
-![Parallel Coordinates](../img/fundamentals_hpo_parallel_coordinates.png)
+![Parallel Coordinates](../img/fundamentals_hpo_parallel_coordinates.png#light-mode-only)
+![Parallel Coordinates](../img/fundamentals_hpo_parallel_coordinates_dark.png#dark-mode-only)
 
-![Scalars](../img/fundamentals_hpo_scalars.png)
+![Scalars](../img/fundamentals_hpo_scalars.png#light-mode-only)
+![Scalars](../img/fundamentals_hpo_scalars_dark.png#dark-mode-only)
 
 </Collapsible>
 

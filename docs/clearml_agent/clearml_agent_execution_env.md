@@ -44,7 +44,10 @@ ClearML Agent uses the provided default Docker container, which can be overridde
 You can set the docker container via the UI: 
 1. Clone the experiment
 2. Set the Docker in the cloned task's **Execution** tab **> Container** section
-   ![Container section](../img/webapp_exp_container.png)
+
+   ![Container section](../img/webapp_exp_container.png#light-mode-only)
+   ![Container section](../img/webapp_exp_container_dark.png#dark-mode-only)
+
 3. Enqueue the cloned task
 
 The task will be executed in the container specified in the UI.

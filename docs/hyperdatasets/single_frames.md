@@ -223,7 +223,7 @@ frame = SingleFrame(
 
 :::tip Previewing Frames in non-AWS S3-like services
 For the ClearML UI to be able to show frames stored in non-AWS S3-like services (e.g. MinIO), make sure the `preview_uri` link
-uses the `s3://` prefix and explicitly specifies the port number in the URL (e.g. `s3://my_address.com:80/bucket/my_image.png`).
+uses the `s3://` prefix and **explicitly specifies the port number** in the URL (e.g. `s3://my_address.com:80/bucket/my_image.png`).
 
 Additionally, make sure to provide cloud storage access in the WebApp [**Settings > Configuration > Web App Cloud Access**](../webapp/settings/webapp_settings_profile.md#browser-cloud-storage-access). 
 Input `<host_address>:<port_number>` in the **Host** field.

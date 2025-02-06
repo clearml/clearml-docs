@@ -9,17 +9,8 @@ deleting [Dataset versions](../dataset.md#dataset-versioning).
 ![Dataset versions page](../../img/hyperdatasets/dataset_versions_1_dark.png#dark-mode-only)
 
 ## Dataset Version History
-The WebApp (UI) presents your dataset version structure in list view <img src="/docs/latest/icons/ico-list-view.svg" alt="List view" className="icon size-md space-sm" /> 
-or tree view <img src="/docs/latest/icons/ico-tree-view.svg" alt="Tree view" className="icon size-md space-sm" />. 
-
-The list view lists the dataset's versions chronologically by last update time.
-
-<div class="max-w-50">
-
-![Versions list view](../../img/hyperdatasets/dataset_simple_adv_01.png#light-mode-only)
-![Versions list view](../../img/hyperdatasets/dataset_simple_adv_01_dark.png#dark-mode-only)
-
-</div>
+The WebApp (UI) presents your dataset version structure in tree view <img src="/docs/latest/icons/ico-tree-view.svg" alt="Tree view" className="icon size-md space-sm" />
+or list view <img src="/docs/latest/icons/ico-list-view.svg" alt="List view" className="icon size-md space-sm" />. 
 
 The tree view shows the lineage of the dataset's versions.
 
@@ -29,6 +20,13 @@ The tree view shows the lineage of the dataset's versions.
 ![Versions tree view](../../img/hyperdatasets/dataset_simple_adv_02_dark.png#dark-mode-only)
 
 </div>
+
+The list view lists the dataset's versions chronologically by last update time.
+
+![Versions list view](../../img/hyperdatasets/web-app/dataset_simple_adv_01.png)
+
+Click <img src="/docs/latest/icons/ico-sort.svg" alt="Sort order" className="icon size-md space-sm" /> to order the 
+dataset versions in ascending or descending order based on their last update time. 
 
 Use the search bar to find specific versions. You can query by version name, version description, or version ID. The search returns 
 all versions that match the query.

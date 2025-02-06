@@ -97,26 +97,35 @@ the SSH socket provided in the environment variable.
 SSH_AUTH_SOCK=<file_socket> clearml-agent daemon --gpus <your config> --queue <your queue name>  --docker
 ```
 
-## Kubernetes 
-Agents can be deployed bare-metal or as dockers in a Kubernetes cluster. ClearML Agent adds the missing scheduling 
-capabilities to Kubernetes, allows for more flexible automation from code, and gives access to all of ClearML Agent's 
-features.
+## Kubernetes
 
-ClearML Agent is deployed onto a Kubernetes cluster through its Kubernetes-Glue which maps ClearML jobs directly to K8s 
-jobs:
-* Use the [ClearML Agent Helm Chart](https://github.com/allegroai/clearml-helm-charts/tree/main/charts/clearml-agent) to
-spin an agent pod acting as a controller. Alternatively (less recommended) run a [k8s glue script](https://github.com/allegroai/clearml-agent/blob/master/examples/k8s_glue_example.py) 
-on a K8S cpu node
-* The ClearML K8S glue pulls jobs from the ClearML job execution queue and prepares a K8s job (based on provided yaml 
-template)
-* Inside each job pod the `clearml-agent` will install the ClearML task's environment and run and monitor the experiment's 
-process
+Agents can be deployed bare-metal or as Docker containers in a Kubernetes cluster. ClearML Agent adds missing scheduling capabilities to Kubernetes, enabling more flexible automation from code while leveraging all of ClearML Agent's features.
 
-:::important Enterprise Feature
-The ClearML Enterprise plan supports K8S servicing multiple ClearML queues, as well as providing a pod template for each 
-queue for describing the resources for each pod to use.
+ClearML Agent is deployed onto a Kubernetes cluster using **Kubernetes-Glue**, which maps ClearML jobs directly to Kubernetes jobs. This allows seamless task execution and resource allocation across your cluster.
 
-For example, the following configures which resources to use for `example_queue_1` and `example_queue_2`:
+### Deployment Options
+You can deploy ClearML Agent onto Kubernetes using one of the following methods:
+
+1. **ClearML Agent Helm Chart (Recommended)**:
+   Use the [ClearML Agent Helm Chart](https://github.com/allegroai/clearml-helm-charts/tree/main/charts/clearml-agent) to spin up an agent pod acting as a controller. This is the recommended and scalable approach.
+   
+2. **K8s Glue Script**:
+   Run a [K8s Glue script](https://github.com/allegroai/clearml-agent/blob/master/examples/k8s_glue_example.py) on a Kubernetes CPU node. This approach is less scalable and typically suited for simpler use cases.
+
+### How It Works
+The ClearML Kubernetes-Glue performs the following:
+- Pulls jobs from the ClearML execution queue.
+- Prepares a Kubernetes job based on a provided YAML template.
+- Inside each job pod, the `clearml-agent`:
+  - Installs the required environment for the task.
+  - Executes and monitors the experiment process.
+
+:::important Enterprise Features
+ClearML Enterprise adds advanced Kubernetes features:
+- **Multi-Queue Support**: Service multiple ClearML queues within the same Kubernetes cluster.
+- **Pod-Specific Templates**: Define resource configurations per queue using pod templates.
+
+For example, you can configure resources for different queues as shown below:
 
 ```yaml
 agentk8sglue:

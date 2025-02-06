@@ -67,4 +67,5 @@ The **Administrator Vaults** table lists all currently defined vaults, and the f
 
 Hover over a vault in the table to **Download**, **Edit**, or **Delete** a vault.  
 
-![Admin vaults](../../img/settings_admin_vaults.png)
+![Admin vaults](../../img/settings_admin_vaults.png#light-mode-only)
+![Admin vaults](../../img/settings_admin_vaults_dark.png#dark-mode-only)

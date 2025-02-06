@@ -59,7 +59,8 @@ Installing an Agent on machines allows it to monitor all the machine's status (G
 When managing multiple machines, this allows users to have an overview of their HW resources: the status of each machine, 
 the expected workload on each machine, etc.
 
-![Workers and Queues page](../img/agents_queues_resource_management.png)
+![Workers and Queues page](../img/agents_queues_resource_management.png#light-mode-only)
+![Workers and Queues page](../img/agents_queues_resource_management_dark.png#dark-mode-only)
 
 
 You can organize your queues according to resource usage. Say you have a single-GPU machine. You can create a queue called

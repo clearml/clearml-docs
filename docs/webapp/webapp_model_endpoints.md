@@ -2,10 +2,6 @@
 title: Model Endpoints 
 ---
 
-:::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
-:::
-
 The Model Endpoints table lists all currently live (active, and being brought up) model endpoints, allowing you to view 
 endpoint details and monitor status over time. Whenever you deploy a model through the [ClearML Deploy UI applications](applications/apps_overview.md#deploy), 
 it will be listed in the table. 
@@ -30,7 +26,8 @@ Active Endpoints are displayed in the **Active** tab. The table provides the fol
 * Requests / MIN (avg) - Average request rate in the last minute
 * Latency (avg) - Average endpoint response latency
 
-![Active endpoints](../img/webapp_model_endpoints_active_table.png)
+![Active endpoints](../img/webapp_model_endpoints_active_table.png#light-mode-only)
+![Active endpoints](../img/webapp_model_endpoints_active_table_dark.png#dark-mode-only)
 
 The **Loading** tab shows endpoints that are being set up, but are not yet active. The table provides the following 
 information:
@@ -42,7 +39,8 @@ information:
 * Input type - Model matrix input type  (e.g. uint8, float32, int16, float16)
 * Input size - Model matrix input size 
 
-![Loading endpoints](../img/webapp_model_endpoints_loading_table.png)
+![Loading endpoints](../img/webapp_model_endpoints_loading_table.png#light-mode-only)
+![Loading endpoints](../img/webapp_model_endpoints_loading_table_dark.png#dark-mode-only)
 
 You can apply column filters by clicking <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />, 
 and sort endpoints by clicking <img src="/docs/latest/icons/ico-sort-off.svg" alt="Sort order" className="icon size-md space-sm" /> on the relevant column.
@@ -69,7 +67,8 @@ The **Details** tab displays the model endpoint information:
   * GPU Count 
   * Latency - Average request latency in the last minute
 
-![Endpoints details](../img/webapp_model_endpoints_details.png)
+![Endpoints details](../img/webapp_model_endpoints_details.png#light-mode-only)
+![Endpoints details](../img/webapp_model_endpoints_details_dark.png#dark-mode-only)
 
 ### Monitor
 The Monitor tab displays the endpoint's operational metrics and resource usage over time graphs: 
@@ -82,7 +81,8 @@ The Monitor tab displays the endpoint's operational metrics and resource usage o
   * Video Memory Usage
   * Network Usage
 
-![Endpoints monitor](../img/webapp_model_endpoints_monitor.png)
+![Endpoints monitor](../img/webapp_model_endpoints_monitor.png#light-mode-only)
+![Endpoints monitor](../img/webapp_model_endpoints_monitor_dark.png#dark-mode-only)
 
 The graphs' time span can be controlled through the menu at its top right corner. 
 Click <img src="/docs/latest/icons/ico-show.svg" alt="Eye Show" className="icon size-md space-sm" /> to control which 

@@ -25,7 +25,7 @@ module.exports = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'allegro.ai', // Usually your GitHub org/user name.
+  organizationName: 'clearml', // Usually your GitHub org/user name.
   projectName: 'ClearML', // Usually your repo name.
   themeConfig: {
     prism: {

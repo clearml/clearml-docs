@@ -27,7 +27,7 @@ title: Version 1.7
 
 ### ClearML 1.7.1
 
-**New Features and Improvements**
+**New Feature**
 * Add callback option for pipeline step retry
 
 **Bug Fixes**

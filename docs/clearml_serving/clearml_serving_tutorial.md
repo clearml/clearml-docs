@@ -107,8 +107,15 @@ or with the `clearml-serving` CLI.
    ```
 
 :::info Model Storage
-You can also provide a different storage destination for the model, such as S3/GS/Azure, by passing
-`--destination="s3://bucket/folder"`, `s3://host_addr:port/bucket` (for non-AWS S3-like services like MinIO), `gs://bucket/folder`, `azure://<account name>.blob.core.windows.net/path/to/file`. There is no need to provide a unique 
+You can also provide a different storage destination for the model, such as S3/GS/Azure, by using
+`--destination`. For example:
+
+* S3: `s3://bucket/folder`
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
+* Google Cloud Storage: `gs://bucket-name/folder`
+* Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
+
+There is no need to provide a unique 
 path to the destination argument, the location of the model will be a unique path based on the serving service ID and the 
 model name.
 :::

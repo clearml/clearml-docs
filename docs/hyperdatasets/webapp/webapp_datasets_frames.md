@@ -163,10 +163,31 @@ To draw a new annotation:
 
     A new annotation is created. 
 
-1. In the newly created annotation, select or type-in a label(s). Click the circle in the label name to select a 
-   different label color. 
+1. In the newly created annotation, select or type-in the labels for this annotation. 
 
 You can use the **Default ROI Label(s)** list to automatically set labels to all new annotations. 
+
+:::info Annotation color
+Each annotation label is automatically assigned a color based on its value. The annotation color is automatically 
+calculated based on the colors of its labels.
+
+Click the color circle in the label name to manually set the label's color.
+
+<div class="max-w-75">
+
+![Set label color](../../img/annotation_label_color.png)
+
+</div>
+
+Click the color circle in the annotation header to manually set the annotation’s color and its opacity.  
+
+<div class="max-w-75">
+
+![Set annotation color and opacity](../../img/annotation_label_opacity.png)
+
+</div>
+:::
+
 
 #### Copying Frame Objects 
 You can copy existing annotations, and paste them to any frame of your choice:

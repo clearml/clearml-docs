@@ -25,6 +25,7 @@ Upgrading to ClearML Server v1.17 from a previous version:
 
 **Bug Fixes**
 * Fix UI Model Endpoint's Number of Requests plot sometimes displays incorrect data
+* Fix UI Incorrect project statistics in project page
 * Fix UI datasets page does not filter according to project when dataset is running
 * Fix UI task scalar legend does not change colors when smoothing is enabled
 * Fix queue list in UI Workers and Queues page does not alphabetically sort by queue display name

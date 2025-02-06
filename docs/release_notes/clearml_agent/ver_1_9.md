@@ -2,6 +2,24 @@
 title: Version 1.9
 ---
 
+### ClearML Agent 1.9.3
+
+**New Features**
+* Add support for `uv` as package manager ([ClearML Agent GitHub issue #214](https://github.com/clearml/clearml-agent/issues/214))
+* Add `agent.docker_args_filters` to enforce filter whitelist on docker arguments allowing only 
+those matching these filters to be used when running containers
+* Add support for Python 3.13
+* Remove Python 3.5 support
+* Add `win32file` on Windows (`pywin32` dependency)
+* Scan more Python 3 versions
+* Support ignoring `kubectl` errors
+* Support creating queue with tags
+
+**Bug Fixes**
+* Fix managed Python environment inside container (PEP 668)
+* Fix default value handling in `merge_dicts()` utility function
+* Fix Python 3.6 compatibility (no `:=` operator)
+
 ### ClearML Agent 1.9.2
 
 **New Features and Bug Fixes**
@@ -14,7 +32,7 @@ title: Version 1.9
 
 ### ClearML Agent 1.9.1
 
-**New Features and Improvements**
+**New Feature**
 * Add default pip version support for Python 3.12
 
 ### ClearML Agent 1.9.0

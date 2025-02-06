@@ -7,7 +7,8 @@ that can show a snapshot of specified metrics' values across the project's exper
 project's description. When either overview option is utilized, the **OVERVIEW** tab becomes the project's landing page, 
 meaning that it's the first thing that is seen when opening the project. 
 
-![Project overview tab gif](../img/gif/webapp_metric_snapshot.gif)
+
+![Project overview](../img/webapp_project_overview.png)
 
 ## Metric Snapshot
 
@@ -23,7 +24,8 @@ value to show
 
 <div class="max-w-75">
 
-![Metric Snapshot selection](../img/webapp_metric_snapshot_selection.png)
+![Metric Snapshot selection](../img/webapp_metric_snapshot_selection.png#light-mode-only)
+![Metric Snapshot selection](../img/webapp_metric_snapshot_selection_dark.png#dark-mode-only)
 
 </div>
 
@@ -43,9 +45,13 @@ metric/variant combination.
 Hover over a point in the snapshot, and a box will appear with the details of the experiment associated with the metric 
 value. Click the point to go to the experiment's details page.
 
+![Project overview tab gif](../img/gif/webapp_metric_snapshot.gif#light-mode-only)
+![Project overview tab gif](../img/gif/webapp_metric_snapshot_dark.gif#dark-mode-only)
+
 ## Project Description
 
-Every project has a `description` field. The UI provides a Markdown editor to edit this field.
+Every project has a `description` field. The UI provides a Markdown editor to edit this field. For a quick reference for 
+the MarkDown syntax that can be used, see [Markdown Formatting Quick Guide](webapp_reports.md#markdown-formatting-quick-guide).
 
 In the Markdown document, you can write and share reports and add links to ClearML experiments 
 or any network resource such as issue tracker, web repository, etc.

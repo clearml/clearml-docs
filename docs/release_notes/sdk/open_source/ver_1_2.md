@@ -4,7 +4,7 @@ title: Version 1.2
 
 ### ClearML 1.2.1
 
-**Bug Fixes**
+**Bug Fix**
 
 - Fix HTTP download fails constructing URL ([ClearML GitHub issue #593](https://github.com/allegroai/clearml/issues/593))
 

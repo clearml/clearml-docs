@@ -34,7 +34,12 @@ Access privileges can be viewed, defined, and edited in the **Access Rules** tab
    button
 1. Click **SAVE**
 
-![Access rule creation dialog](../../img/settings_access_rules.png)
+<div class="max-w-50">
+
+![Access rule creation dialog](../../img/settings_access_rules.png#light-mode-only)
+![Access rule creation dialog](../../img/settings_access_rules_dark.png#dark-mode-only)
+
+</div> 
 
 Access is inherited according to resource hierarchy. For example, if a user is given access to a project, the user will 
 also have access to the project's contents (tasks, models, etc.). A user who is granted access to a specific task will 

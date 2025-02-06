@@ -145,4 +145,5 @@ The **Provider Connections** table lists all currently defined connections, and 
 
 Hover over a connection in the table to **Edit** or **Delete** it.  
  
-![Identity provider chart](../../img/settings_identity_chart.png)
+![Identity provider chart](../../img/settings_identity_chart.png#light-mode-only)
+![Identity provider chart](../../img/settings_identity_chart_dark.png#dark-mode-only)

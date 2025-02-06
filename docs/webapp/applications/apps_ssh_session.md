@@ -41,7 +41,8 @@ Once you have launched an app instance, you can view the following information i
   * GPU memory usage 
 * Console - The console log shows the instance's activity, including session setup progress and SSH server status changes
 
-![SSH Session Dashboard](../../img/apps_ssh_session_dashboard.png)
+![SSH Session Dashboard](../../img/apps_ssh_session_dashboard.png#light-mode-only)
+![SSH Session Dashboard](../../img/apps_ssh_session_dashboard_dark.png#dark-mode-only)
 
 ## SSH Session Instance Configuration
 
@@ -61,25 +62,25 @@ to open the app's instance launch form.
 
 
 ### Configuration Options 
-* Import Configuration - Import an app instance configuration file. This will fill the instance launch form with the 
+* **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
 values from the file, which can be modified before launching the app instance
-* Git - The details for a git repository to optionally clone into your remote environment:
+* **Git** - The details for a git repository to optionally clone into your remote environment:
   * Repository
   * Branch
   * Commit
-* Docker - Input details to run the session in Docker container
+* **Docker** - Input details to run the session in Docker container
   * Image - Docker image to launch
   * Docker Arguments - Additional arguments for the Docker image
   * Init Script - Bash script that is executed upon container boot (comments are supported only at the beginning of the 
   line)
-* Extra Packages - Specify Python packages to install when setting up the remote environment
-* Persistent Workspace Path - Specify your workspace root directory, it will be automatically stored when the session is 
+* **Extra Packages** - Specify Python packages to install when setting up the remote environment
+* **Persistent Workspace Path** - Specify your workspace root directory, it will be automatically stored when the session is 
 closed and restored into a new instance when the session app instance is cloned (example: `~/workspace`)
-* Queue - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the SSH Session app 
+* **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the SSH Session app 
   instance task will be enqueued (make sure an agent is assigned to that queue)
-* Maximum idle time (in hours) - Maximum idle time after which the app instance will shut down
-* Interactive Session Name - Name your current interactive session
-* Advanced Options
+* **Maximum idle time** (in hours) - Maximum idle time after which the app instance will shut down
+* **Interactive Session Name** - Name your current interactive session
+* **Advanced Options**
   * Interactive Session Project - The project in which the interactive session is created.  If left empty, the default 
   project  `Interactive Session` is used
   * Interactive Session Tags - Comma separated list of tags to add to your interactive session
@@ -89,7 +90,8 @@ closed and restored into a new instance when the session app instance is cloned 
   * Idle Network Threshold (MB) - Network throughput under which the session will be considered idle
   * Idle CPU Threshold (%) - CPU utilization under which the session will be considered idle
   * Idle GPU Threshold (%) - GPU utilization under which the session will be considered idle
-* Export Configuration - Export the app instance configuration as a JSON file, which you can later import to create a 
+* **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
-![SSH Session form](../../img/apps_ssh_session_wizard.png)
+![SSH Session form](../../img/apps_ssh_session_wizard.png#light-mode-only)
+![SSH Session form](../../img/apps_ssh_session_wizard_dark.png#dark-mode-only)

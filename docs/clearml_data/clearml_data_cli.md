@@ -107,7 +107,7 @@ Upload the local dataset changes to the server. By default, it's uploaded to the
 medium by entering an upload destination. For example: 
 * A shared folder: `/mnt/shared/folder`
 * S3: `s3://bucket/folder`
-* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket` 
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
 * Google Cloud Storage: `gs://bucket-name/folder`
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 

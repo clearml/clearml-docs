@@ -52,11 +52,13 @@ The app monitors your workspace for trigger events and will launch copies of the
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration
 
-![Trigger manager instance launch form](../../img/apps_trigger_manager_wizard.png)
+![Trigger manager instance launch form](../../img/apps_trigger_manager_wizard.png#light-mode-only)
+![Trigger manager instance launch form](../../img/apps_trigger_manager_wizard_dark.png#dark-mode-only)
 
 ## Dashboard 
 
 The Trigger Manager app instance's dashboard displays its console log. The log shows the instance's activity: periodic 
 polling, and events triggered
 
-![Trigger dashboard](../../img/apps_trigger_manager_dashboard.png)
+![Trigger dashboard](../../img/apps_trigger_manager_dashboard.png#light-mode-only)
+![Trigger dashboard](../../img/apps_trigger_manager_dashboard_dark.png#dark-mode-only)
