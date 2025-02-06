@@ -9,7 +9,7 @@ The example does the following:
 * Uses `scikit-learn` to determine cross-validated training and test scores.
 * Uses `matplotlib` to plot the learning curves. 
 * ClearML automatically logs the scatter diagrams for the learning curves.
-* Creates an experiment named `scikit-learn matplotlib example` in the `examples` project.
+* Creates a task named `scikit-learn matplotlib example` in the `examples` project.
 
 ## Plots
 

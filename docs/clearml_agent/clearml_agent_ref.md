@@ -3,10 +3,10 @@ title: ClearML Agent CLI
 ---
 
 The following page provides a reference to `clearml-agent`'s CLI commands:
-* [build](#build) - Create a worker environment without executing an experiment.
+* [build](#build) - Create a worker environment without executing a task.
 * [config](#config) - List your ClearML Agent configuration data.
 * [daemon](#daemon) - Run a worker daemon listening to a queue for Tasks (experiments) to execute.
-* [execute](#execute) - Execute an experiment, locally without a queue.
+* [execute](#execute) - Execute a task, locally without a queue.
 * [list](#list) - List the current workers.
 
 

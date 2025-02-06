@@ -8,11 +8,11 @@ script demonstrates the integration of ClearML into code that uses [PyTorch Ligh
 The example script does the following:
 * Trains a simple deep neural network on the PyTorch built-in MNIST dataset
 * Defines Argparse command line options, which are automatically captured by ClearML
-* Creates an experiment named `pytorch lightning mnist example` in the `examples` project.
+* Creates a task named `pytorch lightning mnist example` in the `examples` project.
 
 ## Scalars
 
-The test loss and validation loss plots appear in the experiment's page in the ClearML web UI under **SCALARS**. 
+The test loss and validation loss plots appear in the task's page in the ClearML web UI under **SCALARS**. 
 Resource utilization plots, which are titled **:monitor: machine**, also appear in the **SCALARS** tab. All of these 
 plots are automatically captured by ClearML. 
 
@@ -28,7 +28,7 @@ ClearML automatically logs command line options defined with argparse and Tensor
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab.
+Models created by the task appear in the task's **ARTIFACTS** tab.
 
 ![PyTorch Lightning model](../../../img/examples_pytorch_lightning_model.png)
 

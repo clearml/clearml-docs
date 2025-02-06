@@ -32,13 +32,13 @@ code necessary.
  
 ## Training YOLOv5 with ClearML 
 
-To enable ClearML experiment tracking, simply install the `clearml` pip package in your execution environment.
+To enable ClearML task tracking, simply install the `clearml` pip package in your execution environment.
 
 ```commandline
 pip install clearml>=1.2.0
 ```
 
-This will enable integration with the YOLOv5 training script. In every training run from now on, the ClearML experiment 
+This will enable integration with the YOLOv5 training script. In every training run from now on, the ClearML task 
 manager will capture:
 * Source code and uncommitted changes
 * Installed packages
@@ -150,10 +150,10 @@ python train.py --img 640 --batch 16 --epochs 3 --data clearml://<your_dataset_i
 
 
 ## Remote Execution
-ClearML logs all the information required to reproduce an experiment on a different machine (installed packages, 
+ClearML logs all the information required to reproduce a task on a different machine (installed packages, 
 uncommitted changes etc.). The [ClearML Agent](../clearml_agent.md) listens to designated queues and when a task is 
 enqueued, the agent pulls it, recreates its execution environment, and runs it, reporting its scalars, plots, etc. to the 
-experiment manager.
+task manager.
 
 Deploy a ClearML Agent onto any machine (e.g. a cloud VM, a local GPU machine, your own laptop) by simply running 
 the following command on it:
@@ -173,7 +173,7 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
-* Clone the experiment
+* Clone the task
 * Edit the hyperparameters and/or other details 
 * Enqueue the task
 
@@ -205,4 +205,4 @@ the hyperparameter values that yield the best performing models.
 
 To run hyperparameter optimization locally, you can use the [template script](https://github.com/ultralytics/yolov5/blob/master/utils/loggers/clearml/hpo.py) 
 provided with YOLOv5. Notice you need to fill in a baseline task ID, meaning a training task needs to have been run at 
-least once. This experiment will be cloned multiple times, and each clone's parameter will be overridden with a new value.
+least once. This task will be cloned multiple times, and each clone's parameter will be overridden with a new value.

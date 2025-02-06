@@ -111,7 +111,7 @@ to open the app's instance launch form.
   tasks run by the autoscaler. For more information, see [Configuration Vault](#configuration-vault) (available under ClearML Enterprise Plan).
 * **Init script** (optional) - A bash script to execute after launching the EC2 instance 
 * **Additional ClearML Configuration** (optional) - A ClearML configuration file to use by the ClearML Agent when 
-  executing your experiments
+  executing your tasks
 * **Custom Launch Spec** - Custom AWS EC2 launch specification in JSON format. This will be used as the basis for 
 creating the instances launch spec. See [boto3 EC2.client.run_instances Request Syntax](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/client/run_instances.html) 
 and [AWS API Reference: RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) (available under ClearML Enterprise Plan)
@@ -132,7 +132,7 @@ You can utilize the [configuration vault](../settings/webapp_settings_profile.md
 * `aws_credentials_key_id` and `aws_secret_access_key` - AWS credentials for the autoscaler
 * `extra_vm_bash_script` - A bash script to execute after launching the EC2 instance. This script will be appended to
 the one set in the `Init script` field of the instance launch form
-* `extra_clearml_conf` - ClearML configuration to use by the ClearML Agent when executing your experiments. This 
+* `extra_clearml_conf` - ClearML configuration to use by the ClearML Agent when executing your tasks. This 
 configuration will be appended to that set in the `Additional ClearML Configuration` field of the instance launch form
 * `files` - Files to create at designated paths with predefined content inside the container running the autoscaler. 
 For more information, see [Files Section](../../configs/clearml_conf.md#files-section)

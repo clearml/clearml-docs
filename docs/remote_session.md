@@ -15,7 +15,7 @@ ClearML provides tools that allow you to launch remote sessions and to execute c
 meets resource needs:
 * [Clearml Session CLI](apps/clearml_session.md) - Launch an interactive JupyterLab, VS Code, and SSH session on a remote machine:
   * Automatically store and sync your [interactive session workspace](apps/clearml_session.md#storing-and-synchronizing-workspace)
-  * Replicate a previously executed experiment's execution environment and [interactively execute and debug](apps/clearml_session.md#starting-a-debugging-session) it on a remote session
+  * Replicate a previously executed task's execution environment and [interactively execute and debug](apps/clearml_session.md#starting-a-debugging-session) it on a remote session
   * Develop directly inside your Kubernetes pods ([see ClearML Agent](clearml_agent/clearml_agent_deployment.md#kubernetes))
   * And more! 
 * GUI Applications (available under ClearML Enterprise Plan) - These apps provide access to remote machines over a 

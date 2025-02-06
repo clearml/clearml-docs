@@ -9,7 +9,7 @@ instructions.
 
 [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner) is a library that helps you pick the optimal set 
 of hyperparameters for training your models. ClearML integrates seamlessly with `kerastuner` and automatically logs 
-experiment scalars, the output model, and hyperparameter optimization summary. 
+task scalars, the output model, and hyperparameter optimization summary. 
 
 Integrate ClearML into your Keras Tuner optimization script by doing the following:
 * Instantiate a ClearML Task: 
@@ -51,16 +51,16 @@ You can view all the task details in the [WebApp](../webapp/webapp_exp_track_vis
 
 ## WebApp
 
-ClearML logs the scalars from training each network. They appear in the experiment's **SCALARS** tab in the Web UI.
+ClearML logs the scalars from training each network. They appear in the task's **SCALARS** tab in the Web UI.
 
 ![Optimization scalars](../img/integration_keras_tuner_06.png)
 
-ClearML automatically logs the parameters of each experiment run in the hyperparameter search. They appear in tabular 
-form in the experiment's **PLOTS**.
+ClearML automatically logs the parameters of each task run in the hyperparameter search. They appear in tabular 
+form in the task's **PLOTS**.
 
 ![Optimization plot](../img/integration_keras_tuner_07.png)
 
-ClearML automatically stores the output model. It appears in the experiment's **ARTIFACTS** **>** **Output Model**.
+ClearML automatically stores the output model. It appears in the task's **ARTIFACTS** **>** **Output Model**.
 
 ![output model](../img/integration_keras_tuner_03.png)
 

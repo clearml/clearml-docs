@@ -45,9 +45,9 @@ Integrate ClearML with the following steps:
 
 ### Parameters
 The following are the `ClearMLLogger` parameters:
-* `project_name` - The name of the project in which the experiment will be created. 
+* `project_name` - The name of the project in which the task will be created. 
 * `task_name` – The name of task.
-* `task_type` – The type of experiment (see [task types](../../../fundamentals/task.md#task-types)).
+* `task_type` – The type of task (see [task types](../../../fundamentals/task.md#task-types)).
 * `report_freq` – The histogram processing frequency (handles histogram values every X calls to the handler). Affects 
   `GradsHistHandler` and `WeightsHistHandler`. Default value is 100.
 * `histogram_update_freq_multiplier` – The histogram report frequency (report first X histograms and once every X 
@@ -152,16 +152,16 @@ validation_evaluator.add_event_handler(Events.EPOCH_COMPLETED, handler)
 ```
 
 
-## Visualizing Experiment Results
+## Visualizing Task Results
 
-When the code runs, the experiment results can be viewed in the [ClearML Web UI](../../../webapp/webapp_overview.md). 
+When the code runs, the task results can be viewed in the [ClearML Web UI](../../../webapp/webapp_overview.md). 
 
 ### Scalars
 
-View the scalars, including training and validation metrics, in the experiment's page in the ClearML Web UI, under 
+View the scalars, including training and validation metrics, in the task's page in the ClearML Web UI, under 
 **SCALARS**.
 
-![image](../../../img/ignite_training.png)
+![Task scalars](../../../img/ignite_training.png)
 
 ### Model Snapshots
  

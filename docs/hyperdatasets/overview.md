@@ -34,5 +34,5 @@ Frames are the basic units of data in ClearML Enterprise. SingleFrames and Frame
 Dataset versions can be created, modified, and removed. The different versions are recorded and available, 
 so experiments, and their data are reproducible and traceable. 
 
-Lastly, Dataviews manage views of the dataset with queries, so the input data to an experiment can be defined from a 
+Lastly, Dataviews manage views of the dataset with queries, so a task's input data can be defined from a 
 subset of a Dataset or combinations of Datasets.

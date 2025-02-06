@@ -9,13 +9,13 @@ The ClearML HPO App is available under the ClearML Pro plan.
 The Hyperparameter Optimization Application finds the set of parameter values that optimize a specific metric(s) for your 
 model.
 
-It takes in a ClearML experiment and its parameters to optimize. The parameter search space can be specified
+It takes in a ClearML task and its parameters to optimize. The parameter search space can be specified
 by specific (discrete) values and/or value ranges (uniform parameters). 
 
-The optimization app launches multiple copies of the original experiment, each time sampling different parameter sets, 
+The optimization app launches multiple copies of the original task, each time sampling different parameter sets, 
 applying a user-selected optimization strategy (random search, Bayesian, etc.). 
 
-Control the optimization process with the advanced configuration options, which include time, iteration, and experiment 
+Control the optimization process with the advanced configuration options, which include time, iteration, and task 
 limits.
 
 ## HPO Instance Configuration
@@ -42,7 +42,7 @@ limits.
             * Values - Comma separated list of values to sample
     * Name - The original task's configuration parameter name (including section name e.g. `Args/lr`)  <br/>
     :::tip Hydra Parameters
-    For experiments using Hydra, input parameters from the OmegaConf in the following format:
+    For tasks using Hydra, input parameters from the OmegaConf in the following format:
     `Hydra/<param>`. Specify `<param>` using dot notation. For example, if your OmegaConf looks like this: 
     ```
     dataset:
@@ -52,17 +52,17 @@ limits.
     ```
     Specify the `number` parameter with `Hydra/dataset.main.number`.
 
-    Additionally, make sure that the initial experiment's `_allow_omegaconf_edit_` parameter is set to `False` (in experiment's 
+    Additionally, make sure that the initial task's `_allow_omegaconf_edit_` parameter is set to `False` (in task's 
     **CONFIGURATION > HYPERPARAMETERS > Hydra**).
     :::
 * **Optimization Job Title** (optional) - Name for the HPO instance. This will appear in the instance list 
 * **Optimization Experiments Destination Project** (optional) - The project where optimization tasks will be saved. 
   Leave empty to use the same project as the Initial task. 
-* **Maximum Concurrent Tasks** - The maximum number of simultaneously running optimization experiments
+* **Maximum Concurrent Tasks** - The maximum number of simultaneously running optimization tasks
 * **Advanced Configuration** (optional)
-    * Limit Total HPO Experiments - Maximum total number of optimization experiments
-    * Number of Top Experiments to Save - Number of best performing experiments to save (the rest are archived)
-    * Limit Single Experiment Running Time (Minutes) - Time limit per optimization experiment. Experiments will be 
+    * Limit Total HPO Experiments - Maximum total number of optimization tasks
+    * Number of Top Experiments to Save - Number of best performing tasks to save (the rest are archived)
+    * Limit Single Experiment Running Time (Minutes) - Time limit per optimization task. Experiments will be 
       stopped after the specified time elapsed
     * Minimal Number of Iterations Per Single Experiment - Some search methods, such as Optuna, prune underperforming 
       experiments. This is the minimum number of iterations per experiment before it can be stopped. Iterations are 
@@ -85,9 +85,9 @@ Once an HPO instance is launched, the dashboard displays a summary of the optimi
 
 The HPO dashboard shows:
 * Optimization Metric - Last reported and maximum / minimum values of objective metric over time
-* Optimization Objective - Objective metric values per experiment
+* Optimization Objective - Objective metric values per task
 * Parallel coordinates - A visualization of parameter value impact on optimization objective
-* Summary - Experiment summary table: experiment execution information, objective metric and parameter values.
+* Summary - Task summary table: task execution information, objective metric and parameter values.
 * Budget - Available iterations and tasks budget (percentage, out of the values defined in the HPO instance's advanced configuration)
 * Resources - Number of workers servicing the HPO execution queue, and the number of currently running optimization tasks
 

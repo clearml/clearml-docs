@@ -25,7 +25,7 @@ All you have to do is install and set up ClearML:
    clearml-init
    ```
     
-That's it! In every training run from now on, the ClearML experiment 
+That's it! In every training run from now on, the ClearML task 
 manager will capture:
 * Source code and uncommitted changes
 * Hyperparameters - PyTorch trainer [parameters](https://huggingface.co/docs/transformers/v4.34.1/en/main_classes/trainer#transformers.TrainingArguments)
@@ -59,10 +59,10 @@ You can also select multiple experiments and directly [compare](../webapp/webapp
 See an example of Transformers and ClearML in action [here](../guides/frameworks/huggingface/transformers.md). 
 
 ## Remote Execution
-ClearML logs all the information required to reproduce an experiment on a different machine (installed packages, 
+ClearML logs all the information required to reproduce a task on a different machine (installed packages, 
 uncommitted changes etc.). The [ClearML Agent](../clearml_agent.md) listens to designated queues and when a task is 
 enqueued, the agent pulls it, recreates its execution environment, and runs it, reporting its scalars, plots, etc. to the 
-experiment manager.
+task manager.
 
 Deploy a ClearML Agent onto any machine (e.g. a cloud VM, a local GPU machine, your own laptop) by simply running 
 the following command on it:
@@ -82,7 +82,7 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
-* Clone the experiment
+* Clone the task
 * Edit the hyperparameters and/or other details 
 * Enqueue the task
 

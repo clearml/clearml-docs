@@ -21,14 +21,14 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
 When the code runs, ClearML logs your command-line arguments, which you can view in the [WebApp](../webapp/webapp_overview.md), 
-in the experiment's **Configuration > Hyperparameters > Args** section. 
+in the task's **Configuration > Hyperparameters > Args** section. 
 
 ![Jsonargparse integration](../img/integrations_jsonargparse.png)
 
 
 ### Automatic Logging Control
 By default, when ClearML is integrated into your script, it captures all of your `jsonargparse` parameters. 
-But, you may want to have more control over what your experiment logs. To control a task's logging of parameters from 
+But, you may want to have more control over what your task logs. To control a task's logging of parameters from 
 argument parsers, use the `auto_connect_arg_parser` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. 
 
@@ -59,7 +59,7 @@ The agent executes the code with the modifications you made in the UI, even over
 
 In the case that you connected a jsonargparse configuration file (e.g. with LightningCLI), make sure to set the 
 `_ignore_ui_overrides` to `False` in the **CONFIGURATION > HYPERPARAMETERS > ARGS** section. That way, after the customized
-experiment is enqueued, the task will use the new values during execution. 
+task is enqueued, the task will use the new values during execution. 
 
 
 ## Code Examples

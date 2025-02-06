@@ -7,7 +7,7 @@ pre-installed packages. To make use of the cached virtual environments, enable t
 
 ## Virtual Environment Reuse
 
-The virtual environment reuse feature may reduce experiment startup time dramatically.
+The virtual environment reuse feature may reduce task startup time dramatically.
 
 By default, ClearML uses the package manager's environment caching. This means that even if no 
 new packages need to be installed, checking the list of packages can take a long time.

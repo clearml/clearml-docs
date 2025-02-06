@@ -6,7 +6,7 @@ The **Dataviews table** is a [customizable](#customizing-the-dataviews-table) li
 Use it to view and create Dataviews, and access their info panels. 
 
 The table lists independent Dataview objects. To see Dataviews logged by a task, go
-to the specific task's **DATAVIEWS** tab (see [Experiment Dataviews](webapp_exp_track_visual.md)).
+to the specific task's **DATAVIEWS** tab (see [Task Dataviews](webapp_exp_track_visual.md)).
 
 View the Dataviews table in table view <img src="/docs/latest/icons/ico-table-view.svg" alt="Table view" className="icon size-md space-sm" /> 
 or in details view <img src="/docs/latest/icons/ico-split-view.svg" alt="Details view" className="icon size-md space-sm" />,
@@ -54,7 +54,7 @@ Customize the table using any of the following:
   dot on its top right (<img src="/docs/latest/icons/ico-filter-on.svg" alt="Filter on" className="icon size-md" />). To 
   clear all active filters, click <img src="/docs/latest/icons/ico-filter-reset.svg" alt="Clear filters" className="icon size-md" />
   in the top right corner of the table.
-* Sort columns - By experiment name and/or elapsed time since creation.
+* Sort columns - By task name and/or elapsed time since creation.
 
 :::note
 The following Dataviews-table customizations are saved on a **per-project** basis: 

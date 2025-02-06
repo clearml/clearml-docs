@@ -46,7 +46,7 @@ runner.register_training_hooks(
 The `init_kwargs` dictionary can include any parameter from [`Task.init()`](../references/sdk/task.md#taskinit). 
 
 This creates a [ClearML Task](../fundamentals/task.md) `OpenMMLab cifar10` in the `examples` project.
-You can view the captured metrics in the experiment's **Scalars** tab in the [WebApp](../webapp/webapp_overview.md).
+You can view the captured metrics in the task's **Scalars** tab in the [WebApp](../webapp/webapp_overview.md).
 
 ![OpenMMLab scalars](../img/integration_openmmlab_scalars.png)
 

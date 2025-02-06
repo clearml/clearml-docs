@@ -127,7 +127,7 @@ All parameters and configuration objects appear in the **CONFIGURATION** tab.
 ### Hyperparameters
 
 Hyperparameters are grouped by their type and appear in **CONFIGURATION** **>** **HYPERPARAMETERS**. Once a task 
-is run and stored in ClearML Server, any of these hyperparameters can be [modified](webapp_exp_tuning.md#modifying-experiments).
+is run and stored in ClearML Server, any of these hyperparameters can be [modified](webapp_exp_tuning.md#modifying-tasks).
 
 #### Command Line Arguments
 

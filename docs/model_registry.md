@@ -23,7 +23,7 @@ You can use the model catalog to trigger CI/CD pipelines based on changes (e.g. 
 publishing models).
 
 The ClearML SDK makes it easy for colleagues to access others' work and always fetch models based on the model catalog 
-or the experiment that created the model.
+or the task that created the model.
 
 The ClearML web UI visualizes the model catalog for complete observability and lineage of the model lifecycle, providing 
 governance at scale.
@@ -77,7 +77,7 @@ See [Automatic Logging](clearml_sdk/task_sdk.md#automatic-logging) for more info
 
 ### Manual Logging
 
-You can explicitly specify an experiment’s models using ClearML `InputModel` and `OutputModel` classes. 
+You can explicitly specify a task’s models using ClearML `InputModel` and `OutputModel` classes. 
 
 #### InputModel
 
@@ -101,8 +101,8 @@ input_model_2 = InputModel.import_model(
 )
 ```
 
-After instantiating an InputModel instance, you can connect it to a task object, so the model can be traced to an 
-experiment. 
+After instantiating an InputModel instance, you can connect it to a task object, so the model can be traced to n 
+task. 
 
 ```python
 # Connect the input model to the task
@@ -111,10 +111,10 @@ task.connect(input_model)
 
 #### OutputModel
  
-Use the [`OutputModel`](references/sdk/model_outputmodel.md) class to log your experiment outputs. An OutputModel object 
+Use the [`OutputModel`](references/sdk/model_outputmodel.md) class to log your task outputs. An OutputModel object 
 is instantiated with a task object as an argument (see [`task`](references/sdk/model_outputmodel.md) parameter), so it's 
 registered as the task's output model. Since OutputModel objects are connected to tasks, the models are traceable in 
-experiments. 
+tasks. 
 
 ```python
 from clearml import OutputModel, Task
@@ -159,9 +159,9 @@ ClearML models are independent entities facilitating their use in many use cases
 You can modify your models’ details via the UI: add metadata, change names, reconfigure, and add/edit label enumeration. 
 Modified models can be used as input models in your ClearML Tasks.  
 
-You can modify the models that an experiment trains:
-1. Clone an experiment
-1. Go to the experiment's **Artifacts** tab
+You can modify the models that a task trains:
+1. Clone a task
+1. Go to the task's **Artifacts** tab
 1. Hover over an input model's `Model name` field and click **Edit**. Then click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" />. 
 This will open up a window with a model table, where you can select any model from the model catalog.  
 

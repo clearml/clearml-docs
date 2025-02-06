@@ -18,7 +18,7 @@ Models in *Draft* status are editable, so you can modify their configuration, la
 The **GENERAL** tab lists the model's General information including: 
 * Model URL
 * ML Framework
-* Creating experiment (ClearML experiment that generated the model)
+* Creating task (ClearML task that generated the model)
 * Description (click to edit)
 
 If the model is stored in a network location, it can be downloaded by clicking the model URL. If the model was stored on 
@@ -74,12 +74,12 @@ window.
 
 ## Lineage
 
-The **LINEAGE** tab displays the model's creating experiment (the ClearML experiment that generated the model) and lists 
-all the tasks where the model is used as an input model. Click an experiment to navigate to its page.
+The **LINEAGE** tab displays the model's creating task (the ClearML task that generated the model) and lists 
+all the tasks where the model is used as an input model. Click a task to navigate to its page.
 
 You can filter the task list by tags and task status.
 
-Use the search bar to look for experiments based on their name, ID, or description.
+Use the search bar to look for tasks based on their name, ID, or description.
 
 
 ![Model lineage](../img/webapp_model_lineage.png#light-mode-only)

@@ -95,7 +95,7 @@ to open the app's instance launch form.
   on startup. This only applies to vaults loaded by the autoscaler itself, not to vaults loaded on cloud instances or by 
   tasks run by the autoscaler. For more information, see [Configuration Vault note](#configuration_vault) (available under ClearML Enterprise Plan).
 * **Init Script** (optional) - A bash script to execute after launching the VM instance
-* **Additional ClearML Configuration** (optional) - A ClearML configuration file to use by the ClearML Agent when executing your experiments
+* **Additional ClearML Configuration** (optional) - A ClearML configuration file to use by the ClearML Agent when executing your tasks
 * **Run with Service Account** -  Select to allow running the application under a [Service Account](../settings/webapp_settings_users.md#service-accounts) identity instead of under your own identity (available under ClearML Enterprise Plan)
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 

@@ -17,26 +17,26 @@ title: FAQ
 * [Models are not accessible from the UI after I migrated ClearML Server to a new address. How do I fix this?](#migrate_server_models)
 * [Models are not accessible from the UI after I moved them (different bucket / server). How do I fix this?](#relocate_models)
 
-**Experiments**
+**Tasks**
 
 * [I noticed I keep getting the message "warning: uncommitted code". What does it mean?](#uncommitted-code-warning)
 * [I do not use argparse for hyperparameters. Do you have a solution?](#dont-want-argparser)
-* [I noticed that all of my experiments appear as "Training". Are there other options?](#other-experiment-types)
-* [Sometimes I see experiments as running when in fact they are not. What's going on?](#experiment-running-but-stopped)
-* [My code throws an exception, but my experiment status is not "Failed". What happened?](#exception-not-failed)
-* [CERTIFICATE_VERIFY_FAILED - When I run my experiment, I get an SSL Connection error. Do you have a solution?](#ssl-connection-error)
-* [How do I modify experiment names once they have been created?](#modify_exp_names)
+* [I noticed that all of my tasks appear as "Training". Are there other options?](#other-task-types)
+* [Sometimes I see tasks as running when in fact they are not. What's going on?](#task-running-but-stopped)
+* [My code throws an exception, but my task status is not "Failed". What happened?](#exception-not-failed)
+* [CERTIFICATE_VERIFY_FAILED - When I run my task, I get an SSL Connection error. Do you have a solution?](#ssl-connection-error)
+* [How do I modify task names once they have been created?](#modify_exp_names)
 * [Using Conda and the "typing" package, I get the error "AttributeError: type object 'Callable' has no attribute '_abc_registry'". How do I fix this?](#typing)
 * [My ClearML Server disk space usage is too high. What can I do about this?](#delete_exp)
-* [Can I change the random seed my experiment uses?](#random_see)
-* [In the Web UI, I can't access files that my experiment stored. Why not?](#access_files)
+* [Can I change the random seed my task uses?](#random_seed)
+* [In the Web UI, I can't access files that my task stored. Why not?](#access_files)
 * [I get the message "ClearML Monitor: Could not detect iteration reporting, falling back to iterations as seconds-from-start". What does it mean?](#resource_monitoring)
 * [Can I control what ClearML automatically logs?](#controlling_logging)
 * [Can I run a ClearML Task while working offline?](#offline_mode)
 
 **Graphs and Logs**
 
-* [The first log lines are missing from the experiment console tab. Where did they go?](#first-log-lines-missing)
+* [The first log lines are missing from the task console tab. Where did they go?](#first-log-lines-missing)
 * [How do I create a graph comparing hyperparameters vs model accuracy?](#compare-graph-parameters)
 * [I want to add more graphs, not just with TensorBoard. Is this supported?](#more-graph-types)
 * [How can I report more than one scatter 2D series on the same plot?](#multiple-scatter2D)
@@ -65,11 +65,11 @@ title: FAQ
 
 * [How do I explicitly specify the ClearML configuration file to be used?](#change-config-path)
 * [How can I override ClearML credentials from the OS environment?](#credentials-os-env)
-* [How can I track OS environment variables with experiments?](#track-env-vars)
+* [How can I track OS environment variables with tasks?](#track-env-vars)
 
 **ClearML Hosted Service**
 
-* [I run my script, but my experiment is not in the ClearML Hosted Service Web UI. How do I fix this?](#hosted-service-no-config)
+* [I run my script, but my task is not in the ClearML Hosted Service Web UI. How do I fix this?](#hosted-service-no-config)
 
 **ClearML Server Deployment**
 
@@ -113,7 +113,7 @@ title: FAQ
 #### How do I know a new version came out? <a className="tr_top_negative" id="new-version-auto-update"></a>  
 
 Starting with ClearML v0.9.3, ClearML issues a new version release notification, which appears in the log and is 
-output to the console, when a Python experiment script is run.
+output to the console, when a Python task script is run.
 
 For example, when a new ClearML Python Package version is available, the notification is:
 
@@ -165,8 +165,8 @@ add a [custom column](webapp/webapp_model_table.md#customizing-the-models-table)
 that metric column. Available custom column options depend upon the models in the table and the metrics that have been
 attached to them (see [Logging Metrics and Plots](clearml_sdk/model_sdk.md#logging-metrics-and-plots)). 
 
-ClearML associates models with the experiments that created them, so you can also add a [custom column](webapp/webapp_exp_table.md#customizing-the-task-table) 
-in an experiments table and sort by that metric column. 
+ClearML associates models with the tasks that created them, so you can also add a [custom column](webapp/webapp_exp_table.md#customizing-the-task-table) 
+in a task table and sort by that metric column. 
 
 <br/> 
 
@@ -287,13 +287,13 @@ To fix this, the registered URL of each model needs to be replaced with its curr
     mongo backend script.js
     ```
 
-## Experiments
+## Tasks
 
 #### I noticed I keep getting the message "warning: uncommitted code". What does it mean?   <a id="uncommitted-code-warning"></a>
 
 This message is only a warning. ClearML not only detects your current repository and git commit, but also warns you 
-if you are using uncommitted code. ClearML does this because uncommitted code means this experiment will be difficult 
-to reproduce. You can see uncommitted changes in the ClearML Web UI, in the **EXECUTION** tab of the experiment info panel.
+if you are using uncommitted code. ClearML does this because uncommitted code means this task will be difficult 
+to reproduce. You can see uncommitted changes in the ClearML Web UI, in the **EXECUTION** tab of the task info panel.
 
 #### I do not use argparse for hyperparameters. Do you have a solution?   <a id="dont-want-argparser"></a>
 
@@ -324,10 +324,10 @@ For more task configuration options, see [Hyperparameters](fundamentals/hyperpar
 
 <br/>
 
-#### I noticed that all of my experiments appear as "Training". Are there other options?   <a id="other-experiment-types"></a>
+#### I noticed that all of my tasks appear as "Training". Are there other options?   <a id="other-experiment-types"></a>
 
-Yes! ClearML supports [multiple experiment types](fundamentals/task.md#task-types). When creating experiments and 
-calling [`Task.init()`](references/sdk/task.md#taskinit), you can provide an experiment type. For example:
+Yes! ClearML supports [multiple task types](fundamentals/task.md#task-types). When creating tasks and 
+calling [`Task.init()`](references/sdk/task.md#taskinit), you can provide a task type. For example:
 
 ```python
 task = Task.init(project_name, task_name, Task.TaskTypes.testing)
@@ -336,13 +336,13 @@ task = Task.init(project_name, task_name, Task.TaskTypes.testing)
 
 <br/>
 
-#### Sometimes I see experiments as running when in fact they are not. What's going on?   <a id="experiment-running-but-stopped"></a>
+#### Sometimes I see tasks as running when in fact they are not. What's going on?   <a id="experiment-running-but-stopped"></a>
 
-ClearML monitors your Python process. When the process exits properly, ClearML closes the experiment. When the process crashes and terminates abnormally, it sometimes misses the stop signal. In this case, you can safely right-click the experiment in the WebApp and abort it.
+ClearML monitors your Python process. When the process exits properly, ClearML closes the task. When the process crashes and terminates abnormally, it sometimes misses the stop signal. In this case, you can safely right-click the task in the WebApp and abort it.
 
 <br/>
 
-#### My code throws an exception, but my experiment status is not "Failed". What happened?   <a id="exception-not-failed"></a>
+#### My code throws an exception, but my task status is not "Failed". What happened?   <a id="exception-not-failed"></a>
 
 This issue was resolved in Trains v0.9.2. Upgrade to ClearML by executing the following command:
 
@@ -354,7 +354,7 @@ pip install -U clearml
 
 <br/>
 
-#### When I run my experiment, I get an SSL Connection error CERTIFICATE_VERIFY_FAILED. Do you have a solution?  
+#### When I run my task, I get an SSL Connection error CERTIFICATE_VERIFY_FAILED. Do you have a solution?  
 
 Your firewall may be preventing the connection. Try one of the following solutions:
 
@@ -382,11 +382,11 @@ Your firewall may be preventing the connection. Try one of the following solutio
 
 <br/>
 
-#### How do I modify experiment names once they have been created?  
+#### How do I modify task names once they have been created?  
 
-An experiment's name is a user-controlled property, which can be accessed via the `Task.name` property. This lets you use meaningful naming schemes to easily filter and compare experiments.
+A task's name is a user-controlled property, which can be accessed via the `Task.name` property. This lets you use meaningful naming schemes to easily filter and compare tasks.
 
-For example, to distinguish between different experiments, you can append the task ID to the task name:
+For example, to distinguish between different tasks, you can append the task ID to the task name:
 ```python
 task = Task.init(project_name='examples', task_name='train')
 task.name += ' {}'.format(task.id)
@@ -407,7 +407,7 @@ for t in tasks:
     if 'my_secret_parameter' in params:
         t.name += ' my_secret_parameter={}'.format(params['my_secret_parameter'])
 ```
-Use this experiment naming when creating automation pipelines with a naming convention.
+Use this task naming when creating automation pipelines with a naming convention.
 
 <a id="typing"></a>
 
@@ -427,10 +427,10 @@ To resolve the error, uninstall `typing` and rerun your script. If this does not
 
 #### My ClearML Server disk space usage is too high. What can I do about this?  
 
-To clear up space, you can delete ClearML objects (e.g. experiments, models, datasets, etc.). 
+To clear up space, you can delete ClearML objects (e.g. tasks, models, datasets, etc.). 
 
 To delete an object via the UI: 
-1. Go to the relevant object table (e.g. [Experiments Table](webapp/webapp_exp_table.md), [Models Table](webapp/webapp_model_table.md), etc.) 
+1. Go to the relevant object table (e.g. [Task Table](webapp/webapp_exp_table.md), [Model Table](webapp/webapp_model_table.md), etc.) 
 1. Archive the object - Right-click the object in the table **>** click **Archive**
 1. Click **Open Archive** on the top of the table
 1. In the archive table, right-click the object **>** click **Delete**. 
@@ -448,11 +448,11 @@ You cannot undo the deletion of a ClearML object.
 :::
 
 
-<a id="random_see"></a>
+<a id="random_seed"></a>
 
 <br/>
 
-#### Can I change the random seed my experiment uses?  
+#### Can I change the random seed my task uses?  
 
 Yes! By default, ClearML initializes Tasks with an initial seed of `1337` to ensure reproducibility. To set a different 
 value for your task, use the [`Task.set_random_seed()`](references/sdk/task.md#taskset_random_seed) class method and 
@@ -464,7 +464,7 @@ You can disable the deterministic behavior entirely by passing `Task.set_random_
 
 <br/>
 
-#### In the Web UI, I can't access files that my experiment stored. Why not?  
+#### In the Web UI, I can't access files that my task stored. Why not?  
 
 ClearML stores file locations. The machine running your browser must have access to the location where the machine 
 that ran the Task stored the file. This applies to debug samples and artifacts. If, for example, the machine running the browser does not have access, you may see `Unable to load image`, instead of the image.
@@ -586,11 +586,11 @@ See [Storing Task Data Offline](guides/set_offline.md).
 
 ## Graphs and Logs
 
-#### The first log lines are missing from the experiment console tab. Where did they go?   <a id="first-log-lines-missing"></a>
+#### The first log lines are missing from the task console tab. Where did they go?   <a id="first-log-lines-missing"></a>
 
 Due to speed/optimization issues, the console displays only the last several hundred log lines.
 
-You can always download the full log as a file using the ClearML Web UI. In the **ClearML Web UI >** experiment's **CONSOLE** 
+You can always download the full log as a file using the ClearML Web UI. In the **ClearML Web UI >** task's **CONSOLE** 
 tab, click `Download full log`.
 
 ![Download console log](img/faq_download_console_log.png)
@@ -599,20 +599,20 @@ tab, click `Download full log`.
 
 #### How do I create a graph comparing hyperparameters vs. model accuracy?   <a id="compare-graph-parameters"></a>
 
-You can use the UI's [experiment comparison features](webapp/webapp_exp_comparing.md) to compare the logged hyperparameter 
-and accuracy values of several experiments. In the experiment comparison page, under the **HYPERPARAMETERS** tab
-you can visualize experiments' hyperparameter values in relation to performance metrics in a scatter plot or parallel
+You can use the UI's [task comparison features](webapp/webapp_exp_comparing.md) to compare the logged hyperparameter 
+and accuracy values of several tasks. In the task comparison page, under the **HYPERPARAMETERS** tab
+you can visualize tasks' hyperparameter values in relation to performance metrics in a scatter plot or parallel
 coordinates plot:
 * [Scatter plot](webapp/webapp_exp_comparing.md#scatter-plot): View the correlation between a selected hyperparameter and 
   metric. For example, the image below shows a scatter plot that displays the values of a performance metric (`epoch_accuracy`) 
-  and a hyperparameter (`epochs`) of a few experiments:
+  and a hyperparameter (`epochs`) of a few tasks:
   
   ![Scatter plot comparison](img/faq_compare_scatter.png)
 
 * [Parallel coordinates plot](webapp/webapp_exp_comparing.md#parallel-coordinates-mode): View the impact of hyperparameters 
   on selected metric(s). For example, the image below shows 
   a parallel coordinates plot which displays the values of selected hyperparameters (`base_lr`, `batch_size`, and 
-  `number_of_epochs`) and a performance metric (`accuracy`) of three experiments: 
+  `number_of_epochs`) and a performance metric (`accuracy`) of three tasks: 
 
   ![Parallel Coordinates](img/compare_parallel_coordinates.png)
 
@@ -658,8 +658,8 @@ logger.report_scatter2d(
 
 #### Is there something ClearML can do about uncommitted code running?    <a id="help-uncommitted-code"></a>
 
-Yes! ClearML stores the git diff as part of the experiment's information. You can view the git diff in the **ClearML Web UI >** 
-experiment's **EXECUTION** tab.
+Yes! ClearML stores the git diff as part of the task's information. You can view the git diff in the **ClearML Web UI >** 
+task's **EXECUTION** tab.
 
 <br/>
 
@@ -675,7 +675,7 @@ task = Task.init(project_name, task_name, output_uri="/mnt/shared/folder")
 ```
 
 ClearML will copy all stored snapshots into a subfolder under `/mnt/shared/folder`. The subfolder's name will contain 
-the experiment's ID. If the experiment's ID is `6ea4f0b56d994320a713aeaf13a86d9d`, the following folder will be used:
+the task's ID. For example, if the task's ID is `6ea4f0b56d994320a713aeaf13a86d9d`, the following folder will be used:
 ```
 /mnt/shared/folder/task.6ea4f0b56d994320a713aeaf13a86d9d/models/
 ```
@@ -849,9 +849,9 @@ export CLEARML_API_HOST="http://localhost:8008"
 
 <br/>
 
-#### How can I track OS environment variables with experiments?    <a id="track-env-vars"></a>
+#### How can I track OS environment variables with tasks?    <a id="track-env-vars"></a>
 
-You can set environment variables to track in an experiment by specifying them in the `sdk.development.log_os_environments` 
+You can set environment variables to track in a task by specifying them in the `sdk.development.log_os_environments` 
 field of the [`clearml.conf`](configs/clearml_conf.md#log_env_var) file:
 
 ```editorconfig
@@ -884,9 +884,9 @@ The `CLEARML_LOG_ENVIRONMENT` variable always overrides the `clearml.conf` file.
 
 ## ClearML Hosted Service
         
-#### I run my script, but my experiment is not in the ClearML Hosted Service Web UI. How do I fix this?   <a id="hosted-service-no-config"></a>
+#### I run my script, but my task is not in the ClearML Hosted Service Web UI. How do I fix this?   <a id="hosted-service-no-config"></a>
 
-If you joined the ClearML Hosted Service and ran a script, but your experiment does not appear in Web UI, you may not have configured ClearML for the hosted service. Run the ClearML setup wizard. It will request your hosted service ClearML credentials and create the ClearML configuration you need.
+If you joined the ClearML Hosted Service and ran a script, but your task does not appear in Web UI, you may not have configured ClearML for the hosted service. Run the ClearML setup wizard. It will request your hosted service ClearML credentials and create the ClearML configuration you need.
 
 ```
 pip install clearml
@@ -961,7 +961,7 @@ For detailed instructions, see [Web Login Authentication](deploying_clearml/clea
 
 #### Can I modify non-responsive task settings?   <a id="watchdog"></a>
 
-The non-responsive experiment watchdog monitors experiments that were not updated for a specified time interval, and 
+The non-responsive task watchdog monitors tasks that were not updated for a specified time interval, and 
 marks them as `aborted`. The watchdog is always active.
 
 You can modify the following settings for the watchdog:
@@ -1137,9 +1137,9 @@ If your ClearML WebApp (UI) does not show anything, it may be an error authentic
 
 The network definitions inside a virtual machine (or container) are different from those of the host. The virtual machine's 
 and the server machine's IP addresses are different, so you have to make sure that the machine that is executing the 
-experiment can access the server's machine. 
+task can access the server's machine. 
 
-Make sure to have an independent configuration file for the virtual machine where you are running your experiments. 
+Make sure to have an independent configuration file for the virtual machine where you are running your tasks. 
 Edit the `api` section of your `clearml.conf` file and insert IP addresses of the server machine that are accessible 
 from the VM. It should look something like this:
 

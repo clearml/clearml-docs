@@ -3,7 +3,7 @@ title: ClearML SDK
 ---
 
 The ClearML Python Package supports the [automatic logging](../fundamentals/logger.md#automatic-reporting) that documents 
-experiments for you, and an extensive set of powerful features and functionality you can use to improve experimentation 
+tasks for you, and an extensive set of powerful features and functionality you can use to improve experimentation 
 and other workflows.
 
 :::tip Installation
@@ -36,7 +36,7 @@ See an [overview](task_sdk.md) of `Task`'s pythonic methods or the [Task SDK ref
 The `model` module contains three classes that provide support for working with models in ClearML: 
 * `Model` - represents an existing model in ClearML that can be loaded and connected to a Task 
 * `InputModel` - represents an existing model that you can load into ClearML 
-* `OutputModel` - represents the experiment output model that is always connected to the Task
+* `OutputModel` - represents the task output model that is always connected to the Task
 
 See an [overview](../clearml_sdk/model_sdk.md) of the Model classes' pythonic methods, or the SDK reference pages for [`Model`](../references/sdk/model_model.md), 
 [`InputModel`](../references/sdk/model_inputmodel.md), and [`OutputModel`](../references/sdk/model_outputmodel.md).

@@ -14,7 +14,7 @@ title: Reports
 
 <br/>
 
-With ClearML's Reports you can write up notes, experiment findings, or really anything you want. You can create reports 
+With ClearML's Reports you can write up notes, task findings, or really anything you want. You can create reports 
 in any of your ClearML projects.
 
 In addition to its main document, a report also contains a description field, which will appear in the report's card in 
@@ -40,7 +40,7 @@ download a PDF copy, or simply copy the MarkDown content and reuse in your edito
 Access ClearML reports through the [Reports Page](#reports-page).
 
 ## Embedding ClearML Visualizations
-You can embed plots and images from your ClearML objects (experiments, models, and apps) into your reports: scalar 
+You can embed plots and images from your ClearML objects (tasks, models, and apps) into your reports: scalar 
 graphs and other plots, and debug samples 
 from an individual object or from an object comparison page. These visualizations are updated live as the 
 object(s) updates.
@@ -64,7 +64,7 @@ object comparison)
    ![Reports step 3](../img/reports_step_3.png#light-mode-only)
    ![Reports step 3](../img/reports_step_3_dark.png#dark-mode-only)
 
-Once embedded in the report, you can return to the resource's original location (e.g. comparison page, experiment/model/app page) 
+Once embedded in the report, you can return to the resource's original location (e.g. comparison page, task/model/app page) 
 by clicking <img src="/docs/latest/icons/ico-resource-return.svg" alt="Return to resource" className="icon size-md" />.
 
 ### Customizing Embed Code
@@ -134,24 +134,24 @@ Delimit the fields with `&`s.
 The following are examples of dynamic queries. All the examples use `objectType=task`, but `objectType=model` can also be 
 used. 
 
-* Request the scalars plot of a specific metric variant for the latest experiment in a project:
+* Request the scalars plot of a specific metric variant for the latest task in a project:
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=<metric_name>&variants=<variant>&project=<project_id>&page_size=1&page=0&order_by[]=-last_update
   ```
-  Notice that the `project` parameter is specified. To get the most recent single experiment, 
+  Notice that the `project` parameter is specified. To get the most recent single task, 
   `page_size=1&page=0&order_by[]=-last_update` is added. `page_size` specifies how many results are returned in each 
   page, and `page` specifies which page to return (in this case the first page)--this way you can specify how many 
-  experiments you want in your graph. `order_by[]=-last_update` orders the results by update time in descending order 
+  tasks you want in your graph. `order_by[]=-last_update` orders the results by update time in descending order 
   (most recent first).    
-* Request the scalars plot of a specific metric variant for the experiments with a specific tag: 
+* Request the scalars plot of a specific metric variant for the tasks with a specific tag: 
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=<metric_name>&variants=<variant>&tags[]=__$or,<tag>
   ```
-  A list of tags that the experiment should contain is specified in the `tags` argument. You can also specify tags that 
-  exclude experiments. See tag filter syntax examples [here](../clearml_sdk/task_sdk.md#tag-filters).    
-* Request the `training/accuracy` scalar plot of the 5 experiments with the best accuracy scores (see Metric/Variant IDs note [below](#event_id)):
+  A list of tags that the task should contain is specified in the `tags` argument. You can also specify tags that 
+  exclude tasks. See tag filter syntax examples [here](../clearml_sdk/task_sdk.md#tag-filters).    
+* Request the `training/accuracy` scalar plot of the 5 tasks with the best accuracy scores (see Metric/Variant IDs note [below](#event_id)):
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=training&variants=accuracy&project=4043a1657f374e9298649c6ba72ad233&page_size=5&page=0&order_by[]=-last_metrics.<metric_id>.<variant_id>.value"

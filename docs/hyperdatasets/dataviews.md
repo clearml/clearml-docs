@@ -14,8 +14,8 @@ Dataviews support:
 * Class label enumeration
 * Controls for the frame iteration, such as sequential or random iteration, limited or infinite iteration, and reproducibility. 
 
-Dataviews are lazy and optimize processing. When an experiment script runs in a local environment, Dataview pointers
-are initialized. If the experiment is cloned or extended, and that newly cloned or extended experiment is tuned and run, 
+Dataviews are lazy and optimize processing. When a task script runs in a local environment, Dataview pointers
+are initialized. If the task is cloned or extended, and that newly cloned or extended task is tuned and run, 
 only changed pointers are initialized. The pointers that did not change are reused.
 
 ## Dataview State
@@ -26,7 +26,7 @@ preserves the Dataview's settings.
 
 ## Filtering
 
-A Dataview filters experiment input data, using one or more frame filters. A frame filter defines the criteria for the 
+A Dataview filters task input data, using one or more frame filters. A frame filter defines the criteria for the 
 selection of SingleFrames iterated by a Dataview.  
 
 A frame filter contains the following criteria:
@@ -84,7 +84,7 @@ in steps, where each step is composed of a method, an operation, and a strength 
     * Reflect-vert - Flip images vertically
     * Scale
     * Shear - Skew
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the experiment runs again, and 
+    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the task runs again, and 
       the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
     
 * **Pixel** augmentation method - Transform images by modifying pixel values while retaining shape and perspective.  
@@ -95,7 +95,7 @@ in steps, where each step is composed of a method, an operation, and a strength 
       * **high** noise - like snow on analog televisions with a weak TV signal 
       * **low** noise - like a low resolution image magnified in localized areas on the image
     * Recolor - using an internal RGB lookup-table
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the experiment runs again, and 
+    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the task runs again, and 
       the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
     
 * Strength - A number applied to adjust the degree of transformation. The recommended strengths are the following:
@@ -126,11 +126,11 @@ may repeat. The settings include the following:
       the maximum, then the actual number of SingleFrames are iterated. If the order is sequential, then no SingleFrames 
       repeat. If the order is random, then some SingleFrames may repeat. 
 
-    * Infinite Iterations - Iterate SingleFrames until the experiment is manually terminated. If the order is sequential, 
-      then all SingleFrames are iterated (unless the experiment is manually terminated before all iterate) and SingleFrames 
+    * Infinite Iterations - Iterate SingleFrames until the task is manually terminated. If the order is sequential, 
+      then all SingleFrames are iterated (unless the task is manually terminated before all iterate) and SingleFrames 
       repeat. If the order is random, then all SingleFrames may not be iterated, and some SingleFrames may repeat.
         
-* Random Seed - If the experiment is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
+* Random Seed - If the task is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
 
 * Clip Length - For video data sources, in the number of sequential SingleFrames from a clip to iterate.
 

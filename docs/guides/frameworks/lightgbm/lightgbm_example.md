@@ -9,11 +9,11 @@ The example script does the following:
 * Creates a dataset for LightGBM to train a model
 * Specifies configuration which are automatically captured by ClearML
 * Saves model which ClearML automatically captures
-* Creates an experiment named `LightGBM` in the `examples` project.
+* Creates a task named `LightGBM` in the `examples` project.
 
 ## Scalars
 
-The scalars logged in the experiment can be visualized in a plot, which appears in the ClearML web UI, in the experiment's **SCALARS** tab.
+The scalars logged in the task can be visualized in a plot, which appears in the ClearML web UI, in the task's **SCALARS** tab.
 
 ![LightGBM scalars](../../../img/examples_lightgbm_scalars.png)
 
@@ -25,7 +25,7 @@ ClearML automatically logs the configurations applied to LightGBM. They appear i
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab. ClearML automatically logs and tracks 
+Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks 
 models and any snapshots created using LightGBM. 
 
 ![LightGBM model](../../../img/examples_lightgbm_model.png)

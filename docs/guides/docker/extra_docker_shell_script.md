@@ -9,7 +9,7 @@ but sometimes, when using a Docker container, a user may need to use additional,
 ## Tutorial
 
 In this tutorial, you will learn how to use `extra_docker_shell_script` to reconfigure an Agent to execute 
-a shell script when a docker is started, but before an experiment is run. 
+a shell script when a docker is started, but before a task is run. 
 
 ## Prerequisites
 * `clearml-agent` downloaded and configured - work on a machine which has access to the configuration file of the Agent

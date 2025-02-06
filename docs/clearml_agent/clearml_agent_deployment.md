@@ -118,7 +118,7 @@ The ClearML Kubernetes-Glue performs the following:
 - Prepares a Kubernetes job based on a provided YAML template.
 - Inside each job pod, the `clearml-agent`:
   - Installs the required environment for the task.
-  - Executes and monitors the experiment process.
+  - Executes and monitors the task process.
 
 :::important Enterprise Features
 ClearML Enterprise adds advanced Kubernetes features:

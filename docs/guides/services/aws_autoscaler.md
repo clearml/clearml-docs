@@ -166,8 +166,8 @@ The values configured through the wizard are stored in the task's hyperparameter
 [`Task.connect()`](../../references/sdk/task.md#connect) and [`Task.set_configuration_object()`](../../references/sdk/task.md#set_configuration_object) 
 methods respectively. They can be viewed in the WebApp, in the task's **CONFIGURATION** page under **HYPERPARAMETERS** and **CONFIGURATION OBJECTS > General**. 
 
-ClearML automatically logs command line arguments defined with argparse. View them in the experiments **CONFIGURATION** 
-page under **HYPERPARAMETERS > General**.
+ClearML automatically logs command line arguments defined with argparse. View them in the task's **CONFIGURATION** 
+tab under **HYPERPARAMETERS > General**.
 
 ![Autoscaler configuration](../../img/examples_aws_autoscaler_config.png)
 
@@ -177,6 +177,6 @@ in [services mode](../../clearml_agent/clearml_agent_services_mode.md) for such 
 
 ### Console
 
-All other console output appears in the experiment's **CONSOLE**.
+All other console output appears in the task's **CONSOLE**.
 
 ![Autoscaler console](../../img/examples_aws_autoscaler_console.png)

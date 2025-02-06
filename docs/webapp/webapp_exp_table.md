@@ -273,7 +273,7 @@ selecting items beyond the items currently on-screen:
 
 ## Comparing Tasks 
 
-The comparison view compares task scalar and plot results (for a more in depth comparison, see [Comparing Experiments](webapp_exp_comparing.md)). 
+The comparison view compares task scalar and plot results (for a more in depth comparison, see [Comparing Tasks](webapp_exp_comparing.md)). 
 When selected, the view presents a comparison of all [selected tasks](#selecting-multiple-tasks). If no 
 tasks are selected, the first 100 visible tasks in the table are displayed in the comparison. 
 

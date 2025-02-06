@@ -45,7 +45,7 @@ def main(pickle_url, mock_parameter='mock'):
   the following format: `{'section_name':['param_name']]}`. For example, the pipeline in the code above will store the 
   `pickle_url` parameter in the `General` section and `mock_parameter` in the `Mock` section. By default, arguments will 
   be stored in the `Args` section.  
-* `pool_frequency` - The polling frequency (in minutes) for monitoring experiments / states.
+* `pool_frequency` - The polling frequency (in minutes) for monitoring tasks / states.
 * `add_pipeline_tags` - If `True`, add `pipe: <pipeline_task_id>` tag to all steps (Tasks) created by this pipeline 
   (this is useful to create better visibility in projects with multiple pipelines, and for easy selection) (default: 
   `False`).

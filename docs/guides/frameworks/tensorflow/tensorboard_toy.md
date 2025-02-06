@@ -6,12 +6,12 @@ The [tensorboard_toy.py](https://github.com/allegroai/clearml/blob/master/exampl
 example demonstrates ClearML's automatic logging of TensorBoard scalars, histograms, images, and text, as well as 
 all other console output and TensorFlow Definitions. 
 
-When the script runs, it creates an experiment named `tensorboard toy example` in the `examples` 
+When the script runs, it creates a task named `tensorboard toy example` in the `examples` 
 project.
 
 ## Scalars
 
-The `tf.summary.scalar` output appears in the ClearML web UI, in the experiment's 
+The `tf.summary.scalar` output appears in the ClearML web UI, in the task's 
 **SCALARS**. Resource utilization plots, which are titled **:monitor: machine**, also appear in the **SCALARS** tab.
 
 ![image](../../../img/examples_tensorboard_toy_03.png)

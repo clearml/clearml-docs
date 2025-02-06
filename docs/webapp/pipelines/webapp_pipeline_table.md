@@ -164,7 +164,7 @@ In the dropdown menu, select to view **Scalars** or **Plots**.
 ![Scalar line graphs](../../img/pipelines_comparison_scalars_dark.png#dark-mode-only)
 
 All single value scalars are plotted into a single clustered bar chart under the "Summary" title, where each cluster 
-represents a reported metric, and each bar in the cluster represents an experiment.
+represents a reported metric, and each bar in the cluster represents a task.
 
 ![Single scalar comparison](../../img/pipelines_comparison_single_scalar.png#light-mode-only)
 ![Single scalar comparison](../../img/pipelines_comparison_single_scalar_dark.png#dark-mode-only)
@@ -191,4 +191,4 @@ Other plot types are displayed separately for each run.
 ### Run Details Comparison
 For a more in depth comparison of pipeline runs, select the runs to compare and click **Compare** in the batch action 
 bar. In the run comparison pages, you can compare details, hyperparameters, scalars, plots, and debug samples. For more 
-information, see [Comparing Experiments](../webapp_exp_comparing.md).
+information, see [Comparing Tasks](../webapp_exp_comparing.md).

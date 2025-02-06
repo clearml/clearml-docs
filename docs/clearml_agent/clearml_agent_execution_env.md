@@ -5,7 +5,7 @@ ClearML Agent has two primary execution modes: [Virtual Environment Mode](#virtu
 
 ## Virtual Environment Mode 
 
-In Virtual Environment Mode, the agent creates a virtual environment for the experiment, installs the required Python 
+In Virtual Environment Mode, the agent creates a virtual environment for the task, installs the required Python 
 packages based on the task specification, clones the code repository, applies the uncommitted changes and finally 
 executes the code while monitoring it. This mode uses smart caching so packages and environments can be reused over 
 multiple tasks (see [Virtual Environment Reuse](clearml_agent_env_caching.md#virtual-environment-reuse)). 
@@ -42,7 +42,7 @@ ClearML Agent uses the provided default Docker container, which can be overridde
 
 :::tip Setting Docker Container via UI
 You can set the docker container via the UI: 
-1. Clone the experiment
+1. Clone the task
 2. Set the Docker in the cloned task's **Execution** tab **> Container** section
 
    ![Container section](../img/webapp_exp_container.png#light-mode-only)

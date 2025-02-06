@@ -3,7 +3,7 @@ title: WebApp
 ---
 
 The **ClearML Web UI** is the graphical user interface for the ClearML platform, which includes:
-* Experiment management
+* Task management
 * Browsing
 * Resource utilization monitoring
 * Profile management
@@ -15,14 +15,14 @@ The **ClearML Web UI** is the graphical user interface for the ClearML platform,
 ## UI Modules 
 The WebApp's sidebar provides access to the following modules:
 
-* <img src="/docs/latest/icons/ico-homepage.svg" alt="Homepage" className="icon size-md space-md" />[Dashboard](webapp_home.md) - The dashboard for recent activity and quick access to experiments and projects. 
+* <img src="/docs/latest/icons/ico-homepage.svg" alt="Homepage" className="icon size-md space-md" />[Dashboard](webapp_home.md) - The dashboard for recent activity and quick access to tasks and projects. 
 
-* <img src="/docs/latest/icons/ico-projects.svg" alt="Projects" className="icon size-md space-md" />[Projects](webapp_projects_page.md) - The main experimentation page. Access your experiments and models as they are organized into projects. The experiments and models are displayed in tables which let you:
-  * Track ongoing experiments and visualize their results 
-  * Reproduce previously run experiments 
-  * Tune experiments with no code change 
-  * Compare experiments 
-  * Share experiments and their models with other ClearML hosted service users
+* <img src="/docs/latest/icons/ico-projects.svg" alt="Projects" className="icon size-md space-md" />[Projects](webapp_projects_page.md) - The main experimentation page. Access your tasks and models as they are organized into projects. The tasks and models are displayed in tables which let you:
+  * Track ongoing tasks and visualize their results 
+  * Reproduce previously run tasks 
+  * Tune tasks with no code change 
+  * Compare tasks 
+  * Share tasks and their models with other ClearML hosted service users
 *  <img src="/docs/latest/icons/ico-side-bar-datasets.svg" alt="Datasets" className="icon size-md space-md" />[Datasets](datasets/webapp_dataset_page.md) - View and manage your datasets. 
 * <img src="/docs/latest/icons/ico-pipelines.svg" alt="Pipelines" className="icon size-md space-md" />[Pipelines](pipelines/webapp_pipeline_page.md) - View and manage your pipelines. 
 * <img src="/docs/latest/icons/ico-model-endpoints.svg" alt="Model endpoints" className="icon size-md space-md" />[Model Endpoints](webapp_model_endpoints.md) - Monitor your live model endpoints (available in the ClearML Enterprise plan). 
@@ -61,8 +61,8 @@ to find your ClearML resources.
 To search using regex, click the `.*` icon on the search bar. 
 
 Search results are returned for the different ClearML objects:
-* Experiments - Searching an experiment table looks for matches in the experiments' name, ID, description and input and 
-output models. The enterprise version also includes experiment Dataviews' hyper-datasets and versions. 
+* Tasks - Searching a task table looks for matches in the tasks' name, ID, description and input and 
+output models. The enterprise version also includes task Dataviews' hyper-datasets and versions. 
 * Models - Searching a Model table looks for matches in the models' name, ID and description.
 * Dataviews (Enterprise only) - Searching a Dataviews table looks for matches in the Dataviews' name, ID, description, 
 hyper-datasets, and versions.
@@ -74,10 +74,10 @@ run's table, a search looks for matches in the runs' name and ID.
 report content.
 
 The search bar in the [Dashboard](webapp_home.md) page searches the whole WebApp for objects that match queries as 
-specified above and returns results divided by object type (projects, experiments, models, etc.). 
+specified above and returns results divided by object type (projects, tasks, models, etc.). 
 
 :::tip Additional filtering
-ClearML's object tables (e.g. [experiments](webapp_exp_table.md), [models](webapp_model_table.md), [pipelines](pipelines/webapp_pipeline_table.md), 
+ClearML's object tables (e.g. [tasks](webapp_exp_table.md), [models](webapp_model_table.md), [pipelines](pipelines/webapp_pipeline_table.md), 
 and [datasets](datasets/webapp_dataset_page.md)) provide column filters to easily focus your search by object properties
 (e.g status, creation/update time, metric values, etc.).
 :::

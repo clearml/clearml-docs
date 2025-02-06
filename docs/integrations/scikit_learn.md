@@ -31,7 +31,7 @@ You can view all the task details in the [WebApp](../webapp/webapp_exp_track_vis
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your scikit-learn script, it captures models, and 
-scalars. But, you may want to have more control over what your experiment logs.
+scalars. But, you may want to have more control over what your task logs.
 
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. For finer grained control of logged 
@@ -78,10 +78,10 @@ additional tools, like Matplotlib:
 
 
 ## Remote Execution
-ClearML logs all the information required to reproduce an experiment on a different machine (installed packages, 
+ClearML logs all the information required to reproduce a task on a different machine (installed packages, 
 uncommitted changes etc.). The [ClearML Agent](../clearml_agent.md) listens to designated queues and when a task is enqueued, 
 the agent pulls it, recreates its execution environment, and runs it, reporting its scalars, plots, etc. to the 
-experiment manager.
+task manager.
 
 Deploy a ClearML Agent onto any machine (e.g. a cloud VM, a local GPU machine, your own laptop) by simply running the 
 following command on it:
@@ -101,7 +101,7 @@ and shuts down instances as needed, according to a resource budget that you set.
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
 
-* Clone the experiment
+* Clone the task
 * Edit the hyperparameters and/or other details
 * Enqueue the task
 

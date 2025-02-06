@@ -6,7 +6,7 @@ ClearML Enterprise's **Datasets** and **Dataset versions** provide the internal 
 and functionality for the following purposes:
 * Connecting source data to the ClearML Enterprise platform
 * Using ClearML Enterprise's Git-like [Dataset versioning](#dataset-versioning)
-* Integrating the powerful features of [Dataviews](dataviews.md) with an experiment
+* Integrating the powerful features of [Dataviews](dataviews.md) with a task
 * [Annotating](webapp/webapp_datasets_frames.md#annotations) images and videos
 
 Datasets consist of versions with SingleFrames and/or FrameGroups. Each Dataset can contain multiple versions, which 

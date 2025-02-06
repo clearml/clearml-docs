@@ -13,7 +13,7 @@ from clearml import Task
 task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
-When the code runs, ClearML logs your command-line arguments, which you can view in the [WebApp](../webapp/webapp_overview.md), in the experiment's 
+When the code runs, ClearML logs your command-line arguments, which you can view in the [WebApp](../webapp/webapp_overview.md), in the task's 
 **Configuration > Hyperparameters > Args** section. 
 
 ![Fire integration](../img/integrations_fire_params.png)

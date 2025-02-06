@@ -170,19 +170,19 @@ You can upload your files in conjunction with the `--store-workspace` option to 
 development machines and remote machines with persistent workspace synchronization. See [Storing and Synchronizing Workspace](#storing-and-synchronizing-workspace).
 
 ### Starting a Debugging Session 
-You can debug previously executed experiments registered in the ClearML system on a remote interactive session. 
-Input into `clearml-session` the ID of a Task to debug, then `clearml-session` clones the experiment's git repository and 
+You can debug previously executed tasks registered in the ClearML system on a remote interactive session. 
+Input into `clearml-session` the ID of a Task to debug, then `clearml-session` clones the task's git repository and 
 replicates the environment on a remote machine. Then the code can be interactively executed and debugged on JupyterLab / VS Code. 
 
 :::note
 The Task must be connected to a git repository, since currently single script debugging is not supported.
 :::
 
-1. In the **ClearML web UI**, find the experiment (Task) that needs debugging.
+1. In the **ClearML web UI**, find the task that needs debugging.
 1. Click the `ID` button next to the Task name, and copy the unique ID.
-1. Enter the following command: `clearml-session --debugging-session <experiment_id_here>`
+1. Enter the following command: `clearml-session --debugging-session <task_id>`
 1. Click on the JupyterLab / VS Code link, or connect directly to the SSH session.
-1. In JupyterLab / VS Code, access the experiment's repository in the `environment/task_repository` folder. 
+1. In JupyterLab / VS Code, access the task's repository in the `environment/task_repository` folder. 
 
 ### Storing and Synchronizing Workspace
 You can store and sync your interactive session workspace with the `--store-workspace` option. `clearml-session`
@@ -220,7 +220,7 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--base-task-id` | Pass the ID of a task that will become the base task, so the session will use its configurations | `none` or the previously entered base task |
 | `--config-file` | Specify a path to another configuration file for `clearml-session` to store its previous state | `.clearml_session.json` or previously entered configuration file |  
 | `--continue-session` | Pass the session of a previous session to continue, restoring your workspace (see `--store-workspace`) | `none` |
-| `--debugging-session` | Pass existing Task ID, create a copy of the experiment on a remote machine, and launch Jupyter/SSH for interactive access. Example `--debugging-session <task_id>`| `none`|
+| `--debugging-session` | Pass existing Task ID, create a copy of the task on a remote machine, and launch Jupyter/SSH for interactive access. Example `--debugging-session <task_id>`| `none`|
 | `--disable-fingerprint-check` | If set, bypass the remote SSH server fingerprint verification process | `none` |
 | `--disable-session-cleanup` | If `True`, previous interactive sessions are not deleted | `false`|
 | `--disable-store-defaults` | If set, do not store current setup as new default configuration| `none`|

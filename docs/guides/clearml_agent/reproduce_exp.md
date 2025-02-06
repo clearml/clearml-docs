@@ -1,5 +1,5 @@
 ---
-title: Recreating Experiment Environments 
+title: Recreating Task Environments 
 ---
 
 <div class="vid" >
@@ -14,21 +14,23 @@ title: Recreating Experiment Environments
 
 <br/>
 
-Sometimes, you may need to recreate your experiment environment on a different machine, but you haven't committed your 
+Sometimes, you may need to recreate your task environment on a different machine, but you haven't committed your 
 code.
 
-ClearML logs everything needed to reproduce your experiment and its environment (uncommitted changes, used packages, and 
-more), making it easy to reproduce your experiment's execution environment using ClearML.
+ClearML logs everything needed to reproduce your task and its environment (uncommitted changes, used packages, and 
+more), making it easy to reproduce your task's execution environment using ClearML.
 
-You can reproduce the execution environment of any experiment you've run with ClearML on any workload:
+You can reproduce the execution environment of any task you've run with ClearML on any workload:
 
-1. Go to the experiment page of the task you want to reproduce in the [ClearML WebApp](../../webapp/webapp_overview.md), 
+1. Go to the task page of the task you want to reproduce in the [ClearML WebApp](../../webapp/webapp_overview.md)
+
    :::tip
-   Use the UI's [filtering and sorting](../../webapp/webapp_exp_table.md#filtering-columns) to find the best performing experiments.  
+   Use the UI's [filtering and sorting](../../webapp/webapp_exp_table.md#filtering-columns) to find the best performing tasks.  
    ::: 
-1. Copy the desired experiment's ID
-1. Use the ClearML Agent's [`build`](../../clearml_agent/clearml_agent_ref.md#build) command to rebuild the experiment's
-   execution environment. Input the experiment's ID and the target local folder, where the environment will be created: 
+
+1. Copy the task's ID
+1. Use the ClearML Agent's [`build`](../../clearml_agent/clearml_agent_ref.md#build) command to rebuild the task's
+   execution environment. Input the task's ID and the target local folder, where the environment will be created: 
 
    ```commandline
    clearml-agent build --id <task_id> --target <target_folder>
@@ -38,4 +40,4 @@ You can reproduce the execution environment of any experiment you've run with Cl
 2. Activate the virtual environment using the activation script. Once done, you'll find all of your environment's packages 
    already installed in the environment 
 
-And that's it! Your experiment's environment and your code has been reproduced! 
+And that's it! Your task's environment and your code has been reproduced! 
