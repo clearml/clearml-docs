@@ -22,7 +22,8 @@ Each row of the table includes:
 Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-md" />
 to find a specific user by their name, email, or user ID. 
 
-![Users table](../../img/settings_user_table.png)
+![Users table](../../img/settings_user_table.png#light-mode-only)
+![Users table](../../img/settings_user_table_dark.png#dark-mode-only)
 
 ### Inviting New Teammates
 
@@ -75,7 +76,8 @@ to find a specific service account by its name or ID.
 
 Hover over a service account in the table to **Edit** or **Delete** it.
 
-![Service accounts](../../img/settings_service_accounts.png)
+![Service accounts](../../img/settings_service_accounts.png#light-mode-only)
+![Service accounts](../../img/settings_service_accounts_dark.png#dark-mode-only)
 
 ### Creating a Service Account
 
@@ -139,7 +141,8 @@ In addition to the service account-specific configuration vault, [administrator 
 be applied to service accounts. See all the vaults applied to the account in the **Applied administrator vaults** below 
 the configuration vault.   
 
-![Service Account Config Vault](../../img/settings_service_account_config_vault.png)
+![Service Account Config Vault](../../img/settings_service_account_config_vault.png#light-mode-only)
+![Service Account Config Vault](../../img/settings_service_account_config_vault_dark.png#dark-mode-only)
 
 ### Deleting Service Account
 Deleting a service account will revoke its credentials, causing agents using the account's credentials to fail. 
@@ -169,7 +172,8 @@ The user group table lists all the active user groups. Each row includes a group
 Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-md" /> 
 to find a specific user group by its name, description, or ID.
 
-![User Management Page](../../img/settings_user_management_table.png)
+![User Management Page](../../img/settings_user_management_table.png#light-mode-only)
+![User Management Page](../../img/settings_user_management_table_dark.png#dark-mode-only)
 
 ### Creating a User Group
 
@@ -181,7 +185,12 @@ to find a specific user group by its name, description, or ID.
    the <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" /> button
 1. Click **SAVE**
 
-![User group creation dialog](../../img/settings_user_group.png)
+<div class="max-w-50">
+
+![User group creation dialog](../../img/settings_user_group.png#light-mode-only)
+![User group creation dialog](../../img/settings_user_group_dark.png#dark-mode-only)
+
+</div>
 
 ### Editing a User Group
 

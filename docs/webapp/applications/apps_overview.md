@@ -8,7 +8,8 @@ ClearML Applications are available under the ClearML Pro plan.
 
 Use ClearML's GUI Applications to manage ML workloads and automatically run your recurring workflows without any coding. 
 
-![Apps page](../../img/apps_overview_page.png)
+![Apps page](../../img/apps_overview_page.png#light-mode-only)
+![Apps page](../../img/apps_overview_page_dark.png#dark-mode-only)
 
 Configure and launch app instances, then track their execution from the app dashboard.
 
@@ -37,7 +38,7 @@ Applications for deploying user interfaces for models:
 ### Deploy
 Applications for deploying machine learning models as scalable, secure services:
 * [**Embedding Model Deployment**](apps_embed_model_deployment.md) - Deploy embedding models as networking services over a secure endpoint (available under ClearML Enterprise Plan)
-* [**Model Deployment**](apps_model_deployment.md) - Deploy LLM models as networking services over a secure endpoint (available under ClearML Enterprise Plan)
+* [**vLLM Model Deployment**](apps_model_deployment.md) - Deploy LLM models as networking services over a secure endpoint (available under ClearML Enterprise Plan)
 * [**llama.cpp**](apps_llama_deployment.md) - Deploy LLM models in GGUF format using [`llama.cpp`](https://github.com/ggerganov/llama.cpp) as networking services over a secure endpoint (available under ClearML Enterprise Plan)
 
 :::info Autoscalers
@@ -54,7 +55,8 @@ Each application's page is split into two sections:
   Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
   to quickly find an app instance by name.
 
-![App format](../../img/apps_format_overview.png)
+![App format](../../img/apps_format_overview.png#light-mode-only)
+![App format](../../img/apps_format_overview_dark.png#dark-mode-only)
 
 ## Launching an App Instance
 
@@ -76,7 +78,12 @@ The prefilled instance launch form can be edited before starting the new app ins
 ## App Instance Actions
 Access app instance actions, by right-clicking an instance, or through the menu button <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" /> (available on hover).
 
-![App context menu](../../img/app_context_menu.png)
+<div class="max-w-75">
+
+![App context menu](../../img/app_context_menu.png#light-mode-only)
+![App context menu](../../img/app_context_menu_dark.png#dark-mode-only)
+
+</div>
 
 * **Rename** - Rename the instance 
 * **Configuration** - View an instance's configuration 
@@ -91,7 +98,12 @@ Access app instance actions, by right-clicking an instance, or through the menu 
 Access the instance list actions by clicking the action menu (<img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" />) 
 on the instance list header:
 
-![Instance list actions](../../img/apps_instance_list_actions.png)
+<div class="max-w-75">
+
+![Instance list actions](../../img/apps_instance_list_actions.png#light-mode-only)
+![Instance list actions](../../img/apps_instance_list_actions_dark.png#dark-mode-only)
+
+</div>
 
 * **Import Configuration** - Import an app instance's configuration file. This opens the app instance launch form
   prefilled according to the imported file. You can modify the configuration before launching the instance.  

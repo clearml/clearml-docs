@@ -34,12 +34,14 @@ The comparison page opens in the **DETAILS** tab with the experiments [compared 
 Click the `EXPERIMENTS` button to view your currently compared experiments. Click `X` on a listed experiment to remove
 it from the comparison.
 
-![Experiments list](../img/webapp_compare_exp_select_2.png)
+![Experiments list](../img/webapp_compare_exp_select_2.png#light-mode-only)
+![Experiments list](../img/webapp_compare_exp_select_2_dark.png#dark-mode-only)
 
 You can add/remove experiments to your comparison:
 1. Click the `+` button in any of the comparison tabs. This opens up a window with an experiment table with the currently 
 compared experiments at the top.
-   ![Adding experiments](../img/webapp_compare_exp_select_1.png)
+   ![Adding experiments](../img/webapp_compare_exp_select_1.png#light-mode-only)
+   ![Adding experiments](../img/webapp_compare_exp_select_1_dark.png#dark-mode-only)
 1. Find the experiments to add by sorting and [filtering](webapp_exp_table.md#filtering-columns) the experiments with the 
 appropriate column header controls. Alternatively, use the search bar to find experiments by name.
 1. Select experiments to include in the comparison (and/or clear the selection of any experiments you wish to remove).
@@ -85,8 +87,8 @@ in the tab header. Obscure identical fields by switching on the **Hide Identical
 Use the search bar to find any field names or values. Lines that match the search query are highlighted, and you can
 navigate between search results. 
 
-![Side-by-side textual comparison](../img/webapp_compare_05.png)
-
+![Side-by-side textual comparison](../img/webapp_compare_05.png#light-mode-only)
+![Side-by-side textual comparison](../img/webapp_compare_05_dark.png#dark-mode-only)
 
 ### Tabular Scalar Comparison 
 The **Scalars** tab **Values** view lays out the experiments' metric values in a table: a row per metric/variant and a 
@@ -99,7 +101,8 @@ You can download the scalar comparison table as a CSV file by clicking <img src=
 
 Switch on the **Show row extremes** toggle to highlight each variant's maximum and minimum values.  
 
-![side-by-side scalar comparison](../img/webapp_compare_exp_scalar_vals.png)
+![side-by-side scalar comparison](../img/webapp_compare_exp_scalar_vals.png#light-mode-only)
+![side-by-side scalar comparison](../img/webapp_compare_exp_scalar_vals_dark.png#dark-mode-only)
 
 ### Parallel Coordinates Mode
 
@@ -116,7 +119,8 @@ metrics:
 For example, plot the metric/variant `accuracy`/`total` against the hyperparameters
 `base_lr`, `dropout`, and `number_of_epochs`.
 
-![Parallel coordinates](../img/webapp_compare_11.png)
+![Parallel coordinates](../img/webapp_compare_11.png#light-mode-only)
+![Parallel coordinates](../img/webapp_compare_11_dark.png#dark-mode-only)
 
 To focus on a specific experiment, hover over its name in the graph legend.
 
@@ -137,7 +141,8 @@ To show the value distribution:
 Hovering over each datapoint in the resulting plot will show the experiment name and the metric and parameter value for that 
 point. You can add additional metrics and hyperparameters values to the datapoint tooltip through **ADDITIONAL DATA POINT INFORMATION**.
 
-![Comparison scatter plot](../img/webapp_compare_scatter.png)
+![Comparison scatter plot](../img/webapp_compare_scatter.png#light-mode-only)
+![Comparison scatter plot](../img/webapp_compare_scatter_dark.png#dark-mode-only)
 
 ### Plot Comparison
 The **Scalars** (Graph view) and **Plots** tabs compare experiments' plots.
@@ -151,20 +156,24 @@ comparative plot.
 For overlaid plots, use **Group by** to select how to group plots:
 * **Metric** - All variants for a metric appear on the same plot.
     
-    ![Scalar plot grouped by metric](../img/webapp_compare_07.png)
+    ![Scalar plot grouped by metric](../img/webapp_compare_07.png#light-mode-only)
+    ![Scalar plot grouped by metric](../img/webapp_compare_07_dark.png#dark-mode-only)
     
 * **Metric+Variant** (default) - Every variant appears on its own plot.
 
-    ![Scalar plot grouped by metric and variant](../img/webapp_compare_08.png)
+    ![Scalar plot grouped by metric and variant](../img/webapp_compare_08.png#light-mode-only)
+    ![Scalar plot grouped by metric and variant](../img/webapp_compare_08_dark.png#dark-mode-only)
 
 Other plot types that are not overlaid are displayed separately for each experiment.
 
-![non-merged comparison](../img/webapp_compare_exp_plots.png)
+![non-merged comparison](../img/webapp_compare_exp_plots.png#light-mode-only)
+![non-merged comparison](../img/webapp_compare_exp_plots_dark.png#dark-mode-only)
 
 All single value scalars are plotted into a single clustered bar chart under the "Summary" title, where each cluster 
 represents a reported metric, and each bar in the cluster represents an experiment.
 
-![Single scalar comparison](../img/webapp_compare_exp_single_scalars.png)
+![Single scalar comparison](../img/webapp_compare_exp_single_scalars.png#light-mode-only)
+![Single scalar comparison](../img/webapp_compare_exp_single_scalars_dark.png#dark-mode-only)
 
 Hover over plots to access plot controls (see [Scalar Plot Tools](webapp_exp_track_visual.md#scalar-plot-tools)).
 
@@ -182,11 +191,13 @@ to synchronize iteration and metric selection across experiments. For example, i
 experiment's debug samples, the same metric will be automatically selected for the rest of the experiments in the 
 comparison.
 
-![Debug sample comparison](../img/webapp_compare_30.png)
+![Debug sample comparison](../img/webapp_compare_30.png#light-mode-only)
+![Debug sample comparison](../img/webapp_compare_30_dark.png#dark-mode-only)
 
 Open a debug sample (image, audio, or video) in the viewer or player, by clicking the thumbnail.
 
-![Debug Sample viewer](../img/webapp_tracking_44.png)
+![Debug Sample viewer](../img/webapp_tracking_44.png#light-mode-only)
+![Debug Sample viewer](../img/webapp_tracking_44_dark.png#dark-mode-only)
 
 To move to the same sample in another iteration, click <img src="/docs/latest/icons/ico-previous.svg" alt="Left arrow" className="icon size-md space-sm" />
 (previous), <img src="/docs/latest/icons/ico-next.svg" alt="Right arrow" className="icon size-md space-sm" /> (next), or move the slider.

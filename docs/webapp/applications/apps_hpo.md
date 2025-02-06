@@ -74,12 +74,14 @@ limits.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 
   
-![HPO app instance launch form](../../img/apps_hpo_wizard.png)
+![HPO app instance launch form](../../img/apps_hpo_wizard.png#light-mode-only)
+![HPO app instance launch form](../../img/apps_hpo_wizard_dark.png#dark-mode-only)
  
 ## Dashboard
 Once an HPO instance is launched, the dashboard displays a summary of the optimization process.
 
-![HPO dashboard](../../img/apps_hpo.png)
+![HPO Dashboard](../../img/apps_format_overview.png#light-mode-only)
+![HPO Dashboard](../../img/apps_format_overview_dark.png#dark-mode-only)
 
 The HPO dashboard shows:
 * Optimization Metric - Last reported and maximum / minimum values of objective metric over time

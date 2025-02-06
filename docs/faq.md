@@ -682,7 +682,7 @@ the experiment's ID. If the experiment's ID is `6ea4f0b56d994320a713aeaf13a86d9d
 
 ClearML supports other storage types for `output_uri`:
 * S3: `s3://bucket/folder`
-* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket` 
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
 * Google Cloud Storage: `gs://bucket-name/folder`
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 

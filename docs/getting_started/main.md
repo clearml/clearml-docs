@@ -120,7 +120,8 @@ GUI applications
 - Build [pipelines](../pipelines/pipelines.md) from code 
 - Much more!
 
-![Webapp gif](../img/gif/webapp_screenshots.gif)
+![Webapp gif](../img/gif/webapp_screenshots.gif#light-mode-only)
+![Webapp gif](../img/gif/webapp_screenshots_dark.gif#dark-mode-only)
 
 ## Who We Are
 ClearML is supported by you :heart: and the [clear.ml](https://clear.ml) team, which helps enterprise companies build scalable MLOps/LLMOps.

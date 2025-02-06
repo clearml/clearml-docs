@@ -202,7 +202,7 @@ clearml-serving model upload [-h] --name NAME [--tags TAGS [TAGS ...]] --project
 |`--publish`| Publish the newly created model (change model state to "published" (i.e. locked and ready to deploy)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--path`|Specify a model file/folder to be uploaded and registered| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--url`| Specify an already uploaded model url (e.g. `s3://bucket/model.bin`, `gs://bucket/model.bin`)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--destination`|Specify the target destination for the model to be uploaded. For example: `s3://bucket/folder/`, `s3://host_addr:port/bucket` (for non-AWS S3-like services like MinIO), `gs://bucket-name/folder`, `azure://<account name>.blob.core.windows.net/path/to/file`|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--destination`|Specify the target destination for the model to be uploaded. For example: <ul><li>S3: `s3://bucket/folder`</li><li>Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**.</li><li>Google Cloud Storage: `gs://bucket-name/folder`</li><li>Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 
 </div>
 

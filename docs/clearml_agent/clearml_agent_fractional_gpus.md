@@ -273,7 +273,8 @@ The agent’s default container can be overridden via the UI:
 1. Clone the task
 1. Set the Docker in the cloned task's **Execution** tab > **Container** section
    
-   ![Task container](../img/fractional_gpu_task_container.png)
+   ![Task container](../img/fractional_gpu_task_container.png#light-mode-only)
+   ![Task container](../img/fractional_gpu_task_container_dark.png#dark-mode-only)
 
 1. Enqueue the cloned task
 
