@@ -107,7 +107,7 @@ To connect to an existing session:
 
 ## Features 
 ### Running in Docker
-To run a session inside a Docker container, use the `--docker` flag and enter the docker image to use in the interactive 
+To run a session inside a container, use the `--docker` flag and enter the image to use in the interactive 
 session.
 
 ### Kubernetes Support 
@@ -224,8 +224,8 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--disable-fingerprint-check` | If set, bypass the remote SSH server fingerprint verification process | `none` |
 | `--disable-session-cleanup` | If `True`, previous interactive sessions are not deleted | `false`|
 | `--disable-store-defaults` | If set, do not store current setup as new default configuration| `none`|
-| `--docker`| Select the docker image to use in the interactive session |`nvidia/cuda:11.6.2-runtime-ubuntu20.04` or previously used docker image|
-| `--docker-args` | Add additional arguments for the docker image to use in the interactive session | `none` or the previously used docker-args |
+| `--docker`| Select the image to use in the interactive session |`nvidia/cuda:11.6.2-runtime-ubuntu20.04` or previously used image|
+| `--docker-args` | Add additional arguments for the container image to use in the interactive session | `none` or the previously used `docker-args` |
 | `--force_dropbear`| Force using `dropbear` instead of SSHd |`none`| 
 | `--git-credentials` | If `True`, local `.git-credentials` file is sent to the interactive session.| `false`|
 | `--init-script` | Specify a BASH init script file to be executed when the interactive session is being set up | `none` or previously entered BASH script |

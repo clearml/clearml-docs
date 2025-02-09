@@ -3,7 +3,7 @@ title: Task Environment Containers
 ---
 
 This tutorial demonstrates using [`clearml-agent`](../../clearml_agent.md)'s [`build`](../../clearml_agent/clearml_agent_ref.md#build) 
-command to build a Docker container replicating the execution environment of an existing task. ClearML Agents can make 
+command to build a container replicating the execution environment of an existing task. ClearML Agents can make 
 use of such containers to execute tasks without having to set up their environment every time. 
 
 A use case for this would be manual hyperparameter optimization, where a base task can be used to create a container to 
@@ -36,7 +36,7 @@ be used when running optimization tasks.
    ```
    This ID will be used in the following section.
 
-## Building the Docker Container
+## Building the Container
 
 Execute the following command to build the container. Input the ID of the task created above. 
 ```console
@@ -56,7 +56,7 @@ Committing docker container to: new_docker
 sha256:460453b93ct1989fd1c6637c236e544031c4d378581433fc0b961103ce206af1
 ```
 
-## Using the New Docker Container
+## Using the New Container
 Make use of the container you've just built by having a ClearML agent make use of it for executing a new task:	
 
 1. In the [ClearML Web UI](../../webapp/webapp_overview.md), go to the "examples" project, "Keras with TensorBoard 

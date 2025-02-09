@@ -2,7 +2,7 @@
 title: Extra Docker Shell Script
 ---
 
-When using `clearml-agent`, an agent recreates an entire execution environment, be it by pulling the docker container or 
+When using `clearml-agent`, an agent recreates an entire execution environment, be it by pulling a container or 
 installing specified packages, and then executes the code on a remote machine. The Agent takes into account required Python packages, 
 but sometimes, when using a Docker container, a user may need to use additional, non-Python tools. 
 

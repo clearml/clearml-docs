@@ -18,7 +18,7 @@ line arguments, Python module dependencies, and a requirements.txt file!
 ## How Does ClearML Task Work?
 
 1. Execute `clearml-task`, specifying the ClearML target project and task name, along with your script (and repository / commit / branch). 
-   Optionally, specify an execution queue and Docker image to use.
+   Optionally, specify an execution queue and container image to use.
 1. `clearml-task` does its magic! It creates a new [ClearML Task](../fundamentals/task.md), 
    and, if so directed, enqueues it for execution by a ClearML Agent.
 1. While the Task is running on the remote machine, all its console outputs are logged in real-time, alongside your 
@@ -61,9 +61,9 @@ errors in identifying the correct default branch.
 | `--branch` | Select repository branch / tag. By default, latest commit from the master branch | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--commit` | Select commit ID to use. By default, latest commit, or local commit ID when using local repository | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--cwd` | Working directory to launch the script from. Relative to repo root or local `--folder` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-| `--docker` | Select the Docker image to use in the remote task | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-| `--docker_bash_setup_script` | Add a bash script to be executed inside the Docker before setting up the task's environment | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-| `--docker_args` | Add Docker arguments. Pass a single string in the following format: `--docker_args "<argument_string>"`. For example: `--docker_args "-v some_dir_1:other_dir_1 -v some_dir_2:other_dir_2"` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `--docker` | Select the container image to use in the remote task | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `--docker_bash_setup_script` | Add a bash script to be executed inside the container before setting up the task's environment | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `--docker_args` | Add Container arguments. Pass a single string in the following format: `--docker_args "<argument_string>"`. For example: `--docker_args "-v some_dir_1:other_dir_1 -v some_dir_2:other_dir_2"` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--folder` | Execute the code from a local folder. Notice, it assumes a git repository already exists. Current state of the repo (commit ID and uncommitted changes) is logged and replicated on the remote machine | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> | 
 | `--import-offline-session`| Specify the path to the offline session you want to import.| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--name` | Set a target name for the new task | <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" /> |
