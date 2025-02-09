@@ -40,7 +40,7 @@ For example:
   mask-label mapping:
 
   ![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2.png#light-mode-only)
-![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2_dark.png#dark-mode-only)
+  ![Frame with semantic seg mask](../img/hyperdatasets/dataset_pixel_masks_2_dark.png#dark-mode-only)
 
 The frame's sources array contains a masks list of dictionaries that looks something like this:
 

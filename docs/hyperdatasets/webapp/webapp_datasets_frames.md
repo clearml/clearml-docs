@@ -175,7 +175,8 @@ Click the color circle in the label name to manually set the label's color.
 
 <div class="max-w-75">
 
-![Set label color](../../img/annotation_label_color.png)
+![Set label color](../../img/hyperdatasets/annotation_label_color.png#light-mode-only)
+![Set label color](../../img/hyperdatasets/annotation_label_color_dark.png#dark-mode-only)
 
 </div>
 
@@ -183,7 +184,8 @@ Click the color circle in the annotation header to manually set the annotationâ€
 
 <div class="max-w-75">
 
-![Set annotation color and opacity](../../img/annotation_label_opacity.png)
+![Set annotation color and opacity](../../img/hyperdatasets/annotation_label_opacity.png#light-mode-only)
+![Set annotation color and opacity](../../img/hyperdatasets/annotation_label_opacity_dark.png#dark-mode-only)
 
 </div>
 :::

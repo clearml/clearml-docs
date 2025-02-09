@@ -68,7 +68,7 @@ Sort the annotation tasks by either using **RECENT** or **NAME** option.
             
 1. Click **Create**.
 
-## Annotating Images and Video 
+## Annotating Images and Video
 Annotate images and video by labeling regions of interest in Dataset version frames. The frames presented for annotation 
 depend upon the settings in the annotation task (see [Creating Annotation Tasks](#creating-annotation-tasks)).
 
