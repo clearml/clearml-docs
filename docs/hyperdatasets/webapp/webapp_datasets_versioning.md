@@ -5,8 +5,8 @@ title: Dataset Versions
 Use the Dataset versioning WebApp (UI) features for viewing, creating, modifying, and 
 deleting [Dataset versions](../dataset.md#dataset-versioning).
 
-![Dataset versions page](../../img/hyperdatasets/dataset_versions_1.png#light-mode-only)
-![Dataset versions page](../../img/hyperdatasets/dataset_versions_1_dark.png#dark-mode-only)
+![Dataset versions page](../../img/hyperdatasets/dataset_versions.png#light-mode-only)
+![Dataset versions page](../../img/hyperdatasets/dataset_versions_dark.png#dark-mode-only)
 
 ## Dataset Version History
 The WebApp (UI) presents your dataset version structure in tree view <img src="/docs/latest/icons/ico-tree-view.svg" alt="Tree view" className="icon size-md space-sm" />
