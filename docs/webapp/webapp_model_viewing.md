@@ -2,7 +2,7 @@
 title: Model Details
 ---
 
-In the models table, double-click on a model to view and/or modify the following: 
+In the model table, double-click on a model to view and/or modify the following: 
 * General model information
 * Model configuration
 * Model label enumeration

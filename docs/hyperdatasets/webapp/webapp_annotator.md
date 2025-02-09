@@ -132,7 +132,7 @@ You can add labels which describe the whole frame, with no specific coordinates.
 ## Frame Metadata
 
 **To edit frame metadata:** 
-1. Expand the **FRAME METADATA** area 
+1. Expand the **FRAMEGROUP METADATA** area 
 1. Click edit <img src="/docs/latest/icons/ico-metadata.svg" alt="edit metadata" className="icon size-md space-sm" /> 
    which will open an editing window
 1. Modify the metadata dictionary in JSON format
