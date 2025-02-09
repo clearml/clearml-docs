@@ -14,7 +14,7 @@ The following are some recommendations for using ClearML Data.
 ## Versioning Datasets
 
 Use ClearML Data to version your datasets. Once a dataset is finalized, it can no longer be modified. This makes clear
-which version of the dataset was used with which task, enabling the accurate reproduction of your experiments. 
+which version of the dataset was used with which task, enabling the accurate reproduction of your tasks. 
 
 Once you need to change the dataset's contents, you can create a new version of the dataset by specifying the previous 
 dataset as a parent. This makes the new dataset version inherit the previous version's contents, with the dataset's new 

@@ -8,7 +8,7 @@ service a queue(s). Utilize the machine by enqueuing tasks to the queue that the
 pull and execute the tasks. 
 
 :::tip cross-platform execution
-ClearML Agent is platform agnostic. When using the ClearML Agent to execute experiments cross-platform, set platform 
+ClearML Agent is platform-agnostic. When using the ClearML Agent to execute tasks cross-platform, set platform 
 specific environment variables before launching the agent.
 
 For example, to run an agent on an ARM device, set the core type environment variable before spinning up the agent:
@@ -118,7 +118,7 @@ The ClearML Kubernetes-Glue performs the following:
 - Prepares a Kubernetes job based on a provided YAML template.
 - Inside each job pod, the `clearml-agent`:
   - Installs the required environment for the task.
-  - Executes and monitors the experiment process.
+  - Executes and monitors the task process.
 
 :::important Enterprise Features
 ClearML Enterprise adds advanced Kubernetes features:
@@ -256,7 +256,7 @@ If you are running Slurm with Singularity containers support, set the following:
 ## Google Colab
 
 ClearML Agent can run on a [Google Colab](https://colab.research.google.com/) instance. This helps users to leverage 
-compute resources provided by Google Colab and send experiments for execution on it. 
+compute resources provided by Google Colab and send tasks for execution on it. 
 
 Check out [this tutorial](../guides/ide/google_colab.md) on how to run a ClearML Agent on Google Colab!
 

@@ -2,18 +2,18 @@
 title: Environment Caching
 ---
 
-ClearML Agent caches virtual environments so when running experiments multiple times, there's no need to spend time reinstalling 
+ClearML Agent caches virtual environments so when running tasks multiple times, there's no need to spend time reinstalling 
 pre-installed packages. To make use of the cached virtual environments, enable the virtual environment reuse mechanism. 
 
 ## Virtual Environment Reuse
 
-The virtual environment reuse feature may reduce experiment startup time dramatically.
+The virtual environment reuse feature may reduce task startup time dramatically.
 
 By default, ClearML uses the package manager's environment caching. This means that even if no 
 new packages need to be installed, checking the list of packages can take a long time.
 
 ClearML has a virtual environment reuse mechanism which, when enabled, allows using environments as-is without resolving 
-installed packages. This means that when executing multiple experiments with the same package dependencies, 
+installed packages. This means that when executing multiple tasks with the same package dependencies, 
 the same environment will be used.
 
 :::note

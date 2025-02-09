@@ -21,7 +21,7 @@ task1.upload_artifact(name='data file', artifact_object='data_samples/sample.jso
 The task is then closed, using [`Task.close()`](../../references/sdk/task.md#close), so another task can be 
 initialized in the same script. 
 
-Artifact details (location and size) can be viewed in ClearML's **web UI > experiment details > ARTIFACTS tab > OTHER section**. 
+Artifact details (location and size) can be viewed in ClearML's **web UI > task details > ARTIFACTS tab > OTHER section**. 
 
 ![Artifacts in WebApp](../../img/examples_using_artifacts_1.png)
 

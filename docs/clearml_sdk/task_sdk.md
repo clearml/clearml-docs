@@ -97,7 +97,7 @@ After invoking `Task.init` in a script, ClearML starts its automagical logging, 
 
 ### Control Automatic Logging 
 By default, when ClearML is integrated into your script, it automatically captures information from supported frameworks, 
-and parameters from supported argument parsers. But, you may want to have more control over what your experiment logs.
+and parameters from supported argument parsers. But, you may want to have more control over what your task logs.
 
 #### Frameworks  
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
@@ -239,7 +239,7 @@ Set a task's progress to a numeric value between 0 - 100. Access the task's curr
 [`Task.get_progress()`](../references/sdk/task.md#get_progress). 
 
 ```python
-task = Task.init(project_name="examples", task_name="Track experiment progress")
+task = Task.init(project_name="examples", task_name="Track task progress")
 task.set_progress(0)
 # task doing stuff
 task.set_progress(50)
@@ -248,12 +248,12 @@ print(task.get_progress())
 task.set_progress(100)
 ```
 
-While the task is running, the WebApp will show the task's progress indication in the experiment table, next to the 
+While the task is running, the WebApp will show the task's progress indication in the task table, next to the 
 task's status. If a task failed or was aborted, you can view how much progress it had made. 
 
 <div class="max-w-50">
 
-![Experiment table progress indication](../img/fundamentals_task_progress.png)
+![Task table progress indication](../img/fundamentals_task_progress.png)
 
 </div>
 
@@ -263,7 +263,7 @@ in the WebApp.
 
 ## Accessing Tasks
 A task can be identified by its project and name, and by a unique identifier (UUID string). The name and project of 
-a task can be changed after an experiment has been executed, but its ID can't be changed.
+a task can be changed after its execution, but its ID can't be changed.
 
 Programmatically, task objects can be retrieved by querying the system based on either the task ID or a project and name 
 combination using the [`Task.get_task()`](../references/sdk/task.md#taskget_task) class method. If a project / name 
@@ -484,7 +484,7 @@ a_func_task = task.create_function_task(
 )
 ```
 Arguments passed to the function will be automatically logged in the 
-experiment's **CONFIGURATION** tab under the **HYPERPARAMETERS > Function** section. 
+task's **CONFIGURATION** tab under the **HYPERPARAMETERS > Function** section. 
 Like any other arguments, they can be changed from the UI or programmatically.
 
 :::note Function Task Creation
@@ -779,14 +779,14 @@ Notice that if one of the frameworks loads an existing weights file, the running
 "Input Model", pointing directly to the original training task's model. This makes it easy to get the full lineage of 
 every trained and used model in your system!
 
-Models loaded by the ML framework appear in an experiment's **Artifacts** tab under the "Input Models" section in the ClearML UI.
+Models loaded by the ML framework appear in a task's **Artifacts** tab under the "Input Models" section in the ClearML UI.
 
 ### Setting Upload Destination
 
 ClearML automatically captures the storage location of Models created by frameworks such as TensorFlow, PyTorch, and scikit-learn. 
 By default, it stores the local path they are saved at.
 
-To automatically store all created models by a specific experiment, modify the `Task.init` function as such:
+To automatically store all created models by a specific task, modify the `Task.init` function as such:
 
 ```python
 task = Task.init(
@@ -805,7 +805,7 @@ Specify the model storage URI location using the relevant format:
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 :::
 
-To automatically store all models created by any experiment at a specific location, edit the `clearml.conf` (see
+To automatically store all models created by any task at a specific location, edit the `clearml.conf` (see
  [ClearML Configuration Reference](../configs/clearml_conf.md#sdkdevelopment)) and set `sdk.developmenmt.default_output_uri` 
 to the desired storage (see [Storage](../integrations/storage.md)). This is especially helpful when
 using [clearml-agent](../clearml_agent.md) to execute code.

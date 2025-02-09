@@ -40,7 +40,7 @@ if __name__ == '__main__':
 ```
 
 When this code is executed, ClearML logs your command-line arguments, which you can view in the 
-[WebApp](../webapp/webapp_overview.md), in the experiment's **Configuration > Hyperparameters > Args** section. 
+[WebApp](../webapp/webapp_overview.md), in the task's **Configuration > Hyperparameters > Args** section. 
 
 ![click configuration](../img/integrations_click_configs.png)
 

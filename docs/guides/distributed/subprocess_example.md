@@ -10,7 +10,7 @@ which always returns the main Task.
 * The Task in each subprocess reports the following to the main Task:
     * Hyperparameters - Additional, different hyperparameters.
     * Console - Text logged to the console as the Task in each subprocess executes.
-* When the script runs, it creates an experiment named `Popen example` in the `examples` project.
+* When the script runs, it creates a task named `Popen example` in the `examples` project.
 
 ## Hyperparameters
 

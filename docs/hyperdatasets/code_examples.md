@@ -19,9 +19,9 @@ After executing either of these scripts, you can view your DatasetVersion conten
 The [dataview_example_framegroup.py](https://github.com/allegroai/clearml/blob/master/examples/hyperdatasets/data-ingestion/dataview_example_framegroup.py) 
 and [dataview_example_singleframe.py](https://github.com/allegroai/clearml/blob/master/examples/hyperdatasets/data-ingestion/dataview_example_singleframe.py) 
 examples demonstrate how to use a [DataView](dataviews.md) to retrieve your data as SingleFrames and FrameGroups as 
-part of a running experiment. This is done by creating a DataView query and then retrieving the corresponding frames.
+part of a running task. This is done by creating a DataView query and then retrieving the corresponding frames.
 
-DataView details are displayed in the UI in an experiment's **DATAVIEWS** tab. 
+DataView details are displayed in the UI in a task's **DATAVIEWS** tab. 
 
 
 ### Data Ingestion

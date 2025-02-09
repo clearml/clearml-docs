@@ -73,7 +73,7 @@ Cloning a task duplicates the task's configuration, but not its outputs.
 
 The newly cloned experiment will appear and its info panel will slide open. The cloned experiment is in draft mode, so 
 it can be modified. You can edit the Git / code references, control the python packages to be installed, specify the 
-Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Experiments](../../webapp/webapp_exp_tuning.md#modifying-experiments) for more information about editing experiments in the UI. 
+Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Tasks](../../webapp/webapp_exp_tuning.md#modifying-experiments) for more information about editing experiments in the UI. 
 
 ## Enqueue an Experiment
 Once you have set up an experiment, it is now time to execute it. 

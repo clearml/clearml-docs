@@ -22,4 +22,4 @@ This example accomplishes a task pipe by doing the following:
 1. Setting the newly cloned Task's parameters to the search values in the parameter dictionary (Step 2). See [`Task.set_parameters`](../../references/sdk/task.md#set_parameters).
 1. Enqueuing the newly cloned Task to execute. See [`Task.enqueue`](../../references/sdk/task.md#taskenqueue).
 
-When the example script runs, it creates an instance of the template experiment, named `Auto generated cloned task` in the `examples` project. In the instance, the value of the customized parameter, `Example_Param` changed to `3`. You can see it in **CONFIGURATION** **>** **HYPERPARAMETERS**.
+When the example script runs, it creates an instance of the template task, named `Auto generated cloned task` in the `examples` project. In the instance, the value of the customized parameter, `Example_Param` changed to `3`. You can see it in **CONFIGURATION** **>** **HYPERPARAMETERS**.

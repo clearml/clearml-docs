@@ -11,4 +11,4 @@ Two types of frames are supported:
 
 **SingleFrames** and **FrameGroups** contain data sources, metadata, and other data. A Frame can be added to [Datasets](dataset.md) 
 and then modified or removed. [Versions](dataset.md#dataset-versioning) of the Datasets can be created, which enables 
-documenting changes and reproducing data for experiments. 
+documenting changes and reproducing data for tasks. 

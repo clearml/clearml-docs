@@ -2,7 +2,7 @@
 title: Logger
 ---
 
-The ClearML Logger class is used to report experiments' results such as metrics, graphs, and debug samples. It is provided 
+The ClearML Logger class is used to report task results such as metrics, graphs, and debug samples. It is provided 
 through the ClearML [Task](task.md) object. 
 
 A Logger object is used to do the following:

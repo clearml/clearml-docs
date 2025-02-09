@@ -3,7 +3,7 @@ title: Audio Preprocessing - Jupyter Notebook
 ---
 
 The example [audio_preprocessing_example.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/audio/audio_preprocessing_example.ipynb) 
-demonstrates integrating ClearML into a Jupyter Notebook which uses PyTorch and preprocesses audio samples. ClearML automatically logs spectrogram visualizations reported by calling Matplotlib methods, and audio samples reported by calling TensorBoard methods. The example also demonstrates connecting parameters to a Task and logging them. When the script runs, it creates an experiment named `data pre-processing` in the `Audio Example` project.
+demonstrates integrating ClearML into a Jupyter Notebook which uses PyTorch and preprocesses audio samples. ClearML automatically logs spectrogram visualizations reported by calling Matplotlib methods, and audio samples reported by calling TensorBoard methods. The example also demonstrates connecting parameters to a Task and logging them. When the script runs, it creates a task named `data pre-processing` in the `Audio Example` project.
 
 ## Plots
 

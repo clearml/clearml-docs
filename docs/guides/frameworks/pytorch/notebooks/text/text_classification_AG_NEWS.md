@@ -6,7 +6,7 @@ The example [text_classification_AG_NEWS.ipynb](https://github.com/allegroai/cle
 demonstrates using Jupyter Notebook for ClearML, and the integration of ClearML into code which trains a network 
 to classify text in the `torchtext` [AG_NEWS](https://pytorch.org/text/stable/datasets.html#ag-news) dataset, and then applies the model to predict the classification of sample text. 
 
-ClearML automatically logs the scalars and text samples reported with TensorBoard methods. The example code explicitly logs parameters to the Task. When the script runs, it creates an experiment named `text classifier` in the `Text Example` project.
+ClearML automatically logs the scalars and text samples reported with TensorBoard methods. The example code explicitly logs parameters to the Task. When the script runs, it creates a task named `text classifier` in the `Text Example` project.
 
 ## Scalars
 
@@ -16,7 +16,7 @@ Accuracy, learning rate, and training loss appear in **SCALARS**, along with the
 
 ## Debug Samples
 
-ClearML automatically logs the text samples reported to TensorBoard. They are displayed in the experiment's **DEBUG SAMPLES**.
+ClearML automatically logs the text samples reported to TensorBoard. They are displayed in the task's **DEBUG SAMPLES**.
 
 ![Debug samples](../../../../../img/text_classification_AG_NEWS_04.png)
 
@@ -32,7 +32,7 @@ configuration_dict = {
 configuration_dict = task.connect(configuration_dict)  
 ```
     
-The parameters are displayed in the experiment's **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **General** section.
+The parameters are displayed in the task's **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **General** section.
 
 ![Hyperparameters](../../../../../img/text_classification_AG_NEWS_01.png)
 

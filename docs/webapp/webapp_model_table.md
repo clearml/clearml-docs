@@ -2,7 +2,7 @@
 title: The Models Table
 ---
 
-The models table is a [customizable](#customizing-the-models-table) list of models associated with the experiments in a project. From the models table,
+The models table is a [customizable](#customizing-the-models-table) list of models associated with the tasks in a project. From the models table,
 view model details, and modify, publish, archive, tag, and move models to other projects.
 
 View the models table in table view <img src="/docs/latest/icons/ico-table-view.svg" alt="Table view" className="icon size-md space-sm" /> 
@@ -36,8 +36,8 @@ The models table contains the following columns:
 | **TAGS** | User-defined labels added to models for grouping and organization. | Tag |
 | **STATUS** | The status of the model, which can be *Draft* (editable) or *Published* (read-only). | String |
 | **PROJECT** | Name of the model's project | String |
-| **USER** | The user who ran the experiment that created the model, or the user who imported the model.| String |
-| **TASK** | The experiment (Task) name that created the model. | String |
+| **USER** | The user who ran the task that created the model, or the user who imported the model.| String |
+| **TASK** | The name of the task that created the model. | String |
 | **UPDATED** | Elapsed time since the model was updated. Hover over the elapsed time to view the date and time.| Date-time |
 | **DESCRIPTION** | The model description (not shown by default). | String |
 | *Metrics* |Add metrics column (last, minimum, and/or maximum values). Available options depend upon the models in the table. | Varies according to models in table |
@@ -89,10 +89,10 @@ open the context menu
 | ClearML Action | Description | States Valid for the Action |
 |---|---|--|
 | Details | View model details, which include general information, the model configuration, and label enumeration. Can also be accessed by double-clicking a model in the models table | Any state |
-| Publish | Publish a model to prevent changes to it. *Published* models are read-only. If a model is Published, its experiment also becomes Published (read-only). | *Draft* |
+| Publish | Publish a model to prevent changes to it. *Published* models are read-only. If a model is Published, its task also becomes Published (read-only). | *Draft* |
 | Archive | Move model to the project's archive. | Any state |
 | Restore | Action available in the archive. Restore a model to the main model table. | Any state |
-| Delete | Action available in the archive. Permanently delete the model. This will also remove the model weights file. Note that experiments using deleted models will no longer be able to run. | Any state |
+| Delete | Action available in the archive. Permanently delete the model. This will also remove the model weights file. Note that tasks using deleted models will no longer be able to run. | Any state |
 | Add Tag | Tag models with color-coded labels to assist in organizing work. See [tagging models](#tagging-models). | Any state |
 | Download | Download a model. The file format depends upon the framework. | *Published* |
 | Move to Project | Move a model to another project. | Any state |
@@ -114,12 +114,12 @@ The same information can be found in the bottom menu, in a tooltip that appears 
 
 ## Tagging Models
 
-Tags are user-defined, color-coded labels that can be added to models (and experiments), allowing to easily identify and
-group of experiments. A tag can show any text, for any purpose. For example, add tags for the type of remote machine
-experiments execute on, label versions of experiments, or apply team names to organize experimentation.
+Tags are user-defined, color-coded labels that can be added to models (and tasks), allowing to easily identify and
+group of tasks. A tag can show any text, for any purpose. For example, add tags for the type of remote machine
+tasks execute on, label versions of tasks, or apply team names to organize experimentation.
 
 * To Add tags and to change tag colors:
-    1. Click the experiment **>** Hover over the tag area **>** **+ADD TAG** or <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Bars menu" className="icon size-md space-sm" />
+    1. Click the task **>** Hover over the tag area **>** **+ADD TAG** or <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Bars menu" className="icon size-md space-sm" />
        (menu)
     1. Do one of the following:
         * Add a new tag - Type the new tag name **>** **(Create New)**.

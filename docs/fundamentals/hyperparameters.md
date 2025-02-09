@@ -5,14 +5,14 @@ title: Hyperparameters
 Hyperparameters are a script's configuration options. Since hyperparameters can have substantial impact on
 model performance, it is crucial to efficiently track and manage them.
 
-ClearML supports tracking and managing hyperparameters in each experiment and provides a dedicated [hyperparameter 
-optimization module](hpo.md). With ClearML's logging and tracking capabilities, experiments can be reproduced, and their 
+ClearML supports tracking and managing hyperparameters in each task and provides a dedicated [hyperparameter 
+optimization module](hpo.md). With ClearML's logging and tracking capabilities, tasks can be reproduced, and their 
 hyperparameters and results can be saved and compared, which is key to understanding model behavior.
 
 ClearML lets you easily try out different hyperparameter values without changing your original code. ClearML's [execution
 agent](../clearml_agent.md) will override the original values with any new ones you specify through the web UI (see 
-[Configuration](../webapp/webapp_exp_tuning.md#configuration) in the Tuning Experiments page). You can also
-programmatically set experiment parameters.
+[Configuration](../webapp/webapp_exp_tuning.md#configuration) in the Tuning Tasks page). You can also
+programmatically set task parameters.
 
 ## Tracking Hyperparameters 
 Hyperparameters can be added from anywhere in your code, and ClearML provides multiple ways to obtain them! ClearML logs 
@@ -38,8 +38,8 @@ Automatic logging can be disabled. See [Control Automatic Logging](../clearml_sd
 
 ### Environment Variables
 
-:::important Experiment Reproducibility
-Relying on environment variables makes an experiment not fully reproducible, since ClearML Agent can't reproduce them at 
+:::important Task Reproducibility
+Relying on environment variables makes a task not fully reproducible, since ClearML Agent can't reproduce them at 
 runtime.
 :::
 
@@ -94,15 +94,15 @@ objects are saved as blobs i.e. ClearML is not aware of their internal structure
 
 #### Setting and Updating Parameters
 ClearML provides methods to set and update task parameters manually. Use [`Task.set_parameters()`](../references/sdk/task.md#set_parameters) 
-to define parameters manually. To update the parameters in an experiment, use [`Task.set_parameters_as_dict()`](../references/sdk/task.md#set_parameters_as_dict). 
+to define parameters manually. To update the parameters in a task, use [`Task.set_parameters_as_dict()`](../references/sdk/task.md#set_parameters_as_dict). 
 The `set_parameters_as_dict` method updates parameters while the `set_parameters` method overrides the parameters.
 
 ClearML does not automatically track changes to explicitly set parameters.
 
 ### User Properties
 User properties do not impact task execution and can be modified at any stage. They are convenient for setting 
-helpful values which are displayed in the [experiment table](../webapp/webapp_exp_table.md) (i.e. customize columns), 
-making it easier to search / filter experiments. Add user properties to an experiment with the 
+helpful values which are displayed in the [task table](../webapp/webapp_exp_table.md) (i.e. customize columns), 
+making it easier to search / filter tasks. Add user properties to a task with the 
 [`Task.set_user_properties`](../references/sdk/task.md#set_user_properties) method.
 
 ### Accessing Parameters
@@ -115,7 +115,7 @@ including their subsections (see [WebApp sections](#webapp-interface) below).
 
 ## WebApp Interface
 
-Configurations can be viewed in web UI experiment pages, in the **CONFIGURATION** tab. 
+Configurations can be viewed in web UI task pages, in the **CONFIGURATION** tab. 
 
 The configuration panel is split into three sections according to type:
 - **User Properties** - Modifiable section that can be edited post-execution

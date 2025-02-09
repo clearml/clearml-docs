@@ -79,7 +79,7 @@ Agents can be deployed bare-metal, with multiple instances allocating
 specific GPUs to the agents. They can also be deployed as dockers in a Kubernetes cluster.
 
 The Agent supports the following running modes:
-* **Virtual Environment Mode** - The agent creates a new virtual environment for the experiment, installs the required 
+* **Virtual Environment Mode** - The agent creates a new virtual environment for the task, installs the required 
   python packages based on the Task specification, clones the code repository, applies the uncommitted changes and 
   finally executes the code while monitoring it. This mode uses smart caching so packages and environments can be reused
   over multiple tasks (see [Virtual Environment Reuse](../clearml_agent/clearml_agent_env_caching.md#virtual-environment-reuse)). 
@@ -108,7 +108,7 @@ in parallel (each task will register itself as a sub-agent, visible in the [Orch
 This mode is intended for running maintenance tasks. Some suitable tasks include:
 
 - [Pipeline controller](../guides/pipeline/pipeline_controller.md) - Implementing the pipeline scheduling and logic
-- [Hyperparameter Optimization](../guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt.md) - Implementing an active selection of experiments
+- [Hyperparameter Optimization](../guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt.md) - Implementing an active selection of tasks
 - [Control Service](../guides/services/aws_autoscaler.md) - AWS Autoscaler for example
 - [External services](../guides/services/slack_alerts.md) - Such as Slack integration alert service
 

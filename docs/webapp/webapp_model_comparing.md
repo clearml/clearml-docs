@@ -57,7 +57,7 @@ information is displayed in a column, so each field is lined up side-by-side.
 
 The model on the left is used as the base model, to which the other models are compared. You can set a new base model 
 in one of the following ways:
-* Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base experiment" className="icon size-md space-sm" /> 
+* Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base task" className="icon size-md space-sm" /> 
 on the model that will be the new base.
 * Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base model and drag it all the way to the left
 

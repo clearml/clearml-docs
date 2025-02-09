@@ -5,9 +5,9 @@ title: 3D Plots Reporting
 The [3d_plots_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/3d_plots_reporting.py) 
 example demonstrates reporting a series as a surface plot and as a 3D scatter plot. 
 
-When the script runs, it creates an experiment named `3D plot reporting` in the `examples` project.
+When the script runs, it creates a task named `3D plot reporting` in the `examples` project.
 
-ClearML reports these plots in the experiment's **PLOTS** tab. 
+ClearML reports these plots in the task's **PLOTS** tab. 
 
 ## Surface Plot
 

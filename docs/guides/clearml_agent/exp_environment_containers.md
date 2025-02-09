@@ -1,5 +1,5 @@
 ---
-title: Experiment Environment Containers
+title: Task Environment Containers
 ---
 
 This tutorial demonstrates using [`clearml-agent`](../../clearml_agent.md)'s [`build`](../../clearml_agent/clearml_agent_ref.md#build) 
@@ -14,15 +14,15 @@ be used when running optimization tasks.
 * [`clearml`](../../getting_started/ds/ds_first_steps.md#install-clearml) installed and configured
 * [clearml](https://github.com/allegroai/clearml) repo cloned (`git clone https://github.com/allegroai/clearml.git`)
   
-## Creating the ClearML Experiment
-1. Set up the experiment's execution environment:
+## Creating the ClearML Task
+1. Set up the task's execution environment:
    
    ```console
    cd clearml/examples/frameworks/keras
    pip install -r requirements.txt
    ```
 
-1. Run the experiment:
+1. Run the task:
    
    ```console
    python keras_tensorboard.py
@@ -57,15 +57,15 @@ sha256:460453b93ct1989fd1c6637c236e544031c4d378581433fc0b961103ce206af1
 ```
 
 ## Using the New Docker Container
-Make use of the container you've just built by having a ClearML agent make use of it for executing a new experiment:	
+Make use of the container you've just built by having a ClearML agent make use of it for executing a new task:	
 
 1. In the [ClearML Web UI](../../webapp/webapp_overview.md), go to the "examples" project, "Keras with TensorBoard 
-   example" task (the one executed [above](#creating-the-clearml-experiment)).
-1. [Clone](../../webapp/webapp_exp_reproducing.md) the experiment.
-1. In the cloned experiment, go to the **EXECUTION** tab **>** **CONTAINER** section. Under **IMAGE**, insert the name 
-   of the new Docker image, `new_docker`. See [Tuning Experiments](../../webapp/webapp_exp_tuning.md) for more task 
+   example" task (the one executed [above](#creating-the-clearml-task)).
+1. [Clone](../../webapp/webapp_exp_reproducing.md) the task.
+1. In the cloned task, go to the **EXECUTION** tab **>** **CONTAINER** section. Under **IMAGE**, insert the name 
+   of the new Docker image, `new_docker`. See [Tuning Tasks](../../webapp/webapp_exp_tuning.md) for more task 
    modification options. 
-1. Enqueue the cloned experiment to the `default` queue.
+1. Enqueue the cloned task to the `default` queue.
 1. Launch a `clearml-agent` in [Docker Mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode) and assign it to the `default` queue:
    ```console
    clearml-agent daemon --docker --queue default

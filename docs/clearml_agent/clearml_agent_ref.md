@@ -3,10 +3,10 @@ title: ClearML Agent CLI
 ---
 
 The following page provides a reference to `clearml-agent`'s CLI commands:
-* [build](#build) - Create a worker environment without executing an experiment.
+* [build](#build) - Create a worker environment without executing a task.
 * [config](#config) - List your ClearML Agent configuration data.
-* [daemon](#daemon) - Run a worker daemon listening to a queue for Tasks (experiments) to execute.
-* [execute](#execute) - Execute an experiment, locally without a queue.
+* [daemon](#daemon) - Run a worker daemon listening to a queue for tasks to execute.
+* [execute](#execute) - Execute a task, locally without a queue.
 * [list](#list) - List the current workers.
 
 
@@ -59,7 +59,7 @@ clearml-agent config [-h]
 ## daemon 
 
 Use the `daemon` command to spin up an agent on any machine: on-prem and/or cloud instance. When spinning up an agent, 
-assign it a queue(s) to service, and when experiments are added to its queues, the agent will pull and execute them. 
+assign it a queue(s) to service, and when tasks are added to its queues, the agent will pull and execute them. 
 
 With the `daemon` command you can configure your agent's behavior: allocate resources, prioritize queues, set it to run 
 in a Docker, and more. 

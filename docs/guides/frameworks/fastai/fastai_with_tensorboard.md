@@ -12,7 +12,7 @@ The ClearML repository also includes [examples using FastAI v2](https://github.c
 The example code does the following:
 1. Trains a simple deep neural network on the fastai built-in MNIST dataset (see the [fast.ai](https://fastai1.fast.ai) documentation).
 1. Uses the fastai `LearnerTensorboardWriter` callback, and ClearML automatically logs TensorBoard through the callback. 
-1. During script execution, creates an experiment named `fastai with tensorboard callback` in the `examples` project.
+1. During script execution, creates a task named `fastai with tensorboard callback` in the `examples` project.
 
 ## Scalars
 

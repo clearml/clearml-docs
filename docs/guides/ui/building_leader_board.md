@@ -2,12 +2,12 @@
 title: Tracking Leaderboards
 ---
 
-In this tutorial, you will set up a tracking leaderboard. A tracking leaderboard allows easy monitoring of experiments 
-using a customized [experiments table](../../webapp/webapp_exp_table.md) with auto refresh for continual updates.
+In this tutorial, you will set up a tracking leaderboard. A tracking leaderboard allows easy monitoring of tasks 
+using a customized [task table](../../webapp/webapp_exp_table.md) with auto refresh for continual updates.
 
 The tracking leaderboard can be customized to include columns with information about:
-* Experiment status
-* Elapsed time since the experiment started and last updated
+* Task status
+* Elapsed time since the task started and last updated
 * Most recent iteration
 * Metrics
 * Hyperparameters
@@ -17,24 +17,24 @@ Bookmark the leaderboard in the browser to reuse and share the leaderboard URL w
 
 For this tutorial, use one of the following as a project:
 
-* Recommended: One of your projects with more than one experiment. 
+* Recommended: One of your projects with more than one task. 
 * Clone the [clearml](https://github.com/allegroai/clearml) repository and execute some of the example scripts.
 
 ## Step 1: Select a Project
 
-The leaderboard will track experiments in one or all projects. 
+The leaderboard will track tasks in one or all projects. 
 
 Begin by opening the [ClearML Web UI](../../webapp/webapp_overview.md) and selecting a project, by doing one of the following:
 * On the Dashboard, click a project card or **VIEW ALL**.
 * On the Projects page, click a project card or the **All projects** card.
 
-## Step 2: Filter the Experiments
+## Step 2: Filter the Tasks
 
-The experiments table allows filtering experiments by experiment name, type, and status.
+The task table allows filtering tasks by name, type, and status.
 
 **Apply any combination of the following filters:**
 
-* Name - Use the search bar to find experiments containing any search term.
+* Name - Use the search bar to find tasks containing any search term.
 * Type - Click the **TYPE** column's filter and then on the list select any of the following:
     * **Training**
     * **Testing**
@@ -43,13 +43,13 @@ The experiments table allows filtering experiments by experiment name, type, and
     * And others, depending on the types of tasks in the project 
 * Status - Click the **STATUS** column's filter and then on the list select any of the following:
 
-    * **Draft** - The experiment is not running.
-    * **Pending** - The experiment is in a queue waiting to be run by a worker.
-    * **Running** - The experiment is currently running by a worker.
-    * **Completed** - The experiment ran and terminated successfully.
-    * **Failed** - The experiment ran and terminated with an error.
-    * **Aborted** - The experiment ran and was manually or programmatically terminated.
-    * **Published** - The experiment is not running, it is preserved as read-only.
+    * **Draft** - The task is not running.
+    * **Pending** - The task is in a queue waiting to be run by a worker.
+    * **Running** - The task is currently running by a worker.
+    * **Completed** - The task ran and terminated successfully.
+    * **Failed** - The task ran and terminated with an error.
+    * **Aborted** - The task ran and was manually or programmatically terminated.
+    * **Published** - The task is not running, it is preserved as read-only.
 
 ## Step 3: Hide the Default Columns
 
@@ -60,14 +60,14 @@ Customize the columns on the tracking leaderboard by hiding any of the default c
 1. Click settings. 
 1. Select / clear any combination of the default columns from the following:
 
-    * **TYPE** - The type of experiment: training, testing, or other, depending on the types of experiments in the project.
-    * **NAME** - The name of the experiment.
-    * **STATUS** - The status of the experiment.
+    * **TYPE** - The type of task: training, testing, or other, depending on the types of tasks in the project.
+    * **NAME** - The name of the task.
+    * **STATUS** - The status of the task.
     * **PROJECT** - The project name.
-    * **USER** - The user creating or running the experiment.
-    * **STARTED** - The elapsed time since the experiment started running.
-    * **UPDATED** - The elapsed time since the experiment update.
-    * **ITERATION** - The last iteration of the experiment. For experiments with a status of Running, this is the most recent iteration. For Completed, Aborted, and Failed experiments, this is the final iteration.
+    * **USER** - The user creating or running the task.
+    * **STARTED** - The elapsed time since the task started running.
+    * **UPDATED** - The elapsed time since the task update.
+    * **ITERATION** - The last iteration of the task. For tasks with a status of `Running`, this is the most recent iteration. For `Completed`, `Aborted`, and `Failed` tasks, this is the final iteration.
 
 ## Step 4: Show Metrics or Hyperparameters
 
@@ -83,7 +83,7 @@ recent), minimum, and/or maximum values.
 
 ## Step 5: Enable Auto Refresh
 
-Auto refresh allows monitoring the progress of experiments in real time. It is enabled by default. 
+Auto refresh allows monitoring the progress of tasks in real time. It is enabled by default. 
 
 **To enable / disable auto refresh:**
 
@@ -92,7 +92,7 @@ Auto refresh allows monitoring the progress of experiments in real time. It is e
 ## Step 6: Save the Tracking Leaderboard
 
 The URL for **ClearML Web UI** now contains parameters and values for the customized leaderboard. Bookmark it to be able 
-to return to the leaderboard and monitor the experiments.
+to return to the leaderboard and monitor the tasks.
 
 :::important 
 Share the leaderboard with another user by copying and sharing the URL.

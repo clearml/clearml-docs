@@ -9,7 +9,7 @@ The example does the following:
 the autokeras [TextClassifier](https://autokeras.com/text_classifier/) class, and searches for the best model. 
 * Uses two TensorBoard callbacks, one for training and one for testing. 
 * ClearML automatically logs everything the code sends to TensorBoard. 
-* Creates an experiment named `autokeras imdb example with scalars` in the `autokeras` project.
+* Creates a task named `autokeras imdb example with scalars` in the `autokeras` project.
 
 ## Scalars
 
@@ -32,7 +32,7 @@ Text printed to the console for training progress, as well as all other console 
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab.
+Models created by the task appear in the task's **ARTIFACTS** tab.
 
 ![image](../../../img/examples_keras_18.png)
 

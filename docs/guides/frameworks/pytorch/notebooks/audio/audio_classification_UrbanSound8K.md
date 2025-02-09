@@ -2,7 +2,7 @@
 title: Audio Classification - Jupyter Notebooks
 ---
 
-The [audio_classification_UrbanSound8K.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/audio/audio_classifier_UrbanSound8K.ipynb) example script demonstrates integrating ClearML into a Jupyter Notebook which uses PyTorch, TensorBoard, and TorchVision to train a neural network on the UrbanSound8K dataset for audio classification. The example calls TensorBoard methods in training and testing to report scalars, audio debug samples, and spectrogram visualizations. The spectrogram visualizations are plotted by calling Matplotlib methods. The example also demonstrates connecting parameters to a Task and logging them. When the script runs, it creates an experiment named `audio classification UrbanSound8K` in the `Audio Example` project.
+The [audio_classification_UrbanSound8K.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/audio/audio_classifier_UrbanSound8K.ipynb) example script demonstrates integrating ClearML into a Jupyter Notebook which uses PyTorch, TensorBoard, and TorchVision to train a neural network on the UrbanSound8K dataset for audio classification. The example calls TensorBoard methods in training and testing to report scalars, audio debug samples, and spectrogram visualizations. The spectrogram visualizations are plotted by calling Matplotlib methods. The example also demonstrates connecting parameters to a Task and logging them. When the script runs, it creates a task named `audio classification UrbanSound8K` in the `Audio Example` project.
 
 ## Scalars
 

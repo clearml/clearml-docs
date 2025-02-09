@@ -14,19 +14,19 @@ Dataviews support:
 * Class label enumeration
 * Controls for the frame iteration, such as sequential or random iteration, limited or infinite iteration, and reproducibility. 
 
-Dataviews are lazy and optimize processing. When an experiment script runs in a local environment, Dataview pointers
-are initialized. If the experiment is cloned or extended, and that newly cloned or extended experiment is tuned and run, 
+Dataviews are lazy and optimize processing. When a task script runs in a local environment, Dataview pointers
+are initialized. If the task is cloned or extended, and that newly cloned or extended task is tuned and run, 
 only changed pointers are initialized. The pointers that did not change are reused.
 
 ## Dataview State
 Dataviews can be in either *Draft* or *Published* state.
 
-A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible experiments and 
+A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible tasks and 
 preserves the Dataview's settings. 
 
 ## Filtering
 
-A Dataview filters experiment input data, using one or more frame filters. A frame filter defines the criteria for the 
+A Dataview filters task input data, using one or more frame filters. A frame filter defines the criteria for the 
 selection of SingleFrames iterated by a Dataview.  
 
 A frame filter contains the following criteria:
@@ -92,11 +92,11 @@ may repeat. The settings include the following:
       the maximum, then the actual number of SingleFrames are iterated. If the order is sequential, then no SingleFrames 
       repeat. If the order is random, then some SingleFrames may repeat. 
 
-    * Infinite Iterations - Iterate SingleFrames until the experiment is manually terminated. If the order is sequential, 
-      then all SingleFrames are iterated (unless the experiment is manually terminated before all iterate) and SingleFrames 
+    * Infinite Iterations - Iterate SingleFrames until the task is manually terminated. If the order is sequential, 
+      then all SingleFrames are iterated (unless the task is manually terminated before all iterate) and SingleFrames 
       repeat. If the order is random, then all SingleFrames may not be iterated, and some SingleFrames may repeat.
         
-* Random Seed - If the experiment is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
+* Random Seed - If the task is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
 
 * Clip Length - For video data sources, in the number of sequential SingleFrames from a clip to iterate.
 

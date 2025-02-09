@@ -19,7 +19,7 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 This will create a [ClearML Task](../fundamentals/task.md) that captures your script's information, including Git details,
 uncommitted code, python environment, your TensorBoard metrics, plots, images, and text. 
 
-View the TensorBoard outputs in the [WebApp](../webapp/webapp_overview.md), in the experiment's page.
+View the TensorBoard outputs in the [WebApp](../webapp/webapp_overview.md), in the task's page.
 
 ![TensorBoard WebApp scalars](../img/examples_pytorch_tensorboard_07.png)
 
@@ -27,7 +27,7 @@ View the TensorBoard outputs in the [WebApp](../webapp/webapp_overview.md), in t
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your script, it captures all of your TensorBoard plots, images, and metrics. 
-But, you may want to have more control over what your experiment logs.
+But, you may want to have more control over what your task logs.
 
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. For finer grained control of logged 

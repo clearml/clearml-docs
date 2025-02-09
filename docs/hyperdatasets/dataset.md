@@ -6,7 +6,7 @@ ClearML Enterprise's **Datasets** and **Dataset versions** provide the internal 
 and functionality for the following purposes:
 * Connecting source data to the ClearML Enterprise platform
 * Using ClearML Enterprise's Git-like [Dataset versioning](#dataset-versioning)
-* Integrating the powerful features of [Dataviews](dataviews.md) with an experiment
+* Integrating the powerful features of [Dataviews](dataviews.md) with a task
 * [Annotating](webapp/webapp_datasets_frames.md#annotations) images and videos
 
 Datasets consist of versions with SingleFrames and/or FrameGroups. Each Dataset can contain multiple versions, which 
@@ -128,7 +128,7 @@ Use the [`Dataset.delete`](../references/hyperdataset/hyperdataset.md#datasetdel
 
 ### Tagging Datasets
 
-Tags can be added to datasets, allowing to easily identify and group experiments.
+Tags can be added to datasets, allowing to easily identify and group tasks.
 
 Add tags to a dataset:
 ```python
@@ -159,7 +159,7 @@ Dataset versions can have either *Draft* or *Published* state.
 
 A *Draft* version is editable, so frames can be added to and deleted and/or modified. 
  
-A *Published* version is read-only, which ensures reproducible experiments and preserves the Dataset version contents. 
+A *Published* version is read-only, which ensures reproducible tasks and preserves the Dataset version contents. 
 Child versions can only be created from *Published* versions, as they inherit their predecessor version contents.
 
 ## Dataset Version Structure

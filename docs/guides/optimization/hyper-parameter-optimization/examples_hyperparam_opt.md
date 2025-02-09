@@ -71,9 +71,9 @@ def job_complete_callback(
 Initialize the Task, which will be stored in ClearML Server when the code runs. After the code runs at least once, it 
 can be [reproduced](../../../webapp/webapp_exp_reproducing.md) and [tuned](../../../webapp/webapp_exp_tuning.md).
 
-Set the Task type to `optimizer`, and create a new experiment (and Task object) each time the optimizer runs (`reuse_last_task_id=False`). 
+Set the Task type to `optimizer`, and create a new task each time the optimizer runs (`reuse_last_task_id=False`). 
 
-When the code runs, it creates an experiment named **Automatic Hyper-Parameter Optimization** in 
+When the code runs, it creates a task named **Automatic Hyper-Parameter Optimization** in 
 the **Hyper-Parameter Optimization** project, which can be seen in the **ClearML Web UI**. 
  
  ```python
@@ -91,21 +91,21 @@ task = Task.init(
 Create an arguments dictionary that contains the ID of the Task to optimize, and a Boolean indicating whether the 
 optimizer will run as a service, see [Running as a service](#running-as-a-service).
 
-In this example, an experiment named **Keras HP optimization base** is being optimized. The experiment must have run at 
+In this example, a task named **Keras HP optimization base** is being optimized. The task must have run at 
 least once so that it is stored in ClearML Server, and, therefore, can be cloned.
 
 Since the arguments dictionary is connected to the Task, after the code runs once, the `template_task_id` can be changed 
-to optimize a different experiment.
+to optimize a different task.
 
 ```python
-# experiment template to optimize in the hyperparameter optimization
+# task template to optimize in the hyperparameter optimization
 args = {
     'template_task_id': None,
     'run_as_service': False,
 }
 args = task.connect(args)
     
-# Get the template task experiment that we want to optimize
+# Get the template task that we want to optimize
 if not args['template_task_id']:
     args['template_task_id'] = Task.get_task(
         project_name='examples', task_name='Keras HP optimization base').id
@@ -120,7 +120,7 @@ object, setting the following optimization parameters:
 
   ```python
   an_optimizer = HyperParameterOptimizer(
-      # This is the experiment we want to optimize
+      # This is the task we want to optimize
       base_task_id=args['template_task_id'],
   ```
   
@@ -174,10 +174,10 @@ object, setting the following optimization parameters:
 * Remaining parameters, including the time limit per Task (minutes), period for checking the optimization (minutes), 
   maximum number of jobs to launch, minimum and maximum number of iterations for each Task:
   ```python
-      # Optional: Limit the execution time of a single experiment, in minutes.
+      # Optional: Limit the execution time of a single task, in minutes.
       # (this is optional, and if using OptimizerBOHB, it is ignored)
       time_limit_per_job=10.,
-      # Check the experiments every 6 seconds is way too often, we should probably set it to 5 min,
+      # Check the tasks every 6 seconds is way too often, we should probably set it to 5 min,
       # assuming a single experiment is usually hours...
       pool_period_min=0.1,
       # set the maximum number of jobs to launch for the optimization, default (None) unlimited
@@ -185,9 +185,9 @@ object, setting the following optimization parameters:
       # basically the cumulative number of iterations will not exceed total_max_jobs * max_iteration_per_job
       total_max_jobs=10,
       # This is only applicable for OptimizerBOHB and ignore by the rest
-      # set the minimum number of iterations for an experiment, before early stopping
+      # set the minimum number of iterations for a task before early stopping
       min_iteration_per_job=10,
-      # Set the maximum number of iterations for an experiment to execute
+      # Set the maximum number of iterations for a task to execute
       # (This is optional, unless using OptimizerBOHB where this is a must)
       max_iteration_per_job=30,
       
@@ -215,7 +215,7 @@ it, providing the callback method to report the best performance:
 ```python
 # report every 12 seconds, this is way too often, but we are testing here J
 an_optimizer.set_report_period(0.2)
-# start the optimization process, callback function to be called every time an experiment is completed
+# start the optimization process, callback function to be called every time a task is completed
 # this function returns immediately
 an_optimizer.start(job_complete_callback=job_complete_callback)
 # set the time limit for the optimization process (2 hours)
@@ -233,7 +233,7 @@ Now that it is running:
 an_optimizer.set_time_limit(in_minutes=90.0)
 # wait until process is done (notice we are controlling the optimization process in the background)
 an_optimizer.wait()
-# optimization is completed, print the top performing experiments id
+# optimization is completed, print the top performing tasks id
 top_exp = an_optimizer.get_top_experiments(top_k=3)
 print([t.id for t in top_exp])
 # make sure background optimization stopped

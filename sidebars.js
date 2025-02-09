@@ -174,7 +174,7 @@ module.exports = {
                         'webapp/webapp_projects_page',
                         'webapp/webapp_project_overview',
                         {
-                            'Experiments': ['webapp/webapp_exp_table', 'webapp/webapp_exp_track_visual', 'webapp/webapp_exp_reproducing', 'webapp/webapp_exp_tuning',
+                            'Tasks': ['webapp/webapp_exp_table', 'webapp/webapp_exp_track_visual', 'webapp/webapp_exp_reproducing', 'webapp/webapp_exp_tuning',
                                 'webapp/webapp_exp_comparing']
                         },
                         {
@@ -380,10 +380,10 @@ module.exports = {
             {
                 'Enterprise':
                         [
-                           'release_notes/clearml_server/enterprise/ver_3_23',
+                           'release_notes/clearml_server/enterprise/ver_3_24',
                            {
                                 'Older Versions': [
-                                     'release_notes/clearml_server/enterprise/ver_3_22',
+                                     'release_notes/clearml_server/enterprise/ver_3_23','release_notes/clearml_server/enterprise/ver_3_22',
                                      'release_notes/clearml_server/enterprise/ver_3_21', 'release_notes/clearml_server/enterprise/ver_3_20'
                                 ]
                            }
