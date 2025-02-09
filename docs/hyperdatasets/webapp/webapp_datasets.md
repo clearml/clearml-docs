@@ -73,7 +73,7 @@ To change the label color coding, hover over a label color, click the hand point
 Click <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> on the top right
 of a dataset card to open its context menu and access dataset actions:  
 
-<div class="max-w-50">
+<div class="max-w-75">
 
 ![Hyper-Dataset context menu](../../img/hyperdatasets/webapp_hyperdataset_card_context_menu.png#light-mode-only)
 ![Hyper-Dataset context menu](../../img/hyperdatasets/webapp_hyperdataset_card_context_menu_dark.png#dark-mode-only)
@@ -89,7 +89,7 @@ of a dataset card to open its context menu and access dataset actions:
 To create a Hyper-Dataset, click the **+ NEW DATASET** button in the top right of the page, which will open a 
 **New Dataset** modal.
 
-<div class="max-w-75">
+<div class="max-w-50">
 
 ![Hyper-Dataset creation modal](../../img/hyperdatasets/webapp_hyperdataset_creation.png#light-mode-only)
 ![Hyper-Dataset creation modal](../../img/hyperdatasets/webapp_hyperdataset_creation_dark.png#dark-mode-only)

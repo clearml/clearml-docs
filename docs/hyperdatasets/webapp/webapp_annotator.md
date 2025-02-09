@@ -16,7 +16,7 @@ Click on an annotation task card to open the frame viewer, where you can view th
 Click <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> on the top right 
 of an annotation task card to open its context menu and access annotation task actions.  
 
-<div class="max-w-50">
+<div class="max-w-75">
 
 ![Annotation task card](../../img/hyperdatasets/annotation_task_card.png#light-mode-only)
 ![Annotation task card](../../img/hyperdatasets/annotation_task_card_dark.png#dark-mode-only)

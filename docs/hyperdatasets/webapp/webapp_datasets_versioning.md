@@ -23,7 +23,12 @@ The tree view shows the lineage of the dataset's versions.
 
 The list view lists the dataset's versions chronologically by last update time.
 
-![Versions list view](../../img/hyperdatasets/web-app/dataset_simple_adv_01.png)
+<div class="max-w-50">
+
+![Versions list view](../../img/hyperdatasets/dataset_simple_adv_01.png#light-mode-only)
+![Versions list view](../../img/hyperdatasets/dataset_simple_adv_01_dark.png#dark-mode-only)
+
+</div>
 
 Click <img src="/docs/latest/icons/ico-sort.svg" alt="Sort order" className="icon size-md space-sm" /> to order the 
 dataset versions in ascending or descending order based on their last update time. 

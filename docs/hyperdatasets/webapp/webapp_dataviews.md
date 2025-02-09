@@ -25,7 +25,9 @@ and choosing one of these options:
 
 The downloaded data consists of the currently displayed table columns.
 
-![Dataviews table](../../img/hyperdatasets/webapp_dataviews_table.png)
+![Dataviews table](../../img/hyperdatasets/webapp_dataviews_table.png#light-mode-only)
+![Dataviews table](../../img/hyperdatasets/webapp_dataviews_table_dark.png#dark-mode-only)
+
 
 The Dataviews table includes the following columns: 
 
