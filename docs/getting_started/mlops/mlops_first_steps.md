@@ -9,7 +9,7 @@ This tutorial assumes that you've already [signed up](https://app.clear.ml) to C
 ClearML provides tools for **automation**, **orchestration**, and **tracking**, all key in performing effective MLOps and LLMOps. 
 
 Effective MLOps and LLMOps rely on the ability to scale work beyond one's own computer. Moving from your own machine can be time-consuming. 
-Even assuming that you have all the drivers and applications installed, you still need to manage multiple python environments
+Even assuming that you have all the drivers and applications installed, you still need to manage multiple Python environments
 for different packages / package versions, or worse - manage different Dockers for different package versions.
 
 Not to mention, when working on remote machines, executing experiments, tracking what's running where, and making sure machines 
@@ -21,7 +21,7 @@ ClearML Agent was designed to deal with such issues and more! It is a tool respo
 machine of choice through the ClearML WebApp with no need for additional code.
 
 The agent will set up the environment for a specific Task's execution (inside a Docker, or bare-metal), install the 
-required python packages, and execute and monitor the process.
+required Python packages, and execute and monitor the process.
 
 
 ## Set up an Agent
@@ -72,8 +72,8 @@ Cloning a task duplicates the task's configuration, but not its outputs.
 1. Click **CLONE** in the window. 
 
 The newly cloned experiment will appear and its info panel will slide open. The cloned experiment is in draft mode, so 
-it can be modified. You can edit the Git / code references, control the python packages to be installed, specify the 
-Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Tasks](../../webapp/webapp_exp_tuning.md#modifying-experiments) for more information about editing experiments in the UI. 
+it can be modified. You can edit the Git / code references, control the Python packages to be installed, specify the 
+Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Tasks](../../webapp/webapp_exp_tuning.md#modifying-tasks) for more information about editing experiments in the UI. 
 
 ## Enqueue an Experiment
 Once you have set up an experiment, it is now time to execute it. 

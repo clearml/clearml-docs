@@ -90,12 +90,12 @@ information).
 
 You can edit the labels of credentials in your own workspace, or credentials that you created in other workspaces.
 
-**To edit the credentials label:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> 
+**To edit the credentials label:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> .
 
 You can revoke any credentials in your own workspace, or credentials that you created in other workspaces. Once revoked, 
 these credentials cannot be recovered.
 
-**To revoke ClearML credentials:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" />
+**To revoke ClearML credentials:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" /> .
 
 ### AI Application Gateway Tokens 
 

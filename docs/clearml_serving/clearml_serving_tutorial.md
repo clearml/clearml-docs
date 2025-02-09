@@ -84,7 +84,7 @@ project (default: "DevOps" project).
 
 ## Registering and Deploying New Models Manually 
 
-Uploading an existing model file into the model repository can be done via the `clearml` RestAPI, the python interface, 
+Uploading an existing model file into the model repository can be done via the `clearml` RestAPI, the Python interface, 
 or with the `clearml-serving` CLI. 
 
 1. Upload the model file to the `clearml-server` file storage and register it. The `--path` parameter is used to input 

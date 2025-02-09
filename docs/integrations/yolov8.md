@@ -22,7 +22,7 @@ segmentation, and classification. Get the most out of YOLOv8 with ClearML:
 
 ## Setup
 
-1. Install the `clearml` python package:
+1. Install the `clearml` Python package:
 
    ```commandline
    pip install clearml

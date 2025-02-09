@@ -2,7 +2,7 @@
 title: Next Steps
 ---
 
-So, you've already [installed ClearML's python package](ds_first_steps.md) and run your first experiment!
+So, you've already [installed ClearML's Python package](ds_first_steps.md) and run your first experiment!
 
 Now, you'll learn how to track Hyperparameters, Artifacts, and Metrics!
 

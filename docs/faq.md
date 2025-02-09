@@ -139,7 +139,7 @@ the following numbers are displayed:
 
 ![Server version information](img/faq_server_versions.png)
 
-ClearML python package information can be obtained by using `pip freeze`.
+ClearML Python package information can be obtained by using `pip freeze`.
 
 For example: 
 
@@ -324,7 +324,7 @@ For more task configuration options, see [Hyperparameters](fundamentals/hyperpar
 
 <br/>
 
-#### I noticed that all of my tasks appear as "Training". Are there other options?   <a id="other-experiment-types"></a>
+#### I noticed that all of my tasks appear as "Training". Are there other options?   <a id="other-task-types"></a>
 
 Yes! ClearML supports [multiple task types](fundamentals/task.md#task-types). When creating tasks and 
 calling [`Task.init()`](references/sdk/task.md#taskinit), you can provide a task type. For example:
@@ -336,7 +336,7 @@ task = Task.init(project_name, task_name, Task.TaskTypes.testing)
 
 <br/>
 
-#### Sometimes I see tasks as running when in fact they are not. What's going on?   <a id="experiment-running-but-stopped"></a>
+#### Sometimes I see tasks as running when in fact they are not. What's going on?   <a id="task-running-but-stopped"></a>
 
 ClearML monitors your Python process. When the process exits properly, ClearML closes the task. When the process crashes and terminates abnormally, it sometimes misses the stop signal. In this case, you can safely right-click the task in the WebApp and abort it.
 
@@ -358,7 +358,7 @@ pip install -U clearml
 
 Your firewall may be preventing the connection. Try one of the following solutions:
 
-* Direct python "requests" to use the enterprise certificate file by setting the OS environment variables `CURL_CA_BUNDLE` or `REQUESTS_CA_BUNDLE`. For a detailed discussion of this topic, see [https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module](https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module).
+* Direct Python "requests" to use the enterprise certificate file by setting the OS environment variables `CURL_CA_BUNDLE` or `REQUESTS_CA_BUNDLE`. For a detailed discussion of this topic, see [https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module](https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module).
 * Disable certificate verification   
   
   :::warning

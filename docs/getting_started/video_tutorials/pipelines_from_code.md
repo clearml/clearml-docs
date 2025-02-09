@@ -34,7 +34,7 @@ One is you can easily chain existing ClearML tasks together to create a single p
 
 Let's say we have some functions that we already use to run ETL and another function that trains a model on the preprocessed data. We already have a main function too, that orchestrates when and how these other components should be run.
 
-If we want to make this code into a pipeline, the first thing we have to do is to tell ClearML that these functions are supposed to become steps in our pipeline. We can do that by using a python decorator! For each function we want as a step, we can decorate it with `PipelineDecorator.component`.
+If we want to make this code into a pipeline, the first thing we have to do is to tell ClearML that these functions are supposed to become steps in our pipeline. We can do that by using a Python decorator! For each function we want as a step, we can decorate it with `PipelineDecorator.component`.
 
 The component call will fully automatically transform this function into a ClearML task, with all the benefits that come with that. It will also make it clear that this task will be part of a larger pipeline.
 

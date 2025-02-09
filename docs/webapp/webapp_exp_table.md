@@ -37,7 +37,7 @@ You can create tasks by:
 * Running code instrumented with ClearML (see [Task Creation](../clearml_sdk/task_sdk.md#task-creation))
 * [Cloning an existing task](webapp_exp_reproducing.md)
 * Via CLI using [`clearml-task`](../apps/clearml_task.md)
-* Through the UI interface: Input the task's details, including its source code and python requirements, and then 
+* Through the UI interface: Input the task's details, including its source code and Python requirements, and then 
 run it through a [ClearML Queue](../fundamentals/agents_and_queues.md#what-is-a-queue) or save it as a *draft*.
 
 To create a task through the UI interface:
@@ -57,7 +57,7 @@ To create a task through the UI interface:
        * Binary - The binary executing the script (e.g. python3, bash etc).
        * Type – How the code is provided
          * Script - The name of the file to run using the above specified binary
-         * Module - The name of a python module to run (Python only, see [Python module specification](https://docs.python.org/3/using/cmdline.html#cmdoption-m))
+         * Module - The name of a Python module to run (Python only, see [Python module specification](https://docs.python.org/3/using/cmdline.html#cmdoption-m))
          * Custom code - Directly provide the code to run. Write code, or upload a file:
            * File name - The script in which your code is stored. Click `Upload` to upload an existing file.
            * Content - The actual code. Click `Edit` to modify the script’s contents.
@@ -66,7 +66,7 @@ To create a task through the UI interface:
    * **Arguments** (*optional*) - Add [hyperparameter](../fundamentals/hyperparameters.md) values.
    * **Environment** (*optional*) - Set up the task’s execution environment
      * Python - Python environment settings
-       * Use Poetry - Force Poetry instead of pip package manager. Disables additional python settings.
+       * Use Poetry - Force Poetry instead of pip package manager. Disables additional Python settings.
        * Preinstalled venv - The name of a virtual environment available in the task’s execution environment to use when 
        running the task. Additionally, specify how to use the virtual environment:
          * Skip - Try to automatically detect an available virtual environment, and use it as is.

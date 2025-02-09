@@ -15,7 +15,7 @@ title: Version 1.2
 
 **Bug Fixes**
 
-- Fix `CLEARML_AGENT_SKIP_PIP_VENV_INSTALL` fails to find python executable
+- Fix `CLEARML_AGENT_SKIP_PIP_VENV_INSTALL` fails to find Python executable
 - Fix `apt-get update` failure causes `apt-get install` not to be executed
 
 ### ClearML Agent 1.2.1
@@ -38,7 +38,7 @@ title: Version 1.2
 
 **Bug Fixes**
 
-- Fix virtualenv python interpreter used ([ClearML Agent GitHub PR #98](https://github.com/allegroai/clearml-agent/pull/98))
+- Fix virtualenv Python interpreter used ([ClearML Agent GitHub PR #98](https://github.com/allegroai/clearml-agent/pull/98))
 - Fix typing package incorrectly required for Python>3.5 ([ClearML Agent GitHub PR #103](https://github.com/allegroai/clearml-agent/pull/103))
 - Fix symbolic links not copied from cached VCS into working copy (windows platform will result with default copy content instead of original symbolic link) ([ClearML Agent GitHub PR #89](https://github.com/allegroai/clearml-agent/pull/89))
 - Fix agent fails to check out code from main branch when branch/commit is not explicitly specified ([ClearML GitHub issue #551](https://github.com/allegroai/clearml/issues/551))

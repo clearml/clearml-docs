@@ -21,7 +21,7 @@ and tracks hyperparameters of various types, supporting automatic logging and ex
 ### Automatic Logging
 Once a ClearML Task has been [initialized](../references/sdk/task.md#taskinit) in a script, ClearML automatically captures and tracks 
 the following types of parameters:
-* Command line parsing - command line parameters passed when invoking code that uses standard python packages, including:
+* Command line parsing - command line parameters passed when invoking code that uses standard Python packages, including:
   * [click](../integrations/click.md)
   * [argparse](../guides/reporting/hyper_parameters.md#argparse-command-line-options)
   * [Python Fire](../integrations/python_fire.md)

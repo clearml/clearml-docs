@@ -60,7 +60,7 @@ clearml-task --project keras --name local_test --script webinar-0620/keras_mnist
 This sets the following arguments:
 * `--project keras --name local_test` - The project and task names 
 * `--script /webinar-0620/keras_mnist.py` - The local script to be executed
-* `-requirements webinar-0620/requirements.txt` - The local python package requirements file
+* `-requirements webinar-0620/requirements.txt` - The local Python package requirements file
 * `--args batch_size=64 epochs=1` - Arguments passed to the script. This uses the argparse object to capture CLI parameters
 * `--queue default` - Selected queue to send the task to
 

@@ -10,7 +10,7 @@ class to ingest the data.
 ### Downloading the Data
 Before registering the CIFAR dataset with `clearml-data`, you need to obtain a local copy of it.
 
-Execute this python script to download the data:
+Execute this Python script to download the data:
 ```python
 from clearml import StorageManager
 

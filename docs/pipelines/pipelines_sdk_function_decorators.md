@@ -224,7 +224,7 @@ You can run the pipeline logic locally, while keeping the pipeline components ex
 :::
 
 #### Debugging Mode
-In debugging mode, the pipeline controller and all components are treated as regular python functions, with components 
+In debugging mode, the pipeline controller and all components are treated as regular Python functions, with components 
 called synchronously. This mode is great to debug the components and design the pipeline as the entire pipeline is 
 executed on the developer machine with full ability to debug each function call. Call [`PipelineDecorator.debug_pipeline`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratordebug_pipeline) 
 before the main pipeline logic function call.
@@ -241,7 +241,7 @@ if __name__ == '__main__':
 In local mode, the pipeline controller creates Tasks for each component, and component functions calls are translated 
 into sub-processes running on the same machine. Notice that the data is passed between the components and the logic with 
 the exact same mechanism as in the remote mode (i.e. hyperparameters / artifacts), with the exception that the execution 
-itself is local. Notice that each subprocess is using the exact same python environment as the main pipeline logic. Call 
+itself is local. Notice that each subprocess is using the exact same Python environment as the main pipeline logic. Call 
 [`PipelineDecorator.run_locally`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorrun_locally)
 before the main pipeline logic function.
 

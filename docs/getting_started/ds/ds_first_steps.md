@@ -8,7 +8,7 @@ title: First Steps
 
 First, [sign up for free](https://app.clear.ml).
 
-Install the `clearml` python package:
+Install the `clearml` Python package:
 ```bash
 pip install clearml
 ```

@@ -71,7 +71,7 @@ The comparison pages provide the following views:
 ### Side-by-side Textual Comparison
 
 In the **Details** and **Hyperparameters** (Values view) tabs, you can view differences in the tasks' parameters' nominal 
-values. The **Details** tab displays the tasks' execution details (source code, uncommitted changes, python packages), 
+values. The **Details** tab displays the tasks' execution details (source code, uncommitted changes, Python packages), 
 models, artifacts, configuration objects, and additional general information. **Hyperparameters** (Values view) displays the 
 tasks' hyperparameter and their values. 
 
