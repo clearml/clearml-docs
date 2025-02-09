@@ -64,7 +64,7 @@ Search results are returned for the different ClearML objects:
 * Tasks - Searching a task table looks for matches in the tasks' name, ID, description and input and 
 output models. The enterprise version also includes task Dataviews' hyper-datasets and versions. 
 * Models - Searching a Model table looks for matches in the models' name, ID and description.
-* Dataviews (Enterprise only) - Searching a Dataviews table looks for matches in the Dataviews' name, ID, description, 
+* Dataviews (Enterprise only) - Searching a Dataview table looks for matches in the Dataviews' name, ID, description, 
 hyper-datasets, and versions.
 * Datasets - Searching the datasets page looks for matches in the datasets' name, ID, and description. In a dataset's
 version table, a search looks for matches in the versions' name, ID, and description. 

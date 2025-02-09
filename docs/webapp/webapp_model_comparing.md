@@ -7,7 +7,7 @@ You can view the differences in model details, configuration, scalar values, and
 
 ## Selecting Models to Compare
 To select models to compare:
-1. Go to a models table that includes the models to be compared.
+1. Go to a model table that includes the models to be compared.
 1. Select the models to compare. Once multiple models are selected, the batch action bar appears.
 1. In the batch action bar, click **COMPARE**. 
 

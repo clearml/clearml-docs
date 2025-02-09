@@ -32,7 +32,7 @@ the original task to become the clone's parent.
 ## Resetting
 
 To reset a task:
-1. In the tasks table, right-click the relevant task and click **Reset**. 
+1. In the task table, right-click the relevant task and click **Reset**. 
 1. In the `Reset Task` modal, if you want the task's artifacts and debug samples to be deleted from the 
    ClearML file server, click the checkbox
 1. Click **Reset**
