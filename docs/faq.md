@@ -161,7 +161,7 @@ clearml-session==0.3.2
 #### How can I sort models by a certain metric?   <a id="custom-columns"></a>
 
 To sort models by a metric, in the ClearML Web UI, 
-add a [custom column](webapp/webapp_model_table.md#customizing-the-models-table) to the model table and sort by 
+add a [custom column](webapp/webapp_model_table.md#customizing-the-model-table) to the model table and sort by 
 that metric column. Available custom column options depend upon the models in the table and the metrics that have been
 attached to them (see [Logging Metrics and Plots](clearml_sdk/model_sdk.md#logging-metrics-and-plots)). 
 

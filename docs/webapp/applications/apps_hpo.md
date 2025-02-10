@@ -74,9 +74,13 @@ limits.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 
   
+<div class="max-w-65">
+
 ![HPO app instance launch form](../../img/apps_hpo_wizard.png#light-mode-only)
 ![HPO app instance launch form](../../img/apps_hpo_wizard_dark.png#dark-mode-only)
  
+</div>
+
 ## Dashboard
 Once an HPO instance is launched, the dashboard displays a summary of the optimization process.
 

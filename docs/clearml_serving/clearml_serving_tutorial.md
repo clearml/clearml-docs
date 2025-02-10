@@ -82,7 +82,7 @@ Inference services status, console outputs and machine metrics are available in 
 project (default: "DevOps" project).
 :::
 
-## Registering and Deploying New Models Manually 
+## Registering and Deploying New Models Manually
 
 Uploading an existing model file into the model repository can be done via the `clearml` RestAPI, the Python interface, 
 or with the `clearml-serving` CLI. 

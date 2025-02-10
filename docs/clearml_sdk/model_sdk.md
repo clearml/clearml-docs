@@ -13,7 +13,7 @@ so the models are traceable to tasks.
 
 ## Output Models
 
-### Manually Logging Models  
+### Manually Logging Models
 
 To manually log a model, create an instance of OutputModel class. 
 

@@ -2,7 +2,7 @@
 title: The Model table
 ---
 
-The model table is a [customizable](#customizing-the-models-table) list of models associated with the tasks in a project. From the model table,
+The model table is a [customizable](#customizing-the-model-table) list of models associated with the tasks in a project. From the model table,
 view model details, and modify, publish, archive, tag, and move models to other projects.
 
 View the model table in table view <img src="/docs/latest/icons/ico-table-view.svg" alt="Table view" className="icon size-md space-sm" /> 
@@ -64,7 +64,7 @@ Customize the table using any of the following:
 * Sort columns - By metadata, metric, ML framework, description, and last update elapsed time.
 
 :::note
-The following models-table customizations are saved on a **per-project** basis: 
+The following model-table customizations are saved on a **per-project** basis: 
 * Columns order
 * Column width
 * Active sort order
