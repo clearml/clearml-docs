@@ -166,7 +166,7 @@ To clear all filters click <img src="/docs/latest/icons/ico-filter-reset.svg" al
 
 </Collapsible>
 
-<Collapsible type="screenshot" title="Frame Rules">
+<Collapsible type="screenshot" title="Frame Rules: Metadata">
 
 Filter by metadata using Lucene queries.
 
@@ -177,6 +177,30 @@ Filter by metadata using Lucene queries.
 * Open a frame in the frame viewer to see its metadata.
   
 ![Frame metadata in frame viewer](../../img/hyperdatasets/frame_filtering_09.png)
+
+</Collapsible>
+
+<Collapsible type="screenshot" title="Frame Rules: Date and Time Fields">
+
+If your dataset includes a `metadata` field that stores date and time information, you can filter 
+based on date ranges or specific time intervals. 
+
+Filter by date/time metadata fields using Lucene queries.
+
+* Data range filter
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20 TO 2024-10-20]`. The query 
+  will match all frames where updated value matches October 20th 2024. Use the format `[YYYY-MM-DD TO YYYY-MM-DD]`. Note 
+  that this works with any metadata field that stores datetime information, not just the `meta.updated` field.
+
+  * Open a frame in the frame viewer to see its metadata.
+
+* Time interval filter 
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]`. 
+  The query will match all frames where the updated value is between 08:00 and 09:00 on October 20th 2024. 
+  Use the format `[YYYY-MM-DDThh:mm:ss TO YYYY-MM-DDThh:mm:ss]`. Note that this works with any metadata field that 
+  stores datetime information, not just the `meta.updated` field.
+
+  * Open a frame in the frame viewer to see its metadata.  
 
 </Collapsible>
 
