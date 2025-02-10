@@ -81,7 +81,7 @@ title: FAQ
     * [Google Cloud Platform?](#google_cloud_platform)
 * [How do I restart ClearML Server?](#restart)
 * [Can I create a Helm Chart for ClearML Server Kubernetes deployment?](#helm)
-* [My Container cannot load a local host directory on SELinux?](#selinux)
+* [My Docker cannot load a local host directory on SELinux?](#selinux)
 
 **ClearML Server Configuration**
 
