@@ -20,13 +20,13 @@ keywords: [mlops, components, ClearML data]
 <br/>
 
 <Collapsible type="info" title="Video Transcript">
-Hello and welcome to ClearML. In this video we'll take a look at both the command line and python interfaces of our data versioning tool called `clearml-data`. 
+Hello and welcome to ClearML. In this video we'll take a look at both the command line and Python interfaces of our data versioning tool called `clearml-data`. 
 
 In the world of machine learning, you are very likely dealing with large amounts of data that you need to put into a dataset. ClearML Data solves 2 important challenges that occur in this situation:
 
 One is accessibility, making sure the data can be accessed from every machine you use. And two is versioning, linking which dataset version was used in which task. This helps to make experiments more reproducible. Moreover, versioning systems like git were never really designed for the size and number of files in machine learning datasets. We're going to need something else.
 
-ClearML Data comes built-in with the `clearml` python package and has both a command line interface for easy and quick operations and a python interface if you want more flexibility. Both interfaces are quite similar, so we'll address both of them in the video.
+ClearML Data comes built-in with the `clearml` Python package and has both a command line interface for easy and quick operations and a Python interface if you want more flexibility. Both interfaces are quite similar, so we'll address both of them in the video.
 
 Let's start with an example. Say I have some files here that I want to put into a dataset and start to keep track of.
 
@@ -36,13 +36,13 @@ We can do that by using the `clearml-data add` command and providing the path to
 
 Now we need to tell the server that we're done here. We can call `clearml-data close` to upload the files and change the dataset status to done, which finalizes this version of the dataset.
 
-The process of doing this with the python interface is very similar.
+The process of doing this with the Python interface is very similar.
 
 You can create a new Dataset by importing the Dataset object from the `clearml` pip package and calling its `create` method. Now we have to give the dataset a name and a project just like with the command line tool. The create method returns a dataset instance which we will use to do all of our operations on.
 
 To add some files to this newly created dataset version, call the `add_files` method on the dataset object and provide a path to a local file or folder. Bear in mind that nothing is uploaded just yet, we're simply instructing the dataset object what it should do when we eventually *do* want to upload.
 
-A really useful thing we can do with the python interface is adding some interesting statistics about the dataset itself, such as a plot for example. Here we simply report a histogram on the amount of files in the train and test folders. You can add anything to a dataset that you can add to a ClearML task, so go nuts!
+A really useful thing we can do with the Python interface is adding some interesting statistics about the dataset itself, such as a plot for example. Here we simply report a histogram on the amount of files in the train and test folders. You can add anything to a dataset that you can add to a ClearML task, so go nuts!
 
 Finally, upload the dataset and then finalize it, or just set `auto_upload` to `true` to make it a one-liner.
 
@@ -56,7 +56,7 @@ Using the command line tool, you can download a dataset version locally by using
 
 That path will be a local cached folder, which means that if you try to get the same dataset again, or any other dataset that's based on this one, it will check which files are already on your system, and it will not download these again.
 
-The python interface is similar, with one major difference. You can also get a dataset using any combination of name, project, ID or tags, but _getting_ the dataset does not mean it is downloaded, we simply got all of the metadata, which we can now access from the dataset object. This is important, as it means you don't have to download the dataset to make changes to it, or to add files. More on that in just a moment.
+The Python interface is similar, with one major difference. You can also get a dataset using any combination of name, project, ID or tags, but _getting_ the dataset does not mean it is downloaded, we simply got all of the metadata, which we can now access from the dataset object. This is important, as it means you don't have to download the dataset to make changes to it, or to add files. More on that in just a moment.
 
 If you do want to download a local copy of the dataset, it has to be done explicitly, by calling `get_local_copy` which will return the path to which the data was downloaded for you.
 
@@ -70,7 +70,7 @@ Let's say we found an issue with the hamburgers here, so we remove them from the
 
 Now we can tell ClearML that the changes we made to this folder should become a new version of the previous dataset. We start by creating a new dataset just like we saw before, but now, we add the previous dataset ID as a parent. This tells ClearML that this new dataset version we're creating is based on the previous one and so our dataset object here will already contain all the files that the parent contained.
 
-Now we can manually remove and add the files that we want, even without actually downloading the dataset. It will just change the metadata inside the python object and sync everything when it's finalized.
+Now we can manually remove and add the files that we want, even without actually downloading the dataset. It will just change the metadata inside the Python object and sync everything when it's finalized.
 
 That said, we do have a local copy of the dataset in this case, so we have a better option.
 

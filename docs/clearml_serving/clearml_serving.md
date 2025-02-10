@@ -16,7 +16,7 @@ solution.
 * Flexible
     * On-line model deployment
     * On-line endpoint model/version deployment (i.e. no need to take the service down)
-    * Per model standalone preprocessing and postprocessing python code
+    * Per model standalone preprocessing and postprocessing Python code
 * Scalable
     * Multi model per container
     * Multi models per serving service

@@ -52,8 +52,12 @@ The app monitors your workspace for trigger events and will launch copies of the
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration
 
+<div class="max-w-65">
+
 ![Trigger manager instance launch form](../../img/apps_trigger_manager_wizard.png#light-mode-only)
 ![Trigger manager instance launch form](../../img/apps_trigger_manager_wizard_dark.png#dark-mode-only)
+
+</div>
 
 ## Dashboard 
 

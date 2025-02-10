@@ -515,7 +515,7 @@ class method.
 my_dataview = DataView.get(dataview_id='<dataview_id>')
 ```
 
-Access the Dataview's frames as a python list, dictionary, or through a pythonic iterator.
+Access the Dataview's frames as a Python list, dictionary, or through a pythonic iterator.
 
 [`DataView.to_list()`](../references/hyperdataset/dataview.md#to_list) returns the Dataview queries result as a Python list. 	
 

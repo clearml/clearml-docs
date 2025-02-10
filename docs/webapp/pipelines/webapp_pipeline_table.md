@@ -1,5 +1,5 @@
 ---
-title: The Pipeline Runs Table
+title: The Pipeline Run Table
 ---
 
 The pipeline runs table is a [customizable](#customizing-the-runs-table) list of the pipeline's runs. Use it to
@@ -31,7 +31,7 @@ The downloaded data consists of the currently displayed table columns.
 
 ## Run Table Columns
 
-The models table contains the following columns:
+The pipeline run table contains the following columns:
 
 | Column | Description | Type |
 |---|---|---|

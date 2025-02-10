@@ -369,7 +369,7 @@ The **Metadata** tab presents any additional metadata that has been attached to 
 
 **To edit a version's metadata,**
 
-1. Hover over the metadata box and click on the **EDIT** button
+1. Hover over the metadata box and click **EDIT**
 1. Edit the section contents (JSON format)
 1. Click **OK**
 

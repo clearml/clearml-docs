@@ -307,8 +307,8 @@ MarkDown code for a table looks like this:
 
 The rendered output should look like this:
 
-![Reports table](../img/reports_table.png#light-mode-only)
-![Reports table](../img/reports_table_dark.png#dark-mode-only)
+![Report table](../img/reports_table.png#light-mode-only)
+![Report table](../img/reports_table_dark.png#dark-mode-only)
 
 Add the table column names in the first row; each name is preceded and followed by a pipe (`|`).
 In the second row, add sets of at least three hyphens (`---`) for each column, and add a pipe before and after each set 

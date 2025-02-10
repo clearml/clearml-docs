@@ -2,7 +2,7 @@
 title: Code Examples
 ---
 
-The following examples demonstrate registering, retrieving, and ingesting your data through the Hyper-Datasets python 
+The following examples demonstrate registering, retrieving, and ingesting your data through the Hyper-Datasets Python 
 interface. 
 
 ## Registering your Data

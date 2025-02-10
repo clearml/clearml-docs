@@ -7,7 +7,7 @@ If you are not already using ClearML, see [Getting Started](../getting_started/d
 instructions.
 :::
 
-[`click`](https://click.palletsprojects.com) is a python package for creating command-line interfaces. ClearML integrates 
+[`click`](https://click.palletsprojects.com) is a Python package for creating command-line interfaces. ClearML integrates 
 seamlessly with `click` and automatically logs its command-line parameters. 
 
 All you have to do is add two lines of code:

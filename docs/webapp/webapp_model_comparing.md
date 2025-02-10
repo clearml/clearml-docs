@@ -7,7 +7,7 @@ You can view the differences in model details, configuration, scalar values, and
 
 ## Selecting Models to Compare
 To select models to compare:
-1. Go to a models table that includes the models to be compared.
+1. Go to a model table that includes the models to be compared.
 1. Select the models to compare. Once multiple models are selected, the batch action bar appears.
 1. In the batch action bar, click **COMPARE**. 
 
@@ -57,9 +57,9 @@ information is displayed in a column, so each field is lined up side-by-side.
 
 The model on the left is used as the base model, to which the other models are compared. You can set a new base model 
 in one of the following ways:
-* Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base task" className="icon size-md space-sm" /> 
+* Hover and click <img src="/docs/latest/icons/ico-arrow-from-right.svg" alt="Switch base task" className="icon size-md space-sm" /> 
 on the model that will be the new base.
-* Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base model and drag it all the way to the left
+* Hover and click <img src="/docs/latest/icons/ico-drag.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base model and drag it all the way to the left
 
 The differences between the models are highlighted. You can obscure identical fields by switching on the
 **Hide Identical Fields** toggle.

@@ -82,6 +82,10 @@ html[data-theme="dark"] a:hover {
   max-width: 75%;
 }
 
+.max-w-65 {
+  max-width: 65%;
+}
+
 .max-w-50 {
   max-width: 50%;
 }

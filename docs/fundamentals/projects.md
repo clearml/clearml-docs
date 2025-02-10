@@ -21,7 +21,7 @@ the project are executed, the model checkpoints (snapshots) and artifacts are st
 Users can create and modify projects, and see project details in the [WebApp](../webapp/webapp_home.md). 
 A project's description can be edited in its [overview](../webapp/webapp_project_overview.md) page. Each project's tasks,
 models, and dataviews, can be viewed in the project's [task table](../webapp/webapp_exp_table.md),
- [models table](../webapp/webapp_model_table.md), and [dataviews table](../hyperdatasets/webapp/webapp_dataviews.md). 
+ [model table](../webapp/webapp_model_table.md), and [dataview table](../hyperdatasets/webapp/webapp_dataviews.md). 
 
 ## Usage
 

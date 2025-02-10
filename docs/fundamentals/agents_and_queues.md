@@ -48,7 +48,7 @@ The diagram above demonstrates a typical flow where an agent executes a task:
    1.  Install any required system packages.
    1.  Clone the code from a git repository.
    1.  Apply any uncommitted changes recorded.
-   1.  Set up the python environment and required packages.
+   1.  Set up the Python environment and required packages.
 1. The task's script/code is executed.  
 
 While the agent is running, it continuously reports system metrics to the ClearML Server. You can monitor these metrics

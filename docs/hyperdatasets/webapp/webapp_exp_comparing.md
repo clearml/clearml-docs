@@ -24,9 +24,9 @@ tasks are highlighted. Obscure identical fields by switching on the `Hide Identi
 The task on the left is used as the base task, to which the other tasks are compared. You can set a 
 new base task 
 in one of the following ways:
-* Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base task" className="icon size-md space-sm" /> 
+* Hover and click <img src="/docs/latest/icons/ico-arrow-from-right.svg" alt="Switch base task" className="icon size-md space-sm" /> 
 on the task that will be the new base.
-* Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base task and drag it all the way to the left
+* Hover and click <img src="/docs/latest/icons/ico-drag.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base task and drag it all the way to the left
 
 
 ![Dataview comparison](../../img/hyperdatasets/compare_dataviews.png#light-mode-only)

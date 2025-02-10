@@ -12,7 +12,7 @@ If you are afraid of clutter, use the archive option, and set up your own [clean
 - Track the code base. There is no reason not to add metrics to any process in your workflow, even if it is not directly ML. Visibility is key to iterative improvement of your code / workflow.
 - Create per-project [leaderboards](../../guides/ui/building_leader_board.md) based on custom columns 
   (hyperparameters and performance accuracy), and bookmark them (full URL will always reproduce the same view and table).
-- Share experiments with your colleagues and team-leaders. 
+- Share tasks with your colleagues and team-leaders. 
   Invite more people to see how your project is progressing, and suggest they add metric reporting for their own.
   These metrics can later be part of your own in-house monitoring solution, don't let good data go to waste :)
 
@@ -26,10 +26,10 @@ Once you have a Task in ClearML, you can clone and edit its definitions in the U
 ## Advanced Automation
 - Create daily / weekly cron jobs for retraining best performing models on.
 - Create data monitoring & scheduling and launch inference jobs to test performance on any new coming dataset.
-- Once there are two or more experiments that run after another, group them together into a [pipeline](../../pipelines/pipelines.md).
+- Once there are two or more tasks that run after another, group them together into a [pipeline](../../pipelines/pipelines.md).
 
 ## Manage Your Data
-Use [ClearML Data](../../clearml_data/clearml_data.md) to version your data, then link it to running experiments for easy reproduction.
+Use [ClearML Data](../../clearml_data/clearml_data.md) to version your data, then link it to running tasks for easy reproduction.
 Make datasets machine agnostic (i.e. store original dataset in a shared storage location, e.g. shared-folder / S3 / Gs / Azure).
 ClearML Data supports efficient Dataset storage and caching, differentiable and compressed.
 

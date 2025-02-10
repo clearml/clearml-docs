@@ -68,7 +68,7 @@ To augment its automatic logging, ClearML also provides an explicit logging inte
 See more information about explicitly logging information to a ClearML Task:
 * [Models](../clearml_sdk/model_sdk.md#manually-logging-models)
 * [Configuration](../clearml_sdk/task_sdk.md#configuration) (e.g. parameters, configuration files)
-* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or python objects created by a task)
+* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or Python objects created by a task)
 * [Scalars](../clearml_sdk/task_sdk.md#scalars) 
 * [Text/Plots/Debug Samples](../fundamentals/logger.md#manual-reporting)
 

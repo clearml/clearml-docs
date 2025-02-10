@@ -39,7 +39,7 @@ ClearML k8s glue default pod label was changed to `CLEARML=agent` (instead of `T
   - Update task `status_message` for non-responsive or hanging pods
   - Support the `agent.docker_force_pull` configuration option for scheduled pods
   - Add docker example for running the k8s glue as a pod in a k8s cluster
-- Add `agent.ignore_requested_python_version` configuration option to ignore any requested python version (default false, see [here](https://github.com/allegroai/clearml-agent/blob/db57441c5dda43d8e38f01d7f52f047913e95ba5/docs/clearml.conf#L45))
+- Add `agent.ignore_requested_python_version` configuration option to ignore any requested Python version (default false, see [here](https://github.com/allegroai/clearml-agent/blob/db57441c5dda43d8e38f01d7f52f047913e95ba5/docs/clearml.conf#L45))
 - Add `agent.docker_internal_mounts` configuration option to control containers internal mounts (non-root containers, see [here](https://github.com/allegroai/clearml-agent/blob/db57441c5dda43d8e38f01d7f52f047913e95ba5/docs/clearml.conf#L184))
 - Add support for `-r requirements.txt` in the Installed Packages section
 - Add support for `CLEARML_AGENT_INITIAL_CONNECT_RETRY_OVERRIDE` environment variable to override initial server connection behavior (defaults to true, allows boolean value or an explicit number specifying the number of connect retries)

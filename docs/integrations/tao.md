@@ -8,7 +8,7 @@ logging metrics, model files, plots, debug samples, and more, so you can gain mo
 
 ## Setup
 
-1. Install the `clearml` python package:
+1. Install the `clearml` Python package:
 
    ```commandline
    pip install clearml

@@ -51,7 +51,7 @@ title: Version 1.6
 * Fix error when connecting an input model
 * Fix deadlocks, including:
   * Change thread Event/Lock to a process fork safe threading objects
-  * Use file lock instead of process lock to avoid future deadlocks since python process lock is not process safe 
+  * Use file lock instead of process lock to avoid future deadlocks since Python process lock is not process safe 
     (killing a process holding a lock will Not release the lock)
 * Fix `StorageManager.list()` on a local Windows path
 * Fix model not created in the current project

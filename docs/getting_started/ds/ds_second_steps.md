@@ -2,7 +2,7 @@
 title: Next Steps
 ---
 
-So, you've already [installed ClearML's python package](ds_first_steps.md) and run your first experiment!
+So, you've already [installed ClearML's Python package](ds_first_steps.md) and run your first experiment!
 
 Now, you'll learn how to track Hyperparameters, Artifacts, and Metrics!
 
@@ -151,14 +151,14 @@ Once everything is neatly logged and displayed, use the [comparison tool](../../
 
 ## Track Experiments
 
-The experiments table is a powerful tool for creating dashboards and views of your own projects, your team's projects, or the entire development.
+The task table is a powerful tool for creating dashboards and views of your own projects, your team's projects, or the entire development.
 
-![Experiments table](../../img/webapp_experiment_table.png#light-mode-only)
-![Experiments table](../../img/webapp_experiment_table_dark.png#dark-mode-only)
+![Task table](../../img/webapp_experiment_table.png#light-mode-only)
+![Task table](../../img/webapp_experiment_table_dark.png#dark-mode-only)
 
 
 ### Creating Leaderboards
-Customize the [experiments table](../../webapp/webapp_exp_table.md) to fit your own needs, adding desired views of parameters, metrics, and tags.
+Customize the [task table](../../webapp/webapp_exp_table.md) to fit your own needs, adding desired views of parameters, metrics, and tags.
 You can filter and sort based on parameters and metrics, so creating custom views is simple and flexible.
 
 Create a dashboard for a project, presenting the latest Models and their accuracy scores, for immediate insights.

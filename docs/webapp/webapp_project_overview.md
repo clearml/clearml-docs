@@ -7,8 +7,8 @@ that can show a snapshot of specified metrics' values across the project's tasks
 project's description. When either overview option is utilized, the **OVERVIEW** tab becomes the project's landing page, 
 meaning that it's the first thing that is seen when opening the project. 
 
-
-![Project overview](../img/webapp_project_overview.png)
+![Project overview](../img/webapp_project_overview.png#light-mode-only)
+![Project overview](../img/webapp_project_overview_dark.png#dark-mode-only)
 
 ## Metric Snapshot
 

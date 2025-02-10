@@ -101,7 +101,7 @@ When `clearml-session` is launched, it initializes a task with a unique ID in th
 
 To connect to an existing session: 
 1. Go to the web UI, find the interactive session task (by default, it's in project "DevOps").
-1. Click the `ID` button in the task page's header to copy the unique ID.
+1. Copy the unique ID by clicking the `ID` button in the task page's header.
 1. Run the following command: `clearml-session --attach <session_id>`.
 1. Click on the JupyterLab / VS Code link that is outputted, or connect directly to the SSH session
 
@@ -179,7 +179,7 @@ The Task must be connected to a git repository, since currently single script de
 :::
 
 1. In the **ClearML web UI**, find the task that needs debugging.
-1. Click the `ID` button next to the Task name, and copy the unique ID.
+1. Copy the unique ID by clicking the `ID` button in the task page's header.
 1. Enter the following command: `clearml-session --debugging-session <task_id>`
 1. Click on the JupyterLab / VS Code link, or connect directly to the SSH session.
 1. In JupyterLab / VS Code, access the task's repository in the `environment/task_repository` folder. 
@@ -253,9 +253,9 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--username`| Set your own SSH username for the interactive session | `root` or a previously used username | 
 | `--verbose` | Increase verbosity of logging | `none` |
 | `--version`| Display the clearml-session utility version| N/A|
-| `--vscode-extensions` |Install additional VSCode extensions and VSCode python extensions (example: `ms-python.python,ms-python.black-formatter,ms-python.pylint,ms-python.flake8`)|`none`|
+| `--vscode-extensions` |Install additional VSCode extensions and VSCode Python extensions (example: `ms-python.python,ms-python.black-formatter,ms-python.pylint,ms-python.flake8`)|`none`|
 | `--vscode-server` | Install VSCode on interactive session | `true` |
-| `--vscode-version` | Set VSCode server (code-server) version, as well as VSCode python extension version `<vscode:python-ext>` (example: "3.7.4:2020.10.332292344")| `4.14.1:2023.12.0`|
+| `--vscode-version` | Set VSCode server (code-server) version, as well as VSCode Python extension version `<vscode:python-ext>` (example: "3.7.4:2020.10.332292344")| `4.14.1:2023.12.0`|
 | `--yes`, `-y`| Automatic yes to prompts; assume "yes" as answer to all prompts and run non-interactively |N/A|
 
 </div>

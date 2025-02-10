@@ -7,7 +7,7 @@ This page covers `clearml-data`, ClearML's file-based data management solution.
 See [Hyper-Datasets](../hyperdatasets/overview.md) for ClearML's advanced queryable dataset management solution.
 :::
 
-Datasets can be created, modified, and managed with ClearML Data's python interface. You can upload your dataset to any 
+Datasets can be created, modified, and managed with ClearML Data's Python interface. You can upload your dataset to any 
 storage service of your choice (S3 / GS / Azure / Network Storage) by setting the dataset's upload destination (see 
 [`output_url`](#uploading-files) parameter of `Dataset.upload()`). Once you have uploaded your dataset, you can access 
 it from any machine.  
