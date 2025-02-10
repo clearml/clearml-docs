@@ -51,8 +51,8 @@ to open the app's instance launch form.
   * Repository
   * Branch
   * Commit
-* **Docker**
-  * Image - Docker image used to run the IDE in
+* **Container**
+  * Image - Container image used to run the IDE in
   * Docker arguments - `docker run` arguments, as a single string
 * **Extra Packages** - Extra Python packages to be installed
 * **Queue** - The queue serviced by the ClearML Agent that will execute the Jupyter Lab session

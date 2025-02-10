@@ -26,9 +26,9 @@ line arguments, Python module dependencies, and a requirements.txt file!
    (a link to your task details page in the ClearML Web UI is printed as ClearML Task creates the task).
    
 ## Execution Configuration
-### Docker
-Specify a Docker container to run the code in with the `--docker <docker_image>` option.
-The ClearML Agent pulls it from Docker Hub or a Docker artifactory automatically.
+### Container
+Specify a container to run the code in with the `--docker <image>` option.
+The ClearML Agent pulls it from Docker Hub or a container artifactory automatically.
 
 ### Package Dependencies
 `clearml-task` automatically finds the `requirements.txt` file in remote repositories. 
@@ -63,7 +63,7 @@ errors in identifying the correct default branch.
 | `--cwd` | Working directory to launch the script from. Relative to repo root or local `--folder` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--docker` | Select the container image to use in the remote task | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--docker_bash_setup_script` | Add a bash script to be executed inside the container before setting up the task's environment | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-| `--docker_args` | Add Container arguments. Pass a single string in the following format: `--docker_args "<argument_string>"`. For example: `--docker_args "-v some_dir_1:other_dir_1 -v some_dir_2:other_dir_2"` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `--docker_args` | Add Docker arguments. Pass a single string in the following format: `--docker_args "<argument_string>"`. For example: `--docker_args "-v some_dir_1:other_dir_1 -v some_dir_2:other_dir_2"` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--folder` | Execute the code from a local folder. Notice, it assumes a git repository already exists. Current state of the repo (commit ID and uncommitted changes) is logged and replicated on the remote machine | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> | 
 | `--import-offline-session`| Specify the path to the offline session you want to import.| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--name` | Set a target name for the new task | <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" /> |

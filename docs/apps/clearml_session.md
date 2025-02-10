@@ -41,7 +41,7 @@ error, you are good to go.
    clearml-session 
    ```    
 
-   You can add flags to set a Docker image, the remote SSH port, JupyterLab/VS Code versions, and more. See [CLI options](#command-line-options) 
+   You can add flags to set a container image, the remote SSH port, JupyterLab/VS Code versions, and more. See [CLI options](#command-line-options) 
    for all configuration options.  
    
    `clearml-session` creates a new [Task](../fundamentals/task.md) that is responsible for setting up the SSH and 
@@ -57,8 +57,8 @@ error, you are good to go.
    launches it.  
 
 1. Once the agent finishes the initial setup of the interactive Task, the local `cleaml-session` connects to the host 
-   machine via SSH, and tunnels both SSH and IDE over the SSH connection. If a Docker is specified, the 
-   IDE environment runs inside the Docker. 
+   machine via SSH, and tunnels both SSH and IDE over the SSH connection. If a container is specified, the 
+   IDE environment runs inside of it. 
    
 1. The CLI outputs access links to the remote JupyterLab and VS Code sessions:  
 
@@ -106,7 +106,7 @@ To connect to an existing session:
 1. Click on the JupyterLab / VS Code link that is outputted, or connect directly to the SSH session
 
 ## Features 
-### Running in Docker
+### Running in a Container
 To run a session inside a container, use the `--docker` flag and enter the image to use in the interactive 
 session.
 
@@ -225,7 +225,7 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--disable-session-cleanup` | If `True`, previous interactive sessions are not deleted | `false`|
 | `--disable-store-defaults` | If set, do not store current setup as new default configuration| `none`|
 | `--docker`| Select the image to use in the interactive session |`nvidia/cuda:11.6.2-runtime-ubuntu20.04` or previously used image|
-| `--docker-args` | Add additional arguments for the container image to use in the interactive session | `none` or the previously used `docker-args` |
+| `--docker-args` | Add additional arguments for the docker image to use in the interactive session | `none` or the previously used `docker-args` |
 | `--force_dropbear`| Force using `dropbear` instead of SSHd |`none`| 
 | `--git-credentials` | If `True`, local `.git-credentials` file is sent to the interactive session.| `false`|
 | `--init-script` | Specify a BASH init script file to be executed when the interactive session is being set up | `none` or previously entered BASH script |

@@ -68,8 +68,8 @@ values from the file, which can be modified before launching the app instance
   * Repository
   * Branch
   * Commit
-* **Docker** - Input details to run the session in Docker container
-  * Image - Docker image to launch
+* **Container** - Input details to run the session in Docker container
+  * Image - Container image to launch
   * Docker Arguments - Additional arguments for the Docker image
   * Init Script - Bash script that is executed upon container boot (comments are supported only at the beginning of the 
   line)
