@@ -84,19 +84,25 @@ Switch on the **Show row extremes** toggle to highlight each variant's maximum a
 ![side-by-side scalar comparison](../img/webapp_compare_models_scalar_table_dark.png#dark-mode-only)
 
 
-### Graphic Comparison
+### Plot Comparison
 The **Scalars** (Graph view) and **Plots** tabs display plots attached to the models. 
 
-The **Scalars** tab compares scalar values as time series line charts. 
+The **Scalars** tab compares scalar values as time series line charts. The **Plots** tab compares the last reported 
+iteration sample of each metric/variant combination per compared model.
 
-![Scalar plots](../img/webapp_compare_models_scalar_plots.png)
+Line, scatter, box, and bar graphs are compared by overlaying each metric/variant from all compared models' into a single 
+comparative plot.
 
-The **Plots** tab compares the last reported iteration sample of each 
-metric/variant combination per compared model. Line, scatter, box, and bar graphs are compared by a single plot per 
-metric/variant into which the plots of all compared models are combined.
+For overlaid plots, use **Group by** to select how to group plots:
+* **Metric** - All variants for a metric appear on the same plot.
 
-![Merged plots](../img/webapp_compare_models_merge_plots.png#light-mode-only)
-![Merged plots](../img/webapp_compare_models_merge_plots_dark.png#dark-mode-only)
+   ![Scalar plot grouped by metric](../img/webapp_compare_models_merge_plots.png#light-mode-only)
+   ![Scalar plot grouped by metric](../img/webapp_compare_models_merge_plots_dark.png#dark-mode-only)
+
+* **Metric+Variant** (default) - Every variant appears on its own plot.
+
+   ![Scalar plot grouped by metric and variant](../img/webapp_compare_models_variant_plots.png#light-mode-only)
+   ![Scalar plot grouped by metric and variant](../img/webapp_compare_models_variant_plots_dark.png#dark-mode-only)
 
 Other plot types are displayed separately for each model.
 
