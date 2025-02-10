@@ -1,5 +1,5 @@
 ---
-title: The Model table
+title: The Model Table
 ---
 
 The model table is a [customizable](#customizing-the-model-table) list of models associated with the tasks in a project. From the model table,
