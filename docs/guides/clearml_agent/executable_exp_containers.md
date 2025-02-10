@@ -3,7 +3,7 @@ title: Executable Task Containers
 ---
 
 This tutorial demonstrates using [`clearml-agent`](../../clearml_agent.md)'s [`build`](../../clearml_agent/clearml_agent_ref.md#build) 
-command to package a task into an executable container. In this example, you will build a Container image that, when 
+command to package a task into an executable container. In this example, you will build a container image that, when 
 run, will automatically execute the [keras_tensorboard.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py)
 script.
 

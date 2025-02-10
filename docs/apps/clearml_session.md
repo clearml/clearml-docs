@@ -169,7 +169,7 @@ clearml-session --upload-files /mnt/data/stuff
 You can upload your files in conjunction with the `--store-workspace` option to easily move workloads between local 
 development machines and remote machines with persistent workspace synchronization. See [Storing and Synchronizing Workspace](#storing-and-synchronizing-workspace).
 
-### Starting a Debugging Session 
+### Starting a Debugging Session
 You can debug previously executed tasks registered in the ClearML system on a remote interactive session. 
 Input into `clearml-session` the ID of a Task to debug, then `clearml-session` clones the task's git repository and 
 replicates the environment on a remote machine. Then the code can be interactively executed and debugged on JupyterLab / VS Code. 

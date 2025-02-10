@@ -11,10 +11,11 @@ In Machine Learning, you are very likely dealing with a gargantuan amount of dat
 which you then need to be able to share, reproduce, and track.
 
 ClearML Data Management solves two important challenges:
-- Accessibility - Making data easily accessible from every machine,
+- Accessibility - Making data easily accessible from every machine
 - Versioning - Linking data and tasks for better **traceability**.
 
-![Dataset lineage and preview](../img/webapp_dataset_lineage_preview.png)
+![Dataset preview](../img/webapp_dataset_preview.png#light-mode-only)
+![Dataset preview](../img/webapp_dataset_preview_dark.png#dark-mode-only)
 
 **We believe Data is not code**. It should not be stored in a git tree, because progress on datasets is not always linear.
 Moreover, it can be difficult and inefficient to find on a git tree the commit associated with a certain version of a dataset.
