@@ -8,7 +8,7 @@ instructions.
 :::
 
 
-[Hydra](https://github.com/facebookresearch/hydra) is a Python framework for managing experiment parameters. ClearML integrates seamlessly
+[Hydra](https://github.com/facebookresearch/hydra) is a Python framework for managing task parameters. ClearML integrates seamlessly
 with Hydra and automatically logs the `OmegaConf` which holds all the configuration files, as well as 
 values overridden during runtime. 
 
@@ -21,7 +21,7 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
 ClearML logs the OmegaConf as a blob and can be viewed in the 
-[WebApp](../webapp/webapp_overview.md), in the experiment's **CONFIGURATION > CONFIGURATION OBJECTS > OmegaConf** section. 
+[WebApp](../webapp/webapp_overview.md), in the task's **CONFIGURATION > CONFIGURATION OBJECTS > OmegaConf** section. 
 
 ![Hydra configuration](../img/integrations_hydra_configs.png)
 
@@ -40,12 +40,12 @@ See the [Hydra documentation](https://hydra.cc/docs/advanced/override_grammar/ba
 In the UI, you can clone a task multiple times and modify it for execution by the [ClearML Agent](../clearml_agent.md). 
 The agent executes the code with the modifications you made in the UI, even overriding hardcoded values. 
 
-Clone your experiment, then modify your Hydra parameters via the UI in one of the following ways:
+Clone your task, then modify your Hydra parameters via the UI in one of the following ways:
 * Modify the OmegaConf directly:
-  1. In the experiment's **CONFIGURATION > HYPERPARAMETERS > HYDRA** section, set `_allow_omegaconf_edit_` to `True` 
-  1. In the experiment's **CONFIGURATION > CONFIGURATION OBJECTS > OmegaConf** section, modify the OmegaConf values
-* Add an experiment hyperparameter:
-  1. In the experiment's **CONFIGURATION > HYPERPARAMETERS > HYDRA** section, make sure `_allow_omegaconf_edit_` is set 
+  1. In the task's **CONFIGURATION > HYPERPARAMETERS > HYDRA** section, set `_allow_omegaconf_edit_` to `True` 
+  1. In the task's **CONFIGURATION > CONFIGURATION OBJECTS > OmegaConf** section, modify the OmegaConf values
+* Add a task hyperparameter:
+  1. In the task's **CONFIGURATION > HYPERPARAMETERS > HYDRA** section, make sure `_allow_omegaconf_edit_` is set 
   to `False` 
   1. In the same section, click `Edit`, which gives you the option to add parameters. Input parameters from the OmegaConf 
   that you want to modify using dot notation. For example, if your OmegaConf looks like this: 
@@ -61,7 +61,7 @@ Clone your experiment, then modify your Hydra parameters via the UI in one of th
   Specify the `number` parameter with `dataset.main.number`, then set its new value
 
 
-Enqueue the customized experiment for execution. The task will use the new values during execution. If you use the 
+Enqueue the customized task for execution. The task will use the new values during execution. If you use the 
 second option mentioned above, notice that the OmegaConf in **CONFIGURATION > CONFIGURATION OBJECTS > OmegaConf** changes 
 according to your added parameters. 
 

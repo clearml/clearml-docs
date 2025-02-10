@@ -34,7 +34,7 @@ training_args = TrainingArguments(
 
 ClearML captures all of the `TrainingArguments` passed to the Trainer. 
 
-View these parameters in the experiment's **CONFIGURATION** tab **> Hyperparameters** section.
+View these parameters in the task's **CONFIGURATION** tab **> Hyperparameters** section.
 
 ![Transformers params](../../../img/examples_transformers_params.png)
 
@@ -45,12 +45,12 @@ In order for ClearML to log the models created during training in this example, 
 variable is set to `True`. 
 
 ClearML automatically captures the model snapshots created by the Trainer, and saves them as artifacts. View the snapshots in the 
-experiment's **ARTIFACTS** tab.
+task's **ARTIFACTS** tab.
 
 ![Transformers models](../../../img/examples_transformers_artifacts.png)
 
 ### Scalars
 
-ClearML automatically captures the Trainer's scalars, which can be viewed in the experiment's **Scalars** tab.
+ClearML automatically captures the Trainer's scalars, which can be viewed in the task's **Scalars** tab.
 
 ![Transformers scalars](../../../img/integrations_transformers_scalars.png)

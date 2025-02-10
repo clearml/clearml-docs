@@ -14,7 +14,7 @@ title: Reports
 
 <br/>
 
-With ClearML's Reports you can write up notes, experiment findings, or really anything you want. You can create reports 
+With ClearML's Reports you can write up notes, task findings, or really anything you want. You can create reports 
 in any of your ClearML projects.
 
 In addition to its main document, a report also contains a description field, which will appear in the report's card in 
@@ -31,7 +31,8 @@ Reports are editable Markdown documents, supporting:
 * Embedded images uploaded from your computer
 * Embedded ClearML task, model, and [app](applications/apps_overview.md) content
 
-![Report](../img/webapp_report.png)
+![Report](../img/webapp_report.png#light-mode-only)
+![Report](../img/webapp_report_dark.png#dark-mode-only)
 
 Publishing a report locks it for future editing, so you can preserve its contents. You can also share your reports, 
 download a PDF copy, or simply copy the MarkDown content and reuse in your editor of choice.
@@ -39,7 +40,7 @@ download a PDF copy, or simply copy the MarkDown content and reuse in your edito
 Access ClearML reports through the [Reports Page](#reports-page).
 
 ## Embedding ClearML Visualizations
-You can embed plots and images from your ClearML objects (experiments, models, and apps) into your reports: scalar 
+You can embed plots and images from your ClearML objects (tasks, models, and apps) into your reports: scalar 
 graphs and other plots, and debug samples 
 from an individual object or from an object comparison page. These visualizations are updated live as the 
 object(s) updates.
@@ -49,18 +50,21 @@ To add a graphic resource:
 object comparison) 
 2. Hover over the resource and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Generate embed code" className="icon size-md space-sm" />. 
    
-   ![Reports step 2](../img/reports_step_2.png)
+   ![Reports step 2](../img/reports_step_2.png#light-mode-only)
+   ![Reports step 2](../img/reports_step_2_dark.png#dark-mode-only)
 
    Click `Embed in ClearML report`. This generates the embed code for accessing the resource, and copies 
    it to your clipboard. 
  
-   ![Reports step 2a](../img/reports_step_2a.png)
+   ![Reports step 2a](../img/reports_step_2a.png#light-mode-only)
+   ![Reports step 2a](../img/reports_step_2a_dark.png#dark-mode-only)
 
 3. Return to your report page and paste the code snippet
 
-   ![Reports step 3](../img/reports_step_3.png)
+   ![Reports step 3](../img/reports_step_3.png#light-mode-only)
+   ![Reports step 3](../img/reports_step_3_dark.png#dark-mode-only)
 
-Once embedded in the report, you can return to the resource's original location (e.g. comparison page, experiment/model/app page) 
+Once embedded in the report, you can return to the resource's original location (e.g. comparison page, task/model/app page) 
 by clicking <img src="/docs/latest/icons/ico-resource-return.svg" alt="Return to resource" className="icon size-md" />.
 
 ### Customizing Embed Code
@@ -130,24 +134,24 @@ Delimit the fields with `&`s.
 The following are examples of dynamic queries. All the examples use `objectType=task`, but `objectType=model` can also be 
 used. 
 
-* Request the scalars plot of a specific metric variant for the latest experiment in a project:
+* Request the scalars plot of a specific metric variant for the latest task in a project:
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=<metric_name>&variants=<variant>&project=<project_id>&page_size=1&page=0&order_by[]=-last_update
   ```
-  Notice that the `project` parameter is specified. To get the most recent single experiment, 
+  Notice that the `project` parameter is specified. To get the most recent single task, 
   `page_size=1&page=0&order_by[]=-last_update` is added. `page_size` specifies how many results are returned in each 
   page, and `page` specifies which page to return (in this case the first page)--this way you can specify how many 
-  experiments you want in your graph. `order_by[]=-last_update` orders the results by update time in descending order 
+  tasks you want in your graph. `order_by[]=-last_update` orders the results by update time in descending order 
   (most recent first).    
-* Request the scalars plot of a specific metric variant for the experiments with a specific tag: 
+* Request the scalars plot of a specific metric variant for the tasks with a specific tag: 
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=<metric_name>&variants=<variant>&tags[]=__$or,<tag>
   ```
-  A list of tags that the experiment should contain is specified in the `tags` argument. You can also specify tags that 
-  exclude experiments. See tag filter syntax examples [here](../clearml_sdk/task_sdk.md#tag-filters).    
-* Request the `training/accuracy` scalar plot of the 5 experiments with the best accuracy scores (see Metric/Variant IDs note [below](#event_id)):
+  A list of tags that the task should contain is specified in the `tags` argument. You can also specify tags that 
+  exclude tasks. See tag filter syntax examples [here](../clearml_sdk/task_sdk.md#tag-filters).    
+* Request the `training/accuracy` scalar plot of the 5 tasks with the best accuracy scores (see Metric/Variant IDs note [below](#event_id)):
 
   ```
   src="<web_server>/widgets/?objectType=task&xaxis=iter&type=scalar&metrics=training&variants=accuracy&project=4043a1657f374e9298649c6ba72ad233&page_size=5&page=0&order_by[]=-last_metrics.<metric_id>.<variant_id>.value"
@@ -171,14 +175,16 @@ or in List view <img src="/docs/latest/icons/ico-flat-view.svg" alt="List view" 
 view, all reports are shown side-by-side. In Project view, reports are organized according to their projects, and 
 top-level projects are displayed. Click on a project card to view the project's reports.
 
-![Report page](../img/webapp_report_page.png)
+![Report page](../img/webapp_report_page.png#light-mode-only)
+![Report page](../img/webapp_report_page_dark.png#dark-mode-only)
 
 ## Project Cards
 In Project view, project cards display a project's summarized report information:
 
 <div class="max-w-50">
 
-![Report project card](../img/webapp_report_project_card.png)
+![Report project card](../img/webapp_report_project_card.png#light-mode-only)
+![Report project card](../img/webapp_report_project_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -190,7 +196,8 @@ In List view, the report cards display summarized report information:
 
 <div class="max-w-50">
 
-![report card](../img/webapp_report_card.png)
+![report card](../img/webapp_report_card.png#light-mode-only)
+![report card](../img/webapp_report_card_dark.png#dark-mode-only)
 
 </div>
 
@@ -209,7 +216,8 @@ of a report card to open its context menu and access report actions:
 
 <div class="max-w-50">
 
-![Report card context menu](../img/webapp_report_card_context_menu.png)
+![Report card context menu](../img/webapp_report_card_context_menu.png#light-mode-only)
+![Report card context menu](../img/webapp_report_card_context_menu_dark.png#dark-mode-only)
 
 </div>
 
@@ -225,7 +233,8 @@ of a report card to open its context menu and access report actions:
 To create a report, click the **+ NEW REPORT** button in the top right of the page, 
 which will open a **New Report** modal.
 
-![New project modal](../img/webapp_report_new_report.png)
+![New project modal](../img/webapp_report_new_report.png#light-mode-only)
+![New project modal](../img/webapp_report_new_report_dark.png#dark-mode-only)
 
 ## MarkDown Formatting Quick Guide
 
@@ -236,9 +245,9 @@ The following is a quick reference for the MarkDown syntax that can be used in C
 To create headings, add `#` in front of the phrases that you want to turn into
 headings. The number of `#` signs correspond to the heading level (i.e. `#` for level-1 heading, `##` for level-2, etc.): 
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code># H1</code><br/><code>## H2</code><br/><code>### H3</code><br/><code>#### H4</code><br/><code>##### H5</code><br/><code>###### H6</code>|![Report headings](../img/reports_headings.png)|
+| MarkDown | Rendered Output                                                                                                                     |
+|---|-------------------------------------------------------------------------------------------------------------------------------------|
+| <code># H1</code><br/><code>## H2</code><br/><code>### H3</code><br/><code>#### H4</code><br/><code>##### H5</code><br/><code>###### H6</code>| ![Report headings](../img/reports_headings.png#light-mode-only) ![Report headings](../img/reports_headings_dark.png#dark-mode-only) |
 
 ### Text Emphasis
 
@@ -256,9 +265,9 @@ The following table presents the text format options:
 To create a blockquote, add a `>` before each line of the quote. Nest blockquotes by adding additional 
 `>` signs before each line of the nested blockquote.  
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>\> Blockquote<br/>\>\> Nested quote 1<br/>\>\>\> Nested quote 2</code>|![Report Blockquotes](../img/reports_blockquotes.png)|
+| MarkDown | Rendered Output                                                                                                                                 |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>\> Blockquote<br/>\>\> Nested quote 1<br/>\>\>\> Nested quote 2</code>| ![Report Blockquotes](../img/reports_blockquotes.png#light-mode-only) ![Report Blockquotes](../img/reports_blockquotes_dark.png#dark-mode-only) |
 
 ### Lists
 
@@ -267,9 +276,9 @@ To create a blockquote, add a `>` before each line of the quote. Nest blockquote
 Create an ordered list by numbering the list items with numbers followed by periods. The list items do not have to be numbered 
 correctly, but the list will be rendered numerically starting with `1.`.
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>1. Item 1<br/>2. Item 2<br/>1. Item 3<br/>1. Item 4</code>|![Report ordered list](../img/reports_ordered_list.png)|
+| MarkDown | Rendered Output                                                                                                                                     |
+|---|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>1. Item 1<br/>2. Item 2<br/>1. Item 3<br/>1. Item 4</code>| ![Report ordered list](../img/reports_ordered_list.png#light-mode-only) ![Report ordered list](../img/reports_ordered_list_dark.png#dark-mode-only) |
 
 #### Unordered List
 
@@ -280,9 +289,9 @@ You can also use checkmarks (`* [x]`), following any of the bullet signs.
 
 To nest lists, indent nested items 2 spaces more than their parent list item.
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>+ Item 1<br/>+ Item 2<br/>&nbsp;&nbsp;- Sub-item a:<br/>&nbsp;&nbsp;&nbsp;&nbsp;\* Sub-sub-item x<br/>&nbsp;&nbsp;&nbsp;&nbsp;+ Sub-sub-item y<br/>&nbsp;&nbsp;&nbsp;&nbsp;- Sub-sub-item z<br/>\* [x] A checkmark </code>|![Report unordered list](../img/reports_unordered_list.png)|
+| MarkDown | Rendered Output                                                                                                                                             |
+|---|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>+ Item 1<br/>+ Item 2<br/>&nbsp;&nbsp;- Sub-item a:<br/>&nbsp;&nbsp;&nbsp;&nbsp;\* Sub-sub-item x<br/>&nbsp;&nbsp;&nbsp;&nbsp;+ Sub-sub-item y<br/>&nbsp;&nbsp;&nbsp;&nbsp;- Sub-sub-item z<br/>\* [x] A checkmark </code>| ![Report unordered list](../img/reports_unordered_list.png#light-mode-only) ![Report unordered list](../img/reports_unordered_list_dark.png#dark-mode-only) |
 
 
 ### Tables
@@ -298,7 +307,8 @@ MarkDown code for a table looks like this:
 
 The rendered output should look like this:
 
-![Reports table](../img/reports_table.png)
+![Report table](../img/reports_table.png#light-mode-only)
+![Report table](../img/reports_table_dark.png#dark-mode-only)
 
 Add the table column names in the first row; each name is preceded and followed by a pipe (`|`).
 In the second row, add sets of at least three hyphens (`---`) for each column, and add a pipe before and after each set 
@@ -403,9 +413,9 @@ It is rendered like this:
 
 Create horizontal lines using three hyphens (`---`), underscores (`___`), or asterisks (`***`): 
 
-| MarkDown | Rendered Output |
-|---|---|
-| <code>---<br/><br/>___<br/><br/>***</code>|![Reports horizontal rules](../img/reports_horizontal_rules.png)|
+| MarkDown | Rendered Output                                                                                                                                                       |
+|---|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <code>---<br/><br/>___<br/><br/>***</code>| ![Reports horizontal rules](../img/reports_horizontal_rules.png#light-mode-only) ![Reports horizontal rules](../img/reports_horizontal_rules_dark.png#dark-mode-only) |
 
 
 ### Images

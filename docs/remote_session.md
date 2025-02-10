@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Remote IDE
 ---
 
 Machine Learning and Deep Learning development is sometimes more challenging than traditional software development. If 
@@ -15,12 +15,13 @@ ClearML provides tools that allow you to launch remote sessions and to execute c
 meets resource needs:
 * [Clearml Session CLI](apps/clearml_session.md) - Launch an interactive JupyterLab, VS Code, and SSH session on a remote machine:
   * Automatically store and sync your [interactive session workspace](apps/clearml_session.md#storing-and-synchronizing-workspace)
-  * Replicate a previously executed experiment's execution environment and [interactively execute and debug](apps/clearml_session.md#starting-a-debugging-session) it on a remote session
+  * Replicate a previously executed task's execution environment and [interactively execute and debug](apps/clearml_session.md#starting-a-debugging-session) it on a remote session
   * Develop directly inside your Kubernetes pods ([see ClearML Agent](clearml_agent/clearml_agent_deployment.md#kubernetes))
   * And more! 
-* GUI Applications (available under ClearML Enterprise Plan) - These apps provide local links to access JupyterLab or 
-  VS Code on a remote machine over a secure and encrypted SSH connection, letting you use the IDE as if you're running 
-  on the target machine itself.
+* GUI Applications (available under ClearML Enterprise Plan) - These apps provide access to remote machines over a 
+  secure and encrypted SSH connection, allowing you to work in a remote environment using your preferred development 
+  tools.
+  * [SSH Session](webapp/applications/apps_ssh_session.md) - Launch a full development environment with a detached interactive SSH session on a remote machine
   * [JupyterLab](webapp/applications/apps_jupyter_lab.md) - Launch a JupyterLab session on a remote machine 
   * [VS Code](webapp/applications/apps_vscode.md) - Launch a VS Code session on a remote machine 
 

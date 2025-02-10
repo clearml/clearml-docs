@@ -36,7 +36,7 @@ We can see that no code was used to log the scalar. It's done automatically beca
 
 We are using a training script as our task in our example here, but the optimizer doesn’t actually care what’s in our task, it just wants inputs and outputs. So you can optimize basically anything you want.
 
-The only thing we have to do to start optimizing this model is to write a small python file detailing what exactly we want our optimizer to do.
+The only thing we have to do to start optimizing this model is to write a small Python file detailing what exactly we want our optimizer to do.
 
 When you’re a ClearML Pro user, you can just start the optimizer straight from the UI, but more on that later.
 

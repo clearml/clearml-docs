@@ -25,9 +25,9 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
 This will create a [ClearML Task](../fundamentals/task.md) that captures your script's information, including Git details, 
-uncommitted code, python environment, all information logged through `TensorboardLogger`, and more. 
+uncommitted code, Python environment, all information logged through `TensorboardLogger`, and more. 
 
-Visualize all the captured information in the experiment's page in ClearML's [WebApp](#webapp).
+Visualize all the captured information in the task's page in ClearML's [WebApp](#webapp).
 
 See a code example [here](https://github.com/allegroai/clearml/blob/master/examples/frameworks/ignite/cifar_ignite.py).
 
@@ -45,10 +45,10 @@ Integrate ClearML with the following steps:
    ```
    
    This creates a [ClearML Task](../fundamentals/task.md) called `ignite` in the `examples` project, which captures your 
-   script's information, including Git details, uncommitted code, python environment. 
+   script's information, including Git details, uncommitted code, Python environment. 
   
    You can also pass the following parameters to the `ClearMLLogger` object:
-   * `task_type` – The type of experiment (see [task types](../fundamentals/task.md#task-types)).
+   * `task_type` – The type of task (see [task types](../fundamentals/task.md#task-types)).
    * `report_freq` – The histogram processing frequency (handles histogram values every X calls to the handler). Affects 
      `GradsHistHandler` and `WeightsHistHandler` (default: 100).
    * `histogram_update_freq_multiplier` – The histogram report frequency (report first X histograms and once every X 
@@ -77,7 +77,7 @@ Integrate ClearML with the following steps:
        )
    ```
 
-1. Attach the `ClearMLLogger` object to helper handlers to log experiment outputs. Ignite supports the following helper handlers for ClearML:
+1. Attach the `ClearMLLogger` object to helper handlers to log task outputs. Ignite supports the following helper handlers for ClearML:
    * **ClearMLSaver** - Saves input snapshots as ClearML artifacts.
    * **GradsHistHandler** and **WeightsHistHandler** - Logs the model's gradients and weights respectively as histograms.
    * **GradsScalarHandler** and **WeightsScalarHandler** - Logs gradients and weights respectively as scalars.
@@ -119,7 +119,7 @@ Integrate ClearML with the following steps:
    )
    ```
    
-Visualize all the captured information in the experiment's page in ClearML's [WebApp](#webapp).
+Visualize all the captured information in the task's page in ClearML's [WebApp](#webapp).
 
 For more information, see the [ignite documentation](https://pytorch.org/ignite/v0.5.0.post2/generated/ignite.handlers.clearml_logger.html). 
 
@@ -127,7 +127,7 @@ See code example [here](https://github.com/pytorch/ignite/blob/master/examples/m
 
 ## WebApp
 
-All the experiment information that ClearML captures can be viewed in the [WebApp](../webapp/webapp_overview.md): 
+All the task information that ClearML captures can be viewed in the [WebApp](../webapp/webapp_overview.md): 
 
 ### Models
 
@@ -137,14 +137,14 @@ View saved model snapshots in the **ARTIFACTS** tab.
 
 ### Scalars 
 
-View the scalars in the experiment's **SCALARS** tab.
+View the scalars in the task's **SCALARS** tab.
 
 ![Scalars](../img/examples_cifar_scalars.png)
 
 
 ### Debug Samples
 
-ClearML automatically tracks images logged to `TensorboardLogger`. They appear in the experiment's **DEBUG SAMPLES**.
+ClearML automatically tracks images logged to `TensorboardLogger`. They appear in the task's **DEBUG SAMPLES**.
 
 
 ![Debug Samples](../img/examples_integration_pytorch_ignite_debug.png)

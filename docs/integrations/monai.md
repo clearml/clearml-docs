@@ -68,11 +68,11 @@ uncommitted changes, installed packages, console output, and more.
  
 You can see all the captured data in the task's page of the ClearML [WebApp](../webapp/webapp_exp_track_visual.md).
 
-View the logged images in the WebApp, in the experiment's **Debug Samples** tab.
+View the logged images in the WebApp, in the task's **Debug Samples** tab.
 
 ![Debug Samples](../img/monai_clearml_debug_samples.png)
 
-View the logged metrics in the WebApp, in the experiment's **Scalars** tab.
+View the logged metrics in the WebApp, in the task's **Scalars** tab.
 
 ![MONAI scalars](../img/monai_clearml_scalars.png)
 
@@ -103,6 +103,6 @@ trainer.add_event_handler(
 )
 ```
 
-View the captured models in the WebApp, in the experiment's **Artifacts** tab. 
+View the captured models in the WebApp, in the task's **Artifacts** tab. 
 
 ![MONAI models](../img/monai_clearml_models.png)

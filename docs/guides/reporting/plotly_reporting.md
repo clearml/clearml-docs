@@ -30,9 +30,9 @@ task.get_logger().report_plotly(
 )
 ```
 
-When the script runs, it creates an experiment named `plotly reporting` in the examples project.
+When the script runs, it creates a task named `plotly reporting` in the examples project.
 
-ClearML reports Plotly figures, and displays them in the **ClearML Web UI** **>** experiment details **>** **PLOTS** 
+ClearML reports Plotly figures, and displays them in the **ClearML Web UI** **>** task's **PLOTS** 
 tab.
 
-![Web UI experiment plots](../../img/examples_reporting_13.png)
+![Web UI task plots](../../img/examples_reporting_13.png)

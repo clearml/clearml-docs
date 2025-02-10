@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: ClearML Data
 ---
 
 :::important
@@ -12,7 +12,7 @@ which you then need to be able to share, reproduce, and track.
 
 ClearML Data Management solves two important challenges:
 - Accessibility - Making data easily accessible from every machine,
-- Versioning - Linking data and experiments for better **traceability**.
+- Versioning - Linking data and tasks for better **traceability**.
 
 ![Dataset lineage and preview](../img/webapp_dataset_lineage_preview.png)
 
@@ -36,14 +36,14 @@ lineage and content information. See [dataset UI](../webapp/datasets/webapp_data
 
 ## Setup
 
-`clearml-data` comes built-in with the `clearml` python package! Check out the [Getting Started](../getting_started/ds/ds_first_steps.md) 
+`clearml-data` comes built-in with the `clearml` Python package! Check out the [Getting Started](../getting_started/ds/ds_first_steps.md) 
 guide for more info!
 
 ## Using ClearML Data
 
 ClearML Data supports two interfaces:
 - `clearml-data` - A CLI utility for creating, uploading, and managing datasets. See [CLI](clearml_data_cli.md) for a reference of `clearml-data` commands.
-- `clearml.Dataset` - A python interface for creating, retrieving, managing, and using datasets. See [SDK](clearml_data_sdk.md) for an overview of the basic methods of the `Dataset` module.
+- `clearml.Dataset` - A Python interface for creating, retrieving, managing, and using datasets. See [SDK](clearml_data_sdk.md) for an overview of the basic methods of the `Dataset` module.
 
 For an overview of recommendations for ClearML Data workflows and practices, see [Best Practices](best_practices.md).
 

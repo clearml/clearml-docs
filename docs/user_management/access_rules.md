@@ -12,4 +12,4 @@ specify **Read Only** or **Read & Modify** access to resources.
 
 Through access rules, administrators can enforce and maintain workspace information security.
 
-For more information see [Access Rules](../webapp/webapp_profile.md#access-rules).
+For more information see [Access Rules](../webapp/settings/webapp_settings_access_rules.md).

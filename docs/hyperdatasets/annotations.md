@@ -55,3 +55,15 @@ Use [`SingleFrame.add_annotation()`](../references/hyperdataset/singleframe.md#a
 # labels for the whole frame        
 frame.add_annotation(labels=['frame level label one','frame level label two'])
 ```
+
+### Adding a Global Annotation
+
+Add a global annotation that will apply to all frames in a FrameGroup.
+
+Use [`FrameGroup.add_global_annotation()`](../references/hyperdataset/framegroup.md#add_global_annotation) and specify 
+the [Annotation](../references/hyperdataset/annotation.md) object to add to each frame:
+
+```python
+annotation = ImageAnnotation(labels=["cityscape"], confidence=1.0000,)
+frame_group.add_global_annotation(annotation=annotation)
+```

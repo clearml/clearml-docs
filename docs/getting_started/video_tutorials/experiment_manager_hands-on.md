@@ -26,7 +26,7 @@ This is the experiment manager's UI, and every row you can see here, is a single
 
 We’re currently in our project folder. As you can see, we have our very basic toy example here that we want to keep track of by using ClearML’s experiment manager.
 
-The first thing to do is to install the `clearml` python package in our virtual environment. Installing the package itself, will add 3 commands for you. We’ll cover the `clearml-data` and `clearml-task` commands later. For now the one we need is `clearml-init`.
+The first thing to do is to install the `clearml` Python package in our virtual environment. Installing the package itself, will add 3 commands for you. We’ll cover the `clearml-data` and `clearml-task` commands later. For now the one we need is `clearml-init`.
 
 If you paid attention in the first video of this series, you’d remember that we need to connect to a ClearML Server to save all our tracked data. The server is where we saw the list of experiments earlier. This connection is what `clearml-init` will set up for us. When running the command it’ll ask for your server API credentials.
 
@@ -46,7 +46,7 @@ We can change the task’s name by clicking it here, and add a description or ge
 
 First of all, source code is captured. If you’re working in a git repository we’ll save your git information along with any uncommitted changes. If you’re running an unversioned script, `clearml` will save the script instead.
 
-Together with the python packages your coded uses, this’ll allow you to recreate your experiment on any machine.
+Together with the Python packages your code uses, this will allow you to recreate your experiment on any machine.
 
 Similarly, all of the output the code produces will also be captured.
 

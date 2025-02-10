@@ -2,7 +2,7 @@
 title: Logger
 ---
 
-The ClearML Logger class is used to report experiments' results such as metrics, graphs, and debug samples. It is provided 
+The ClearML Logger class is used to report task results such as metrics, graphs, and debug samples. It is provided 
 through the ClearML [Task](task.md) object. 
 
 A Logger object is used to do the following:
@@ -19,7 +19,8 @@ ClearML supports four types of reports:
 - Plots - General graphs and diagrams, such as histograms, confusion matrices, line plots, and custom plotly charts.
 - Debug Samples - Images, audio, and videos. Can be reported per iteration.
 
-![image](../img/fundamentals_logger_results.png)
+![Logged plots](../img/report_plotly.png#light-mode-only)
+![Logged plots](../img/report_plotly_dark.png#dark-mode-only)
 
 ## Automatic Reporting
 
@@ -31,7 +32,8 @@ library warning messages.
 
 GPU, CPU, Memory, and Network information is also automatically captured.
 
-![image](../img/fundamentals_logger_cpu_monitoring.png)
+![CPU monitoring](../img/fundamentals_logger_cpu_monitoring.png#light-mode-only)
+![CPU monitoring](../img/fundamentals_logger_cpu_monitoring_dark.png#dark-mode-only)
 
 ### Supported Packages
 - [TensorBoard](https://www.tensorflow.org/tensorboard)
@@ -74,7 +76,8 @@ outputs that would be used later on.
 Only the last X results of each title / series are saved to prevent overloading the server.
 See details in [`Logger.report_media`](../references/sdk/logger.md#report_media). 
 
-![image](../img/fundamentals_logger_reported_images.png)
+![Logger reported images](../img/webapp_tracking_43.png#light-mode-only)
+![Logger reported images](../img/webapp_tracking_43_dark.png#dark-mode-only)
 
 ### Explicit Reporting Examples
 

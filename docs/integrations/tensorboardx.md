@@ -18,15 +18,15 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
 This will create a [ClearML Task](../fundamentals/task.md) that captures your script's information, including Git details,
-uncommitted code, python environment, your TensorboardX metrics, plots, images, and text. 
+uncommitted code, Python environment, your TensorboardX metrics, plots, images, and text. 
 
-View the TensorboardX outputs in the [WebApp](../webapp/webapp_overview.md), in the experiment's page.
+View the TensorboardX outputs in the [WebApp](../webapp/webapp_overview.md), in the task's page.
 
 ![TensorboardX WebApp scalars](../img/examples_pytorch_tensorboardx_03.png)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your script, it captures all of your TensorboardX plots, images, metrics, videos, and text. 
-But, you may want to have more control over what your experiment logs.
+But, you may want to have more control over what your task logs.
 
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. For finer grained control of logged 
@@ -51,7 +51,7 @@ To augment its automatic logging, ClearML also provides an explicit logging inte
 See more information about explicitly logging information to a ClearML Task:
 * [Models](../clearml_sdk/model_sdk.md#manually-logging-models)
 * [Configuration](../clearml_sdk/task_sdk.md#configuration) (e.g. parameters, configuration files)
-* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or python objects created by a task)
+* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or Python objects created by a task)
 * [Scalars](../clearml_sdk/task_sdk.md#scalars) 
 * [Text/Plots/Debug Samples](../fundamentals/logger.md#manual-reporting)
 

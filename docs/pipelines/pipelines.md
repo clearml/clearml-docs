@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: ClearML Pipelines
 ---
 
 Pipelines are a way to streamline and connect multiple processes, plugging the output of one process as the input of another. 
@@ -20,7 +20,7 @@ for more details.
 
 ClearML pipelines are created from code using one of the following:
 * [PipelineController](pipelines_sdk_tasks.md) class - A pythonic interface for defining and configuring the pipeline 
-  controller and its steps. The controller and steps can be functions in your python code, or existing [ClearML tasks](../fundamentals/task.md).
+  controller and its steps. The controller and steps can be functions in your Python code, or existing [ClearML tasks](../fundamentals/task.md).
 * [PipelineDecorator](pipelines_sdk_function_decorators.md) class - A set of Python decorators which transform your 
   functions into the pipeline controller and steps
 
@@ -35,7 +35,7 @@ example of a pipeline with concurrent steps.
 ClearML supports multiple modes for pipeline execution:
 * **Remote Mode** (default) - In this mode, the pipeline controller logic is executed through a designated queue, and all 
   the pipeline steps are launched remotely through their respective queues. Since each task is executed independently, 
-  it can have control over its git repository (if needed), required python packages, and the specific container to use.
+  it can have control over its git repository (if needed), required Python packages, and the specific container to use.
 * **Local Mode** - In this mode, the pipeline is executed locally, and the steps are executed as sub-processes. Each 
   subprocess uses the exact same Python environment as the main pipeline logic.
 * **Debugging Mode** (for PipelineDecorator) - In this mode, the entire pipeline is executed locally, with the pipeline 
@@ -85,11 +85,24 @@ the execution of every task in a pipeline. Additionally, you can create customiz
 When you run your pipeline, ClearML collects and stores all the information required to reproduce the run (DAG, 
 configuration, installed packages, uncommitted changes etc.). 
 
-You can rerun the pipeline via the [ClearML Web UI](../webapp/pipelines/webapp_pipeline_table.md). To launch a new run 
-for a pipeline, click **+ NEW RUN** on the top left of the pipeline runs page. This opens a **NEW RUN** modal, where you 
+You can rerun the pipeline programmatically or via the ClearML Web UI: 
+* To programmatically create a new run, use [`PipelineController.clone()`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinecontrollerclone) 
+  which returns a copy of the original pipeline in [*draft*](../fundamentals/task.md#task-states) state, allowing you to 
+  modify any configuration. Run the new pipeline using [`PipelineController.start()`](../references/sdk/automation_controller_pipelinecontroller.md#start).
+  
+  ```python
+  pipeline = PipelineController.get(pipeline_id="<pipeline_ID>")
+  cloned_pipeline = PipelineController.clone(pipeline_controller=pipeline)
+    
+  # tweak pipeline parameters
+  
+  cloned_pipeline.start()
+  ```
+  
+* To launch a new pipeline run in the UI, click **+ NEW RUN** in the [pipeline runs](../webapp/pipelines/webapp_pipeline_table.md) page. This opens a **NEW RUN** modal, where you 
 can set the run's parameters and execution queue.  
 
-![Pipeline params UI](../img/pipelines_new_run.png)
+  ![Pipeline params UI](../img/pipelines_new_run.png)
 
 The new pipeline run will be executed through the execution queue by a ClearML agent. The agent will rebuild 
 the pipeline according to the configuration and DAG that was captured in the original run, and override the original 

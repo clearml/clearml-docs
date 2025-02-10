@@ -98,5 +98,5 @@ ClearML: Importing offline session from /home/user/.clearml/cache/offline/b78684
 ClearML results page: https://app.clear.ml/projects/4043a1657f374e9298649c6ba72ad233/experiments/bb8b0f6fa0f94536a0d27fb55f02d3a5/output/log
 ```
 
-The session details can be viewed in the ClearML WebApp, in the "my_task" experiment of the "examples" 
+The session details can be viewed in the ClearML WebApp, in the "my_task" task of the "examples" 
 project, as specified when initializing the Task.

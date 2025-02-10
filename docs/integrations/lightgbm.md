@@ -32,11 +32,11 @@ You can view all the task details in the [WebApp](../webapp/webapp_exp_track_vis
 
 See LightGBM and ClearML in action in a [code example](../guides/frameworks/lightgbm/lightgbm_example.md).
 
-![Experiment scalars](../img/examples_lightgbm_scalars.png)
+![Task scalars](../img/examples_lightgbm_scalars.png)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your LightGBM script, it captures models, metric plots, and configuration. 
-But, you may want to have more control over what your experiment logs.
+But, you may want to have more control over what your task logs.
 
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. For finer grained control of logged 
@@ -69,17 +69,17 @@ To augment its automatic logging, ClearML also provides an explicit logging inte
 See more information about explicitly logging information to a ClearML Task:
 * [Models](../clearml_sdk/model_sdk.md#manually-logging-models)
 * [Configuration](../clearml_sdk/task_sdk.md#configuration) (e.g. parameters, configuration files)
-* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or python objects created by a task)
+* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or Python objects created by a task)
 * [Scalars](../clearml_sdk/task_sdk.md#scalars) 
 * [Text/Plots/Debug Samples](../fundamentals/logger.md#manual-reporting)
 
 See [Explicit Reporting Tutorial](../guides/reporting/explicit_reporting.md).
 
 ## Remote Execution
-ClearML logs all the information required to reproduce an experiment on a different machine (installed packages, 
+ClearML logs all the information required to reproduce a task on a different machine (installed packages, 
 uncommitted changes etc.). The [ClearML Agent](../clearml_agent.md) listens to designated queues and when a task is enqueued, 
 the agent pulls it, recreates its execution environment, and runs it, reporting its scalars, plots, etc. to the 
-experiment manager.
+task manager.
 
 Deploy a ClearML Agent onto any machine (e.g. a cloud VM, a local GPU machine, your own laptop) by simply running the 
 following command on it:
@@ -99,7 +99,7 @@ and shuts down instances as needed, according to a resource budget that you set.
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
 
-* Clone the experiment
+* Clone the task
 * Edit the hyperparameters and/or other details
 * Enqueue the task
 

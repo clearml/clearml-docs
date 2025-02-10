@@ -41,14 +41,14 @@ When the script runs, it logs:
 
 ## Scalars
 
-ClearML logs the scalars from training each network. They appear in the experiment's page in the **ClearML web UI**, under
+ClearML logs the scalars from training each network. They appear in the task's page in the **ClearML web UI**, under
 **SCALARS**.
 
 ![image](../../../img/integration_keras_tuner_06.png)
 
 ## Summary of Hyperparameter Optimization
 
-ClearML automatically logs the parameters of each experiment run in the hyperparameter search. They appear in tabular 
+ClearML automatically logs the parameters of each task run in the hyperparameter search. They appear in tabular 
 form in **PLOTS**.
 
 ![image](../../../img/integration_keras_tuner_07.png)

@@ -8,14 +8,14 @@ example demonstrates the integration of ClearML into code that uses PyTorch and 
 The example does the following:
 * Trains a simple deep neural network on the PyTorch built-in [MNIST](https://pytorch.org/vision/stable/datasets.html#mnist) 
   dataset.
-* Creates an experiment named `pytorch with tensorboard` in the `examples` project.
+* Creates a task named `pytorch with tensorboard` in the `examples` project.
 * ClearML automatically captures scalars and text logged using the TensorBoard `SummaryWriter` object, and 
   the model created by PyTorch. 
 
 ## Scalars
 
 In the example script, the `train` and `test` functions call the TensorBoard `SummaryWriter.add_scalar` method to log loss. 
-These scalars, along with the resource utilization plots, which are titled **:monitor: machine**, appear in the experiment's 
+These scalars, along with the resource utilization plots, which are titled **:monitor: machine**, appear in the task's 
 page in the [ClearML web UI](../../../webapp/webapp_overview.md) under **SCALARS**. 
 
 ![image](../../../img/examples_pytorch_tensorboard_07.png)
@@ -40,7 +40,7 @@ Text printed to the console for training progress, as well as all other console 
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab. ClearML automatically logs and tracks 
+Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks 
 models and any snapshots created using PyTorch. 
 
 ![image](../../../img/examples_pytorch_tensorboard_02.png)

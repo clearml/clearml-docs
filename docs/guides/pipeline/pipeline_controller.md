@@ -210,7 +210,7 @@ does the following:
     
 ## WebApp
 
-When the experiment is executed, the console output displays the task ID, and links to the pipeline controller task page and 
+When the task is executed, the console output displays the task ID, and links to the pipeline controller task page and 
 pipeline page. 
 
 ```

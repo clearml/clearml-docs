@@ -3,7 +3,7 @@ title: Accelerate
 ---
 
 Hugging Face's [Accelerate](https://huggingface.co/docs/accelerate/main/en/index) library simplifies DL model training 
-and inference. ClearML is a supported tracker in Accelerate: It automatically logs experiment environment information, 
+and inference. ClearML is a supported tracker in Accelerate: It automatically logs task environment information, 
 such as required packages and uncommitted changes, and supports reporting scalars, parameters, debug samples, and plots.
 
 
@@ -19,11 +19,11 @@ accelerator = Accelerator(log_with="all")  # For all available trackers in the e
 accelerator = Accelerator(log_with="clearml") # For the ClearML tracker only
 ```
 
-Add `Accelerator.init_trackers()` in the beginning of your experiment. Specify the project where the ClearML task should
-be saved in the `project_name` parameter, and add any experiment hyperparameters to be logged in the `config` parameter. 
+Add `Accelerator.init_trackers()` in the beginning of your task. Specify the project where the ClearML task should
+be saved in the `project_name` parameter, and add any task hyperparameters to be logged in the `config` parameter. 
 
 The following code initializes the ClearML Task, which will capture all environment details, such as required packages 
-and uncommitted code. The logged hyperparameters are displayed in the experiment's **Hyperparameters** tab:
+and uncommitted code. The logged hyperparameters are displayed in the task's **Hyperparameters** tab:
 
 
 ```python
@@ -64,21 +64,21 @@ If `step` is not specified, the scalar is reported as a single-value scalar.
 accelerator.log(values={"accuracy": accuracy}, step=epoch)
 ```
 
-The scalars are displayed in the experiment's **Scalars** tab. 
+The scalars are displayed in the task's **Scalars** tab. 
 
 ### Images and Table Plots
-To add images or table plots to your experiment, you can use the `ClearMLTracker.log_images()` and `ClearMLTracker.log_table()`
+To add images or table plots to your task, you can use the `ClearMLTracker.log_images()` and `ClearMLTracker.log_table()`
 respectively. 
 
 First instantiate the `ClearMLTracker`. If you have run `Accelerator.init_trackers()` in your script, that means a ClearML 
 task has already been initialized, so anything logged through the tracker will be logged to the existing task.  
-Otherwise, just specify the experiment name under `run_name` and any kwargs to pass to 
+Otherwise, just specify the task name under `run_name` and any kwargs to pass to 
 [`Task.init()`](../references/sdk/task.md#taskinit):
 
 ```python
 from accelerate.tracking import ClearMLTracker
 
-clearml_tracker= ClearMLTracker(run_name="Example experiment")
+clearml_tracker= ClearMLTracker(run_name="Example task")
 ```
 
 #### Logging Images 
@@ -95,14 +95,14 @@ image in the name-image pair should be either a numpy array or a `PIL.Image` obj
 clearml_tracker.log_images(values={"test_cat_siamese":[image_obect]})
 ```
 
-The images will be displayed in the experiment's **Debug Samples**
+The images will be displayed in the task's **Debug Samples**
 
 #### Logging Plots 
 
 To log plots, use `ClearMLTracker.log_table()`. Specify the data under the `dataframe` or `data` parameters. List the 
 name of the columns under `columns`, otherwise the first entry in `data` will be used as the column names. 
 
-The plot will appear in the experiment's **Plots** tab. 
+The plot will appear in the task's **Plots** tab. 
 
 ### Additional Logging Options
 
@@ -111,7 +111,7 @@ To augment its automatic logging, ClearML also provides an explicit logging inte
 See more information about explicitly logging information to a ClearML Task:
 * [Models](../clearml_sdk/model_sdk.md#manually-logging-models)
 * [Configuration](../clearml_sdk/task_sdk.md#configuration) (e.g. parameters, configuration files)
-* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or python objects created by a task)
+* [Artifacts](../clearml_sdk/task_sdk.md#artifacts) (e.g. output files or Python objects created by a task)
 * [Scalars](../clearml_sdk/task_sdk.md#scalars) 
 * [Text/Plots/Debug Samples](../fundamentals/logger.md#manual-reporting)
 

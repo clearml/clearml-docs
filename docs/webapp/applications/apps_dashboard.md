@@ -3,7 +3,7 @@ title: Project Dashboard
 ---
 
 :::info Pro Plan Offering
-The ClearML Project Dashboard App is available under the ClearML Pro plan
+The ClearML Project Dashboard App is available under the ClearML Pro plan.
 :::
 
 The Project Dashboard Application provides an overview of a project's or workspace's progress. It presents an aggregated 
@@ -19,7 +19,7 @@ on completed/failed Tasks via Slack integration.
     * Entire workspace - Monitor all projects in your workspace
             
   :::warning
-  If your workspace or specified project contains a large number of experiments, the dashboard can take a while to update.
+  If your workspace or specified project contains a large number of tasks, the dashboard can take a while to update.
   :::
 
 * **Monitored Metric** - Specify a metric for the app instance to monitor. The dashboard will present an aggregated view 
@@ -33,26 +33,27 @@ of the chosen metric over time.
   * Channel Name - Slack channel to which task failure alerts will be posted
   * Alert Iteration Threshold - Minimum number of task iterations to trigger Slack alerts (tasks that fail prior to the threshold will be ignored)
 * **Additional options**
-  * Track manual (non agent-run) experiments as well - Select to include in the dashboard experiments that were not executed by an agent
+  * Track manual (non agent-run) experiments as well - Select to include in the dashboard tasks that were not executed by an agent
   * Alert on completed experiments - Select to include completed tasks in alerts: in the dashboard's Task Alerts section and in Slack Alerts.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration.
   
-![Dashboard app instance launch form](../../img/apps_dashboard_wizard.png)
+![Dashboard app instance launch form](../../img/apps_dashboard_wizard.png#light-mode-only)
+![Dashboard app instance launch form](../../img/apps_dashboard_wizard_dark.png#dark-mode-only)
 
 ## Dashboard
 
 Once a project dashboard instance is launched, its dashboard displays the following information about a project:  
 * Task Status Summary - Percentages of Tasks by status
-* Task Type Summary - Percentages of local experiments vs. agent experiments
+* Task Type Summary - Percentages of local tasks vs. agent tasks
 * Experiments Summary - Number of tasks by status over time
 * Monitoring - GPU utilization and GPU memory usage
 * Metric Monitoring - An aggregated view of the values of a metric over time
-* Project's Active Workers - Number of workers currently executing experiments in the monitored project
+* Project's Active Workers - Number of workers currently executing tasks in the monitored project
 * Workers Table - List of active workers
 * Task Alerts
-  * Failed tasks - Failed experiments and their time of failure summary
-  * Completed tasks - Completed experiments and their time of completion summary 
+  * Failed tasks - Failed tasks and their time of failure summary
+  * Completed tasks - Completed tasks and their time of completion summary 
 
 
 :::tip EMBEDDING CLEARML VISUALIZATION
@@ -62,4 +63,5 @@ external tools (e.g. Notion). Hover over the plot and click <img src="/docs/late
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
-![App dashboard](../../img/apps_dashboard.png)
+![App dashboard](../../img/apps_dashboard.png#light-mode-only)
+![App dashboard](../../img/apps_dashboard_dark.png#dark-mode-only)

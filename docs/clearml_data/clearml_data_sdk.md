@@ -7,7 +7,7 @@ This page covers `clearml-data`, ClearML's file-based data management solution.
 See [Hyper-Datasets](../hyperdatasets/overview.md) for ClearML's advanced queryable dataset management solution.
 :::
 
-Datasets can be created, modified, and managed with ClearML Data's python interface. You can upload your dataset to any 
+Datasets can be created, modified, and managed with ClearML Data's Python interface. You can upload your dataset to any 
 storage service of your choice (S3 / GS / Azure / Network Storage) by setting the dataset's upload destination (see 
 [`output_url`](#uploading-files) parameter of `Dataset.upload()`). Once you have uploaded your dataset, you can access 
 it from any machine.  
@@ -65,7 +65,7 @@ Use the `output_uri` parameter to specify a network storage target to upload the
 (such as previews) to. For example:
 * A shared folder: `/mnt/share/folder`
 * S3: `s3://bucket/folder`
-* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket` 
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
 * Google Cloud Storage: `gs://bucket-name/folder`
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 
@@ -264,7 +264,7 @@ To upload the dataset files to network storage, use [`Dataset.upload()`](../refe
 Use the `output_url` parameter to specify storage target, such as S3 / GS / Azure. For example:
 * A shared folder: `/mnt/share/folder`
 * S3: `s3://bucket/folder`
-* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket` 
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
 * Google Cloud Storage: `gs://bucket-name/folder`
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 

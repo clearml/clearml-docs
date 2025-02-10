@@ -6,7 +6,7 @@ The [pytorch_matplotlib.py](https://github.com/allegroai/clearml/blob/master/exa
 example demonstrates the integration of ClearML into code that uses PyTorch and Matplotlib. 
 
 The example does the following: 
-* Creates an experiment named `pytorch with matplotlib example`, in the `examples` project.
+* Creates a task named `pytorch with matplotlib example`, in the `examples` project.
 * The script calls Matplotlib methods to show images, each with a different title.
 * ClearML automatically logs the images as debug samples. 
 

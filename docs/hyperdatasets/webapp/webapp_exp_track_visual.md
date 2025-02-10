@@ -1,20 +1,19 @@
 ---
-title: Experiment Dataviews
+title: Task Dataviews
 ---
 
-While an experiment is running, and any time after it finishes, results are tracked and can be visualized in the ClearML 
+While a task is running, and any time after it finishes, results are tracked and can be visualized in the ClearML 
 Enterprise WebApp (UI). 
 
 In addition to all of ClearML's offerings, ClearML Enterprise keeps track of the Dataviews associated with an 
-experiment, which can be viewed and [modified](webapp_exp_modifying.md) in the WebApp.
+task, which can be viewed and [modified](webapp_exp_modifying.md) in the WebApp.
 
-## Viewing an Experiment's Dataviews 
+## Viewing a Task's Dataviews 
 
-In an experiment's page, go to the **DATAVIEWS** tab to view all the experiment's Dataview details, including:
+In a task's page, go to the **DATAVIEWS** tab to view all the task's Dataview details, including:
 * Input data [selection](#input) and [filtering](#filtering)
 * ROI [mapping](#mapping) (label translation)
 * [Label enumeration](#label-enumeration)
-* On-the-fly [data augmentation](#augmentation)
 * [Iteration controls](#iteration-control)
 
 ![Dataview tab](../../img/hyperdatasets/web-app/dataview_tab.png)
@@ -27,7 +26,7 @@ menu.
 
 ### Filtering
 
-The **FILTERING** section lists the SingleFrame filters iterated by a Dataview, applied to the experiment data. 
+The **FILTERING** section lists the SingleFrame filters iterated by a Dataview, applied to the task data. 
 
 Each frame filter is composed of: 
 * A Dataset version to input from 
@@ -51,13 +50,6 @@ For detailed information, see [Mapping ROI labels](../dataviews.md#mapping-roi-l
 ### Label Enumeration
 
 Assign label enumeration in the **LABELS ENUMERATION** area.
-
-### Augmentation
-
-On-the-fly data augmentation applied to SingleFrames, which does not create new data. Apply data Augmentation in steps, 
-where each step is composed of a method, an operation, and a strength.
- 
-For detailed information, see [Data augmentation](../dataviews.md#data-augmentation).
 
 ### Iteration Control
 

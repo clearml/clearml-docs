@@ -6,7 +6,7 @@ The [tensorboard_pr_curve.py](https://github.com/allegroai/clearml/blob/master/e
 example demonstrates the integration of ClearML into code that uses TensorFlow and TensorBoard. 
 
 The example script does the following:
-* Creates an experiment named `tensorboard pr_curve` in the `examples` project.
+* Creates a task named `tensorboard pr_curve` in the `examples` project.
 * Creates three classes, R, G, and B, and generates colors within the RGB space from normal distributions. The true 
   label of each random color is associated with the normal distribution that generated it.
 * Computes the probability that each color belongs to the class, using three other normal distributions.
@@ -16,7 +16,7 @@ The example script does the following:
 
 ## Plots
 
-In the **ClearML Web UI**, the PR Curve summaries appear in the experiment's page under **PLOTS**.
+In the **ClearML Web UI**, the PR Curve summaries appear in the task's page under **PLOTS**.
 
 * Blue PR curves
 

@@ -14,19 +14,19 @@ Dataviews support:
 * Class label enumeration
 * Controls for the frame iteration, such as sequential or random iteration, limited or infinite iteration, and reproducibility. 
 
-Dataviews are lazy and optimize processing. When an experiment script runs in a local environment, Dataview pointers
-are initialized. If the experiment is cloned or extended, and that newly cloned or extended experiment is tuned and run, 
+Dataviews are lazy and optimize processing. When a task script runs in a local environment, Dataview pointers
+are initialized. If the task is cloned or extended, and that newly cloned or extended task is tuned and run, 
 only changed pointers are initialized. The pointers that did not change are reused.
 
 ## Dataview State
 Dataviews can be in either *Draft* or *Published* state.
 
-A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible experiments and 
+A *Draft* Dataview is editable. A *Published* Dataview is read-only, which ensures reproducible tasks and 
 preserves the Dataview's settings. 
 
 ## Filtering
 
-A Dataview filters experiment input data, using one or more frame filters. A frame filter defines the criteria for the 
+A Dataview filters task input data, using one or more frame filters. A frame filter defines the criteria for the 
 selection of SingleFrames iterated by a Dataview.  
 
 A frame filter contains the following criteria:
@@ -71,40 +71,6 @@ ROI label mapping (label translation) applies to the new model. For example, app
 Define class labels for the new model and assign integers to each in order to maintain data conformity across multiple 
 codebases and datasets. It is important to set enumeration values for all labels of importance. 
 
-## Data Augmentation
-
-On-the-fly data augmentation is applied to SingleFrames, transforming images without creating new data. Apply data augmentation 
-in steps, where each step is composed of a method, an operation, and a strength as follows: 
-
-* **Affine** augmentation method - Transform an image's geometric shape to another position on a 2-dimensional plane. 
-  Use any of the following operations:
-
-    * Rotate
-    * Reflect-horiz - Flip images horizontally
-    * Reflect-vert - Flip images vertically
-    * Scale
-    * Shear - Skew
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the experiment runs again, and 
-      the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
-    
-* **Pixel** augmentation method - Transform images by modifying pixel values while retaining shape and perspective.  
-  Use any of the following operations:
-
-    * Blur - Gaussian smoothing 
-    * Noise - ClearML Enterprise's own noise augmentation consisting of: 
-      * **high** noise - like snow on analog televisions with a weak TV signal 
-      * **low** noise - like a low resolution image magnified in localized areas on the image
-    * Recolor - using an internal RGB lookup-table
-    * No operation - Randomly select SingleFrames that are not transformed (skipped). If the experiment runs again, and 
-      the random seed in [iteration control](#iteration-control) is unchanged, the same SingleFrames are not augmented.
-    
-* Strength - A number applied to adjust the degree of transformation. The recommended strengths are the following:
-
-    * 0.0 - No effect
-    * 0.5 - Low (weak)
-    * 1.0 - Medium (recommended)
-    * 2.0 - High (strong)
-
 ## Iteration Control
 
 The input data **iteration control** settings determine the order, number, timing, and reproducibility of the Dataview iterating 
@@ -126,11 +92,11 @@ may repeat. The settings include the following:
       the maximum, then the actual number of SingleFrames are iterated. If the order is sequential, then no SingleFrames 
       repeat. If the order is random, then some SingleFrames may repeat. 
 
-    * Infinite Iterations - Iterate SingleFrames until the experiment is manually terminated. If the order is sequential, 
-      then all SingleFrames are iterated (unless the experiment is manually terminated before all iterate) and SingleFrames 
+    * Infinite Iterations - Iterate SingleFrames until the task is manually terminated. If the order is sequential, 
+      then all SingleFrames are iterated (unless the task is manually terminated before all iterate) and SingleFrames 
       repeat. If the order is random, then all SingleFrames may not be iterated, and some SingleFrames may repeat.
         
-* Random Seed - If the experiment is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
+* Random Seed - If the task is rerun and the seed remains unchanged, the SingleFrames iteration is the same.
 
 * Clip Length - For video data sources, in the number of sequential SingleFrames from a clip to iterate.
 
@@ -149,16 +115,25 @@ myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=
 
 ### Adding Queries
 
-To add a query to a DataView, use [`DataView.add_query()`](../references/hyperdataset/dataview.md#add_query) 
+Dataview filters are created by adding filter queries to the Dataview. To add a query to a DataView, use [`DataView.add_query()`](../references/hyperdataset/dataview.md#add_query) 
 and specify Dataset versions, ROI and/or frame queries, and other criteria. 
 
-The `dataset_name` and `version_name` arguments specify the Dataset Version. The `roi_query` and `frame_query` arguments 
-specify the queries. 
+Use the `dataset_name` and `version_name` arguments to specify the Dataset Version the query applies to. 
+
+:::info Multi-version queries
+`dataset_name` and `version_name` support wildcard input (`*`) meaning all Dataview datasets or all Dataview versions respectively.
+At least one of the Dataview queries must specify a Dataset explicitly, for "All Dataview datasets" to be meaningful
+:::
+
+The `roi_query` and `frame_query` arguments specify the possible queries: 
 * `roi_query` can be assigned ROI labels by label name or Lucene queries.
 * `frame_query` must be assigned a Lucene query. 
   
-Multiple queries can be added to the same or different Dataset versions, each query with the same or different ROI 
-and/or frame queries.
+Apply multiple filters (with the same or different queries) by calling [`DataView.add_query()`](../references/hyperdataset/dataview.md#add_query) 
+multiple times.
+
+Use [`DataView.add_multi_query()`](../references/hyperdataset/dataview.md#add_multi_query) for specifying multiple ROI 
+rules in the same query.
 
 You can retrieve the Dataview frames using [`DataView.to_list()`](../references/hyperdataset/dataview.md#to_list), 
 [`DataView.to_dict()`](../references/hyperdataset/dataview.md#to_dict), or [`DataView.get_iterator()`](../references/hyperdataset/dataview.md#get_iterator)
@@ -166,9 +141,9 @@ You can retrieve the Dataview frames using [`DataView.to_list()`](../references/
 
 #### ROI Queries: 
 
-* ROI query for a single label
+* **ROI query for a single label**
 
-This example is an ROI query filtering for frames containing at least one ROI with the label `cat`.
+This example uses an ROI query to filter for frames containing at least one ROI with the label `cat`:
 
 ```python
 # Create a Dataview object for an iterator that randomly returns frames according to queries
@@ -186,9 +161,9 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* ROI query for one label OR another
+* **ROI query for one label OR another**
 
-This example is an ROI query filtering for frames containing at least one ROI with the label `cat` OR `dog`:
+This example uses an ROI query to filter for frames containing at least one ROI with either the label `cat` OR the label `dog`:
 
 ```python
 # Add a query for a Dataset version 
@@ -209,9 +184,9 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* ROI query for one label AND another label  
+* **ROI query for two specific labels in the same ROI**  
 
-This example is an ROI query filtering for frames containing at least one ROI with the label `Car` AND `partly_occluded`.
+This example uses an ROI query to filter for frames containing at least one ROI with both the label `Car` AND the label `partly_occluded`:
 
 ```python
 # Add a query for a Dataset version
@@ -226,10 +201,10 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* ROI query for one label AND NOT another (Lucene query).    
+* **ROI query for one label AND NOT another (Lucene query)**    
 
-This example is an ROI query filtering for frames containing at least one ROI with the label `Car` AND NOT the label 
-  `partly_occluded`.
+This example uses an ROI query to filter for frames containing at least one ROI that has with the label `Car` AND DOES NOT 
+have the label `partly_occluded`:
 
 ```python
 # Add a query for a Dataset version
@@ -247,10 +222,48 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
+* **ROI query for one label AND another label in different ROIs**
+
+This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` and at least one 
+ROI with the label `Person`. The example demonstrates using the `roi_queries` parameter of [`DataView.add_multi_query()`](../references/hyperdataset/dataview.md#add_multi_query) 
+with a list of [`DataView.RoiQuery`](../references/hyperdataset/dataview.md#roiquery) objects:
+
+```python
+myDataview = DataView()
+myDataview.add_multi_query(
+    dataset_id=self._dataset_id,
+    version_id=self._version_id,
+    roi_queries=[DataView.RoiQuery(label='car'), DataView.RoiQuery(label='person')],
+)
+# retrieving the actual SingleFrames / FrameGroups
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
+
+* **ROI query for one label AND NOT another label in different ROIs**
+
+This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` AND that DO NOT 
+contain ROIs with the label `Person`. To exclude an ROI, pass `must_not=True` in the [`DataView.RoiQuery`](../references/hyperdataset/dataview.md#roiquery) 
+object. 
+
+```python
+myDataview = DataView()
+myDataview.add_multi_query(
+    dataset_id=self._dataset_id,
+    version_id=self._version_id,
+    roi_queries=[DataView.RoiQuery(label='car'), DataView.RoiQuery(label='person', must_not=True)],
+)
+
+# retrieving the actual SingleFrames / FrameGroups
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
+
+
 #### Querying Multiple Datasets and Versions
 
 This example demonstrates an ROI query filtering for frames containing the ROI labels `car`, `truck`, or `bicycle` 
-from two versions of one Dataset, and one version of another Dataset.
+from two versions of one Dataset, and one version of another Dataset:
 
 ```python
 # Add queries:
@@ -292,7 +305,7 @@ exclude for the Dataview to return the frame.
 **Frame queries** match frame meta key-value pairs, ROI labels, or both.
 They use the same logical OR, AND, NOT AND matching as ROI queries.
 
-This example demonstrates a frame query filtering for frames containing the meta key `city` value of `bremen`.
+This example demonstrates a frame query filtering for frames containing the meta key `city` value of `bremen`:
         
 ```python
 # Add a frame query for frames with the meta key "city" value of "bremen"
@@ -317,7 +330,7 @@ order, number, timing, and reproducibility of frames for training.
 #### Iterate Frames Infinitely 
 
 This example demonstrates creating a Dataview and setting its parameters to iterate infinitely until the script is 
-manually terminated. 
+manually terminated: 
 
 ```python
 # Create a Dataview object for an iterator that returns frames
@@ -328,7 +341,7 @@ myDataView.set_iteration_parameters(order=IterationOrder.random, infinite=True)
 ```
 
 #### Iterate All Frames Matching the Query
-This example demonstrates creating a DataView and setting its parameters to iterate and return all frames matching a query.
+This example demonstrates creating a DataView and setting its parameters to iterate and return all frames matching a query:
 
 ```python
 # Create a Dataview object for an iterator for frames
@@ -457,7 +470,7 @@ certain labels for training.
 
 This example demonstrates consolidating two disparate Datasets. Two Dataset versions use `car` (lower case "c"), but the
 third uses `Car` (upper case "C"). 
-The example maps `Car` (upper case "C") to `car` (lower case "c").
+The example maps `Car` (upper case "C") to `car` (lower case "c"):
 
 ```python
 # Create a Dataview object for an iterator that randomly returns frames according to queries 
@@ -502,11 +515,11 @@ class method.
 my_dataview = DataView.get(dataview_id='<dataview_id>')
 ```
 
-Access the Dataview's frames as a python list, dictionary, or through a pythonic iterator.
+Access the Dataview's frames as a Python list, dictionary, or through a pythonic iterator.
 
-The [`DataView.to_list`](../references/hyperdataset/dataview.md#to_list) method returns the Dataview queries result as a python list. 	
+[`DataView.to_list()`](../references/hyperdataset/dataview.md#to_list) returns the Dataview queries result as a Python list. 	
 
-The [`DataView.to_dict`](../references/hyperdataset/dataview.md#to_dict) method returns a list of dictionaries, where each dictionary represents a frame. Use the 
+[`DataView.to_dict()`](../references/hyperdataset/dataview.md#to_dict) returns a list of dictionaries, where each dictionary represents a frame. Use the 
 `projection` parameter to specify a subset of the frame fields to be included in the result. Input a list of strings, 
 where each string represents a frame field or subfield (using dot-separated notation). 
 

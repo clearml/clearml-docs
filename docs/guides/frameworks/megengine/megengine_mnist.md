@@ -7,14 +7,14 @@ example demonstrates the integration of ClearML into code that uses [MegEngine](
 and [TensorBoardX](https://github.com/lanpa/tensorboardX). ClearML automatically captures models saved with `megengine`.
 
 The example script does the following:
-* Trains a simple deep neural network on MegEngine's built-in [MNIST](https://megengine.org.cn/doc/stable/en/reference/api/megengine.data.dataset.MNIST.html)
+* Trains a simple deep neural network on MegEngine's built-in [MNIST](https://www.megengine.org.cn/doc/master/en/reference/api/megengine.data.dataset.MNIST.html)
   dataset.
 * Creates a TensorBoardX `SummaryWriter` object to log scalars during training.  
-* Creates a ClearML experiment named `megengine mnist train` in the `examples` project.
+* Creates a ClearML task named `megengine mnist train` in the `examples` project.
 
 ## Hyperparameters
 
-ClearML automatically logs command line options defined with `argparse`. They appear in the experiment's **CONFIGURATION** 
+ClearML automatically logs command line options defined with `argparse`. They appear in the task's **CONFIGURATION** 
 tab under **HYPERPARAMETERS** **>** **Args**.
 
 ![Configuration tab](../../../img/examples_megengine_mnist_config.png)
@@ -25,7 +25,7 @@ The example script's `train` function calls TensorBoardX's `SummaryWriter.add_sc
 ClearML automatically captures the data that is added to the `SummaryWriter` object.  
 
 These scalars can be visualized in plots, which appear in the ClearML [WebApp](../../../webapp/webapp_home.md), in the 
-experiment's **SCALARS** tab.
+task's **SCALARS** tab.
 
 
 ![Scalars tab](../../../img/examples_megengine_mnist_scalars.png)
@@ -34,7 +34,7 @@ experiment's **SCALARS** tab.
 
 ClearML automatically captures the model logged using the `megengine.save` method, and saves it as an artifact.
 
-View saved snapshots in the experiment's **ARTIFACTS** tab.
+View saved snapshots in the task's **ARTIFACTS** tab.
 
 ![Artifacts tab](../../../img/examples_megengine_models_1.png) 
 
@@ -49,7 +49,7 @@ The model info panel contains the model details, including:
 
 ## Console
 
-All console output during the script's execution appears in the experiment's **CONSOLE** page.
+All console output during the script's execution appears in the task's **CONSOLE** page.
 
 ![Console tab](../../../img/examples_megengine_console.png)
 

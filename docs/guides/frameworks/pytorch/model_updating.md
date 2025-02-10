@@ -68,7 +68,7 @@ model.update_design(config_dict=model_config_dict)
 
 ## Updating Models
 To update a model, use [`OutputModel.update_weights()`](../../../references/sdk/model_outputmodel.md#update_weights). 
-This uploads the model to the set storage destination (see [Setting Upload Destination](../../../fundamentals/artifacts.md#setting-upload-destination)), 
+This uploads the model to the set storage destination (see [Setting Upload Destination](../../../fundamentals/models.md#setting-upload-destination)), 
 and registers that location to the task as the output model. 
 
 ```python

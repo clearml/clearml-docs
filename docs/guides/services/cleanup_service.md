@@ -6,7 +6,7 @@ The [cleanup service](https://github.com/allegroai/clearml/blob/master/examples/
 demonstrates how to use the `clearml.backend_api.session.client.APIClient` class to implement a service that deletes old 
 archived tasks and their associated files: model checkpoints, other artifacts, and debug samples. 
 
-Modify the cleanup service's parameters to specify which archived experiments to delete and when to delete them. 
+Modify the cleanup service's parameters to specify which archived tasks to delete and when to delete them. 
 
 ### Running the Cleanup Service
 
@@ -52,14 +52,14 @@ an `APIClient` object that establishes a session with the ClearML Server, and ac
 * [`Task.delete`](../../references/sdk/task.md#delete) - Delete a Task.  
 
 ## Configuration
-The experiment's hyperparameters are explicitly logged to ClearML using the [`Task.connect()`](../../references/sdk/task.md#connect) 
-method. View them in the WebApp, in the experiment's **CONFIGURATION** page under **HYPERPARAMETERS > General**.
+The task's hyperparameters are explicitly logged to ClearML using the [`Task.connect()`](../../references/sdk/task.md#connect) 
+method. View them in the WebApp, in the task's **CONFIGURATION** tab under **HYPERPARAMETERS > General**.
 
 The task can be reused. Clone the task, edit its parameters, and enqueue the task to run in ClearML Agent [services mode](../../clearml_agent/clearml_agent_services_mode.md).
 
 ![Cleanup service configuration](../../img/example_cleanup_configuration.png)
 
 ## Console
-All console output appears in the experiment's **CONSOLE**.
+All console output appears in the task's **CONSOLE** tab.
 
 ![Cleanup service console](../../img/examples_cleanup_console.png)

@@ -36,7 +36,7 @@ instructions in the [Security](clearml_server_security.md) page.
 :::
 
 :::info Memory Requirement
-Deploying the server requires a minimum of 4 GB of memory, 8 GB is recommended.  
+Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.  
 :::
 
 **To launch ClearML Server on Linux or macOS:**

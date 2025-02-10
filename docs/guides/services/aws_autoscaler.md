@@ -16,8 +16,19 @@ Run the ClearML AWS autoscaler in one of these ways:
   script locally
 * Launch through your [`services` queue](../../clearml_agent/clearml_agent_services_mode.md)
 
-:::note Default AMI
-The autoscaler service uses by default the `NVIDIA Deep Learning AMI v20.11.0-46a68101-e56b-41cd-8e32-631ac6e5d02b` AMI.
+:::note AMIs
+The AWS autoscaler can make use of any AMI (e.g. `NVIDIA Deep Learning AMI v20.11.0-46a68101-e56b-41cd-8e32-631ac6e5d02b`), 
+available to your AWS account. Note that AWS frequently updates its available AMIs. 
+
+Recent NVIDIA AMIs only install the required drivers on initial user login. To make use of such AMIs, the autoscaler 
+needs to mimic an initial user login. This can be accomplished by adding the following pre-execution bash script 
+(see [step 5](#step_5)):
+
+```
+apt-get update
+DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+su -l ubuntu -c '/usr/bin/bash /home/ubuntu/.profile'
+```
 :::
 
 ### Running the Script
@@ -95,7 +106,7 @@ When the script runs, a configuration wizard prompts for instance details and bu
       Define another instance type? [y/N]:
       ```
    
-1. Enter any bash script to run on newly created instances before launching the ClearML Agent.
+1. Enter any bash script to run on newly created instances before launching the ClearML Agent. <a id="step_5"></a>
 
       ```console
       Enter any pre-execution bash script to be executed on the newly created instances []:
@@ -155,8 +166,8 @@ The values configured through the wizard are stored in the task's hyperparameter
 [`Task.connect()`](../../references/sdk/task.md#connect) and [`Task.set_configuration_object()`](../../references/sdk/task.md#set_configuration_object) 
 methods respectively. They can be viewed in the WebApp, in the task's **CONFIGURATION** page under **HYPERPARAMETERS** and **CONFIGURATION OBJECTS > General**. 
 
-ClearML automatically logs command line arguments defined with argparse. View them in the experiments **CONFIGURATION** 
-page under **HYPERPARAMETERS > General**.
+ClearML automatically logs command line arguments defined with argparse. View them in the task's **CONFIGURATION** 
+tab under **HYPERPARAMETERS > General**.
 
 ![Autoscaler configuration](../../img/examples_aws_autoscaler_config.png)
 
@@ -166,6 +177,6 @@ in [services mode](../../clearml_agent/clearml_agent_services_mode.md) for such 
 
 ### Console
 
-All other console output appears in the experiment's **CONSOLE**.
+All other console output appears in the task's **CONSOLE**.
 
 ![Autoscaler console](../../img/examples_aws_autoscaler_console.png)

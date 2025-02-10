@@ -9,7 +9,7 @@ The example script does the following:
 * Trains a neural network on the CIFAR10 dataset for image classification.
 * Creates a [ClearML Task](../../../fundamentals/task.md) named `image classification CIFAR10` in
   the `examples` project.
-* Calls the [`Task.connect`](../../../references/sdk/task.md#connect) method to track experiment configuration.
+* Calls the [`Task.connect`](../../../references/sdk/task.md#connect) method to track task configuration.
 * Uses `ignite`'s `TensorboardLogger` and attaches handlers to it. See [`TensorboardLogger`](https://github.com/pytorch/ignite/blob/master/ignite/contrib/handlers/tensorboard_logger.py). 
 
 ClearML's automatic logging captures information and outputs logged with `TensorboardLogger`.
@@ -22,7 +22,7 @@ Parameters are explicitly reported to ClearML using the [`Task.connect`](../../.
 params = {'number_of_epochs': 20, 'batch_size': 64, 'dropout': 0.25, 'base_lr': 0.001, 'momentum': 0.9, 'loss_report': 100}
 params = task.connect(params)  # enabling configuration override by clearml
 ```
-The hyperparameter configurations can be viewed in the WebApp in the experiment's **CONFIGURATION** tab. 
+The hyperparameter configurations can be viewed in the WebApp in the task's **CONFIGURATION** tab. 
 
 ![image](../../../img/examples_integration_pytorch_ignite_config.png)
 
@@ -35,22 +35,22 @@ into a script which uses `TensorboardLogger`, all information logged through the
 
 ClearML automatically captures scalars logged through `TensorboardLogger`. 
 
-View the scalars in the experiment's page in the **ClearML Web UI**, in **SCALARS**.
+View the scalars in the task's page in the **ClearML Web UI**, in **SCALARS**.
 
-![image](../../../img/examples_cifar_scalars.png)
+![Task scalars](../../../img/examples_cifar_scalars.png)
 
 
 ## Model Snapshots
 
 ClearML automatically captures the model logged with Torch, and saves it as an artifact. 
 
-View saved snapshots in the experiment's **ARTIFACTS** tab.
+View saved snapshots in the task's **ARTIFACTS** tab.
 
-![image](../../../img/examples_cifar_artifacts.png)
+![Task models](../../../img/examples_cifar_artifacts.png)
 
 To view the model, in the **ARTIFACTS** tab, click the model name (or download it).
 
-![image](../../../img/examples_cifar_model.png)
+![Model details](../../../img/examples_cifar_model.png)
 
 
 ## Debug Samples

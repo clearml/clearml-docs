@@ -33,14 +33,16 @@ times.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 
 
-![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard.png)
+![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard.png#light-mode-only)
+![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard_dark.png#dark-mode-only)
 
  
 ## Dashboard
 
 Once a Task Scheduler instance is launched, the dashboard displays a summary of the scheduled tasks.
 
-![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard.png)
+![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard.png#light-mode-only)
+![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard_dark.png#dark-mode-only)
 
 The Task Scheduler dashboard shows:
 * Scheduled Tasks - Table of tasks scheduled for execution. The table displays the ID of the task scheduled for execution,
@@ -49,12 +51,15 @@ The Task Scheduler dashboard shows:
   scheduled to be launched daily (`day=1`) at 06:20 UTC (`minute=20, hour=6`).
   The task in the third row is scheduled to be launched every month (`month=1`) on the 15th at 12:00 UTC (`day=15, hour=12`).
   
-  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks.png)
+  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks.png#light-mode-only)
+  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks_dark.png#dark-mode-only)
+
 * Executed Tasks - Table of tasks that have been executed. The table displays the `started` time, which is the time
   the task was enqueued, and its `finished` time, which is the time the task's execution was completed. If it says `None`,
   under the `finished` column, the task has not yet completed its execution. 
   
-  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks.png)
+  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks.png#light-mode-only)
+  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks_dark.png#dark-mode-only)
 
 * Scheduler Log - Application console log containing everything printed to stdout and stderr. The log 
   includes when the scheduler syncs, and when it launches tasks for execution.   

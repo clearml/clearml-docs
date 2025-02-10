@@ -3,7 +3,7 @@ title: Artifacts Reporting
 ---
 
 The [artifacts.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/artifacts.py) example demonstrates 
-uploading objects (other than models) to storage as experiment artifacts. 
+uploading objects (other than models) to storage as task artifacts. 
 
 These artifacts include: 
 * Pandas DataFrames 
@@ -19,14 +19,14 @@ S3 buckets, Google Cloud Storage, and Azure Storage ([debug sample storage](../.
 is different). Configure ClearML in any of the following ways:
 
 * In the configuration file, set [`default_output_uri`](../../configs/clearml_conf.md#config_default_output_uri).
-* In code, when [initializing a Task](../../references/sdk/task.md#taskinit), use the `output_uri` parameter.
-* In the **ClearML Web UI**, when [modifying an experiment](../../webapp/webapp_exp_tuning.md#output-destination).
+* In code, when [initializing a task](../../references/sdk/task.md#taskinit), use the `output_uri` parameter.
+* In the **ClearML Web UI**, when [modifying a task](../../webapp/webapp_exp_tuning.md#output-destination).
 
-When the script runs, it creates an experiment named `artifacts example` in the `examples` project. 
+When the script runs, it creates a task named `artifacts example` in the `examples` project. 
 
-ClearML reports artifacts in the **ClearML Web UI** **>** experiment details **>** **ARTIFACTS** tab.
+ClearML reports artifacts in the **ClearML Web UI** **>** task details **>** **ARTIFACTS** tab.
 
-![Experiment artifacts](../../img/examples_reporting_03.png)
+![Task artifacts](../../img/examples_reporting_03.png)
 
 ## Dynamically Tracked Artifacts
 

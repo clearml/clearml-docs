@@ -16,9 +16,11 @@ time.
 
 <a id="traffic_router"/>
 
-:::important Task Traffic Router
-The Streamlit Launcher relies on the ClearML Traffic Router which facilitates user authentication, and redirects requests 
+:::important AI Application Gateway
+The Streamlit Launcher relies on the ClearML Traffic Router which implements user authentication, and redirects requests 
 to the IP/port served by the Streamlit app. 
+
+If the ClearML AI application Gateway is not available, the Streamlit app might not be accessible.
 :::
 
 Once you start a Streamlit launcher instance, you can view the following information in its dashboard:
@@ -30,7 +32,7 @@ Once you start a Streamlit launcher instance, you can view the following informa
   * <img src="/docs/latest/icons/ico-streamlit-stopped.svg" alt="Stopped server" className="icon size-md space-sm" /> - App is stopped 
 * Idle time 
 * Streamlit App - Externally accessible link to your Streamlit app. You can send this link to your colleagues, so they can 
-  access the app. Click <img src="/docs/latest/icons/ico-copy-to-clipboard.svg" alt="Copy" className="icon size-sm space-sm" />
+  access the app. Click <img src="/docs/latest/icons/ico-copy-to-clipboard.svg" alt="Copy" className="icon size-md space-sm" />
   to copy link
 * Streamlit Git repo - Repository that holds the Streamlit app script
 * Live preview of the Streamlit app
@@ -49,7 +51,7 @@ when viewing its configuration.
 
 The prefilled instance launch form can be edited before starting the new app instance. 
 
-To  configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
 to open the app's instance launch form.
 
 ### Configuration Options

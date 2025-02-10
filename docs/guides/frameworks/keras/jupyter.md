@@ -12,7 +12,7 @@ The example does the following:
    
 1. Specifies accuracy as the metric, and uses two callbacks: a TensorBoard callback and a model checkpoint callback. 
    
-1. During script execution, creates an experiment named `notebook example` in the `examples` project.
+1. During script execution, creates a task named `notebook example` in the `examples` project.
 
 ## Scalars
 
@@ -69,10 +69,10 @@ Text printed to the console for training appears in **CONSOLE**.
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab. ClearML automatically logs and tracks models
+Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks models
 created using Keras.
 
-The experiment info panel shows model tracking, including the model name and design in **ARTIFACTS** **>** **Output Model**.
+The task info panel shows model tracking, including the model name and design in **ARTIFACTS** **>** **Output Model**.
 
 ![image](../../../img/examples_keras_jupyter_23.png)
 

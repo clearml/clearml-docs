@@ -12,4 +12,4 @@ provider connection is configured and enabled, the option appears in your server
 
 ClearML supports standard protocols such as OIDC and SAML, and popular providers, including Auth0, Google, Okta, and more.
 
-For more information see [Identity Providers](../webapp/webapp_profile.md#identity-providers).
+For more information see [Identity Providers](../webapp/settings/webapp_settings_id_providers.md).

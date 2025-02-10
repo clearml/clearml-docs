@@ -78,7 +78,7 @@ class method. Specify the remote storage location as the `remote_url` argument a
 `local_folder` argument. 
 
 ```python
-StorageManager.download_folder(remote_url="s3://bucket/", local_file="/folder/")
+StorageManager.download_folder(remote_url="s3://bucket/", local_folder="/folder/")
 ```
 
 This method downloads a remote folder recursively, maintaining the sub-folder structure from 

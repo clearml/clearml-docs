@@ -25,7 +25,8 @@ Once you have launched an app instance, you can view the following information i
 * Server's resources monitoring (CPU / GPU / vMem utilization)
 * Console - The console log shows the instance's activity, including server setup progress, server status changes
 
-![VS Code Dashboard](../../img/apps_vs_code.png)
+![VS Code Dashboard](../../img/apps_vs_code.png#light-mode-only)
+![VS Code Dashboard](../../img/apps_vs_code_dark.png#dark-mode-only)
 
 ## VS Code App Instance Configuration
 When configuring a new VS Code instance, you can fill in the required parameters or reuse the configuration of 
@@ -39,7 +40,7 @@ when viewing its configuration.
 
 The prefilled instance launch form can be edited before starting the new app instance. 
 
-To  configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
 to open the app's instance launch form.
 
 ### Configuration Options

@@ -15,7 +15,7 @@ or ClearML can be configured for image storage, see [`Logger.set_default_upload_
 (storage for [artifacts](../../clearml_sdk/task_sdk.md#setting-upload-destination) is different). Set credentials for 
 storage in the ClearML configuration file.
 
-When the script runs, it creates an experiment named `image reporting` in the `examples` project.
+When the script runs, it creates a task named `image reporting` in the `examples` project.
 
 Report images using several formats by calling [`Logger.report_image()`](../../references/sdk/logger.md#report_image):
 
@@ -47,7 +47,7 @@ Logger.current_logger().report_image(
 )
 ```
 
-ClearML reports these images as debug samples in the **ClearML Web UI**, under the experiment's
+ClearML reports these images as debug samples in the **ClearML Web UI**, under the task's
 **DEBUG SAMPLES** tab. 
 
 ![Debug samples](../../img/examples_reporting_07.png)

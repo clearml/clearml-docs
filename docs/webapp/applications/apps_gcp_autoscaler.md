@@ -3,7 +3,7 @@ title: GCP Autoscaler
 ---
 
 :::info Pro Plan Offering
-The ClearML GCP Autoscaler App is available under the ClearML Pro plan
+The ClearML GCP Autoscaler App is available under the ClearML Pro plan.
 :::
 
 The GCP Autoscaler Application optimizes GCP VM instance usage according to a user defined instance budget: Define your 
@@ -32,7 +32,7 @@ when viewing its configuration.
 
 The prefilled instance launch form can be edited before starting the new app instance. 
 
-To  configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
 to open the app's instance launch form.
 
 ### Configuration Options
@@ -58,7 +58,7 @@ to open the app's instance launch form.
 * **Base Docker Image** (optional) - Available when `Use docker mode` is selected. Default Docker image in which the ClearML Agent will run. Provide an image stored in a 
   Docker artifactory so VM instances can automatically fetch it
 * **Compute Resources**
-    * Resource Name - Assign a name to the resource type. This name will appear in the Autoscaler dashboard
+    * Resource Name - Assign a name to the resource type. This name will appear in the autoscaler dashboard
     * GCP Machine Type - See list of [machine types](https://cloud.google.com/compute/docs/machine-types)
     * Run in CPU mode - Select to have the autoscaler utilize only CPU VM instances
     * GPU Type - See list of [supported GPUs by instance](https://cloud.google.com/compute/docs/gpus)
@@ -87,7 +87,7 @@ to open the app's instance launch form.
 * **Max Idle Time** (optional) - Maximum time in minutes that a VM instance can be idle before the autoscaler spins it down
 * **Workers Prefix** (optional) - A Prefix added to workers' names, associating them with this autoscaler
 * **Polling Interval** (optional) - Time period in minutes at which the designated queue is polled for new tasks
-* **Apply Task Owner Vault Configuration** - Select to apply values from the task owner's [configuration vault](../webapp_profile.md#configuration-vault) when executing the task (available under ClearML Enterprise Plan)
+* **Apply Task Owner Vault Configuration** - Select to apply values from the task owner's [configuration vault](../settings/webapp_settings_profile.md#configuration-vault) when executing the task (available under ClearML Enterprise Plan)
 * **Warn if more than one instance is executing the same task** - Select to print warning to console when multiple 
   instances are running the same task. In most cases, this indicates an issue.
 * **Exclude .bashrc script** - Select in order to skip `.bashrc` script execution 
@@ -95,8 +95,8 @@ to open the app's instance launch form.
   on startup. This only applies to vaults loaded by the autoscaler itself, not to vaults loaded on cloud instances or by 
   tasks run by the autoscaler. For more information, see [Configuration Vault note](#configuration_vault) (available under ClearML Enterprise Plan).
 * **Init Script** (optional) - A bash script to execute after launching the VM instance
-* **Additional ClearML Configuration** (optional) - A ClearML configuration file to use by the ClearML Agent when executing your experiments
-* **Run with Service Account** -  Select to allow running the application under a [Service Account](../webapp_profile.md#service-accounts) identity instead of under your own identity (available under ClearML Enterprise Plan)
+* **Additional ClearML Configuration** (optional) - A ClearML configuration file to use by the ClearML Agent when executing your tasks
+* **Run with Service Account** -  Select to allow running the application under a [Service Account](../settings/webapp_settings_users.md#service-accounts) identity instead of under your own identity (available under ClearML Enterprise Plan)
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 
 
@@ -105,8 +105,8 @@ to open the app's instance launch form.
 <a id="configuration_vault"/>
 
 :::important Enterprise Feature
-You can utilize the [configuration vault](../../webapp/webapp_profile.md#configuration-vault) to configure GCP 
-credentials for the Autoscaler in the following format: 
+You can utilize the [configuration vault](../settings/webapp_settings_profile.md#configuration-vault) to configure GCP 
+credentials for the autoscaler in the following format: 
 
 ```
 auto_scaler.v1 {
@@ -149,7 +149,7 @@ The console's log level will update in the autoscaler's next iteration.
 :::
 
 * Instance log files - Click to access the app instance's logs. This takes you to the app instance task's ARTIFACTS tab, 
-  which lists the app instance's logs. In a log's `File Path` field, click <img src="/docs/latest/icons/ico-download-json.svg" alt="Download" className="icon size-sm space-sm" /> 
+  which lists the app instance's logs. In a log's `File Path` field, click <img src="/docs/latest/icons/ico-download-json.svg" alt="Download" className="icon size-md space-sm" /> 
   to download the complete log. 
 
 :::tip EMBEDDING CLEARML VISUALIZATION

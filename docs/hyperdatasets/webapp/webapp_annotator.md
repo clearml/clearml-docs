@@ -53,7 +53,7 @@ Sort the annotation tasks by either using **RECENT** or **NAME** option.
     1. In **ITERATION**, in the **ORDER** list, choose either:
                 
         * **Sequential** - Frames are sorted by the frame top-level `context_id` (primary sort key) and `timestamp` (secondary sort key) metadata key values, and returned by the iterator in the sorted order.
-        * **Random** - Frames are randomly returned using the value of the `random_seed` argument. The random seed is maintained with the experiments. Therefore, the random order is reproducible if the experiment is rerun.
+        * **Random** - Frames are randomly returned using the value of the `random_seed` argument. The random seed is maintained with the tasks. Therefore, the random order is reproducible if the task is rerun.
 
     1. In **REPETITION**, choose either **Use Each Frame Once** or **Limit Frames**. If you select **Limit Frames**, then in **Use Max. Frames**, type the number of frames to annotate.
     1. If iterating randomly, in **RANDOM SEED** type your seed or leave blank, and the ClearML Enterprise platform generates a seed for you.
@@ -132,7 +132,7 @@ You can add labels which describe the whole frame, with no specific coordinates.
 ## Frame Metadata
 
 **To edit frame metadata:** 
-1. Expand the **FRAME METADATA** area 
+1. Expand the **FRAMEGROUP METADATA** area 
 1. Click edit <img src="/docs/latest/icons/ico-metadata.svg" alt="edit metadata" className="icon size-md space-sm" /> 
    which will open an editing window
 1. Modify the metadata dictionary in JSON format

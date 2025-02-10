@@ -1,40 +1,40 @@
 ---
-title: Tuning Experiments
+title: Tuning Tasks
 ---
 
-Tune experiments and edit an experiment's execution details, then execute the tuned experiments on local or remote machines.
+Tune tasks and edit their execution details, then execute the tuned tasks on local or remote machines.
 
-## To Tune an Experiment and Execute it Remotely:
+## To Tune a Task and Execute it Remotely:
 
-1. Locate the experiment. Open the experiment's Project page from the Dashboard or the main Projects page.
+1. Locate the task. Open the task's Project page from the Dashboard or the main Projects page.
 
     * On the Dashboard,
-      * Click on an experiment from RECENT EXPERIMENTS
-      * In RECENT PROJECTS **>** click on a project card **>** click experiment
-      * In RECENT PROJECTS **>** click **VIEW ALL** **>** click the project card **>** click experiment
-    * On the Projects page, click project card, or the **All projects** card **>** click experiment
+      * Click on a task from RECENT TASKS
+      * In RECENT PROJECTS **>** click on a project card **>** click task
+      * In RECENT PROJECTS **>** click **VIEW ALL** **>** click the project card **>** click task
+    * On the Projects page, click project card, or the **All projects** card **>** click task
 
-1. Clone the experiment. In the experiments table:
+1. Clone the task. In the task table:
 
-    1. Click **Clone**, and a **Clone experiment** box will pop up.
+    1. Click **Clone**, and a **Clone task** box will pop up.
     1. In the **Project** textbox, select or create a project. To search for another project, start typing the project name.
-       To create a new project, type new experiment name and click **Create New**.
+       To create a new project, type new task name and click **Create New**.
     1. Enter an optional description.
     1. Click **CLONE**.
 
-    The cloned experiment's status is now *Draft*.
+    The cloned task's status is now *Draft*.
 
-1. Edit the experiment. See [modifying experiments](#modifying-experiments).
+1. Edit the task. See [modifying tasks](#modifying-tasks).
 
-1. Enqueue the experiment for execution. Right-click the experiment **>** **Enqueue** **>** Select a queue **>**
+1. Enqueue the task for execution. Right-click the task **>** **Enqueue** **>** Select a queue **>**
    **ENQUEUE**.
 
-    The experiment's status becomes *Pending*. When the worker assigned to the queue fetches the Task (experiment), the
-   status becomes *Running*. The experiment can now be tracked and its results visualized.
+    The task's status becomes *Pending*. When the worker assigned to the queue fetches the task, its
+   status becomes *Running*. The task can now be tracked and its results visualized.
 
-## Modifying Experiments
+## Modifying Tasks
 
-Experiments whose status is *Draft* are editable (see the [user properties](#user-properties) exception). In the **ClearML
+Tasks whose status is *Draft* are editable (see the [user properties](#user-properties) exception). In the **ClearML
 Web UI**, edit any of the following
 
 * [Source code](#source-code)
@@ -43,7 +43,7 @@ Web UI**, edit any of the following
 * [Hyperparameters](#hyperparameters) - Parameters, TensorFlow Definitions, command line options, environment variables, and user-defined properties
 
 :::note
-User parameters are editable in any experiment, except experiments whose status is *Published* (read-only).
+User parameters are editable in any task, except those whose status is *Published* (read-only).
 :::
 
 * [Configuration objects](#configuration-objects) - Task model description
@@ -56,21 +56,23 @@ User parameters are editable in any experiment, except experiments whose status 
 
 #### Source Code
 
-Select source code by changing any of the following:
+Modify code execution by changing any of the following:
 
-* Repository, commit (select by ID, tag name, or choose the last commit in the branch), script, and/or working directory.
-* Installed Python packages and/or versions - Edit or clear (remove) them all.
-* Uncommitted changes - Edit or clear (remove) them all.
+* Repository, commit (select by ID, tag name, or choose the last commit in the branch), script, working directory, 
+and/or binary.
+* The Python packages to be installed and/or their versions - Edit the package list, or clear it to have the ClearML 
+Agent either not install any packages or use an existing repo `requirements.txt` file. If the task is based on a 
+run in which the packages used were eventually different to the ones originally specified, you can easily or reset the 
+packages to originally recorded values ("Original Pip").
+* Uncommitted changes - Edit or clear all.
 
-**To select different source code:**
-
-* In the **EXECUTION** tab, hover over a section **>** **EDIT** or (**DISCARD DIFFS** for **UNCOMMITTED CHANGES**) **>**
-  edit **>** **SAVE**.
+**To modify the source code**, hover over the relevant sections in the **EXECUTION** tab to access Edit, Clear/Discard, 
+and/or Reset functions.
 
 
 
 #### Base Docker Image
-Select a pre-configured Docker that **ClearML Agent** will use to remotely execute this experiment (see [Building Docker containers](../clearml_agent/clearml_agent_docker.md)).
+Select a pre-configured Docker that **ClearML Agent** will use to remotely execute this task (see [Building Docker containers](../clearml_agent/clearml_agent_docker.md)).
 
 **To add, change, or delete a base Docker image:**
 
@@ -95,7 +97,7 @@ and formats for specifying locations include:
 
 * A shared folder: `/mnt/share/folder`
 * S3: `s3://bucket/folder`
-* Non-AWS S3-like services (e.g. MinIO): `s3://host_addr:port/bucket` 
+* Non-AWS S3-like services (e.g. MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
 * Google Cloud Storage: `gs://bucket-name/folder`
 * Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 
@@ -108,7 +110,7 @@ and formats for specifying locations include:
 Also set the output destination for artifacts in code (see the `output_uri` parameter of the
 [`Task.init`](../references/sdk/task.md#taskinit)
 method), and in the ClearML configuration file 
-for all experiments (see [`default_output_uri`](../configs/clearml_conf.md#config_default_output_uri)
+for all tasks (see [`default_output_uri`](../configs/clearml_conf.md#config_default_output_uri)
 on the ClearML Configuration Reference page).
 :::
 
@@ -140,8 +142,8 @@ or the [`sdk.development.log_os_environments`](../configs/clearml_conf.md#log_en
 
 #### User Properties
 
-User properties allow storing any descriptive information in key-value pair format. They are editable in any experiment,
-except experiments whose status is *Published* (read-only).
+User properties allow storing any descriptive information in key-value pair format. They are editable in any task,
+except those whose status is *Published* (read-only).
 
 **To add, change, or delete user properties:**
 
@@ -165,14 +167,14 @@ Edit model configuration and label enumeration, choose a different initial input
 other project, or remove the model.
 
 :::note
-The models are editable in the **MODELS** tab, not the **EXPERIMENTS** tab. Clicking the model name hyperlink shows the
+The models are editable in the **MODELS** tab, not the **TASKS** tab. Clicking the model name hyperlink shows the
 model in the **MODELS** tab.
 :::
 
 **To select a different model:**
 
 1. In **ARTIFACTS** **>** **Input Model** **>** Hover and click **EDIT**.
-1. If a model is associated with the experiment, click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" />.
+1. If a model is associated with the task, click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" />.
 1. In the **SELECT MODEL** dialog, select a model from the current project or any other project.
 
 **To edit a model's configuration or label enumeration:**
@@ -184,11 +186,11 @@ model in the **MODELS** tab.
       remove the configuration).
 
        Users can also search for the configuration (hover over the configuration textbox, the search box appears) and copy the
-      configuration to the clipboard (hover and click <img src="/docs/latest/icons/ico-clipboard.svg" alt="Copy Clipboard" className="icon size-md" />).
+      configuration to the clipboard (hover and click <img src="/docs/latest/icons/ico-copy-to-clipboard.svg" alt="Copy Clipboard" className="icon size-md" />).
 
     * Label enumeration - In the **LABELS** tab **>** Hover and click **EDIT** **>** Add, change, or delete label
       enumeration key-value pairs.
 
-**To remove a model from an experiment:**
+**To remove a model from a task:**
 
 * Hover and click **EDIT** **>** Click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash" className="icon size-md" />

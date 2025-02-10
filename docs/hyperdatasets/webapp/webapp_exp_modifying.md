@@ -2,8 +2,8 @@
 title: Modifying Dataviews
 ---
 
-An experiment that has been executed can be [cloned](../../webapp/webapp_exp_reproducing.md), then the cloned experiment's 
-execution details can be modified, and the modified experiment can be executed. 
+A task that has been executed can be [cloned](../../webapp/webapp_exp_reproducing.md), then the cloned task's 
+execution details can be modified, and the modified task can be executed. 
 
 In addition to all the [ClearML tuning capabilities](../../webapp/webapp_exp_tuning.md), the **ClearML Enterprise WebApp** (UI) 
 enables modifying [Dataviews](webapp_dataviews.md), including: 
@@ -12,7 +12,6 @@ enables modifying [Dataviews](webapp_dataviews.md), including:
 * [Frame filtering](#filtering-frames)
 * [Label mapping](#mapping-labels-label-translation)
 * [Class label enumeration](#label-enumeration)
-* [Data augmentation](#data-augmentation)
 * [Input frame iteration controls](#iteration-controls)
 
 ## Selecting Dataviews
@@ -22,9 +21,9 @@ enables modifying [Dataviews](webapp_dataviews.md), including:
 * Create a new Dataview  
     
     * Click **+** and then follow the instructions below to select Hyper-Dataset versions, filter frames, map labels (label translation), 
-      and set label enumeration, data augmentation, and iteration controls.
+      and set label enumeration and iteration controls.
       
-* Select a different Dataview already associated with the experiment. 
+* Select a different Dataview already associated with the task. 
     
     * In the **SELECTED DATAVIEW** list, choose a Dataview.  
   
@@ -61,7 +60,7 @@ by the Dataview.
    
 ## Filtering Frames
 
-Filtering of SingleFrames iterated by a Dataview for input to the experiment is accomplished by frame filters. 
+Filtering of SingleFrames iterated by a Dataview for input to the task is accomplished by frame filters. 
 For more detailed information, see [Filtering](../dataviews.md#filtering).
 
 **To modify frame filtering:**
@@ -118,22 +117,6 @@ Modify the label enumeration assigned to output models.
 
 1. Click **SAVE**.
 
-## Data Augmentation
-
-Modify the on-the-fly data augmentation applied to frame input from the select Hyper-Dataset versions and filtered by the frame filters. Data augmentation is applied in steps, where each step applies a method, operation, and strength.
- 
-For more detailed information, see [Data Augmentation](../dataviews.md#data-augmentation).
-
-**To modify data augmentation**
-
-1. In the **AUGMENTATION** section, click **EDIT**.
-
-    * Add (**+**) or edit an augmentation step - Select a **METHOD**, **OPERATION**, and **STRENGTH**.
-        
-    * Remove (<img src="/docs/latest/icons/ico-trash.svg" alt="Trash" className="icon size-md space-sm" />)  an augmentation step.
-    
-1. Click **SAVE**.    
-    
 ## Iteration Controls
 
 Modify the frame iteration performed by the Dataview to control the order, number, timing, and reproducibility of frames 
@@ -158,7 +141,7 @@ For more detailed information, see [Iteration Control](../dataviews.md#iteration
          
     * **Infinite Iterations**
         
-1. Select the **RANDOM SEED** - If the experiment is rerun and the seed remains unchanged, the frame iteration is the same.
+1. Select the **RANDOM SEED** - If the task is rerun and the seed remains unchanged, the frame iteration is the same.
 
 1. For video, enter a **CLIP LENGTH** - For video data sources, in the number of sequential frames from a clip to iterate.
 

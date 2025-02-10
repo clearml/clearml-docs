@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: ClearML Agent
 ---
 
 
@@ -17,10 +17,10 @@ title: Overview
 
 **ClearML Agent** is a virtual environment and execution manager for DL / ML solutions on GPU machines. It integrates with the **ClearML Python Package** and ClearML Server to provide a full AI cluster solution. <br/>
 Its main focus is around:
-- Reproducing experiments, including their complete environments. 
+- Reproducing tasks, including their complete environments. 
 - Scaling workflows on multiple target machines. 
 
-ClearML Agent executes an experiment or other workflow by reproducing the state of the code from the original machine 
+ClearML Agent executes a task or other workflow by reproducing the state of the code from the original machine 
 to a remote machine.
 
 ![ClearML Agent flow diagram](img/clearml_agent_flow_diagram.png)
@@ -35,7 +35,7 @@ The preceding diagram demonstrates a typical flow where an agent executes a task
    1.  Install any required system packages.
    1.  Clone the code from a git repository.
    1.  Apply any uncommitted changes recorded.
-   1.  Set up the python environment and required packages.
+   1.  Set up the Python environment and required packages.
 1. The task's script/code is executed.  
 
 :::note Python Version
@@ -46,16 +46,16 @@ install Python, so make sure to use a docker or environment with the version you
 While the agent is running, it continuously reports system metrics to the ClearML Server (these can be monitored in the 
 [**Orchestration**](webapp/webapp_workers_queues.md) page).  
 
-Continue using ClearML Agent once it is running on a target machine. Reproduce experiments and execute 
+Continue using ClearML Agent once it is running on a target machine. Reproduce tasks and execute 
 automated workflows in one (or both) of the following ways: 
 * Programmatically (using [`Task.enqueue()`](references/sdk/task.md#taskenqueue) or [`Task.execute_remotely()`](references/sdk/task.md#execute_remotely))
-* Through the ClearML Web UI (without working directly with code), by cloning experiments and enqueuing them to the 
+* Through the ClearML Web UI (without working directly with code), by cloning tasks and enqueuing them to the 
   queue that a ClearML Agent is servicing.
 
 The agent facilitates [overriding task execution detail](webapp/webapp_exp_tuning.md) values through the UI without 
 code modification. Modifying a task clone’s configuration will have the ClearML agent executing it override the 
 original values:
-* Modified package requirements will have the experiment script run with updated packages
+* Modified package requirements will have the task script run with updated packages
 * Modified recorded command line arguments will have the ClearML agent inject the new values in their stead
 * Code-level configuration instrumented with [`Task.connect()`](references/sdk/task.md#connect) will be overridden by modified hyperparameters
 

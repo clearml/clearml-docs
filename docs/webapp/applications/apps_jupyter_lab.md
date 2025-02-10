@@ -25,9 +25,10 @@ Once you have launched an app instance, you can view the following information i
 * Server's resources monitoring (CPU / GPU / vMem utilization)
 * Console - The console log shows the instance's activity, including server setup progress, server status changes
 
-![Jupyter Lab Dashboard](../../img/apps_jupyter_lab.png)
+![Jupyter Lab Dashboard](../../img/apps_jupyter_lab.png#light-mode-only)
+![Jupyter Lab Dashboard](../../img/apps_jupyter_lab_dark.png#dark-mode-only)
 
-## App Instance Configuration
+## Jupyter Lab Instance Configuration
 When configuring a new Jupyter Lab instance, you can fill in the required parameters or reuse the configuration of 
 a previously launched instance.  
 
@@ -39,7 +40,7 @@ when viewing its configuration.
 
 The prefilled instance launch form can be edited before starting the new app instance. 
 
-To  configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
 to open the app's instance launch form.
 
 ### Configuration Options

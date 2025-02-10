@@ -33,52 +33,102 @@ module.exports = {
                 ]
             }        
         ]}]},
-        {'ClearML Fundamentals': ['fundamentals/projects', 'fundamentals/task', 'fundamentals/hyperparameters', 'fundamentals/artifacts', 'fundamentals/logger', 'fundamentals/agents_and_queues',
-            'fundamentals/hpo']},
-        {'ClearML SDK': ['clearml_sdk/clearml_sdk', 'clearml_sdk/task_sdk', 'clearml_sdk/model_sdk', 'clearml_sdk/apiclient_sdk']},
-        {'ClearML Agent':
-            ['clearml_agent', 'clearml_agent/clearml_agent_setup', 'clearml_agent/clearml_agent_deployment',
+        {'ClearML Fundamentals': [
+            'fundamentals/projects', 'fundamentals/task', 'fundamentals/hyperparameters',
+            'fundamentals/artifacts', 'fundamentals/models', 'fundamentals/logger', 'fundamentals/agents_and_queues',
+            'fundamentals/hpo'
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML SDK',
+            link: {type: 'doc', id: 'clearml_sdk/clearml_sdk'},
+            items: ['clearml_sdk/task_sdk', 'clearml_sdk/model_sdk', 'clearml_sdk/apiclient_sdk']
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Agent',
+            link: {type: 'doc', id: 'clearml_agent'},
+            items: ['clearml_agent/clearml_agent_setup', 'clearml_agent/clearml_agent_deployment',
             'clearml_agent/clearml_agent_execution_env', 'clearml_agent/clearml_agent_env_caching',
             'clearml_agent/clearml_agent_dynamic_gpus', 'clearml_agent/clearml_agent_fractional_gpus',
             'clearml_agent/clearml_agent_services_mode', 'clearml_agent/clearml_agent_docker',
-            'clearml_agent/clearml_agent_scheduling'
-        ]},
-        {'Cloud Autoscaling': [
-            'cloud_autoscaling/autoscaling_overview',
-             {'Autoscaler Apps': [
+            'clearml_agent/clearml_agent_scheduling']
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Cloud Autoscaling',
+            link: {type: 'doc', id: 'cloud_autoscaling/autoscaling_overview'},
+            items: [
+                {'Autoscaler Apps': [
                     'webapp/applications/apps_aws_autoscaler',
                     'webapp/applications/apps_gcp_autoscaler',
-                 ]
-             }
-             ]
+                    ]
+                }
+            ]
         },
-        {'ClearML Pipelines':['pipelines/pipelines',
-                {"Building Pipelines":
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Pipelines',
+            link: {type: 'doc', id: 'pipelines/pipelines'},
+            items: [{"Building Pipelines":
                         ['pipelines/pipelines_sdk_tasks', 'pipelines/pipelines_sdk_function_decorators']
                 }
-                ]
+            ]
         },
-        {'ClearML Data': ['clearml_data/clearml_data', 'clearml_data/clearml_data_cli', 'clearml_data/clearml_data_sdk', 'clearml_data/best_practices',
-                {'Workflows': [
-                    'clearml_data/data_management_examples/workflows',
-                    'clearml_data/data_management_examples/data_man_simple',
-                    'clearml_data/data_management_examples/data_man_folder_sync',
-                    'clearml_data/data_management_examples/data_man_cifar_classification',
-                    'clearml_data/data_management_examples/data_man_python'
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Data',
+            link: {type: 'doc', id: 'clearml_data/clearml_data'},
+            items: ['clearml_data/clearml_data_cli', 'clearml_data/clearml_data_sdk', 'clearml_data/best_practices',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Workflows',
+                    link: {type: 'doc', id: 'clearml_data/data_management_examples/workflows'},
+                    items: [
+                        'clearml_data/data_management_examples/data_man_simple',
+                        'clearml_data/data_management_examples/data_man_folder_sync',
+                        'clearml_data/data_management_examples/data_man_cifar_classification',
+                        'clearml_data/data_management_examples/data_man_python'
                     ]
                 },
             ]
         },
         'hyper_datasets',
         'model_registry',
-        {'Remote IDE': [
-            'remote_session',
-            'apps/clearml_session',
-            {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
-            {type: 'ref', id: 'webapp/applications/apps_vscode'}
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Remote IDE',
+            link: {type: 'doc', id: 'remote_session'},
+            items: [
+                'apps/clearml_session',
+                {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
+                {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
+                {type: 'ref', id: 'webapp/applications/apps_vscode'}
             ]
         },
-        {'ClearML Serving':['clearml_serving/clearml_serving', 'clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Serving',
+            link: {type: 'doc', id: 'clearml_serving/clearml_serving'},
+            items: ['clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']
+        },
         {'CLI Tools': [
             'apps/clearml_task',
             {type: 'ref', id: 'clearml_agent/clearml_agent_ref'},
@@ -111,74 +161,108 @@ module.exports = {
             ]
         },
         'integrations/storage',
-        {'WebApp': ['webapp/webapp_overview', 'webapp/webapp_home',
-            {
-                'Projects': [
-                    'webapp/webapp_projects_page',
-                    'webapp/webapp_project_overview',
-                    {
-                        'Experiments': ['webapp/webapp_exp_table', 'webapp/webapp_exp_track_visual', 'webapp/webapp_exp_reproducing', 'webapp/webapp_exp_tuning',
-                            'webapp/webapp_exp_comparing']
-                    },
-                    {
-                        'Models': ['webapp/webapp_model_table', 'webapp/webapp_model_viewing', 'webapp/webapp_model_comparing']
-                    },
-                    'webapp/webapp_exp_sharing'
-                ]
-            },
-            {
-                'Datasets':[
-                    'webapp/datasets/webapp_dataset_page', 'webapp/datasets/webapp_dataset_viewing'
-                ]
-            },
-            {
-                'Pipelines':[
-                    'webapp/pipelines/webapp_pipeline_page', 'webapp/pipelines/webapp_pipeline_table', 'webapp/pipelines/webapp_pipeline_viewing'
-                ]
-            },
-            'webapp/webapp_reports',
-            {
-                'Orchestration': [
-                    'webapp/webapp_workers_queues',
-                    'webapp/webapp_orchestration_dash',
-                    'webapp/resource_policies'
-                ]
-            },
-            {
-                'ClearML Applications': [
-                    'webapp/applications/apps_overview',
-                    {
-                        "General": [
-                            'webapp/applications/apps_hpo',
-                            'webapp/applications/apps_dashboard',
-                            'webapp/applications/apps_task_scheduler',
-                            'webapp/applications/apps_trigger_manager',
-                        ]
-                    },
-                    {
-                        "AI Dev": [
-                            'webapp/applications/apps_jupyter_lab',
-                            'webapp/applications/apps_vscode',
-                        ]
-                    },
-                    {
-                        "UI Dev": [
-                            'webapp/applications/apps_gradio',
-                            'webapp/applications/apps_streamlit'
-                        ]
-                    },
-                    {
-                        "Deploy": [
-                            'webapp/applications/apps_embed_model_deployment',
-                            'webapp/applications/apps_model_deployment'
-                        ]
-                    },
-                ]
-
-            },
-            'webapp/webapp_profile']
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'WebApp',
+            link: {type: 'doc', id: 'webapp/webapp_overview'},
+            items: [
+                'webapp/webapp_home',
+                {
+                    'Projects': [
+                        'webapp/webapp_projects_page',
+                        'webapp/webapp_project_overview',
+                        {
+                            'Tasks': ['webapp/webapp_exp_table', 'webapp/webapp_exp_track_visual', 'webapp/webapp_exp_reproducing', 'webapp/webapp_exp_tuning',
+                                'webapp/webapp_exp_comparing']
+                        },
+                        {
+                            'Models': ['webapp/webapp_model_table', 'webapp/webapp_model_viewing', 'webapp/webapp_model_comparing']
+                        },
+                        'webapp/webapp_exp_sharing'
+                    ]
+                },
+                {
+                    'Datasets':[
+                        'webapp/datasets/webapp_dataset_page', 'webapp/datasets/webapp_dataset_viewing'
+                    ]
+                },
+                {
+                    'Pipelines':[
+                        'webapp/pipelines/webapp_pipeline_page', 'webapp/pipelines/webapp_pipeline_table', 'webapp/pipelines/webapp_pipeline_viewing'
+                    ]
+                },
+                'webapp/webapp_model_endpoints',
+                'webapp/webapp_reports',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Orchestration',
+                    link: {type: 'doc', id: 'webapp/webapp_workers_queues'},
+                    items: ['webapp/webapp_orchestration_dash', 'webapp/resource_policies']
+                },
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'ClearML Applications',
+                    link: {type: 'doc', id: 'webapp/applications/apps_overview'},
+                    items: [
+                        {
+                            "General": [
+                                'webapp/applications/apps_hpo',
+                                'webapp/applications/apps_dashboard',
+                                'webapp/applications/apps_task_scheduler',
+                                'webapp/applications/apps_trigger_manager',
+                            ]
+                        },
+                        {
+                            "AI Dev": [
+                                'webapp/applications/apps_ssh_session',
+                                'webapp/applications/apps_jupyter_lab',
+                                'webapp/applications/apps_vscode',
+                            ]
+                        },
+                        {
+                            "UI Dev": [
+                                'webapp/applications/apps_gradio',
+                                'webapp/applications/apps_streamlit'
+                            ]
+                        },
+                        {
+                            "Deploy": [
+                                'webapp/applications/apps_embed_model_deployment',
+                                'webapp/applications/apps_model_deployment',
+                                'webapp/applications/apps_llama_deployment'
+                            ]
+                        },
+                    ]
+                },
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Settings',
+                    link: {type: 'doc', id: 'webapp/settings/webapp_settings_overview'},
+                    items: ['webapp/settings/webapp_settings_profile',
+                        'webapp/settings/webapp_settings_admin_vaults', 'webapp/settings/webapp_settings_users',
+                        'webapp/settings/webapp_settings_access_rules', 'webapp/settings/webapp_settings_id_providers',
+                        'webapp/settings/webapp_settings_resource_configs', 'webapp/settings/webapp_settings_usage_billing',
+                        'webapp/settings/webapp_settings_storage_credentials'
+                    ]
+                },
+            ]
         },
-        {'Configuring ClearML': ['configs/configuring_clearml', 'configs/clearml_conf', 'configs/env_vars']},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Configuring ClearML',
+            link: {type: 'doc', id: 'configs/configuring_clearml'},
+            items: ['configs/clearml_conf', 'configs/env_vars']
+        },
         {'User Management': [
             'user_management/user_groups',
             'user_management/access_rules',
@@ -186,20 +270,27 @@ module.exports = {
             'user_management/identity_providers'
             ]
         },
-        {'ClearML Server': ['deploying_clearml/clearml_server',
-            {
-                'Deploying ClearML Server': ['deploying_clearml/clearml_server_aws_ec2_ami', 'deploying_clearml/clearml_server_gcp',
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Server',
+            link: {type: 'doc', id: 'deploying_clearml/clearml_server'},
+            items: [
+                {'Deploying ClearML Server':
+                    ['deploying_clearml/clearml_server_aws_ec2_ami', 'deploying_clearml/clearml_server_gcp',
                     'deploying_clearml/clearml_server_linux_mac', 'deploying_clearml/clearml_server_win',
                     'deploying_clearml/clearml_server_kubernetes_helm']
-            },
-            {
-                'Upgrading ClearML Server':['deploying_clearml/upgrade_server_aws_ec2_ami','deploying_clearml/upgrade_server_gcp',
+                },
+                {'Upgrading ClearML Server':
+                    ['deploying_clearml/upgrade_server_aws_ec2_ami','deploying_clearml/upgrade_server_gcp',
                     'deploying_clearml/upgrade_server_linux_mac', 'deploying_clearml/upgrade_server_win',
                     'deploying_clearml/upgrade_server_kubernetes_helm',
                     'deploying_clearml/clearml_server_es7_migration', 'deploying_clearml/clearml_server_mongo44_migration']
-            },
-            'deploying_clearml/clearml_server_config', 'deploying_clearml/clearml_server_security'
-        ]},
+                },
+                'deploying_clearml/clearml_server_config', 'deploying_clearml/clearml_server_security'
+            ]
+        },
 
         //'Comments': ['Notes'],
 
@@ -261,17 +352,110 @@ module.exports = {
             {'Web UI': ['guides/ui/building_leader_board','guides/ui/tuning_exp']}
 
     ],
-    rnSidebar: {
-        'Release Notes': [
-            'release_notes/ver_1_16', 'release_notes/ver_1_15',
-            'release_notes/ver_1_14', 'release_notes/ver_1_13', 'release_notes/ver_1_12', 'release_notes/ver_1_11',
-            'release_notes/ver_1_10', 'release_notes/ver_1_9', 'release_notes/ver_1_8', 'release_notes/ver_1_7',
-            'release_notes/ver_1_6', 'release_notes/ver_1_5', 'release_notes/ver_1_4', 'release_notes/ver_1_3',
-            'release_notes/ver_1_2','release_notes/ver_1_1', 'release_notes/ver_1_0', 'release_notes/ver_0_17',
-            'release_notes/ver_0_16', 'release_notes/ver_0_15', 'release_notes/ver_0_14', 'release_notes/ver_0_13',
-            'release_notes/ver_0_12', 'release_notes/ver_0_11', 'release_notes/ver_0_10', 'release_notes/ver_0_9',
-        ],
-    },
+    rnSidebar: [
+        {'Server': [
+            {
+                'Open Source':
+                        [
+                           'release_notes/clearml_server/open_source/ver_2_0',
+                           {
+                               'Older Versions': [
+                                   'release_notes/clearml_server/open_source/ver_1_17', 'release_notes/clearml_server/open_source/ver_1_16',
+                                   'release_notes/clearml_server/open_source/ver_1_15', 'release_notes/clearml_server/open_source/ver_1_14',
+                                   'release_notes/clearml_server/open_source/ver_1_13', 'release_notes/clearml_server/open_source/ver_1_12',
+                                   'release_notes/clearml_server/open_source/ver_1_11', 'release_notes/clearml_server/open_source/ver_1_10',
+                                   'release_notes/clearml_server/open_source/ver_1_9', 'release_notes/clearml_server/open_source/ver_1_8',
+                                   'release_notes/clearml_server/open_source/ver_1_7', 'release_notes/clearml_server/open_source/ver_1_6',
+                                   'release_notes/clearml_server/open_source/ver_1_5', 'release_notes/clearml_server/open_source/ver_1_4',
+                                   'release_notes/clearml_server/open_source/ver_1_3', 'release_notes/clearml_server/open_source/ver_1_2',
+                                   'release_notes/clearml_server/open_source/ver_1_1', 'release_notes/clearml_server/open_source/ver_1_0',
+                                   'release_notes/clearml_server/open_source/ver_0_17', 'release_notes/clearml_server/open_source/ver_0_16',
+                                   'release_notes/clearml_server/open_source/ver_0_15', 'release_notes/clearml_server/open_source/ver_0_14',
+                                   'release_notes/clearml_server/open_source/ver_0_13', 'release_notes/clearml_server/open_source/ver_0_12',
+                                   'release_notes/clearml_server/open_source/ver_0_11', 'release_notes/clearml_server/open_source/ver_0_10',
+                               ]
+                           }
+                        ]
+            },
+            {
+                'Enterprise':
+                        [
+                           'release_notes/clearml_server/enterprise/ver_3_24',
+                           {
+                                'Older Versions': [
+                                     'release_notes/clearml_server/enterprise/ver_3_23','release_notes/clearml_server/enterprise/ver_3_22',
+                                     'release_notes/clearml_server/enterprise/ver_3_21', 'release_notes/clearml_server/enterprise/ver_3_20'
+                                ]
+                           }
+                        ]
+            }
+        ]},
+        {'SDK': [
+            {
+                'Open Source':
+                        [
+                           'release_notes/sdk/open_source/ver_1_17',
+                           {
+                                'Older Versions': [
+                                   'release_notes/sdk/open_source/ver_1_16', 'release_notes/sdk/open_source/ver_1_15',
+                                   'release_notes/sdk/open_source/ver_1_14', 'release_notes/sdk/open_source/ver_1_13',
+                                   'release_notes/sdk/open_source/ver_1_12', 'release_notes/sdk/open_source/ver_1_11',
+                                   'release_notes/sdk/open_source/ver_1_10', 'release_notes/sdk/open_source/ver_1_9',
+                                   'release_notes/sdk/open_source/ver_1_8', 'release_notes/sdk/open_source/ver_1_7',
+                                   'release_notes/sdk/open_source/ver_1_6', 'release_notes/sdk/open_source/ver_1_5',
+                                   'release_notes/sdk/open_source/ver_1_4', 'release_notes/sdk/open_source/ver_1_3',
+                                   'release_notes/sdk/open_source/ver_1_2', 'release_notes/sdk/open_source/ver_1_1',
+                                   'release_notes/sdk/open_source/ver_1_0', 'release_notes/sdk/open_source/ver_0_17',
+                                   'release_notes/sdk/open_source/ver_0_16', 'release_notes/sdk/open_source/ver_0_15',
+                                   'release_notes/sdk/open_source/ver_0_14', 'release_notes/sdk/open_source/ver_0_13',
+                                   'release_notes/sdk/open_source/ver_0_12', 'release_notes/sdk/open_source/ver_0_11',
+                                   'release_notes/sdk/open_source/ver_0_10', 'release_notes/sdk/open_source/ver_0_9',
+                                   ]
+                           }
+                        ]
+            },
+            {
+                'Enterprise':
+                        [
+                           'release_notes/sdk/enterprise/ver_3_12',
+                           {
+                                'Older Versions': [
+                                   'release_notes/sdk/enterprise/ver_3_11',
+                                   'release_notes/sdk/enterprise/ver_3_10',
+                                ]
+                           }
+                        ]
+            }
+        ]},
+        {'ClearML Agent':
+            [
+                'release_notes/clearml_agent/ver_1_9',
+                {
+                    'Older Versions': [
+                        'release_notes/clearml_agent/ver_1_8',
+                        'release_notes/clearml_agent/ver_1_7', 'release_notes/clearml_agent/ver_1_6',
+                        'release_notes/clearml_agent/ver_1_5', 'release_notes/clearml_agent/ver_1_4',
+                        'release_notes/clearml_agent/ver_1_3', 'release_notes/clearml_agent/ver_1_2',
+                        'release_notes/clearml_agent/ver_1_1', 'release_notes/clearml_agent/ver_1_0',
+                        'release_notes/clearml_agent/ver_0_17', 'release_notes/clearml_agent/ver_0_16',
+                        'release_notes/clearml_agent/ver_0_15', 'release_notes/clearml_agent/ver_0_14',
+                        'release_notes/clearml_agent/ver_0_13', 'release_notes/clearml_agent/ver_0_12',
+                    ]
+                }
+            ]
+        },
+        {'ClearML Serving':
+            [
+                'release_notes/clearml_serving/ver_1_3',
+                {
+                    'Older Versions': [
+                        'release_notes/clearml_serving/ver_1_2',
+                        'release_notes/clearml_serving/ver_1_1', 'release_notes/clearml_serving/ver_1_0',
+                    ]
+                }
+            ]
+        }
+    ],
     sdkSidebar: [
             'references/sdk/task',
             'references/sdk/logger',

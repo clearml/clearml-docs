@@ -16,7 +16,7 @@ The example script does the following:
    dataset.
 1. Builds a sequential model using a categorical cross entropy loss objective function.
 1. Specifies accuracy as the metric, and uses two callbacks: a TensorBoard callback and a model checkpoint callback.
-1. During script execution, creates an experiment named `Keras with TensorBoard example` in the 
+1. During script execution, creates a task named `Keras with TensorBoard example` in the 
    `examples` project (in script) or the `Colab notebooks` project (in Jupyter Notebook).
 
 
@@ -53,7 +53,7 @@ Text printed to the console for training progress, as well as all other console 
 
 ## Configuration Objects
 
-In the experiment code, a configuration dictionary is connected to the Task by calling [`Task.connect()`](../../../references/sdk/task.md#connect). 
+A configuration dictionary is connected to the Task by calling [`Task.connect()`](../../../references/sdk/task.md#connect). 
 
 ```python
 task.connect_configuration(

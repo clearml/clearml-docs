@@ -19,7 +19,7 @@ The script does the following:
    Each Task in a subprocess references the main Task by calling [`Task.current_task()`](../../../references/sdk/task.md#taskcurrent_task), 
    which always returns the main Task.
 
-1. When the script runs, it creates an experiment named `test torch distributed` in the `examples` project in the **ClearML Web UI**.
+1. When the script runs, it creates a task named `test torch distributed` in the `examples` project in the **ClearML Web UI**.
 
 ### Artifacts
 

@@ -108,7 +108,7 @@ Want a more in depth introduction to ClearML? Choose where you want to get start
 ## What Can You Do with ClearML?
 
 - [Track and upload](../fundamentals/task.md) metrics and models with only 2 lines of code
-- [Reproduce](../webapp/webapp_exp_reproducing.md) experiments with 3 mouse clicks
+- [Reproduce](../webapp/webapp_exp_reproducing.md) tasks with 3 mouse clicks
 - [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on experiment behavior (for example,
 alert you whenever your model improves in accuracy)
 - Manage your [data](../clearml_data/clearml_data.md) - store, track, and version control 
@@ -120,7 +120,8 @@ GUI applications
 - Build [pipelines](../pipelines/pipelines.md) from code 
 - Much more!
 
-![Webapp gif](../img/gif/webapp_screenshots.gif)
+![Webapp gif](../img/gif/webapp_screenshots.gif#light-mode-only)
+![Webapp gif](../img/gif/webapp_screenshots_dark.gif#dark-mode-only)
 
 ## Who We Are
 ClearML is supported by you :heart: and the [clear.ml](https://clear.ml) team, which helps enterprise companies build scalable MLOps/LLMOps.

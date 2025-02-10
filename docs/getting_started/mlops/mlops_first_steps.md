@@ -9,7 +9,7 @@ This tutorial assumes that you've already [signed up](https://app.clear.ml) to C
 ClearML provides tools for **automation**, **orchestration**, and **tracking**, all key in performing effective MLOps and LLMOps. 
 
 Effective MLOps and LLMOps rely on the ability to scale work beyond one's own computer. Moving from your own machine can be time-consuming. 
-Even assuming that you have all the drivers and applications installed, you still need to manage multiple python environments
+Even assuming that you have all the drivers and applications installed, you still need to manage multiple Python environments
 for different packages / package versions, or worse - manage different Dockers for different package versions.
 
 Not to mention, when working on remote machines, executing experiments, tracking what's running where, and making sure machines 
@@ -17,11 +17,11 @@ are fully utilized at all times become daunting tasks.
 
 This can create overhead that derails you from your core work!
 
-ClearML Agent was designed to deal with such issues and more! It is a tool responsible for executing experiments on remote machines: on-premises or in the cloud! ClearML Agent provides the means to reproduce and track experiments in your 
+ClearML Agent was designed to deal with such issues and more! It is a tool responsible for executing tasks on remote machines: on-premises or in the cloud! ClearML Agent provides the means to reproduce and track tasks in your 
 machine of choice through the ClearML WebApp with no need for additional code.
 
 The agent will set up the environment for a specific Task's execution (inside a Docker, or bare-metal), install the 
-required python packages, and execute and monitor the process.
+required Python packages, and execute and monitor the process.
 
 
 ## Set up an Agent
@@ -54,40 +54,40 @@ required python packages, and execute and monitor the process.
 
 :::tip Agent Deployment Modes
 ClearML Agents can be deployed in:
-* [Virtual environment mode](../../clearml_agent/clearml_agent_execution_env.md): Agent creates a new venv to execute an experiment. 
-* [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode): Agent executes an experiment inside a 
+* [Virtual environment mode](../../clearml_agent/clearml_agent_execution_env.md): Agent creates a new venv to execute a task. 
+* [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode): Agent executes a task inside a 
 Docker container. 
 
 For more information, see [Running Modes](../../fundamentals/agents_and_queues.md#running-modes).  
 :::
 
-## Clone an Experiment
-Experiments can be reproduced (cloned) for validation or as a baseline for further experimentation. 
+## Clone a Task
+Tasks can be reproduced (cloned) for validation or as a baseline for further experimentation. 
 Cloning a task duplicates the task's configuration, but not its outputs.
 
-**To clone an experiment in the ClearML WebApp:** 
-1. Click on any project card to open its [experiments table](../../webapp/webapp_exp_table.md).
-1. Right-click one of the experiments on the table.
-1. Click **Clone** in the context menu, which will open a **CLONE EXPERIMENT** window.
+**To clone a task in the ClearML WebApp:** 
+1. Click on any project card to open its [task table](../../webapp/webapp_exp_table.md).
+1. Right-click one of the tasks on the table.
+1. Click **Clone** in the context menu, which will open a **CLONE TASK** window.
 1. Click **CLONE** in the window. 
 
-The newly cloned experiment will appear and its info panel will slide open. The cloned experiment is in draft mode, so 
-it can be modified. You can edit the Git / code references, control the python packages to be installed, specify the 
-Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Experiments](../../webapp/webapp_exp_tuning.md#modifying-experiments) for more information about editing experiments in the UI. 
+The newly cloned task will appear and its info panel will slide open. The cloned task is in draft mode, so 
+it can be modified. You can edit the Git / code references, control the Python packages to be installed, specify the 
+Docker container image to be used, or change the hyperparameters and configuration files. See [Modifying Tasks](../../webapp/webapp_exp_tuning.md#modifying-tasks) for more information about editing tasks in the UI. 
 
-## Enqueue an Experiment
-Once you have set up an experiment, it is now time to execute it. 
+## Enqueue a Task
+Once you have set up a task, it is now time to execute it. 
 
-**To execute an experiment through the ClearML WebApp:**
-1. Right-click your draft experiment (the context menu is also available through the <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> 
-   button on the top right of the experiment's info panel)
-1. Click **ENQUEUE,** which will open the **ENQUEUE EXPERIMENT** window
+**To execute a task through the ClearML WebApp:**
+1. Right-click your draft task (the context menu is also available through the <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> 
+   button on the top right of the task's info panel)
+1. Click **ENQUEUE,** which will open the **ENQUEUE TASK** window
 1. In the window, select `default` in the queue menu
 1. Click **ENQUEUE** 
 
-This action pushes the experiment into the `default` queue. The experiment's status becomes *Pending* until an agent 
-assigned to the queue fetches it, at which time the experiment's status becomes *Running*. The agent executes the 
-experiment, and the experiment can be [tracked and its results visualized](../../webapp/webapp_exp_track_visual.md).
+This action pushes the task into the `default` queue. The task's status becomes *Pending* until an agent 
+assigned to the queue fetches it, at which time the task's status becomes *Running*. The agent executes the 
+task, and the task can be [tracked and its results visualized](../../webapp/webapp_exp_track_visual.md).
 
 
 ## Programmatic Interface
@@ -95,7 +95,7 @@ experiment, and the experiment can be [tracked and its results visualized](../..
 The cloning, modifying, and enqueuing actions described above can also be performed programmatically.
 
 ### First Steps
-#### Access Previously Executed Experiments
+#### Access Previously Executed Tasks
 All Tasks in the system can be accessed through their unique Task ID, or based on their properties using the [`Task.get_task`](../../references/sdk/task.md#taskget_task) 
 method. For example:
 ```python
@@ -106,15 +106,15 @@ executed_task = Task.get_task(task_id='aabbcc')
 
 Once a specific Task object has been obtained, it can be cloned, modified, and more. See [Advanced Usage](#advanced-usage).
 
-#### Clone an Experiment
+#### Clone a Task
 
-To duplicate an experiment, use the [`Task.clone`](../../references/sdk/task.md#taskclone) method, and input either a 
+To duplicate a task, use the [`Task.clone`](../../references/sdk/task.md#taskclone) method, and input either a 
 Task object or the Task's ID as the `source_task` argument.   
 ```python
 cloned_task = Task.clone(source_task=executed_task)
 ```
 
-#### Enqueue an Experiment  
+#### Enqueue a Task  
 To enqueue the task, use the [`Task.enqueue`](../../references/sdk/task.md#taskenqueue) method, and input the Task object 
 with the `task` argument, and the queue to push the task into with `queue_name`.  
 
@@ -129,7 +129,7 @@ Before execution, use a variety of programmatic methods to manipulate a task obj
 [Hyperparameters](../../fundamentals/hyperparameters.md) are an integral part of Machine Learning code as they let you 
 control the code without directly modifying it. Hyperparameters can be added from anywhere in your code, and ClearML supports multiple ways to obtain them!
 
-Users can programmatically change cloned experiments' parameters.
+Users can programmatically change cloned tasks' parameters.
 
 For example:
 ```python
@@ -200,7 +200,7 @@ min_max_values = executed_task.get_last_scalar_metrics()
 full_scalars = executed_task.get_reported_scalars()
 ```
 
-#### Query Experiments
+#### Query Tasks
 You can also search and query Tasks in the system. Use the [`Task.get_tasks`](../../references/sdk/task.md#taskget_tasks) 
 class method to retrieve Task objects and filter based on the specific values of the Task - status, parameters, metrics and more!
 
@@ -219,7 +219,7 @@ Data is probably one of the biggest factors that determines the success of a pro
 the model's configuration, code, and results (such as accuracy) is key to deducing meaningful insights into model behavior.
 
 [ClearML Data](../../clearml_data/clearml_data.md) lets you version your data, so it's never lost, fetch it from every 
-machine with minimal code changes, and associate data to experiment results.
+machine with minimal code changes, and associate data to task results.
 
 Logging data can be done via command line, or programmatically. If any preprocessing code is involved, ClearML logs it 
-as well! Once data is logged, it can be used by other experiments.
+as well! Once data is logged, it can be used by other tasks.

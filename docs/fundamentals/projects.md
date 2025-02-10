@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-Projects are contextual containers for [tasks](task.md) and [models](artifacts.md) (as well as [dataviews](../hyperdatasets/dataviews.md) 
+Projects are contextual containers for [tasks](task.md) and [models](models.md) (as well as [dataviews](../hyperdatasets/dataviews.md) 
 when Hyper-Datasets are enabled), providing a logical structure similar to file system folders. 
 An often useful method is to categorize components into projects according to models or objectives. 
 Grouping into projects helps in identifying tasks, models, and dataviews when queried.
@@ -13,15 +13,15 @@ computer, making organization easier.
 Projects contain a textual description field for noting relevant information. The WebApp supports markdown rendering 
 of the description (see [overview](../webapp/webapp_project_overview.md)).
 
-In addition, the project's default output URI can be specified. When new experiments from 
+In addition, the project's default output URI can be specified. When new tasks from 
 the project are executed, the model checkpoints (snapshots) and artifacts are stored in the default output location. 
 
 ## WebApp 
 
 Users can create and modify projects, and see project details in the [WebApp](../webapp/webapp_home.md). 
-A project's description can be edited in its [overview](../webapp/webapp_project_overview.md) page. Each project's experiments,
-models, and dataviews, can be viewed in the project's [experiments table](../webapp/webapp_exp_table.md),
- [models table](../webapp/webapp_model_table.md), and [dataviews table](../hyperdatasets/webapp/webapp_dataviews.md). 
+A project's description can be edited in its [overview](../webapp/webapp_project_overview.md) page. Each project's tasks,
+models, and dataviews, can be viewed in the project's [task table](../webapp/webapp_exp_table.md),
+ [model table](../webapp/webapp_model_table.md), and [dataview table](../hyperdatasets/webapp/webapp_dataviews.md). 
 
 ## Usage
 

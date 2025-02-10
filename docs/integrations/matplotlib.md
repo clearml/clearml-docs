@@ -26,13 +26,13 @@ This will create a ClearML Task that captures:
 * And more
 
 View captured Matplotlib plots and images in the [WebApp](../webapp/webapp_exp_track_visual.md), 
-in the experiment's **Plots** and **Debug Samples** tabs respectively.
+in the task's **Plots** and **Debug Samples** tabs respectively.
 
-![Experiment plots](../img/examples_matplotlib_example_01.png)
+![Task plots](../img/examples_matplotlib_example_01.png)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your script, it captures all of your matplotlib visualizations. 
-But, you may want to have more control over what your experiment logs.
+But, you may want to have more control over what your task logs.
 
 To control a task's framework logging, use the `auto_connect_frameworks` parameter of [`Task.init()`](../references/sdk/task.md#taskinit). 
 Completely disable all automatic logging by setting the parameter to `False`. For finer grained control of logged 
@@ -65,14 +65,14 @@ logger.report_matplotlib_figure(title="My Plot Title", series="My Plot Series", 
 plt.show()
 ```
 
-The logged figure is displayed in the experiment's **Plots** tab. 
+The logged figure is displayed in the task's **Plots** tab. 
 
-![Experiment Matplotlib plots](../img/manual_matplotlib_reporting_01.png)
+![Task Matplotlib plots](../img/manual_matplotlib_reporting_01.png)
 
 Matplotlib figures can be logged as images by passing `report_image=True` to `Logger.report_matplotlib_figure()`. 
-View the images in the experiment's **DEBUG SAMPLES** tab.
+View the images in the task's **DEBUG SAMPLES** tab.
 
-![Experiment debug sample](../img/manual_matplotlib_reporting_03.png)
+![Task debug sample](../img/manual_matplotlib_reporting_03.png)
 
 See [Manual Matplotlib Reporting](../guides/reporting/manual_matplotlib_reporting.md) example.
 

@@ -7,7 +7,7 @@ In this tutorial, you will go over the model lifecycle -- from training to servi
 * Serving the model using **ClearML Serving**  
 * Spinning the inference container
 
-The tutorial will also go over these additional options that you can use with `clearml-serving`: 
+The tutorial also covers the following`clearml-serving` features: 
 * Automatic model deployment 
 * Canary endpoints
 * Model performance monitoring 
@@ -19,18 +19,17 @@ Before executing the steps below, make sure you have completed `clearml-serving`
 ##  Steps
 ### Step 1: Train Model
 
-Train a model. Work from your local `clearml-serving` repository's root. 
-  - Create a python virtual environment
-  - Install the script requirements `pip3 install -r examples/sklearn/requirements.txt`
-  - Execute the [training script](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/train_model.py) 
-    `python3 examples/sklearn/train_model.py`. 
+Train a model using the example script. Start from the root directory of your local `clearml-serving` repository.
+1. Create a Python virtual environment
+1. Install the script requirements: `pip3 install -r examples/sklearn/requirements.txt`
+1. Execute the [training script](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/train_model.py): `python3 examples/sklearn/train_model.py`. 
   
-During execution, ClearML automatically registers the sklearn model and uploads it into the model repository. 
+During execution, ClearML automatically registers the sklearn model and uploads it to the model repository. 
 For information about explicit model registration, see [Registering and Deploying New Models Manually](#registering-and-deploying-new-models-manually). 
 
 ### Step 2: Register Model
 
-Register the new Model on the Serving Service. 
+Register the new Model on the Serving Service:
 
 ```bash
 clearml-serving --id <service_id> model add --engine sklearn --endpoint "test_model_sklearn" --preprocess "examples/sklearn/preprocess.py" --name "train sklearn model - sklearn-model" --project "serving examples"
@@ -39,52 +38,53 @@ clearml-serving --id <service_id> model add --engine sklearn --endpoint "test_mo
 :::info Service ID
 Make sure that you have executed `clearml-serving`'s
 [initial setup](clearml_serving_setup.md#initial-setup), in which you create a Serving Service. 
-The Serving Service's ID is required to register a model, and to execute `clearml-serving`'s `metrics` and `config` commands 
+The Serving Service's ID is required to register a model, and to execute `clearml-serving`'s `metrics` and `config` commands. 
 :::
 
   
 :::note
-The preprocessing python code is packaged and uploaded to the Serving Service, to be used by any inference container, 
-and downloaded in realtime when updated
+The preprocessing Python code is packaged and uploaded to the Serving Service, to be used by any inference container, 
+and downloaded in real time when updated.
 :::
 
 ### Step 3: Spin Inference Container
 
-Spin the Inference Container
-  - Customize container [Dockerfile](https://github.com/allegroai/clearml-serving/blob/main/clearml_serving/serving/Dockerfile) if needed
-  - Build container:
+Spin the Inference Container:
+1. Customize container [Dockerfile](https://github.com/allegroai/clearml-serving/blob/main/clearml_serving/serving/Dockerfile) if needed
+1. Build container:
 
-    ```bash
-    docker build --tag clearml-serving-inference:latest -f clearml_serving/serving/Dockerfile .
-    ```
+   ```bash
+   docker build --tag clearml-serving-inference:latest -f clearml_serving/serving/Dockerfile .
+   ```
 
-  - Spin the inference container: 
+1. Spin the inference container: 
 
-    ```bash
-    docker run -v ~/clearml.conf:/root/clearml.conf -p 8080:8080 -e CLEARML_SERVING_TASK_ID=<service_id> -e CLEARML_SERVING_POLL_FREQ=5 clearml-serving-inference:latest
-    ``` 
+   ```bash
+   docker run -v ~/clearml.conf:/root/clearml.conf -p 8080:8080 -e CLEARML_SERVING_TASK_ID=<service_id> -e CLEARML_SERVING_POLL_FREQ=5 clearml-serving-inference:latest
+   ``` 
 
-Now, test the new model inference endpoint:
-```bash
-curl -X POST "http://127.0.0.1:8080/serve/test_model_sklearn" -H "accept: application/json" -H "Content-Type: application/json" -d '{"x0": 1, "x1": 2}'
-```  
+1. Test the new model inference endpoint:
+
+   ```bash
+   curl -X POST "http://127.0.0.1:8080/serve/test_model_sklearn" -H "accept: application/json" -H "Content-Type: application/json" -d '{"x0": 1, "x1": 2}'
+   ```  
 
 Now that you have an inference container running, you can add new model inference endpoints directly with the CLI. The 
-inference container will automatically sync once every 5 minutes. On the first few requests the inference container 
-needs to download the model file and preprocessing python code, this means the request might take a little longer, once 
-everything is cached, it will return almost immediately.
+inference container will automatically sync every 5 minutes. The first few requests may take longer while the inference container 
+downloads the model file and preprocessing Python code. Once 
+everything is cached, responses will return almost immediately.
 
 :::note
 Review the model repository in the ClearML web UI, under the "serving examples" Project on your ClearML 
 account/server ([free hosted](https://app.clear.ml) or [self-deployed](https://github.com/allegroai/clearml-server)).
 
 Inference services status, console outputs and machine metrics are available in the ClearML UI in the Serving Service 
-project (default: "DevOps" project)
+project (default: "DevOps" project).
 :::
 
 ## Registering and Deploying New Models Manually 
 
-Uploading an existing model file into the model repository can be done via the `clearml` RestAPI, the python interface, 
+Uploading an existing model file into the model repository can be done via the `clearml` RestAPI, the Python interface, 
 or with the `clearml-serving` CLI. 
 
 1. Upload the model file to the `clearml-server` file storage and register it. The `--path` parameter is used to input 
@@ -107,10 +107,17 @@ or with the `clearml-serving` CLI.
    ```
 
 :::info Model Storage
-You can also provide a different storage destination for the model, such as S3/GS/Azure, by passing
-`--destination="s3://bucket/folder"`, `s3://host_addr:port/bucket` (for non-AWS S3-like services like MinIO), `gs://bucket/folder`, `azure://<account name>.blob.core.windows.net/path/to/file`. There is no need to provide a unique 
+You can also provide a different storage destination for the model, such as S3/GS/Azure, by using
+`--destination`. For example:
+
+* S3: `s3://bucket/folder`
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
+* Google Cloud Storage: `gs://bucket-name/folder`
+* Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
+
+There is no need to provide a unique 
 path to the destination argument, the location of the model will be a unique path based on the serving service ID and the 
-model name
+model name.
 :::
 
 ## Additional Options 
@@ -119,18 +126,18 @@ model name
 
 The ClearML Serving Service supports automatic model deployment and upgrades, which is connected with the model 
 repository and API. When the model auto-deploy is configured, new model versions will be automatically deployed when you 
-`publish` or `tag` a new model in the ClearML model repository. This automation interface allows for simpler CI/CD model 
+`publish` or `tag` a new model in the ClearML model repository. This automation interface allows for a simpler CI/CD model 
 deployment process, as a single API automatically deploys (or removes) a model from the Serving Service.
 
 #### Automatic Model Deployment Example
 
-1. Configure the model auto-update on the Serving Service
+1. Configure the model auto-update on the Serving Service:
    
    ```bash
    clearml-serving --id <service_id> model auto-update --engine sklearn --endpoint "test_model_sklearn_auto" --preprocess "preprocess.py" --name "train sklearn model" --project "serving examples" --max-versions 2`
    ```
 1. Deploy the Inference container (if not already deployed)
-1. Publish a new model the model repository in one of the following ways:
+1. Publish a new model in the model repository in one of the following ways:
     - Go to the "serving examples" project in the ClearML web UI, click on the Models Tab, search for "train sklearn model" right-click and select "Publish"
     - Use the RestAPI (see [details](https://clear.ml/docs/latest/docs/references/api/models#post-modelspublish_many))
     - Use Python interface:
@@ -160,7 +167,7 @@ This means that any request coming to `/test_model_sklearn_canary/` will be rout
 
 :::note
 As with any other Serving Service configuration, you can configure the Canary endpoint while the Inference containers are 
-already running and deployed, they will get updated in their next update cycle (default: once every 5 minutes)
+already running and deployed, they will get updated in their next update cycle (default: once every 5 minutes).
 :::
 
 You can also prepare a "fixed" canary endpoint, always splitting the load between the last two deployed models:
@@ -244,17 +251,17 @@ With the new metrics logged, you can create a visualization dashboard over the l
 :::note
 If not specified all serving requests will be logged, which can be changed with the `CLEARML_DEFAULT_METRIC_LOG_FREQ` 
 environment variable. For example `CLEARML_DEFAULT_METRIC_LOG_FREQ=0.2` means only 20% of all requests will be logged. 
-You can also specify per-endpoint log frequency with the `clearml-serving` CLI. See [clearml-serving metrics](clearml_serving_cli.md#metrics)
+You can also specify per-endpoint log frequency with the `clearml-serving` CLI. See [clearml-serving metrics](clearml_serving_cli.md#metrics).
 :::
 
 ## Further Examples
 
 See examples of ClearML Serving with other supported frameworks:
 
-* [scikit-learn](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/readme.md) - random data
-* [scikit-learn Model Ensemble](https://github.com/allegroai/clearml-serving/blob/main/examples/ensemble/readme.md) - random data
-* [XGBoost](https://github.com/allegroai/clearml-serving/blob/main/examples/xgboost/readme.md) - iris dataset
-* [LightGBM](https://github.com/allegroai/clearml-serving/blob/main/examples/lightgbm/readme.md) - iris dataset
-* [PyTorch](https://github.com/allegroai/clearml-serving/blob/main/examples/pytorch/readme.md) - mnist dataset
-* [TensorFlow/Keras](https://github.com/allegroai/clearml-serving/blob/main/examples/keras/readme.md) - mnist dataset
-* [Model Pipeline](https://github.com/allegroai/clearml-serving/blob/main/examples/pipeline/readme.md) - random data
+* [scikit-learn](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/readme.md) - Random data
+* [scikit-learn Model Ensemble](https://github.com/allegroai/clearml-serving/blob/main/examples/ensemble/readme.md) - Random data
+* [XGBoost](https://github.com/allegroai/clearml-serving/blob/main/examples/xgboost/readme.md) - Iris dataset
+* [LightGBM](https://github.com/allegroai/clearml-serving/blob/main/examples/lightgbm/readme.md) - Iris dataset
+* [PyTorch](https://github.com/allegroai/clearml-serving/blob/main/examples/pytorch/readme.md) - MNIST dataset
+* [TensorFlow/Keras](https://github.com/allegroai/clearml-serving/blob/main/examples/keras/readme.md) - MNIST dataset
+* [Model Pipeline](https://github.com/allegroai/clearml-serving/blob/main/examples/pipeline/readme.md) - Random data

@@ -3,7 +3,7 @@ title: ClearML Parameter Search CLI (HPO)
 ---
 
 Use the `clearml-param-search` CLI tool to launch ClearML's automated hyperparameter optimization (HPO). This process finds 
-the optimal values for your experiments' hyperparameters that yield the best performing models. 
+the optimal values for your tasks' hyperparameters that yield the best performing models. 
 
 ## How Does `clearml-param-search` Work?
 
@@ -22,30 +22,30 @@ of the optimization results in table and graph forms.
 
 <div className="tbl-cmd">
 
-|Name | Description| Optional |
+|Name | Description| Mandatory |
 |---|----|---|
-|`--args`| List of `<argument>=<value>` strings to pass to the remote execution. Currently only argparse/click/hydra/fire arguments are supported. Example: `--args lr=0.003 batch_size=64`|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--compute-time-limit`|The maximum compute time in minutes that experiment can consume. If this time limit is exceeded, all jobs are aborted.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--max-iteration-per-job`|The maximum iterations (of the objective metric) per single job. When iteration maximum is exceeded, the job is aborted.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--max-number-of-concurrent-tasks`|The maximum number of concurrent Tasks (experiments) running at the same time|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--min-iteration-per-job`|The minimum iterations (of the objective metric) per single job.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--local`| If set, run the experiments locally. Notice that no new python environment will be created. The `--script` parameter must point to a local file entry point and all arguments must be passed with `--args`| <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--objective-metric-series`| Objective metric series to maximize/minimize (e.g. 'loss').|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--objective-metric-sign`| Optimization target, whether to maximize or minimize the value of the objective metric specified. Possible values: "min", "max", "min_global", "max_global". For more information, see [Optimization Objective](#optimization-objective). |<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--objective-metric-title`| Objective metric title to maximize/minimize (e.g. 'validation').|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--optimization-time-limit`|The maximum time (minutes) for the optimization to run. The default is `None`, indicating no time limit.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--optimizer-class`|The optimizer to use. Possible values are: OptimizerOptuna (default), OptimizerBOHB, GridSearch, RandomSearch. For more information, see [Supported Optimizers](../fundamentals/hpo.md#supported-optimizers). |<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--params-search`|Parameters space for optimization. See more information in [Specifying the Parameter Space](#specifying-the-parameter-space). |<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
-|`--params-override`|Additional parameters of the base task to override for this parameter search. Use the following JSON format for each parameter: `{"name": "param_name", "value": <new_value>}`. Windows users, see [JSON format note](#json_note).|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />| 
-|`--pool-period-min`|The time between two consecutive polls (minutes).|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--project-name`|Name of the project in which the optimization task will be created. If the project does not exist, it is created. If unspecified, the repository name is used.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--queue`|Queue to enqueue the experiments on.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--save-top-k-tasks-only`| Keep only the top \<k\> performing tasks, and archive the rest of the experiments. Input `-1` to keep all tasks. Default: `10`.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--script`|Script to run the parameter search on. Required unless `--task-id` is specified.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--task-id`|ID of a ClearML task whose hyperparameters will be optimized. Required unless `--script` is specified.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--task-name`|Name of the optimization task. If unspecified, the base Python script's file name is used.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--time-limit-per-job`|Maximum execution time per single job in minutes. When the time limit is exceeded, the job is aborted. Default: no time limit.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--total-max-jobs`|The total maximum jobs for the optimization process. The default value is `None` for unlimited.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--args`| List of `<argument>=<value>` strings to pass to the remote execution. Currently only argparse/click/hydra/fire arguments are supported. Example: `--args lr=0.003 batch_size=64`|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--compute-time-limit`|The maximum compute time in minutes that a task can consume. If this time limit is exceeded, all jobs are aborted.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--max-iteration-per-job`|The maximum iterations (of the objective metric) per single job. When iteration maximum is exceeded, the job is aborted.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--max-number-of-concurrent-tasks`|The maximum number of concurrent Tasks running at the same time.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--min-iteration-per-job`|The minimum iterations (of the objective metric) per single job.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--local`| If set, run the tasks locally. Notice that no new Python environment will be created. The `--script` parameter must point to a local file entry point and all arguments must be passed with `--args`.| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--objective-metric-series`| Objective metric series to maximize/minimize (e.g. 'loss').|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--objective-metric-sign`| Optimization target, whether to maximize or minimize the value of the objective metric specified. Possible values: "min", "max", "min_global", "max_global". For more information, see [Optimization Objective](#optimization-objective). |<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--objective-metric-title`| Objective metric title to maximize/minimize (e.g. 'validation').|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--optimization-time-limit`|The maximum time (minutes) for the optimization to run. The default is `None`, indicating no time limit.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--optimizer-class`|The optimizer to use. Possible values are: OptimizerOptuna (default), OptimizerBOHB, GridSearch, RandomSearch. For more information, see [Supported Optimizers](../fundamentals/hpo.md#supported-optimizers). |<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--params-search`|Parameters space for optimization. See more information in [Specifying the Parameter Space](#specifying-the-parameter-space). |<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--params-override`|Additional parameters of the base task to override for this parameter search. Use the following JSON format for each parameter: `{"name": "param_name", "value": <new_value>}`. Windows users, see [JSON format note](#json_note).|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />| 
+|`--pool-period-min`|The time between two consecutive polls (minutes).|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--project-name`|Name of the project in which the optimization task will be created. If the project does not exist, it is created. If unspecified, the repository name is used.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--queue`|Queue to enqueue the tasks on.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--save-top-k-tasks-only`| Keep only the top \<k\> performing tasks, and archive the rest of them. Input `-1` to keep all tasks. Default: `10`.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--script`|Script to run the parameter search on. Required unless `--task-id` is specified.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--task-id`|ID of a ClearML task whose hyperparameters will be optimized. Required unless `--script` is specified.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--task-name`|Name of the optimization task. If unspecified, the base Python script's file name is used.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--time-limit-per-job`|Maximum execution time per single job in minutes. When the time limit is exceeded, the job is aborted. Default: no time limit.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--total-max-jobs`|The total maximum jobs for the optimization process. The default value is `None` for unlimited.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 
 </div>
 
@@ -109,8 +109,8 @@ clearml-param-search --script base_template_keras_simple.py --params-search "{\"
 ### Optimization Objective
 
 Use the `--objective-metric-sign` to specify which optimum your optimization process should use. The options are: 
-* `min` - Least value of the specified objective metric reported at the end of the experiment
-* `max` - Greatest value of the specified objective metric reported at the end of the experiment
-* `min_global` - Least value of the specified objective metric reported at any time in the experiment
-* `max_global` - Greatest value of the specified objective metric reported at any time in the experiment
+* `min` - Least value of the specified objective metric reported at the end of the task
+* `max` - Greatest value of the specified objective metric reported at the end of the task
+* `min_global` - Least value of the specified objective metric reported at any time in the task
+* `max_global` - Greatest value of the specified objective metric reported at any time in the task
 

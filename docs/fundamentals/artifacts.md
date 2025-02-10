@@ -1,78 +1,59 @@
 ---
-title: Models
+title: Artifacts
 ---
 
-ClearML supports tracking, updating, and visualizing models.
+**Artifacts** are objects associated with ClearML [tasks](task.md) that are logged to ClearML, so they can later be 
+easily accessed, modified, and used. 
 
-Models are stored in ClearML as experiment artifacts, but unlike other artifacts that are dependent on their creating 
-task, models are independent entities with their own unique ID. Models can be accessed directly with a model object or 
-indirectly via their creating task. This property makes Models a standalone entry that can be used as an artifactory 
-interface.
+Task artifacts support built-in serialization for a wide range of object types, such as:
+* Numpy arrays (`.npz`)
+* Pandas DataFrames
+* PIL images (converted to `.jpg`)
+* Files and folders
+* Python objects
+* and more
 
-## Automatically Logging Models 
+ClearML also logs your tasks' input and output models as well as interim model checkpoints. Model artifacts also have 
+unique ClearML Model IDs (see [Models](models.md)).
 
-Once integrated into code, ClearML automatically logs and tracks models and any snapshots created by the following 
-frameworks:
-* [TensorFlow](../integrations/tensorflow.md)
-* [Keras](../integrations/keras.md)
-* [PyTorch](../integrations/pytorch.md)
-* [scikit-learn](../integrations/scikit_learn.md) (only using joblib)
-* [XGBoost](../integrations/xgboost.md) (only using joblib)
-* [Fast.ai](../integrations/fastai.md)
-* [MegEngine](../integrations/megengine.md)
-* [CatBoost](../integrations/catboost.md)
-* [MONAI](../integrations/monai.md)
+Artifacts allow you to:
+* **Track Task Inputs**: Record non source-controlled data to reproduce your workflows.
+* **Compare Outputs**: Easily access model snapshots.
+* **Build Elaborate Workflows**: Implement pipelines by using the outputs of one task as inputs to another (e.g. a data 
+cleaning task logs its clean dataset for use by a subsequent training task).
 
-When a supported framework loads a weights file, the running task will be automatically updated, with its input model 
-pointing directly to the original training task's model.
+## Logging Artifacts
+ClearML automatically logs artifacts created by popular frameworks, including TensorFlow and PyTorch. See [supported frameworks](../clearml_sdk/task_sdk.md#automatic-logging).
 
-## Manually Logging Models
+You can also log any other object using [`Task.upload_artifact()`](../references/sdk/task.md#upload_)artifact. See 
+the [Artifacts Reporting](../guides/reporting/artifacts.md) example for details.
 
-### Output Models
+ClearML can be configured to upload artifacts to any supported types of storage, which include local and shared folders, 
+AWS S3 buckets, Google Cloud Storage, and Azure Storage (see [Storage](../integrations/storage.md)).
 
-ClearML stores training results as output models. The `OutputModel` object is instantiated with a task object as an 
-argument (see [`task`](../references/sdk/model_outputmodel.md) parameter), so it's automatically registered as the Task's 
-output model. Since OutputModel objects are connected to tasks, the models are traceable in experiments.
+## Updating Artifacts Dynamically
 
-Output models are read-write so weights can be updated throughout training. Additionally, users can specify a model's 
-network design and label enumeration. Once an output model is registered, it can be used as the input model for another 
-experiment.
+Clearml can automatically update artifacts as their contents change while your task is running through the use of 
+[`register_artifact()`](../references/sdk/task.md#register_artifact).
 
-The snapshots of manually uploaded models aren't automatically captured, but ClearML provides methods to update them 
-through a `Task` or `OutputModel` object.
+## Accessing Artifacts
+Task artifacts can be accessed by other tasks. To use an artifact, first retrieve the `Task` that created it. Then use 
+one of the following methods:
+* `get_local_copy()`: Caches the file for later use and returns its path.
+* `get()`: Directly retrieves the Python object associated with the artifact.
 
-### Input Models  
-
-ClearML provides flexibility for explicitly connecting input models and experimentation, including:
-
-* Importing pre-trained models from external sources such as Amazon AWS, GIT repositories, PyTorch, and TensorFlow
-* Using standalone models already registered in ClearML by previously run experiments
-* Defining your own input models in scripts
-  
-## Setting Upload Destination
-
-* ClearML automatically captures the storage path of Models created by supported frameworks. By default, it stores the 
-  local path they are saved to.
-* Upload destinations can be specified explicitly on a per OutputModel or per experiment basis. Alternatively, the upload 
-  destination of all OutputModels can be specified in the ClearML [configuration file](../configs/clearml_conf.md). 
+For more information, see [Using Artifacts](../clearml_sdk/task_sdk.md#using-artifacts).
 
 ## WebApp Interface
+Artifacts appear under the **ARTIFACTS** tab of a Task. Each artifact's location is displayed in the **FILE PATH** field:
+* **Locally stored artifacts**: Include an option to copy the artifact’s location for accessibility (since web 
+applications are prohibited from accessing the local disk for security reasons)
+* **Network stored artifacts**: Display a download action to retrieve files from URLs (e.g., `https://`, `s3://`).
 
-In the ClearML's web UI, model information can be located through a project's Model Table or through the model's creating 
-task.
-
-Models associated with a task appear in the task's **ARTIFACTS** tab. To see further model details, including design, 
-label enumeration, lineage, and general information, click the model name, which is a hyperlink to the 
-[model's detail page](../webapp/webapp_model_viewing.md).
-
-Models can also be accessed through their associated project's [Model Table](../webapp/webapp_model_table.md), where all 
-the models associated with a project are listed.
-
-![WebApp Model](../img/fundamentals_models.png) 
+![WebApp Artifacts section](../img/webapp_tracking_30.png#light-mode-only)
+![WebApp Artifacts section](../img/webapp_tracking_30_dark.png#dark-mode-only)
 
 ## SDK Interface
-
-See [the Models SDK interface](../clearml_sdk/model_sdk.md) for an overview for using the most basic Pythonic methods of the model 
-classes. See a detailed list of all available methods in the [Model](../references/sdk/model_model.md), [OutputModel](../references/sdk/model_outputmodel.md), and [InputModel](../references/sdk/model_inputmodel.md) 
-reference pages. 
+See the [Artifacts](../clearml_sdk/task_sdk.md#artifacts) section in the Task SDK page for an overview of how to work 
+with ClearML Artifacts using Pythonic methods. 
 

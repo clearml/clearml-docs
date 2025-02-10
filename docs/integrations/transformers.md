@@ -9,13 +9,13 @@ ClearML automatically logs Transformer's models, parameters, scalars, and more.
 
 All you have to do is install and set up ClearML:
 
-1. Install the `clearml` python package:
+1. Install the `clearml` Python package:
 
    ```commandline
    pip install clearml
    ``` 
    
-1. To keep track of your experiments and/or data, ClearML needs to communicate to a server. You have 2 server options:
+1. To keep track of your tasks and/or data, ClearML needs to communicate to a server. You have 2 server options:
     * Sign up for free to the [ClearML Hosted Service](https://app.clear.ml/) 
     * Set up your own server, see [here](../deploying_clearml/clearml_server.md).  
 1. Connect the ClearML SDK to the server by creating credentials (go to the top right in the UI to **Settings > Workspace > Create new credentials**), 
@@ -25,7 +25,7 @@ All you have to do is install and set up ClearML:
    clearml-init
    ```
     
-That's it! In every training run from now on, the ClearML experiment 
+That's it! In every training run from now on, the ClearML task 
 manager will capture:
 * Source code and uncommitted changes
 * Hyperparameters - PyTorch trainer [parameters](https://huggingface.co/docs/transformers/v4.34.1/en/main_classes/trainer#transformers.TrainingArguments)
@@ -52,17 +52,17 @@ You can see all the captured data in the task's page of the ClearML [WebApp](../
 
 ![transformers scalars](../img/integrations_transformers_scalars.png)
 
-Additionally, you can view all of your Transformers runs tracked by ClearML in the [Experiments Table](../webapp/webapp_model_table.md). 
+Additionally, you can view all of your Transformers runs tracked by ClearML in the [Task Table](../webapp/webapp_model_table.md). 
 Add custom columns to the table, such as mAP values, so you can easily sort and see what is the best performing model. 
-You can also select multiple experiments and directly [compare](../webapp/webapp_exp_comparing.md) them.   
+You can also select multiple tasks and directly [compare](../webapp/webapp_exp_comparing.md) them.   
 
 See an example of Transformers and ClearML in action [here](../guides/frameworks/huggingface/transformers.md). 
 
 ## Remote Execution
-ClearML logs all the information required to reproduce an experiment on a different machine (installed packages, 
+ClearML logs all the information required to reproduce a task on a different machine (installed packages, 
 uncommitted changes etc.). The [ClearML Agent](../clearml_agent.md) listens to designated queues and when a task is 
 enqueued, the agent pulls it, recreates its execution environment, and runs it, reporting its scalars, plots, etc. to the 
-experiment manager.
+task manager.
 
 Deploy a ClearML Agent onto any machine (e.g. a cloud VM, a local GPU machine, your own laptop) by simply running 
 the following command on it:
@@ -82,7 +82,7 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
-* Clone the experiment
+* Clone the task
 * Edit the hyperparameters and/or other details 
 * Enqueue the task
 

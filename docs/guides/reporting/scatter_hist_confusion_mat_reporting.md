@@ -8,9 +8,9 @@ example demonstrates reporting series data in the following 2D formats:
 * [Confusion matrices](#confusion-matrices)
 * [Scatter plots](#2d-scatter-plots) 
 
-ClearML reports these tables in the **ClearML Web UI**, experiment details **>** **PLOTS** tab. 
+ClearML reports these tables in the **ClearML Web UI** **>** task's **PLOTS** tab. 
 
-When the script runs, it creates an experiment named `2D plots reporting` in the `examples` project.
+When the script runs, it creates a task named `2D plots reporting` in the `examples` project.
 
 ## Histograms
 

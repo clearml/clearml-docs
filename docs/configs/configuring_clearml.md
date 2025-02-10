@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: Configuring ClearML
 ---
 
 ClearML can be tailored to your requirements by setting configurations in a variety of methods. All ClearML and ClearML 
@@ -13,7 +13,7 @@ specification.
 
 Enterprise users can insert configuration snippets into the configuration vault. When enabled, configuration entries 
 from the vault are applied on top of the configuration specified in `clearml.conf`. New definitions will extend the
-`clearml.conf` configurations, and existing definitions will be overridden. For more information, see [Configuration Vault](../webapp/webapp_profile.md#configuration-vault).
+`clearml.conf` configurations, and existing definitions will be overridden. For more information, see [Configuration Vault](../webapp/settings/webapp_settings_profile.md#configuration-vault).
 
 The different ClearML configuration methods take precedence as summarized in the following list (higher ordered methods 
 override the lower ones):

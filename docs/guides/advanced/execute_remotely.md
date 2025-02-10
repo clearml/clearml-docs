@@ -28,7 +28,7 @@ moved to be executed by a stronger machine.
 
 During the execution of the example script, the code does the following:
 * Uses ClearML's automatic and explicit logging.
-* Creates an experiment named `Remote_execution PyTorch MNIST train` in the `examples` project.
+* Creates an task named `Remote_execution PyTorch MNIST train` in the `examples` project.
 
 
 ## Scalars
@@ -55,26 +55,26 @@ Logger.current_logger().report_scalar(
 )
 ```    
 
-These scalars can be visualized in plots, which appear in the ClearML web UI, in the experiment's **SCALARS** tab. 
+These scalars can be visualized in plots, which appear in the ClearML web UI, in the task's **SCALARS** tab. 
 
-![Experiment Scalars](../../img/examples_pytorch_mnist_07.png)
+![Task Scalars](../../img/examples_pytorch_mnist_07.png)
 
 ## Hyperparameters
 
 ClearML automatically logs command line options defined with `argparse`. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **Args**.
 
-![Experiment hyperparameters](../../img/examples_pytorch_mnist_01.png)
+![Task hyperparameters](../../img/examples_pytorch_mnist_01.png)
 
 ## Console
 
 Text printed to the console for training progress, as well as all other console output, appear in **CONSOLE**.
 
-![Experiment console log](../../img/examples_pytorch_mnist_06.png)
+![Task console log](../../img/examples_pytorch_mnist_06.png)
 
 ## Artifacts
 
-Models created by the experiment appear in the experiment's **ARTIFACTS** tab. ClearML automatically logs and tracks models
+Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks models
 and any snapshots created using PyTorch. 
 
-![Experiment artifacts](../../img/examples_remote_execution_artifacts.png)
+![Task artifacts](../../img/examples_remote_execution_artifacts.png)
 
