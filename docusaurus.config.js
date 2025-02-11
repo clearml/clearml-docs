@@ -51,10 +51,10 @@ module.exports = {
       // Optional: see doc section below
       //algolia contextualSearch: true,},
     zoomSelector: '.markdown :not(em) > img',
-    colorMode: {
-      defaultMode: 'light',
-      disableSwitch: false,
-      respectPrefersColorScheme: true,
+//    colorMode: {
+//      defaultMode: 'light',
+//      disableSwitch: false,
+//      respectPrefersColorScheme: true,
       // switchConfig: {
         // darkIcon: '\u{1F319}',
         // lightIcon: '\u{1F315}',
@@ -65,7 +65,7 @@ module.exports = {
           // marginLeft: '1px',
         // },
       // },
-    },
+//    },
     announcementBar: {
       id: 'supportus',
       content: 'If you ❤️ ️<b>ClearML</b>, ⭐️ us on <a target="_blank" rel="noopener noreferrer" href="https://github.com/allegroai/clearml">GitHub</a>!',
