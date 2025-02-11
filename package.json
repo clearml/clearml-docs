@@ -23,7 +23,7 @@
     "@docusaurus/plugin-google-analytics": "^3.6.1",
     "@docusaurus/plugin-google-gtag": "^3.6.1",
     "@docusaurus/preset-classic": "^3.6.1",
-    "@easyops-cn/docusaurus-search-local": "^0.23.3",
+    "@easyops-cn/docusaurus-search-local": "^0.48.0",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.1.1",
     "medium-zoom": "^1.0.6",
@@ -35,7 +35,8 @@
   },
   "overrides": {
     "@cmfcmf/docusaurus-search-local": {
-      "@docusaurus/core": "^3.5.2"
+      "@docusaurus/core": "^3.5.2",
+      "cheerio": "1.0.0-rc.12"
     }
   },
   "devDependencies": {
@@ -63,8 +64,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "resolutions": {
-    "cheerio": "1.0.0-rc.12"
   }
 }
