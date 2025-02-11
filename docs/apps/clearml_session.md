@@ -41,7 +41,7 @@ error, you are good to go.
    clearml-session 
    ```    
 
-   You can add flags to set a Docker image, the remote SSH port, JupyterLab/VS Code versions, and more. See [CLI options](#command-line-options) 
+   You can add flags to set a container image, the remote SSH port, JupyterLab/VS Code versions, and more. See [CLI options](#command-line-options) 
    for all configuration options.  
    
    `clearml-session` creates a new [Task](../fundamentals/task.md) that is responsible for setting up the SSH and 
@@ -57,8 +57,8 @@ error, you are good to go.
    launches it.  
 
 1. Once the agent finishes the initial setup of the interactive Task, the local `cleaml-session` connects to the host 
-   machine via SSH, and tunnels both SSH and IDE over the SSH connection. If a Docker is specified, the 
-   IDE environment runs inside the Docker. 
+   machine via SSH, and tunnels both SSH and IDE over the SSH connection. If a container is specified, the 
+   IDE environment runs inside of it. 
    
 1. The CLI outputs access links to the remote JupyterLab and VS Code sessions:  
 
@@ -101,13 +101,13 @@ When `clearml-session` is launched, it initializes a task with a unique ID in th
 
 To connect to an existing session: 
 1. Go to the web UI, find the interactive session task (by default, it's in project "DevOps").
-1. Click the `ID` button in the task page's header to copy the unique ID.
+1. Copy the unique ID by clicking the `ID` button in the task page's header.
 1. Run the following command: `clearml-session --attach <session_id>`.
 1. Click on the JupyterLab / VS Code link that is outputted, or connect directly to the SSH session
 
 ## Features 
-### Running in Docker
-To run a session inside a Docker container, use the `--docker` flag and enter the docker image to use in the interactive 
+### Running in a Container
+To run a session inside a container, use the `--docker` flag and enter the image to use in the interactive 
 session.
 
 ### Kubernetes Support 
@@ -169,7 +169,7 @@ clearml-session --upload-files /mnt/data/stuff
 You can upload your files in conjunction with the `--store-workspace` option to easily move workloads between local 
 development machines and remote machines with persistent workspace synchronization. See [Storing and Synchronizing Workspace](#storing-and-synchronizing-workspace).
 
-### Starting a Debugging Session 
+### Starting a Debugging Session
 You can debug previously executed tasks registered in the ClearML system on a remote interactive session. 
 Input into `clearml-session` the ID of a Task to debug, then `clearml-session` clones the task's git repository and 
 replicates the environment on a remote machine. Then the code can be interactively executed and debugged on JupyterLab / VS Code. 
@@ -179,7 +179,7 @@ The Task must be connected to a git repository, since currently single script de
 :::
 
 1. In the **ClearML web UI**, find the task that needs debugging.
-1. Click the `ID` button next to the Task name, and copy the unique ID.
+1. Copy the unique ID by clicking the `ID` button in the task page's header.
 1. Enter the following command: `clearml-session --debugging-session <task_id>`
 1. Click on the JupyterLab / VS Code link, or connect directly to the SSH session.
 1. In JupyterLab / VS Code, access the task's repository in the `environment/task_repository` folder. 
@@ -224,8 +224,8 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--disable-fingerprint-check` | If set, bypass the remote SSH server fingerprint verification process | `none` |
 | `--disable-session-cleanup` | If `True`, previous interactive sessions are not deleted | `false`|
 | `--disable-store-defaults` | If set, do not store current setup as new default configuration| `none`|
-| `--docker`| Select the docker image to use in the interactive session |`nvidia/cuda:11.6.2-runtime-ubuntu20.04` or previously used docker image|
-| `--docker-args` | Add additional arguments for the docker image to use in the interactive session | `none` or the previously used docker-args |
+| `--docker`| Select the image to use in the interactive session |`nvidia/cuda:11.6.2-runtime-ubuntu20.04` or previously used image|
+| `--docker-args` | Add additional arguments for the docker image to use in the interactive session | `none` or the previously used `docker-args` |
 | `--force_dropbear`| Force using `dropbear` instead of SSHd |`none`| 
 | `--git-credentials` | If `True`, local `.git-credentials` file is sent to the interactive session.| `false`|
 | `--init-script` | Specify a BASH init script file to be executed when the interactive session is being set up | `none` or previously entered BASH script |
@@ -253,9 +253,9 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--username`| Set your own SSH username for the interactive session | `root` or a previously used username | 
 | `--verbose` | Increase verbosity of logging | `none` |
 | `--version`| Display the clearml-session utility version| N/A|
-| `--vscode-extensions` |Install additional VSCode extensions and VSCode python extensions (example: `ms-python.python,ms-python.black-formatter,ms-python.pylint,ms-python.flake8`)|`none`|
+| `--vscode-extensions` |Install additional VSCode extensions and VSCode Python extensions (example: `ms-python.python,ms-python.black-formatter,ms-python.pylint,ms-python.flake8`)|`none`|
 | `--vscode-server` | Install VSCode on interactive session | `true` |
-| `--vscode-version` | Set VSCode server (code-server) version, as well as VSCode python extension version `<vscode:python-ext>` (example: "3.7.4:2020.10.332292344")| `4.14.1:2023.12.0`|
+| `--vscode-version` | Set VSCode server (code-server) version, as well as VSCode Python extension version `<vscode:python-ext>` (example: "3.7.4:2020.10.332292344")| `4.14.1:2023.12.0`|
 | `--yes`, `-y`| Automatic yes to prompts; assume "yes" as answer to all prompts and run non-interactively |N/A|
 
 </div>

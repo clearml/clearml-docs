@@ -7,7 +7,7 @@ You can view the differences in model details, configuration, scalar values, and
 
 ## Selecting Models to Compare
 To select models to compare:
-1. Go to a models table that includes the models to be compared.
+1. Go to a model table that includes the models to be compared.
 1. Select the models to compare. Once multiple models are selected, the batch action bar appears.
 1. In the batch action bar, click **COMPARE**. 
 
@@ -23,8 +23,10 @@ it from the comparison.
 You can add/remove models to your comparison:
 1. Click the `+` button in any of the comparison tabs. This opens up a window with a model table with the currently 
 compared models at the top.
+
    ![Adding models](../img/webapp_compare_model_select_2.png#light-mode-only)
-![Adding models](../img/webapp_compare_model_select_2_dark.png#dark-mode-only)
+   ![Adding models](../img/webapp_compare_model_select_2_dark.png#dark-mode-only)
+
 1. Find the models to add by sorting and [filtering](webapp_model_table.md#filtering-columns) the models with the 
 appropriate column header controls. Alternatively, use the search bar to find models by name.
 1. Select models to include in the comparison (and/or clear the selection of any models you wish to remove).
@@ -57,9 +59,9 @@ information is displayed in a column, so each field is lined up side-by-side.
 
 The model on the left is used as the base model, to which the other models are compared. You can set a new base model 
 in one of the following ways:
-* Hover and click <img src="/docs/latest/icons/ico-switch-base.svg" alt="Switch base task" className="icon size-md space-sm" /> 
+* Hover and click <img src="/docs/latest/icons/ico-arrow-from-right.svg" alt="Switch base model" className="icon size-md space-sm" /> 
 on the model that will be the new base.
-* Hover and click <img src="/docs/latest/icons/ico-pan.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base model and drag it all the way to the left
+* Hover and click <img src="/docs/latest/icons/ico-drag.svg" alt="Pan icon" className="icon size-md space-sm" /> on the new base model and drag it all the way to the left
 
 The differences between the models are highlighted. You can obscure identical fields by switching on the
 **Hide Identical Fields** toggle.
@@ -82,16 +84,25 @@ Switch on the **Show row extremes** toggle to highlight each variant's maximum a
 ![side-by-side scalar comparison](../img/webapp_compare_models_scalar_table_dark.png#dark-mode-only)
 
 
-### Graphic Comparison
-The **Scalars** (Graph view) and **Plots** tabs display plots attached to the models. The **Scalars** tab compares 
-scalar values as time series line charts. The **Plots** tab compares the last reported iteration sample of each 
-metric/variant combination per compared model. 
+### Plot Comparison
+The **Scalars** (Graph view) and **Plots** tabs display plots attached to the models. 
 
-Line, scatter, box, and bar graphs are compared by a single plot per metric/variant into which the plots of all compared 
-models are combined.
+The **Scalars** tab compares scalar values as time series line charts. The **Plots** tab compares the last reported 
+iteration sample of each metric/variant combination per compared model.
 
-![Merged plots](../img/webapp_compare_models_merge_plots.png#light-mode-only)
-![Merged plots](../img/webapp_compare_models_merge_plots_dark.png#dark-mode-only)
+Line, scatter, box, and bar graphs are compared by overlaying each metric/variant from all compared models' into a single 
+comparative plot.
+
+For overlaid plots, use **Group by** to select how to group plots:
+* **Metric** - All variants for a metric appear on the same plot.
+
+   ![Scalar plot grouped by metric](../img/webapp_compare_models_merge_plots.png#light-mode-only)
+   ![Scalar plot grouped by metric](../img/webapp_compare_models_merge_plots_dark.png#dark-mode-only)
+
+* **Metric+Variant** (default) - Every variant appears on its own plot.
+
+   ![Scalar plot grouped by metric and variant](../img/webapp_compare_models_variant_plots.png#light-mode-only)
+   ![Scalar plot grouped by metric and variant](../img/webapp_compare_models_variant_plots_dark.png#dark-mode-only)
 
 Other plot types are displayed separately for each model.
 

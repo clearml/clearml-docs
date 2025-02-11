@@ -27,7 +27,7 @@ clearml-session --docker nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04 --packages 
 
 This sets the following arguments:
 
-* `--docker nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04` - Docker image
+* `--docker nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04` - Container image
     
 * `--packages "clearml" "tensorflow>=2.2" "keras"` - Required Python packages
       
@@ -39,7 +39,7 @@ name is `DevOps`.
 :::
    
 After launching the command, the `clearml-agent` listening to the `default` queue spins a remote Jupyter environment with 
-the specifications. It will automatically connect to the docker on the remote machine. 
+the specifications. It will automatically connect to the container on the remote machine. 
    
 The console should display the session's configuration details:
     

@@ -25,7 +25,7 @@ ClearML is designed to get you up and running in less than 10 minutes and 2 magi
 
 At the heart of ClearML lies the experiment manager. It consists of the `clearml` pip package and the ClearML Server. 
 
-After running `pip install clearml` we can add 2 simple lines of python code to your existing codebase. These 2 lines will capture all the output that your code produces: logs, source code, hyperparameters, plots, images, you name it.
+After running `pip install clearml` we can add 2 simple lines of Python code to your existing codebase. These 2 lines will capture all the output that your code produces: logs, source code, hyperparameters, plots, images, you name it.
 
 The pip package also includes `clearml-data`. It can help you keep track of your ever-changing datasets and provides an easy way to store, track and version control your data. It's also an easy way to share your dataset with colleagues over multiple machines while keeping track of who has which version. ClearML Data can even keep track of your data's ancestry, making sure you can always figure out where specific parts of your data came from.
 

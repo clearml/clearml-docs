@@ -3,7 +3,7 @@ title: Executable Task Containers
 ---
 
 This tutorial demonstrates using [`clearml-agent`](../../clearml_agent.md)'s [`build`](../../clearml_agent/clearml_agent_ref.md#build) 
-command to package a task into an executable container. In this example, you will build a Docker image that, when 
+command to package a task into an executable container. In this example, you will build a container image that, when 
 run, will automatically execute the [keras_tensorboard.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py)
 script.
 
@@ -44,8 +44,8 @@ script.
    If the container will not make use of a GPU, add the `--cpu-only` flag.
    :::
 
-   This command will create a Docker container, set up with the execution environment for this task in the 
-   specified `--target` folder. When the Docker container is launched, it will clone the task specified with `id` and 
+   This command will create a container, set up with the execution environment for this task in the 
+   specified `--target` folder. When the container is launched, it will clone the task specified with `id` and 
    execute the clone (as designated by the `--entry-point` parameter).
 
 1. Run the Docker, pointing to the new container:

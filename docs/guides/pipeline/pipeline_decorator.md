@@ -6,7 +6,7 @@ The [pipeline_from_decorator.py](https://github.com/allegroai/clearml/blob/maste
 example demonstrates the creation of a pipeline in ClearML using the [`PipelineDecorator`](../../references/sdk/automation_controller_pipelinecontroller.md#class-automationcontrollerpipelinedecorator)
 class. 
 
-This example creates a pipeline incorporating four tasks, each of which is created from a python function using a custom decorator:
+This example creates a pipeline incorporating four tasks, each of which is created from a Python function using a custom decorator:
 * `executing_pipeline`- Implements the pipeline controller which defines the pipeline structure and execution logic.
 * `step_one` - Downloads and processes data.
 * `step_two` - Further processes the data from `step_one`.

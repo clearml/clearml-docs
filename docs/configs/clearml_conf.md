@@ -339,13 +339,13 @@ optional shell script executes inside the Docker on startup, before the task sta
 
 **`agent.ignore_requested_python_version`** (*bool*)
 
-  * Indicates whether to ignore any requested python version 
+  * Indicates whether to ignore any requested Python version 
   
   * The values are:
     
-    * `true` - ignore any requested python version
-    * `false` - if a task was using a specific python version, and the system supports multiple versions, the agent will 
-      use the requested python version (default)
+    * `true` - ignore any requested Python version
+    * `false` - if a task was using a specific Python version, and the system supports multiple versions, the agent will 
+      use the requested Python version (default)
 
 ___
 

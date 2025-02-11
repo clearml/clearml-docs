@@ -11,7 +11,7 @@ built in logger:
 * Turn your newly trained YOLOv5 model into an API with just a few commands using [ClearML Serving](../clearml_serving/clearml_serving.md)
 
 ## Setup
-1. Install the clearml python package:
+1. Install the clearml Python package:
 
    ```commandline
    pip install clearml

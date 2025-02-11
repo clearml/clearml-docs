@@ -29,18 +29,18 @@ The preceding diagram demonstrates a typical flow where an agent executes a task
 
 1. Enqueue a task for execution on the queue.
 1. The agent pulls the task from the queue.
-1. The agent launches a docker container in which to run the task's code.
+1. The agent launches a container in which to run the task's code.
 1. The task's execution environment is set up:
    1.  Execute any custom setup script configured.
    1.  Install any required system packages.
    1.  Clone the code from a git repository.
    1.  Apply any uncommitted changes recorded.
-   1.  Set up the python environment and required packages.
+   1.  Set up the Python environment and required packages.
 1. The task's script/code is executed.  
 
 :::note Python Version
-ClearML Agent uses the Python version available in the environment or docker in which it executes the code. It does not 
-install Python, so make sure to use a docker or environment with the version you need.
+ClearML Agent uses the Python version available in the environment or container in which it executes the code. It does not 
+install Python, so make sure to use a container or environment with the version you need.
 ::: 
 
 While the agent is running, it continuously reports system metrics to the ClearML Server (these can be monitored in the 

@@ -33,9 +33,12 @@ times.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration 
 
+<div class="max-w-65">
+
 ![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard.png#light-mode-only)
 ![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard_dark.png#dark-mode-only)
 
+</div>
  
 ## Dashboard
 

@@ -38,8 +38,12 @@ of the chosen metric over time.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration.
   
+<div class="max-w-65">
+
 ![Dashboard app instance launch form](../../img/apps_dashboard_wizard.png#light-mode-only)
 ![Dashboard app instance launch form](../../img/apps_dashboard_wizard_dark.png#dark-mode-only)
+
+</div>
 
 ## Dashboard
 

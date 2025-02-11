@@ -60,7 +60,7 @@ Nesting projects works on multiple levels. For example: `project_name=main_proje
 ### Automatic Logging
 After invoking `Task.init` in a script, ClearML starts its automagical logging, which includes the following elements:
 * **Hyperparameters** - ClearML logs the following types of hyperparameters:
-    * Command Line Parsing - ClearML captures any command line parameters passed when invoking code that uses standard python packages, including:
+    * Command Line Parsing - ClearML captures any command line parameters passed when invoking code that uses standard Python packages, including:
         * [click](../integrations/click.md)
         * [argparse](../guides/reporting/hyper_parameters.md#argparse-command-line-options)
         * [Python Fire](../integrations/python_fire.md)
@@ -89,7 +89,7 @@ After invoking `Task.init` in a script, ClearML starts its automagical logging, 
   
 * **Execution details** including:
     * Git information 
-    * Uncommitted code modifications - In cases where no git repository is detected (e.g. when a single python script is 
+    * Uncommitted code modifications - In cases where no git repository is detected (e.g. when a single Python script is 
       executed outside a git repository, or when running from a Jupyter Notebook), ClearML logs the contents 
       of the executed script
     * Python environment
@@ -253,11 +253,12 @@ task's status. If a task failed or was aborted, you can view how much progress i
 
 <div class="max-w-50">
 
-![Task table progress indication](../img/fundamentals_task_progress.png)
+![Task table progress indication](../img/fundamentals_task_progress.png#light-mode-only)
+![Task table progress indication](../img/fundamentals_task_progress_dark.png#dark-mode-only)
 
 </div>
 
-Additionally, you can view a task's progress in its [INFO](../webapp/webapp_exp_track_visual.md#general-information) tab 
+Additionally, you can view a task's progress in its [INFO](../webapp/webapp_exp_track_visual.md#info) tab 
 in the WebApp. 
 
 

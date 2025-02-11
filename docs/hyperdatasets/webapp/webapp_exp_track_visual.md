@@ -16,7 +16,8 @@ In a task's page, go to the **DATAVIEWS** tab to view all the task's Dataview de
 * [Label enumeration](#label-enumeration)
 * [Iteration controls](#iteration-control)
 
-![Dataview tab](../../img/hyperdatasets/web-app/dataview_tab.png)
+![Dataview tab](../../img/hyperdatasets/dataview_tab.png#light-mode-only)
+![Dataview tab](../../img/hyperdatasets/dataview_tab_dark.png#dark-mode-only)
 
 ### Input
 

@@ -25,7 +25,7 @@ task = Task.init(task_name="<task_name>", project_name="<project_name>")
 ```
 
 This will create a [ClearML Task](../fundamentals/task.md) that captures your script's information, including Git details, 
-uncommitted code, python environment, all information logged through `TensorboardLogger`, and more. 
+uncommitted code, Python environment, all information logged through `TensorboardLogger`, and more. 
 
 Visualize all the captured information in the task's page in ClearML's [WebApp](#webapp).
 
@@ -45,7 +45,7 @@ Integrate ClearML with the following steps:
    ```
    
    This creates a [ClearML Task](../fundamentals/task.md) called `ignite` in the `examples` project, which captures your 
-   script's information, including Git details, uncommitted code, python environment. 
+   script's information, including Git details, uncommitted code, Python environment. 
   
    You can also pass the following parameters to the `ClearMLLogger` object:
    * `task_type` – The type of task (see [task types](../fundamentals/task.md#task-types)).

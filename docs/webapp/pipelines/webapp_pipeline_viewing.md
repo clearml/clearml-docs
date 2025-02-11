@@ -67,8 +67,12 @@ On the pipeline run panel, view the **RUN INFO** which shows:
 * Produced Artifacts 
 * Output Models 
 
+<div class="max-w-25"> 
+
 ![Run info](../../img/webapp_pipeline_run_info.png#light-mode-only)
 ![Run info](../../img/webapp_pipeline_run_info_dark.png#dark-mode-only)
+
+</div>
 
 To view a run's complete information, click **Full details**, which will open the pipeline's controller [task page](../webapp_exp_track_visual.md). 
 View each list's complete details in the pipeline task's corresponding tabs: 

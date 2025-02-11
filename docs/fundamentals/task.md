@@ -69,7 +69,7 @@ allows tasks to be reproduced, and their hyperparameters and results can be save
 understanding model behavior.
 
 Hyperparameters can be added from anywhere in your code, and ClearML provides multiple ways to log them. If you specify 
-your parameters using popular python packages, such as [argparse](https://docs.python.org/3/library/argparse.html) and 
+your parameters using popular Python packages, such as [argparse](https://docs.python.org/3/library/argparse.html) and 
 [click](https://click.palletsprojects.com/), all you need to do is [initialize](../references/sdk/task.md#taskinit) a task, and 
 ClearML will automatically log the parameters. ClearML also provides methods to explicitly report parameters.
 

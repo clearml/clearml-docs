@@ -208,7 +208,7 @@ title: Version 1.1
 - Add `Task.get_configuration_object_as_dict()`
 - Add `docker_image` argument to `Task.set_base_docker()` (deprecate `docker_cmd`)
 - Add `auto_version_bump` argument to `PipelineController`
-- Add `sdk.development.detailed_import_report` configuration option to provide a detailed report of all python package imports
+- Add `sdk.development.detailed_import_report` configuration option to provide a detailed report of all Python package imports
 - Set current Task as Dataset parent when creating dataset
 - Add support for deferred configuration
 - Examples

@@ -9,7 +9,7 @@ ClearML automatically logs Transformer's models, parameters, scalars, and more.
 
 All you have to do is install and set up ClearML:
 
-1. Install the `clearml` python package:
+1. Install the `clearml` Python package:
 
    ```commandline
    pip install clearml

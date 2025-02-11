@@ -39,7 +39,7 @@ Web UI**, edit any of the following
 
 * [Source code](#source-code)
 * [Output destination for artifacts](#output-destination)
-* [Base Docker image](#base-docker-image)
+* [Default container](#default-container)
 * [Hyperparameters](#hyperparameters) - Parameters, TensorFlow Definitions, command line options, environment variables, and user-defined properties
 
 :::note
@@ -71,23 +71,22 @@ and/or Reset functions.
 
 
 
-#### Base Docker Image
-Select a pre-configured Docker that **ClearML Agent** will use to remotely execute this task (see [Building Docker containers](../clearml_agent/clearml_agent_docker.md)).
+#### Default Container
+Select a pre-configured container that the [ClearML Agent](../clearml_agent.md) will use to remotely execute this task (see [Building Docker containers](../clearml_agent/clearml_agent_docker.md)).
 
-**To add, change, or delete a base Docker image:**
+**To add, change, or delete a default container:**
 
-* In **EXECUTION** **>** **AGENT CONFIGURATION** **>** **BASE DOCKER IMAGE** **>** hover **>** **EDIT** **>**
-  Enter the base Docker image.
+* In **EXECUTION** **>** **CONTAINER** **>** hover **>** **EDIT** **>**
+  Enter the default container image.
 
 :::important 
 For a ClearML Agent to execute the task in a container, the agent must be running in 
-Docker mode:
+[Docker Mode](../clearml_agent/clearml_agent_execution_env.md#docker-mode):
 
 ```bash
-clearml-agent daemon --queue <execution_queue_to_pull_from> --docker [optional default docker image to use]
+clearml-agent daemon --queue <execution_queue_to_pull_from> --docker [optional default container image to use]
 ```
 
-For more information, see [Docker Mode](../clearml_agent/clearml_agent_execution_env.md#docker-mode).
 :::
 
 #### Output Destination

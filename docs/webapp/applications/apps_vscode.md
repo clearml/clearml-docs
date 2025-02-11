@@ -51,8 +51,8 @@ to open the app's instance launch form.
   * Repository
   * Branch
   * Commit
-* **Docker**
-  * Image - Docker image used to run the IDE in
+* **Container**
+  * Image - container image used to run the IDE in
   * Docker arguments - `docker run` arguments, as a single string
 * **Queue** - The queue serviced by the ClearML Agent that will execute the VS Code session
 * **Maximum idle time** (hours) - Maximum time of inactivity, after which the session will shut down. Configure idleness 

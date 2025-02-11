@@ -7,14 +7,16 @@ of frames and enables viewing SingleFrames and FramesGroups, and editing SingleF
 Before opening the frame viewer, you can filter the frames by applying [simple](webapp_datasets_versioning.md#simple-frame-filtering) or [advanced](webapp_datasets_versioning.md#advanced-frame-filtering) 
 filtering logic. 
 
-![Dataset page](../../img/hyperdatasets/web-app/dataset_versions.png)
+![Dataset page](../../img/hyperdatasets/dataset_versions.png#light-mode-only)
+![Dataset page](../../img/hyperdatasets/dataset_versions_dark.png#dark-mode-only)
 
 ## Frame Viewer
 
 Use the frame viewer to view and edit annotations (ROIs and frame labels), frame details (see [frames](../frames.md)), 
 and frame metadata, as well as view frame masks of your dataset version frames.
 
-![Frame viewer](../../img/hyperdatasets/web-app/dataset_example_frame_editor.png)
+![Frame viewer](../../img/hyperdatasets/dataset_example_frame_editor.png#light-mode-only)
+![Frame viewer](../../img/hyperdatasets/dataset_example_frame_editor_dark.png#dark-mode-only)
 
 ### Frame Viewer Controls
 
@@ -31,12 +33,12 @@ Use frame viewer controls to navigate between frames in a Hyper-Dataset Version,
 |<img src="/docs/latest/icons/ico-revert.svg" alt="Reload frame icon" className="icon size-md space-sm" />|Reload the frame.| <img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> |
 |<img src="/docs/latest/icons/ico-undo.svg" alt="Undo icon" className="icon size-md space-sm" />|Undo changes.|Ctrl + Z| 
 |<img src="/docs/latest/icons/ico-redo.svg" alt="Redo icon" className="icon size-md space-sm" />|Redo changes.|Ctrl + Y| 
-|<img src="/docs/latest/icons/ico-reset_1.svg" alt="Autofit icon" className="icon size-md space-sm" />|Autofit| <img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> |
+|<img src="/docs/latest/icons/ico-zoom-to-fit.svg" alt="Autofit icon" className="icon size-md space-sm" />|Autofit| <img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> |
+|<img src="/docs/latest/icons/ico-zoom-1-to-1.svg" alt="Return to original size" className="icon size-md space-sm" />|View image in original size |<img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" />|
 |<img src="/docs/latest/icons/ico-zoom-in.svg" alt="Zoom in icon" className="icon size-md space-sm" />|Zoom in| **+** or Ctrl + Mouse wheel| 
 |<img src="/docs/latest/icons/ico-zoom-out.svg" alt="Zoom out icon" className="icon size-md space-sm" />|Zoom out| **-** or Ctrl + Mouse wheel |
 |Percentage textbox|Zoom percentage| <img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> |
 |<img src="/docs/latest/icons/ico-shared-item.svg" alt="Copy URL" className="icon size-md space-sm" />| Copy frame URL. A direct link to view the current frame|<img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> | 
-|<img src="/docs/latest/icons/ico-reset.svg" alt="Refresh" className="icon size-md space-sm" />|Refresh version preview|<img src="/docs/latest/icons/ico-optional-no.svg" alt="Not applicable" className="icon size-md center-md" /> |
 
 #### Additional Keyboard Shortcuts
 
@@ -93,13 +95,15 @@ Viewing and editing frames in a FrameGroup is similar to viewing and editing Sin
 Click the FrameGroup in the Hyper-Dataset. In the frame viewer, select SingleFrame to view / modify from 
 a dropdown list in the **Current Source** section.
 
-![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01.png)
+![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01.png#light-mode-only)
+![Frame dropdown menu in FrameGroup](../../img/hyperdatasets/framegroup_01_dark.png#dark-mode-only)
 
 If an annotation applies to all frames in a FrameGroup, it is displayed with a `Multi Source` indicator:
 
 <div class="max-w-50">
 
-![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation.png)
+![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation.png#light-mode-only)
+![Multi-source ROI](../../img/hyperdatasets/multi_source_annotation_dark.png#dark-mode-only)
 
 </div>
 
@@ -171,7 +175,8 @@ Click the color circle in the label name to manually set the label's color.
 
 <div class="max-w-75">
 
-![Set label color](../../img/annotation_label_color.png)
+![Set label color](../../img/hyperdatasets/annotation_label_color.png#light-mode-only)
+![Set label color](../../img/hyperdatasets/annotation_label_color_dark.png#dark-mode-only)
 
 </div>
 
@@ -179,7 +184,8 @@ Click the color circle in the annotation header to manually set the annotationâ€
 
 <div class="max-w-75">
 
-![Set annotation color and opacity](../../img/annotation_label_opacity.png)
+![Set annotation color and opacity](../../img/hyperdatasets/annotation_label_opacity.png#light-mode-only)
+![Set annotation color and opacity](../../img/hyperdatasets/annotation_label_opacity_dark.png#dark-mode-only)
 
 </div>
 :::
@@ -226,7 +232,7 @@ You can add labels which describe the whole frame, with no specific coordinates.
 ## Frame Metadata
 
 **To edit frame metadata:** 
-1. Expand the **FRAME METADATA** area 
+1. Expand the **FRAMEGROUP METADATA** area 
 1. Click edit <img src="/docs/latest/icons/ico-metadata.svg" alt="edit metadata" className="icon size-md space-sm" /> 
    which will open an editing window
 1. Modify the metadata dictionary in JSON format

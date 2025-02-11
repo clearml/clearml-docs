@@ -1,33 +1,33 @@
 ---
-title: The Models Table
+title: The Model Table
 ---
 
-The models table is a [customizable](#customizing-the-models-table) list of models associated with the tasks in a project. From the models table,
+The model table is a [customizable](#customizing-the-model-table) list of models associated with the tasks in a project. From the model table,
 view model details, and modify, publish, archive, tag, and move models to other projects.
 
-View the models table in table view <img src="/docs/latest/icons/ico-table-view.svg" alt="Table view" className="icon size-md space-sm" /> 
+View the model table in table view <img src="/docs/latest/icons/ico-table-view.svg" alt="Table view" className="icon size-md space-sm" /> 
 or in details view <img src="/docs/latest/icons/ico-split-view.svg" alt="Details view" className="icon size-md space-sm" />,
 using the buttons on the top left of the page. Use the table view for a comparative view of your models according to 
 columns of interest. Use the details view to access a selected model's details, while keeping the model list in view. 
 Details view can also be accessed by double-clicking a specific model in the table view to open its details view. 
 
-You can archive models so the models table doesn't get too cluttered. Click **OPEN ARCHIVE** on the top of the
+You can archive models so the model table doesn't get too cluttered. Click **OPEN ARCHIVE** on the top of the
 table to open the archive and view all archived models. From the archive, you can restore 
 models to remove them from the archive, and permanently delete models.
 
-You can download the models table as a CSV file by clicking <img src="/docs/latest/icons/ico-download.svg" alt="Download" className="icon size-md space-sm" /> 
+You can download the model table as a CSV file by clicking <img src="/docs/latest/icons/ico-download.svg" alt="Download" className="icon size-md space-sm" /> 
 and choosing one of these options:
 * **Download onscreen items** - Download the values for models currently visible on screen  
 * **Download all items** - Download the values for all models in this project that match the current active filters  
 
 The downloaded data consists of the currently displayed table columns.
 
-![Models table](../img/webapp_models_01.png#light-mode-only)
-![Models table](../img/webapp_models_01_dark.png#dark-mode-only)
+![Model table](../img/webapp_models_01.png#light-mode-only)
+![Model table](../img/webapp_models_01_dark.png#dark-mode-only)
 
-## Models Table Columns
+## Model Table Columns
 
-The models table contains the following columns:
+The model table contains the following columns:
 
 | Column | Description | Type |
 |---|---|---|
@@ -44,9 +44,9 @@ The models table contains the following columns:
 | *Metadata* | User defined metadata key column. Available options depend upon the models in the table. | String |
 
 
-## Customizing the Models Table
+## Customizing the Model Table
 
-The models table is customizable. Changes are persistent (cached in the browser) and represented in the URL, so customized settings
+The model table is customizable. Changes are persistent (cached in the browser) and represented in the URL, so customized settings
 can be saved in a browser bookmark and shared with other ClearML users to collaborate.
 
 Customize the table using any of the following:
@@ -64,7 +64,7 @@ Customize the table using any of the following:
 * Sort columns - By metadata, metric, ML framework, description, and last update elapsed time.
 
 :::note
-The following models-table customizations are saved on a **per-project** basis: 
+The following model-table customizations are saved on a **per-project** basis: 
 * Columns order
 * Column width
 * Active sort order
@@ -77,18 +77,18 @@ all the models in the project. The customizations of these two views are saved s
 
 ## Model Actions
 
-The following table describes the actions that can be done from the models table, including the states that
+The following table describes the actions that can be done from the model table, including the states that
 allow each feature. Model states are *Draft* (editable) and *Published* (read-only). 
 
 Access these actions in any of the following ways:
-* In the models table, right-click a model, or hover over a model and click <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" /> to 
+* In the model table, right-click a model, or hover over a model and click <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" /> to 
 open the context menu
 * In a model's info panel, click the menu button <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Bar menu" className="icon size-md space-sm" />
 * Through the batch action bar, available at screen bottom when multiple models are selected
 
 | ClearML Action | Description | States Valid for the Action |
 |---|---|--|
-| Details | View model details, which include general information, the model configuration, and label enumeration. Can also be accessed by double-clicking a model in the models table | Any state |
+| Details | View model details, which include general information, the model configuration, and label enumeration. Can also be accessed by double-clicking a model in the model table | Any state |
 | Publish | Publish a model to prevent changes to it. *Published* models are read-only. If a model is Published, its task also becomes Published (read-only). | *Draft* |
 | Archive | Move model to the project's archive. | Any state |
 | Restore | Action available in the archive. Restore a model to the main model table. | Any state |
@@ -109,8 +109,8 @@ Select multiple models, then use either the context menu, or the bar that appear
 operations on the selected models. The context menu shows the number of models that can be affected by each action. 
 The same information can be found in the bottom menu, in a tooltip that appears when hovering over an action icon.   
 
-![Models table batch operations](../img/webapp_models_table_batch_operations.png#light-mode-only)
-![Models table batch operations](../img/webapp_models_table_batch_operations_dark.png#dark-mode-only)
+![Model table batch operations](../img/webapp_models_table_batch_operations.png#light-mode-only)
+![Model table batch operations](../img/webapp_models_table_batch_operations_dark.png#dark-mode-only)
 
 ## Tagging Models
 

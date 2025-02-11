@@ -68,8 +68,8 @@ values from the file, which can be modified before launching the app instance
   * Repository
   * Branch
   * Commit
-* **Docker** - Input details to run the session in Docker container
-  * Image - Docker image to launch
+* **Container** - Input details to run the session in Docker container
+  * Image - Container image to launch
   * Docker Arguments - Additional arguments for the Docker image
   * Init Script - Bash script that is executed upon container boot (comments are supported only at the beginning of the 
   line)
@@ -93,5 +93,9 @@ closed and restored into a new instance when the session app instance is cloned 
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
+<div class="max-w-65">
+
 ![SSH Session form](../../img/apps_ssh_session_wizard.png#light-mode-only)
 ![SSH Session form](../../img/apps_ssh_session_wizard_dark.png#dark-mode-only)
+
+</div>

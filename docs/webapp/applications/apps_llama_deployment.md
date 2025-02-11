@@ -78,4 +78,8 @@ values from the file, which can be modified before launching the app instance
   Used to stop the application from entering an idle state when the machine metrics are low but the application is 
   actually still running
 
+<div class="max-w-65">
+
 ![llama deployment app form](../../img/apps_llama_form.png)
+
+</div>

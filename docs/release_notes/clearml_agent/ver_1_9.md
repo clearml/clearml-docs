@@ -40,7 +40,7 @@ those matching these filters to be used when running containers
 **New Features and Improvements**
 * Add `NO_DOCKER` flag to `clearml-agent-services` entrypoint ([ClearML Agent GitHub PR #206](https://github.com/allegroai/clearml-agent/pull/206))
 * Use `venv` module if `virtualenv` is not supported
-* Find the correct python version when using a pre-installed python environment
+* Find the correct Python version when using a pre-installed python environment
 * Add `/bin/bash` support in the task's `script.binary` property
 * Add support for `.ipynb` script entry files (install nbconvert in runtime, convert file to python and execute the 
 python script). Includes `CLEARML_AGENT_FORCE_TASK_INIT` patching of `.ipynb` files (post-python conversion)

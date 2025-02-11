@@ -27,7 +27,7 @@ Disable for default desktop scale.
 * **Block running user's scripts in the browser** - Block any user and 3rd party scripts from running anywhere in the 
 WebApp. Note that if enabled, the WebApp will not display debug samples, [Hyper-Dataset frame previews](../../hyperdatasets/previews.md), 
 and embedded resources in [reports](../webapp_reports.md).
-* **Hide specific container arguments** - Specify which Docker environment variable values should be hidden in logs. 
+* **Hide specific container arguments** - Specify which container environment variable values should be hidden in logs. 
 When printed, the variable values are replaced with `********`. By default, `CLEARML_API_SECRET_KEY`, `CLEARML_AGENT_GIT_PASS`,
 `AWS_SECRET_ACCESS_KEY`, and `AZURE_STORAGE_KEY` values are redacted. To modify the hidden container argument list, click **Edit**.
 
@@ -90,12 +90,12 @@ information).
 
 You can edit the labels of credentials in your own workspace, or credentials that you created in other workspaces.
 
-**To edit the credentials label:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> 
+**To edit the credentials label:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> .
 
 You can revoke any credentials in your own workspace, or credentials that you created in other workspaces. Once revoked, 
 these credentials cannot be recovered.
 
-**To revoke ClearML credentials:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" />
+**To revoke ClearML credentials:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" /> .
 
 ### AI Application Gateway Tokens 
 

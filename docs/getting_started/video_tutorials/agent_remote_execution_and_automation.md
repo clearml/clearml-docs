@@ -36,13 +36,13 @@ The most important difference is that you’ll also be asked for your git inform
 
 Before we run the agent though, let's take a quick look at what will happen when we spin it up.
 
-Our server hosts one or more queues in which we can put our tasks. And then we have our agent. By default, it will be running in pip mode, or virtual environment mode. Once an agent pulls a new task from the queue to be executed, it will create a new python virtual environment for it. It will then clone the code itself and install all required python packages in the new virtual environment. It then runs the code and injects any new hyperparameters we changed in the UI.
+Our server hosts one or more queues in which we can put our tasks. And then we have our agent. By default, it will be running in pip mode, or virtual environment mode. Once an agent pulls a new task from the queue to be executed, it will create a new Python virtual environment for it. It will then clone the code itself and install all required Python packages in the new virtual environment. It then runs the code and injects any new hyperparameters we changed in the UI.
 
-PIP mode is really handy and efficient. It will create a new python virtual environment for every task it pulls and will use smart caching so packages or even whole environments can be reused over multiple tasks.
+PIP mode is really handy and efficient. It will create a new Python virtual environment for every task it pulls and will use smart caching so packages or even whole environments can be reused over multiple tasks.
 
 You can also run the agent in conda mode or poetry mode, which essentially do the same thing as pip mode, only with a conda or poetry environment instead.
 
-However, there’s also docker mode. In this case the agent will run every incoming task in its own docker container instead of just a virtual environment. This makes things much easier if your tasks have system package dependencies for example, or when not every task uses the same python version. For our example, we’ll be using docker mode.
+However, there’s also docker mode. In this case the agent will run every incoming task in its own docker container instead of just a virtual environment. This makes things much easier if your tasks have system package dependencies for example, or when not every task uses the same Python version. For our example, we’ll be using docker mode.
 
 Now that our configuration is ready, we can start our agent in docker mode by running the command `clearml-agent daemon –docker`. 
 

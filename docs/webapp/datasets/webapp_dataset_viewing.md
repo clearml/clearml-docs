@@ -107,7 +107,7 @@ Access these actions with the context menu by right-clicking a version on the da
 |-----|----|
 |Add Tag |User-defined labels added to versions for grouping and organization. |
 |Archive| Move dataset versions to the dataset's archive. | 
-|Restore|Action available in the archive. Restore a version to the active dataset versions table.|
+|Restore|Action available in the archive. Restore a version to the active dataset version table.|
 |Delete| Delete an archived version and its artifacts. This action is available only from the dataset's archive. |
 
 ![Dataset actions](../../img/webapp_dataset_actions.png#light-mode-only)
