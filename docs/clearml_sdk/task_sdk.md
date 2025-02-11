@@ -253,7 +253,8 @@ task's status. If a task failed or was aborted, you can view how much progress i
 
 <div class="max-w-50">
 
-![Task table progress indication](../img/fundamentals_task_progress.png)
+![Task table progress indication](../img/fundamentals_task_progress.png#light-mode-only)
+![Task table progress indication](../img/fundamentals_task_progress_dark.png#dark-mode-only)
 
 </div>
 

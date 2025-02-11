@@ -44,7 +44,7 @@ The model table contains the following columns:
 | *Metadata* | User defined metadata key column. Available options depend upon the models in the table. | String |
 
 
-## Customizing the Model table
+## Customizing the Model Table
 
 The model table is customizable. Changes are persistent (cached in the browser) and represented in the URL, so customized settings
 can be saved in a browser bookmark and shared with other ClearML users to collaborate.
