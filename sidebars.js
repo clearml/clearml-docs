@@ -663,5 +663,6 @@ module.exports = {
             ]
         },
         'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+        'deploying_clearml/enterprise_deploy/vpc_aws',
     ]
 };
