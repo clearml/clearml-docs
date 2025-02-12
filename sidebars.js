@@ -635,9 +635,10 @@ module.exports = {
             collapsible: true,
             collapsed: true,
             label: 'ClearML Application Gateway',
+            link: {type: 'doc', id: 'deploying_clearml/enterprise_deploy/appgw'},
             items: [
-                'deploying_clearml/appgw_install_compose',
-                'deploying_clearml/appgw_install_k8s',
+                'deploying_clearml/enterprise_deploy/appgw_install_compose',
+                'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
     ]
