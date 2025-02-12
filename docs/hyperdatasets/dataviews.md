@@ -139,9 +139,9 @@ You can retrieve the Dataview frames using [`DataView.to_list()`](../references/
 [`DataView.to_dict()`](../references/hyperdataset/dataview.md#to_dict), or [`DataView.get_iterator()`](../references/hyperdataset/dataview.md#get_iterator)
 (see [Accessing Frames](#accessing-frames)).
 
-#### ROI Queries: 
+### ROI Query Examples 
 
-* **ROI query for a single label**
+#### ROI query for a single label
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `cat`:
 
@@ -161,7 +161,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label OR another**
+#### ROI query for one label OR another
 
 This example uses an ROI query to filter for frames containing at least one ROI with either the label `cat` OR the label `dog`:
 
@@ -184,7 +184,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for two specific labels in the same ROI**  
+#### ROI query for two specific labels in the same ROI
 
 This example uses an ROI query to filter for frames containing at least one ROI with both the label `Car` AND the label `partly_occluded`:
 
@@ -201,7 +201,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND NOT another (Lucene query)**    
+#### ROI query for one label AND NOT another (Lucene query)
 
 This example uses an ROI query to filter for frames containing at least one ROI that has with the label `Car` AND DOES NOT 
 have the label `partly_occluded`:
@@ -222,7 +222,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND another label in different ROIs**
+#### ROI query for one label AND another label in different ROIs
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` and at least one 
 ROI with the label `Person`. The example demonstrates using the `roi_queries` parameter of [`DataView.add_multi_query()`](../references/hyperdataset/dataview.md#add_multi_query) 
@@ -240,7 +240,7 @@ myDataview.add_multi_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND NOT another label in different ROIs**
+#### ROI query for one label AND NOT another label in different ROIs
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` AND that DO NOT 
 contain ROIs with the label `Person`. To exclude an ROI, pass `must_not=True` in the [`DataView.RoiQuery`](../references/hyperdataset/dataview.md#roiquery) 
@@ -297,7 +297,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-#### Frame Queries
+### Frame Queries
 
 Use frame queries to filter frames by ROI labels and/or frame metadata key-value pairs that a frame must include or 
 exclude for the Dataview to return the frame. 
@@ -305,6 +305,8 @@ exclude for the Dataview to return the frame.
 **Frame queries** match frame meta key-value pairs, ROI labels, or both.
 They use the same logical OR, AND, NOT AND matching as ROI queries.
 
+#### Frame query for metadata $$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$$$$$$$$$$$$$$$$$$$$$$$
 This example demonstrates a frame query filtering for frames containing the meta key `city` value of `bremen`:
         
 ```python
@@ -320,6 +322,41 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
+#### Frame query by date
+Provided that `meta.updated` field stores dates$$$$$$. The following query would bring all the frames where updated value 
+matches Oct 20th 2024:
+
+        
+```python
+# Add a frame query for frames with the meta key "updated" value of "2024-10-20"
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.updated:[2024-10-20 TO 2024-10-20]'
+)
+
+# retrieving the actual SingleFrames / FrameGroups 
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
+
+#### Frame query by date and time
+Provided that `meta.updated` field stores dates and times, you can filter 
+based on date ranges and specific time intervals. 
+
+Filter by date/time metadata fields using Lucene queries.
+
+* Data range filter
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20 TO 2024-10-20]`. The query 
+  will match all frames where the `updated` value matches October 20th 2024. Use the format `meta.<field_name>.[YYYY-MM-DD TO YYYY-MM-DD]`.
+
+* Time interval filter 
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]`. 
+  The query will match all frames where the updated value is between 08:00 and 09:00 on October 20th 2024. 
+  Use the format `meta.<field_name>.[YYYY-MM-DDThh:mm:ss TO YYYY-MM-DDThh:mm:ss]`. 
+  
+
+  
 
 ### Controlling Query Iteration
 
