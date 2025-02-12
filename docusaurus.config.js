@@ -87,9 +87,15 @@ module.exports = {
           position: 'left',
         },
         {
-          to: '/docs/getting_started/main',
+          to: '/docs/deploying_clearml/clearml_server',
           label: 'Setup',
-          position: 'left'},
+          position: 'left'
+        },
+        {
+          to: '/docs/getting_started/ds/ds_first_steps',
+          label: 'Using ClearML',
+          position: 'left'
+        },
         {
           label: 'Developer Center',
           position: 'left', // or 'right'

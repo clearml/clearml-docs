@@ -122,8 +122,42 @@ module.exports = {
             'user_management/identity_providers'
             ]
         },
-        //'Comments': ['Notes'],
 */
+    ],
+    usecaseSidebar: [
+        'getting_started/main',
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'Where do I start?',
+            items: [
+                {'Data Scientists': [
+                    'getting_started/ds/ds_first_steps',
+                    'getting_started/ds/ds_second_steps',
+                ]},
+                {'MLOps and LLMOps': [
+                    'getting_started/mlops/mlops_first_steps',
+                    'getting_started/mlops/mlops_second_steps',
+                ]}
+            ],
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'Best Practices',
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Data Scientists',
+                    id: 'getting_started/ds/best_practices'
+                },
+                {
+                    type: 'doc',
+                    label: 'MLOps and LLMOps',
+                    id: 'getting_started/mlops/mlops_best_practices'
+                }
+            ],
+        },
     ],
     integrationsSidebar: [
             {
@@ -614,22 +648,9 @@ module.exports = {
                 ]},
             ]
         },
-        {'Getting Started': [
-            'getting_started/main',
-            {'Where do I start?': [
-                {'Data Scientists': [
-                    'getting_started/ds/ds_first_steps',
-                    'getting_started/ds/ds_second_steps',
-                    'getting_started/ds/best_practices'
-                ]},
-                {'MLOps and LLMOps': [
-                    'getting_started/mlops/mlops_first_steps',
-                    'getting_started/mlops/mlops_second_steps',
-                    'getting_started/mlops/mlops_best_practices'
-                ]}
-            ]},
+/*        {'Getting Started': [
             'getting_started/architecture',
-        ]},
+        ]},*/
         {
             type: 'category',
             collapsible: true,

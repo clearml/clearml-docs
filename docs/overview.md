@@ -22,7 +22,7 @@ Each layer provides distinct functionality to ensure an efficient and scalable A
 The Infrastructure Control Plane serves as the foundation of the ClearML platform, offering compute resource provisioning and management, enabling administrators to make the compute available through GPUaaS capabilities and no-hassle configuration.  
 Utilizing the Infrastructure Control Plane, DevOps and IT teams can manage and optimize GPU resources to ensure high performance and cost efficiency.
 
-### Features
+#### Features
 - **Resource Management:** Automates the allocation and management of GPU resources.
 - **Workload Autoscaling:** Seamlessly scale GPU resources based on workload demands.
 - **Monitoring and Logging:** Provides comprehensive monitoring and logging for GPU utilization and performance.
@@ -34,7 +34,7 @@ Utilizing the Infrastructure Control Plane, DevOps and IT teams can manage and o
 ## AI Development Center
 The AI Development Center offers a robust environment for developing, training, and testing AI models. It is designed to be cloud and on-premises agnostic, providing flexibility in deployment.
 
-### Features
+#### Features
 - **Integrated Development Environment:** A comprehensive IDE for training, testing, and debugging AI models.
 - **Model Training:** Scalable and distributed model training and hyperparameter optimization.
 - **Data Management:** Tools for data preprocessing, management, and versioning.
@@ -46,7 +46,7 @@ The AI Development Center offers a robust environment for developing, training, 
 ## GenAI App Engine
 The GenAI App Engine is designed to deploy large language models (LLM) into GPU clusters and manage various AI workloads, including Retrieval-Augmented Generation (RAG) tasks. This layer also handles networking, authentication, and role-based access control (RBAC) for deployed services.
 
-### Features
+#### Features
 - **LLM Deployment:** Seamlessly deploy LLMs into GPU clusters.
 - **RAG Workloads:** Efficiently manage and execute RAG workloads.
 - **Networking and Authentication:** Deploy GenAI through secure, authenticated network endpoints
