@@ -703,6 +703,7 @@ module.exports = {
             'Enterprise Applications': [
                 'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
                 'deploying_clearml/enterprise_deploy/app_install_ex_server',
+                'deploying_clearml/enterprise_deploy/app_custom',
             ]
         },
     ]
