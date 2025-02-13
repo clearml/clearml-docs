@@ -662,7 +662,12 @@ module.exports = {
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
-        'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
-        'deploying_clearml/enterprise_deploy/vpc_aws',
+        {
+            "Enterprise Server Deployment": [
+               'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+               'deploying_clearml/enterprise_deploy/vpc_aws',
+               'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
+            ]
+        }
     ]
 };

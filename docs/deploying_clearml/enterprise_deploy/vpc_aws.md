@@ -1,5 +1,5 @@
 ---
-title: ClearML Server AWS VPC Deployment
+title: AWS VPC
 ---
 
 This guide provides step-by-step instructions for installing the ClearML Enterprise Server on AWS using a Virtual Private Cloud (VPC). 
@@ -239,16 +239,15 @@ deletion beyond the company's required retention period.
 
 #### CPU
 
-CPU usage varies depending on the system usage. We recommend to monitor CPU usage and to alert when the usage is higher 
-than normal. Alert level should be set depending on the usage. Recommended starting alerts would be 5-minute CPU load 
+CPU usage varies depending on system usage. We recommend to monitor CPU usage and to alert when the usage is higher 
+than normal. Recommended starting alerts would be 5-minute CPU load 
 level of 5 and 10, and adjusting according to performance.
 
 #### RAM
 
 Available memory usage also varies depending on system usage. Due to spikes in usage when performing certain tasks, 6-8 GB 
 of available RAM is recommended as the standard baseline. Some use cases may require more. Thus, we recommend to have 8 GB 
-of available memory on top of the regular system usage.  
-Alert levels depend on usage, and should alert if the available memory is below normal.
+of available memory on top of the regular system usage. Alert levels should alert if the available memory is below normal.
 
 #### Disk Usage
 
@@ -261,7 +260,7 @@ The following services should be monitored periodically for availability and for
 
 * `apiserver` - [http://localhost:10000/api/debug.ping](http://localhost:10000/api/debug.ping) should return HTTP 200  
 * `webserver` - [http://localhost:10000](http://localhost:10000/) should return HTTP 200  
-* `fileserver` - [http://localhost:10000/files/](http://localhost:10000/files/) should return HTTP 405 (“method not allowed”)
+* `fileserver` - [http://localhost:10000/files/](http://localhost:10000/files/) should return HTTP 405 ("method not allowed")
 
 ### API Server Docker Memory Usage
 
@@ -271,7 +270,7 @@ A usage spike can happen during normal operation. But very high spikes (above 6G
 For example, the following comment retrieves the API server's information from the Docker server:
 
 ```
-sudo curl \-s \--unix-socket /var/run/docker.sock http://localhost/containers/allegro-apiserver/stats?stream=false  
+sudo curl -s --unix-socket /var/run/docker.sock http://localhost/containers/allegro-apiserver/stats?stream=false  
 ```
 
 We recommend monitoring the API server memory in addition to the system's available RAM. Alerts should be triggered 
