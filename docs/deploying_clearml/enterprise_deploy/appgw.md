@@ -2,6 +2,10 @@
 title: AI Application Gateway
 ---
 
+:::important Enterprise Feature
+This feature is available under the ClearML Enterprise plan.
+:::
+
 Services running through a cluster orchestrator such as Kubernetes or cloud hyperscaler require meticulous configuration 
 to make them available as these environments do not expose their networks to external users.
 

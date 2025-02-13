@@ -158,6 +158,36 @@ module.exports = {
                 }
             ],
         },
+        'webapp/applications/apps_hpo',
+        {"Deploying Models Endpoints": [
+            'webapp/applications/apps_embed_model_deployment',
+            'webapp/applications/apps_model_deployment',
+            'webapp/applications/apps_llama_deployment'
+        ]},
+        {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'ClearML Applications',
+                    link: {type: 'doc', id: 'webapp/applications/apps_overview'},
+                    items: [
+                        {"General": [
+
+                            'webapp/applications/apps_dashboard',
+                            'webapp/applications/apps_task_scheduler',
+                            'webapp/applications/apps_trigger_manager',
+                        ]},
+                        {"AI Dev": [
+                            'webapp/applications/apps_ssh_session',
+                            'webapp/applications/apps_jupyter_lab',
+                            'webapp/applications/apps_vscode',
+                        ]},
+                        {"UI Dev": [
+                            'webapp/applications/apps_gradio',
+                            'webapp/applications/apps_streamlit'
+                        ]},
+                    ]
+                },
     ],
     integrationsSidebar: [
             {
@@ -625,10 +655,10 @@ module.exports = {
             type: 'category',
             collapsible: true,
             collapsed: true,
-            label: 'ClearML Server',
+            label: 'Open Source Server',
             link: {type: 'doc', id: 'deploying_clearml/clearml_server'},
             items: [
-                {'Deploying ClearML Server': [
+                {'Deployment Options': [
                     'deploying_clearml/clearml_server_aws_ec2_ami',
                     'deploying_clearml/clearml_server_gcp',
                     'deploying_clearml/clearml_server_linux_mac',
@@ -637,7 +667,7 @@ module.exports = {
                 ]},
                 'deploying_clearml/clearml_server_config',
                 'deploying_clearml/clearml_server_security',
-                {'Upgrading ClearML Server': [
+                {'Server Upgrade Procedures': [
                     'deploying_clearml/upgrade_server_aws_ec2_ami',
                     'deploying_clearml/upgrade_server_gcp',
                     'deploying_clearml/upgrade_server_linux_mac',
