@@ -706,5 +706,10 @@ module.exports = {
                 'deploying_clearml/enterprise_deploy/app_custom',
             ]
         },
+        {
+            'SSO': [
+                'deploying_clearml/enterprise_deploy/sso_saml_k8s',
+            ]
+        },
     ]
 };
