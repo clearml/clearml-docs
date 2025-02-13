@@ -313,7 +313,7 @@ The system should be constantly monitored, however it is important to check the 
 * **Storage space**: run `sudo du -hs /`   
 * **RAM**:  
   * Run `vmstat -s` to check available RAM  
-  * Run: top to check the processes.  
+  * Run: `top` to check the processes.  
     
     :::note
     Some operations, such as complex queries, may cause a spike in memory usage. Therefore, it is recommended to have at least 8GB of free RAM available.
