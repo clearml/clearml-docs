@@ -137,7 +137,7 @@ To apply vault contents:
 * Click the toggle atop the vault to enable / disable the configurations
 * Once enabled, the configurations will be merged to the configuration file during ClearML and ClearML Agent usage
 
-In addition to the service account-specific configuration vault, [administrator vaults](#administrator-vaults) can also 
+In addition to the service account-specific configuration vault, [administrator vaults](webapp_settings_admin_vaults.md) can also 
 be applied to service accounts. See all the vaults applied to the account in the **Applied administrator vaults** below 
 the configuration vault.   
 

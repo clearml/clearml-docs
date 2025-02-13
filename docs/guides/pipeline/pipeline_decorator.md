@@ -39,8 +39,8 @@ In the example script, the controller defines the interactions between the pipel
 
 :::info Local Execution
 In this example, the pipeline is set to run in local mode by using 
-the <span class="link-code"><a href="../../references/sdk/automation_controller_pipelinecontroller#pipelinedecoratorrun_locally"><code>PipelineDecorator.run_locally</code></a></span>
-method before calling the pipeline function. See pipeline execution options [here](../../pipelines/pipelines_sdk_function_decorators.md#running-the-pipeline). 
+[`PipelineDecorator.run_locally()`](../../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorrun_locally)
+before calling the pipeline function. See pipeline execution options [here](../../pipelines/pipelines_sdk_function_decorators.md#running-the-pipeline). 
 :::
 
 ## Pipeline Steps 

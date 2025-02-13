@@ -88,7 +88,7 @@ Uploading an existing model file into the model repository can be done via the `
 or with the `clearml-serving` CLI. 
 
 1. Upload the model file to the `clearml-server` file storage and register it. The `--path` parameter is used to input 
-   the path to a local model file (local model created in [step 1](#step-1--train-model) located in `./sklearn-model.pkl`).
+   the path to a local model file (local model created in [step 1](#step-1-train-model) located in `./sklearn-model.pkl`).
 
    ```bash
    clearml-serving --id <service_id> model upload --name "manual sklearn model" --project "serving examples" --framework "scikitlearn" --path ./sklearn-model.pkl

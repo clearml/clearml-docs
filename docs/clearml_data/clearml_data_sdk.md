@@ -331,7 +331,7 @@ Dataset.rename(
 ```
 
 ## Moving Datasets to Another Project
-Move a dataset to another project using the [`Dataset.move_to_project()`](../references/sdk/dataset.md#datasetmove_to_projetc) 
+Move a dataset to another project using the [`Dataset.move_to_project()`](../references/sdk/dataset.md#datasetmove_to_project) 
 class method. All the datasets with the given `dataset_project` and `dataset_name` will be moved to the new dataset 
 project. 
 

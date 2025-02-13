@@ -137,7 +137,7 @@ Configure the ClearML server to send API logs to Splunk using [Docker Compose](#
 To exclude specific API calls from the Splunk logs, add an environment variable with the following 
 format: `CLEARML__apiserver__endpoints__<SERVICE>__<METHOD>__log_call` and set it to `false`.
 
-For example, the configuration below for servers on K8s Helm exclude the [`POST /debug.ping`](../references/api/debug.md##post-debugping) 
+For example, the configuration below for servers on K8s Helm exclude the [`POST /debug.ping`](../references/api/debug.md#post-debugping) 
 call from the Splunk logs:
 
 ```
