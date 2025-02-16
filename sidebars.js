@@ -709,6 +709,7 @@ module.exports = {
         {
             'SSO': [
                 'deploying_clearml/enterprise_deploy/sso_saml_k8s',
+                'deploying_clearml/enterprise_deploy/sso_keycloak',
             ]
         },
     ]
