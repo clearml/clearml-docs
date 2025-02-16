@@ -14,7 +14,8 @@ Welcome to the documentation for ClearML, the end to end platform for streamlini
 
 Each layer provides distinct functionality to ensure an efficient and scalable AI workflow from development to deployment.
 
-![Webapp gif](img/gif/webapp_screenshots.gif)
+![Webapp gif](img/gif/webapp_screenshots.gif#light-mode-only)
+![Webapp gif](img/gif/webapp_screenshots_dark.gif#dark-mode-only)
 
 ---
 
@@ -29,6 +30,9 @@ Utilizing the Infrastructure Control Plane, DevOps and IT teams can manage and o
 - **Cost Optimization:** Consolidate cloud and on-prem compute into a seamless GPUaaS offering 
 - **Deployment Flexibility:** Easily run your workloads on both cloud and on-premises compute.
 
+![Infrastructure control plane](img/gif/infra_control_plane.gif#light-mode-only)
+![Infrastructure control plane](img/gif/infra_control_plane_dark.gif#dark-mode-only)
+
 ---
 
 ## AI Development Center
@@ -41,6 +45,9 @@ The AI Development Center offers a robust environment for developing, training, 
 - **Experiment Tracking:** Track metrics, artifacts and log. manage versions, and compare results.
 - **Workflow Automation:** Build pipelines to formalize your workflow
 
+![AI Dev center](img/gif/ai_dev_center.gif#light-mode-only)
+![AI Dev center](img/gif/ai_dev_center_dark.gif#dark-mode-only)
+
 ---
 
 ## GenAI App Engine
@@ -51,6 +58,9 @@ The GenAI App Engine is designed to deploy large language models (LLM) into GPU 
 - **RAG Workloads:** Efficiently manage and execute RAG workloads.
 - **Networking and Authentication:** Deploy GenAI through secure, authenticated network endpoints
 - **RBAC:** Implement RBAC to control access to deployed services.
+
+![GenAI engine](img/gif/genai_engine.gif#light-mode-only)
+![GenAI engine](img/gif/genai_engine_dark.gif#dark-mode-only)
 
 ---
 
