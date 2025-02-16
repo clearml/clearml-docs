@@ -305,8 +305,8 @@ exclude for the Dataview to return the frame.
 **Frame queries** match frame meta key-value pairs, ROI labels, or both.
 They use the same logical OR, AND, NOT AND matching as ROI queries.
 
-#### Frame query for metadata $$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-$$$$$$$$$$$$$$$$$$$$$$$
+#### Frame Query by Metadata
+
 This example demonstrates a frame query filtering for frames containing the meta key `city` value of `bremen`:
         
 ```python
@@ -322,10 +322,13 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-#### Frame query by date
-Provided that `meta.updated` field stores dates$$$$$$. The following query would bring all the frames where updated value 
-matches Oct 20th 2024:
+#### Frame Query by Date and Time
+Provided that a metadata field stores date and time values, you can query frames based on date ranges and specific time 
+intervals
 
+##### Frame Query for Specific Date
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with the value of October 
+20th, 2024: 
         
 ```python
 # Add a frame query for frames with the meta key "updated" value of "2024-10-20"
@@ -340,23 +343,38 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-#### Frame query by date and time
-Provided that `meta.updated` field stores dates and times, you can filter 
-based on date ranges and specific time intervals. 
+##### Frame Query for Date Range
 
-Filter by date/time metadata fields using Lucene queries.
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with any value between the
+dates of October 20th and October 30th, 2024: 
 
-* Data range filter
-  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20 TO 2024-10-20]`. The query 
-  will match all frames where the `updated` value matches October 20th 2024. Use the format `meta.<field_name>.[YYYY-MM-DD TO YYYY-MM-DD]`.
+```python
+# Add a frame query for frames with the meta key "updated" value between "2024-10-20" and "2024-10-30"
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.updated:[2024-10-20 TO 2024-10-30]'
+)
 
-* Time interval filter 
-  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]`. 
-  The query will match all frames where the updated value is between 08:00 and 09:00 on October 20th 2024. 
-  Use the format `meta.<field_name>.[YYYY-MM-DDThh:mm:ss TO YYYY-MM-DDThh:mm:ss]`. 
-  
+# retrieving the actual SingleFrames / FrameGroups 
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
 
-  
+##### Frame Query for Time Interval
+
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with any value between 
+`08:000` and `09:00` on October 20th, 2024: 
+
+```python
+# Add a frame query for frames with the meta key's value between 08:00:00 and 09:00:00 on 2024-10-20
+
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.<field_name>:[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]'
+)
+```
 
 ### Controlling Query Iteration
 

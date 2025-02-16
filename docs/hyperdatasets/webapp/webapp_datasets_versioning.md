@@ -163,7 +163,7 @@ described in the example above. "Frame Filter 2" specifies an ROI rule for the f
 To clear all filters click <img src="/docs/latest/icons/ico-filter-reset.svg" alt="Clear filters" className="icon size-md" />. 
 
 
-#### Filtering Examples
+### Filtering Examples
 
 <Collapsible type="screenshot" title="ROI Rules"> 
 
@@ -222,7 +222,7 @@ based on date ranges or specific time intervals.
 
 Filter by date/time metadata fields using Lucene queries.
 
-* Data range filter
+* **Data range filter**
   * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20 TO 2024-10-20]`. The query 
   will match all frames where the `updated` value matches October 20th 2024. Use the format `meta.<field_name>.[YYYY-MM-DD TO YYYY-MM-DD]`. 
 
@@ -234,7 +234,7 @@ Filter by date/time metadata fields using Lucene queries.
     ![Frame date metadata in frame viewer](../../img/hyperdatasets/frame_filtering_12.png#light-mode-only)
     ![Frame date metadata in frame viewer](../../img/hyperdatasets/frame_filtering_12_dark.png#dark-mode-only)
 
-* Time interval filter 
+* **Time interval filter** 
   * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]`. 
   The query will match all frames where the updated value is between 08:00 and 09:00 on October 20th 2024. 
   Use the format `meta.<field_name>.[YYYY-MM-DDThh:mm:ss TO YYYY-MM-DDThh:mm:ss]`. 
