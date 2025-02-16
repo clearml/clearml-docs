@@ -163,7 +163,7 @@ described in the example above. "Frame Filter 2" specifies an ROI rule for the f
 To clear all filters click <img src="/docs/latest/icons/ico-filter-reset.svg" alt="Clear filters" className="icon size-md" />. 
 
 
-#### Filtering Examples
+### Filtering Examples
 
 <Collapsible type="screenshot" title="ROI Rules"> 
 
@@ -199,7 +199,7 @@ To clear all filters click <img src="/docs/latest/icons/ico-filter-reset.svg" al
 
 </Collapsible>
 
-<Collapsible type="screenshot" title="Frame Rules">
+<Collapsible type="screenshot" title="Frame Rules: Metadata">
 
 Filter by metadata using Lucene queries.
 
@@ -213,6 +213,40 @@ Filter by metadata using Lucene queries.
 ![Frame metadata in frame viewer](../../img/hyperdatasets/frame_filtering_09.png#light-mode-only)
 ![Frame metadata in frame viewer](../../img/hyperdatasets/frame_filtering_09_dark.png#dark-mode-only)
 
+</Collapsible>
+
+<Collapsible type="screenshot" title="Frame Rules: Date and Time Fields">
+
+If your dataset includes a metadata field that stores date and time information, you can filter 
+based on date ranges or specific time intervals. 
+
+Filter by date/time metadata fields using Lucene queries.
+
+* **Data range filter**
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20 TO 2024-10-20]`. The query 
+  will match all frames where the `updated` value matches October 20th 2024. Use the format `meta.<field_name>.[YYYY-MM-DD TO YYYY-MM-DD]`. 
+
+    ![Filter by date](../../img/hyperdatasets/frame_filtering_11.png#light-mode-only)
+    ![Filter by date](../../img/hyperdatasets/frame_filtering_11_dark.png#dark-mode-only)
+
+  * Open a frame in the frame viewer to see its metadata.
+
+    ![Frame date metadata in frame viewer](../../img/hyperdatasets/frame_filtering_12.png#light-mode-only)
+    ![Frame date metadata in frame viewer](../../img/hyperdatasets/frame_filtering_12_dark.png#dark-mode-only)
+
+* **Time interval filter** 
+  * Add a frame rule to filter by the metadata key `updated` for the value of `[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]`. 
+  The query will match all frames where the updated value is between 08:00 and 09:00 on October 20th 2024. 
+  Use the format `meta.<field_name>.[YYYY-MM-DDThh:mm:ss TO YYYY-MM-DDThh:mm:ss]`. 
+  
+    ![Filter by datetime](../../img/hyperdatasets/frame_filtering_13.png#light-mode-only)
+    ![Filter by datetime](../../img/hyperdatasets/frame_filtering_13_dark.png#dark-mode-only)
+  
+  * Open a frame in the frame viewer to see its metadata.  
+
+    ![Frame datetimee metadata in frame viewer](../../img/hyperdatasets/frame_filtering_14.png#light-mode-only)
+    ![Frame datetime metadata in frame viewer](../../img/hyperdatasets/frame_filtering_14_dark.png#dark-mode-only)
+  
 </Collapsible>
 
 <Collapsible type="screenshot" title="Source Rules">
