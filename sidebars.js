@@ -699,6 +699,7 @@ module.exports = {
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
+        'deploying_clearml/enterprise_deploy/delete_tenant',
         {
             'Enterprise Applications': [
                 'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
@@ -707,7 +708,7 @@ module.exports = {
             ]
         },
         {
-            'SSO': [
+            'Identity Provider Integration': [
                 'deploying_clearml/enterprise_deploy/sso_saml_k8s',
                 'deploying_clearml/enterprise_deploy/sso_keycloak',
                 'deploying_clearml/enterprise_deploy/sso_active_directory'
