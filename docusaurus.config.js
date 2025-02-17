@@ -85,13 +85,13 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
           position: 'left',
-          activeBaseRegex: '/docs$|/docs/[?!hyperdatasets|guides|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var|references|faq].*',
+          activeBaseRegex: '/docs/latest/docs$|/docs/latest/docs/[?!hyperdatasets|guides|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var|references|faq].*',
         },
         {
           to:'/docs/hyperdatasets/overview',
           label: 'Hyper-Datasets',
           position: 'left',
-          activeBaseRegex: '/docs/hyperdatasets.*',
+          activeBaseRegex: 'docs/latest/docs/hyperdatasets.*',
         },
         // {to: 'tutorials', label: 'Tutorials', position: 'left'},
         // Please keep GitHub link to the right for consistency.
@@ -99,14 +99,14 @@ module.exports = {
           to: '/docs/guides',
           label: 'Examples',
           position: 'left',
-          activeBaseRegex: '/docs/guides.*',
+          activeBaseRegex: 'docs/latest/docs/guides.*',
         },
         //{to: '/docs/references', label: 'API', position: 'left'},
         {
           label: 'References',
           position: 'left', // or 'right'
           to: '/docs/references/sdk/task',
-          activeBaseRegex: '/docs/references/sdk.*|/docs/clearml_agent/clearml_agent_ref|/docs/clearml_agent/clearml_agent_env_var|/docs/references/api.*|/docs/references/hyperdataset.*|/docs/release_notes.*|/docs/community',
+          activeBaseRegex: '/docs/latest/docs/references/sdk.*|/docs/latest/docs/clearml_agent/clearml_agent_ref|/docs/latest/docs/clearml_agent/clearml_agent_env_var|/docs/latest/docs/references/api.*|/docs/latest/docs/references/hyperdataset.*|/docs/latest/docs/release_notes.*|/docs/latest/docs/community',
           activeClassName: 'navbar__link--active',
           items: [
             {
