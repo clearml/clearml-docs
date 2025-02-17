@@ -159,7 +159,7 @@ module.exports = {
             ],
         },
         'webapp/applications/apps_hpo',
-        {"Deploying Models Endpoints": [
+        {"Deploying Model Endpoints": [
             'webapp/applications/apps_embed_model_deployment',
             'webapp/applications/apps_model_deployment',
             'webapp/applications/apps_llama_deployment'
@@ -682,6 +682,13 @@ module.exports = {
             'getting_started/architecture',
         ]},*/
         {
+            'Enterprise Server Deployment': [
+               'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+               'deploying_clearml/enterprise_deploy/vpc_aws',
+               'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
+            ]
+        },
+        {
             type: 'category',
             collapsible: true,
             collapsed: true,
@@ -692,14 +699,6 @@ module.exports = {
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
-        {
-            'Enterprise Server Deployment': [
-               'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
-               'deploying_clearml/enterprise_deploy/vpc_aws',
-               'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
-            ]
-        },
-        'deploying_clearml/enterprise_deploy/delete_tenant',
         {
             'Enterprise Applications': [
                 'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
