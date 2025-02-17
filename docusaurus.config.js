@@ -85,7 +85,7 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
           position: 'left',
-          activeBaseRegex: '/docs/latest/docs/(?!hyperdatasets|guides|clearml_agent|references|faq|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var).*',
+          activeBaseRegex: '/docs/latest/docs$|/docs/latest/docs/(?!hyperdatasets|guides|clearml_agent|references|faq|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var).*',
         },
         {
           to:'/docs/hyperdatasets/overview',
