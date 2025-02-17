@@ -145,7 +145,8 @@ module.exports = {
         {
           label: 'FAQ',
           position: 'left', // or 'right'
-          to: '/docs/latest/docs/faq'
+          to: '/docs/faq'
+          activeBaseRegex: '/docs/latest/docs/faq',
         },
         {
           href: 'https://joinslack.clear.ml',
