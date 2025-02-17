@@ -85,11 +85,13 @@ module.exports = {
           to: '/docs',
           label: 'Docs',
           position: 'left',
+          activeBaseRegex: '/docs$|/docs/(?!hyperdatasets|guides|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var|references|faq).*',
         },
         {
           to:'/docs/hyperdatasets/overview',
           label: 'Hyper-Datasets',
           position: 'left',
+          activeBaseRegex: '/docs/hyperdatasets.*',
         },
         // {to: 'tutorials', label: 'Tutorials', position: 'left'},
         // Please keep GitHub link to the right for consistency.
@@ -98,31 +100,40 @@ module.exports = {
         {
           label: 'References',
           position: 'left', // or 'right'
+          to: '/docs/references/sdk/task',
+          activeBaseRegex: '/docs/references/sdk.*|/docs/clearml_agent/.*|/docs/references/api.*|/docs/references/hyperdataset.*|/docs/release_notes.*|/docs/community',
+          activeClassName: 'navbar__link--active',
           items: [
             {
               label: 'SDK',
               to: '/docs/references/sdk/task',
+              activeBaseRegex: '/docs/references/sdk.*',
             },
             {
               label: 'ClearML Agent',
               to: '/docs/clearml_agent/clearml_agent_ref',
+              activeBaseRegex: '/docs/clearml_agent/clearml_agent_ref|/docs/clearml_agent/clearml_agent_env_var',
             },
             {
               label: 'Server API',
               to: '/docs/references/api',
+              activeBaseRegex: '/docs/references/api.*'
             },
             {
               label: 'Hyper-Datasets',
               to: '/docs/references/hyperdataset',
+              activeBaseRegex: '/docs/references/hyperdataset.*'
             },
 
             {
               label: 'Release Notes',
               to: '/docs/release_notes/clearml_server/open_source/ver_2_0',
+              activeBaseRegex: '/docs/release_notes.*',
             },
             {
               label: 'Community Resources',
               to: '/docs/community',
+              activeBaseRegex: '/docs/community',
             }
           ],
         },
