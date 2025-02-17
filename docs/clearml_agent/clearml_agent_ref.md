@@ -1,5 +1,6 @@
 ---
 title: ClearML Agent CLI
+displayed_sidebar: sdkSidebar
 ---
 
 The following page provides a reference to `clearml-agent`'s CLI commands:
