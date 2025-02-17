@@ -1,5 +1,6 @@
 ---
 title: Data Management with Python
+displayed_sidebar: mainSidebar
 ---
 
 The [dataset_creation.py](https://github.com/clearml/clearml/blob/master/examples/datasets/dataset_creation.py) and 

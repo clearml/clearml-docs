@@ -95,13 +95,18 @@ module.exports = {
         },
         // {to: 'tutorials', label: 'Tutorials', position: 'left'},
         // Please keep GitHub link to the right for consistency.
-        {to: '/docs/guides', label: 'Examples', position: 'left'},
+        {
+          to: '/docs/guides',
+          label: 'Examples',
+          position: 'left',
+          activeBaseRegex: '/docs/guides.*',
+        },
         //{to: '/docs/references', label: 'API', position: 'left'},
         {
           label: 'References',
           position: 'left', // or 'right'
           to: '/docs/references/sdk/task',
-          activeBaseRegex: '/docs/references/sdk.*|/docs/clearml_agent/.*|/docs/references/api.*|/docs/references/hyperdataset.*|/docs/release_notes.*|/docs/community',
+          activeBaseRegex: '/docs/references/sdk.*|/docs/clearml_agent/clearml_agent_ref|/docs/clearml_agent/clearml_agent_env_var|/docs/references/api.*|/docs/references/hyperdataset.*|/docs/release_notes.*|/docs/community',
           activeClassName: 'navbar__link--active',
           items: [
             {

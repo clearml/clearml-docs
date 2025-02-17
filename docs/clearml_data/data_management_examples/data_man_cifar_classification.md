@@ -1,5 +1,6 @@
 ---
 title: Dataset Management with CLI and SDK
+displayed_sidebar: mainSidebar
 ---
 
 In this tutorial, you are going to manage the CIFAR dataset with `clearml-data` CLI, and then use ClearML's [`Dataset`](../../references/sdk/dataset.md) 
