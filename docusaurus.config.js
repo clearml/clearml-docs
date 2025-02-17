@@ -145,7 +145,7 @@ module.exports = {
         {
           label: 'FAQ',
           position: 'left', // or 'right'
-          to: '/docs/faq'
+          to: '/docs/faq',
           activeBaseRegex: '/docs/latest/docs/faq',
         },
         {
