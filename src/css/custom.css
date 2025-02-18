@@ -47,13 +47,17 @@ html {
 }
 
 html[data-theme="dark"] {
-  --ifm-background-color:          #1a1e2c;
-  --ifm-footer-background-color:   #1a1e2c;
-  --ifm-footer-link-color:         #a4a5aa;
-  --ifm-footer-link-hover-color:   #14aa8c;
-  --ifm-dropdown-background-color: #2c3246;
-  --ifm-table-stripe-background:   #141722;
-  --ifm-link-color: var(--ifm-color-primary-light);
+  --ifm-background-color:          #040506; /* body bg */
+  --ifm-header-background-color:   #101418; /* section 1 */
+  --ifm-footer-background-color:   #101418; /* section 1 */
+  --ifm-footer-link-color:         #D8FFF0; /* specific footer link color */
+  --ifm-footer-link-hover-color:   #ffffff; /* specific footer link hover color */
+  --ifm-dropdown-background-color: #242D37; /* section 2 */
+  --ifm-table-stripe-background:   #101418; /* section 1 */
+  --ifm-toc-background-color:      #242D37; /* section 2 */
+  --ifm-link-color:                #6AD6C0; /* specific link color */
+  --ifm-link-hover-color:          #8CE5D3  /* specific link hover color */
+  --ifm-font-color-base:           #E5E5E5 /* body text */
 }
 
 @media (min-width: 1400px) {
@@ -67,10 +71,6 @@ html[data-theme="dark"] {
 /* ===LAYOUT=== */
 a {
   text-underline-offset: 4px;
-}
-
-html[data-theme="dark"] a:hover {
-  color: var(--ifm-color-primary-lightest);
 }
 
 .align-center {
@@ -151,12 +151,16 @@ html[data-theme="dark"] div[role="banner"] {
   background-color: #09173C;
 }
 html[data-theme="dark"] .navbar--dark {
-  background-color: #151722;
+  background-color: var(--ifm-header-background-color);
 }
 .navbar--dark.navbar .navbar__toggle {
   color: white; /* opener icon color */
 }
 
+html[data-theme="dark"] .navbar__link:hover,
+html[data-theme="dark"] .navbar__link--active {
+    color: var(--ifm-link-color);
+}
 
 /* ===HEADER=== */
 
@@ -374,7 +378,7 @@ html[data-theme="light"] [class^="sidebarLogo"] > img {
 
 
 html[data-theme="dark"] .menu__link--active {
-  color: var(--ifm-color-primary-lighter);
+  color: var(--ifm-link-color);
 }
 html[data-theme="light"] .menu__link:not(.menu__link--active) {
   color: #606a78;
@@ -464,7 +468,7 @@ html[data-theme="dark"] .table-of-contents {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.4) inset;
 }
 html[data-theme="dark"] a.table-of-contents__link--active {
-  color: var(--ifm-color-primary-light);
+  color: var(--ifm-link-color);
 }
 .table-of-contents__left-border {
   border:none;
@@ -564,7 +568,7 @@ html[data-theme="light"] .footer__link-item[href*="stackoverflow"] {
 
 
 html[data-theme="dark"] .footer__link-item:hover {
-  color: var(--ifm-color-primary-lighter);
+  color: var(--ifm-footer-link-hover-color);
 }
 
 
@@ -719,15 +723,23 @@ html[data-theme="light"] .icon {
 
 /* md heading style */
 
+/* <h2> */
+html[data-theme="light"] h2 {
+  color:   #0b2471;
+}
+html[data-theme="dark"] h2 {
+  color:  #A8C5E6;
+}
+
 /* <h3> */
 .markdown h3 {
   font-size: 1.6rem;
 }
 html[data-theme="light"] h3 {
-  color: var(--ifm-color-primary-darker);
+  color:   #a335d5;
 }
 html[data-theme="dark"] h3 {
-  color: var(--ifm-color-primary-lightest);
+  color:  #DAA5BF;
 }
 
 /* <h4> */
@@ -737,10 +749,10 @@ html[data-theme="dark"] h3 {
   margin-top: 42px;
 }
 html[data-theme="light"] h4 {
-  color: #62b00d;
+  color: #242D37;
 }
 html[data-theme="dark"] h4 {
-  color: #83de1f;
+  color: #c7cdd2;
 }
 
 
