@@ -134,7 +134,7 @@ module.exports = {
                 ]}
             ],
         },
-        'webapp/applications/apps_hpo',
+        'hpo',
         {"Deploying Model Endpoints": [
             'webapp/applications/apps_embed_model_deployment',
             'webapp/applications/apps_model_deployment',
@@ -254,7 +254,6 @@ module.exports = {
             'fundamentals/artifacts',
             'fundamentals/models',
             'fundamentals/logger',
-            'fundamentals/hpo'
         ]},
         {
             type: 'category',

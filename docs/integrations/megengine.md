@@ -114,5 +114,5 @@ task.execute_remotely(queue_name='default', exit_process=True)
 
 ## Hyperparameter Optimization
 Use ClearML's [`HyperParameterOptimizer`](../references/sdk/hpo_optimization_hyperparameteroptimizer.md) class to find 
-the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../fundamentals/hpo.md) 
+the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../hpo.md) 
 for more information.

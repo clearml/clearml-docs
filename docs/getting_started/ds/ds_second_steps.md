@@ -181,7 +181,7 @@ or check these pages out:
 - Scale you work and deploy [ClearML Agents](../../clearml_agent.md)
 - Develop on remote machines with [ClearML Session](../../apps/clearml_session.md)
 - Structure your work and put it into [Pipelines](../../pipelines/pipelines.md)
-- Improve your experiments with [Hyperparameter Optimization](../../fundamentals/hpo.md)
+- Improve your experiments with [Hyperparameter Optimization](../../hpo.md)
 - Check out ClearML's integrations with your favorite ML frameworks like [TensorFlow](../../integrations/tensorflow.md), 
   [PyTorch](../../integrations/pytorch.md), [Keras](../../integrations/keras.md), 
   and more
