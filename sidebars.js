@@ -115,13 +115,6 @@ module.exports = {
 /*
 
         'integrations/storage',
-        {'User Management': [
-            'user_management/user_groups',
-            'user_management/access_rules',
-            'user_management/admin_vaults',
-            'user_management/identity_providers'
-            ]
-        },
 */
     ],
     usecaseSidebar: [
@@ -139,23 +132,6 @@ module.exports = {
                     'getting_started/mlops/mlops_first_steps',
                     'getting_started/mlops/mlops_second_steps',
                 ]}
-            ],
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            label: 'Best Practices',
-            items: [
-                {
-                    type: 'doc',
-                    label: 'Data Scientists',
-                    id: 'getting_started/ds/best_practices'
-                },
-                {
-                    type: 'doc',
-                    label: 'MLOps and LLMOps',
-                    id: 'getting_started/mlops/mlops_best_practices'
-                }
             ],
         },
         'webapp/applications/apps_hpo',
@@ -708,11 +684,42 @@ module.exports = {
             ]
         },
         {
-            'Identity Provider Integration': [
-                'deploying_clearml/enterprise_deploy/sso_saml_k8s',
-                'deploying_clearml/enterprise_deploy/sso_keycloak',
-                'deploying_clearml/enterprise_deploy/sso_active_directory'
+            'User Management': [
+                'user_management/user_groups',
+                'user_management/access_rules',
+                'user_management/admin_vaults',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Identity Provider Integration',
+                    link: {type: 'doc', id: 'user_management/identity_providers'},
+                    items: [
+                        'deploying_clearml/enterprise_deploy/sso_saml_k8s',
+                        'deploying_clearml/enterprise_deploy/sso_keycloak',
+                        'deploying_clearml/enterprise_deploy/sso_active_directory'
+                    ]
+                },
             ]
+        },
+    ],
+    bestPracticesSidebar: [
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'Best Practices',
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Data Scientists',
+                    id: 'getting_started/ds/best_practices'
+                },
+                {
+                    type: 'doc',
+                    label: 'MLOps and LLMOps',
+                    id: 'getting_started/mlops/mlops_best_practices'
+                }
+            ],
         },
     ]
 };

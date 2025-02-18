@@ -107,7 +107,12 @@ module.exports = {
             {
               label: 'References',
               to: '/docs/references/sdk/task',
-            },            {
+            },
+            {
+              label: 'Best Practices',
+              to: '/docs/getting_started/ds/best_practices'
+            },
+            {
               label: 'Tutorials',
               to: '/docs/guides',
             },
