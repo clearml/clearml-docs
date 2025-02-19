@@ -481,7 +481,9 @@ module.exports = {
                 'references/sdk/hpo_parameters_uniformintegerparameterrange',
                 'references/sdk/hpo_parameters_uniformparameterrange',
                 'references/sdk/hpo_parameters_parameterset',
-                ]},
+                ]
+            },
+            'references/sdk/router'
     ],
     clearmlAgentSidebar: [
         'clearml_agent/clearml_agent_ref', 'clearml_agent/clearml_agent_env_var'
