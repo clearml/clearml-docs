@@ -109,10 +109,10 @@ Want a more in depth introduction to ClearML? Choose where you want to get start
 
 - [Track and upload](../fundamentals/task.md) metrics and models with only 2 lines of code
 - [Reproduce](../webapp/webapp_exp_reproducing.md) tasks with 3 mouse clicks
-- [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on experiment behavior (for example,
+- [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on task behavior (for example,
 alert you whenever your model improves in accuracy)
 - Manage your [data](../clearml_data/clearml_data.md) - store, track, and version control 
-- Remotely execute experiments on any compute resource you have available with [ClearML Agent](../clearml_agent.md)  
+- Remotely execute tasks on any compute resource you have available with [ClearML Agent](../clearml_agent.md)  
 - Automatically scale cloud instances according to your resource needs with ClearML's 
 [AWS Autoscaler](../webapp/applications/apps_aws_autoscaler.md) and [GCP Autoscaler](../webapp/applications/apps_gcp_autoscaler.md)
 GUI applications
