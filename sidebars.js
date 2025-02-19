@@ -88,7 +88,12 @@ module.exports = {
                     ]
                 },
                 {
-                    "Model Deployment": [
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Model Deployment',
+                    link: {type: 'doc', id: 'deploying_models'},
+                    items: [
                         {
                             type: 'category',
                             collapsible: true,
