@@ -463,8 +463,12 @@ module.exports = {
                 'references/sdk/model_inputmodel', 'references/sdk/model_outputmodel',]},
             'references/sdk/storage',
             'references/sdk/dataset',
-            {'Pipeline': ['references/sdk/automation_controller_pipelinecontroller',
-                'references/sdk/automation_job_clearmljob']},
+            {'Pipeline': [
+                'references/sdk/automation_controller_pipelinecontroller',
+                'references/sdk/automation_controller_pipelinedecorator',
+                'references/sdk/automation_job_clearmljob'
+                ]
+            },
             'references/sdk/scheduler',
             'references/sdk/trigger',
             {'HyperParameter Optimization': [
