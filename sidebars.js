@@ -140,6 +140,11 @@ module.exports = {
             'webapp/applications/apps_model_deployment',
             'webapp/applications/apps_llama_deployment'
         ]},
+        {"Launch Remote Development Environments": [
+            'webapp/applications/apps_ssh_session',
+            'webapp/applications/apps_jupyter_lab',
+            'webapp/applications/apps_vscode',
+        ]},
         {
                     type: 'category',
                     collapsible: true,
@@ -152,11 +157,6 @@ module.exports = {
                             'webapp/applications/apps_dashboard',
                             'webapp/applications/apps_task_scheduler',
                             'webapp/applications/apps_trigger_manager',
-                        ]},
-                        {"AI Dev": [
-                            'webapp/applications/apps_ssh_session',
-                            'webapp/applications/apps_jupyter_lab',
-                            'webapp/applications/apps_vscode',
                         ]},
                         {"UI Dev": [
                             'webapp/applications/apps_gradio',
