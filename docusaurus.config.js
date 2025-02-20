@@ -92,7 +92,7 @@ module.exports = {
           position: 'left'
         },
         {
-          to: '/docs/getting_started/ds/ds_first_steps',
+          to: '/docs/getting_started/auto_log_exp',
           label: 'Using ClearML',
           position: 'left'
         },

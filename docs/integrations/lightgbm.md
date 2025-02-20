@@ -3,9 +3,9 @@ title: LightGBM
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 ClearML integrates seamlessly with [LightGBM](https://github.com/microsoft/LightGBM), automatically logging its models, 
 metric plots, and parameters. 

@@ -49,7 +49,7 @@ authentication, subdomains, and load balancers, and use any of its many configur
 1. Optionally, [configure ClearML Server](clearml_server_config.md) for additional features, including subdomains and load balancers, 
    web login authentication, and the non-responsive task watchdog.
 
-1. [Connect the ClearML SDK to the ClearML Server](../getting_started/ds/ds_first_steps.md)
+1. [Connect the ClearML SDK to the ClearML Server](../clearml_sdk/clearml_sdk_setup)
 
 ## Updating
 

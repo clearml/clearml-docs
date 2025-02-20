@@ -9,7 +9,7 @@ such as required packages and uncommitted changes, and supports reporting scalar
 
 ## Setup
 
-To use Accelerate's ClearML tracker, make sure that `clearml` is [installed and set up](../getting_started/ds/ds_first_steps.md#install-clearml) 
+To use Accelerate's ClearML tracker, make sure that `clearml` is [installed and set up](../clearml_sdk/clearml_sdk_setup#install-clearml) 
 in your environment, and use the `log_with` parameter when instantiating an `Accelerator`:
 
 ```python

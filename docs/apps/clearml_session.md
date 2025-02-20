@@ -23,7 +23,7 @@ VS Code remote sessions use ports 8878 and 8898 respectively.
 
 
 ## Prerequisites
-* `clearml` installed and configured. See [Getting Started](../getting_started/ds/ds_first_steps.md) for details.
+* `clearml` installed and configured. See [ClearML Setup](../clearml_sdk/clearml_sdk_setup) for details.
 * At least one `clearml-agent` running on a remote host. See [installation](../clearml_agent/clearml_agent_setup.md#installation) for details.
 * An SSH client installed on your machine. To verify, open your terminal and execute `ssh`. If you did not receive an 
 error, you are good to go.

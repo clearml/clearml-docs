@@ -96,12 +96,12 @@ module.exports = {
             collapsible: true,
             label: 'Where do I start?',
             items: [
-                {'Data Scientists': [
-                    'getting_started/ds/ds_first_steps',
-                    'getting_started/ds/ds_second_steps',
-                ]},
+                'getting_started/auto_log_exp',
+                'getting_started/track_tasks',
+                'getting_started/reproduce_tasks',
+                'getting_started/logging_using_artifacts',
                 {'MLOps and LLMOps': [
-                    'getting_started/mlops/mlops_first_steps',
+
                     'getting_started/mlops/mlops_second_steps',
                 ]}
             ],
@@ -615,6 +615,7 @@ module.exports = {
         'hyperdatasets/code_examples'
     ],
     installationSidebar: [
+        'clearml_sdk/clearml_sdk_setup',
         {
             type: 'category',
             collapsible: true,

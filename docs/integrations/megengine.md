@@ -3,9 +3,9 @@ title: MegEngine
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 ClearML integrates seamlessly with [MegEngine](https://github.com/MegEngine/MegEngine), automatically logging its models. 
 

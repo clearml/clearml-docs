@@ -3,7 +3,7 @@ title: CatBoost
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
+If you are not already using ClearML, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup) for setup 
 instructions.
 :::
 

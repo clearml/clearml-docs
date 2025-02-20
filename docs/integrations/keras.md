@@ -3,9 +3,9 @@ title: Keras
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 ClearML integrates with [Keras](https://keras.io/) out-of-the-box, automatically logging its models, scalars, 
 TensorFlow definitions, and TensorBoard outputs. 

@@ -3,9 +3,9 @@ title: PyTorch Lightning
 --- 
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [PyTorch Lightning](https://github.com/Lightning-AI/lightning) is a framework that simplifies the process of training and deploying PyTorch models. ClearML seamlessly 
 integrates with PyTorch Lightning, automatically logging PyTorch models, parameters supplied by [LightningCLI](https://lightning.ai/docs/pytorch/stable/cli/lightning_cli.html), 

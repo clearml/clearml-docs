@@ -3,9 +3,9 @@ title: TensorFlow
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 ClearML integrates with [TensorFlow](https://www.tensorflow.org/) out-of-the-box, automatically logging its models, 
 definitions, scalars, as well as TensorBoard outputs. 

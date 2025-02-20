@@ -2,7 +2,7 @@
 title: ClearML Modules
 ---
 
-- [**ClearML Python Package**](../getting_started/ds/ds_first_steps.md#install-clearml) (`clearml`) for integrating ClearML into your existing code-base.
+- [**ClearML Python Package**](auto_log_exp#install-clearml) (`clearml`) for integrating ClearML into your existing code-base.
 - [**ClearML Server**](../deploying_clearml/clearml_server.md) (`clearml-server`) for storing task, model, and workflow data, and supporting the Web UI experiment manager. It is also the control plane for the MLOps.
 - [**ClearML Agent**](../clearml_agent.md) (`clearml-agent`), the MLOps orchestration agent. Enabling task and workflow reproducibility, and scalability.
 - [**ClearML Data**](../clearml_data/clearml_data.md) (`clearml-data`) data management and versioning on top of file-systems/object-storage.

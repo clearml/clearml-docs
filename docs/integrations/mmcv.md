@@ -7,9 +7,9 @@ title: MMCV v1.x
 :::
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [MMCV](https://github.com/open-mmlab/mmcv/tree/1.x) is a computer vision framework developed by OpenMMLab. You can integrate ClearML into your 
 code using the `mmcv` package's [`ClearMLLoggerHook`](https://mmcv.readthedocs.io/en/master/_modules/mmcv/runner/hooks/logger/clearml.html)

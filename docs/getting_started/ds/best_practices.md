@@ -24,7 +24,7 @@ During early stages of model development, while code is still being modified hea
 These setups can be folded into each other and that's great! If you have a GPU machine for each researcher, that's awesome! 
 The goal of this phase is to get a code, dataset, and environment set up, so you can start digging to find the best model!
 
-- [ClearML SDK](../../clearml_sdk/clearml_sdk.md) should be integrated into your code (check out [Getting Started](ds_first_steps.md)). 
+- [ClearML SDK](../../clearml_sdk/clearml_sdk.md) should be integrated into your code (check out [ClearML Setup](../../clearml_sdk/clearml_sdk_setup.md)). 
   This helps visualizing the results and tracking progress.
 - [ClearML Agent](../../clearml_agent.md) helps moving your work to other machines without the hassle of rebuilding the environment every time, 
   while also creating an easy queue interface that easily lets you drop your tasks to be executed one by one
