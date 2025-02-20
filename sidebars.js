@@ -20,17 +20,9 @@ module.exports = {
             label: 'Infrastructure Control Plane (GPUaaS)',
             items: [
                 'fundamentals/agents_and_queues',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'ClearML Agent',
-                    link: {type: 'doc', id: 'clearml_agent'},
-                    items: [
-                        'clearml_agent/clearml_agent_dynamic_gpus',
-                        'clearml_agent/clearml_agent_fractional_gpus',
-                    ]
-                },
+                'clearml_agent',
+                'clearml_agent/clearml_agent_dynamic_gpus',
+                'clearml_agent/clearml_agent_fractional_gpus',
                 {
                     type: 'category',
                     collapsible: true,
