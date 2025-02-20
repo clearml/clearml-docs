@@ -2,8 +2,8 @@
 title: Model Deployment
 ---
 
-Model deployment is a critical step in the machine learning lifecycle, enabling trained models to be accessible for 
-real-world applications. ClearML provides a comprehensive suite of tools for seamless model deployment, which supports
+Model deployment makes trained models accessible for real-world applications. ClearML provides a comprehensive suite of 
+tools for seamless model deployment, which supports
 features including:
 * Version control
 * Automatic updates 
