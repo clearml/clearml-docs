@@ -29,7 +29,7 @@ html {
 
   --ifm-color-primary-light:    #17c5a2;
   --ifm-color-primary-lighter:  #2edfbb;
-  --ifm-color-primary-lightest: #51f1d1;
+  --ifm-color-primary-lightest: #AEFDED;
   --ifm-toc-background-color:   #141722;
 
   --ifm-code-font-size: 95%;
@@ -56,7 +56,7 @@ html[data-theme="dark"] {
   --ifm-table-stripe-background:   #101418; /* section 1 */
   --ifm-toc-background-color:      #242D37; /* section 2 */
   --ifm-link-color:                #6AD6C0; /* specific link color */
-  --ifm-link-hover-color:          #8CE5D3  /* specific link hover color */
+  --ifm-link-hover-color:          #AEFDED; /* specific link hover color */
   --ifm-font-color-base:           #E5E5E5 /* body text */
 }
 
@@ -71,6 +71,10 @@ html[data-theme="dark"] {
 /* ===LAYOUT=== */
 a {
   text-underline-offset: 4px;
+}
+
+html[data-theme="dark"] a:hover {
+    color: var(--ifm-color-primary-lightest);
 }
 
 .align-center {
@@ -470,6 +474,9 @@ html[data-theme="dark"] .table-of-contents {
 html[data-theme="dark"] a.table-of-contents__link--active {
   color: var(--ifm-link-color);
 }
+html[data-theme="dark"] .table-of-contents a:hover {
+  color: var(--ifm-color-primary-lightest);
+}
 .table-of-contents__left-border {
   border:none;
 }
@@ -727,7 +734,14 @@ html[data-theme="light"] .icon {
 html[data-theme="light"] h2 {
   color:   #0b2471;
 }
+html[data-theme="light"] h2 a.hash-link {
+  color:   #0b2471;
+}
+
 html[data-theme="dark"] h2 {
+  color:  #A8C5E6;
+}
+html[data-theme="dark"] h2 a.hash-link {
   color:  #A8C5E6;
 }
 
@@ -738,7 +752,14 @@ html[data-theme="dark"] h2 {
 html[data-theme="light"] h3 {
   color:   #a335d5;
 }
+html[data-theme="light"] h3 a.hash-link {
+  color:   #a335d5;
+}
+
 html[data-theme="dark"] h3 {
+  color:  #DAA5BF;
+}
+html[data-theme="dark"] h3 a.hash-link {
   color:  #DAA5BF;
 }
 
@@ -748,12 +769,21 @@ html[data-theme="dark"] h3 {
   margin-bottom: 8px;
   margin-top: 42px;
 }
+
 html[data-theme="light"] h4 {
   color: #242D37;
 }
+html[data-theme="light"] h4 a.hash-link {
+  color: #242D37;
+}
+
 html[data-theme="dark"] h4 {
   color: #c7cdd2;
 }
+html[data-theme="dark"] h4 a.hash-link {
+  color: #c7cdd2;
+}
+
 
 
 /* <hr> */
