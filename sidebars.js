@@ -27,15 +27,8 @@ module.exports = {
                     label: 'ClearML Agent',
                     link: {type: 'doc', id: 'clearml_agent'},
                     items: [
-                        'clearml_agent/clearml_agent_setup',
-                        'clearml_agent/clearml_agent_deployment',
-                        'clearml_agent/clearml_agent_execution_env',
-                        'clearml_agent/clearml_agent_env_caching',
                         'clearml_agent/clearml_agent_dynamic_gpus',
                         'clearml_agent/clearml_agent_fractional_gpus',
-                        'clearml_agent/clearml_agent_services_mode',
-                        'clearml_agent/clearml_agent_docker',
-                        'clearml_agent/clearml_agent_scheduling'
                     ]
                 },
                 {
@@ -87,34 +80,8 @@ module.exports = {
                         'webapp/applications/apps_streamlit',
                     ]
                 },
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Model Deployment',
-                    link: {type: 'doc', id: 'deploying_models'},
-                    items: [
-                        {
-                            type: 'category',
-                            collapsible: true,
-                            collapsed: true,
-                            label: 'ClearML Serving',
-                            link: {type: 'doc', id: 'clearml_serving/clearml_serving'},
-                            items: ['clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']
-                        },
-                        {
-                            type: 'category',
-                            collapsible: true,
-                            collapsed: true,
-                            label: 'Model Launchers',
-                            items: [
-                                'webapp/applications/apps_embed_model_deployment',
-                                'webapp/applications/apps_model_deployment',
-                                'webapp/applications/apps_llama_deployment'
-                            ]
-                        }
-                    ]
-                },
+                'deploying_models',
+
             ]
         },
 /*
@@ -141,9 +108,25 @@ module.exports = {
         },
         'hpo',
         {"Deploying Model Endpoints": [
-            'webapp/applications/apps_embed_model_deployment',
-            'webapp/applications/apps_model_deployment',
-            'webapp/applications/apps_llama_deployment'
+            {
+                type: 'category',
+                collapsible: true,
+                collapsed: true,
+                label: 'ClearML Serving',
+                link: {type: 'doc', id: 'clearml_serving/clearml_serving'},
+                items: ['clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']
+            },
+            {
+                type: 'category',
+                collapsible: true,
+                collapsed: true,
+                label: 'Model Launchers',
+                items: [
+                           'webapp/applications/apps_embed_model_deployment',
+                           'webapp/applications/apps_model_deployment',
+                           'webapp/applications/apps_llama_deployment'
+                ]
+            }
         ]},
         {"Launch Remote Development Environments": [
             'webapp/applications/apps_ssh_session',
@@ -269,6 +252,7 @@ module.exports = {
             items: [
                 'clearml_sdk/task_sdk',
                 'clearml_sdk/model_sdk',
+                'clearml_sdk/hpo_sdk',
                 'clearml_sdk/apiclient_sdk'
             ]
         },
@@ -631,6 +615,21 @@ module.exports = {
         'hyperdatasets/code_examples'
     ],
     installationSidebar: [
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Agent',
+            items: [
+                'clearml_agent/clearml_agent_setup',
+                'clearml_agent/clearml_agent_deployment',
+                'clearml_agent/clearml_agent_execution_env',
+                'clearml_agent/clearml_agent_env_caching',
+                'clearml_agent/clearml_agent_services_mode',
+                'clearml_agent/clearml_agent_docker',
+                'clearml_agent/clearml_agent_scheduling'
+            ]
+        },
         {
             type: 'category',
             collapsible: true,
