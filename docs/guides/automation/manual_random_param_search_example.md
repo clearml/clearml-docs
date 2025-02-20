@@ -2,13 +2,13 @@
 title: Manual Random Parameter Search
 ---
 
-The [manual_random_param_search_example.py](https://github.com/allegroai/clearml/blob/master/examples/automation/manual_random_param_search_example.py) 
+The [manual_random_param_search_example.py](https://github.com/clearml/clearml/blob/master/examples/automation/manual_random_param_search_example.py) 
 script demonstrates a random parameter search by automating the execution of a task multiple times, each time with 
 a different set of random hyperparameters. 
 
 This example accomplishes the automated random parameter search by doing the following:
 
-1. Creating a template Task named `Keras HP optimization base`. To create it, run the [base_template_keras_simple.py](https://github.com/allegroai/clearml/blob/master/examples/optimization/hyper-parameter-optimization/base_template_keras_simple.py)
+1. Creating a template Task named `Keras HP optimization base`. To create it, run the [base_template_keras_simple.py](https://github.com/clearml/clearml/blob/master/examples/optimization/hyper-parameter-optimization/base_template_keras_simple.py)
 script. This task must be executed first, so it will be stored in the server, and then it can be accessed, cloned, 
    and modified by another Task. 
 1. Creating a parameter dictionary, which is connected to the Task by calling [`Task.connect()`](../../references/sdk/task.md#connect) 

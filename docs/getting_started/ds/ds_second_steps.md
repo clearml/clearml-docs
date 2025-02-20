@@ -2,14 +2,14 @@
 title: Next Steps
 ---
 
-So, you've already [installed ClearML's Python package](ds_first_steps.md) and run your first experiment!
+So, you've already [installed ClearML's Python package](ds_first_steps.md) and run your first task!
 
 Now, you'll learn how to track Hyperparameters, Artifacts, and Metrics!
 
-## Accessing Experiments
+## Accessing Tasks
 
 Every previously executed experiment is stored as a Task.
-A Task's project and name can be changed after the experiment has been executed.
+A Task's project and name can be changed after it has been executed.
 A Task is also automatically assigned an auto-generated unique identifier (UUID string) that cannot be changed and always locates the same Task in the system.
 
 Retrieve a Task object programmatically by querying the system based on either the Task ID,
@@ -23,8 +23,8 @@ Once you have a Task object you can query the state of the Task, get its model(s
 
 ## Log Hyperparameters
 
-For full reproducibility, it's paramount to save hyperparameters for each experiment. Since hyperparameters can have substantial impact
-on model performance, saving and comparing these between experiments is sometimes the key to understanding model behavior.
+For full reproducibility, it's paramount to save each task's hyperparameters. Since hyperparameters can have substantial impact
+on model performance, saving and comparing them between tasks is sometimes the key to understanding model behavior.
 
 ClearML supports logging `argparse` module arguments out of the box, so once ClearML is integrated into the code, it automatically logs all parameters provided to the argument parser.
 
@@ -40,7 +40,7 @@ See [Configuration](../../clearml_sdk/task_sdk.md#configuration) for all hyperpa
 
 ## Log Artifacts
 
-ClearML lets you easily store the output products of an experiment - Model snapshot / weights file, a preprocessing of your data, feature representation of data and more!
+ClearML lets you easily store the output products of a task: Model snapshot / weights file, a preprocessing of your data, feature representation of data and more!
 
 Essentially, artifacts are files (or Python objects) uploaded from a script and are stored alongside the Task.
 These artifacts can be easily accessed by the web UI or programmatically.
@@ -89,7 +89,7 @@ Calling `get_local_copy()` returns a local cached copy of the artifact. Therefor
 need to download the artifact again.
 Calling `get()` gets a deserialized pickled object.
 
-Check out the [artifacts retrieval](https://github.com/allegroai/clearml/blob/master/examples/reporting/artifacts_retrieval.py) example code.
+Check out the [artifacts retrieval](https://github.com/clearml/clearml/blob/master/examples/reporting/artifacts_retrieval.py) example code.
 
 ### Models
 
@@ -107,15 +107,15 @@ task = Task.init(
 )
 ```
 
-Now, whenever the framework (TensorFlow/Keras/PyTorch etc.) stores a snapshot, the model file is automatically uploaded to the bucket to a specific folder for the experiment.
+Now, whenever the framework (TensorFlow/Keras/PyTorch etc.) stores a snapshot, the model file is automatically uploaded to the bucket to a specific folder for the task.
 
-Loading models by a framework is also logged by the system; these models appear in an experiment's **Artifacts** tab,
+Loading models by a framework is also logged by the system; these models appear in a task's **Artifacts** tab,
 under the "Input Models" section.
 
-Check out model snapshots examples for [TensorFlow](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/tensorflow_mnist.py),
-[PyTorch](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py),
-[Keras](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py),
-[scikit-learn](https://github.com/allegroai/clearml/blob/master/examples/frameworks/scikit-learn/sklearn_joblib_example.py).
+Check out model snapshots examples for [TensorFlow](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/tensorflow_mnist.py),
+[PyTorch](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py),
+[Keras](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py),
+[scikit-learn](https://github.com/clearml/clearml/blob/master/examples/frameworks/scikit-learn/sklearn_joblib_example.py).
 
 #### Loading Models
 Loading a previously trained model is quite similar to loading artifacts.
@@ -149,7 +149,7 @@ You can log everything, from time series data and confusion matrices to HTML, Au
 Once everything is neatly logged and displayed, use the [comparison tool](../../webapp/webapp_exp_comparing.md) to find the best configuration!
 
 
-## Track Experiments
+## Track Tasks
 
 The task table is a powerful tool for creating dashboards and views of your own projects, your team's projects, or the entire development.
 
@@ -163,13 +163,13 @@ You can filter and sort based on parameters and metrics, so creating custom view
 
 Create a dashboard for a project, presenting the latest Models and their accuracy scores, for immediate insights.
 
-It can also be used as a live leaderboard, showing the best performing experiments' status, updated in real time.
+It can also be used as a live leaderboard, showing the best performing tasks' status, updated in real time.
 This is helpful to monitor your projects' progress, and to share it across the organization.
 
-Any page is sharable by copying the URL from the address bar, allowing you to bookmark leaderboards or to send an exact view of a specific experiment or a comparison page.
+Any page is sharable by copying the URL from the address bar, allowing you to bookmark leaderboards or to send an exact view of a specific task or a comparison page.
 
-You can also tag Tasks for visibility and filtering allowing you to add more information on the execution of the experiment.
-Later you can search based on task name in the search bar, and filter experiments based on their tags, parameters, status, and more.
+You can also tag Tasks for visibility and filtering allowing you to add more information on the execution of the task.
+Later you can search based on task name in the search bar, and filter tasks based on their tags, parameters, status, and more.
 
 ## What's Next?
 
@@ -181,7 +181,7 @@ or check these pages out:
 - Scale you work and deploy [ClearML Agents](../../clearml_agent.md)
 - Develop on remote machines with [ClearML Session](../../apps/clearml_session.md)
 - Structure your work and put it into [Pipelines](../../pipelines/pipelines.md)
-- Improve your experiments with [Hyperparameter Optimization](../../hpo.md)
+- Improve your tasks with [Hyperparameter Optimization](../../hpo.md)
 - Check out ClearML's integrations with your favorite ML frameworks like [TensorFlow](../../integrations/tensorflow.md), 
   [PyTorch](../../integrations/pytorch.md), [Keras](../../integrations/keras.md), 
   and more

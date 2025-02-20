@@ -139,13 +139,15 @@ You can retrieve the Dataview frames using [`DataView.to_list()`](../references/
 [`DataView.to_dict()`](../references/hyperdataset/dataview.md#to_dict), or [`DataView.get_iterator()`](../references/hyperdataset/dataview.md#get_iterator)
 (see [Accessing Frames](#accessing-frames)).
 
-#### ROI Queries: 
+### ROI Query Examples 
 
-* **ROI query for a single label**
+#### ROI query for a single label
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `cat`:
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator that randomly returns frames according to queries
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=False)
 
@@ -161,11 +163,13 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label OR another**
+#### ROI query for one label OR another
 
 This example uses an ROI query to filter for frames containing at least one ROI with either the label `cat` OR the label `dog`:
 
 ```python
+from allegroai import DataView
+
 # Add a query for a Dataset version 
 myDataView.add_query(
     dataset_name='myDataset', 
@@ -184,11 +188,13 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for two specific labels in the same ROI**  
+#### ROI query for two specific labels in the same ROI
 
 This example uses an ROI query to filter for frames containing at least one ROI with both the label `Car` AND the label `partly_occluded`:
 
 ```python
+from allegroai import DataView
+
 # Add a query for a Dataset version
 myDataView.add_query(
     dataset_name='myDataset', 
@@ -201,12 +207,14 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND NOT another (Lucene query)**    
+#### ROI query for one label AND NOT another (Lucene query)
 
 This example uses an ROI query to filter for frames containing at least one ROI that has with the label `Car` AND DOES NOT 
 have the label `partly_occluded`:
 
 ```python
+from allegroai import DataView
+
 # Add a query for a Dataset version
 # Use a Lucene Query
 #   "label" is a key in the rois dictionary of a frame
@@ -222,13 +230,15 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND another label in different ROIs**
+#### ROI query for one label AND another label in different ROIs
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` and at least one 
 ROI with the label `Person`. The example demonstrates using the `roi_queries` parameter of [`DataView.add_multi_query()`](../references/hyperdataset/dataview.md#add_multi_query) 
 with a list of [`DataView.RoiQuery`](../references/hyperdataset/dataview.md#roiquery) objects:
 
 ```python
+from allegroai import DataView
+
 myDataview = DataView()
 myDataview.add_multi_query(
     dataset_id=self._dataset_id,
@@ -240,13 +250,15 @@ myDataview.add_multi_query(
 list_of_frames = myDataView.to_list()
 ```
 
-* **ROI query for one label AND NOT another label in different ROIs**
+#### ROI query for one label AND NOT another label in different ROIs
 
 This example uses an ROI query to filter for frames containing at least one ROI with the label `Car` AND that DO NOT 
 contain ROIs with the label `Person`. To exclude an ROI, pass `must_not=True` in the [`DataView.RoiQuery`](../references/hyperdataset/dataview.md#roiquery) 
 object. 
 
 ```python
+from allegroai import DataView
+
 myDataview = DataView()
 myDataview.add_multi_query(
     dataset_id=self._dataset_id,
@@ -266,6 +278,8 @@ This example demonstrates an ROI query filtering for frames containing the ROI l
 from two versions of one Dataset, and one version of another Dataset:
 
 ```python
+from allegroai import DataView
+
 # Add queries:
 
 # The 1st Dataset version 
@@ -297,7 +311,7 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
-#### Frame Queries
+### Frame Queries
 
 Use frame queries to filter frames by ROI labels and/or frame metadata key-value pairs that a frame must include or 
 exclude for the Dataview to return the frame. 
@@ -305,9 +319,13 @@ exclude for the Dataview to return the frame.
 **Frame queries** match frame meta key-value pairs, ROI labels, or both.
 They use the same logical OR, AND, NOT AND matching as ROI queries.
 
+#### Frame Query by Metadata
+
 This example demonstrates a frame query filtering for frames containing the meta key `city` value of `bremen`:
         
 ```python
+from allegroai import DataView
+
 # Add a frame query for frames with the meta key "city" value of "bremen"
 myDataView.add_query(
     dataset_name='myDataset',
@@ -320,6 +338,59 @@ myDataView.add_query(
 list_of_frames = myDataView.to_list()
 ```
 
+#### Frame Query by Date and Time
+Provided that a metadata field stores date and time values, you can query frames based on date ranges and specific time 
+intervals
+
+##### Frame Query for Specific Date
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with the value of October 
+20th, 2024: 
+        
+```python
+# Add a frame query for frames with the meta key "updated" value of "2024-10-20"
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.updated:[2024-10-20 TO 2024-10-20]'
+)
+
+# retrieving the actual SingleFrames / FrameGroups 
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
+
+##### Frame Query for Date Range
+
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with any value between the
+dates of October 20th and October 30th, 2024: 
+
+```python
+# Add a frame query for frames with the meta key "updated" value between "2024-10-20" and "2024-10-30"
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.updated:[2024-10-20 TO 2024-10-30]'
+)
+
+# retrieving the actual SingleFrames / FrameGroups 
+# you can also iterate over the frames with `for frame in myDataView.get_iterator():`
+list_of_frames = myDataView.to_list()
+```
+
+##### Frame Query for Time Interval
+
+This example demonstrates a frame query filtering for frames containing the meta key `updated` with any value between 
+`08:000` and `09:00` on October 20th, 2024: 
+
+```python
+# Add a frame query for frames with the meta key's value between 08:00:00 and 09:00:00 on 2024-10-20
+
+myDataView.add_query(
+    dataset_name='myDataset',
+    version_name='version',
+    frame_query='meta.<field_name>:[2024-10-20T08:00:00 TO 2024-10-20T09:00:00]'
+)
+```
 
 ### Controlling Query Iteration
 
@@ -333,6 +404,8 @@ This example demonstrates creating a Dataview and setting its parameters to iter
 manually terminated: 
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator that returns frames
 myDataView = DataView()
 
@@ -344,6 +417,8 @@ myDataView.set_iteration_parameters(order=IterationOrder.random, infinite=True)
 This example demonstrates creating a DataView and setting its parameters to iterate and return all frames matching a query:
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator for frames
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=False)
 
@@ -370,6 +445,8 @@ This example demonstrates creating a Dataview and setting its parameters to iter
 Dataset version contains fewer than that number of frames matching the query, then fewer are returned by the iterator.
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator for frames
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=True)
 
@@ -392,6 +469,8 @@ This example adjusts an imbalance in the input data to improve training for `Car
 one ROI labeled with both `Car` and `largely_occluded` will be input.
 
 ```python
+from allegroai import DataView, IterationOrder
+
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=True)
 
 myDataView.add_query(
@@ -423,6 +502,8 @@ then use the labels you map **to** when setting enumeration values.
 For example, if the labels `truck`, `van`, and `car` are mapped **to** `vehicle`, then set enumeration for `vehicle`. 
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator that randomly returns frames according to queries
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=True)
 
@@ -473,6 +554,8 @@ third uses `Car` (upper case "C").
 The example maps `Car` (upper case "C") to `car` (lower case "c"):
 
 ```python
+from allegroai import DataView, IterationOrder
+
 # Create a Dataview object for an iterator that randomly returns frames according to queries 
 myDataView = DataView(iteration_order=IterationOrder.random, iteration_infinite=True)
 
@@ -512,6 +595,8 @@ Dataview objects can be retrieved by the Dataview ID or name using the [`DataVie
 class method.
 
 ```python
+from allegroai import DataView
+
 my_dataview = DataView.get(dataview_id='<dataview_id>')
 ```
 

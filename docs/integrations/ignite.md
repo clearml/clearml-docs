@@ -29,7 +29,7 @@ uncommitted code, Python environment, all information logged through `Tensorboar
 
 Visualize all the captured information in the task's page in ClearML's [WebApp](#webapp).
 
-See a code example [here](https://github.com/allegroai/clearml/blob/master/examples/frameworks/ignite/cifar_ignite.py).
+See a code example [here](https://github.com/clearml/clearml/blob/master/examples/frameworks/ignite/cifar_ignite.py).
 
 ## ClearMLLogger
 PyTorch Ignite supports a ClearML Logger to log metrics, text, model/optimizer parameters, plots, and model checkpoints 

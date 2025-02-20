@@ -2,7 +2,7 @@
 title: Hyperparameter Optimization
 ---
 
-The [hyper_parameter_optimizer.py](https://github.com/allegroai/clearml/blob/master/examples/optimization/hyper-parameter-optimization/hyper_parameter_optimizer.py) 
+The [hyper_parameter_optimizer.py](https://github.com/clearml/clearml/blob/master/examples/optimization/hyper-parameter-optimization/hyper_parameter_optimizer.py) 
 example script demonstrates hyperparameter optimization (HPO), which is automated by using ClearML. 
 
 ## Set the Search Strategy for Optimization
@@ -24,7 +24,7 @@ The following search strategies can be used:
      
 * Random uniform sampling of hyperparameter strategy - [`automation.RandomSearch`](../../../references/sdk/hpo_optimization_randomsearch.md)
 * Full grid sampling strategy of every hyperparameter combination - [`automation.GridSearch`](../../../references/sdk/hpo_optimization_gridsearch.md).
-* Custom - Use a custom class and inherit from the ClearML automation base strategy class, [`SearchStrategy`](https://github.com/allegroai/clearml/blob/master/clearml/automation/optimization.py#L310)
+* Custom - Use a custom class and inherit from the ClearML automation base strategy class, [`SearchStrategy`](https://github.com/clearml/clearml/blob/master/clearml/automation/optimization.py#L310)
 
 The search strategy class that is chosen will be passed to the [`automation.HyperParameterOptimizer`](../../../references/sdk/hpo_optimization_hyperparameteroptimizer.md) 
 object later.

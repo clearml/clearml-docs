@@ -2,7 +2,7 @@
 title: TensorBoardX Video
 ---
 
-The [moveiepy_tensorboardx.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorboardx/moviepy_tensorboardx.py)
+The [moveiepy_tensorboardx.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorboardx/moviepy_tensorboardx.py)
 example demonstrates the integration of ClearML into code, which creates a TensorBoardX `SummaryWriter` object to log 
 video data. 
 

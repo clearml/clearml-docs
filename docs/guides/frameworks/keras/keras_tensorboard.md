@@ -3,11 +3,11 @@ title: Keras with TensorBoard
 ---
 
 The example below demonstrates the integration of ClearML into code which uses Keras and TensorBoard.
-View it in [script](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py)
-or in [Jupyter Notebook](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/jupyter_keras_TB_example.ipynb).
+View it in [script](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py)
+or in [Jupyter Notebook](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/jupyter_keras_TB_example.ipynb).
 
 :::note
-The example in [Jupyter Notebook](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/jupyter_keras_TB_example.ipynb) 
+The example in [Jupyter Notebook](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/jupyter_keras_TB_example.ipynb) 
 includes a clickable icon to open the notebook in Google Colab.
 :::
 

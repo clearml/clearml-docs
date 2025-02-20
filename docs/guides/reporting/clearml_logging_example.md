@@ -2,7 +2,7 @@
 title: Using Logger - Jupyter Notebook
 ---
 
-The [jupyter_logging_example.ipynb](https://github.com/allegroai/clearml/blob/master/examples/reporting/jupyter_logging_example.ipynb) 
+The [jupyter_logging_example.ipynb](https://github.com/clearml/clearml/blob/master/examples/reporting/jupyter_logging_example.ipynb) 
 script demonstrates the integration of ClearML's explicit reporting module, `Logger`, in a Jupyter Notebook. All ClearML 
 explicit reporting works with Jupyter Notebook. 
 

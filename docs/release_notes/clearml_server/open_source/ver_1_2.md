@@ -6,7 +6,7 @@ title: Version 1.2
 
 **New Features and Improvements**
 * Add functionality to "Abort all children" UI action for controller and optimizer tasks
-* Add parameter search to task configuration UI section ([ClearML GitHub issue #467](https://github.com/allegroai/clearml/issues/467))
+* Add parameter search to task configuration UI section ([ClearML GitHub issue #467](https://github.com/clearml/clearml/issues/467))
 * Add tag exclusion filters in UI experiment and model tables
 * Add "Clear Filters" functionality button to UI table filters
 * Improve full screen scalar graph to display all data points
@@ -29,12 +29,12 @@ title: Version 1.2
 
 **Bug Fixes**
 
-* Fix UI debug sample viewer ignoring metric filter on auto-refresh ([ClearML GitHub issue #512](https://github.com/allegroai/clearml/issues/512))
-* Fix "Wall time" x-axis option in UI plots slowing down web app ([ClearML GitHub issue #441](https://github.com/allegroai/clearml/issues/441))
-* Fix UI table plot titles don't display their iteration number ([ClearML GitHub issue #474](https://github.com/allegroai/clearml/issues/474))
-* Fix auto-refresh resets vertical scroll in UI debug samples ([ClearML GitHub issue #474](https://github.com/allegroai/clearml/issues/474))
-* Fix manually run experiments cannot be edited in UI after being reset ([ClearML GitHub issue #449](https://github.com/allegroai/clearml/issues/449)) 
-* Fix UI Workers & Queues and Experiment Table pages display mismatching experiment runtime values ([ClearML Server GitHub issue #100](https://github.com/allegroai/clearml-server/issues/100))
+* Fix UI debug sample viewer ignoring metric filter on auto-refresh ([ClearML GitHub issue #512](https://github.com/clearml/clearml/issues/512))
+* Fix "Wall time" x-axis option in UI plots slowing down web app ([ClearML GitHub issue #441](https://github.com/clearml/clearml/issues/441))
+* Fix UI table plot titles don't display their iteration number ([ClearML GitHub issue #474](https://github.com/clearml/clearml/issues/474))
+* Fix auto-refresh resets vertical scroll in UI debug samples ([ClearML GitHub issue #474](https://github.com/clearml/clearml/issues/474))
+* Fix manually run experiments cannot be edited in UI after being reset ([ClearML GitHub issue #449](https://github.com/clearml/clearml/issues/449)) 
+* Fix UI Workers & Queues and Experiment Table pages display mismatching experiment runtime values ([ClearML Server GitHub issue #100](https://github.com/clearml/clearml-server/issues/100))
 * Fix UI plots sometimes disappear after task execution completion
 * Fix UI experiment plots don't display some plots on a http server
 * Fix failure to add Azure credentials through UI Settings page by new users 

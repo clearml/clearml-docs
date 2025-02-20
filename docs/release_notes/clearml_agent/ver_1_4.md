@@ -42,4 +42,4 @@ title: Version 1.4
   * Fix template namespace should override default namespace
   * Fix `extra_bash_init_cmd` location in initial bash script
   * Fix debug mode
-* Fixed documentation ([ClearML Agent PR #117](https://github.com/allegroai/clearml-agent/pull/117))
+* Fixed documentation ([ClearML Agent PR #117](https://github.com/clearml/clearml-agent/pull/117))

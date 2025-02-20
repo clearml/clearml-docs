@@ -16,7 +16,7 @@ helm upgrade clearml allegroai/clearml
 helm upgrade clearml allegroai/clearml --version <CURRENT CHART VERSION> -f custom_values.yaml
 ```
 
-See the [clearml-helm-charts repository](https://github.com/allegroai/clearml-helm-charts/tree/main/charts/clearml#local-environment) 
+See the [clearml-helm-charts repository](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml#local-environment) 
 to view the up-to-date charts. 
 
 :::tip

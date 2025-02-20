@@ -17,7 +17,7 @@ private credentials (assuming the entire code base, including `.git` already exi
 
 ## Installation
 
-1. Download the latest plugin version from the [Releases page](https://github.com/allegroai/clearml-pycharm-plugin/releases). 
+1. Download the latest plugin version from the [Releases page](https://github.com/clearml/clearml-pycharm-plugin/releases). 
 
 1. Install the plugin in PyCharm from local disk:
 

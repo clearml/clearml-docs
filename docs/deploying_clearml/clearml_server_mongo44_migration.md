@@ -11,7 +11,7 @@ In v1.2, the MongoDB subsystem of ClearML Server has been upgraded from version 
 necessitates the migration of the database contents to be compatible with the new version.
 
 :::note Kubernetes installations
-[ClearML’s helm chart](https://github.com/allegroai/clearml-helm-charts/tree/main/charts/clearml) is already running 
+[ClearML’s helm chart](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml) is already running 
 mongodb version 4.4. If your ClearML server had been deployed with this chart (with the default mongodb bitnami chart) - 
 You can stop reading here, as no migration is required.
 :::
@@ -49,7 +49,7 @@ To avoid data corruption, shut down your ClearML server before applying the migr
 
 ### Migrating by Script
 A migration script is available to automatically run this process for all supported OSs.  
-[Download the script](https://github.com/allegroai/clearml-server/releases/download/1.2.0/clearml-server-1.2.0-migration.py) and run it on your ClearML server.
+[Download the script](https://github.com/clearml/clearml-server/releases/download/1.2.0/clearml-server-1.2.0-migration.py) and run it on your ClearML server.
 Run `clearml-server-1.2.0-migration.py -–help` to see execution options.  
 Note the script will create a backup archive of your data in the original directory.
 

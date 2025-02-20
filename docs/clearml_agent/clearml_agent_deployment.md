@@ -107,10 +107,10 @@ ClearML Agent is deployed onto a Kubernetes cluster using **Kubernetes-Glue**, w
 You can deploy ClearML Agent onto Kubernetes using one of the following methods:
 
 1. **ClearML Agent Helm Chart (Recommended)**:
-   Use the [ClearML Agent Helm Chart](https://github.com/allegroai/clearml-helm-charts/tree/main/charts/clearml-agent) to spin up an agent pod acting as a controller. This is the recommended and scalable approach.
+   Use the [ClearML Agent Helm Chart](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml-agent) to spin up an agent pod acting as a controller. This is the recommended and scalable approach.
    
 2. **K8s Glue Script**:
-   Run a [K8s Glue script](https://github.com/allegroai/clearml-agent/blob/master/examples/k8s_glue_example.py) on a Kubernetes CPU node. This approach is less scalable and typically suited for simpler use cases.
+   Run a [K8s Glue script](https://github.com/clearml/clearml-agent/blob/master/examples/k8s_glue_example.py) on a Kubernetes CPU node. This approach is less scalable and typically suited for simpler use cases.
 
 ### How It Works
 The ClearML Kubernetes-Glue performs the following:

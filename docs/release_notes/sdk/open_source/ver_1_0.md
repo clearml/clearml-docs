@@ -5,8 +5,8 @@ title: Version 1.0
 
 **Features**
 
-- Add Click support ([ClearML GitHub issue #386](https://github.com/allegroai/clearml/issues/386))
-- Add progress bar to SHA2 generation ([ClearML GitHub issue #396](https://github.com/allegroai/clearml/issues/396))
+- Add Click support ([ClearML GitHub issue #386](https://github.com/clearml/clearml/issues/386))
+- Add progress bar to SHA2 generation ([ClearML GitHub issue #396](https://github.com/clearml/clearml/issues/396))
 - Add prefix to Task reported runtime info: `cpu_cores`, `gpu_driver_version` and `gpu_driver_cuda_version`
 - Add support for `Logger.report_text()` explicit log-level reporting
 - Add `return_full_path` argument to `StorageManager.list()`
@@ -21,8 +21,8 @@ title: Version 1.0
 
 **Bug Fixes**
 
-- Fix Pandas with multi-index ([ClearML GitHub issue #399](https://github.com/allegroai/clearml/issues/399))
-- Fix check permissions fail in `HTTPDriver` ([ClearML GitHub issue #394](https://github.com/allegroai/clearml/issues/394))
+- Fix Pandas with multi-index ([ClearML GitHub issue #399](https://github.com/clearml/clearml/issues/399))
+- Fix check permissions fail in `HTTPDriver` ([ClearML GitHub issue #394](https://github.com/clearml/clearml/issues/394))
 - Fix Dataset not setting system tag on existing `data_processing` Tasks
 - Fix disable redundant resource monitoring in pipeline controller
 - Fix `ClearMLJob` when both `project` and `target_project` are specified
@@ -37,17 +37,17 @@ title: Version 1.0
 
 **Features**
 
-- Add Google Colab notebook tutorial ([ClearML GitHub PR 368](https://github.com/allegroai/clearml/issues/368) and [ClearML GitHub PR 374](https://github.com/allegroai/clearml/issues/374))
-- Add support for GIF images in Tensorboard ([ClearML GitHub issue 372](https://github.com/allegroai/clearml/issues/372))
-- Add a tensorboardX example for `add_video` (creates GIFs in tensorboard) ([ClearML GitHub PR 372](https://github.com/allegroai/clearml/issues/372)) 
+- Add Google Colab notebook tutorial ([ClearML GitHub PR 368](https://github.com/clearml/clearml/issues/368) and [ClearML GitHub PR 374](https://github.com/clearml/clearml/issues/374))
+- Add support for GIF images in Tensorboard ([ClearML GitHub issue 372](https://github.com/clearml/clearml/issues/372))
+- Add a tensorboardX example for `add_video` (creates GIFs in tensorboard) ([ClearML GitHub PR 372](https://github.com/clearml/clearml/issues/372)) 
 - Add auto scaler customizable boot bash script
 - Add `Task.ignore_requirements`
 - Deprecate `Logger.tensorboard_single_series_per_graph()` as it is now controlled from the UI 🙂 
 
 **Bug Fixes**
 
-- Fix `default_output_uri` for Dataset creation ([ClearML GitHub issue 371](https://github.com/allegroai/clearml/issues/371))
-- Fix `clearml-task` failing without a docker script ([ClearML GitHub issue 378](https://github.com/allegroai/clearml/issues/378))
+- Fix `default_output_uri` for Dataset creation ([ClearML GitHub issue 371](https://github.com/clearml/clearml/issues/371))
+- Fix `clearml-task` failing without a docker script ([ClearML GitHub issue 378](https://github.com/clearml/clearml/issues/378))
 - Fix PyTorch DDP sub-process spawn multi-process
 - Fix `Task.execute_remotely()` on created Task (not initialized Task)
 - Fix auto scaler custom bash script should be called last before starting agent
@@ -58,7 +58,7 @@ title: Version 1.0
 
 **Features**
 
-- Use default `boto` credential chain if no keys are provided in the configuration file or environment variables ([ClearML GitHub PR 342](https://github.com/allegroai/clearml/issues/342))
+- Use default `boto` credential chain if no keys are provided in the configuration file or environment variables ([ClearML GitHub PR 342](https://github.com/clearml/clearml/issues/342))
 - Support `DummyModel` configuration ([Slack Channel](https://clearml.slack.com/archives/CTK20V944/p1621469235085400))
 - Add `report_matplotlib_figure(..., report_interactive=False)` allowing to upload a matplotlib as a non-interactive (high quality png) plot
 - Add `Logger.matplotlib_force_report_non_interactive()`
@@ -75,10 +75,10 @@ title: Version 1.0
 
 **Bug Fixes**
 
-- Fix Hydra should not store the full resolved OmegaConf ([ClearML GitHub issue 327](https://github.com/allegroai/clearml/issues/327))
-- Fix direct import of keras save/load model functions ([ClearML GitHub issue 355](https://github.com/allegroai/clearml/issues/355))
-- Fix run as module ([ClearML GitHub issue 359](https://github.com/allegroai/clearml/issues/359))
-- Fix Python 2.7 support ([ClearML GitHub issue 366](https://github.com/allegroai/clearml/issues/366))
+- Fix Hydra should not store the full resolved OmegaConf ([ClearML GitHub issue 327](https://github.com/clearml/clearml/issues/327))
+- Fix direct import of keras save/load model functions ([ClearML GitHub issue 355](https://github.com/clearml/clearml/issues/355))
+- Fix run as module ([ClearML GitHub issue 359](https://github.com/clearml/clearml/issues/359))
+- Fix Python 2.7 support ([ClearML GitHub issue 366](https://github.com/clearml/clearml/issues/366))
 - Fix `Task.add_requirements()` passing `package_version` starting with `@`, `;` or `#`
 - Fix import keras from TF
 - Fix support for Hydra's `run_job()` change in parameter order by passing `config` and `task_function` as keyword arguments 
@@ -113,10 +113,10 @@ Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()`
   
 **Features**
 
-* Add OS environment variable `CLEARML_DEFAULT_OUTPUT_URI` to override default `output_uri` for automatic models upload ([ClearML GitHub issue 328](https://github.com/allegroai/clearml/issues/328))
-* Add `Task.force_requirements_env_freeze()` forcing `pip freeze` instead of package analysis ([ClearML GitHub issue 304](https://github.com/allegroai/clearml/issues/304))
+* Add OS environment variable `CLEARML_DEFAULT_OUTPUT_URI` to override default `output_uri` for automatic models upload ([ClearML GitHub issue 328](https://github.com/clearml/clearml/issues/328))
+* Add `Task.force_requirements_env_freeze()` forcing `pip freeze` instead of package analysis ([ClearML GitHub issue 304](https://github.com/clearml/clearml/issues/304))
 * Improve pipeline support
-  * Add Task parameters override in `ClearmlJob` ([ClearML GitHub issue 214](https://github.com/allegroai/clearml/issues/214))
+  * Add Task parameters override in `ClearmlJob` ([ClearML GitHub issue 214](https://github.com/clearml/clearml/issues/214))
   * Add PipelineController node skip visualization and pre/post-execution callback
 * Allow enabling/disabling tensorboard auto-connect using `Task.init(auto_connect_frameworks={'tensorboard': True/False})` (default: `True`)
 * Allow to continue running from previous execution iteration
@@ -146,9 +146,9 @@ Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()`
 
 **Bug Fixes**
 
-* Fix `\r` and `\n` in debug samples title/series ([ClearML GitHub issue 323](https://github.com/allegroai/clearml/issues/323))
-* Fix Google API credentials without storage section raises exception on import ([ClearML GitHub issue 331](https://github.com/allegroai/clearml/issues/331))
-* Fix Matplotlib automagic export legend not showing series names ([ClearML GitHub issue 337](https://github.com/allegroai/clearml/issues/337))
+* Fix `\r` and `\n` in debug samples title/series ([ClearML GitHub issue 323](https://github.com/clearml/clearml/issues/323))
+* Fix Google API credentials without storage section raises exception on import ([ClearML GitHub issue 331](https://github.com/clearml/clearml/issues/331))
+* Fix Matplotlib automagic export legend not showing series names ([ClearML GitHub issue 337](https://github.com/clearml/clearml/issues/337))
 * Fix `Task.set_comment/name()` passing `None` should be equivalent to `''`
 * Fix `Task.set_credentials()` uses incorrect config file when both `trains.conf` and `clearml.conf` are found
 * Fix `Task.set_credetnials()` should override settings from config file

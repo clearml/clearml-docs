@@ -5,7 +5,7 @@ title: Version 1.8
 ### ClearML Agent 1.8.1
 
 **New Features**
-* Add option to set daemon polling interval ([ClearML Agent GitHub PR #197](https://github.com/allegroai/clearml-agent/pull/197))
+* Add option to set daemon polling interval ([ClearML Agent GitHub PR #197](https://github.com/clearml/clearml-agent/pull/197))
 * Add Python 3.12 support
 
 **Bug Fixes**
@@ -31,9 +31,9 @@ specified and the code is running a preinstalled docker
 * Improve GPU monitoring for MIGs
 
 **Bug Fixes**
-* Use correct Python version in Poetry init ([ClearML Agent GitHub PR #179](https://github.com/allegroai/clearml-agent/pull/179))
-* Fix queue handling in `K8sIntegration` and `k8s_glue_example.py` ([ClearML Agent GitHub PR #183](https://github.com/allegroai/clearml-agent/pull/183))
-* Fix `FileNotFoundException` crash in `find_python_executable_for_version` ([ClearML Agent GitHub issue #164](https://github.com/allegroai/clearml-agent/issues/164))
+* Use correct Python version in Poetry init ([ClearML Agent GitHub PR #179](https://github.com/clearml/clearml-agent/pull/179))
+* Fix queue handling in `K8sIntegration` and `k8s_glue_example.py` ([ClearML Agent GitHub PR #183](https://github.com/clearml/clearml-agent/pull/183))
+* Fix `FileNotFoundException` crash in `find_python_executable_for_version` ([ClearML Agent GitHub issue #164](https://github.com/clearml/clearml-agent/issues/164))
 * Fix delete temp console pipe log files after Task execution is completed (important for long-lasting services agents to avoid collecting temp files on host machine)
 * Fix `agent.enable_git_ask_pass` does not show in configuration dump
 * Fix `pip` is returned as a pip version if no value exists in `agent.package_manager.pip_version`

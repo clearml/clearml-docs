@@ -37,7 +37,7 @@ The following page goes over how to set up and upgrade `clearml-serving`.
 
 1. Clone the `clearml-serving` repository:
    ```bash
-   git clone https://github.com/allegroai/clearml-serving.git
+   git clone https://github.com/clearml/clearml-serving.git
    ```
 
 1. Edit the environment variables file (docker/example.env) with your clearml-server credentials and Serving Service UID. 

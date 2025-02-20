@@ -2,7 +2,7 @@
 title: PyTorch with TensorBoard
 ---
 
-The [pytorch_tensorboard.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_tensorboard.py) 
+The [pytorch_tensorboard.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_tensorboard.py) 
 example demonstrates the integration of ClearML into code that uses PyTorch and TensorBoard. 
 
 The example does the following:

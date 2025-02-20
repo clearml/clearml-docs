@@ -2,7 +2,7 @@
 title: Text Reporting
 ---
 
-The [text_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/text_reporting.py) script 
+The [text_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/text_reporting.py) script 
 demonstrates reporting explicit text by calling [`Logger.report_text()`](../../references/sdk/logger.md#report_text). 
 
 ClearML reports the text in the **ClearML Web UI**, in the task's **CONSOLE** tab. 

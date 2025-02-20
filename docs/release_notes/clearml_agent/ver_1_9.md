@@ -23,7 +23,7 @@ those matching these filters to be used when running containers
 ### ClearML Agent 1.9.2
 
 **New Features and Bug Fixes**
-* Handle OSError when checking for `is_file` ([ClearML GitHub issue #1337](https://github.com/allegroai/clearml/issues/1337))
+* Handle OSError when checking for `is_file` ([ClearML GitHub issue #1337](https://github.com/clearml/clearml/issues/1337))
 * Add support for pip legacy resolver for versions specified using the `agent.package_manager.pip_legacy_resolver` configuration option
 * Add skip existing packages
 * Fix report index not advancing in resource monitoring causes more than one GPU not to be reported
@@ -38,7 +38,7 @@ those matching these filters to be used when running containers
 ### ClearML Agent 1.9.0
 
 **New Features and Improvements**
-* Add `NO_DOCKER` flag to `clearml-agent-services` entrypoint ([ClearML Agent GitHub PR #206](https://github.com/allegroai/clearml-agent/pull/206))
+* Add `NO_DOCKER` flag to `clearml-agent-services` entrypoint ([ClearML Agent GitHub PR #206](https://github.com/clearml/clearml-agent/pull/206))
 * Use `venv` module if `virtualenv` is not supported
 * Find the correct Python version when using a pre-installed python environment
 * Add `/bin/bash` support in the task's `script.binary` property
@@ -56,7 +56,7 @@ by the `working_dir` setting in the `<dir>:<target_file>` format (e.g. `:standal
 * Add support for skipping container apt installs using `CLEARML_AGENT_SKIP_CONTAINER_APT` env var in k8s
 
 **Bug Fixes**
-* Fix git fetch did not update new tags ([ClearML Agent GitHub issue #209](https://github.com/allegroai/clearml-agent/issues/209))
+* Fix git fetch did not update new tags ([ClearML Agent GitHub issue #209](https://github.com/clearml/clearml-agent/issues/209))
 * Fix file mode should be optional in configuration `files` section
 * Fix `-m module $env` to support parsing `$env` before launching
 * Fix setting tasks that were just marked as `aborted` to `started` - only force task to `started` after dequeueing it, 

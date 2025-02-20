@@ -4,7 +4,7 @@ title: Community Resources
 
 ## Join the ClearML Conversation
 
-For feature requests or bug reports, see **ClearML** [GitHub issues](https://github.com/allegroai/clearml/issues).
+For feature requests or bug reports, see **ClearML** [GitHub issues](https://github.com/clearml/clearml/issues).
 
 If you have any questions, post on the **ClearML** [Slack channel](https://joinslack.clear.ml).
 
@@ -28,8 +28,8 @@ Firstly, thank you for taking the time to contribute!
 
 Contributions come in many forms:
 
-* Reporting [issues](https://github.com/allegroai/clearml/issues) you've come upon
-* Participating in issue discussions in the [issue tracker](https://github.com/allegroai/clearml/issues) and the
+* Reporting [issues](https://github.com/clearml/clearml/issues) you've come upon
+* Participating in issue discussions in the [issue tracker](https://github.com/clearml/clearml/issues) and the
   [ClearML Community Slack space](https://joinslack.clear.ml)
 * Suggesting new features or enhancements
 * Implementing new features or fixing outstanding issues
@@ -40,7 +40,7 @@ The list above is primarily guidelines, not rules. Use your best judgment and fe
 
 By following these guidelines, you help maintainers and the community understand your report, reproduce the behavior, and find related reports.
 
-Before reporting an issue, please check whether it already appears [here](https://github.com/allegroai/clearml/issues). If 
+Before reporting an issue, please check whether it already appears [here](https://github.com/clearml/clearml/issues). If 
 it does, join the ongoing discussion instead.
 
 :::note
@@ -85,7 +85,7 @@ Enhancement suggestions are tracked as GitHub issues. After you determine which 
 
 Before you submit a new PR:
 
-* Verify that the work you plan to merge addresses an existing [issue](https://github.com/allegroai/clearml/issues) (if not, open a new one)
+* Verify that the work you plan to merge addresses an existing [issue](https://github.com/clearml/clearml/issues) (if not, open a new one)
 * Check related discussions in the [ClearML Slack community](https://joinslack.clear.ml) 
   (or start your own discussion on the ``#clearml-dev`` channel)
 * Make sure your code conforms to the ClearML coding standards by running:

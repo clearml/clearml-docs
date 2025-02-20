@@ -2,7 +2,7 @@
 title: TensorBoard Toy
 ---
 
-The [tensorboard_toy.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/tensorboard_toy.py) 
+The [tensorboard_toy.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/tensorboard_toy.py) 
 example demonstrates ClearML's automatic logging of TensorBoard scalars, histograms, images, and text, as well as 
 all other console output and TensorFlow Definitions. 
 

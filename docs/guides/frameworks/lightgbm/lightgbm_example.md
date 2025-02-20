@@ -2,7 +2,7 @@
 title: LightGBM
 ---
 
-The [lightgbm_example](https://github.com/allegroai/clearml/blob/master/examples/frameworks/lightgbm/lightgbm_example.py) 
+The [lightgbm_example](https://github.com/clearml/clearml/blob/master/examples/frameworks/lightgbm/lightgbm_example.py) 
 script demonstrates the integration of ClearML into code that uses LightGBM. 
 
 The example script does the following: 

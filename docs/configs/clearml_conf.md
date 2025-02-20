@@ -14,7 +14,7 @@ This reference page is organized by configuration file section:
 * [files](#files-section) - Define auto-generated files to apply into local file system
 
 
-See an [example configuration file](https://github.com/allegroai/clearml-agent/blob/master/docs/clearml.conf)
+See an [example configuration file](https://github.com/clearml/clearml-agent/blob/master/docs/clearml.conf)
 in the ClearML Agent GitHub repository. 
 
 :::info

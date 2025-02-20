@@ -67,4 +67,4 @@ according to your added parameters.
 
 ## Code Example
 
-See example which demonstrates integrating ClearML into script that uses Hydra [here](https://github.com/allegroai/clearml/blob/master/examples/frameworks/hydra/hydra_example.py).
+See example which demonstrates integrating ClearML into script that uses Hydra [here](https://github.com/clearml/clearml/blob/master/examples/frameworks/hydra/hydra_example.py).

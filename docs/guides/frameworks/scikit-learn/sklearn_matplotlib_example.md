@@ -2,7 +2,7 @@
 title: scikit-learn with Matplotlib
 ---
 
-The [sklearn_matplotlib_example.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/scikit-learn/sklearn_matplotlib_example.py) 
+The [sklearn_matplotlib_example.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/scikit-learn/sklearn_matplotlib_example.py) 
 script demonstrates the integration of ClearML into code that uses `scikit-learn` and `matplotlib`.
 
 The example does the following: 

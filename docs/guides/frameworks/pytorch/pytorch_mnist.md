@@ -2,7 +2,7 @@
 title: PyTorch MNIST
 ---
 
-The [pytorch_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) example 
+The [pytorch_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) example 
 demonstrates the integration of ClearML into code that uses PyTorch. 
 
 The example script does the following:

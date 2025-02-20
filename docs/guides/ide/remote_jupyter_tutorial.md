@@ -93,13 +93,13 @@ Now, let's execute some code in the remote session!
 
 1. Open up a new Notebook.
 
-1. In the first cell of the notebook, clone the [ClearML repository](https://github.com/allegroai/clearml): 
+1. In the first cell of the notebook, clone the [ClearML repository](https://github.com/clearml/clearml): 
 
    ```
-   !git clone https://github.com/allegroai/clearml.git
+   !git clone https://github.com/clearml/clearml.git
    ```
    
-1. In the second cell of the notebook, run this [script](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py) 
+1. In the second cell of the notebook, run this [script](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py) 
    from the cloned repository:
    
    ```

@@ -2,7 +2,7 @@
 title: TensorBoard PR Curve
 ---
 
-The [tensorboard_pr_curve.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/tensorboard_pr_curve.py) 
+The [tensorboard_pr_curve.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/tensorboard_pr_curve.py) 
 example demonstrates the integration of ClearML into code that uses TensorFlow and TensorBoard. 
 
 The example script does the following:

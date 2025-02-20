@@ -20,7 +20,7 @@ and running, users can send Tasks to be executed on Google Colab's hardware.
 
 1. Run the first cell, which installs all the necessary packages:
     ```
-    !pip install git+https://github.com/allegroai/clearml
+    !pip install git+https://github.com/clearml/clearml
     !pip install clearml-agent
     ```
 1. Run the second cell, which exports this environment variable:

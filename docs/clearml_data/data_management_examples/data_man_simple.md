@@ -5,7 +5,7 @@ title: Data Management from CLI
 In this example we'll create a simple dataset and demonstrate basic actions on it, using the `clearml-data` CLI. 
 
 ## Prerequisites
-1. First, make sure that you have cloned the [clearml](https://github.com/allegroai/clearml) repository. It contains all
+1. First, make sure that you have cloned the [clearml](https://github.com/clearml/clearml) repository. It contains all
 the needed files.
 1. Open terminal and change directory to the cloned repository's examples folder:
    

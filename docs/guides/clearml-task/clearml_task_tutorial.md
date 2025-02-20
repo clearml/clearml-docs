@@ -2,7 +2,7 @@
 title: ClearML Task Tutorial
 ---
 
-In this tutorial, you will use `clearml-task` to execute [a script](https://github.com/allegroai/events/blob/master/webinar-0620/keras_mnist.py) 
+In this tutorial, you will use `clearml-task` to execute [a script](https://github.com/clearml/events/blob/master/webinar-0620/keras_mnist.py) 
 on a remote or local machine, from a remote repository and your local machine. 
 
 ### Prerequisites
@@ -13,13 +13,13 @@ on a remote or local machine, from a remote repository and your local machine.
 ### Executing Code from a Remote Repository 
 
 ``` bash
-clearml-task --project keras_examples --name remote_test --repo https://github.com/allegroai/events.git --branch master --script /webinar-0620/keras_mnist.py --args batch_size=64 epochs=1 --queue default
+clearml-task --project keras_examples --name remote_test --repo https://github.com/clearml/events.git --branch master --script /webinar-0620/keras_mnist.py --args batch_size=64 epochs=1 --queue default
 ```
 
 This sets the following arguments: 
 
 * `--project keras_examples --name remote_test` - The project and task names
-* `--repo https://github.com/allegroai/events.git` - The repository's URL. By default, `clearml-task` uses the latest 
+* `--repo https://github.com/clearml/events.git` - The repository's URL. By default, `clearml-task` uses the latest 
   commit from the master branch
 * `--branch master` - The repository branch 
 * `--script /webinar-0620/keras_mnist.py` - The script to be executed
@@ -48,8 +48,8 @@ Execution log at: https://app.clear.ml/projects/552d5399112d47029c146d5248570295
 
 ### Executing a Local Script
 
-For this example, use a local version of [this script](https://github.com/allegroai/events/blob/master/webinar-0620/keras_mnist.py).
-1. Clone the [allegroai/events](https://github.com/allegroai/events) repository 
+For this example, use a local version of [this script](https://github.com/clearml/events/blob/master/webinar-0620/keras_mnist.py).
+1. Clone the [allegroai/events](https://github.com/clearml/events) repository 
 1. Go to the root folder of the cloned repository 
 1. Run the following command:
 

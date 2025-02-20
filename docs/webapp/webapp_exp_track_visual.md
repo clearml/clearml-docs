@@ -323,6 +323,8 @@ a `Summary` table.
 ![Single value scalar plot](../img/webapp_single_scalar_plot.png#light-mode-only)
 ![Single value scalar plot](../img/webapp_single_scalar_plot_dark.png#dark-mode-only)
 
+#### Scalar Plot Tools
+
 Use the scalar tools to improve analysis of scalar metrics. In the info panel, click <img src="/docs/latest/icons/ico-settings.svg" alt="Settings gear" className="icon size-md space-sm" /> to use the tools. In the full screen details view, the tools
 are on the left side of the window. The tools include:
 

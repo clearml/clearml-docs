@@ -6,7 +6,7 @@ Two major components of MLOps/LLMOps are experiment reproducibility, and the abi
 coupled with execution queues, address both these needs. 
 
 A ClearML worker is instantiated by launching a ClearML Agent, which is the base for **Automation** in ClearML and can be leveraged to build automated pipelines, launch custom services 
-(e.g. a [monitor and alert service](https://github.com/allegroai/clearml/tree/master/examples/services/monitoring)) and more.
+(e.g. a [monitor and alert service](https://github.com/clearml/clearml/tree/master/examples/services/monitoring)) and more.
 
 ## What Does a ClearML Agent Do?
 The ClearML agent allows users to execute code on any machine it's installed on, thus facilitating the 

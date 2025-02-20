@@ -2,14 +2,14 @@
 title: Data Management with Python
 ---
 
-The [dataset_creation.py](https://github.com/allegroai/clearml/blob/master/examples/datasets/dataset_creation.py) and 
-[data_ingestion.py](https://github.com/allegroai/clearml/blob/master/examples/datasets/data_ingestion.py) scripts
+The [dataset_creation.py](https://github.com/clearml/clearml/blob/master/examples/datasets/dataset_creation.py) and 
+[data_ingestion.py](https://github.com/clearml/clearml/blob/master/examples/datasets/data_ingestion.py) scripts
 together demonstrate how to use ClearML's [`Dataset`](../../references/sdk/dataset.md) class to create a dataset and 
 subsequently ingest the data. 
 
 ## Dataset Creation
 
-The [dataset_creation.py](https://github.com/allegroai/clearml/blob/master/examples/datasets/dataset_creation.py) script 
+The [dataset_creation.py](https://github.com/clearml/clearml/blob/master/examples/datasets/dataset_creation.py) script 
 demonstrates how to do the following:
 * Create a dataset and add files to it
 * Upload the dataset to the ClearML Server
@@ -85,7 +85,7 @@ In the panel's **CONTENT** tab, you can see a table summarizing version contents
 
 Now that a new dataset is registered, you can consume it!
 
-The [data_ingestion.py](https://github.com/allegroai/clearml/blob/master/examples/datasets/data_ingestion.py) script 
+The [data_ingestion.py](https://github.com/clearml/clearml/blob/master/examples/datasets/data_ingestion.py) script 
 demonstrates data ingestion using the dataset created in the first script.
 
 The following script gets the dataset and uses [`Dataset.get_local_copy()`](../../references/sdk/dataset.md#get_local_copy) 

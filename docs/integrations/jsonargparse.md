@@ -64,5 +64,5 @@ task is enqueued, the task will use the new values during execution.
 
 ## Code Examples
 
-See [code examples](https://github.com/allegroai/clearml/blob/master/examples/frameworks/jsonargparse) demonstrating integrating
+See [code examples](https://github.com/clearml/clearml/blob/master/examples/frameworks/jsonargparse) demonstrating integrating
 ClearML with code that uses `jsonargparse`.

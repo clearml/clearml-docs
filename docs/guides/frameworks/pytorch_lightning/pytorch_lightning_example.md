@@ -2,7 +2,7 @@
 title: PyTorch Lightning
 ---
 
-The [pytorch-lightning](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch-lightning/pytorch_lightning_example.py) 
+The [pytorch-lightning](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch-lightning/pytorch_lightning_example.py) 
 script demonstrates the integration of ClearML into code that uses [PyTorch Lightning](https://www.pytorchlightning.ai/). 
 
 The example script does the following:

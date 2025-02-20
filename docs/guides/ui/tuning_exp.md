@@ -2,13 +2,13 @@
 title: Tuning Tasks
 ---
 
-In this tutorial, learn how to tune a task. The task that will be tuned is created by the [pytorch_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
+In this tutorial, learn how to tune a task. The task that will be tuned is created by the [pytorch_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
 example script. 
 
 ## Prerequisites
 
-* Clone the [clearml](https://github.com/allegroai/clearml) repository.
-* Install the [requirements](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/requirements.txt) 
+* Clone the [clearml](https://github.com/clearml/clearml) repository.
+* Install the [requirements](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/requirements.txt) 
   for the TensorFlow examples.
 * Have **ClearML Agent** [installed and configured](../../clearml_agent/clearml_agent_setup.md#installation).
 

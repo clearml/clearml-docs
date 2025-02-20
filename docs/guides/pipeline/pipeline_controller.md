@@ -2,20 +2,20 @@
 title: Pipeline from Tasks
 ---
 
-The [pipeline_from_tasks.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/pipeline_from_tasks.py) 
+The [pipeline_from_tasks.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/pipeline_from_tasks.py) 
 example demonstrates a simple pipeline, where each step is a [ClearML Task](../../fundamentals/task.md). 
 
 The pipeline is implemented using the [PipelineController](../../references/sdk/automation_controller_pipelinecontroller.md) 
 class. Steps are added to a PipelineController object, which launches and monitors the steps when executed.
  
 This example incorporates four tasks, each of which is created using a different script:
-* **Controller Task** ([pipeline_from_tasks.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/pipeline_from_tasks.py)) - 
+* **Controller Task** ([pipeline_from_tasks.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/pipeline_from_tasks.py)) - 
   Implements the pipeline controller, adds the steps (tasks) to the pipeline, and runs the pipeline.
-* **Step 1** ([step1_dataset_artifact.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step1_dataset_artifact.py)) - 
+* **Step 1** ([step1_dataset_artifact.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step1_dataset_artifact.py)) - 
   Downloads data and stores the data as an artifact.
-* **Step 2** ([step2_data_processing.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step2_data_processing.py)) - 
+* **Step 2** ([step2_data_processing.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step2_data_processing.py)) - 
   Loads the stored data (from Step 1), processes it, and stores the processed data as artifacts.
-* **Step 3** ([step3_train_model.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step3_train_model.py)) - 
+* **Step 3** ([step3_train_model.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step3_train_model.py)) - 
   Loads the processed data (from Step 2) and trains a network.
 
 When the controller task is executed, it clones the step tasks, and enqueues the newly cloned tasks for execution. Note 
@@ -100,7 +100,7 @@ The sections below describe in more detail what happens in the controller task a
    
 ## Step 1 - Downloading the Data
 
-The pipeline's first step ([step1_dataset_artifact.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step1_dataset_artifact.py))
+The pipeline's first step ([step1_dataset_artifact.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step1_dataset_artifact.py))
 does the following: 
 
 1. Download data using [`StorageManager.get_local_copy()`](../../references/sdk/storage.md#storagemanagerget_local_copy): 
@@ -108,7 +108,7 @@ does the following:
    ```python
    # simulate local dataset, download one, so we have something local
    local_iris_pkl = StorageManager.get_local_copy(
-       remote_url='https://github.com/allegroai/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
+       remote_url='https://github.com/clearml/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
    )
    ```    
 1. Store the data as an artifact named `dataset` using [`Task.upload_artifact()`](../../references/sdk/task.md#upload_artifact):
@@ -119,7 +119,7 @@ does the following:
    
 ## Step 2 - Processing the Data
 
-The pipeline's second step ([step2_data_processing.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step2_data_processing.py))
+The pipeline's second step ([step2_data_processing.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step2_data_processing.py))
 does the following: 
 
 1. Connect its configuration parameters with the ClearML task:
@@ -154,7 +154,7 @@ does the following:
    
 ## Step 3 - Training the Network
 
-The pipeline's third step ([step3_train_model.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/step3_train_model.py))
+The pipeline's third step ([step3_train_model.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/step3_train_model.py))
 does the following: 
 1. Connect its configuration parameters with the ClearML task. This allows the [pipeline controller](#the-pipeline-controller) 
    to override the `dataset_task_id` value as the pipeline is run. 

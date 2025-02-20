@@ -2,7 +2,7 @@
 title: Pipeline from Functions
 ---
 
-The [pipeline_from_functions.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/pipeline_from_functions.py)
+The [pipeline_from_functions.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/pipeline_from_functions.py)
 example script demonstrates the creation of a pipeline using the [PipelineController](../../references/sdk/automation_controller_pipelinecontroller.md) 
 class.
 
@@ -45,7 +45,7 @@ the function will be automatically logged as required packages for the pipeline 
    pipe.add_parameter(
         name='url',
         description='url to pickle file',
-        default='https://github.com/allegroai/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
+        default='https://github.com/clearml/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
    ) 
    ```
    

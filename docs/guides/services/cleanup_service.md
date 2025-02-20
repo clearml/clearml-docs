@@ -2,7 +2,7 @@
 title: Cleanup Service
 ---
 
-The [cleanup service](https://github.com/allegroai/clearml/blob/master/examples/services/cleanup/cleanup_service.py) 
+The [cleanup service](https://github.com/clearml/clearml/blob/master/examples/services/cleanup/cleanup_service.py) 
 demonstrates how to use the `clearml.backend_api.session.client.APIClient` class to implement a service that deletes old 
 archived tasks and their associated files: model checkpoints, other artifacts, and debug samples. 
 
@@ -44,7 +44,7 @@ This is followed by details from the cleanup.
 
 ## The Cleanup Service Code
 
-[cleanup_service.py](https://github.com/allegroai/clearml/blob/master/examples/services/cleanup/cleanup_service.py) creates 
+[cleanup_service.py](https://github.com/clearml/clearml/blob/master/examples/services/cleanup/cleanup_service.py) creates 
 an `APIClient` object that establishes a session with the ClearML Server, and accomplishes the cleanup by calling:
 * [`Tasks.get_all`](../../references/api/tasks.md#post-tasksget_all) to get a list of Tasks to delete, providing the following parameters:
     * `system_tags` - Get only Tasks tagged as `archived`.

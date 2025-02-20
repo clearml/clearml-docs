@@ -2,7 +2,7 @@
 title: PyTorch with Matplotlib
 ---
 
-The [pytorch_matplotlib.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_matplotlib.py) 
+The [pytorch_matplotlib.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_matplotlib.py) 
 example demonstrates the integration of ClearML into code that uses PyTorch and Matplotlib. 
 
 The example does the following: 

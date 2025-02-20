@@ -8,12 +8,12 @@ instructions.
 :::
 
 Integrate ClearML into code that uses [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner). By 
-specifying `ClearMLTunerLogger` (see [kerastuner.py](https://github.com/allegroai/clearml/blob/master/clearml/external/kerastuner.py)) 
+specifying `ClearMLTunerLogger` (see [kerastuner.py](https://github.com/clearml/clearml/blob/master/clearml/external/kerastuner.py)) 
 as the Keras Tuner logger, ClearML automatically logs scalars and hyperparameter optimization.  
 
 ## ClearMLTunerLogger
 
-Take a look at [keras_tuner_cifar.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/kerastuner/keras_tuner_cifar.py) 
+Take a look at [keras_tuner_cifar.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/kerastuner/keras_tuner_cifar.py) 
 example script, which demonstrates the integration of ClearML in a code that uses Keras Tuner. 
 
 The script does the following:

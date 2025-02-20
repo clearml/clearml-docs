@@ -2,7 +2,7 @@
 title: PyTorch Model Updating
 ---
 
-The [pytorch_model_update.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_model_update.py) 
+The [pytorch_model_update.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_model_update.py) 
 example demonstrates training a model and logging it using the [OutputModel](../../../references/sdk/model_outputmodel.md) 
 class. 
 

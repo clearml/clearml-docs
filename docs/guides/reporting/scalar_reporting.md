@@ -2,7 +2,7 @@
 title: Scalars Reporting
 ---
 
-The [scalar_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/scalar_reporting.py) script
+The [scalar_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/scalar_reporting.py) script
 demonstrates explicit scalar reporting. ClearML reports scalars in the **ClearML Web UI** **>** task's **SCALARS** tab. 
 
 When the script runs, it creates a task named `scalar reporting` in the `examples` project.

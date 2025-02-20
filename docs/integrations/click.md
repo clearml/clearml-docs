@@ -47,5 +47,5 @@ When this code is executed, ClearML logs your command-line arguments, which you 
 In the UI, you can clone the task multiple times and set the clones' parameter values for execution by the [ClearML Agent](../clearml_agent.md).
 When the clone is executed, the executing agent will use the new parameter values as if set by the command-line.
 
-See [code examples](https://github.com/allegroai/clearml/blob/master/examples/frameworks/click) demonstrating integrating
+See [code examples](https://github.com/clearml/clearml/blob/master/examples/frameworks/click) demonstrating integrating
 ClearML with code that uses `click`.

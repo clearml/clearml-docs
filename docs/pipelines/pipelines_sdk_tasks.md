@@ -29,7 +29,7 @@ You can define parameters for controlling different pipeline runs:
 pipe.add_parameter(
     name='pickle_url',
     description='url to pickle file', 
-    default='https://github.com/allegroai/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
+    default='https://github.com/clearml/events/raw/master/odsc20-east/generic/iris_dataset.pkl'
 )
 ```
 

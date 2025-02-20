@@ -2,7 +2,7 @@
 title: PyTorch Abseil
 ---
 
-The [pytorch_abseil.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_abseil.py) 
+The [pytorch_abseil.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_abseil.py) 
 example demonstrates the integration of ClearML into code that uses PyTorch and [`absl.flags`](https://abseil.io/docs/python/guides/flags). 
 
 The example script does the following:

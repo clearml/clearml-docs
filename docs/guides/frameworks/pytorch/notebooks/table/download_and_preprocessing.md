@@ -2,9 +2,9 @@
 title: Tabular Data Downloading and Preprocessing - Jupyter Notebook
 ---
 
-The [download_and_preprocessing.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_preprocessing.ipynb) example demonstrates ClearML storing preprocessed tabular data as artifacts, and explicitly reporting the tabular data in the **ClearML Web UI**. When the script runs, it creates a task named `tabular preprocessing` in the `Table Example` project.
+The [download_and_preprocessing.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_preprocessing.ipynb) example demonstrates ClearML storing preprocessed tabular data as artifacts, and explicitly reporting the tabular data in the **ClearML Web UI**. When the script runs, it creates a task named `tabular preprocessing` in the `Table Example` project.
 
-This tabular data is prepared for another script, [train_tabular_predictor.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb), which trains a network with it. 
+This tabular data is prepared for another script, [train_tabular_predictor.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb), which trains a network with it. 
 
 ## Artifacts
 

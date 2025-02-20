@@ -368,7 +368,7 @@ Your firewall may be preventing the connection. Try one of the following solutio
        ``` 
        pip install -U clearml
        ``` 
-    1. Create a new `clearml.conf` configuration file (see a [sample configuration file](https://github.com/allegroai/clearml/blob/master/docs/clearml.conf)), containing:
+    1. Create a new `clearml.conf` configuration file (see a [sample configuration file](https://github.com/clearml/clearml/blob/master/docs/clearml.conf)), containing:
        
        ``` 
        api { verify_certificate = False }
@@ -419,7 +419,7 @@ Conda and the [typing](https://pypi.org/project/typing/) package may have some c
 
 However, [since Python 3.5](https://docs.python.org/3.5/library/typing.html), the `typing` package is part of the standard library. 
 
-To resolve the error, uninstall `typing` and rerun your script. If this does not fix the issue, create a [new ClearML issue](https://github.com/allegroai/clearml/issues/new), including the full error, and your environment details.  
+To resolve the error, uninstall `typing` and rerun your script. If this does not fix the issue, create a [new ClearML issue](https://github.com/clearml/clearml/issues/new), including the full error, and your environment details.  
 
 <a id="delete_exp"></a>
 

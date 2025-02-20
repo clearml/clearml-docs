@@ -9,8 +9,8 @@ title: Version 1.5
     * Redesign experiment status banner
     * Display all experiment tabs in single line
     * Move experiment action buttons to the top right
-* Add UI adherence to user specified plot dimensions ([ClearML GitHub issue #587](https://github.com/allegroai/clearml/issues/587))
-* Add row highlight to experiment textual comparison UI ([ClearML GitHub issue #581](https://github.com/allegroai/clearml/issues/581))
+* Add UI adherence to user specified plot dimensions ([ClearML GitHub issue #587](https://github.com/clearml/clearml/issues/587))
+* Add row highlight to experiment textual comparison UI ([ClearML GitHub issue #581](https://github.com/clearml/clearml/issues/581))
 * Add UI "Delete" action for Pipelines
 * Add UI indicator for task and pipeline progress
 * Add UI API credentials label "Edit" action
@@ -19,8 +19,8 @@ title: Version 1.5
 * Add pipeline results to UI dashboard search
 
 **Bug Fixes**
-* Fix UI experiment debug samples disappearing after refresh ([ClearML Server GitHub issue #136](https://github.com/allegroai/clearml-server/issues/136))
-* Fix deleting tasks sometimes raises errors ([ClearML GitHub issue #632](https://github.com/allegroai/clearml/issues/632))
+* Fix UI experiment debug samples disappearing after refresh ([ClearML Server GitHub issue #136](https://github.com/clearml/clearml-server/issues/136))
+* Fix deleting tasks sometimes raises errors ([ClearML GitHub issue #632](https://github.com/clearml/clearml/issues/632))
 * Fix only partial task log shown when running on ES with multiple shards
 * Fix move task to trash is not thread-safe
 * Fix UI Project overview metric snapshot not showing

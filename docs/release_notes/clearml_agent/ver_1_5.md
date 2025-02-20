@@ -5,14 +5,14 @@ title: Version 1.5
 ### ClearML Agent 1.5.2
 
 **New Features and Improvements**
-* Switch services agent entrypoint shell from sh to bash ([ClearML Agent GitHub issue #140](https://github.com/allegroai/clearml-agent/issues/140))
+* Switch services agent entrypoint shell from sh to bash ([ClearML Agent GitHub issue #140](https://github.com/clearml/clearml-agent/issues/140))
 * Improve poetry support
-* Add poetry cwd support ([ClearML Agent GitHub issue #138](https://github.com/allegroai/clearml-agent/issues/138))
+* Add poetry cwd support ([ClearML Agent GitHub issue #138](https://github.com/clearml/clearml-agent/issues/138))
 * Add `agent.package_manager.poetry_install_extra_args` configuration option
 * Do not allow request exceptions (keep retrying, throw error only on the initial login call)
 
 **Bug Fixes**
-* Fix agent update version ([ClearML Agent GitHub PR #132](https://github.com/allegroai/clearml-agent/pull/132))
+* Fix agent update version ([ClearML Agent GitHub PR #132](https://github.com/clearml/clearml-agent/pull/132))
 * Fix login uses `GET` with payload, which breaks when trying to connect a server running in GCP
 * Fix `clearml-agent build --docker` stuck on certain containers
 * Fix build fails when target is relative path
@@ -25,7 +25,7 @@ title: Version 1.5
 ### ClearML Agent 1.5.1
 
 **New Features and Improvements**
-* Upgrade requirements for `attrs`, `jsonschema`, `pyparsing`, `six`, and `pyjwt` ([ClearML Agent GitHub issue #129](https://github.com/allegroai/clearml-agent/issues/129))
+* Upgrade requirements for `attrs`, `jsonschema`, `pyparsing`, `six`, and `pyjwt` ([ClearML Agent GitHub issue #129](https://github.com/clearml/clearml-agent/issues/129))
 * Add default output URI selection to `clearml-agent init`
 * Add `agent.disable_task_docker_override` configuration option to disable docker override specified in executing tasks
 * Add `CLEARML_AGENT_FORCE_SYSTEM_SITE_PACKAGES` env var (default `true`) to allow overriding default `system_site_packages: true` 
@@ -39,7 +39,7 @@ since 4.0.0)
 ### ClearML Agent 1.5.0
 
 **New Features and Improvements**
-* Add option to crash agent on exception using `agent.crash_on_exception` configuration setting ([ClearML Agent GitHub issue #122](https://github.com/allegroai/clearml-agent/issues/122))
+* Add option to crash agent on exception using `agent.crash_on_exception` configuration setting ([ClearML Agent GitHub issue #122](https://github.com/clearml/clearml-agent/issues/122))
 * Improve venv cache disabled message
 * Upgrade packages for better Python 3.10 support
 * Remove future package dependency (Python 2 is not supported for `clearml-agent`)

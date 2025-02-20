@@ -2,7 +2,7 @@
 title: Subprocess
 ---
 
-The [subprocess_example.py](https://github.com/allegroai/clearml/blob/master/examples/distributed/subprocess_example.py) 
+The [subprocess_example.py](https://github.com/clearml/clearml/blob/master/examples/distributed/subprocess_example.py) 
 script demonstrates multiple subprocesses interacting and reporting to a main Task. The following happens in the script: 
 * This script initializes a main Task and spawns subprocesses, each for an instances of that Task.
 * Each Task in a subprocess references the main Task by calling [`Task.current_task()`](../../references/sdk/task.md#taskcurrent_task), 

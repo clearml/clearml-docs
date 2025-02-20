@@ -209,7 +209,7 @@ For example:
 task = Task.create(
     project_name='example', 
     task_name='task template',
-    repo='https://github.com/allegroai/clearml.git',
+    repo='https://github.com/clearml/clearml.git',
     branch='master',
     script='examples/reporting/html_reporting.py',
     working_directory='.',
@@ -423,7 +423,7 @@ different number of epochs and using a new base model:
 cloned_task.set_parameters({'epochs':7, 'lr': 0.5})
 
 # Override git repo information
-cloned_task.set_repo(repo="https://github.com/allegroai/clearml.git", branch="my_branch_name")
+cloned_task.set_repo(repo="https://github.com/clearml/clearml.git", branch="my_branch_name")
 # Remove input model and set a new one
 cloned_task.remove_input_models(models_to_remove=["<model_id>"])
 cloned_task.set_input_model(model_id="<new_intput_model_id>")
@@ -441,7 +441,7 @@ Task.enqueue(
 )
 ```
 
-See enqueue [example](https://github.com/allegroai/clearml/blob/master/examples/automation/programmatic_orchestration.py).
+See enqueue [example](https://github.com/clearml/clearml/blob/master/examples/automation/programmatic_orchestration.py).
 
 ## Advanced Flows
 
@@ -720,7 +720,7 @@ preprocess_task = Task.get_task(task_id='the_preprocessing_task_id')
 local_csv = preprocess_task.artifacts['data'].get_local_copy()
 ```
 
-See more details in the [Using Artifacts example](https://github.com/allegroai/clearml/blob/master/examples/reporting/using_artifacts_example.py).
+See more details in the [Using Artifacts example](https://github.com/clearml/clearml/blob/master/examples/reporting/using_artifacts_example.py).
 
 ## Models 
 The following is an overview of working with models through a `Task` object. You can also work directly with model

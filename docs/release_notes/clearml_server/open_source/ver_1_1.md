@@ -22,9 +22,9 @@ title: Version 1.1
 
 **Bug Fixes**
 
-- Fix experiment details UI failure opening hyperparameter sections beginning with `#` ([ClearML Server GitHub issue #79](https://github.com/allegroai/clearml-server/issues/79))
+- Fix experiment details UI failure opening hyperparameter sections beginning with `#` ([ClearML Server GitHub issue #79](https://github.com/clearml/clearml-server/issues/79))
 - Fix performance issues with UI comparison of large experiments ([Slack Channel](https://clearml.slack.com/archives/CTK20V944/p1621698235159800))
-- Fix filtering on hyperparameters ([ClearML GitHub issue #385](https://github.com/allegroai/clearml/issues/385) [Slack Channel](https://clearml.slack.com/archives/CTK20V944/p1626600582284700))
+- Fix filtering on hyperparameters ([ClearML GitHub issue #385](https://github.com/clearml/clearml/issues/385) [Slack Channel](https://clearml.slack.com/archives/CTK20V944/p1626600582284700))
 - Fix profile page user options toggle control area of effect
 - Fix browser resizing affecting plot zoom
 - Fix UI dataview filter resetting version on filter addition

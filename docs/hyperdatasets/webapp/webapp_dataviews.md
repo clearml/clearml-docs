@@ -1,8 +1,8 @@
 ---
-title: The Dataview table
+title: The Dataview Table
 ---
 
-The **Dataview table** is a [customizable](#customizing-the-dataviews-table) list of Dataviews associated with a project.
+The **Dataview table** is a [customizable](#customizing-the-dataview-table) list of Dataviews associated with a project.
 Use it to view and create Dataviews, and access their info panels. 
 
 The table lists independent Dataview objects. To see Dataviews logged by a task, go

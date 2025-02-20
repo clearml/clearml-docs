@@ -2,7 +2,7 @@
 title: XGBoost Metrics
 ---
 
-The [xgboost_metrics.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/xgboost/xgboost_metrics.py) 
+The [xgboost_metrics.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/xgboost/xgboost_metrics.py) 
 example demonstrates the integration of ClearML into code that uses XGBoost to train a network on the scikit-learn [iris](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html#sklearn.datasets.load_iris) 
 classification dataset. ClearML automatically captures models and scalars logged with XGBoost.
 

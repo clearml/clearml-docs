@@ -146,7 +146,7 @@ In case a `clearml.conf` file already exists, add a few ClearML Agent specific c
        worker_id: ""
    }   
    ```
-   View a complete ClearML Agent configuration file sample including an `agent` section [here](https://github.com/allegroai/clearml-agent/blob/master/docs/clearml.conf).
+   View a complete ClearML Agent configuration file sample including an `agent` section [here](https://github.com/clearml/clearml-agent/blob/master/docs/clearml.conf).
 
 1. Save the configuration.
 

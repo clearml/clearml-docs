@@ -39,7 +39,7 @@ with the ClearML SDK.
 However, this also means that the **server must be secured** by either preventing any external access, or by changing 
 defaults so that the server's credentials are not publicly known.
 
-The ClearML Server default secrets can be found [here](https://github.com/allegroai/clearml-server/blob/master/apiserver/config/default/secure.conf), and can be changed using the `secure.conf` configuration file or using environment variables
+The ClearML Server default secrets can be found [here](https://github.com/clearml/clearml-server/blob/master/apiserver/config/default/secure.conf), and can be changed using the `secure.conf` configuration file or using environment variables
 (see [ClearML Server Feature Configurations](clearml_server_config.md#clearml-server-feature-configurations)).
 
 Specifically, the relevant settings are:
@@ -101,6 +101,6 @@ services:
 
 :::important
 When generating new user keys and secrets, make sure to use sufficiently long strings (we use 30 chars for keys and 50-60 
-chars for secrets). See [here](https://github.com/allegroai/clearml-server/blob/master/apiserver/service_repo/auth/utils.py)
+chars for secrets). See [here](https://github.com/clearml/clearml-server/blob/master/apiserver/service_repo/auth/utils.py)
 for Python example code to generate these strings.
 :::

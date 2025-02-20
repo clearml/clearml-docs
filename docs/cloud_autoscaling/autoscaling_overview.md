@@ -100,5 +100,5 @@ underutilized nodes. See [charts](https://github.com/kubernetes/autoscaler/tree/
 
 :::important Enterprise features
 The ClearML Enterprise plan supports K8S servicing multiple ClearML queues, as well as providing a pod template for each 
-queue for describing the resources for each pod to use. See [ClearML Helm Charts](https://github.com/allegroai/clearml-helm-charts/tree/main).  
+queue for describing the resources for each pod to use. See [ClearML Helm Charts](https://github.com/clearml/clearml-helm-charts/tree/main).  
 :::

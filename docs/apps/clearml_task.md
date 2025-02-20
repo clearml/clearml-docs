@@ -71,7 +71,7 @@ errors in identifying the correct default branch.
 | `--packages` | Manually specify a list of required packages. Example: `--packages "tqdm>=2.1" "scikit-learn"` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--project`| Set the project name for the task (required, unless using `--base-task-id`). If the named project does not exist, it is created on-the-fly | <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" /> |
 | `--queue` | Select a task's execution queue. If not provided, a task is created but not launched | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-| `--repo` | URL of remote repository. Example: `--repo https://github.com/allegroai/clearml.git` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `--repo` | URL of remote repository. Example: `--repo https://github.com/clearml/clearml.git` | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--requirements` | Specify `requirements.txt` file to install when setting the session. By default, the` requirements.txt` from the repository will be used | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 | `--script` | Entry point script for the remote execution. When used with `--repo`, input the script's relative path inside the repository. For example: `--script source/train.py`. When used with `--folder`, it supports a direct path to a file inside the local repository itself, for example: `--script ~/project/source/train.py` | <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" /> |
 | `--skip-task-init` | If set, `Task.init()` call is not added to the entry point, and is assumed to be called within the script | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
@@ -87,10 +87,10 @@ These commands demonstrate a few useful use cases for `clearml-task`.
 ### Executing Code from a Remote Repository 
 
 ```bash
-clearml-task --project examples --name remote_test --repo https://github.com/allegroai/events.git --branch master --script /webinar-0620/keras_mnist.py --args batch_size=64 epochs=1 --queue default
+clearml-task --project examples --name remote_test --repo https://github.com/clearml/events.git --branch master --script /webinar-0620/keras_mnist.py --args batch_size=64 epochs=1 --queue default
 ```
 
-The `keras_mnist.py` script from the [events](https://github.com/allegroai/events) GitHub repository is imported as a 
+The `keras_mnist.py` script from the [events](https://github.com/clearml/events) GitHub repository is imported as a 
 ClearML task named `remote_test` in the `examples` project. Its command line arguments `batch_size` and `epochs` values 
 are set, and the task is enqueued for execution on the `default` queue.
 

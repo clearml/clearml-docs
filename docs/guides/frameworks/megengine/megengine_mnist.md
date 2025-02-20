@@ -2,7 +2,7 @@
 title: MegEngine
 ---
 
-The [megengine_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/megengine/megengine_mnist.py) 
+The [megengine_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/megengine/megengine_mnist.py) 
 example demonstrates the integration of ClearML into code that uses [MegEngine](https://github.com/MegEngine/MegEngine) 
 and [TensorBoardX](https://github.com/lanpa/tensorboardX). ClearML automatically captures models saved with `megengine`.
 
