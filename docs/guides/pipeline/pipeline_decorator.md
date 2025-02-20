@@ -2,7 +2,7 @@
 title: Pipeline from Decorators
 ---
 
-The [pipeline_from_decorator.py](https://github.com/allegroai/clearml/blob/master/examples/pipeline/pipeline_from_decorator.py) 
+The [pipeline_from_decorator.py](https://github.com/clearml/clearml/blob/master/examples/pipeline/pipeline_from_decorator.py) 
 example demonstrates the creation of a pipeline in ClearML using the [`PipelineDecorator`](../../references/sdk/automation_controller_pipelinecontroller.md#class-automationcontrollerpipelinedecorator)
 class. 
 
@@ -39,8 +39,8 @@ In the example script, the controller defines the interactions between the pipel
 
 :::info Local Execution
 In this example, the pipeline is set to run in local mode by using 
-the <span class="link-code"><a href="../../references/sdk/automation_controller_pipelinecontroller#pipelinedecoratorrun_locally"><code>PipelineDecorator.run_locally</code></a></span>
-method before calling the pipeline function. See pipeline execution options [here](../../pipelines/pipelines_sdk_function_decorators.md#running-the-pipeline). 
+[`PipelineDecorator.run_locally()`](../../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorrun_locally)
+before calling the pipeline function. See pipeline execution options [here](../../pipelines/pipelines_sdk_function_decorators.md#running-the-pipeline). 
 :::
 
 ## Pipeline Steps 
@@ -58,7 +58,7 @@ PipelineDecorator.set_default_execution_queue('default')
 # PipelineDecorator.debug_pipeline()
 
 executing_pipeline(
-    pickle_url='https://github.com/allegroai/events/raw/master/odsc20-east/generic/iris_dataset.pkl',
+    pickle_url='https://github.com/clearml/events/raw/master/odsc20-east/generic/iris_dataset.pkl',
 )
 ```
 

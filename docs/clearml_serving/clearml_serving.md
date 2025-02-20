@@ -39,7 +39,7 @@ solution.
 
 ## Components
 
-![ClearML Serving](https://github.com/allegroai/clearml-serving/raw/main/docs/design_diagram.png?raw=true)
+![ClearML Serving](https://github.com/clearml/clearml-serving/raw/main/docs/design_diagram.png?raw=true)
 
 * **CLI** - Secure configuration interface for on-line model upgrade/deployment on running Serving Services
 

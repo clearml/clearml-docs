@@ -10,7 +10,7 @@ title: Version 1.6
 ### ClearML 1.6.3
 
 **New Features and Improvements**
-* Add option to specify an endpoint URL when creating S3 resource service ([ClearML GitHub issue #673](https://github.com/allegroai/clearml/issues/673))
+* Add option to specify an endpoint URL when creating S3 resource service ([ClearML GitHub issue #673](https://github.com/clearml/clearml/issues/673))
 * Add support for providing `ExtraArgs` to boto3 when uploading files using the `sdk.aws.s3.extra_args` configuration option
 * Add support for Server API 2.20
 * Add `Task.get_num_enqueued_tasks()` to get the number of tasks enqueued in a specific queue
@@ -25,12 +25,12 @@ title: Version 1.6
   * Add wild-card support in `clearml-data`
 
 **Bug Fixes**
-* Fix dataset download ([ClearML GitHub issue #713](https://github.com/allegroai/clearml/issues/713))
-* Fix lock is not released after dataset cache is downloaded ([ClearML GitHub issue #671](https://github.com/allegroai/clearml/issues/671))
-* Fix deadlock might occur when using process pool large number processes ([ClearML GitHub issue #674](https://github.com/allegroai/clearml/issues/674))
-* Fix 'series' not appearing on UI when using `logger.report_table()` ([ClearML GitHub issue #684](https://github.com/allegroai/clearml/issues/684))
-* Fix `Task.init()` docstring to include behavior when executing remotely ([ClearML GitHub PR #737](https://github.com/allegroai/clearml/pull/737))
-* Fix `KeyError` when running remotely and no params were passed to click ([ClearML Agent GitHub issue #111](https://github.com/allegroai/clearml-agent/issues/111))
+* Fix dataset download ([ClearML GitHub issue #713](https://github.com/clearml/clearml/issues/713))
+* Fix lock is not released after dataset cache is downloaded ([ClearML GitHub issue #671](https://github.com/clearml/clearml/issues/671))
+* Fix deadlock might occur when using process pool large number processes ([ClearML GitHub issue #674](https://github.com/clearml/clearml/issues/674))
+* Fix 'series' not appearing on UI when using `logger.report_table()` ([ClearML GitHub issue #684](https://github.com/clearml/clearml/issues/684))
+* Fix `Task.init()` docstring to include behavior when executing remotely ([ClearML GitHub PR #737](https://github.com/clearml/clearml/pull/737))
+* Fix `KeyError` when running remotely and no params were passed to click ([ClearML Agent GitHub issue #111](https://github.com/clearml/clearml-agent/issues/111))
 * Fix full path is stored when uploading a single artifact file
 * Fix passing non-alphanumeric filename in `sdk.development.detect_with_pip_freeze`
 * Fix Python 3.6 and 3.10 support
@@ -61,7 +61,7 @@ title: Version 1.6
 
 **Bug Fix**
 
-* Fix format string construction sometimes causing delayed evaluation errors ([ClearML GitHub issue #706](https://github.com/allegroai/clearml/issues/706))
+* Fix format string construction sometimes causing delayed evaluation errors ([ClearML GitHub issue #706](https://github.com/clearml/clearml/issues/706))
 
 ### ClearML 1.6.1
 
@@ -83,7 +83,7 @@ title: Version 1.6
 
 **Bug Fixes**
 * Fix axis range settings when logging plots
-* Fix `Task.get_project()` to return more than 500 entries ([ClearML GitHub issue #612](https://github.com/allegroai/clearml/issues/612))
+* Fix `Task.get_project()` to return more than 500 entries ([ClearML GitHub issue #612](https://github.com/clearml/clearml/issues/612))
 * Fix pipeline progress calculation
 * Fix `StorageManager.upload_folder()` returns `None` for both successful and unsuccessful uploads
 * Fix script path capturing stores a relative path and not an absolute path

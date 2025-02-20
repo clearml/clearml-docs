@@ -74,7 +74,7 @@ In the panel's **CONTENT** tab, you can see a table summarizing version contents
 
 Now that you have a new dataset registered, you can consume it.
 
-The [data_ingestion.py](https://github.com/allegroai/clearml/blob/master/examples/datasets/data_ingestion.py) example 
+The [data_ingestion.py](https://github.com/clearml/clearml/blob/master/examples/datasets/data_ingestion.py) example 
 script demonstrates using the dataset within Python code.
 
 ```python

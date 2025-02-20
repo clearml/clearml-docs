@@ -6,16 +6,16 @@ title: Version 1.3
 
 **New Features and Improvements**
 
-* Add support for setting reported values for `NaN` and `Inf` ([ClearML GitHub issue #604](https://github.com/allegroai/clearml/issues/604))
+* Add support for setting reported values for `NaN` and `Inf` ([ClearML GitHub issue #604](https://github.com/clearml/clearml/issues/604))
 * Add reserved OS environments warning
-* Add git credentials to colab example ([ClearML GitHub PR #621](https://github.com/allegroai/clearml/pull/621))
-* Add jsonargparse support ([ClearML GitHub issue #403](https://github.com/allegroai/clearml/issues/403))
+* Add git credentials to colab example ([ClearML GitHub PR #621](https://github.com/clearml/clearml/pull/621))
+* Add jsonargparse support ([ClearML GitHub issue #403](https://github.com/clearml/clearml/issues/403))
 * Update autokeras example
 
 **Bug Fixes**
 
-* Fix sub-project separators are incorrectly quoted in generated URLs ([ClearML GitHub PR #584](https://github.com/allegroai/clearml/pull/584))
-* Revert Optuna deprecation fix ([ClearML GitHub PR #613](https://github.com/allegroai/clearml/pull/613))
+* Fix sub-project separators are incorrectly quoted in generated URLs ([ClearML GitHub PR #584](https://github.com/clearml/clearml/pull/584))
+* Revert Optuna deprecation fix ([ClearML GitHub PR #613](https://github.com/clearml/clearml/pull/613))
 * Fix HPO randomly aborts running tasks before the time limit
 * Fix cloud driver overwrites `agent.extra_docker_arguments`
 * Fix Pipeline Controller auto-magic framework connect
@@ -29,9 +29,9 @@ title: Version 1.3
 
 **Bug Fixes**
 
-* Update Slack SDK requirement ([ClearML GitHub issue #597](https://github.com/allegroai/clearml/issues/597))
-* Fix fork after `task.close()` is called ([ClearML GitHub issue #605](https://github.com/allegroai/clearml/issues/605))
-* Fix Azure storage upload ([ClearML GitHub issue #598](https://github.com/allegroai/clearml/issues/598))
+* Update Slack SDK requirement ([ClearML GitHub issue #597](https://github.com/clearml/clearml/issues/597))
+* Fix fork after `task.close()` is called ([ClearML GitHub issue #605](https://github.com/clearml/clearml/issues/605))
+* Fix Azure storage upload ([ClearML GitHub issue #598](https://github.com/clearml/clearml/issues/598))
 * Fix offline mode crash
 * Fix task delete response not checked
 * Fix pipeline controller kwargs with list
@@ -55,6 +55,6 @@ title: Version 1.3
 
 **Bug Fixes**
 
-* Fix failed catboost bind on GPU ([ClearML GitHub issue #592](https://github.com/allegroai/clearml/issues/592))
+* Fix failed catboost bind on GPU ([ClearML GitHub issue #592](https://github.com/clearml/clearml/issues/592))
 * Fix Optuna `n_jobs` deprecation warning
 * Fix invalid method called on `delete()` error

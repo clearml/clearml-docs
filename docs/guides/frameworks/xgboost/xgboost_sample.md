@@ -2,7 +2,7 @@
 title: XGBoost and scikit-learn
 ---
 
-The [xgboost_sample.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/xgboost/xgboost_sample.py) 
+The [xgboost_sample.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/xgboost/xgboost_sample.py) 
 example demonstrates integrating ClearML into code that uses [XGBoost](https://xgboost.readthedocs.io/en/stable/). 
 
 The example does the following:

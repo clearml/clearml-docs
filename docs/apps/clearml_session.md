@@ -112,7 +112,7 @@ session.
 
 ### Kubernetes Support 
 With ClearML k8s-glue you can enable launching ClearML sessions directly within Kubernetes pods. Set up the network and 
-ingress settings for `clearml-session` in the `sessions` section of the [`values.yaml`](https://github.com/allegroai/clearml-helm-charts/blob/main/charts/clearml-agent/values.yaml)
+ingress settings for `clearml-session` in the `sessions` section of the [`values.yaml`](https://github.com/clearml/clearml-helm-charts/blob/main/charts/clearml-agent/values.yaml)
 file. 
 
 Make sure to set the following values:

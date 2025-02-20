@@ -2,7 +2,7 @@
 title: Model Reporting
 ---
 
-The [model_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/model_reporting.py) example 
+The [model_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/model_reporting.py) example 
 demonstrates logging a model using the [OutputModel](../../references/sdk/model_outputmodel.md) 
 class. 
 

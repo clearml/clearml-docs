@@ -50,4 +50,4 @@ You can view the captured metrics in the task's **Scalars** tab in the [WebApp](
 
 ![OpenMMLab scalars](../img/integration_openmmlab_scalars.png)
 
-See MMCV code example [here](https://github.com/allegroai/clearml/blob/master/examples/frameworks/openmmlab/openmmlab_cifar10.py).
+See MMCV code example [here](https://github.com/clearml/clearml/blob/master/examples/frameworks/openmmlab/openmmlab_cifar10.py).

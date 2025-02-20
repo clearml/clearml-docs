@@ -2,7 +2,7 @@
 title: Image Hyperparameter Optimization - Jupyter Notebook
 ---
 
-[hyperparameter_search.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/image/hyperparameter_search.ipynb) 
+[hyperparameter_search.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/image/hyperparameter_search.ipynb) 
 demonstrates using ClearML's [HyperParameterOptimizer](../../../../../references/sdk/hpo_optimization_hyperparameteroptimizer.md)
 class to perform automated hyperparameter optimization (HPO). 
 
@@ -12,7 +12,7 @@ The example maximizes total accuracy by finding an optimal number of epochs, bat
 automatically logs the optimization's top performing tasks.
 
 The task whose hyperparameters are optimized is named `image_classification_CIFAR10`. It is created by running another 
-ClearML example, [image_classification_CIFAR10.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/image/image_classification_CIFAR10.ipynb), 
+ClearML example, [image_classification_CIFAR10.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/image/image_classification_CIFAR10.ipynb), 
 which must run before `hyperparameter_search.ipynb`.
 
 The optimizer Task, `Hyperparameter Optimization`, and the tasks appear individually in the [ClearML Web UI](../../../../../webapp/webapp_overview.md).

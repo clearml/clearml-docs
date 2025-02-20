@@ -2,7 +2,7 @@
 title: Programmatic Orchestration
 ---
 
-The [programmatic_orchestration.py](https://github.com/allegroai/clearml/blob/master/examples/automation/programmatic_orchestration.py) 
+The [programmatic_orchestration.py](https://github.com/clearml/clearml/blob/master/examples/automation/programmatic_orchestration.py) 
 example demonstrates: 
 1. Creating an instance of a Task from a template Task.
 1. Customizing that instance by changing the value of a parameter
@@ -11,7 +11,7 @@ example demonstrates:
 This example accomplishes a task pipe by doing the following:
 
 1. Creating the template Task which is named `Toy Base Task`. It must be stored in ClearML Server before instances of 
-   it can be created. To create it, run another ClearML example script, [toy_base_task.py](https://github.com/allegroai/clearml/blob/master/examples/automation/toy_base_task.py).
+   it can be created. To create it, run another ClearML example script, [toy_base_task.py](https://github.com/clearml/clearml/blob/master/examples/automation/toy_base_task.py).
    The template Task has a parameter dictionary, which is connected to the Task: `{'Example_Param': 1}`. 
 1. Back in `programmatic_orchestration.py`, creating a parameter dictionary, which is connected to the Task by calling [`Task.connect`](../../references/sdk/task.md#connect) 
    so that the parameters are logged by ClearML. The dictionary contains the name of the parameter from the template 

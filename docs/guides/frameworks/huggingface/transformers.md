@@ -2,7 +2,7 @@
 title: Transformers
 ---
 
-The [Hugging Face Transformers example](https://github.com/allegroai/clearml/blob/master/examples/frameworks/huggingface/transformers.ipynb)
+The [Hugging Face Transformers example](https://github.com/clearml/clearml/blob/master/examples/frameworks/huggingface/transformers.ipynb)
 demonstrates how to integrate ClearML into your Transformer's [Trainer](https://huggingface.co/docs/transformers/v4.34.1/en/main_classes/trainer) 
 code. The Hugging Face Trainer automatically uses the built-in [`ClearMLCallback`](https://huggingface.co/docs/transformers/v4.34.1/en/main_classes/callback#transformers.integrations.ClearMLCallback)
 if the `clearml` package is already installed, to log Transformers models, parameters, scalars, and more. 

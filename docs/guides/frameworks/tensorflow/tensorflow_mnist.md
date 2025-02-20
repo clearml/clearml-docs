@@ -2,7 +2,7 @@
 title: TensorFlow MNIST
 ---
 
-The [tensorflow_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/tensorflow_mnist.py) 
+The [tensorflow_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/tensorflow_mnist.py) 
 example demonstrates the integration of ClearML into code that uses TensorFlow and Keras to train a neural network on 
 the Keras built-in [MNIST](https://www.tensorflow.org/api_docs/python/tf/keras/datasets/mnist) handwritten digits dataset. 
 

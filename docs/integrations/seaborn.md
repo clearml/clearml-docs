@@ -23,4 +23,4 @@ in the task's **Plots** tab.
 
 ![Seaborn plot](../img/integrations_seaborn_plots.png)
 
-View code example [here](https://github.com/allegroai/clearml/blob/master/examples/frameworks/matplotlib/matplotlib_example.py). 
+View code example [here](https://github.com/clearml/clearml/blob/master/examples/frameworks/matplotlib/matplotlib_example.py). 

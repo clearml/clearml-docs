@@ -22,14 +22,14 @@ title: Version 1.2
 
 **New Features and Improvements**
 
-- Update S3 bucket verify option for minio ([ClearML Agent GitHub PR #83](https://github.com/allegroai/clearml-agent/pull/83))
-- Add environment variable for request method ([ClearML Agent GitHub PR #91](https://github.com/allegroai/clearml-agent/pull/91))
-- Add additional k8s-glue dockerfiles ([ClearML Agent GitHub PR #94](https://github.com/allegroai/clearml-agent/pull/94) )
+- Update S3 bucket verify option for minio ([ClearML Agent GitHub PR #83](https://github.com/clearml/clearml-agent/pull/83))
+- Add environment variable for request method ([ClearML Agent GitHub PR #91](https://github.com/clearml/clearml-agent/pull/91))
+- Add additional k8s-glue dockerfiles ([ClearML Agent GitHub PR #94](https://github.com/clearml/clearml-agent/pull/94) )
 - Update default docker image to `nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04`
-- Add support for custom docker image resolving using the `agent.default_docker.match_rules` configuration setting (see [here](https://github.com/allegroai/clearml-agent/blob/8712c5e636d9a02e939a9759348d29521a3939a9/docs/clearml.conf#L169))
+- Add support for custom docker image resolving using the `agent.default_docker.match_rules` configuration setting (see [here](https://github.com/clearml/clearml-agent/blob/8712c5e636d9a02e939a9759348d29521a3939a9/docs/clearml.conf#L169))
 - Add `agent.force_git_root_python_path` configuration setting to force adding the git repository root folder to the `PYTHONPATH` (if set working directory is not added to the `PYHTONPATH`)
 - Add `build --force-docker` command line argument to the to allow ignoring task container data
-- Add `agent.poetry_version` configuration setting to specify poetry version (and force installation of poetry if missing, see [here](https://github.com/allegroai/clearml-agent/blob/8712c5e636d9a02e939a9759348d29521a3939a9/docs/clearml.conf#L65))
+- Add `agent.poetry_version` configuration setting to specify poetry version (and force installation of poetry if missing, see [here](https://github.com/clearml/clearml-agent/blob/8712c5e636d9a02e939a9759348d29521a3939a9/docs/clearml.conf#L65))
 - Add custom build script support
 - Add extra configurations when starting daemon
 - Add `agent.package_manager.force_original_requirements` configuration option, allowing to only use original requirements produced by local execution (note that using this configuration option prevents editing installed packages using the UI)
@@ -38,10 +38,10 @@ title: Version 1.2
 
 **Bug Fixes**
 
-- Fix virtualenv Python interpreter used ([ClearML Agent GitHub PR #98](https://github.com/allegroai/clearml-agent/pull/98))
-- Fix typing package incorrectly required for Python>3.5 ([ClearML Agent GitHub PR #103](https://github.com/allegroai/clearml-agent/pull/103))
-- Fix symbolic links not copied from cached VCS into working copy (windows platform will result with default copy content instead of original symbolic link) ([ClearML Agent GitHub PR #89](https://github.com/allegroai/clearml-agent/pull/89))
-- Fix agent fails to check out code from main branch when branch/commit is not explicitly specified ([ClearML GitHub issue #551](https://github.com/allegroai/clearml/issues/551))
+- Fix virtualenv Python interpreter used ([ClearML Agent GitHub PR #98](https://github.com/clearml/clearml-agent/pull/98))
+- Fix typing package incorrectly required for Python>3.5 ([ClearML Agent GitHub PR #103](https://github.com/clearml/clearml-agent/pull/103))
+- Fix symbolic links not copied from cached VCS into working copy (windows platform will result with default copy content instead of original symbolic link) ([ClearML Agent GitHub PR #89](https://github.com/clearml/clearml-agent/pull/89))
+- Fix agent fails to check out code from main branch when branch/commit is not explicitly specified ([ClearML GitHub issue #551](https://github.com/clearml/clearml/issues/551))
 - Fix `git+git://` requirements
 - Fix `default_python` calculation (and verbosity)
 - Fix using deprecated `abc` support (Python 3.10 compatibility)

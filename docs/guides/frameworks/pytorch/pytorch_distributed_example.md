@@ -2,7 +2,7 @@
 title: PyTorch Distributed
 ---
 
-The [pytorch_distributed_example.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_distributed_example.py) 
+The [pytorch_distributed_example.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_distributed_example.py) 
 script demonstrates integrating ClearML into a code that uses the [PyTorch Distributed Communications Package](https://pytorch.org/docs/stable/distributed.html) 
 (`torch.distributed`). 
 

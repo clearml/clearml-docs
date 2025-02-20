@@ -2,7 +2,7 @@
 title: PyTorch Ignite TensorboardLogger
 ---
 
-The [cifar_ignite.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/ignite/cifar_ignite.py) example 
+The [cifar_ignite.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/ignite/cifar_ignite.py) example 
 script integrates ClearML into code that uses [PyTorch Ignite](https://github.com/pytorch/ignite). 
 
 The example script does the following:

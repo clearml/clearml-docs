@@ -4,7 +4,7 @@ title: Version 1.3
 
 ### ClearML Agent 1.3.0
 **New Features and Improvements**
-* Support private repos from `requirements.txt` file ([ClearML Agent GitHub PR #107](https://github.com/allegroai/clearml-agent/pull/107))
+* Support private repos from `requirements.txt` file ([ClearML Agent GitHub PR #107](https://github.com/clearml/clearml-agent/pull/107))
 * Bump PyJWT version due to "*Key confusion through non-blocklisted public key formats*" vulnerability
 * Add support for additional command line arguments in k8s glue example
 * Add Python 3.10 support

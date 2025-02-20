@@ -2,7 +2,7 @@
 title: Plotly Reporting
 ---
 
-The [plotly_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/plotly_reporting.py) example 
+The [plotly_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/plotly_reporting.py) example 
 demonstrates ClearML's Plotly integration and reporting. 
 
 Report Plotly plots in ClearML by calling the [`Logger.report_plotly()`](../../references/sdk/logger.md#report_plotly) method, and passing a complex

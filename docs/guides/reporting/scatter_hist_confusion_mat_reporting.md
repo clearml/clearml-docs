@@ -2,7 +2,7 @@
 title: 2D Plots Reporting
 ---
 
-The [scatter_hist_confusion_mat_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/scatter_hist_confusion_mat_reporting.py) 
+The [scatter_hist_confusion_mat_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/scatter_hist_confusion_mat_reporting.py) 
 example demonstrates reporting series data in the following 2D formats: 
 * [Histograms](#histograms)
 * [Confusion matrices](#confusion-matrices)

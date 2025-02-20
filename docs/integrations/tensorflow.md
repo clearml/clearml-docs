@@ -85,7 +85,7 @@ model checkpoints, TensorFlow definitions, and scalars logged using TensorFlow m
 logging of TensorBoard output and TensorFlow definitions.
 * [TensorBoard Toy](../guides/frameworks/tensorflow/tensorboard_toy.md) - Demonstrates ClearML's automatic logging of 
 TensorBoard scalars, histograms, images, and text, as well as all console output and TensorFlow Definitions.
-* [Absl flags](https://github.com/allegroai/clearml/blob/master/examples/frameworks/tensorflow/absl_flags.py) - Demonstrates 
+* [Absl flags](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/absl_flags.py) - Demonstrates 
 ClearML's automatic logging of parameters defined using `absl.flags` 
 
 ## Remote Execution

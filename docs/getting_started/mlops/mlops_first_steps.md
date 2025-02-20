@@ -39,7 +39,7 @@ required Python packages, and execute and monitor the process.
     ```
 
     :::note
-    If you've already created credentials, you can copy-paste the default agent section from [here](https://github.com/allegroai/clearml-agent/blob/master/docs/clearml.conf#L15) (this is optional. If the section is not provided the default values will be used)
+    If you've already created credentials, you can copy-paste the default agent section from [here](https://github.com/clearml/clearml-agent/blob/master/docs/clearml.conf#L15) (this is optional. If the section is not provided the default values will be used)
     :::
 
 1. Start the agent's daemon and assign it to a [queue](../../fundamentals/agents_and_queues.md#what-is-a-queue):

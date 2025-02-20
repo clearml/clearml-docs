@@ -2,7 +2,7 @@
 title: Monitoring Service Posting Slack Alerts
 ---
 
-The [Slack alerts example](https://github.com/allegroai/clearml/blob/master/examples/services/monitoring/slack_alerts.py) 
+The [Slack alerts example](https://github.com/clearml/clearml/blob/master/examples/services/monitoring/slack_alerts.py) 
 demonstrates how to use the `clearml.automation.monitor` class to implement a service that monitors the completion and 
 failure of tasks, and posts alert messages on a Slack channel.
 

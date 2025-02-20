@@ -26,7 +26,7 @@ Access privileges can be viewed, defined, and edited in the **Access Rules** tab
    specific project or task), click the input box, and select the object from the list that appears. Filter the 
    list by typing part of the desired object name
 1. Select the permission type - **Read Only** or **Read & Modify**
-1. Assign users, [service accounts](webapp_settings_access_rules.md#service-accounts), and/or [user groups](webapp_settings_users.md#user-groups) 
+1. Assign users, [service accounts](webapp_settings_users.md#service-accounts), and/or [user groups](webapp_settings_users.md#user-groups) 
    to be given access. Click the 
    desired input box, and select the users / service accounts / groups from the list that appears. Filter the list by 
    typing part of the desired object name. To revoke 

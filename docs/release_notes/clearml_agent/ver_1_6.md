@@ -10,10 +10,10 @@ title: Version 1.6
 ### ClearML Agent 1.6.0
 
 **New Features and Improvements**
-* Upgrade `requests` library ([ClearML Agent GitHub issue #161](https://github.com/allegroai/clearml-agent/issues/161))
+* Upgrade `requests` library ([ClearML Agent GitHub issue #161](https://github.com/clearml/clearml-agent/issues/161))
 * Add support for controlling PyTorch resolving mode using the `CLEARML_AGENT_PACKAGE_PYTORCH_RESOLVE` environment 
 variable and `agent.package_manager.pytorch_resolve configuration` setting with `none` (no resolving), `pip` (sets extra 
-index based on cuda and lets pip resolve) or `direct` (the previous parsing algorithm that does the matching and downloading). Default is `pip` ([ClearML Agent GitHub issue #152](https://github.com/allegroai/clearml-agent/issues/152))
+index based on cuda and lets pip resolve) or `direct` (the previous parsing algorithm that does the matching and downloading). Default is `pip` ([ClearML Agent GitHub issue #152](https://github.com/clearml/clearml-agent/issues/152))
 * Add backwards compatibility in standalone mode using the `CLEARML_AGENT_STANDALONE_CONFIG_BC` environment variable
 * Add `CLEARML_AGENT_DOCKER_AGENT_REPO` alias for the `FORCE_CLEARML_AGENT_REPO` environment variable
 * Show a better message for `agent init` when an existing `clearml.conf` is found

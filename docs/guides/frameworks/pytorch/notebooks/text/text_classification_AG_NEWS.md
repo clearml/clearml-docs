@@ -2,7 +2,7 @@
 title: Text Classification - Jupyter Notebook
 ---
 
-The example [text_classification_AG_NEWS.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/text/text_classification_AG_NEWS.ipynb) 
+The example [text_classification_AG_NEWS.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/text/text_classification_AG_NEWS.ipynb) 
 demonstrates using Jupyter Notebook for ClearML, and the integration of ClearML into code which trains a network 
 to classify text in the `torchtext` [AG_NEWS](https://pytorch.org/text/stable/datasets.html#ag-news) dataset, and then applies the model to predict the classification of sample text. 
 

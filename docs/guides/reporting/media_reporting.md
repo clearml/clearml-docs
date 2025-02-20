@@ -2,7 +2,7 @@
 title: Media Reporting
 ---
 
-The [media_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/media_reporting.py) example 
+The [media_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/media_reporting.py) example 
 demonstrates reporting (uploading) images, audio, and video. Use [`Logger.report_media()`](../../references/sdk/logger.md#report_media)
 to upload from: 
 * Local path

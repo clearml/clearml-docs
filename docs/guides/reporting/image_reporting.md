@@ -2,7 +2,7 @@
 title: Image Reporting
 ---
 
-The [image_reporting.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/image_reporting.py) example 
+The [image_reporting.py](https://github.com/clearml/clearml/blob/master/examples/reporting/image_reporting.py) example 
 demonstrates reporting (uploading) images in several formats, including: 
 * NumPy arrays
 * uint8

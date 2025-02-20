@@ -113,7 +113,7 @@ they are attached to, and then retrieving the artifact with one of its following
 * `get_local_copy()` - caches the files for later use and returns a path to the cached file. 
 * `get()` - use for Python objects. The method that returns the Python object.
    
-See more details in the [Using Artifacts example](https://github.com/allegroai/clearml/blob/master/examples/reporting/using_artifacts_example.py).
+See more details in the [Using Artifacts example](https://github.com/clearml/clearml/blob/master/examples/reporting/using_artifacts_example.py).
 
 ## Task Types
 Tasks have a *type* attribute, which denotes their purpose. This helps to further 

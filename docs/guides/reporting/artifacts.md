@@ -2,7 +2,7 @@
 title: Artifacts Reporting
 ---
 
-The [artifacts.py](https://github.com/allegroai/clearml/blob/master/examples/reporting/artifacts.py) example demonstrates 
+The [artifacts.py](https://github.com/clearml/clearml/blob/master/examples/reporting/artifacts.py) example demonstrates 
 uploading objects (other than models) to storage as task artifacts. 
 
 These artifacts include: 

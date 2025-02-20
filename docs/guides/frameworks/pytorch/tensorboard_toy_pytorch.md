@@ -2,7 +2,7 @@
 title: PyTorch TensorBoard Toy
 ---
 
-The [tensorboard_toy_pytorch.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/tensorboard_toy_pytorch.py) 
+The [tensorboard_toy_pytorch.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/tensorboard_toy_pytorch.py) 
 example demonstrates the integration of ClearML into code, which creates a TensorBoard `SummaryWriter` object to log 
 debug sample images. When the script runs, it creates a task named `pytorch tensorboard toy example`, which is 
 associated with the `examples` project.

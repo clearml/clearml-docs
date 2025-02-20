@@ -56,18 +56,18 @@ limits.
     **CONFIGURATION > HYPERPARAMETERS > Hydra**).
     :::
 * **Optimization Job Title** (optional) - Name for the HPO instance. This will appear in the instance list 
-* **Optimization Experiments Destination Project** (optional) - The project where optimization tasks will be saved. 
+* **Optimization Tasks Destination Project** (optional) - The project where optimization tasks will be saved. 
   Leave empty to use the same project as the Initial task. 
 * **Maximum Concurrent Tasks** - The maximum number of simultaneously running optimization tasks
 * **Advanced Configuration** (optional)
-    * Limit Total HPO Experiments - Maximum total number of optimization tasks
-    * Number of Top Experiments to Save - Number of best performing tasks to save (the rest are archived)
-    * Limit Single Experiment Running Time (Minutes) - Time limit per optimization task. Tasks will be 
+    * Limit Total HPO Tasks - Maximum total number of optimization tasks
+    * Number of Top Tasks to Save - Number of best performing tasks to save (the rest are archived)
+    * Limit Single Task Running Time (Minutes) - Time limit per optimization task. Tasks will be 
       stopped after the specified time elapsed
-    * Minimal Number of Iterations Per Single Experiment - Some search methods, such as Optuna, prune underperforming 
+    * Minimal Number of Iterations Per Single Task - Some search methods, such as Optuna, prune underperforming 
       tasks. This is the minimum number of iterations per task before it can be stopped. Iterations are 
       based on the tasks' own reporting (for example, if tasks report every epoch, then iterations=epochs)
-    * Maximum Number of Iterations Per Single Experiment - Maximum iterations per task after which it will be 
+    * Maximum Number of Iterations Per Single Task - Maximum iterations per task after which it will be 
       stopped. Iterations are based on the tasks' own reporting (for example, if tasks report every epoch, 
       then iterations=epochs)
     * Limit Total Optimization Instance Time (Minutes) - Time limit for the whole optimization process (in minutes)

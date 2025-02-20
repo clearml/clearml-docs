@@ -4,7 +4,7 @@ title: Explicit Reporting Tutorial
 
 In this tutorial, learn how to extend ClearML automagical capturing of inputs and outputs with explicit reporting. 
 
-In this example, you will add the following to the [pytorch_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
+In this example, you will add the following to the [pytorch_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
 example script from ClearML's GitHub repo:
 
 * Setting an output destination for model checkpoints (snapshots).
@@ -14,12 +14,12 @@ example script from ClearML's GitHub repo:
 
 ## Prerequisites
 
-* The [clearml](https://github.com/allegroai/clearml) repository is cloned.
+* The [clearml](https://github.com/clearml/clearml) repository is cloned.
 * The `clearml` package is installed.
   
 ## Before Starting
 
-Make a copy of [pytorch_mnist.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
+Make a copy of [pytorch_mnist.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/pytorch_mnist.py) 
 to add explicit reporting to it.
 
 ```bash

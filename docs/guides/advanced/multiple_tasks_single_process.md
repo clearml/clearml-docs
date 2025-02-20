@@ -2,7 +2,7 @@
 title: Multiple Tasks in Single Process
 ---
 
-The [multiple_tasks_single_process](https://github.com/allegroai/clearml/blob/master/examples/advanced/multiple_tasks_single_process.py)
+The [multiple_tasks_single_process](https://github.com/clearml/clearml/blob/master/examples/advanced/multiple_tasks_single_process.py)
 script demonstrates the capability to log a single script in multiple ClearML tasks.  
 
 In order to log a script in multiple tasks, each task needs to be initialized using [`Task.init()`](../../references/sdk/task.md#taskinit) 

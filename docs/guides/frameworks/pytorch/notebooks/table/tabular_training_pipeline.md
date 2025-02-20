@@ -9,17 +9,17 @@ class.
 
 The pipeline uses four Tasks (each Task is created using a different notebook): 
 
-* The pipeline controller Task ([tabular_ml_pipeline.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/tabular_ml_pipeline.ipynb))
-* A data preprocessing Task ([preprocessing_and_encoding.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/preprocessing_and_encoding.ipynb))
-* A training Task ([train_tabular_predictor.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb))
-* A better model comparison Task ([pick_best_model.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/pick_best_model.ipynb))
+* The pipeline controller Task ([tabular_ml_pipeline.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/tabular_ml_pipeline.ipynb))
+* A data preprocessing Task ([preprocessing_and_encoding.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/preprocessing_and_encoding.ipynb))
+* A training Task ([train_tabular_predictor.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb))
+* A better model comparison Task ([pick_best_model.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/pick_best_model.ipynb))
 
 The `PipelineController` class includes functionality to create a pipeline controller, add steps to the pipeline, pass data from one step to another, control the dependencies of a step beginning only after other steps complete, run the pipeline, wait for it to complete, and cleanup afterwards.
 
 In this pipeline example, the data preprocessing Task and training Task are each added to the pipeline twice (each is in two steps). When the pipeline runs, the data preprocessing Task and training Task are cloned twice, and the newly cloned Tasks execute. The Task they are cloned from, called the base Task, does not execute. The pipeline controller passes different data to each cloned Task by overriding parameters. In this way, the same Task can run more than once in the pipeline, but with different data.
 
 :::note Download Data
-The data download Task is not a step in the pipeline, see [download_and_split](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_split.ipynb).
+The data download Task is not a step in the pipeline, see [download_and_split](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_split.ipynb).
 :::
     
 ## Pipeline Controller and Steps
@@ -246,17 +246,17 @@ By hovering over a step or path between nodes, you can view information about it
 
 **To run the pipeline:**
 
-1. Download the data by running the notebook [download_and_split.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_split.ipynb).
+1. Download the data by running the notebook [download_and_split.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_split.ipynb).
 
 1. Run the script for each of the steps, if the script has not run once before.
 
-    * [preprocessing_and_encoding.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/preprocessing_and_encoding.ipynb)
-    * [train_tabular_predictor.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb)
-    * [pick_best_model.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/pick_best_model.ipynb).
+    * [preprocessing_and_encoding.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/preprocessing_and_encoding.ipynb)
+    * [train_tabular_predictor.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/train_tabular_predictor.ipynb)
+    * [pick_best_model.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/pick_best_model.ipynb).
 
 1. Run the pipeline controller one of the following two ways:
 
-    * Run the notebook [tabular_ml_pipeline.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/tabular_ml_pipeline.ipynb).
+    * Run the notebook [tabular_ml_pipeline.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/tabular_ml_pipeline.ipynb).
     * Remotely execute the Task - If the Task `tabular training pipeline` which is associated with the project `Tabular Example` already exists in ClearML Server, clone it and enqueue it to execute.  
       
 

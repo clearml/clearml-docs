@@ -72,10 +72,10 @@ and ClearML Server needs to be installed.
 1. Download the migration package archive:
 
    ``` 
-   curl -L -O  https://github.com/allegroai/clearml-server/releases/download/0.16.0/trains-server-0.16.0-migration.zip
+   curl -L -O  https://github.com/clearml/clearml-server/releases/download/0.16.0/trains-server-0.16.0-migration.zip
    ```
    
-   If the file needs to be downloaded manually, use this direct link: [trains-server-0.16.0-migration.zip](https://github.com/allegroai/clearml-server/releases/download/0.16.0/trains-server-0.16.0-migration.zip).
+   If the file needs to be downloaded manually, use this direct link: [trains-server-0.16.0-migration.zip](https://github.com/clearml/clearml-server/releases/download/0.16.0/trains-server-0.16.0-migration.zip).
 
 1. Extract the archive:
 
@@ -109,7 +109,7 @@ and ClearML Server needs to be installed.
         1. Clone the `trains-server-k8s` repository and change to the new `trains-server-k8s/upgrade-elastic` directory:
     
            ```
-           git clone https://github.com/allegroai/clearml-server-k8s.git && cd clearml-server-k8s/upgrade-elastic
+           git clone https://github.com/clearml/clearml-server-k8s.git && cd clearml-server-k8s/upgrade-elastic
            ```
             
         1. Create the `upgrade-elastic` namespace and deployments:
@@ -170,7 +170,7 @@ If the migration script does not complete successfully, the migration script pri
 
 :::important  
 For help in resolving migration issues, check the **ClearML** [Slack channel](https://joinslack.clear.ml), 
-[GitHub issues](https://github.com/allegroai/clearml-server/issues), and the **ClearML Server** sections of the [FAQ](../faq.md).     
+[GitHub issues](https://github.com/clearml/clearml-server/issues), and the **ClearML Server** sections of the [FAQ](../faq.md).     
 :::
     
 ### Upgrading to ClearML Server v.1.2 or Newer

@@ -2,7 +2,7 @@
 title: Using Artifacts
 ---
 
-The [using_artifacts_example](https://github.com/allegroai/clearml/blob/master/examples/reporting/using_artifacts_example.py) 
+The [using_artifacts_example](https://github.com/clearml/clearml/blob/master/examples/reporting/using_artifacts_example.py) 
 script demonstrates uploading a data file to a task as an artifact and then accessing and utilizing the artifact in a different task.
 
 When the script runs it creates two tasks, `create artifact` and `use artifact from other task`, both of which are associated 

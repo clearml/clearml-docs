@@ -22,7 +22,7 @@ log files (daemon and execution)
   * Set worker ID in k8s pod execution
 
 **Bug Fixes**
-* Fix `agent.package_manager.poetry_install_extra_args` are used in all Poetry commands and not just in `install` ([ClearML Agent GitHub issue #173](https://github.com/allegroai/clearml-agent/issues/173))
+* Fix `agent.package_manager.poetry_install_extra_args` are used in all Poetry commands and not just in `install` ([ClearML Agent GitHub issue #173](https://github.com/clearml/clearml-agent/issues/173))
 * Fix if process return code is SIGKILL (-9 or 137) and abort callback was called, do not mark as failed but as aborted
 * Fix `agent.git_host` setting will cause git@domain URLs to not be replaced by SSH URLs since furl cannot parse them to 
 obtain host

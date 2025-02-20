@@ -31,19 +31,19 @@ training, and deploying models at every scale on any AI infrastructure.
 <table>
 <tbody>
   <tr>
-    <td><a href="https://github.com/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb"><b>Step 1</b></a> - Experiment Management</td>
+    <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb"><b>Step 1</b></a> - Experiment Management</td>
     <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb"><b>Step 2</b></a> - Remote Execution Agent Setup</td>
+    <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb"><b>Step 2</b></a> - Remote Execution Agent Setup</td>
     <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
   </tr>
   <tr>
-    <td><a href="https://github.com/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb"><b>Step 3</b></a> - Remotely Execute Tasks</td>
+    <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb"><b>Step 3</b></a> - Remotely Execute Tasks</td>
     <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
@@ -105,10 +105,10 @@ Want a more in depth introduction to ClearML? Choose where you want to get start
 
 - [Track and upload](../fundamentals/task.md) metrics and models with only 2 lines of code
 - [Reproduce](../webapp/webapp_exp_reproducing.md) tasks with 3 mouse clicks
-- [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on experiment behavior (for example,
+- [Create bots](../guides/services/slack_alerts.md) that send you Slack messages based on task behavior (for example,
 alert you whenever your model improves in accuracy)
 - Manage your [data](../clearml_data/clearml_data.md) - store, track, and version control 
-- Remotely execute experiments on any compute resource you have available with [ClearML Agent](../clearml_agent.md)  
+- Remotely execute tasks on any compute resource you have available with [ClearML Agent](../clearml_agent.md)  
 - Automatically scale cloud instances according to your resource needs with ClearML's 
 [AWS Autoscaler](../webapp/applications/apps_aws_autoscaler.md) and [GCP Autoscaler](../webapp/applications/apps_gcp_autoscaler.md)
 GUI applications

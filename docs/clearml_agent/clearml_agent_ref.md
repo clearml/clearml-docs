@@ -32,6 +32,8 @@ clearml-agent build [-h] --id TASK_ID [--target TARGET]
                           
 ### Parameters
 
+<div className="tbl-cmd">
+
 |Name | Description| Mandatory |
 |---|----|---|
 |`--id`| Build a worker environment for this Task ID.|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
@@ -48,6 +50,8 @@ clearml-agent build [-h] --id TASK_ID [--target TARGET]
 |`--python-version`| Virtual environment Python version to use.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`-O`| Compile optimized pyc code (see [python documentation](https://docs.python.org/3/using/cmdline.html#cmdoption-O)). Repeat for more optimization.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--target`| The target folder for the virtual environment and source code that will be used at launch.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+
+</div>
 
 ## config
 List your ClearML Agent configuration.
@@ -80,6 +84,8 @@ clearml-agent daemon [-h] [--foreground] [--queue QUEUES [QUEUES ...]] [--order-
                            
 ### Parameters
 
+<div className="tbl-cmd">
+
 |Name | Description| Mandatory |
 |---|----|---|
 |`--child-report-tags`| List of tags to send with the status reports from the worker that executes a task.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
@@ -106,6 +112,8 @@ clearml-agent daemon [-h] [--foreground] [--queue QUEUES [QUEUES ...]] [--order-
 |`--uptime`| Specify uptime for clearml-agent in `<hours> <days>` format. For example, use `17-20 TUE` to set Tuesday's uptime to 17-20. <br/><br/>NOTES:<ul><li>This feature is available under the ClearML Enterprise plan </li><li>Make sure to configure only `--uptime` or `--downtime`, but not both.</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--use-owner-token`| Generate and use the task owner's token for the execution of the task.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 
+</div>
+
 ## execute
 
 Use the `execute` command to set an agent to build and execute specific tasks directly without listening to a queue.
@@ -122,6 +130,8 @@ clearml-agent execute [-h] --id TASK_ID [--log-file LOG_FILE] [--disable-monitor
 
                             
 ### Parameters                            
+
+<div className="tbl-cmd">
 
 |Name | Description| Mandatory |
 |---|----|---|
@@ -140,6 +150,8 @@ clearml-agent execute [-h] --id TASK_ID [--log-file LOG_FILE] [--disable-monitor
 |`-O`| Compile optimized pyc code (see [python documentation](https://docs.python.org/3/using/cmdline.html#cmdoption-O)). Repeat for more optimization.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--require-queue`| If the specified task is not queued, the execution will fail (used for 3rd party scheduler integration, e.g. K8s, SLURM, etc.)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--standalone-mode`| Do not use any network connects, assume everything is pre-installed|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+
+</div>
 
 ## list
 

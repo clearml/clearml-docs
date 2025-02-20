@@ -2,7 +2,7 @@
 title: CatBoost
 ---
 
-The [catboost_example.py](https://github.com/allegroai/clearml/blob/master/examples/frameworks/catboost/catboost_example.py) 
+The [catboost_example.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/catboost/catboost_example.py) 
 example demonstrates the integration of ClearML into code that uses [CatBoost](https://catboost.ai).
 
 The example script does the following:

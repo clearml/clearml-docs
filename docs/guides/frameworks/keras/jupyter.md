@@ -2,7 +2,7 @@
 title: Keras with Matplotlib - Jupyter Notebook
 ---
 
-The [jupyter.ipynb](https://github.com/allegroai/clearml/blob/master/examples/frameworks/keras/jupyter.ipynb) example 
+The [jupyter.ipynb](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/jupyter.ipynb) example 
 demonstrates ClearML's automatic logging of code running in a Jupyter Notebook that uses Keras and Matplotlib. 
 
 The example does the following: 

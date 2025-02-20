@@ -3,7 +3,7 @@ title: Tutorial
 ---
 
 In this tutorial, you will go over the model lifecycle -- from training to serving -- in the following steps:
-* Training a model using the [sklearn example script](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/train_model.py) 
+* Training a model using the [sklearn example script](https://github.com/clearml/clearml-serving/blob/main/examples/sklearn/train_model.py) 
 * Serving the model using **ClearML Serving**  
 * Spinning the inference container
 
@@ -22,7 +22,7 @@ Before executing the steps below, make sure you have completed `clearml-serving`
 Train a model using the example script. Start from the root directory of your local `clearml-serving` repository.
 1. Create a Python virtual environment
 1. Install the script requirements: `pip3 install -r examples/sklearn/requirements.txt`
-1. Execute the [training script](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/train_model.py): `python3 examples/sklearn/train_model.py`. 
+1. Execute the [training script](https://github.com/clearml/clearml-serving/blob/main/examples/sklearn/train_model.py): `python3 examples/sklearn/train_model.py`. 
   
 During execution, ClearML automatically registers the sklearn model and uploads it to the model repository. 
 For information about explicit model registration, see [Registering and Deploying New Models Manually](#registering-and-deploying-new-models-manually). 
@@ -50,7 +50,7 @@ and downloaded in real time when updated.
 ### Step 3: Spin Inference Container
 
 Spin the Inference Container:
-1. Customize container [Dockerfile](https://github.com/allegroai/clearml-serving/blob/main/clearml_serving/serving/Dockerfile) if needed
+1. Customize container [Dockerfile](https://github.com/clearml/clearml-serving/blob/main/clearml_serving/serving/Dockerfile) if needed
 1. Build container:
 
    ```bash
@@ -76,7 +76,7 @@ everything is cached, responses will return almost immediately.
 
 :::note
 Review the model repository in the ClearML web UI, under the "serving examples" Project on your ClearML 
-account/server ([free hosted](https://app.clear.ml) or [self-deployed](https://github.com/allegroai/clearml-server)).
+account/server ([free hosted](https://app.clear.ml) or [self-deployed](https://github.com/clearml/clearml-server)).
 
 Inference services status, console outputs and machine metrics are available in the ClearML UI in the Serving Service 
 project (default: "DevOps" project).
@@ -88,7 +88,7 @@ Uploading an existing model file into the model repository can be done via the `
 or with the `clearml-serving` CLI. 
 
 1. Upload the model file to the `clearml-server` file storage and register it. The `--path` parameter is used to input 
-   the path to a local model file (local model created in [step 1](#step-1--train-model) located in `./sklearn-model.pkl`).
+   the path to a local model file (local model created in [step 1](#step-1-train-model) located in `./sklearn-model.pkl`).
 
    ```bash
    clearml-serving --id <service_id> model upload --name "manual sklearn model" --project "serving examples" --framework "scikitlearn" --path ./sklearn-model.pkl
@@ -207,7 +207,7 @@ Example:
 
 ### Model Monitoring and Performance Metrics
 
-![Grafana Screenshot](https://github.com/allegroai/clearml-serving/raw/main/docs/grafana_screenshot.png)
+![Grafana Screenshot](https://github.com/clearml/clearml-serving/raw/main/docs/grafana_screenshot.png)
 
 ClearML serving instances send serving statistics (count/latency) automatically to Prometheus and Grafana can be used 
 to visualize and create live dashboards. 
@@ -232,7 +232,7 @@ that you will be able to visualize on Grafana.
 :::info time-series values
 You can also log time-series values with `--variable-value x2` or discrete results (e.g. classifications strings) with 
 `--variable-enum animal=cat,dog,sheep`. Additional custom variables can be added in the preprocess and postprocess with 
-a call to `collect_custom_statistics_fn({'new_var': 1.337})`. See [preprocess_template.py](https://github.com/allegroai/clearml-serving/blob/main/clearml_serving/preprocess/preprocess_template.py).
+a call to `collect_custom_statistics_fn({'new_var': 1.337})`. See [preprocess_template.py](https://github.com/clearml/clearml-serving/blob/main/clearml_serving/preprocess/preprocess_template.py).
 :::
 
 With the new metrics logged, you can create a visualization dashboard over the latency of the calls, and the output distribution. 
@@ -258,10 +258,10 @@ You can also specify per-endpoint log frequency with the `clearml-serving` CLI. 
 
 See examples of ClearML Serving with other supported frameworks:
 
-* [scikit-learn](https://github.com/allegroai/clearml-serving/blob/main/examples/sklearn/readme.md) - Random data
-* [scikit-learn Model Ensemble](https://github.com/allegroai/clearml-serving/blob/main/examples/ensemble/readme.md) - Random data
-* [XGBoost](https://github.com/allegroai/clearml-serving/blob/main/examples/xgboost/readme.md) - Iris dataset
-* [LightGBM](https://github.com/allegroai/clearml-serving/blob/main/examples/lightgbm/readme.md) - Iris dataset
-* [PyTorch](https://github.com/allegroai/clearml-serving/blob/main/examples/pytorch/readme.md) - MNIST dataset
-* [TensorFlow/Keras](https://github.com/allegroai/clearml-serving/blob/main/examples/keras/readme.md) - MNIST dataset
-* [Model Pipeline](https://github.com/allegroai/clearml-serving/blob/main/examples/pipeline/readme.md) - Random data
+* [scikit-learn](https://github.com/clearml/clearml-serving/blob/main/examples/sklearn/readme.md) - Random data
+* [scikit-learn Model Ensemble](https://github.com/clearml/clearml-serving/blob/main/examples/ensemble/readme.md) - Random data
+* [XGBoost](https://github.com/clearml/clearml-serving/blob/main/examples/xgboost/readme.md) - Iris dataset
+* [LightGBM](https://github.com/clearml/clearml-serving/blob/main/examples/lightgbm/readme.md) - Iris dataset
+* [PyTorch](https://github.com/clearml/clearml-serving/blob/main/examples/pytorch/readme.md) - MNIST dataset
+* [TensorFlow/Keras](https://github.com/clearml/clearml-serving/blob/main/examples/keras/readme.md) - MNIST dataset
+* [Model Pipeline](https://github.com/clearml/clearml-serving/blob/main/examples/pipeline/readme.md) - Random data

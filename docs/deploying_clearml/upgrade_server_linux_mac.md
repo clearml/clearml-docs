@@ -7,7 +7,7 @@ title: Linux or macOS
 MongoDB major version was upgraded from `v5.x` to `6.x`. Please note that if your current ClearML Server version is older than 
 `v1.17` (where MongoDB `v5.x` was first used), you'll need to first upgrade to ClearML Server v1.17.
 
-First upgrade to ClearML Server v1.17 following the procedure below and using [this `docker-compose` file](https://github.com/allegroai/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
+First upgrade to ClearML Server v1.17 following the procedure below and using [this `docker-compose` file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
 you can proceed to upgrade to v2.x. 
 
 </Collapsible>
