@@ -2,6 +2,10 @@
 title: Working with Frames
 ---
 
+:::important ENTERPRISE FEATURE
+Hyper-Datasets are available under the ClearML Enterprise plan.
+:::
+
 View and edit SingleFrames in the Dataset page. After selecting a Hyper-Dataset version, the **Version Browser** shows a sample 
 of frames and enables viewing SingleFrames and FramesGroups, and editing SingleFrames, in the [frame viewer](#frame-viewer). 
 Before opening the frame viewer, you can filter the frames by applying [simple](webapp_datasets_versioning.md#simple-frame-filtering) or [advanced](webapp_datasets_versioning.md#advanced-frame-filtering) 

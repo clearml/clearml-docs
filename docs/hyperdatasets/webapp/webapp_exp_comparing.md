@@ -2,6 +2,10 @@
 title: Comparing Dataviews
 ---
 
+:::important ENTERPRISE FEATURE
+Dataviews are available under the ClearML Enterprise plan.
+:::
+
 In addition to [ClearML's comparison features](../../webapp/webapp_exp_comparing.md), the ClearML Enterprise WebApp 
 supports comparing input data selection criteria of task [Dataviews](../dataviews.md), enabling to easily locate, visualize, and analyze differences.
 

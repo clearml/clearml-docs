@@ -23,30 +23,8 @@ module.exports = {
                 'clearml_agent',
                 'clearml_agent/clearml_agent_dynamic_gpus',
                 'clearml_agent/clearml_agent_fractional_gpus',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Cloud Autoscaling',
-                    link: {type: 'doc', id: 'cloud_autoscaling/autoscaling_overview'},
-                    items: [
-                        'webapp/applications/apps_aws_autoscaler',
-                        'webapp/applications/apps_gcp_autoscaler',
-                    ]
-                },
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Remote IDE',
-                    link: {type: 'doc', id: 'remote_session'},
-                    items: [
-                        'apps/clearml_session',
-                        {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
-                        {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
-                        {type: 'ref', id: 'webapp/applications/apps_vscode'}
-                    ]
-                },
+                'cloud_autoscaling/autoscaling_overview',
+                'remote_session'
             ]
         },
         {
@@ -76,28 +54,17 @@ module.exports = {
 
             ]
         },
-/*
-
-        'integrations/storage',
-*/
     ],
     usecaseSidebar: [
-        'getting_started/main',
-        {
-            type: 'category',
-            collapsible: true,
-            label: 'Where do I start?',
-            items: [
-                'getting_started/auto_log_exp',
-                'getting_started/track_tasks',
-                'getting_started/reproduce_tasks',
-                'getting_started/logging_using_artifacts',
-                {'MLOps and LLMOps': [
+        /*'getting_started/main',*/
+        'getting_started/auto_log_exp',
+        'getting_started/track_tasks',
+        'getting_started/reproduce_tasks',
+        'getting_started/logging_using_artifacts',
+/*                {'MLOps and LLMOps': [
 
                     'getting_started/mlops/mlops_second_steps',
-                ]}
-            ],
-        },
+                ]}*/
         'hpo',
         {"Deploying Model Endpoints": [
             {
@@ -120,10 +87,11 @@ module.exports = {
                 ]
             }
         ]},
-        {"Launch Remote Development Environments": [
-            'webapp/applications/apps_ssh_session',
-            'webapp/applications/apps_jupyter_lab',
-            'webapp/applications/apps_vscode',
+        {"Launch a Remote IDE": [
+            'apps/clearml_session',
+            {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
+            {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
+            {type: 'ref', id: 'webapp/applications/apps_vscode'}
         ]},
         {
                     type: 'category',
@@ -178,6 +146,7 @@ module.exports = {
             {'ClearML Task': ['guides/clearml-task/clearml_task_tutorial']},
             {'ClearML Agent': ['guides/clearml_agent/executable_exp_containers', 'guides/clearml_agent/exp_environment_containers', 'guides/clearml_agent/reproduce_exp']},
             {'Datasets': ['clearml_data/data_management_examples/data_man_cifar_classification', 'clearml_data/data_management_examples/data_man_python']},
+            {id: 'hyperdatasets/code_examples', type: 'doc', label: 'Hyper-Datasets'},
             {'Distributed': ['guides/distributed/distributed_pytorch_example', 'guides/distributed/subprocess_example']},
             {'Docker': ['guides/docker/extra_docker_shell_script']},
             {'Frameworks': [
@@ -216,7 +185,6 @@ module.exports = {
             {'Offline Mode':['guides/set_offline']},
             {'Optimization': ['guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt']},
             {'Pipelines': ['guides/pipeline/pipeline_controller', 'guides/pipeline/pipeline_decorator', 'guides/pipeline/pipeline_functions']},
-
             {'Reporting': ['guides/reporting/explicit_reporting','guides/reporting/3d_plots_reporting', 'guides/reporting/artifacts', 'guides/reporting/using_artifacts', 'guides/reporting/clearml_logging_example', 'guides/reporting/html_reporting',
                 'guides/reporting/hyper_parameters', 'guides/reporting/image_reporting', 'guides/reporting/manual_matplotlib_reporting', 'guides/reporting/media_reporting',
                 'guides/reporting/model_config', 'guides/reporting/pandas_reporting', 'guides/reporting/plotly_reporting',
@@ -227,7 +195,7 @@ module.exports = {
 
     ],
     knowledgeSidebar: [
-        {'ClearML Fundamentals': [
+        {'Fundamentals': [
             'fundamentals/projects',
             'fundamentals/task',
             'fundamentals/hyperparameters',
@@ -244,6 +212,7 @@ module.exports = {
             items: [
                 'clearml_sdk/task_sdk',
                 'clearml_sdk/model_sdk',
+                'hyperdatasets/task',
                 'clearml_sdk/hpo_sdk',
                 'clearml_sdk/apiclient_sdk'
             ]
@@ -284,6 +253,33 @@ module.exports = {
                         'clearml_data/data_management_examples/data_man_python'
                     ]
                 },
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Hyper-Datasets',
+            link: {type: 'doc', id: 'hyperdatasets/overview'},
+            items: [
+                'hyperdatasets/dataset',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Frames',
+                    link: {type: 'doc', id: 'hyperdatasets/frames'},
+                    items: [
+                        'hyperdatasets/single_frames',
+                        'hyperdatasets/frame_groups',
+                        'hyperdatasets/sources',
+                        'hyperdatasets/annotations',
+                        'hyperdatasets/masks',
+                        'hyperdatasets/previews',
+                        'hyperdatasets/custom_metadata'
+                    ]
+                },
+                'hyperdatasets/dataviews',
             ]
         },
         {'Video Tutorials': [
@@ -504,11 +500,23 @@ module.exports = {
                         'webapp/webapp_model_viewing',
                         'webapp/webapp_model_comparing'
                     ]},
+                    {'Dataviews': [
+                        'hyperdatasets/webapp/webapp_dataviews',
+                        'hyperdatasets/webapp/webapp_exp_track_visual',
+                        'hyperdatasets/webapp/webapp_exp_modifying',
+                        'hyperdatasets/webapp/webapp_exp_comparing'
+                    ]},
                     'webapp/webapp_exp_sharing'
                 ]},
                 {'Datasets': [
                     'webapp/datasets/webapp_dataset_page',
                     'webapp/datasets/webapp_dataset_viewing'
+                ]},
+                {'Hyper-Datasets': [
+                    'hyperdatasets/webapp/webapp_datasets',
+                    'hyperdatasets/webapp/webapp_datasets_versioning',
+                    'hyperdatasets/webapp/webapp_datasets_frames',
+                    'hyperdatasets/webapp/webapp_annotator'
                 ]},
                 {'Pipelines': [
                     'webapp/pipelines/webapp_pipeline_page',
@@ -523,7 +531,20 @@ module.exports = {
                     collapsed: true,
                     label: 'Orchestration',
                     link: {type: 'doc', id: 'webapp/webapp_workers_queues'},
-                    items: ['webapp/webapp_orchestration_dash', 'webapp/resource_policies']
+                    items: [
+                        'webapp/webapp_orchestration_dash',
+                        {
+                            type: 'category',
+                            collapsible: true,
+                            collapsed: true,
+                            label: 'Autoscalers',
+                            items: [
+                                'webapp/applications/apps_aws_autoscaler',
+                                'webapp/applications/apps_gcp_autoscaler',
+                            ]
+                        },
+                        'webapp/resource_policies'
+                    ]
                 },
                 {
                     type: 'category',
@@ -574,38 +595,6 @@ module.exports = {
             ]
         },
     ],
-    hyperdatasetsSidebar: [
-        'hyperdatasets/overview',
-        {'Frames': [
-            'hyperdatasets/frames',
-            'hyperdatasets/single_frames',
-            'hyperdatasets/frame_groups',
-            'hyperdatasets/sources',
-            'hyperdatasets/annotations',
-            'hyperdatasets/masks',
-            'hyperdatasets/previews',
-            'hyperdatasets/custom_metadata'
-            ]},
-        'hyperdatasets/dataset',
-        'hyperdatasets/dataviews',
-        'hyperdatasets/task',
-        {'WebApp': [
-                {'Projects': [
-                        'hyperdatasets/webapp/webapp_dataviews', 'hyperdatasets/webapp/webapp_exp_track_visual',
-                        'hyperdatasets/webapp/webapp_exp_modifying', 'hyperdatasets/webapp/webapp_exp_comparing',
-                        ]
-                },
-                {'Datasets': [
-                    'hyperdatasets/webapp/webapp_datasets',
-                    'hyperdatasets/webapp/webapp_datasets_versioning',
-                    'hyperdatasets/webapp/webapp_datasets_frames'
-                    ]
-                },
-                'hyperdatasets/webapp/webapp_annotator'
-            ]
-        },
-        'hyperdatasets/code_examples'
-    ],
     installationSidebar: [
         'clearml_sdk/clearml_sdk_setup',
         {
@@ -622,6 +611,11 @@ module.exports = {
                 'clearml_agent/clearml_agent_docker',
                 'clearml_agent/clearml_agent_scheduling'
             ]
+        },
+        {
+            type: 'doc',
+            label: 'Configuring Client Storage Access',
+            id: 'integrations/storage',
         },
         {
             type: 'category',

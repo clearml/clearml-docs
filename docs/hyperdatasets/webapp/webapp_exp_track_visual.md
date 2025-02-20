@@ -2,6 +2,10 @@
 title: Task Dataviews
 ---
 
+:::important ENTERPRISE FEATURE
+Dataviews are available under the ClearML Enterprise plan.
+:::
+
 While a task is running, and any time after it finishes, results are tracked and can be visualized in the ClearML 
 Enterprise WebApp (UI). 
 

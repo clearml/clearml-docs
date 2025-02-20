@@ -101,7 +101,7 @@ module.exports = {
           position: 'left', // or 'right'
           items: [
             {
-              label: 'ClearMLopedia',
+              label: 'ClearML Basics',
               to: '/docs/fundamentals/projects',
             },
             {
