@@ -142,7 +142,7 @@ sessions:
   maxServices: 20
 ```
 
-For more information, see [Kubernetes](../clearml_agent/clearml_agent_deployment.md#kubernetes).
+For more information, see [Kubernetes](../clearml_agent/clearml_agent_deployment_k8s.md).
 
 
 ### Installing Requirements

@@ -69,6 +69,9 @@ module.exports = {
         'getting_started/remote_execution',
         'getting_started/building_pipelines',
         'hpo',
+        'clearml_agent/clearml_agent_docker_exec',
+        'clearml_agent/clearml_agent_base_docker',
+        'clearml_agent/clearml_agent_scheduling',
         {"Deploying Model Endpoints": [
             {
                 type: 'category',
@@ -598,12 +601,16 @@ module.exports = {
             label: 'ClearML Agent',
             items: [
                 'clearml_agent/clearml_agent_setup',
-                'clearml_agent/clearml_agent_deployment',
+                {
+                    'Deployment': [
+                        'clearml_agent/clearml_agent_deployment_bare_metal',
+                        'clearml_agent/clearml_agent_deployment_k8s',
+                        'clearml_agent/clearml_agent_deployment_slurm',
+                    ]
+                },
                 'clearml_agent/clearml_agent_execution_env',
                 'clearml_agent/clearml_agent_env_caching',
                 'clearml_agent/clearml_agent_services_mode',
-                'clearml_agent/clearml_agent_docker',
-                'clearml_agent/clearml_agent_scheduling'
             ]
         },
         {

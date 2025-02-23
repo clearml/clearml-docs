@@ -46,7 +46,7 @@ pip install clearml
    CLEARML_CONFIG_FILE = MyOtherClearML.conf
    ```
    
-   For more information about running tasks inside Docker containers, see [ClearML Agent Deployment](../clearml_agent/clearml_agent_deployment.md)
+   For more information about running tasks inside Docker containers, see [ClearML Agent Deployment](../clearml_agent/clearml_agent_deployment_bare_metal.md)
    and [ClearML Agent Reference](../clearml_agent/clearml_agent_ref.md).
     
    </Collapsible>
