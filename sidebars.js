@@ -12,7 +12,7 @@ module.exports = {
         {
             type: 'doc',
             id: 'overview',
-            label: 'ClearML at a glance',
+            label: 'ClearML at a Glance',
         },
         {
             type: 'category',
@@ -44,14 +44,18 @@ module.exports = {
             collapsible: true,
             label: 'GenAI App Engine',
             items: [
-                {
-                    'UI Launchers': [
-                        'webapp/applications/apps_gradio',
-                        'webapp/applications/apps_streamlit',
-                    ]
-                },
+                 {
+                     type: 'category',
+                     collapsible: true,
+                     label: 'Build Interactive Model Demos',
+                     link: {type: 'doc', id: 'build_interactive_models'},
+                     items: [
+                         'webapp/applications/apps_gradio',
+                         'webapp/applications/apps_streamlit',
+                     ],
+                 },
                 'deploying_models',
-
+                'custom_apps'
             ]
         },
     ],
@@ -92,7 +96,7 @@ module.exports = {
             {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
             {type: 'ref', id: 'webapp/applications/apps_vscode'}
         ]},
-        {"Building Interactive Model Interfaces": [
+        {"Building Interactive Model Demos": [
             {type: 'ref', id: 'webapp/applications/apps_gradio'},
             {type: 'ref', id: 'webapp/applications/apps_streamlit'},
         ]},
