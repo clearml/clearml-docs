@@ -62,6 +62,7 @@ module.exports = {
         'getting_started/reproduce_tasks',
         'getting_started/logging_using_artifacts',
         'getting_started/data_management',
+        'getting_started/building_pipelines',
         'hpo',
         {"Deploying Model Endpoints": [
             {
@@ -84,7 +85,7 @@ module.exports = {
                 ]
             }
         ]},
-        {"Launch a Remote IDE": [
+        {"Launching a Remote IDE": [
             'apps/clearml_session',
             {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
             {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
