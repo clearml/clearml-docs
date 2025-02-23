@@ -62,6 +62,7 @@ module.exports = {
         'getting_started/reproduce_tasks',
         'getting_started/logging_using_artifacts',
         'getting_started/data_management',
+        'getting_started/remote_execution',
         'getting_started/building_pipelines',
         'hpo',
         {"Deploying Model Endpoints": [
