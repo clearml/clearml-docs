@@ -12,7 +12,8 @@ products such as artifacts and parameters.
 When run, the controller will sequentially launch the pipeline steps. The pipeline logic and steps 
 can be executed locally, or on any machine using the [clearml-agent](../clearml_agent.md).
 
-![Pipeline UI](../img/pipelines_DAG.png)
+![Pipeline UI](../img/webapp_pipeline_DAG.png#light-mode-only)
+![Pipeline UI](../img/webapp_pipeline_DAG_dark.png#dark-mode-only)
 
 The [Pipeline Run](../webapp/pipelines/webapp_pipeline_viewing.md) page in the web UI displays the pipeline's structure 
 in terms of executed steps and their status, as well as the run's configuration parameters and output. See [pipeline UI](../webapp/pipelines/webapp_pipeline_page.md) 
