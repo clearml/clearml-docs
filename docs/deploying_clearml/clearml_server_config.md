@@ -391,7 +391,7 @@ Modify the following settings for the watchdog:
    ```
    
    :::tip
-   If the `apiserver.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
+   If the `services.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
    an alternate folder you configured), and input the modified configuration
    :::
         
