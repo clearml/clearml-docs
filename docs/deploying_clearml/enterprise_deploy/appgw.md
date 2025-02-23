@@ -33,7 +33,7 @@ their instances:
 The AI Application Gateway is provided through an additional component to the ClearML Server deployment: The ClearML Task Traffic Router.  
 If your ClearML Deployment does not have the Task Traffic Router properly installed, these application instances may not be accessible. 
 
-## Installation 
+#### Installation 
 
 The Task Traffic Router supports two deployment options:
 

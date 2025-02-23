@@ -1,6 +1,6 @@
 ---
 id: guidemain
-title: Examples
+title: ClearML Tutorials
 slug: /guides
 ---
 

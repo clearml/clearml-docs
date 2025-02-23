@@ -44,8 +44,9 @@ module.exports = {
             collapsible: true,
             label: 'GenAI App Engine',
             items: [
-                 {
-                     type: 'category',
+                 'deploying_clearml/enterprise_deploy/appgw',
+                {
+                    type: 'category',
                      collapsible: true,
                      label: 'Build Interactive Model Demos',
                      link: {type: 'doc', id: 'build_interactive_models'},
@@ -660,7 +661,6 @@ module.exports = {
             collapsible: true,
             collapsed: true,
             label: 'ClearML Application Gateway',
-            link: {type: 'doc', id: 'deploying_clearml/enterprise_deploy/appgw'},
             items: [
                 'deploying_clearml/enterprise_deploy/appgw_install_compose',
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
