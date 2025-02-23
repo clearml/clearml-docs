@@ -44,17 +44,8 @@ module.exports = {
             collapsible: true,
             label: 'GenAI App Engine',
             items: [
-                 'deploying_clearml/enterprise_deploy/appgw',
-                {
-                    type: 'category',
-                     collapsible: true,
-                     label: 'Build Interactive Model Demos',
-                     link: {type: 'doc', id: 'build_interactive_models'},
-                     items: [
-                         'webapp/applications/apps_gradio',
-                         'webapp/applications/apps_streamlit',
-                     ],
-                 },
+                'deploying_clearml/enterprise_deploy/appgw',
+                'build_interactive_models',
                 'deploying_models',
                 'custom_apps'
             ]
