@@ -238,7 +238,6 @@ module.exports = {
             items: [
                 'clearml_data/clearml_data_cli',
                 'clearml_data/clearml_data_sdk',
-                'clearml_data/best_practices',
                 {
                     type: 'category',
                     collapsible: true,
@@ -707,7 +706,12 @@ module.exports = {
                     type: 'doc',
                     label: 'MLOps and LLMOps',
                     id: 'getting_started/mlops/mlops_best_practices'
-                }
+                },
+                {
+                    type: 'doc',
+                    label: 'Data Management',
+                    id: 'clearml_data/best_practices'
+                },
             ],
         },
     ]
