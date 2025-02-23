@@ -1,5 +1,5 @@
 ---
-title: Explicit Deployment
+title: Manual Deployment
 ---
 
 ## Spinning Up an Agent

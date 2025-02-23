@@ -434,7 +434,6 @@ module.exports = {
         ]},
         {'CLI Tools': [
             'apps/clearml_task',
-            {type: 'ref', id: 'clearml_agent/clearml_agent_ref'},
             {type: 'ref', id: 'clearml_data/clearml_data_cli'},
             'apps/clearml_param_search',
             {type: 'ref', id: 'apps/clearml_session'},
