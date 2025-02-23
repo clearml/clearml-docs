@@ -75,7 +75,7 @@ Calling `get()` gets a deserialized pickled object.
 
 Check out the [artifacts retrieval](https://github.com/clearml/clearml/blob/master/examples/reporting/artifacts_retrieval.py) example code.
 
-### Models
+## Models
 
 Models are a special kind of artifact.
 Models created by popular frameworks (such as PyTorch, TensorFlow, Scikit-learn) are automatically logged by ClearML.
@@ -101,7 +101,7 @@ Check out model snapshots examples for [TensorFlow](https://github.com/clearml/c
 [Keras](https://github.com/clearml/clearml/blob/master/examples/frameworks/keras/keras_tensorboard.py),
 [scikit-learn](https://github.com/clearml/clearml/blob/master/examples/frameworks/scikit-learn/sklearn_joblib_example.py).
 
-#### Loading Models
+### Loading Models
 Loading a previously trained model is quite similar to loading artifacts.
 
 ```python
@@ -111,9 +111,11 @@ local_weights_path = last_snapshot.get_local_copy()
 ```
 
 Like before, you have to get the instance of the task training the original weights files, then you can query the task for its output models (a list of snapshots), and get the latest snapshot.
+
 :::note
 Using TensorFlow, the snapshots are stored in a folder, meaning the `local_weights_path` will point to a folder containing your requested snapshot.
 :::
+
 As with artifacts, all models are cached, meaning the next time you run this code, no model needs to be downloaded.
 Once one of the frameworks will load the weights file, the running task will be automatically updated with "Input Model" pointing directly to the original training Task's Model.
 This feature lets you easily get a full genealogy of every trained and used model by your system!

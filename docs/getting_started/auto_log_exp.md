@@ -1,5 +1,5 @@
 ---
-title: Auto-log Experiments 
+title: Auto-logging Experiments 
 ---
 
 In ClearML, experiments are organized as [Tasks](../fundamentals/task.md).

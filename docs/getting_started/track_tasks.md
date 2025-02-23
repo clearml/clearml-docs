@@ -1,5 +1,5 @@
 ---
-title: Track Tasks
+title: Tracking Tasks
 ---
 
 Every ClearML [task](../fundamentals/task.md) you create can be found in the **All Tasks** table and in its project's 

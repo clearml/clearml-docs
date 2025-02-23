@@ -61,10 +61,7 @@ module.exports = {
         'getting_started/track_tasks',
         'getting_started/reproduce_tasks',
         'getting_started/logging_using_artifacts',
-/*                {'MLOps and LLMOps': [
-
-                    'getting_started/mlops/mlops_second_steps',
-                ]}*/
+        'getting_started/data_management',
         'hpo',
         {"Deploying Model Endpoints": [
             {
