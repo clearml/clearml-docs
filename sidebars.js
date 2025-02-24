@@ -95,10 +95,7 @@ module.exports = {
             {type: 'ref', id: 'webapp/applications/apps_gradio'},
             {type: 'ref', id: 'webapp/applications/apps_streamlit'},
         ]},
-        {"Automating Task Execution": [
-            {type: 'ref', id: 'webapp/applications/apps_task_scheduler'},
-            {type: 'ref', id: 'webapp/applications/apps_trigger_manager'},
-        ]},
+        'getting_started/task_trigger_schedule',
         {"Monitoring Project Progress": [
             {type: 'ref', id: 'webapp/applications/apps_dashboard'},
         ]},
