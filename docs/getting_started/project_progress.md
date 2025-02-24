@@ -2,31 +2,42 @@
 title: Monitoring Project Progress
 ---
 
-The ClearML Project Dashboard provides a centralized view of project progress, task statuses, resource usage, and key 
-performance metrics. It helps teams monitor project health at a glance, ensuring efficient execution and management of ML workflows.
+ClearML provides a comprehensive set of monitoring tools to help effectively track and manage machine learning projects. 
+These tools offer both high-level overviews and detailed insights into task execution, resource 
+utilization, and project performance.
 
-Why Use the Project Dashboard?
+## Offerings
 
-Comprehensive Project Insights
+### Project Dashboard 
 
-The dashboard aggregates critical information, allowing users to:
+:::info Pro Plan Offering
+The Project Dashboard app is available under the ClearML Pro plan.
+:::
 
-Track task statuses and trends over time.
+The [**Project Dashboard**](../webapp/applications/apps_dashboard.md) UI application provides a centralized 
+view of project progress, task statuses, resource usage, and key performance metrics. It offers:
+* Comprehensive insights:
+  * Track task statuses and trends over time. 
+  * Monitor GPU utilization and worker activity. 
+  * Analyze performance metrics. 
+* Proactive alerts - By integrating with Slack, the Dashboard can notify teams of task failures 
+  and completions.
 
-Monitor GPU utilization and worker activity.
+For more information, see [Project Dashboard](../webapp/applications/apps_dashboard.md).
 
-Analyze key performance metrics for a project or workspace.
+![Project Dashboard](../img/apps_dashboard.png#light-mode-only)
+![Project Dashboard](../img/apps_dashboard_dark.png#dark-mode-only)
 
-Proactive Monitoring and Alerts
+### Project Overview
 
-By integrating with Slack, the Project Dashboard can notify teams of task failures and completions, reducing response times and improving operational efficiency.
+A project's **OVERVIEW** tab in the UI presents a general picture of a project: 
+* Metric Snapshot – A graphical representation of selected metric values across project tasks, offering a quick assessment of progress.
+* Task Status Tracking – When a single metric variant is selected for the snapshot, task status is color-coded (e.g., 
+Completed, Aborted, Published, Failed) for better visibility.
 
-Configurable Monitoring
+Use the Metric Snapshot to track project progress and identify trends in task performance.
 
-Users can customize the dashboard to monitor:
+For more information, see [Project Overview](../webapp/webapp_project_overview.md).
 
-A specific project, including its subprojects.
-
-The entire workspace for a holistic view.
-
-A chosen metric, tracking its highest or lowest values over time.
+![Project Overview](../img/webapp_project_overview.png#light-mode-only)
+![Project Overview](../img/webapp_project_overview_dark.png#dark-mode-only)
