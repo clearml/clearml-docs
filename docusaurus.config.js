@@ -85,16 +85,19 @@ module.exports = {
           to: '/docs/',
           label: 'Overview',
           position: 'left',
+          activeBaseRegex: '^/docs/$',
         },
         {
           to: '/docs/deploying_clearml/clearml_server',
           label: 'Setup',
-          position: 'left'
+          position: 'left',
+          activeBaseRegex: '^/docs/deploying_clearml/',
         },
         {
           to: '/docs/getting_started/auto_log_exp',
           label: 'Using ClearML',
-          position: 'left'
+          position: 'left',
+          activeBaseRegex: '^/docs/getting_started/',
         },
         {
           label: 'Developer Center',
@@ -103,30 +106,37 @@ module.exports = {
             {
               label: 'ClearML Basics',
               to: '/docs/fundamentals/projects',
+              activeBaseRegex: '^/docs/fundamentals/',
             },
             {
               label: 'References',
               to: '/docs/references/sdk/task',
+              activeBaseRegex: '^/docs/references/',
             },
             {
               label: 'Best Practices',
-              to: '/docs/getting_started/ds/best_practices'
+              to: '/docs/getting_started/ds/best_practices',
+              activeBaseRegex: '^/docs/best_practices/'
             },
             {
               label: 'Tutorials',
               to: '/docs/guides',
+              activeBaseRegex: '^/docs/guides',
             },
             {
               label: 'Integrations',
-              to: '/docs/integrations'
+              to: '/docs/integrations',
+              activeBaseRegex: '^/docs/integrations',
             },
             {
               label: 'FAQ',
               to: '/docs/faq',
+              activeBaseRegex: '^/docs/faq$',
             },
             {
               label: 'Release Notes',
               to: '/docs/release_notes/clearml_server/open_source/ver_2_0',
+              activeBaseRegex: '^/docs/release_notes/',
             },
 
           ],
