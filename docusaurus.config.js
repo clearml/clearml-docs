@@ -97,13 +97,13 @@ module.exports = {
           to: '/docs/getting_started/auto_log_exp',
           label: 'Using ClearML',
           position: 'left',
-          activeBaseRegex: '^/docs/latest/docs/(getting_started(?!/video_tutorials(/.*)?)|clearml_serving)(/.*)?$',
+          activeBaseRegex: '^/docs/latest/docs/(getting_started(?!/video_tutorials(/.*)?)|clearml_serving|apps/clearml_session)(/.*)?$',
         },
         {
           label: 'Developer Center',
           position: 'left', // or 'right'
           to: '/docs/fundamentals/projects',
-          activeBaseRegex: '^/docs/latest/docs/(fundamentals(?!/agents_and_queues)(/.*)?|getting_started/video_tutorials(/.*)?|clearml_sdk(?!/clearml_sdk_setup)(/.*)?|pipelines(/.*)?|clearml_data(/.*)?|hyperdatasets(/webapp)(/.*)?|references(/.*)?|webapp(/.*)?|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)(/.*)?|configs/(clearml_conf|env_vars)(/.*)?|apps/(clearml_task|clearml_param_search)(/.*)?|best_practices(/.*)?|guides(/.*)?|integrations(/.*)?|faq|release_notes(/.*)?)$',
+          activeBaseRegex: '^/docs/latest/docs/(fundamentals(?!/agents_and_queues)(/.*)?|configs/configuring_clearml|getting_started/video_tutorials(/.*)?|clearml_sdk(?!/clearml_sdk_setup)(/.*)?|pipelines(/.*)?|hyperdatasets(/.*)?|clearml_data(/.*)?|hyperdatasets(/webapp)(/.*)?|references(/.*)?|webapp(/.*)?|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)(/.*)?|configs/(clearml_conf|env_vars)(/.*)?|apps/(clearml_task|clearml_param_search)(/.*)?|best_practices(/.*)?|guides(/.*)?|integrations(/.*)?|faq|release_notes(/.*)?)$',
           activeClassName: 'navbar__link--active',
           items: [
             {
@@ -129,7 +129,7 @@ module.exports = {
             {
               label: 'Integrations',
               to: '/docs/integrations',
-              activeBaseRegex: '^/docs/latest/docs/integrations',
+              activeBaseRegex: '^/docs/latest/docs/integrations(?!/storage)',
             },
             {
               label: 'FAQ',
