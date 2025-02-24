@@ -96,9 +96,7 @@ module.exports = {
             {type: 'ref', id: 'webapp/applications/apps_streamlit'},
         ]},
         'getting_started/task_trigger_schedule',
-        {"Monitoring Project Progress": [
-            {type: 'ref', id: 'webapp/applications/apps_dashboard'},
-        ]},
+        'getting_started/project_progress',
     ],
     integrationsSidebar: [
             {
