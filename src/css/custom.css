@@ -46,7 +46,7 @@ html {
   --ifm-code-padding-vertical: 0.2rem;
 }
 
-html[data-theme="dark"] {
+[data-theme=dark]:root {
   --ifm-background-color:          #040506; /* body bg */
   --ifm-header-background-color:   #101418; /* section 1 */
   --ifm-footer-background-color:   #101418; /* section 1 */
@@ -54,11 +54,15 @@ html[data-theme="dark"] {
   --ifm-footer-link-hover-color:   #ffffff; /* specific footer link hover color */
   --ifm-dropdown-background-color: #242D37; /* section 2 */
   --ifm-table-stripe-background:   #101418; /* section 1 */
-  --ifm-toc-background-color:      #242D37; /* section 2 */
   --ifm-link-color:                #6AD6C0; /* specific link color */
   --ifm-link-hover-color:          #AEFDED; /* specific link hover color */
-  --ifm-font-color-base:           #E5E5E5 /* body text */
+  --ifm-font-color-base:           #E5E5E5; /* body text */
+  --ifm-hr-background-color:       #242D37; /* section 1 */
+  --ifm-toc-link-color:            #E5E5E5; /* body text */
+  --ifm-toc-background-color:      #242D37; /* section 2 */
+  --ifm-code-background:           #242D37; /* section 2 */
 }
+
 
 @media (min-width: 1400px) {
   /* Expand sidebar width above 1400px */
@@ -468,7 +472,6 @@ html[data-theme="light"] .table-of-contents {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1) inset;
 }
 html[data-theme="dark"] .table-of-contents {
-  background-color: var(--ifm-toc-background-color);
   box-shadow: 0 0 0 2px rgba(0,0,0,0.4) inset;
 }
 html[data-theme="dark"] a.table-of-contents__link--active {
@@ -491,9 +494,6 @@ a.table-of-contents__link--active:before {
   border-bottom: 6px solid transparent;
   border-left: 6px solid var(--ifm-color-primary);
   transform: translateY(5px);
-}
-html[data-theme="light"] .table-of-contents__link:not(.table-of-contents__link--active) {
-  color: rgba(0,0,0,0.9);
 }
 
 /* toc: show "..." inside code tag */
@@ -782,16 +782,6 @@ html[data-theme="dark"] h4 {
 }
 html[data-theme="dark"] h4 a.hash-link {
   color: #c7cdd2;
-}
-
-
-
-/* <hr> */
-.markdown hr {
-  border-bottom: none;
-}
-html[data-theme="dark"] .markdown hr {
-  border-color: rgba(255,255,255,0.1);
 }
 
 
