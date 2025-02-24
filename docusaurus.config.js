@@ -85,58 +85,61 @@ module.exports = {
           to: '/docs/',
           label: 'Overview',
           position: 'left',
-          activeBaseRegex: '^/docs/$',
+          activeBaseRegex: '^/docs/latest/docs/(fundamentals/agents_and_queues|hyper_datasets|clearml_agent(/(clearml_agent_dynamic_gpus|clearml_agent_fractional_gpus)?|)?|cloud_autoscaling/autoscaling_overview|remote_session|model_registry|deploying_clearml/enterprise_deploy/appgw|build_interactive_models|deploying_models|custom_apps)?$',
         },
         {
-          to: '/docs/deploying_clearml/clearml_server',
+          to: '/docs/clearml_sdk/clearml_sdk_setup',
           label: 'Setup',
           position: 'left',
-          activeBaseRegex: '^/docs/deploying_clearml/',
+          activeBaseRegex: '^/docs/latest/docs/(deploying_clearml(?!/enterprise_deploy/appgw(/.*)?$)(/.*)?$|clearml_sdk/clearml_sdk_setup|user_management(/.*)?|clearml_agent/(clearml_agent_setup|clearml_agent_deployment_bare_metal|clearml_agent_deployment_k8s|clearml_agent_deployment_slurm|clearml_agent_execution_env|clearml_agent_env_caching|clearml_agent_services_mode)|integrations/storage)/?$',
         },
         {
           to: '/docs/getting_started/auto_log_exp',
           label: 'Using ClearML',
           position: 'left',
-          activeBaseRegex: '^/docs/getting_started/',
+          activeBaseRegex: '^/docs/latest/docs/(getting_started(?!/video_tutorials(/.*)?)|clearml_serving)(/.*)?$',
         },
         {
           label: 'Developer Center',
           position: 'left', // or 'right'
+          to: '/docs/fundamentals/projects',
+          activeBaseRegex: '^/docs/latest/docs/(fundamentals(?!/agents_and_queues)(/.*)?|getting_started/video_tutorials(/.*)?|clearml_sdk(?!/clearml_sdk_setup)(/.*)?|pipelines(/.*)?|clearml_data(/.*)?|hyperdatasets(/webapp)(/.*)?|references(/.*)?|webapp(/.*)?|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)(/.*)?|configs/(clearml_conf|env_vars)(/.*)?|apps/(clearml_task|clearml_param_search)(/.*)?|best_practices(/.*)?|guides(/.*)?|integrations(/.*)?|faq|release_notes(/.*)?)$',
+          activeClassName: 'navbar__link--active',
           items: [
             {
               label: 'ClearML Basics',
               to: '/docs/fundamentals/projects',
-              activeBaseRegex: '^/docs/fundamentals/',
+              activeBaseRegex: '^/docs/latest/docs/(fundamentals|getting_started/video_tutorials|clearml_sdk(/(?!clearml_sdk_setup).*|(?=/))?|pipelines|clearml_data|hyperdatasets/(?!webapp/).*)(/.*)?$',
             },
             {
               label: 'References',
               to: '/docs/references/sdk/task',
-              activeBaseRegex: '^/docs/references/',
+              activeBaseRegex: '^/docs/latest/docs/(references/|webapp/.*|hyperdatasets/webapp/.*|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)|configs/(clearml_conf|env_vars)|apps/(clearml_task|clearml_param_search))(/.*)?$',
             },
             {
               label: 'Best Practices',
-              to: '/docs/getting_started/ds/best_practices',
-              activeBaseRegex: '^/docs/best_practices/'
+              to: 'docs/best_practices/data_scientist_best_practices',
+              activeBaseRegex: '^/docs/latest/docs/best_practices/'
             },
             {
               label: 'Tutorials',
               to: '/docs/guides',
-              activeBaseRegex: '^/docs/guides',
+              activeBaseRegex: '^/docs/latest/docs/guides',
             },
             {
               label: 'Integrations',
               to: '/docs/integrations',
-              activeBaseRegex: '^/docs/integrations',
+              activeBaseRegex: '^/docs/latest/docs/integrations',
             },
             {
               label: 'FAQ',
               to: '/docs/faq',
-              activeBaseRegex: '^/docs/faq$',
+              activeBaseRegex: '^/docs/latest/docs/faq$',
             },
             {
               label: 'Release Notes',
               to: '/docs/release_notes/clearml_server/open_source/ver_2_0',
-              activeBaseRegex: '^/docs/release_notes/',
+              activeBaseRegex: '^/docs/latest/docs/release_notes/',
             },
 
           ],
@@ -144,7 +147,7 @@ module.exports = {
         {
           label: 'Community Resources',
           position: 'left', // or 'right'
-          to: '/docs/community',
+          to: '/docs/latest/docs/community',
         },
         {
           href: 'https://joinslack.clear.ml',
