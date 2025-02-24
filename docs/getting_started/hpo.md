@@ -13,7 +13,7 @@ solutions to boost hyperparameter optimization efficiency.
 
 ## Workflow
 
-![Hyperparameter optimization diagram](img/hpo_diagram.png)
+![Hyperparameter optimization diagram](../img/hpo_diagram.png)
 
 The preceding diagram demonstrates the typical flow of hyperparameter optimization where the parameters of a base task are optimized: 
 
@@ -27,8 +27,8 @@ The preceding diagram demonstrates the typical flow of hyperparameter optimizati
 ## ClearML Solutions 
 
 ClearML offers three solutions for hyperparameter optimization:
-* [GUI application](webapp/applications/apps_hpo.md): The Hyperparameter Optimization app allows you to run and manage the optimization tasks 
+* [GUI application](../webapp/applications/apps_hpo.md): The Hyperparameter Optimization app allows you to run and manage the optimization tasks 
   directly from the web interface--no code necessary (available under the ClearML Pro plan).
-* [Command-Line Interface (CLI)](apps/clearml_param_search.md): The `clearml-param-search` CLI tool enables you to configure and launch the optimization process from your terminal.
-* [Python Interface](clearml_sdk/hpo_sdk.md): The `HyperParameterOptimizer` class within the ClearML SDK allows you to 
+* [Command-Line Interface (CLI)](../apps/clearml_param_search.md): The `clearml-param-search` CLI tool enables you to configure and launch the optimization process from your terminal.
+* [Python Interface](../clearml_sdk/hpo_sdk.md): The `HyperParameterOptimizer` class within the ClearML SDK allows you to 
   configure and launch optimization tasks, and seamlessly integrate them in your existing model training tasks. 

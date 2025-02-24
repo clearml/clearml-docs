@@ -11,7 +11,7 @@ line arguments, Python module dependencies, and a requirements.txt file!
 
 ## What Is ClearML Task For?
 * Launching off-the-shelf code on a remote machine with dedicated resources (e.g. GPU)
-* Running [hyperparameter optimization](../hpo.md) on a codebase that is still not in ClearML
+* Running [hyperparameter optimization](../getting_started/hpo.md) on a codebase that is still not in ClearML
 * Creating a pipeline from an assortment of scripts, that you need to turn into ClearML tasks
 * Running some code on a remote machine, either using an on-prem cluster or on the cloud
 
