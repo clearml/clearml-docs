@@ -13,7 +13,7 @@ The following page goes over how to set up and upgrade `clearml-serving`.
 ## Initial Setup
 1. Set up your [ClearML Server](../deploying_clearml/clearml_server.md) or use the 
   [free hosted service](https://app.clear.ml)
-1. Connect `clearml` SDK to the server, see instructions [here](../getting_started/ds/ds_first_steps.md#install-clearml)
+1. Connect `clearml` SDK to the server, see instructions [here](../clearml_sdk/clearml_sdk_setup#install-clearml)
 
 1. Install clearml-serving CLI:
    

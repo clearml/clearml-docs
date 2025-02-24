@@ -3,7 +3,7 @@ title: CatBoost
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
+If you are not already using ClearML, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup) for setup 
 instructions.
 :::
 
@@ -117,5 +117,5 @@ task.execute_remotely(queue_name='default', exit_process=True)
 
 ## Hyperparameter Optimization
 Use ClearML's [`HyperParameterOptimizer`](../references/sdk/hpo_optimization_hyperparameteroptimizer.md) class to find 
-the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../fundamentals/hpo.md) 
+the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../hpo.md) 
 for more information.

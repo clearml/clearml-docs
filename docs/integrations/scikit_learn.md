@@ -3,9 +3,9 @@ title: scikit-learn
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 ClearML integrates seamlessly with [scikit-learn](https://scikit-learn.org/stable/), automatically logging models created
 with `joblib`.

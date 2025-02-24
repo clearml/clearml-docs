@@ -7,7 +7,7 @@ on a remote or local machine, from a remote repository and your local machine.
 
 ### Prerequisites
 
-- [`clearml`](../../getting_started/ds/ds_first_steps.md) Python package installed and configured
+- [`clearml`](../../clearml_sdk/clearml_sdk_setup) Python package installed and configured
 - [`clearml-agent`](../../clearml_agent/clearml_agent_setup.md#installation) running on at least one machine (to execute the task), configured to listen to `default` queue 
 
 ### Executing Code from a Remote Repository 

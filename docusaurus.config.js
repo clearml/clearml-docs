@@ -82,71 +82,59 @@ module.exports = {
       },
       items: [
         {
-          to: '/docs',
-          label: 'Docs',
+          to: '/docs/',
+          label: 'Overview',
           position: 'left',
-          activeBaseRegex: '/docs/latest/docs$|/docs/latest/docs/(?!hyperdatasets|guides|references|faq|clearml_agent/clearml_agent_ref|clearml_agent/clearml_agent_env_var).*',
         },
         {
-          to:'/docs/hyperdatasets/overview',
-          label: 'Hyper-Datasets',
-          position: 'left',
-          activeBaseRegex: '/docs/latest/docs/hyperdatasets.*',
+          to: '/docs/deploying_clearml/clearml_server',
+          label: 'Setup',
+          position: 'left'
         },
-        // {to: 'tutorials', label: 'Tutorials', position: 'left'},
-        // Please keep GitHub link to the right for consistency.
         {
-          to: '/docs/guides',
-          label: 'Examples',
-          position: 'left',
-          activeBaseRegex: '/docs/latest/docs/guides.*',
+          to: '/docs/getting_started/auto_log_exp',
+          label: 'Using ClearML',
+          position: 'left'
         },
-        //{to: '/docs/references', label: 'API', position: 'left'},
         {
-          label: 'References',
+          label: 'Developer Center',
           position: 'left', // or 'right'
-          to: '/docs/references/sdk/task',
-          activeBaseRegex: '/docs/latest/docs/references/sdk.*|/docs/latest/docs/clearml_agent/clearml_agent_ref|/docs/latest/docs/clearml_agent/clearml_agent_env_var|/docs/latest/docs/references/api.*|/docs/latest/docs/references/hyperdataset.*|/docs/latest/docs/release_notes.*|/docs/latest/docs/community',
-          activeClassName: 'navbar__link--active',
           items: [
             {
-              label: 'SDK',
+              label: 'ClearML Basics',
+              to: '/docs/fundamentals/projects',
+            },
+            {
+              label: 'References',
               to: '/docs/references/sdk/task',
-              activeBaseRegex: '/docs/latest/docs/references/sdk.*',
             },
             {
-              label: 'ClearML Agent',
-              to: '/docs/clearml_agent/clearml_agent_ref',
-              activeBaseRegex: '/docs/latest/docs/clearml_agent/clearml_agent_ref|/docs/latest/docs/clearml_agent/clearml_agent_env_var',
+              label: 'Best Practices',
+              to: '/docs/getting_started/ds/best_practices'
             },
             {
-              label: 'Server API',
-              to: '/docs/references/api',
-              activeBaseRegex: '/docs/latest/docs/references/api.*'
+              label: 'Tutorials',
+              to: '/docs/guides',
             },
             {
-              label: 'Hyper-Datasets',
-              to: '/docs/references/hyperdataset',
-              activeBaseRegex: '/docs/latest/docs/references/hyperdataset.*'
+              label: 'Integrations',
+              to: '/docs/integrations'
             },
-
+            {
+              label: 'FAQ',
+              to: '/docs/faq',
+            },
             {
               label: 'Release Notes',
               to: '/docs/release_notes/clearml_server/open_source/ver_2_0',
-              activeBaseRegex: '/docs/latest/docs/release_notes.*',
             },
-            {
-              label: 'Community Resources',
-              to: '/docs/community',
-              activeBaseRegex: '/docs/latest/docs/community',
-            }
+
           ],
         },
         {
-          label: 'FAQ',
+          label: 'Community Resources',
           position: 'left', // or 'right'
-          to: '/docs/faq',
-          activeBaseRegex: '/docs/latest/docs/faq',
+          to: '/docs/community',
         },
         {
           href: 'https://joinslack.clear.ml',

@@ -3,9 +3,9 @@ title: jsonargparse
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 
 [jsonargparse](https://github.com/omni-us/jsonargparse) is a Python package for creating command-line interfaces. 

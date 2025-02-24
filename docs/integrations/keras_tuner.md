@@ -3,9 +3,9 @@ title: Keras Tuner
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [Keras Tuner](https://www.tensorflow.org/tutorials/keras/keras_tuner) is a library that helps you pick the optimal set 
 of hyperparameters for training your models. ClearML integrates seamlessly with `kerastuner` and automatically logs 

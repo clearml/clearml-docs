@@ -21,7 +21,7 @@ clearml-agent daemon --dynamic-gpus --gpus 0-2 --queue dual_gpus=2 single_gpu=1 
 Make sure to include the `--docker` flag, as dynamic GPU allocation is only supported in [Docker Mode](clearml_agent_execution_env.md#docker-mode).
 :::
 
-## Example
+#### Example
 
 Let's say a server has three queues:
 * `dual_gpu`

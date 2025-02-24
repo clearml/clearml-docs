@@ -1,6 +1,7 @@
 ---
-title: Scheduling Working Hours
+title: Managing Agent Work Schedules
 ---
+
 :::important Enterprise Feature
 This feature is available under the ClearML Enterprise plan.
 :::

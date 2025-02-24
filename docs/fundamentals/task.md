@@ -124,7 +124,7 @@ Available task types are:
 * *inference* - Model inference job (e.g. offline / batch model execution)
 * *controller* - A task that lays out the logic for other tasks' interactions, manual or automatic (e.g. a pipeline 
   controller) 
-* *optimizer* - A specific type of controller for optimization tasks (e.g. [hyperparameter optimization](hpo.md))
+* *optimizer* - A specific type of controller for optimization tasks (e.g. [hyperparameter optimization](../hpo.md))
 * *service* - Long lasting or recurring service (e.g. server cleanup, auto ingress, sync services etc.)
 * *monitor* - A specific type of service for monitoring
 * *application* - A task implementing custom applicative logic, like [autoscaler](../guides/services/aws_autoscaler.md) 
