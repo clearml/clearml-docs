@@ -91,5 +91,5 @@ The ClearML Agent executing the task will use the new values to [override any ha
 
 ## Hyperparameter Optimization
 Use ClearML's [`HyperParameterOptimizer`](../references/sdk/hpo_optimization_hyperparameteroptimizer.md) class to find 
-the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../hpo.md) 
+the hyperparameter values that yield the best performing models. See [Hyperparameter Optimization](../getting_started/hpo.md) 
 for more information.

@@ -24,12 +24,12 @@ During early stages of model development, while code is still being modified hea
 These setups can be folded into each other and that's great! If you have a GPU machine for each researcher, that's awesome! 
 The goal of this phase is to get a code, dataset, and environment set up, so you can start digging to find the best model!
 
-- [ClearML SDK](../../clearml_sdk/clearml_sdk.md) should be integrated into your code (check out [ClearML Setup](../../clearml_sdk/clearml_sdk_setup.md)). 
+- [ClearML SDK](../clearml_sdk/clearml_sdk.md) should be integrated into your code (check out [ClearML Setup](../clearml_sdk/clearml_sdk_setup.md)). 
   This helps visualizing the results and tracking progress.
-- [ClearML Agent](../../clearml_agent.md) helps moving your work to other machines without the hassle of rebuilding the environment every time, 
+- [ClearML Agent](../clearml_agent.md) helps moving your work to other machines without the hassle of rebuilding the environment every time, 
   while also creating an easy queue interface that easily lets you drop your tasks to be executed one by one
   (great for ensuring that the GPUs are churning during the weekend).
-- [ClearML Session](../../apps/clearml_session.md) helps with developing on remote machines, in the same way that you'd develop on your local laptop!
+- [ClearML Session](../apps/clearml_session.md) helps with developing on remote machines, in the same way that you'd develop on your local laptop!
 
 ## Train Remotely
 
@@ -43,12 +43,12 @@ yields the best performing model for your task!
 
 Visualization and comparison dashboards keep your sanity at bay! At this stage you usually have a docker container with all the binaries 
 that you need. 
-- [ClearML SDK](../../clearml_sdk/clearml_sdk.md) ensures that all the metrics, parameters and Models are automatically logged and can later be 
-  accessed, [compared](../../webapp/webapp_exp_comparing.md) and [tracked](../../webapp/webapp_exp_track_visual.md).
-- [ClearML Agent](../../clearml_agent.md) does the heavy lifting. It reproduces the execution environment, clones your code, 
+- [ClearML SDK](../clearml_sdk/clearml_sdk.md) ensures that all the metrics, parameters and Models are automatically logged and can later be 
+  accessed, [compared](../webapp/webapp_exp_comparing.md) and [tracked](../webapp/webapp_exp_track_visual.md).
+- [ClearML Agent](../clearml_agent.md) does the heavy lifting. It reproduces the execution environment, clones your code, 
   applies code patches, manages parameters (including overriding them on the fly), executes the code, and queues multiple tasks.
   It can even [build](../../clearml_agent/clearml_agent_docker_exec#exporting-a-task-into-a-standalone-docker-container) the docker container for you!  
-- [ClearML Pipelines](../../pipelines/pipelines.md) ensure that steps run in the same order, 
+- [ClearML Pipelines](../pipelines/pipelines.md) ensure that steps run in the same order, 
   programmatically chaining tasks together, while giving an overview of the execution pipeline's status.
 
 **Your entire environment should magically be able to run on any machine, without you working hard.** 

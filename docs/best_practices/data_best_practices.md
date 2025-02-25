@@ -56,5 +56,5 @@ serves as a dataset's single point of truth, you can schedule a script which use
 will update the dataset based on the modifications made to the folder. This way, there is no need to manually modify a dataset. 
 This functionality will also track the modifications made to a folder.
 
-See the sync function with the [CLI](clearml_data_cli.md#sync) or [SDK](clearml_data_sdk.md#syncing-local-storage)
+See the sync function with the [CLI](../clearml_data/clearml_data_cli.md#sync) or [SDK](../clearml_data/clearml_data_sdk.md#syncing-local-storage)
 interface. 
