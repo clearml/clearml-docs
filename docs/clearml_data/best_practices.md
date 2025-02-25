@@ -9,7 +9,8 @@ See [Hyper-Datasets](../hyperdatasets/overview.md) for ClearML's advanced querya
 
 The following are some recommendations for using ClearML Data. 
 
-![Dataset UI gif](../img/gif/dataset.gif)
+![Dataset UI gif](../img/gif/dataset.gif#light-mode-only)
+![Dataset UI gif](../img/gif/dataset_dark.gif#dark-mode-only)
 
 ## Versioning Datasets
 

@@ -166,4 +166,5 @@ with the new configuration on a remote machine:
 
 The ClearML Agent executing the task will use the new values to [override any hard coded values](../clearml_agent.md). 
 
-![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)
