@@ -85,7 +85,7 @@ pip install clearml
    CLEARML setup completed successfully.
    ```
    
-Now you can integrate ClearML into your code! Continue [here](../getting_started/auto_log_exp.md).
+Now you can integrate ClearML into your code! Continue [here](../clearml_sdk/clearml_sdk_setup#auto-log-experiment).
 
 ### Jupyter Notebook
 To use ClearML with Jupyter Notebook, you need to configure ClearML Server access credentials for your notebook.

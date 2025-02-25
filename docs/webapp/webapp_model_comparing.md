@@ -46,7 +46,8 @@ models update. The Enterprise Plan and Hosted Service support embedding resource
 The comparison tabs provides the following views:
 * [Side-by-side textual comparison](#side-by-side-textual-comparison)
 * [Tabular scalar comparison](#tabular-scalar-comparison)
-* [Plot comparison](#plot-comparison) 
+* [Merged plot comparison](#plot-comparison) 
+* [Side-by-side graphic comparison](#graphic-comparison) 
 
 
 ### Side-by-side Textual Comparison
