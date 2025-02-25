@@ -25,7 +25,7 @@ jobs:
         env:
           INCOMING_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
         with:
-          text: Link Checker failure in github.com/allegroai/clearl-docs
+          text: Link Checker failure in github.com/clearml/clearl-docs
           blocks: |
             [
               {"type": "section", "text": {"type": "mrkdwn", "text": "Testing!"}}

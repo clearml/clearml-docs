@@ -28,4 +28,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          grep -r -Eoh "(https?://github.com/[a-zA-Z0-9./?=_%:-]*)" $GITHUB_WORKSPACE | sort -u | grep -v "://github.com/allegroai/clearml-docs" | xargs -n 1 sh -c 'curl --output /dev/null --silent --head --fail $0 || curl --output /dev/null --silent --head --fail --write-out "%{url_effective}: %{http_code}\n" $0'
+          grep -r -Eoh "(https?://github.com/[a-zA-Z0-9./?=_%:-]*)" $GITHUB_WORKSPACE | sort -u | grep -v "://github.com/clearml/clearml-docs" | xargs -n 1 sh -c 'curl --output /dev/null --silent --head --fail $0 || curl --output /dev/null --silent --head --fail --write-out "%{url_effective}: %{http_code}\n" $0'
