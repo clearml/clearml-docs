@@ -652,6 +652,8 @@ module.exports = {
             ]
         },
         'deploying_clearml/enterprise_deploy/delete_tenant',
+        'deploying_clearml/enterprise_deploy/import_projects',
+        'deploying_clearml/enterprise_deploy/change_artifact_links',
         {
             'Enterprise Applications': [
                 'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
