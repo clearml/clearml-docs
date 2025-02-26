@@ -25,7 +25,7 @@ version contents ready to be updated.
 Organize the datasets according to use-cases and use tags. This makes managing multiple datasets and 
 accessing the most updated datasets for different use-cases easier. 
 
-Like any ClearML tasks, datasets can be organized into [projects (and subprojects)](../fundamentals/projects.md#creating-projects-and-subprojects). 
+Like any ClearML tasks, datasets can be organized into [projects (and subprojects)](../fundamentals/projects.md#creating-subprojects). 
 Additionally, when creating a dataset, tags can be applied to the dataset, which will make searching for the dataset easier.
 
 Organizing your datasets into projects by use-case makes it easier to access the most recent dataset version for that use-case. 
