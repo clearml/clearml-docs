@@ -71,7 +71,7 @@ and password: `--elastic-user <es_user> --elastic-password <es_pass>`
 
 The script fixes the links in MongoDB, and outputs `cURL` commands for updating the links in ElasticSearch.
 
-## Fixing the ElasticSearch links
+## Fixing the ElasticSearch Links
 
 Copy the `cURL` commands printed by the script run in the previous stage, and run them one after the other. Make sure to 
 inspect that a "success" result was returned from each command. Depending on the amount of the data in the ElasticSearch, 
