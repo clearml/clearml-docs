@@ -235,6 +235,6 @@ Note that this is not required if the new file server is replacing the old file 
 exact address.
 
 Once the projects' data has been copied to the target server, and the projects themselves were imported, see 
-[Changing CleaML Artifacts Links](change_artifact_links.md) for information on how to fix the URLs.  
+[Changing ClearML Artifacts Links](change_artifact_links.md) for information on how to fix the URLs.  
 
 
