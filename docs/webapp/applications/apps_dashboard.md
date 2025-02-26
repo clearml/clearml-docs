@@ -28,13 +28,13 @@ of the chosen metric over time.
   * Monitored Metric - Series - Metric series (variant) to track
   * Monitored Metric - Trend - Choose whether to track the monitored metric's highest or lowest values
 * **Slack Notification** (optional) - Set up Slack integration for notifications of task failure. Select the 
-`Alert on completed experiments` under `Additional options` to set up alerts for task completions.
+`Alert on completed tasks` under `Additional options` to set up alerts for task completions.
   * API Token - Slack workspace access token 
   * Channel Name - Slack channel to which task failure alerts will be posted
   * Alert Iteration Threshold - Minimum number of task iterations to trigger Slack alerts (tasks that fail prior to the threshold will be ignored)
 * **Additional options**
-  * Track manual (non agent-run) experiments as well - Select to include in the dashboard tasks that were not executed by an agent
-  * Alert on completed experiments - Select to include completed tasks in alerts: in the dashboard's Task Alerts section and in Slack Alerts.
+  * Track manual (non agent-run) tasks as well - Select to include in the dashboard tasks that were not executed by an agent
+  * Alert on completed tasks - Select to include completed tasks in alerts: in the dashboard's Task Alerts section and in Slack Alerts.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create 
   a new instance with the same configuration.
   
@@ -50,7 +50,7 @@ of the chosen metric over time.
 Once a project dashboard instance is launched, its dashboard displays the following information about a project:  
 * Task Status Summary - Percentages of Tasks by status
 * Task Type Summary - Percentages of local tasks vs. agent tasks
-* Experiments Summary - Number of tasks by status over time
+* Task Summary - Number of tasks by status over time
 * Monitoring - GPU utilization and GPU memory usage
 * Metric Monitoring - An aggregated view of the values of a metric over time
 * Project's Active Workers - Number of workers currently executing tasks in the monitored project

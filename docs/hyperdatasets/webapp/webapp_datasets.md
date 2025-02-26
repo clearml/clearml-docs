@@ -2,6 +2,10 @@
 title: Hyper-Datasets Page
 ---
 
+:::important ENTERPRISE FEATURE
+Hyper-Datasets are available under the ClearML Enterprise plan.
+:::
+
 Use the Hyper-Datasets Page to navigate between and manage hyper-datasets. 
 
 You can view the Hyper-Datasets page in Project view <img src="/docs/latest/icons/ico-project-view.svg" alt="Project view" className="icon size-md" /> 

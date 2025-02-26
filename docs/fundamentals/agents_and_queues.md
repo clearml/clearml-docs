@@ -17,7 +17,7 @@ from installing required packages to setting environment variables,
 all leading to executing the code (supporting both virtual environment or flexible docker container configurations).
 
 The agent also supports overriding parameter values on-the-fly without code modification, thus enabling no-code experimentation (this is also the foundation on which 
-ClearML [Hyperparameter Optimization](hpo.md) is implemented).  
+ClearML [Hyperparameter Optimization](../getting_started/hpo.md) is implemented).  
 
 An agent can be associated with specific GPUs, enabling workload distribution. For example, on a machine with 8 GPUs you 
 can allocate several GPUs to an agent and use the rest for a different workload, even through another agent (see [Dynamic GPU Allocation](../clearml_agent/clearml_agent_dynamic_gpus.md)).   

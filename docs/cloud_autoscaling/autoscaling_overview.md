@@ -71,7 +71,7 @@ execute the tasks in the GPU queue.
 #### Docker
 Every task a cloud instance pulls will be run inside a docker container. When setting up an autoscaler app instance, 
 you can specify a default container to run the tasks inside. If the task has its own container configured, it will 
-override the autoscaler’s default docker image (see [Base Docker Image](../clearml_agent/clearml_agent_docker.md#base-docker-container)).
+override the autoscaler’s default docker image (see [Base Docker Image](../getting_started/clearml_agent_docker_exec.md#base-docker-container)).
 
 #### Git Configuration 
 If your code is saved in a private repository, you can add your Git credentials so the ClearML Agents running on your

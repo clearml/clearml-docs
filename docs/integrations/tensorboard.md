@@ -3,8 +3,9 @@ title: TensorBoard
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md).
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [TensorBoard](https://www.tensorflow.org/tensorboard) is TensorFlow's data visualization toolkit. 
 ClearML automatically captures all data logged to TensorBoard. All you have to do is add two

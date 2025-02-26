@@ -7,7 +7,7 @@ tasks for you, and an extensive set of powerful features and functionality you c
 and other workflows.
 
 :::tip Installation
-For installation instructions, see [Getting Started](../getting_started/ds/ds_first_steps.md#install-clearml). 
+For installation instructions, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup#install-clearml). 
 :::
 
 The ClearML Python Package collects the scripts' entire execution information, including:

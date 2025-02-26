@@ -12,7 +12,7 @@ This page describes the ClearML Server [deployment](#clearml-server-deployment-c
 * [Opening Elasticsearch, MongoDB, and Redis for External Access](#opening-elasticsearch-mongodb-and-redis-for-external-access)
 * [Web login authentication](#web-login-authentication) - Create and manage users and passwords
 * [Using hashed passwords](#using-hashed-passwords) - Option to use hashed passwords instead of plain-text passwords
-* [Non-responsive Task watchdog](#non-responsive-task-watchdog) - For inactive experiments
+* [Non-responsive Task watchdog](#non-responsive-task-watchdog) - For inactive tasks
 * [Custom UI context menu actions](#custom-ui-context-menu-actions)
 
 For all configuration options, see the [ClearML Configuration Reference](../configs/clearml_conf.md) page.
@@ -361,7 +361,7 @@ You can also use hashed passwords instead of plain-text passwords. To do that:
 
 ### Non-responsive Task Watchdog
 
-The non-responsive experiment watchdog monitors experiments that were not updated for a specified time interval, and then 
+The non-responsive task watchdog monitors tasks that were not updated for a specified time interval, and then 
 the watchdog marks them as `aborted`. The non-responsive experiment watchdog is always active.
 
 Modify the following settings for the watchdog:
@@ -391,7 +391,7 @@ Modify the following settings for the watchdog:
    ```
    
    :::tip
-   If the `apiserver.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
+   If the `services.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
    an alternate folder you configured), and input the modified configuration
    :::
         
@@ -464,8 +464,8 @@ an alternate folder you configured), and input the modified configuration
 :::
 
 The action will appear in the context menu for the object type in which it was specified:
-* Task, model, dataview - Right-click an object in the [experiments](../webapp/webapp_exp_table.md), [models](../webapp/webapp_model_table.md), 
-  and [dataviews](../hyperdatasets/webapp/webapp_dataviews.md) tables respectively. Alternatively, click the object to 
+* Task, model, dataview - Right-click an object in the [task](../webapp/webapp_exp_table.md), [model](../webapp/webapp_model_table.md), 
+  and [dataview](../hyperdatasets/webapp/webapp_dataviews.md) tables respectively. Alternatively, click the object to 
   open its info tab, then click the menu button <img src="/docs/latest/icons/ico-bars-menu.svg" className="icon size-md space-sm" /> 
   to access the context menu. 
 * Project - In the project page > click the menu button <img src="/docs/latest/icons/ico-bars-menu.svg" className="icon size-md space-sm" /> 

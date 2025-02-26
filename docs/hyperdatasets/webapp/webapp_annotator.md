@@ -2,6 +2,10 @@
 title: Annotation Tasks
 ---
 
+:::important ENTERPRISE FEATURE
+Annotation tasks are available under the ClearML Enterprise plan.
+:::
+
 Use the Annotations page to access and manage annotation Tasks.  
 
 Use annotation tasks to efficiently organize the annotation of frames in Dataset versions and manage the work of annotators 

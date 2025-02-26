@@ -2,6 +2,10 @@
 title: Dataset Versions
 ---
 
+:::important ENTERPRISE FEATURE
+Hyper-Datasets are available under the ClearML Enterprise plan.
+:::
+
 Use the Dataset versioning WebApp (UI) features for viewing, creating, modifying, and 
 deleting [Dataset versions](../dataset.md#dataset-versioning).
 

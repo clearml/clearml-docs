@@ -9,7 +9,7 @@ If ClearML was previously configured, follow [this](#adding-clearml-agent-to-a-c
 ClearML Agent specific configurations
 :::
 
-To install ClearML Agent, execute
+To install [ClearML Agent](../clearml_agent.md), execute
 ```bash
 pip install clearml-agent
 ```

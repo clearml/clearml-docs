@@ -2,7 +2,7 @@
 title: Optuna
 ---
 
-[Optuna](https://optuna.readthedocs.io/en/latest) is a [hyperparameter optimization](../fundamentals/hpo.md) framework, 
+[Optuna](https://optuna.readthedocs.io/en/latest) is a [hyperparameter optimization](../getting_started/hpo.md) framework, 
 which makes use of different samplers such as grid search, random, bayesian, and evolutionary algorithms. You can integrate
 Optuna into ClearML's automated hyperparameter optimization. 
 

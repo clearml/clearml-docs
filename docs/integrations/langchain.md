@@ -3,9 +3,9 @@ title: LangChain
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [LangChain](https://github.com/langchain-ai/langchain) is a popular framework for developing applications powered by 
 language models. You can integrate ClearML into your LangChain code using the built-in `ClearMLCallbackHandler`. This 

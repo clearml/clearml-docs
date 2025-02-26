@@ -6,7 +6,7 @@ Hyperparameters are a script's configuration options. Since hyperparameters can 
 model performance, it is crucial to efficiently track and manage them.
 
 ClearML supports tracking and managing hyperparameters in each task and provides a dedicated [hyperparameter 
-optimization module](hpo.md). With ClearML's logging and tracking capabilities, tasks can be reproduced, and their 
+optimization module](../getting_started/hpo.md). With ClearML's logging and tracking capabilities, tasks can be reproduced, and their 
 hyperparameters and results can be saved and compared, which is key to understanding model behavior.
 
 ClearML lets you easily try out different hyperparameter values without changing your original code. ClearML's [execution

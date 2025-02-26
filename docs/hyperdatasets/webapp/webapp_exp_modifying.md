@@ -2,6 +2,10 @@
 title: Modifying Dataviews
 ---
 
+:::important ENTERPRISE FEATURE
+Dataviews are available under the ClearML Enterprise plan.
+:::
+
 A task that has been executed can be [cloned](../../webapp/webapp_exp_reproducing.md), then the cloned task's 
 execution details can be modified, and the modified task can be executed. 
 

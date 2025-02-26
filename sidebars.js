@@ -9,293 +9,120 @@
 
 module.exports = {
     mainSidebar: [
-        {'Getting Started': ['getting_started/main', {
-            'Where do I start?': [{'Data Scientists': ['getting_started/ds/ds_first_steps', 'getting_started/ds/ds_second_steps', 'getting_started/ds/best_practices']},
-                {'MLOps and LLMOps': ['getting_started/mlops/mlops_first_steps','getting_started/mlops/mlops_second_steps','getting_started/mlops/mlops_best_practices']}]
-        }, 'getting_started/architecture', {'Video Tutorials': 
-        [
-            'getting_started/video_tutorials/quick_introduction',
-            'getting_started/video_tutorials/core_component_overview',
-            'getting_started/video_tutorials/experiment_manager_hands-on',
-            'getting_started/video_tutorials/experiment_management_best_practices',
-            'getting_started/video_tutorials/agent_remote_execution_and_automation',
-            'getting_started/video_tutorials/hyperparameter_optimization',
-            'getting_started/video_tutorials/pipelines_from_code',
-            'getting_started/video_tutorials/pipelines_from_tasks',
-            'getting_started/video_tutorials/clearml-data',
-            'getting_started/video_tutorials/the_clearml_autoscaler',
-            'getting_started/video_tutorials/hyperdatasets_data_versioning',
+        {
+            type: 'doc',
+            id: 'overview',
+            label: 'ClearML at a Glance',
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'Infrastructure Control Plane (GPUaaS)',
+            items: [
+                'fundamentals/agents_and_queues',
+                'clearml_agent',
+                'clearml_agent/clearml_agent_dynamic_gpus',
+                'clearml_agent/clearml_agent_fractional_gpus',
+                'cloud_autoscaling/autoscaling_overview',
+                'remote_session'
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'AI Development Center',
+            items: [
+                'clearml_sdk/clearml_sdk',
+                'pipelines/pipelines',
+                'clearml_data/clearml_data',
+                'hyper_datasets',
+                'model_registry',
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'GenAI App Engine',
+            items: [
+                'deploying_clearml/enterprise_deploy/appgw',
+                'build_interactive_models',
+                'deploying_models',
+                'custom_apps'
+            ]
+        },
+    ],
+    usecaseSidebar: [
+        /*'getting_started/main',*/
+        'getting_started/auto_log_exp',
+        'getting_started/track_tasks',
+        'getting_started/reproduce_tasks',
+        'getting_started/logging_using_artifacts',
+        'getting_started/data_management',
+        'getting_started/remote_execution',
+        'getting_started/building_pipelines',
+        'getting_started/hpo',
+        'getting_started/clearml_agent_docker_exec',
+        'getting_started/clearml_agent_base_docker',
+        'getting_started/clearml_agent_scheduling',
+        {"Deploying Model Endpoints": [
             {
-                'Hands-on MLOps Tutorials':[
-                    'getting_started/video_tutorials/hands-on_mlops_tutorials/how_clearml_is_used_by_a_data_scientist',
-                    'getting_started/video_tutorials/hands-on_mlops_tutorials/how_clearml_is_used_by_an_mlops_engineer',
-                    'getting_started/video_tutorials/hands-on_mlops_tutorials/ml_ci_cd_using_github_actions_and_clearml'
+                type: 'category',
+                collapsible: true,
+                collapsed: true,
+                label: 'ClearML Serving',
+                link: {type: 'doc', id: 'clearml_serving/clearml_serving'},
+                items: ['clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']
+            },
+            {
+                type: 'category',
+                collapsible: true,
+                collapsed: true,
+                label: 'Model Launchers',
+                items: [
+                           'webapp/applications/apps_embed_model_deployment',
+                           'webapp/applications/apps_model_deployment',
+                           'webapp/applications/apps_llama_deployment'
                 ]
-            }        
-        ]}]},
-        {'ClearML Fundamentals': [
-            'fundamentals/projects', 'fundamentals/task', 'fundamentals/hyperparameters',
-            'fundamentals/artifacts', 'fundamentals/models', 'fundamentals/logger', 'fundamentals/agents_and_queues',
-            'fundamentals/hpo'
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML SDK',
-            link: {type: 'doc', id: 'clearml_sdk/clearml_sdk'},
-            items: ['clearml_sdk/task_sdk', 'clearml_sdk/model_sdk', 'clearml_sdk/apiclient_sdk']
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Agent',
-            link: {type: 'doc', id: 'clearml_agent'},
-            items: ['clearml_agent/clearml_agent_setup', 'clearml_agent/clearml_agent_deployment',
-            'clearml_agent/clearml_agent_execution_env', 'clearml_agent/clearml_agent_env_caching',
-            'clearml_agent/clearml_agent_dynamic_gpus', 'clearml_agent/clearml_agent_fractional_gpus',
-            'clearml_agent/clearml_agent_services_mode', 'clearml_agent/clearml_agent_docker',
-            'clearml_agent/clearml_agent_scheduling']
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'Cloud Autoscaling',
-            link: {type: 'doc', id: 'cloud_autoscaling/autoscaling_overview'},
-            items: [
-                {'Autoscaler Apps': [
-                    'webapp/applications/apps_aws_autoscaler',
-                    'webapp/applications/apps_gcp_autoscaler',
-                    ]
-                }
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Pipelines',
-            link: {type: 'doc', id: 'pipelines/pipelines'},
-            items: [{"Building Pipelines":
-                        ['pipelines/pipelines_sdk_tasks', 'pipelines/pipelines_sdk_function_decorators']
-                }
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Data',
-            link: {type: 'doc', id: 'clearml_data/clearml_data'},
-            items: ['clearml_data/clearml_data_cli', 'clearml_data/clearml_data_sdk', 'clearml_data/best_practices',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Workflows',
-                    link: {type: 'doc', id: 'clearml_data/data_management_examples/workflows'},
-                    items: [
-                        'clearml_data/data_management_examples/data_man_simple',
-                        'clearml_data/data_management_examples/data_man_folder_sync',
-                        'clearml_data/data_management_examples/data_man_cifar_classification',
-                        'clearml_data/data_management_examples/data_man_python'
-                    ]
-                },
-            ]
-        },
-        'hyper_datasets',
-        'model_registry',
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'Remote IDE',
-            link: {type: 'doc', id: 'remote_session'},
-            items: [
-                'apps/clearml_session',
-                {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
-                {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
-                {type: 'ref', id: 'webapp/applications/apps_vscode'}
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Serving',
-            link: {type: 'doc', id: 'clearml_serving/clearml_serving'},
-            items: ['clearml_serving/clearml_serving_setup', 'clearml_serving/clearml_serving_cli', 'clearml_serving/clearml_serving_tutorial']
-        },
-        {'CLI Tools': [
-            'apps/clearml_task',
-            {type: 'ref', id: 'clearml_agent/clearml_agent_ref'},
-            {type: 'ref', id: 'clearml_data/clearml_data_cli'},
-            'apps/clearml_param_search',
-            {type: 'ref', id: 'apps/clearml_session'},
-            {type: 'ref', id: 'clearml_serving/clearml_serving_cli'},
-            ]
-        },
-        {'Integrations': [
-                'integrations/autokeras',
-                'integrations/catboost',
-                'integrations/click',
-                'integrations/fastai',
-                {"Hugging Face": ['integrations/transformers', 'integrations/accelerate']},
-                'integrations/hydra', 'integrations/jsonargparse',
-                'integrations/keras', 'integrations/keras_tuner',
-                'integrations/langchain',
-                'integrations/lightgbm', 'integrations/matplotlib',
-                'integrations/megengine', 'integrations/monai', 'integrations/tao',
-                {"OpenMMLab":['integrations/mmcv', 'integrations/mmengine']},
-                'integrations/optuna',
-                'integrations/python_fire', 'integrations/pytorch',
-                'integrations/ignite',
-                'integrations/pytorch_lightning',
-                'integrations/scikit_learn', 'integrations/seaborn',
-                'integrations/splunk',
-                'integrations/tensorboard', 'integrations/tensorboardx', 'integrations/tensorflow',
-                'integrations/xgboost', 'integrations/yolov5', 'integrations/yolov8'
-            ]
-        },
-        'integrations/storage',
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'WebApp',
-            link: {type: 'doc', id: 'webapp/webapp_overview'},
-            items: [
-                'webapp/webapp_home',
-                {
-                    'Projects': [
-                        'webapp/webapp_projects_page',
-                        'webapp/webapp_project_overview',
-                        {
-                            'Tasks': ['webapp/webapp_exp_table', 'webapp/webapp_exp_track_visual', 'webapp/webapp_exp_reproducing', 'webapp/webapp_exp_tuning',
-                                'webapp/webapp_exp_comparing']
-                        },
-                        {
-                            'Models': ['webapp/webapp_model_table', 'webapp/webapp_model_viewing', 'webapp/webapp_model_comparing']
-                        },
-                        'webapp/webapp_exp_sharing'
-                    ]
-                },
-                {
-                    'Datasets':[
-                        'webapp/datasets/webapp_dataset_page', 'webapp/datasets/webapp_dataset_viewing'
-                    ]
-                },
-                {
-                    'Pipelines':[
-                        'webapp/pipelines/webapp_pipeline_page', 'webapp/pipelines/webapp_pipeline_table', 'webapp/pipelines/webapp_pipeline_viewing'
-                    ]
-                },
-                'webapp/webapp_model_endpoints',
-                'webapp/webapp_reports',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Orchestration',
-                    link: {type: 'doc', id: 'webapp/webapp_workers_queues'},
-                    items: ['webapp/webapp_orchestration_dash', 'webapp/resource_policies']
-                },
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'ClearML Applications',
-                    link: {type: 'doc', id: 'webapp/applications/apps_overview'},
-                    items: [
-                        {
-                            "General": [
-                                'webapp/applications/apps_hpo',
-                                'webapp/applications/apps_dashboard',
-                                'webapp/applications/apps_task_scheduler',
-                                'webapp/applications/apps_trigger_manager',
-                            ]
-                        },
-                        {
-                            "AI Dev": [
-                                'webapp/applications/apps_ssh_session',
-                                'webapp/applications/apps_jupyter_lab',
-                                'webapp/applications/apps_vscode',
-                            ]
-                        },
-                        {
-                            "UI Dev": [
-                                'webapp/applications/apps_gradio',
-                                'webapp/applications/apps_streamlit'
-                            ]
-                        },
-                        {
-                            "Deploy": [
-                                'webapp/applications/apps_embed_model_deployment',
-                                'webapp/applications/apps_model_deployment',
-                                'webapp/applications/apps_llama_deployment'
-                            ]
-                        },
-                    ]
-                },
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Settings',
-                    link: {type: 'doc', id: 'webapp/settings/webapp_settings_overview'},
-                    items: ['webapp/settings/webapp_settings_profile',
-                        'webapp/settings/webapp_settings_admin_vaults', 'webapp/settings/webapp_settings_users',
-                        'webapp/settings/webapp_settings_access_rules', 'webapp/settings/webapp_settings_id_providers',
-                        'webapp/settings/webapp_settings_resource_configs', 'webapp/settings/webapp_settings_usage_billing',
-                        'webapp/settings/webapp_settings_storage_credentials'
-                    ]
-                },
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'Configuring ClearML',
-            link: {type: 'doc', id: 'configs/configuring_clearml'},
-            items: ['configs/clearml_conf', 'configs/env_vars']
-        },
-        {'User Management': [
-            'user_management/user_groups',
-            'user_management/access_rules',
-            'user_management/admin_vaults',
-            'user_management/identity_providers'
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Server',
-            link: {type: 'doc', id: 'deploying_clearml/clearml_server'},
-            items: [
-                {'Deploying ClearML Server':
-                    ['deploying_clearml/clearml_server_aws_ec2_ami', 'deploying_clearml/clearml_server_gcp',
-                    'deploying_clearml/clearml_server_linux_mac', 'deploying_clearml/clearml_server_win',
-                    'deploying_clearml/clearml_server_kubernetes_helm']
-                },
-                {'Upgrading ClearML Server':
-                    ['deploying_clearml/upgrade_server_aws_ec2_ami','deploying_clearml/upgrade_server_gcp',
-                    'deploying_clearml/upgrade_server_linux_mac', 'deploying_clearml/upgrade_server_win',
-                    'deploying_clearml/upgrade_server_kubernetes_helm',
-                    'deploying_clearml/clearml_server_es7_migration', 'deploying_clearml/clearml_server_mongo44_migration']
-                },
-                'deploying_clearml/clearml_server_config', 'deploying_clearml/clearml_server_security'
-            ]
-        },
-
-        //'Comments': ['Notes'],
-
-
-
+            }
+        ]},
+        {"Launching a Remote IDE": [
+            'apps/clearml_session',
+            {type: 'ref', id: 'webapp/applications/apps_ssh_session'},
+            {type: 'ref', id: 'webapp/applications/apps_jupyter_lab'},
+            {type: 'ref', id: 'webapp/applications/apps_vscode'}
+        ]},
+        {"Building Interactive Model Demos": [
+            {type: 'ref', id: 'webapp/applications/apps_gradio'},
+            {type: 'ref', id: 'webapp/applications/apps_streamlit'},
+        ]},
+        'getting_started/task_trigger_schedule',
+        'getting_started/project_progress',
+    ],
+    integrationsSidebar: [
+            {
+                type: 'doc',
+                label: 'Overview',
+                id: 'integrations/integrations',
+            },
+            'integrations/autokeras',
+            'integrations/catboost',
+            'integrations/click',
+            'integrations/fastai',
+            {"Hugging Face": ['integrations/transformers', 'integrations/accelerate']},
+            'integrations/hydra', 'integrations/jsonargparse',
+            'integrations/keras', 'integrations/keras_tuner',
+            'integrations/langchain',
+            'integrations/lightgbm', 'integrations/matplotlib',
+            'integrations/megengine', 'integrations/monai', 'integrations/tao',
+            {"OpenMMLab":['integrations/mmcv', 'integrations/mmengine']},
+            'integrations/optuna',
+            'integrations/python_fire', 'integrations/pytorch',
+            'integrations/ignite',
+            'integrations/pytorch_lightning',
+            'integrations/scikit_learn', 'integrations/seaborn',
+            'integrations/splunk',
+            'integrations/tensorboard', 'integrations/tensorboardx', 'integrations/tensorflow',
+            'integrations/xgboost', 'integrations/yolov5', 'integrations/yolov8'
     ],
     guidesSidebar: [
             'guides/guidemain',
@@ -304,6 +131,7 @@ module.exports = {
             {'ClearML Task': ['guides/clearml-task/clearml_task_tutorial']},
             {'ClearML Agent': ['guides/clearml_agent/executable_exp_containers', 'guides/clearml_agent/exp_environment_containers', 'guides/clearml_agent/reproduce_exp']},
             {'Datasets': ['clearml_data/data_management_examples/data_man_cifar_classification', 'clearml_data/data_management_examples/data_man_python']},
+            {id: 'hyperdatasets/code_examples', type: 'doc', label: 'Hyper-Datasets'},
             {'Distributed': ['guides/distributed/distributed_pytorch_example', 'guides/distributed/subprocess_example']},
             {'Docker': ['guides/docker/extra_docker_shell_script']},
             {'Frameworks': [
@@ -342,7 +170,6 @@ module.exports = {
             {'Offline Mode':['guides/set_offline']},
             {'Optimization': ['guides/optimization/hyper-parameter-optimization/examples_hyperparam_opt']},
             {'Pipelines': ['guides/pipeline/pipeline_controller', 'guides/pipeline/pipeline_decorator', 'guides/pipeline/pipeline_functions']},
-
             {'Reporting': ['guides/reporting/explicit_reporting','guides/reporting/3d_plots_reporting', 'guides/reporting/artifacts', 'guides/reporting/using_artifacts', 'guides/reporting/clearml_logging_example', 'guides/reporting/html_reporting',
                 'guides/reporting/hyper_parameters', 'guides/reporting/image_reporting', 'guides/reporting/manual_matplotlib_reporting', 'guides/reporting/media_reporting',
                 'guides/reporting/model_config', 'guides/reporting/pandas_reporting', 'guides/reporting/plotly_reporting',
@@ -351,6 +178,112 @@ module.exports = {
             {'Storage': ['guides/storage/examples_storagehelper']},
             {'Web UI': ['guides/ui/building_leader_board','guides/ui/tuning_exp']}
 
+    ],
+    knowledgeSidebar: [
+        {'Fundamentals': [
+            'fundamentals/projects',
+            'fundamentals/task',
+            'fundamentals/hyperparameters',
+            'fundamentals/artifacts',
+            'fundamentals/models',
+            'fundamentals/logger',
+        ]},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML SDK',
+            link: {type: 'doc', id: 'clearml_sdk/clearml_sdk'},
+            items: [
+                'clearml_sdk/task_sdk',
+                'clearml_sdk/model_sdk',
+                'hyperdatasets/task',
+                'clearml_sdk/hpo_sdk',
+                'clearml_sdk/apiclient_sdk'
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Pipelines',
+            link: {type: 'doc', id: 'pipelines/pipelines'},
+            items: [{
+                "Building Pipelines": [
+                    'pipelines/pipelines_sdk_tasks',
+                    'pipelines/pipelines_sdk_function_decorators'
+                ]
+            }]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Data',
+            link: {type: 'doc', id: 'clearml_data/clearml_data'},
+            items: [
+                'clearml_data/clearml_data_cli',
+                'clearml_data/clearml_data_sdk',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Workflows',
+                    link: {type: 'doc', id: 'clearml_data/data_management_examples/workflows'},
+                    items: [
+                        'clearml_data/data_management_examples/data_man_simple',
+                        'clearml_data/data_management_examples/data_man_folder_sync',
+                        'clearml_data/data_management_examples/data_man_cifar_classification',
+                        'clearml_data/data_management_examples/data_man_python'
+                    ]
+                },
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Hyper-Datasets',
+            link: {type: 'doc', id: 'hyperdatasets/overview'},
+            items: [
+                'hyperdatasets/dataset',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Frames',
+                    link: {type: 'doc', id: 'hyperdatasets/frames'},
+                    items: [
+                        'hyperdatasets/single_frames',
+                        'hyperdatasets/frame_groups',
+                        'hyperdatasets/sources',
+                        'hyperdatasets/annotations',
+                        'hyperdatasets/masks',
+                        'hyperdatasets/previews',
+                        'hyperdatasets/custom_metadata'
+                    ]
+                },
+                'hyperdatasets/dataviews',
+            ]
+        },
+        {'Video Tutorials': [
+            'getting_started/video_tutorials/quick_introduction',
+            'getting_started/video_tutorials/core_component_overview',
+            'getting_started/video_tutorials/experiment_manager_hands-on',
+            'getting_started/video_tutorials/experiment_management_best_practices',
+            'getting_started/video_tutorials/agent_remote_execution_and_automation',
+            'getting_started/video_tutorials/hyperparameter_optimization',
+            'getting_started/video_tutorials/pipelines_from_code',
+            'getting_started/video_tutorials/pipelines_from_tasks',
+            'getting_started/video_tutorials/clearml-data',
+            'getting_started/video_tutorials/the_clearml_autoscaler',
+            'getting_started/video_tutorials/hyperdatasets_data_versioning',
+            {'Hands-on MLOps Tutorials': [
+                'getting_started/video_tutorials/hands-on_mlops_tutorials/how_clearml_is_used_by_a_data_scientist',
+                'getting_started/video_tutorials/hands-on_mlops_tutorials/how_clearml_is_used_by_an_mlops_engineer',
+                'getting_started/video_tutorials/hands-on_mlops_tutorials/ml_ci_cd_using_github_actions_and_clearml'
+            ]}
+        ]},
     ],
     rnSidebar: [
         {'Server': [
@@ -383,7 +316,7 @@ module.exports = {
                            'release_notes/clearml_server/enterprise/ver_3_24',
                            {
                                 'Older Versions': [
-                                     'release_notes/clearml_server/enterprise/ver_3_23','release_notes/clearml_server/enterprise/ver_3_22',
+                                     'release_notes/clearml_server/enterprise/ver_3_23', 'release_notes/clearml_server/enterprise/ver_3_22',
                                      'release_notes/clearml_server/enterprise/ver_3_21', 'release_notes/clearml_server/enterprise/ver_3_20'
                                 ]
                            }
@@ -456,15 +389,18 @@ module.exports = {
             ]
         }
     ],
-    sdkSidebar: [
+    referenceSidebar: [
+        {'SDK': [
             'references/sdk/task',
             'references/sdk/logger',
             {'Model': ['references/sdk/model_model',
                 'references/sdk/model_inputmodel', 'references/sdk/model_outputmodel',]},
             'references/sdk/storage',
             'references/sdk/dataset',
-            {'Pipeline': ['references/sdk/automation_controller_pipelinecontroller',
-                'references/sdk/automation_job_clearmljob']},
+            {'Pipeline': [
+                'references/sdk/automation_controller_pipelinecontroller',
+                'references/sdk/automation_job_clearmljob'
+            ]},
             'references/sdk/scheduler',
             'references/sdk/trigger',
             {'HyperParameter Optimization': [
@@ -477,59 +413,294 @@ module.exports = {
                 'references/sdk/hpo_parameters_uniformintegerparameterrange',
                 'references/sdk/hpo_parameters_uniformparameterrange',
                 'references/sdk/hpo_parameters_parameterset',
-                ]},
-    ],
-    clearmlAgentSidebar: [
-        'clearml_agent/clearml_agent_ref', 'clearml_agent/clearml_agent_env_var'
-    ],
-    hyperdatasetsSidebar: [
-        'hyperdatasets/overview',
-        {'Frames': [
-            'hyperdatasets/frames',
-            'hyperdatasets/single_frames',
-            'hyperdatasets/frame_groups',
-            'hyperdatasets/sources',
-            'hyperdatasets/annotations',
-            'hyperdatasets/masks',
-            'hyperdatasets/previews',
-            'hyperdatasets/custom_metadata'
             ]},
-        'hyperdatasets/dataset',
-        'hyperdatasets/dataviews',
-        'hyperdatasets/task',
-        {'WebApp': [
-                {'Projects': [
-                        'hyperdatasets/webapp/webapp_dataviews', 'hyperdatasets/webapp/webapp_exp_track_visual',
-                        'hyperdatasets/webapp/webapp_exp_modifying', 'hyperdatasets/webapp/webapp_exp_comparing',
-                        ]
-                },
-                {'Datasets': [
-                    'hyperdatasets/webapp/webapp_datasets',
-                    'hyperdatasets/webapp/webapp_datasets_versioning',
-                    'hyperdatasets/webapp/webapp_datasets_frames'
-                    ]
-                },
-                'hyperdatasets/webapp/webapp_annotator'
+            {'Enterprise Hyper-Datasets': [
+                {'Hyper-Dataset': [
+                    'references/hyperdataset/hyperdataset',
+                    'references/hyperdataset/hyperdatasetversion'
+                ]},
+                {'DataFrame': [
+                    'references/hyperdataset/singleframe',
+                    'references/hyperdataset/framegroup',
+                    'references/hyperdataset/annotation',
+                ]},
+                'references/hyperdataset/dataview',
+            ]},
+        ]},
+        {'CLI Tools': [
+            'apps/clearml_task',
+            {type: 'ref', id: 'clearml_data/clearml_data_cli'},
+            'apps/clearml_param_search',
+            {type: 'ref', id: 'apps/clearml_session'},
+            {type: 'ref', id: 'clearml_serving/clearml_serving_cli'},
+            ]        },
+        {'ClearML Agent': [
+            'clearml_agent/clearml_agent_ref', 'clearml_agent/clearml_agent_env_var'
+        ]},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Client Configuration',
+            link: {type: 'doc', id: 'configs/configuring_clearml'},
+            items: [
+                'configs/clearml_conf',
+                'configs/env_vars'
             ]
         },
-        'hyperdatasets/code_examples'
+        {'Server API': [
+            'references/api/index',
+            'references/api/definitions',
+            'references/api/login',
+            'references/api/debug',
+            'references/api/projects',
+            'references/api/queues',
+            'references/api/workers',
+            'references/api/events',
+            'references/api/models',
+            'references/api/tasks',
+        ]},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'WebApp',
+            link: {type: 'doc', id: 'webapp/webapp_overview'},
+            items: [
+                'webapp/webapp_home',
+                {'Projects': [
+                    'webapp/webapp_projects_page',
+                    'webapp/webapp_project_overview',
+                    {'Tasks': [
+                        'webapp/webapp_exp_table',
+                        'webapp/webapp_exp_track_visual',
+                        'webapp/webapp_exp_reproducing',
+                        'webapp/webapp_exp_tuning',
+                        'webapp/webapp_exp_comparing'
+                    ]},
+                    {'Models': [
+                        'webapp/webapp_model_table',
+                        'webapp/webapp_model_viewing',
+                        'webapp/webapp_model_comparing'
+                    ]},
+                    {'Dataviews': [
+                        'hyperdatasets/webapp/webapp_dataviews',
+                        'hyperdatasets/webapp/webapp_exp_track_visual',
+                        'hyperdatasets/webapp/webapp_exp_modifying',
+                        'hyperdatasets/webapp/webapp_exp_comparing'
+                    ]},
+                    'webapp/webapp_exp_sharing'
+                ]},
+                {'Datasets': [
+                    'webapp/datasets/webapp_dataset_page',
+                    'webapp/datasets/webapp_dataset_viewing'
+                ]},
+                {'Hyper-Datasets': [
+                    'hyperdatasets/webapp/webapp_datasets',
+                    'hyperdatasets/webapp/webapp_datasets_versioning',
+                    'hyperdatasets/webapp/webapp_datasets_frames',
+                    'hyperdatasets/webapp/webapp_annotator'
+                ]},
+                {'Pipelines': [
+                    'webapp/pipelines/webapp_pipeline_page',
+                    'webapp/pipelines/webapp_pipeline_table',
+                    'webapp/pipelines/webapp_pipeline_viewing'
+                ]},
+                'webapp/webapp_model_endpoints',
+                'webapp/webapp_reports',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Orchestration',
+                    link: {type: 'doc', id: 'webapp/webapp_workers_queues'},
+                    items: [
+                        'webapp/webapp_orchestration_dash',
+                        {
+                            type: 'category',
+                            collapsible: true,
+                            collapsed: true,
+                            label: 'Autoscalers',
+                            items: [
+                                'webapp/applications/apps_aws_autoscaler',
+                                'webapp/applications/apps_gcp_autoscaler',
+                            ]
+                        },
+                        'webapp/resource_policies'
+                    ]
+                },
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'ClearML Applications',
+                    link: {type: 'doc', id: 'webapp/applications/apps_overview'},
+                    items: [
+                        {"General": [
+                            'webapp/applications/apps_hpo',
+                            'webapp/applications/apps_dashboard',
+                            'webapp/applications/apps_task_scheduler',
+                            'webapp/applications/apps_trigger_manager',
+                        ]},
+                        {"AI Dev": [
+                            'webapp/applications/apps_ssh_session',
+                            'webapp/applications/apps_jupyter_lab',
+                            'webapp/applications/apps_vscode',
+                        ]},
+                        {"UI Dev": [
+                            'webapp/applications/apps_gradio',
+                            'webapp/applications/apps_streamlit'
+                        ]},
+                        {"Deploy": [
+                            'webapp/applications/apps_embed_model_deployment',
+                            'webapp/applications/apps_model_deployment',
+                            'webapp/applications/apps_llama_deployment'
+                        ]},
+                    ]
+                },
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Settings',
+                    link: {type: 'doc', id: 'webapp/settings/webapp_settings_overview'},
+                    items: [
+                        'webapp/settings/webapp_settings_profile',
+                        'webapp/settings/webapp_settings_admin_vaults',
+                        'webapp/settings/webapp_settings_users',
+                        'webapp/settings/webapp_settings_access_rules',
+                        'webapp/settings/webapp_settings_id_providers',
+                        'webapp/settings/webapp_settings_resource_configs',
+                        'webapp/settings/webapp_settings_usage_billing',
+                        'webapp/settings/webapp_settings_storage_credentials'
+                    ]
+                },
+            ]
+        },
     ],
-    sdkHyperDataset: [
-        {'Hyper-Dataset': ['references/hyperdataset/hyperdataset', 'references/hyperdataset/hyperdatasetversion']},
-        {'DataFrame': ['references/hyperdataset/singleframe',
-            'references/hyperdataset/framegroup', 'references/hyperdataset/annotation',]},
-        'references/hyperdataset/dataview',
+    installationSidebar: [
+        'clearml_sdk/clearml_sdk_setup',
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Agent',
+            items: [
+                'clearml_agent/clearml_agent_setup',
+                {
+                    'Deployment': [
+                        'clearml_agent/clearml_agent_deployment_bare_metal',
+                        'clearml_agent/clearml_agent_deployment_k8s',
+                        'clearml_agent/clearml_agent_deployment_slurm',
+                    ]
+                },
+                'clearml_agent/clearml_agent_execution_env',
+                'clearml_agent/clearml_agent_env_caching',
+                'clearml_agent/clearml_agent_services_mode',
+            ]
+        },
+        {
+            type: 'doc',
+            label: 'Configuring Client Storage Access',
+            id: 'integrations/storage',
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Open Source Server',
+            link: {type: 'doc', id: 'deploying_clearml/clearml_server'},
+            items: [
+                {'Deployment Options': [
+                    'deploying_clearml/clearml_server_aws_ec2_ami',
+                    'deploying_clearml/clearml_server_gcp',
+                    'deploying_clearml/clearml_server_linux_mac',
+                    'deploying_clearml/clearml_server_win',
+                    'deploying_clearml/clearml_server_kubernetes_helm'
+                ]},
+                'deploying_clearml/clearml_server_config',
+                'deploying_clearml/clearml_server_security',
+                {'Server Upgrade Procedures': [
+                    'deploying_clearml/upgrade_server_aws_ec2_ami',
+                    'deploying_clearml/upgrade_server_gcp',
+                    'deploying_clearml/upgrade_server_linux_mac',
+                    'deploying_clearml/upgrade_server_win',
+                    'deploying_clearml/upgrade_server_kubernetes_helm',
+                    'deploying_clearml/clearml_server_es7_migration',
+                    'deploying_clearml/clearml_server_mongo44_migration'
+                ]},
+            ]
+        },
+/*        {'Getting Started': [
+            'getting_started/architecture',
+        ]},*/
+        {
+            'Enterprise Server Deployment': [
+               'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+               'deploying_clearml/enterprise_deploy/vpc_aws',
+               'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'ClearML Application Gateway',
+            items: [
+                'deploying_clearml/enterprise_deploy/appgw_install_compose',
+                'deploying_clearml/enterprise_deploy/appgw_install_k8s',
+            ]
+        },
+        'deploying_clearml/enterprise_deploy/delete_tenant',
+        {
+            'Enterprise Applications': [
+                'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
+                'deploying_clearml/enterprise_deploy/app_install_ex_server',
+                'deploying_clearml/enterprise_deploy/app_custom',
+            ]
+        },
+        {
+            'User Management': [
+                'user_management/user_groups',
+                'user_management/access_rules',
+                'user_management/admin_vaults',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Identity Provider Integration',
+                    link: {type: 'doc', id: 'user_management/identity_providers'},
+                    items: [
+                        'deploying_clearml/enterprise_deploy/sso_saml_k8s',
+                        'deploying_clearml/enterprise_deploy/sso_keycloak',
+                        'deploying_clearml/enterprise_deploy/sso_active_directory'
+                    ]
+                },
+            ]
+        },
     ],
-    apiSidebar: [
-        'references/api/index',
-        'references/api/definitions',
-        'references/api/login',
-        'references/api/debug',
-        'references/api/projects',
-        'references/api/queues',
-        'references/api/workers',
-        'references/api/events',
-        'references/api/models',
-        'references/api/tasks',
+    bestPracticesSidebar: [
+        {
+            type: 'category',
+            collapsible: true,
+            label: 'Best Practices',
+            items: [
+                {
+                    type: 'doc',
+                    label: 'Data Scientists',
+                    id: 'best_practices/data_scientist_best_practices'
+                },
+                {
+                    type: 'doc',
+                    label: 'MLOps and LLMOps',
+                    id: 'best_practices/mlops_best_practices'
+                },
+                {
+                    type: 'doc',
+                    label: 'Data Management',
+                    id: 'best_practices/data_best_practices'
+                },
+            ],
+        },
     ]
 };

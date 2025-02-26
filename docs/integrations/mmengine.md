@@ -3,9 +3,9 @@ title: MMEngine
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [MMEngine](https://github.com/open-mmlab/mmengine) is a library for training deep learning models based on PyTorch. 
 MMEngine supports ClearML through a builtin logger: It automatically logs task environment information, such as 

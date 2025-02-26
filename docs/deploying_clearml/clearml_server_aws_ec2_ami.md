@@ -150,4 +150,4 @@ The following section contains a list of AMI Image IDs per-region for the latest
 ## Next Step
 
 To keep track of your experiments and/or data, the `clearml` package needs to communicate with your server. 
-For instruction to connect the ClearML SDK to the server, see [Getting Started: First Steps](../getting_started/ds/ds_first_steps.md).
+For instruction to connect the ClearML SDK to the server, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup).
