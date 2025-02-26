@@ -68,7 +68,8 @@ reproducibility.
 Information about the dataset can be viewed in the WebApp, in the dataset's [details panel](../../webapp/datasets/webapp_dataset_viewing.md#version-details-panel). 
 In the panel's **CONTENT** tab, you can see a table summarizing version contents, including file names, file sizes, and hashes.
 
-![Dataset content tab](../../img/examples_data_management_cifar_dataset.png)
+![Dataset content tab](../../img/examples_data_management_cifar_dataset.png#light-mode-only)
+![Dataset content tab](../../img/examples_data_management_cifar_dataset_dark.png#dark-mode-only)
 
 ## Using the Dataset
 
