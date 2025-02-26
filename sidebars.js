@@ -60,10 +60,10 @@ module.exports = {
         'getting_started/data_management',
         'getting_started/remote_execution',
         'getting_started/building_pipelines',
-        'hpo',
-        'clearml_agent/clearml_agent_docker_exec',
-        'clearml_agent/clearml_agent_base_docker',
-        'clearml_agent/clearml_agent_scheduling',
+        'getting_started/hpo',
+        'getting_started/clearml_agent_docker_exec',
+        'getting_started/clearml_agent_base_docker',
+        'getting_started/clearml_agent_scheduling',
         {"Deploying Model Endpoints": [
             {
                 type: 'category',
@@ -673,6 +673,7 @@ module.exports = {
                     label: 'Identity Provider Integration',
                     link: {type: 'doc', id: 'user_management/identity_providers'},
                     items: [
+                        'deploying_clearml/enterprise_deploy/sso_multi_tenant_login',
                         'deploying_clearml/enterprise_deploy/sso_saml_k8s',
                         'deploying_clearml/enterprise_deploy/sso_keycloak',
                         'deploying_clearml/enterprise_deploy/sso_active_directory'
@@ -690,17 +691,17 @@ module.exports = {
                 {
                     type: 'doc',
                     label: 'Data Scientists',
-                    id: 'getting_started/ds/best_practices'
+                    id: 'best_practices/data_scientist_best_practices'
                 },
                 {
                     type: 'doc',
                     label: 'MLOps and LLMOps',
-                    id: 'getting_started/mlops/mlops_best_practices'
+                    id: 'best_practices/mlops_best_practices'
                 },
                 {
                     type: 'doc',
                     label: 'Data Management',
-                    id: 'clearml_data/best_practices'
+                    id: 'best_practices/data_best_practices'
                 },
             ],
         },

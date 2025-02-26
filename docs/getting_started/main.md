@@ -112,7 +112,7 @@ alert you whenever your model improves in accuracy)
 - Automatically scale cloud instances according to your resource needs with ClearML's 
 [AWS Autoscaler](../webapp/applications/apps_aws_autoscaler.md) and [GCP Autoscaler](../webapp/applications/apps_gcp_autoscaler.md)
 GUI applications
-- Run [hyperparameter optimization](../hpo.md) 
+- Run [hyperparameter optimization](hpo.md) 
 - Build [pipelines](../pipelines/pipelines.md) from code 
 - Much more!
 
