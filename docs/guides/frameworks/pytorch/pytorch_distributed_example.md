@@ -35,7 +35,8 @@ Task.current_task().upload_artifact(
 
 All of these artifacts appear in the main Task, **ARTIFACTS** **>** **OTHER**.
 
-![image](../../../img/examples_pytorch_distributed_example_09.png)
+![Artifacts](../../../img/examples_pytorch_distributed_example_09.png#light-mode-only)
+![Artifacts](../../../img/examples_pytorch_distributed_example_09_dark.png#dark-mode-only)
 
 ## Scalars
 
@@ -54,7 +55,8 @@ Task.current_task().get_logger().report_scalar(
 
 The single scalar plot for loss appears in **SCALARS**.
 
-![image](../../../img/examples_pytorch_distributed_example_08.png)
+![Scalars](../../../img/examples_pytorch_distributed_example_08.png#light-mode-only)
+![Scalars](../../../img/examples_pytorch_distributed_example_08_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
@@ -69,7 +71,8 @@ Task.current_task().connect(param)
 
 Command line options appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **Args**.
 
-![image](../../../img/examples_pytorch_distributed_example_01.png)
+![Hyperparamter Args](../../../img/examples_pytorch_distributed_example_01.png#light-mode-only)
+![Hyperparamter Args](../../../img/examples_pytorch_distributed_example_01_dark.png#dark-mode-only)
 
 Parameter dictionaries appear in the **General** section of **HYPERPARAMETERS**.
 
@@ -78,10 +81,12 @@ param = {'worker_{}_stuff'.format(dist.get_rank()): 'some stuff ' + str(randint(
 Task.current_task().connect(param)
 ```
 
-![image](../../../img/examples_pytorch_distributed_example_02.png)
+![Hyperparameter General args](../../../img/examples_pytorch_distributed_example_02.png#light-mode-only)
+![Hyperparameter General args](../../../img/examples_pytorch_distributed_example_02_dark.png#dark-mode-only)
 
 ## Log
 
 Output to the console, including the text messages printed from the main Task object and each subprocess, appears in **CONSOLE**.
 
-![image](../../../img/examples_pytorch_distributed_example_06.png)
+![Console log](../../../img/examples_pytorch_distributed_example_06.png#light-mode-only)
+![Console log](../../../img/examples_pytorch_distributed_example_06_dark.png#dark-mode-only)
