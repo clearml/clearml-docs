@@ -651,6 +651,7 @@ module.exports = {
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
+        'deploying_clearml/enterprise_deploy/custom_billing',
         'deploying_clearml/enterprise_deploy/delete_tenant',
         'deploying_clearml/enterprise_deploy/import_projects',
         'deploying_clearml/enterprise_deploy/change_artifact_links',
