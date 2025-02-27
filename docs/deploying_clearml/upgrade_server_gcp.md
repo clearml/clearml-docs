@@ -22,8 +22,7 @@ you can proceed to upgrade to v2.x.
    
 1. If upgrading from **Trains Server** version 0.15 or older to **ClearML Server**, do the following:
 
-    1. Follow these [data migration instructions](clearml_server_es7_migration.md), 
-       and then continue this upgrade.
+    1. Follow these [data migration instructions](clearml_server_es7_migration.md).
        
     1. Rename `/opt/trains` and its subdirectories to `/opt/clearml`:
    

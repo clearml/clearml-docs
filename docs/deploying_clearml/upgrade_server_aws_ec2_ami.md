@@ -2,14 +2,21 @@
 title: AWS EC2 AMIs
 ---
 
-:::note 
-For upgrade purposes, the terms **Trains Server** and **ClearML Server** are interchangeable.  
-:::
+<Collapsible title="Important: Upgrading to v2.x from v1.16.0 or older" type="info">
+
+MongoDB major version was upgraded from `v5.x` to `6.x`. Please note that if your current ClearML Server version is older than 
+`v1.17` (where MongoDB `v5.x` was first used), you'll need to first upgrade to ClearML Server v1.17.
+
+First upgrade to ClearML Server v1.17 following the procedure below and using [this `docker-compose` file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
+you can proceed to upgrade to v2.x. 
+
+</Collapsible>
+
  
 The sections below contain the steps to upgrade ClearML Server on the [same AWS instance](#upgrading-on-the-same-aws-instance), and 
 to upgrade and migrate to a [new AWS instance](#upgrading-and-migrating-to-a-new-aws-instance).
 
-### Upgrading on the Same AWS Instance
+## Upgrading on the Same AWS Instance
 
 This section contains the steps to upgrade ClearML Server on the same AWS instance.
 
@@ -52,7 +59,7 @@ If upgrading from Trains Server version 0.15 or older, a data migration is requi
      docker-compose -f docker-compose.yml up -d
      ```
 
-### Upgrading and Migrating to a New AWS Instance
+## Upgrading and Migrating to a New AWS Instance
 
 This section contains the steps to upgrade ClearML Server on the new AWS instance.
 
@@ -67,8 +74,9 @@ This section contains the steps to upgrade ClearML Server on the new AWS instanc
 1. On the old AWS instance, [backup your data](clearml_server_aws_ec2_ami.md#backing-up-and-restoring-data-and-configuration) 
    and, if your configuration folder is not empty, backup your configuration.
 
-1. If upgrading from ClearML Server version older than 1.2, you need to migrate your data before upgrading your server. See instructions [here](clearml_server_mongo44_migration.md).  
-   If upgrading from Trains Server version 0.15 or older, a data migration is required before continuing this upgrade. See instructions [here](clearml_server_es7_migration.md).
+1. If upgrading from Trains Server version 0.15 or older, you need to migrate your data before upgrading your server. See instructions [here](clearml_server_es7_migration.md).
+   
+1. If upgrading from ClearML Server version older than 1.2, you need to migrate your data before upgrading your server. See instructions [here](clearml_server_mongo44_migration.md).
 
 1. On the new AWS instance, [restore your data](clearml_server_aws_ec2_ami.md#backing-up-and-restoring-data-and-configuration) and, if the configuration folder is not empty, restore the 
    configuration.
