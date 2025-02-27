@@ -1,5 +1,5 @@
 ---
-title: Exporting and Importing ClearML Projects
+title: Project Migration
 ---
 
 When migrating from a ClearML Open Server to a ClearML Enterprise Server, you may need to transfer projects. This is done 
