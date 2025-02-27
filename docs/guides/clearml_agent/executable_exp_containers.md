@@ -9,7 +9,7 @@ script.
 
 ## Prerequisites
 * [`clearml-agent`](../../clearml_agent/clearml_agent_setup.md#installation) installed and configured
-* [`clearml`](../../getting_started/ds/ds_first_steps.md#install-clearml) installed and configured
+* [`clearml`](../../clearml_sdk/clearml_sdk_setup#install-clearml) installed and configured
 * [clearml](https://github.com/clearml/clearml) repo cloned (`git clone https://github.com/clearml/clearml.git`)
 
 ## Creating the ClearML Task

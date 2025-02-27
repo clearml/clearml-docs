@@ -2,9 +2,9 @@
 title: ClearML Modules
 ---
 
-- [**ClearML Python Package**](../getting_started/ds/ds_first_steps.md#install-clearml) (`clearml`) for integrating ClearML into your existing code-base.
-- [**ClearML Server**](../deploying_clearml/clearml_server.md) (`clearml-server`) for storing experiment, model, and workflow data, and supporting the Web UI experiment manager. It is also the control plane for the MLOps.
-- [**ClearML Agent**](../clearml_agent.md) (`clearml-agent`), the MLOps orchestration agent. Enabling experiment and workflow reproducibility, and scalability.
+- [**ClearML Python Package**](../clearml_sdk/clearml_sdk_setup.md) (`clearml`) for integrating ClearML into your existing code-base.
+- [**ClearML Server**](../deploying_clearml/clearml_server.md) (`clearml-server`) for storing task, model, and workflow data, and supporting the Web UI experiment manager. It is also the control plane for the MLOps.
+- [**ClearML Agent**](../clearml_agent.md) (`clearml-agent`), the MLOps orchestration agent. Enabling task and workflow reproducibility, and scalability.
 - [**ClearML Data**](../clearml_data/clearml_data.md) (`clearml-data`) data management and versioning on top of file-systems/object-storage.
 - [**ClearML Serving**](../clearml_serving/clearml_serving.md) (`clearml-serving`) for model deployment and orchestration.
 - [**ClearML Session**](../apps/clearml_session.md) (`clearml-session`) for launching remote instances of Jupyter Notebooks and VSCode.

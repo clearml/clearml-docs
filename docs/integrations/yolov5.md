@@ -7,7 +7,7 @@ built in logger:
 * Track every YOLOv5 training run in ClearML
 * Version and easily access your custom training data with [ClearML Data](../clearml_data/clearml_data.md) 
 * Remotely train and monitor your YOLOv5 training runs using [ClearML Agent](../clearml_agent.md)
-* Get the very best mAP using ClearML [Hyperparameter Optimization](../fundamentals/hpo.md)
+* Get the very best mAP using ClearML [Hyperparameter Optimization](../getting_started/hpo.md)
 * Turn your newly trained YOLOv5 model into an API with just a few commands using [ClearML Serving](../clearml_serving/clearml_serving.md)
 
 ## Setup
@@ -169,7 +169,8 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 ### Cloning, Editing, and Enqueuing
 
-![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:

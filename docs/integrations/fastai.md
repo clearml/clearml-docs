@@ -3,8 +3,7 @@ title: Fast.ai
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
 
 ClearML integrates seamlessly with [fast.ai](https://www.fast.ai/), automatically logging its models and scalars. 
@@ -93,7 +92,8 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 ### Cloning, Editing, and Enqueuing
 
-![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
+![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:

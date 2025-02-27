@@ -9,7 +9,7 @@ If ClearML was previously configured, follow [this](#adding-clearml-agent-to-a-c
 ClearML Agent specific configurations
 :::
 
-To install ClearML Agent, execute
+To install [ClearML Agent](../clearml_agent.md), execute
 ```bash
 pip install clearml-agent
 ```
@@ -27,7 +27,7 @@ it can't do that when running from a virtual environment.
    clearml-agent init
    ```
 
-    The setup wizard prompts for ClearML credentials (see [here](../webapp/settings/webapp_settings_profile.md#clearml-credentials) about obtaining credentials).
+    The setup wizard prompts for ClearML credentials (see [here](../webapp/settings/webapp_settings_profile.md#clearml-api-credentials) about obtaining credentials).
     ```
     Please create new clearml credentials through the settings page in your `clearml-server` web app, 
     or create a free account at https://app.clear.ml/settings/webapp-configuration

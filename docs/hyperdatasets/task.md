@@ -1,6 +1,10 @@
 ---
-title: Tasks
+title: Dataviews
 ---
+
+:::important ENTERPRISE FEATURE
+Dataviews available under the ClearML Enterprise plan.
+:::
  
 Hyper-Datasets extend the ClearML [**Task**](../fundamentals/task.md) with [Dataviews](dataviews.md).
 

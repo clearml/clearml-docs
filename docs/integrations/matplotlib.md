@@ -3,9 +3,9 @@ title: Matplotlib
 ---
 
 :::tip
-If you are not already using ClearML, see [Getting Started](../getting_started/ds/ds_first_steps.md) for setup 
-instructions.
+If you are not already using ClearML, see [ClearML Setup instructions](../clearml_sdk/clearml_sdk_setup).
 :::
+
 
 [Matplotlib](https://matplotlib.org/) is a Python library for data visualization. ClearML automatically captures plots 
 and images created with `matplotlib`. 

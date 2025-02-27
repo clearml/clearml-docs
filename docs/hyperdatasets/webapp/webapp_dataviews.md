@@ -2,6 +2,10 @@
 title: The Dataview Table
 ---
 
+:::important ENTERPRISE FEATURE
+Dataviews are available under the ClearML Enterprise plan.
+:::
+
 The **Dataview table** is a [customizable](#customizing-the-dataview-table) list of Dataviews associated with a project.
 Use it to view and create Dataviews, and access their info panels. 
 

@@ -23,7 +23,7 @@ VS Code remote sessions use ports 8878 and 8898 respectively.
 
 
 ## Prerequisites
-* `clearml` installed and configured. See [Getting Started](../getting_started/ds/ds_first_steps.md) for details.
+* `clearml` installed and configured. See [ClearML Setup](../clearml_sdk/clearml_sdk_setup) for details.
 * At least one `clearml-agent` running on a remote host. See [installation](../clearml_agent/clearml_agent_setup.md#installation) for details.
 * An SSH client installed on your machine. To verify, open your terminal and execute `ssh`. If you did not receive an 
 error, you are good to go.
@@ -56,7 +56,7 @@ error, you are good to go.
 1. The session Task is enqueued in the selected queue, and a ClearML Agent pulls and executes it. The agent downloads the appropriate IDE(s) and 
    launches it.  
 
-1. Once the agent finishes the initial setup of the interactive Task, the local `cleaml-session` connects to the host 
+1. Once the agent finishes the initial setup of the interactive Task, the local `clearml-session` connects to the host 
    machine via SSH, and tunnels both SSH and IDE over the SSH connection. If a container is specified, the 
    IDE environment runs inside of it. 
    
@@ -142,7 +142,7 @@ sessions:
   maxServices: 20
 ```
 
-For more information, see [Kubernetes](../clearml_agent/clearml_agent_deployment.md#kubernetes).
+For more information, see [Kubernetes](../clearml_agent/clearml_agent_deployment_k8s.md).
 
 
 ### Installing Requirements
