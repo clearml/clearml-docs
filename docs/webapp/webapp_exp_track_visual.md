@@ -233,7 +233,7 @@ The **INFO** tab shows extended task information:
 ### Latest Events Log 
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+The latest events log is available under the ClearML Enterprise plan.
 :::
 
 The Enterprise Server also displays a detailed history of task activity: 

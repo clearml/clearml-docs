@@ -3,7 +3,7 @@ title: Custom Billing Events
 ---
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Sending custom billing events is available under the ClearML Enterprise plan.
 :::
 
 ClearML supports sending custom events to selected Kafka topics. Event sending is triggered by API calls and 

@@ -3,7 +3,7 @@ title: Application Installation on On-Prem and VPC Servers
 ---
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+UI application deployment is available under the ClearML Enterprise plan.
 :::
 
 ClearML Applications are like plugins that allow you to manage ML workloads and automatically run recurring workflows 

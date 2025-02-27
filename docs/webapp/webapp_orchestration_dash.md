@@ -3,7 +3,7 @@ title: Orchestration Dashboard
 ---
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+The Orchestration Dashboard is available under the ClearML Enterprise plan.
 :::
 
 Use the orchestration dashboard to monitor all of your available and in-use compute resources:
