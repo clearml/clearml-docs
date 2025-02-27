@@ -4,14 +4,14 @@ title: PipelineDecorator
 
 ## Creating Pipelines Using Function Decorators
 
-Use the [`PipelineDecorator`](../references/sdk/automation_controller_pipelinecontroller.md#class-automationcontrollerpipelinedecorator) 
-class to create pipelines from your existing functions. Use [`@PipelineDecorator.component`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorcomponent) 
-to denote functions that comprise the steps of your pipeline, and [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorpipeline) 
+Use the [`PipelineDecorator`](../references/sdk/automation_controller_pipelinedecorator.md#class-automationcontrollerpipelinedecorator) 
+class to create pipelines from your existing functions. Use [`@PipelineDecorator.component`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorcomponent) 
+to denote functions that comprise the steps of your pipeline, and [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorpipeline) 
 for your main pipeline execution logic function.
 
 ## @PipelineDecorator.pipeline
 
-Using the [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorpipeline)
+Using the [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorpipeline)
 decorator transforms the function which implements your pipeline's execution logic to a ClearML pipeline controller, 
 an independently executed task.
 
@@ -70,13 +70,13 @@ parameters. When launching a new pipeline run from the [UI](../webapp/pipelines/
 ![Pipeline new run](../img/pipelines_new_run.png)
 
 ## @PipelineDecorator.component
-Using the [`@PipelineDecorator.component`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorcomponent) 
+Using the [`@PipelineDecorator.component`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorcomponent) 
 decorator transforms a function into a ClearML pipeline step when called from a pipeline controller.
 
 When the pipeline controller calls a pipeline step, a corresponding ClearML task is created. 
 
 :::tip Package Imports
-In the case that the `skip_global_imports` parameter of [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorpipeline) 
+In the case that the `skip_global_imports` parameter of [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorpipeline) 
 is set to `False`, all global imports will be automatically imported at the beginning of each step's execution. 
 Otherwise, if set to `True`, make sure that each function which makes up a pipeline step contains package imports, which 
 are automatically logged as required packages for the pipeline execution step.
@@ -110,7 +110,7 @@ def step_one(pickle_data_url: str, extra: int = 43):
 * `packages` - A list of required packages or a local requirements.txt file. Example: `["tqdm>=2.1", "scikit-learn"]` or 
   `"./requirements.txt"`. If not provided, packages are automatically added based on the imports used inside the function.
 * `execution_queue` (optional) - Queue in which to enqueue the specific step. This overrides the queue set with the 
-  [`PipelineDecorator.set_default_execution_queue method`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorset_default_execution_queue)
+  [`PipelineDecorator.set_default_execution_queue method`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorset_default_execution_queue)
   method.
 * `continue_on_fail` - If `True`, a failed step does not cause the pipeline to stop (or marked as failed). Notice, that 
   steps that are connected (or indirectly connected) to the failed step are skipped (default `False`)
@@ -186,14 +186,14 @@ specify which frameworks to log. See `Task.init`'s [`auto_connect_framework` par
 * `auto_connect_arg_parser` - Control automatic logging of argparse objects. See `Task.init`'s [`auto_connect_arg_parser` parameter](../references/sdk/task.md#taskinit) 
 
 You can also directly upload a model or an artifact from the step to the pipeline controller, using the 
-[`PipelineDecorator.upload_model`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorupload_model) 
-and [`PipelineDecorator.upload_artifact`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorupload_artifact) 
+[`PipelineDecorator.upload_model`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorupload_model) 
+and [`PipelineDecorator.upload_artifact`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorupload_artifact) 
 methods respectively. 
 
 
 ## Controlling Pipeline Execution
 ### Default Execution Queue 
-The [`PipelineDecorator.set_default_execution_queue`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorset_default_execution_queue) 
+The [`PipelineDecorator.set_default_execution_queue`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorset_default_execution_queue) 
 method lets you set a default queue through which all pipeline steps 
 will be executed. Once set, step-specific overrides can be specified through the `@PipelineDecorator.component` decorator. 
 
@@ -226,7 +226,7 @@ You can run the pipeline logic locally, while keeping the pipeline components ex
 #### Debugging Mode
 In debugging mode, the pipeline controller and all components are treated as regular Python functions, with components 
 called synchronously. This mode is great to debug the components and design the pipeline as the entire pipeline is 
-executed on the developer machine with full ability to debug each function call. Call [`PipelineDecorator.debug_pipeline`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratordebug_pipeline) 
+executed on the developer machine with full ability to debug each function call. Call [`PipelineDecorator.debug_pipeline`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratordebug_pipeline) 
 before the main pipeline logic function call.
 
 Example:
@@ -242,7 +242,7 @@ In local mode, the pipeline controller creates Tasks for each component, and com
 into sub-processes running on the same machine. Notice that the data is passed between the components and the logic with 
 the exact same mechanism as in the remote mode (i.e. hyperparameters / artifacts), with the exception that the execution 
 itself is local. Notice that each subprocess is using the exact same Python environment as the main pipeline logic. Call 
-[`PipelineDecorator.run_locally`](../references/sdk/automation_controller_pipelinecontroller.md#pipelinedecoratorrun_locally)
+[`PipelineDecorator.run_locally`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorrun_locally)
 before the main pipeline logic function.
 
 Example:

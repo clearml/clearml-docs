@@ -36,7 +36,7 @@ The pipeline run table contains the following columns:
 | Column | Description | Type |
 |---|---|---|
 | **RUN** | Pipeline run identifier  |  String |
-| **VERSION** | The pipeline version number. Corresponds to the [PipelineController](../../references/sdk/automation_controller_pipelinecontroller.md#class-pipelinecontroller)'s and [PipelineDecorator](../../references/sdk/automation_controller_pipelinecontroller.md#class-automationcontrollerpipelinedecorator)'s `version` parameter | Version string |
+| **VERSION** | The pipeline version number. Corresponds to the [PipelineController](../../references/sdk/automation_controller_pipelinecontroller.md#class-pipelinecontroller)'s and [PipelineDecorator](../../references/sdk/automation_controller_pipelinedecorator.md#class-automationcontrollerpipelinedecorator)'s `version` parameter | Version string |
 | **TAGS** | Descriptive, user-defined, color-coded tags assigned to run. | Tag |
 | **STATUS** | Pipeline run's status. See a list of the [task states and state transitions](../../fundamentals/task.md#task-states). For Running, Failed, and Aborted runs, you will also see a progress indicator next to the status. See [here](../../pipelines/pipelines.md#tracking-pipeline-progress). |  String |
 | **USER** | User who created the run.  |  String |
