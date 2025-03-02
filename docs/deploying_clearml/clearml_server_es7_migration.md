@@ -129,7 +129,7 @@ and ClearML Server needs to be installed.
         1. Add the `clearml-server` repository to Helm client.
 
            ```
-           helm repo add allegroai https://allegroai.github.io/clearml-server-helm/
+           helm repo add clearml https://clearml.github.io/clearml-server-helm/
            ```    
            
            Confirm the `clearml-server` repository is now in the Helm client.

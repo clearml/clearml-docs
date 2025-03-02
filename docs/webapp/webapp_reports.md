@@ -424,22 +424,22 @@ To add an image, add an exclamation point, followed by the alt text enclosed by 
 image enclosed in parentheses: 
 
 ```
-![Logo](https://raw.githubusercontent.com/allegroai/clearml/master/docs/clearml-logo.svg)
+![Logo](https://raw.githubusercontent.com/clearml/clearml/master/docs/clearml-logo.svg)
 ```
 
 The rendered output should look like this:
 
-![Logo](https://raw.githubusercontent.com/allegroai/clearml/master/docs/clearml-logo.svg)
+![Logo](https://raw.githubusercontent.com/clearml/clearml/master/docs/clearml-logo.svg)
 
 To add a title to the image, which you can see in a tooltip when hovering over the image, add the title after the image's
 link: 
 
 ```
-![With title](https://raw.githubusercontent.com/allegroai/clearml/master/docs/clearml-logo.svg "ClearML logo")
+![With title](https://raw.githubusercontent.com/clearml/clearml/master/docs/clearml-logo.svg "ClearML logo")
 ```
 The rendered output should look like this:
 
-<img src="https://raw.githubusercontent.com/allegroai/clearml/master/docs/clearml-logo.svg" alt="Logo with Title" title="ClearML logo"/>
+<img src="https://raw.githubusercontent.com/clearml/clearml/master/docs/clearml-logo.svg" alt="Logo with Title" title="ClearML logo"/>
 
 Hover over the image to see its title. 
 

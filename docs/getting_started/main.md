@@ -32,19 +32,19 @@ training, and deploying models at every scale on any AI infrastructure.
 <tbody>
   <tr>
     <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb"><b>Step 1</b></a> - Experiment Management</td>
-    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb">
+    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/clearml/clearml/blob/master/docs/tutorials/Getting_Started_1_Experiment_Management.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb"><b>Step 2</b></a> - Remote Execution Agent Setup</td>
-    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb">
+    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/clearml/clearml/blob/master/docs/tutorials/Getting_Started_2_Setting_Up_Agent.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
   </tr>
   <tr>
     <td><a href="https://github.com/clearml/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb"><b>Step 3</b></a> - Remotely Execute Tasks</td>
-    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/allegroai/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb">
+    <td className="align-center"><a className="no-ext-icon" target="_blank" href="https://colab.research.google.com/github/clearml/clearml/blob/master/docs/tutorials/Getting_Started_3_Remote_Execution.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a></td>
   </tr>
