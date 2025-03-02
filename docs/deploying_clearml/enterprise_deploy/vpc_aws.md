@@ -14,9 +14,10 @@ It covers the following:
 
 ## Prerequisites
 
-An AWS account with at least 2 availability zones is required. It is recommended to install on a region with at least 
+* An AWS account with at least 2 availability zones is required. It is recommended to install on a region with at least 
 3 availability zones. Having fewer than 3 availability zones would prevent the use of high-availability setups, if 
 needed in the future.
+* The minimum required RAM is 32 GB. For example, a  `r6a.xlarge` EC2 instance type would accommodate the RAM size.
 
 ## Instance Setup
 
