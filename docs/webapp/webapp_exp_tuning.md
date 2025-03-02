@@ -72,7 +72,7 @@ and/or Reset functions.
 
 
 #### Default Container
-Select a pre-configured container that the [ClearML Agent](../clearml_agent.md) will use to remotely execute this task (see [Building Docker containers](../getting_started/clearml_agent_docker_exec.md)).
+Select a pre-configured container that the [ClearML Agent](../clearml_agent.md) will use to remotely execute this task (see [Building Task Execution Environments in a Container](../getting_started/clearml_agent_base_docker.md)).
 
 **To add, change, or delete a default container:**
 

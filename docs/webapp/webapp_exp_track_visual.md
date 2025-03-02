@@ -93,7 +93,7 @@ using to set up an environment (`pip` or `conda`) are available. Select which re
 
 ### Container
 The Container section list the following information:
-* Image - a pre-configured container that ClearML Agent will use to remotely execute this task (see [Building Docker containers](../getting_started/clearml_agent_docker_exec.md))
+* Image - a pre-configured container that ClearML Agent will use to remotely execute this task (see [Building Task Execution Environments in a Container](../getting_started/clearml_agent_base_docker.md))
 * Arguments - add container arguments
 * Setup shell script - a bash script to be executed inside the container before setting up the task's environment
 
