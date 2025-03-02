@@ -230,13 +230,9 @@ The **INFO** tab shows extended task information:
 * [Task description](#description)
 * [Task details](#task-details)
 
-### Latest Events Log 
+### Latest Events Log
 
-:::important Enterprise Feature
-The latest events log is available under the ClearML Enterprise plan.
-:::
-
-The Enterprise Server also displays a detailed history of task activity: 
+The **INFO** tab includes a detailed history of task activity: 
 * Task action (e.g. status changes, project move, etc.)
 * Action time
 * Acting user
