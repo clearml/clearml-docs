@@ -59,7 +59,7 @@ For backwards compatibility, the environment variables ``TRAINS_HOST_IP``, ``TRA
 1. Download the latest `docker-compose.yml` file:
 
    ```
-   curl https://raw.githubusercontent.com/allegroai/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
    ```
    
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build:

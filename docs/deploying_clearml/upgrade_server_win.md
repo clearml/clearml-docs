@@ -49,7 +49,7 @@ you can proceed to upgrade to v2.x.
 1. Download the latest `docker-compose.yml` file:
 
    ```  
-   curl https://raw.githubusercontent.com/allegroai/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml
+   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml
    ```
         
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build.

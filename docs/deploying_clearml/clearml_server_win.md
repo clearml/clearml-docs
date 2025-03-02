@@ -57,7 +57,7 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
 1. Save the ClearML Server docker-compose YAML file.
  
    ```   
-   curl https://raw.githubusercontent.com/allegroai/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml
+   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml
    ```
    
 1. Run `docker-compose`. In PowerShell, execute the following commands:

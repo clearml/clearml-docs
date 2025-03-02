@@ -49,7 +49,7 @@ If upgrading from Trains Server version 0.15 or older, a data migration is requi
 1. Download the latest `docker-compose.yml` file. Execute the following command:
 
    ```
-   sudo curl https://raw.githubusercontent.com/allegroai/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+   sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
    ```
    
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build.
