@@ -1,4 +1,10 @@
-# Kubernetes Deployment
+---
+title: Kubernetes Deployment
+---
+
+:::important Enterprise Feature
+The Application Gateway is available under the ClearML Enterprise plan.
+:::
 
 This guide details the installation of the ClearML AI Application Gateway, specifically the ClearML Task Router Component.
 

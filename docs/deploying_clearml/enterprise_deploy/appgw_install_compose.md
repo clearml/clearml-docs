@@ -1,4 +1,10 @@
-# Docker-Compose Deployment
+---
+title: Docker-Compose Deployment
+---
+
+:::important Enterprise Feature
+The Application Gateway is available under the ClearML Enterprise plan.
+:::
 
 ## Requirements
 

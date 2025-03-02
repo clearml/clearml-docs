@@ -93,7 +93,7 @@ using to set up an environment (`pip` or `conda`) are available. Select which re
 
 ### Container
 The Container section list the following information:
-* Image - a pre-configured container that ClearML Agent will use to remotely execute this task (see [Building Docker containers](../getting_started/clearml_agent_docker_exec.md))
+* Image - a pre-configured container that ClearML Agent will use to remotely execute this task (see [Building Task Execution Environments in a Container](../getting_started/clearml_agent_base_docker.md))
 * Arguments - add container arguments
 * Setup shell script - a bash script to be executed inside the container before setting up the task's environment
 
@@ -230,13 +230,13 @@ The **INFO** tab shows extended task information:
 * [Task description](#description)
 * [Task details](#task-details)
 
-### Latest Events Log 
+### Latest Events Log
 
-:::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+:::info Hosted Service and Enterprise Feature
+The latest events log is available only on the ClearML Hosted Service and under the ClearML Enterprise plan.
 :::
 
-The Enterprise Server also displays a detailed history of task activity: 
+The **INFO** tab includes a detailed history of task activity: 
 * Task action (e.g. status changes, project move, etc.)
 * Action time
 * Acting user

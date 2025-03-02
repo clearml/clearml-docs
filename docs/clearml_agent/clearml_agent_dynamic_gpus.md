@@ -1,8 +1,9 @@
 ---
 title: Dynamic GPU Allocation
 ---
+
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Dynamic GPU allocation is available under the ClearML Enterprise plan.
 :::
 
 The ClearML Enterprise server supports dynamic allocation of GPUs based on queue properties.

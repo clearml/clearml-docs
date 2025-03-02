@@ -637,11 +637,19 @@ module.exports = {
             'getting_started/architecture',
         ]},*/
         {
-            'Enterprise Server Deployment': [
-               'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
-               'deploying_clearml/enterprise_deploy/vpc_aws',
-               'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
-            ]
+            'Enterprise Server':  {
+                'Deployment Options': [
+                   'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+                   'deploying_clearml/enterprise_deploy/vpc_aws',
+                   'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
+                ],
+                'Maintenance': [
+                   'deploying_clearml/enterprise_deploy/import_projects',
+                   'deploying_clearml/enterprise_deploy/change_artifact_links',
+                   'deploying_clearml/enterprise_deploy/delete_tenant',
+                ]
+
+            }
         },
         {
             type: 'category',
@@ -654,11 +662,8 @@ module.exports = {
             ]
         },
         'deploying_clearml/enterprise_deploy/custom_billing',
-        'deploying_clearml/enterprise_deploy/delete_tenant',
-        'deploying_clearml/enterprise_deploy/import_projects',
-        'deploying_clearml/enterprise_deploy/change_artifact_links',
         {
-            'Enterprise Applications': [
+            'UI Applications': [
                 'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
                 'deploying_clearml/enterprise_deploy/app_install_ex_server',
                 'deploying_clearml/enterprise_deploy/app_custom',

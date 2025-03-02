@@ -42,7 +42,7 @@ user can only rejoin your workspace when you re-invite them.
 ## Service Accounts
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Service accounts are available under the ClearML Enterprise plan.
 :::
 
 Service accounts are ClearML users that provide services with access to the ClearML API, but not the 
@@ -155,7 +155,7 @@ To delete a service account:
 ## User Groups
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan, as part of the [Access Rules](webapp_settings_access_rules.md) 
+User groups are available under the ClearML Enterprise plan, as part of the [Access Rules](webapp_settings_access_rules.md) 
 feature.
 :::
 

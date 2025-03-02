@@ -3,7 +3,7 @@ title: Managing Agent Work Schedules
 ---
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Agent work schedule management is available under the ClearML Enterprise plan.
 :::
 
 The Agent scheduler enables scheduling working hours for each Agent. During working hours, a worker will actively poll 
