@@ -232,6 +232,10 @@ The **INFO** tab shows extended task information:
 
 ### Latest Events Log
 
+:::info ClearML Hosted Service Feature
+The latest events log is only available on the ClearML Hosted Service.
+:::
+
 The **INFO** tab includes a detailed history of task activity: 
 * Task action (e.g. status changes, project move, etc.)
 * Action time
