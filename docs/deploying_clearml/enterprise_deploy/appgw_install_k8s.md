@@ -1,4 +1,10 @@
-# Kubernetes Deployment
+---
+title: Kubernetes Deployment
+---
+
+:::important Enterprise Feature
+The Application Gateway is available under the ClearML Enterprise plan.
+:::
 
 This guide details the installation of the ClearML AI Application Gateway, specifically the ClearML Task Router Component.
 
@@ -6,8 +12,8 @@ This guide details the installation of the ClearML AI Application Gateway, speci
 
 * Kubernetes cluster: `>= 1.21.0-0 < 1.32.0-0`  
 * Helm installed and configured  
-* Helm token to access allegroai helm-chart repo  
-* Credentials for allegroai docker repo  
+* Helm token to access `allegroai` helm-chart repo  
+* Credentials for `allegroai` docker repo  
 * A valid ClearML Server installation
 
 ## Optional for HTTPS
@@ -21,7 +27,7 @@ This guide details the installation of the ClearML AI Application Gateway, speci
 
 ```
 helm repo add allegroai-enterprise \
-https://raw.githubusercontent.com/allegroai/clearml-enterprise-helm-charts/gh-pages \
+https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages \
 --username <GITHUB_TOKEN> \
 --password <GITHUB_TOKEN>
 ```

@@ -1,5 +1,5 @@
 ---
-title:   Building Executable Task Containers
+title: Building Executable Task Containers
 ---
 
 ## Exporting a Task into a Standalone Docker Container

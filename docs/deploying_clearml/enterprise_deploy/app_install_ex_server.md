@@ -2,6 +2,10 @@
 title: Installing External Applications Server
 ---
 
+:::important Enterprise Feature
+UI application deployment is available under the ClearML Enterprise plan.
+:::
+
 ClearML supports applications, which are extensions that allow additional capabilities, such as cloud auto-scaling, 
 Hyperparameter Optimizations, etc. For more information, see [ClearML Applications](../../webapp/applications/apps_overview.md).
 

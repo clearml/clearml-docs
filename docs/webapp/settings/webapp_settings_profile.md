@@ -100,7 +100,7 @@ these credentials cannot be recovered.
 ### AI Application Gateway Tokens 
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
 The AI Application Gateway enables external access to ClearML tasks and applications. The gateway is configured with an 
@@ -146,7 +146,7 @@ in that workspace. You can rejoin the workspace only if you are re-invited.
 ### Configuration Vault
 
 :::info Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Configuration vaults are available under the ClearML Enterprise plan.
 :::
 
 Use the configuration vault to store global ClearML configuration entries that can extend the ClearML [configuration file](../../configs/clearml_conf.md) 

@@ -1,5 +1,5 @@
 ---
-title: Exporting and Importing ClearML Projects
+title: Project Migration
 ---
 
 When migrating from a ClearML Open Server to a ClearML Enterprise Server, you may need to transfer projects. This is done 
@@ -235,6 +235,6 @@ Note that this is not required if the new file server is replacing the old file 
 exact address.
 
 Once the projects' data has been copied to the target server, and the projects themselves were imported, see 
-[Changing CleaML Artifacts Links](change_artifact_links.md) for information on how to fix the URLs.  
+[Changing ClearML Artifacts Links](change_artifact_links.md) for information on how to fix the URLs.  
 
 

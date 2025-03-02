@@ -136,7 +136,7 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
 
 2. Download the ClearML Server docker-compose YAML file.
       ```
-      sudo curl https://raw.githubusercontent.com/allegroai/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+      sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
       ```
 1. For Linux only, configure the **ClearML Agent Services**:
 

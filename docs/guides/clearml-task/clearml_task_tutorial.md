@@ -49,7 +49,7 @@ Execution log at: https://app.clear.ml/projects/552d5399112d47029c146d5248570295
 ### Executing a Local Script
 
 For this example, use a local version of [this script](https://github.com/clearml/events/blob/master/webinar-0620/keras_mnist.py).
-1. Clone the [allegroai/events](https://github.com/clearml/events) repository 
+1. Clone the [clearml/events](https://github.com/clearml/events) repository 
 1. Go to the root folder of the cloned repository 
 1. Run the following command:
 

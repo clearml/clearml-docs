@@ -3,7 +3,7 @@ title: AI Application Gateway
 ---
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
 Services running through a cluster orchestrator such as Kubernetes or cloud hyperscaler require meticulous configuration 

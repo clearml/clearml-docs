@@ -114,7 +114,7 @@ module.exports = {
             {
               label: 'References',
               to: '/docs/references/sdk/task',
-              activeBaseRegex: '^/docs/latest/docs/(references/|webapp/.*|hyperdatasets/webapp/.*|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)|configs/(clearml_conf|env_vars)|apps/(clearml_task|clearml_param_search))(/.*)?$',
+              activeBaseRegex: '^/docs/latest/docs/(references/.*|webapp/.*|hyperdatasets/webapp/.*|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)|configs/(clearml_conf|env_vars)|apps/(clearml_task|clearml_param_search))(/.*)?$',
             },
             {
               label: 'Best Practices',
@@ -127,7 +127,7 @@ module.exports = {
               activeBaseRegex: '^/docs/latest/docs/guides',
             },
             {
-              label: 'Integrations',
+              label: 'Code Integrations',
               to: '/docs/integrations',
               activeBaseRegex: '^/docs/latest/docs/integrations(?!/storage)',
             },

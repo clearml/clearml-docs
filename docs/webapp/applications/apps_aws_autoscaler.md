@@ -319,17 +319,10 @@ to an IAM user, and create credentials keys for that user to configure in the au
                    "ssm:GetParameters",
                    "ssm:GetParameter"
                ],
-               "Resource": "arn:aws:ssm:*::parameter/aws/service/marketplace/*"
-           },
-           {
-               "Sid": "AllowUsingDeeplearningAMIAliases",
-               "Effect": "Allow",
-               "Action": [
-                   "ssm:GetParametersByPath",
-                   "ssm:GetParameters",
-                   "ssm:GetParameter"
-               ],
-               "Resource": "arn:aws:ssm:*::parameter/aws/service/deeplearning/*"
+              "Resource": [
+                "arn:aws:ssm:*::parameter/aws/service/marketplace/*",
+                "arn:aws:ssm:*::parameter/aws/service/deeplearning/*"
+              ]
            }
        ]
    }

@@ -3,7 +3,7 @@ title: Resource Policies
 ---
 
 :::important ENTERPRISE FEATURE
-This feature is available under the ClearML Enterprise plan.
+Resource Policies are available under the ClearML Enterprise plan.
 ::: 
 
 

@@ -7,13 +7,13 @@ title: Kubernetes
 
 ```bash
 helm repo update
-helm upgrade clearml allegroai/clearml
+helm upgrade clearml clearml/clearml
 ```
 
 **To change the values in an existing installation,** execute the following:
 
 ```bash
-helm upgrade clearml allegroai/clearml --version <CURRENT CHART VERSION> -f custom_values.yaml
+helm upgrade clearml clearml/clearml --version <CURRENT CHART VERSION> -f custom_values.yaml
 ```
 
 See the [clearml-helm-charts repository](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml#local-environment) 

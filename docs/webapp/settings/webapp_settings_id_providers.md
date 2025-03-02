@@ -3,7 +3,7 @@ title: Identity Providers
 ---
 
 :::important Enterprise Feature 
-This feature is available under the ClearML Enterprise plan.
+Identity provider integration is available under the ClearML Enterprise plan.
 :::
 
 Administrators can connect identity service providers to the server: configure an identity connection, which allows

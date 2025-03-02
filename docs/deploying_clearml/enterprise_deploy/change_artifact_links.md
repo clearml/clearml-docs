@@ -1,5 +1,5 @@
 ---
-title: Changing CleaML Artifacts Links
+title: Changing ClearML Artifacts Links
 ---
 
 This guide describes how to update artifact references in the ClearML Enterprise server.

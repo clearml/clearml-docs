@@ -414,7 +414,7 @@ These settings define which Docker image and arguments should be used unless [ex
   * **`agent.default_docker.match_rules`** (*[dict]*)
 
     :::important Enterprise Feature
-    This feature is available under the ClearML Enterprise plan.
+    The `match_rules` configuration option is available under the ClearML Enterprise plan.
     :::
     
     * Lookup table of rules that determine the default container and arguments when running a worker in Docker mode. The 
@@ -1599,7 +1599,7 @@ sdk {
 ## Configuration Vault
 
 :::important Enterprise Feature
-This feature is available under the ClearML Enterprise plan.
+Configuration vaults are available under the ClearML Enterprise plan.
 :::
 
 The ClearML Enterprise Server includes the configuration vault. Users can add configuration sections to the vault and, once 

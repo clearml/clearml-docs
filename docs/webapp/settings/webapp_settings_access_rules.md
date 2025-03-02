@@ -3,7 +3,7 @@ title: Access Rules
 ---
 
 :::important Enterprise Feature 
-This feature is available under the ClearML Enterprise plan.
+Access rules are available under the ClearML Enterprise plan.
 :::
 
 Workspace administrators can use the **Access Rules** page to manage workspace permissions, by specifying which users,

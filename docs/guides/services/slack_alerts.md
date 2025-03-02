@@ -22,7 +22,7 @@ The Slack API token and channel you create are required to configure the Slack a
 1. In **Development Slack Workspace**, select a workspace.
 1. Click **Create App**.
 1. In **Basic Information**, under **Display Information**, complete the following:
-    - In **Short description**, enter "Allegro Train Bot".
+    - In **Short description**, enter "ClearML Train Bot".
     - In **Background color**, enter "#202432".
 1. Click **Save Changes**.
 1. In **OAuth & Permissions**, under **Scopes**, click **Add an OAuth Scope**, and then select the following permissions 
