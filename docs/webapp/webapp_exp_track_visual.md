@@ -232,8 +232,8 @@ The **INFO** tab shows extended task information:
 
 ### Latest Events Log
 
-:::info ClearML Hosted Service Feature
-The latest events log is only available on the ClearML Hosted Service.
+:::info Hosted Service and Enterprise Feature
+The latest events log is available only on the ClearML Hosted Service and under the ClearML Enterprise plan.
 :::
 
 The **INFO** tab includes a detailed history of task activity: 
