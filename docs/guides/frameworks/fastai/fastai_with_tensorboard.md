@@ -18,16 +18,19 @@ The example code does the following:
 
 ClearML automatically logs the histogram output to TensorBoard. They appear in **PLOTS**.
 
-![image](../../../img/examples_reporting_fastai_01.png)
+![Scalars](../../../img/examples_reporting_fastai_01.png#light-mode-only)
+![Scalars](../../../img/examples_reporting_fastai_01_dark.png#dark-mode-only)
 
 ## Plots
 
 Histograms output to TensorBoard. They appear in **PLOTS**.
 
-![image](../../../img/examples_reporting_fastai_02.png)
+![Plots](../../../img/examples_reporting_fastai_02.png#light-mode-only)
+![Plots](../../../img/examples_reporting_fastai_02_dark.png#dark-mode-only)
 
 ## Logs
 
 Text printed to the console for training progress, as well as all other console output, appear in **CONSOLE**.
 
-![image](../../../img/examples_reporting_fastai_03.png)
+![Console](../../../img/examples_reporting_fastai_03.png#light-mode-only)
+![Console](../../../img/examples_reporting_fastai_03_dark.png#dark-mode-only)
