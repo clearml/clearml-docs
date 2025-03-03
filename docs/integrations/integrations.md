@@ -8,6 +8,7 @@ ClearML seamlessly integrates with a wide range of popular machine learning fram
 * [Keras](keras.md)
 * [YOLO v5](yolov5.md)
 * [YOLO v8](yolov8.md)
+* [Hugging Face Transformers](transformers.md)
 * [MMEngine](mmengine.md)
 * [MMCV](mmcv.md)
 * [MONAI](monai.md)

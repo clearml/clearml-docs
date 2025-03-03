@@ -83,9 +83,13 @@ and shuts down instances as needed, according to a resource budget that you set.
 
 Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
 with the new configuration on a remote machine:
-* Clone the task
-* Edit the hyperparameters and/or other details 
-* Enqueue the task
+1. Clone the task
+1. Edit the hyperparameters and/or other details 
+   * Ensure that `_ignore_hparams_ui_overrides` is set to `False` in the **CONFIGURATION > HYPERPARAMETERS > Transformers section**. 
+   This allows the task to use the new hyperparameter values during execution.
+   * Ensure that `_ignore_model_config_ui_overrides` is set to `False` in the **CONFIGURATION > CONFIGURATION OBJECTS > Model Configuration** 
+   section. This allows the task to use the new model configuration values during execution.
+1. Enqueue the task
 
 The ClearML Agent executing the task will use the new values to [override any hard coded values](../clearml_agent.md). 
 
