@@ -18,34 +18,40 @@ In the example script, the `train` and `test` functions call the TensorBoard `Su
 These scalars, along with the resource utilization plots, which are titled **:monitor: machine**, appear in the task's 
 page in the [ClearML web UI](../../../webapp/webapp_overview.md) under **SCALARS**. 
 
-![image](../../../img/examples_pytorch_tensorboard_07.png)
+![Scalars](../../../img/examples_pytorch_tensorboard_07.png#light-mode-only)
+![Scalars](../../../img/examples_pytorch_tensorboard_07_dark.png#dark-mode-only)
 
 ## Debug Samples
 
 ClearML automatically tracks images and text output to TensorFlow. They appear in **DEBUG SAMPLES**.
 
-![image](../../../img/examples_pytorch_tensorboard_08.png)
+![Debug Samples](../../../img/examples_pytorch_tensorboard_08.png#light-mode-only)
+![Debug Samples](../../../img/examples_pytorch_tensorboard_08_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs TensorFlow Definitions. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **TF_DEFINE**.
 
-![image](../../../img/examples_pytorch_tensorboard_01.png)
+![Hyperparameters](../../../img/examples_pytorch_tensorboard_01.png#light-mode-only)
+![Hyperparameters](../../../img/examples_pytorch_tensorboard_01_dark.png#dark-mode-only)
 
 ## Console
 
 Text printed to the console for training progress, as well as all other console output, appear in **CONSOLE**.
 
-![image](../../../img/examples_pytorch_tensorboard_06.png)
+![Console Log](../../../img/examples_pytorch_tensorboard_06.png#light-mode-only)
+![Console Log](../../../img/examples_pytorch_tensorboard_06_dark.png#dark-mode-only)
 
 ## Artifacts
 
 Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks 
 models and any snapshots created using PyTorch. 
 
-![image](../../../img/examples_pytorch_tensorboard_02.png)
+![Artifacts](../../../img/examples_pytorch_tensorboard_02.png#light-mode-only)
+![Artifacts](../../../img/examples_pytorch_tensorboard_02_dark.png#dark-mode-only)
 
 Clicking on a model's name takes you to the [model's page](../../../webapp/webapp_model_viewing.md), where you can view 
 the model's details and access the model.
 
-![image](../../../img/examples_pytorch_tensorboard_03.png)
+![Model details](../../../img/examples_pytorch_tensorboard_03.png#light-mode-only)
+![Model details](../../../img/examples_pytorch_tensorboard_03_dark.png#dark-mode-only)
