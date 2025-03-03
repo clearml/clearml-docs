@@ -103,7 +103,12 @@ You can rerun the pipeline programmatically or via the ClearML Web UI:
 * To launch a new pipeline run in the UI, click **+ NEW RUN** in the [pipeline runs](../webapp/pipelines/webapp_pipeline_table.md) page. This opens a **NEW RUN** modal, where you 
 can set the run's parameters and execution queue.  
 
-  ![Pipeline params UI](../img/pipelines_new_run.png)
+<div class="max-w-75">
+
+  ![Pipeline params UI](../img/pipelines_new_run.png#light-mode-only)
+  ![Pipeline params UI](../img/pipelines_new_run_dark.png#dark-mode-only)
+
+</div>
 
 The new pipeline run will be executed through the execution queue by a ClearML agent. The agent will rebuild 
 the pipeline according to the configuration and DAG that was captured in the original run, and override the original 
