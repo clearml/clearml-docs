@@ -14,15 +14,18 @@ The example does the following:
 
 The images shown in the example script's `imshow` function appear according to metric in **DEBUG SAMPLES**.
 
-![image](../../../img/examples_pytorch_matplotlib_02.png)
+![Debug samples](../../../img/examples_pytorch_matplotlib_02.png#light-mode-only)
+![Debug samples](../../../img/examples_pytorch_matplotlib_02_dark.png#dark-mode-only)
 
 Select a debug sample by metric.
 
-![image](../../../img/examples_pytorch_matplotlib_02a.png)
+![Debug sample selection](../../../img/examples_pytorch_matplotlib_02a.png#light-mode-only)
+![Debug sample selection](../../../img/examples_pytorch_matplotlib_02a_dark.png#dark-mode-only)
 
-Open the debug sample in the image viewer.
+Click a debug simple ti view it in the image viewer.
 
-![image](../../../img/examples_pytorch_matplotlib_02b.png)
+![Debug sample image viewer](../../../img/examples_pytorch_matplotlib_02b.png#light-mode-only)
+![Debug sample image viewer](../../../img/examples_pytorch_matplotlib_02b_dark.png#dark-mode-only)
 
 
 
