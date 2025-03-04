@@ -11,10 +11,12 @@ associated with the `examples` project.
 
 The debug sample images appear according to metric, in the task's **DEBUG SAMPLES** tab.
 
-![image](../../../img/examples_tensorboard_toy_pytorch_02.png)
+![Debug samples](../../../img/examples_tensorboard_toy_pytorch_02.png#light-mode-only)
+![Debug samples](../../../img/examples_tensorboard_toy_pytorch_02_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs TensorFlow Definitions. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **TF_DEFINE**.
 
-![image](../../../img/examples_tensorboard_toy_pytorch_00.png)
+![Hyperparameters](../../../img/examples_tensorboard_toy_pytorch_00.png#light-mode-only)
+![Hyperparameters](../../../img/examples_tensorboard_toy_pytorch_00_dark.png#dark-mode-only)
