@@ -361,12 +361,12 @@ You can also use hashed passwords instead of plain-text passwords. To do that:
 
 ### Non-responsive Task Watchdog
 
-The non-responsive task watchdog monitors tasks that have stopped communicating with the ClearML Server for a specified 
+The non-responsive task watchdog monitors running tasks that have stopped communicating with the ClearML Server for a specified 
 time interval. If a task remains unresponsive beyond the set threshold, the watchdog marks it as `aborted`. The 
 non-responsive task watchdog is always active.
 
 A task is considered non-responsive when it no longer sends updates to the ClearML Server. The non-responsiveness timer 
-starts when the task stops communicating with the server. This typically happens if:
+starts when a running task stops communicating with the server. This typically happens if:
 * The task's main process is stuck but has not exited.
 * There is a network issue preventing the task from communicating with the server.
 
