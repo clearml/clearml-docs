@@ -361,10 +361,16 @@ You can also use hashed passwords instead of plain-text passwords. To do that:
 
 ### Non-responsive Task Watchdog
 
-The non-responsive task watchdog monitors tasks that were not updated for a specified time interval, and then 
-the watchdog marks them as `aborted`. The non-responsive experiment watchdog is always active.
+The non-responsive task watchdog monitors tasks that have stopped communicating with the ClearML Server for a specified 
+time interval. If a task remains unresponsive beyond the set threshold, the watchdog marks it as `aborted`. The 
+non-responsive task watchdog is always active.
 
-Modify the following settings for the watchdog:
+A task is considered non-responsive when it no longer sends updates to the ClearML Server. The non-responsiveness timer 
+starts when the task stops communicating with the server. This typically happens if:
+* The task's main process is stuck but has not exited.
+* There is a network issue preventing the task from communicating with the server.
+
+You can configure the following watchdog settings:
 
 * Watchdog status - enabled / disabled
 * The time threshold (in seconds) of experiment inactivity (default value is 7200 seconds (2 hours)).
@@ -372,10 +378,15 @@ Modify the following settings for the watchdog:
  
 **To configure the non-responsive watchdog for the ClearML Server:**
 
-1. In the ClearML Server `/opt/clearml/config/services.conf` file, add or edit the `tasks.non_responsive_tasks_watchdog` 
-   section and specify the watchdog settings.
+1. Open the ClearML Server `/opt/clearml/config/services.conf` file.
+   
+   :::tip
+   If the `services.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
+   an alternate folder you configured).
+   :::
 
-    For example:
+1. Add or edit the `tasks.non_responsive_tasks_watchdog` section and specify the watchdog settings. For example:
+
     ```
     tasks {
         non_responsive_tasks_watchdog {
@@ -389,11 +400,6 @@ Modify the following settings for the watchdog:
         }
     }
    ```
-   
-   :::tip
-   If the `services.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
-   an alternate folder you configured), and input the modified configuration
-   :::
         
 1. Restart ClearML Server.
 
