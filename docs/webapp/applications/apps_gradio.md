@@ -20,6 +20,7 @@ The Gradio Launcher relies on the ClearML Traffic Router which implements user a
 to the IP/port served by the Gradio app. 
 
 If the ClearML AI application Gateway is not available, the Gradio app might not be accessible.
+For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
 Once you start a Gradio launcher instance, you can view the following information in its dashboard:

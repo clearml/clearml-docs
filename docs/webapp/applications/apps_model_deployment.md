@@ -17,6 +17,7 @@ The vLLM Model Deployment app makes use of the ClearML Traffic Router which impl
 network endpoint for the model.
 
 If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.
+For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
 Once you start a vLLM Model Deployment instance, you can view the following information in its dashboard:

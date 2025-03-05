@@ -103,7 +103,8 @@ these credentials cannot be recovered.
 The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
-The AI Application Gateway enables external access to ClearML tasks and applications. The gateway is configured with an 
+The [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md) enables external access to ClearML 
+tasks and applications. The gateway is configured with an 
 endpoint or external address (ingress), accessible from outside ClearML.
 
 Generate tokens providing API access to the AI Application Gateway endpoints:
