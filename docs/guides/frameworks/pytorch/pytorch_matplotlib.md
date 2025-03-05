@@ -22,7 +22,7 @@ Select a debug sample by metric.
 ![Debug sample selection](../../../img/examples_pytorch_matplotlib_02a.png#light-mode-only)
 ![Debug sample selection](../../../img/examples_pytorch_matplotlib_02a_dark.png#dark-mode-only)
 
-Click a debug simple ti view it in the image viewer.
+Click a debug sample to view it in the image viewer.
 
 ![Debug sample image viewer](../../../img/examples_pytorch_matplotlib_02b.png#light-mode-only)
 ![Debug sample image viewer](../../../img/examples_pytorch_matplotlib_02b_dark.png#dark-mode-only)
