@@ -76,19 +76,31 @@ cloud of your choice (AWS, GCP, Azure) and automatically deploy ClearML agents: 
 and shuts down instances as needed, according to a resource budget that you set.
 
 
-### Cloning, Editing, and Enqueuing
+### Reproducing Tasks
 
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)
 
-Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
-with the new configuration on a remote machine:
+Use ClearML's web interface to reproduce tasks and edit their details, like hyperparameters or input models, then execute the task 
+with the new configuration on a remote machine.
+
+When ClearML is integrated into a script, it captures and stores configurations, such as hyperparameters 
+and model settings. Typically, when a ClearML Agent re-executes a task, the agent users the values stored in the task,
+overriding any execution-time settings. ignores configuration in the execution parameters, and 
+uses the values stored on the task. If any of these configurations are later modified in the UI, ClearML prioritizes the 
+stored values and overrides any execution-time settings.
+
+However, for tasks using Transformers, an exception to this behavior is sometimes needed—ensuring that 
+execution-time parameters (such as environment variables) take precedence instead 
+of the values stored in the task. For ClearML Agent to run as it typically does, using values stored on the task
+and allowing UI overrides, you need to set the `_ignore_hparams_ui_overrides_` and `_ignore_model_config_ui_overrides_` variables
+to `False` in the task's **CONFIGURATION > HYPERPARAMETERS > Transformers** section.. 
+
+To reproduce a ClearML task with Hugging Face Transformers while allowing UI overrides:
 1. Clone the task
-1. Edit the hyperparameters and/or other details 
-   * Ensure that `_ignore_hparams_ui_overrides` is set to `False` in the **CONFIGURATION > HYPERPARAMETERS > Transformers** section. 
-   This allows the task to use the new hyperparameter values during execution.
-   * Ensure that `_ignore_model_config_ui_overrides` is set to `False` in the **CONFIGURATION > CONFIGURATION OBJECTS > Model Configuration** 
-   section. This allows the task to use the new model configuration values during execution.
+1. Optionally, edit the hyperparameters and/or other details. Set both `_ignore_hparams_ui_overrides_` and `_ignore_model_config_ui_overrides_` 
+   to `False` in the **CONFIGURATION > HYPERPARAMETERS > Transformers** section. This allows the task to use the new hyperparameter and model
+   configuration values respectively during execution.
 1. Enqueue the task
 
 The ClearML Agent executing the task will use the new values to [override any hard coded values](../clearml_agent.md). 
