@@ -67,7 +67,12 @@ def main(pickle_url, mock_parameter='mock'):
 When the function is called, a corresponding ClearML Controller Task is created: its arguments are logged as the task's 
 parameters. When launching a new pipeline run from the [UI](../webapp/pipelines/webapp_pipeline_page.md), you can modify their values for the new run.  
 
-![Pipeline new run](../img/pipelines_new_run.png)
+<div class="max-w-75">
+
+![Pipeline new run](../img/pipelines_new_run.png#light-mode-only)
+![Pipeline new run](../img/pipelines_new_run_dark.png#dark-mode-only)
+
+</div>
 
 ## @PipelineDecorator.component
 Using the [`@PipelineDecorator.component`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorcomponent) 

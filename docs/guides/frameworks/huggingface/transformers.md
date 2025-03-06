@@ -36,7 +36,8 @@ ClearML captures all of the `TrainingArguments` passed to the Trainer.
 
 View these parameters in the task's **CONFIGURATION** tab **> Hyperparameters** section.
 
-![Transformers params](../../../img/examples_transformers_params.png)
+![Transformers params](../../../img/examples_transformers_params.png#light-mode-only)
+![Transformers params](../../../img/examples_transformers_params_dark.png#dark-mode-only)
 
 
 ### Models 
@@ -47,10 +48,12 @@ variable is set to `True`.
 ClearML automatically captures the model snapshots created by the Trainer, and saves them as artifacts. View the snapshots in the 
 task's **ARTIFACTS** tab.
 
-![Transformers models](../../../img/examples_transformers_artifacts.png)
+![Transformers models](../../../img/examples_transformers_artifacts.png#light-mode-only)
+![Transformers models](../../../img/examples_transformers_artifacts_dark.png#dark-mode-only)
 
 ### Scalars
 
 ClearML automatically captures the Trainer's scalars, which can be viewed in the task's **Scalars** tab.
 
-![Transformers scalars](../../../img/integrations_transformers_scalars.png)
+![Transformers scalars](../../../img/integrations_transformers_scalars.png#light-mode-only)
+![Transformers scalars](../../../img/integrations_transformers_scalars_dark.png#dark-mode-only)

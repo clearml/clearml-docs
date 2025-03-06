@@ -26,14 +26,17 @@ Task.current_task().connect(additional_parameters)
 
 Command line options appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **Args**.
 
-![image](../../img/examples_subprocess_example_01.png)
+![Hyperparameter Args](../../img/examples_subprocess_example_01.png#light-mode-only)
+![Hyperparameter Args](../../img/examples_subprocess_example_01_dark.png#dark-mode-only)
 
 Parameter dictionaries appear in **General**.
 
-![image](../../img/examples_subprocess_example_01a.png)
+![Hyperparameter General](../../img/examples_subprocess_example_01a.png#light-mode-only)
+![Hyperparameter General](../../img/examples_subprocess_example_01a_dark.png#dark-mode-only)
 
 ## Console
 
 Output to the console, including the text messages from the Task in each subprocess, appear in **CONSOLE**.
 
-![image](../../img/examples_subprocess_example_02.png)
+![Console](../../img/examples_subprocess_example_02.png#light-mode-only)
+![Console](../../img/examples_subprocess_example_02_dark.png#dark-mode-only)

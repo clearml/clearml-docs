@@ -42,7 +42,12 @@ These parameters can be programmatically injected into a step's configuration us
 When launching a new pipeline run from the [UI](../webapp/pipelines/webapp_pipeline_table.md), you can modify their 
 values for the new run.  
 
-![Pipeline new run](../img/pipelines_new_run.png)
+<div class="max-w-75">
+
+![Pipeline new run](../img/pipelines_new_run.png#light-mode-only)
+![Pipeline new run](../img/pipelines_new_run_dark.png#dark-mode-only)
+
+</div>
 
 ### Additional Configuration 
 You can connect configuration dictionaries or files to a pipeline controller using 

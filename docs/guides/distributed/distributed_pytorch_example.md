@@ -34,7 +34,8 @@ Task.current_task().upload_artifact(
 
 All of these artifacts appear in the main Task under **ARTIFACTS** **>** **OTHER**.
 
-![Task artifacts](../../img/examples_pytorch_distributed_example_09.png)
+![Task artifacts](../../img/examples_pytorch_distributed_example_09.png#light-mode-only)
+![Task artifacts](../../img/examples_pytorch_distributed_example_09_dark.png#dark-mode-only)
 
 ## Scalars
 
@@ -54,7 +55,8 @@ Task.current_task().get_logger().report_scalar(
 
 The single scalar plot for loss appears in **SCALARS**.
 
-![Task scalars](../../img/examples_pytorch_distributed_example_08.png)
+![Task scalars](../../img/examples_pytorch_distributed_example_08.png#light-mode-only)
+![Task scalars](../../img/examples_pytorch_distributed_example_08_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
@@ -69,12 +71,15 @@ Task.current_task().connect(param)
 
 All the hyperparameters appear in **CONFIGURATION** **>** **HYPERPARAMETERS**.
 
-![Task hyperparameters Args](../../img/examples_pytorch_distributed_example_01.png)
+![Task hyperparameters Args](../../img/examples_pytorch_distributed_example_01.png#light-mode-only)
+![Task hyperparameters Args](../../img/examples_pytorch_distributed_example_01_dark.png#dark-mode-only)
 
-![Task hyperparameters General ](../../img/examples_pytorch_distributed_example_01a.png)
+![Task hyperparameters General ](../../img/examples_pytorch_distributed_example_02.png#light-mode-only)
+![Task hyperparameters General ](../../img/examples_pytorch_distributed_example_02_dark.png#dark-mode-only)
 
 ## Console
 
 Output to the console, including the text messages printed from the main Task object and each subprocess appear in **CONSOLE**.
 
-![Task console log](../../img/examples_pytorch_distributed_example_06.png)
+![Task console log](../../img/examples_pytorch_distributed_example_06.png#light-mode-only)
+![Task console log](../../img/examples_pytorch_distributed_example_06_dark.png#dark-mode-only)

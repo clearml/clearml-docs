@@ -620,6 +620,15 @@ html[data-theme=dark] .medium-zoom-image.medium-zoom-image--opened {border-radiu
 [data-theme='dark'] img[src$='#light-mode-only'] {
   display: none;
 }
+
+[data-theme='dark'] .light-mode-only {
+  display: none;
+}
+
+[data-theme='light'] .dark-mode-only {
+  display: none;
+}
+
 /* table */
 .markdown table {
   border-spacing: 0;

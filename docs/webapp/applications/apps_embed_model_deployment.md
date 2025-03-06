@@ -16,7 +16,8 @@ endpoint activity and shuts down if the model remains inactive for a specified m
 The Embedding Model Deployment app makes use of the ClearML Traffic Router which implements a secure, authenticated 
 network endpoint for the model.
 
-If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.
+If the ClearML AI application Gateway is not available, the model endpoint might not be accessible. 
+For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
 After starting an Embedding Model Deployment instance, you can view the following information in its dashboard:

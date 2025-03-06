@@ -31,4 +31,5 @@ the `examples` project. This starts the parameter search, and creates the tasks:
 
 When these tasks are completed, their [results can be compared](../../webapp/webapp_exp_comparing.md).
 
-![Comparison parallel coordinates](../../img/examples_hpo_parallel_coordinates.png)
+![Comparison parallel coordinates](../../img/examples_hpo_parallel_coordinates.png#light-mode-only)
+![Comparison parallel coordinates](../../img/examples_hpo_parallel_coordinates_dark.png#dark-mode-only)

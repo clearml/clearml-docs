@@ -57,24 +57,28 @@ Logger.current_logger().report_scalar(
 
 These scalars can be visualized in plots, which appear in the ClearML web UI, in the task's **SCALARS** tab. 
 
-![Task Scalars](../../img/examples_pytorch_mnist_07.png)
+![Task Scalars](../../img/examples_pytorch_mnist_07.png#light-mode-only)
+![Task Scalars](../../img/examples_pytorch_mnist_07_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs command line options defined with `argparse`. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **Args**.
 
-![Task hyperparameters](../../img/examples_pytorch_mnist_01.png)
+![Task hyperparameters](../../img/examples_pytorch_mnist_01.png#light-mode-only)
+![Task hyperparameters](../../img/examples_pytorch_mnist_01_dark.png#dark-mode-only)
 
 ## Console
 
 Text printed to the console for training progress, as well as all other console output, appear in **CONSOLE**.
 
-![Task console log](../../img/examples_pytorch_mnist_06.png)
+![Task console log](../../img/examples_pytorch_mnist_06.png#light-mode-only)
+![Task console log](../../img/examples_pytorch_mnist_06_dark.png#dark-mode-only)
 
 ## Artifacts
 
 Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks models
 and any snapshots created using PyTorch. 
 
-![Task artifacts](../../img/examples_remote_execution_artifacts.png)
+![Task artifacts](../../img/examples_remote_execution_artifacts.png#light-mode-only)
+![Task artifacts](../../img/examples_remote_execution_artifacts_dark.png#dark-mode-only)
 

@@ -50,7 +50,8 @@ To log the models created during training, set the `CLEARML_LOG_MODEL` environme
 
 You can see all the captured data in the task's page of the ClearML [WebApp](../webapp/webapp_exp_track_visual.md). 
 
-![transformers scalars](../img/integrations_transformers_scalars.png)
+![transformers scalars](../img/integrations_transformers_scalars.png#light-mode-only)
+![transformers scalars](../img/integrations_transformers_scalars_dark.png#dark-mode-only)
 
 Additionally, you can view all of your Transformers runs tracked by ClearML in the [Task Table](../webapp/webapp_model_table.md). 
 Add custom columns to the table, such as mAP values, so you can easily sort and see what is the best performing model. 

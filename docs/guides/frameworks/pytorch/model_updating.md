@@ -83,18 +83,22 @@ if CONDITION:
 ## WebApp
 The model appears in the task's **ARTIFACTS** tab. 
 
-![Task artifacts](../../../img/examples_model_update_artifacts.png)
+![Task artifacts](../../../img/examples_model_update_artifacts.png#light-mode-only)
+![Task artifacts](../../../img/examples_model_update_artifacts_dark.png#dark-mode-only)
 
 Clicking on the model name takes you to the [model's page](../../../webapp/webapp_model_viewing.md), where you can view the 
 model's details and access the model.
 
-![Model page](../../../img/examples_model_update_model.png)
+![Model page](../../../img/examples_model_update_model.png#light-mode-only)
+![Model page](../../../img/examples_model_update_model_dark.png#dark-mode-only)
 
 The model's **NETWORK** tab displays its configuration.
 
-![Model network tab](../../../img/examples_model_update_network.png)
+![Model network tab](../../../img/examples_model_update_network.png#light-mode-only)
+![Model network tab](../../../img/examples_model_update_network_dark.png#dark-mode-only)
 
 The model's **LABELS** tab displays its label enumeration.
 
-![Model labels](../../../img/examples_model_update_labels.png)
+![Model labels](../../../img/examples_model_update_labels.png#light-mode-only)
+![Model labels](../../../img/examples_model_update_labels_dark.png#dark-mode-only)
 

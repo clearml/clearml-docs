@@ -137,7 +137,8 @@ the following numbers are displayed:
 * API server version
 * API version
 
-![Server version information](img/faq_server_versions.png)
+![Server version information](img/faq_server_versions.png#light-mode-only)
+![Server version information](img/faq_server_versions_dark.png#dark-mode-only)
 
 ClearML Python package information can be obtained by using `pip freeze`.
 
@@ -593,7 +594,8 @@ Due to speed/optimization issues, the console displays only the last several hun
 You can always download the full log as a file using the ClearML Web UI. In the **ClearML Web UI >** task's **CONSOLE** 
 tab, click `Download full log`.
 
-![Download console log](img/faq_download_console_log.png)
+![Download console log](img/faq_download_console_log.png#light-mode-only)
+![Download console log](img/faq_download_console_log_dark.png#dark-mode-only)
 
 <br/>
 
@@ -604,17 +606,19 @@ and accuracy values of several tasks. In the task comparison page, under the **H
 you can visualize tasks' hyperparameter values in relation to performance metrics in a scatter plot or parallel
 coordinates plot:
 * [Scatter plot](webapp/webapp_exp_comparing.md#scatter-plot): View the correlation between a selected hyperparameter and 
-  metric. For example, the image below shows a scatter plot that displays the values of a performance metric (`epoch_accuracy`) 
+  metric. For example, the image below shows a scatter plot that displays the values of a performance metric (`accuracy`) 
   and a hyperparameter (`epochs`) of a few tasks:
   
-  ![Scatter plot comparison](img/faq_compare_scatter.png)
+  ![Scatter plot comparison](img/faq_compare_scatter.png#light-mode-only)
+  ![Scatter plot comparison](img/faq_compare_scatter_dark.png#dark-mode-only)
 
 * [Parallel coordinates plot](webapp/webapp_exp_comparing.md#parallel-coordinates-mode): View the impact of hyperparameters 
   on selected metric(s). For example, the image below shows 
-  a parallel coordinates plot which displays the values of selected hyperparameters (`base_lr`, `batch_size`, and 
-  `number_of_epochs`) and a performance metric (`accuracy`) of three tasks: 
+  a parallel coordinates plot which displays the values of selected hyperparameters (`epochs`, `lr`, and `batch_size`) 
+  and a performance metric (`accuracy`) of a few tasks: 
 
-  ![Parallel Coordinates](img/compare_parallel_coordinates.png)
+  ![Parallel Coordinates](img/compare_parallel_coordinates.png#light-mode-only)
+  ![Parallel Coordinates](img/compare_parallel_coordinates_dark.png#dark-mode-only)
 
 <br/>
 
