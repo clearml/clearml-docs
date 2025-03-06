@@ -167,7 +167,7 @@ cloud of your choice (AWS, GCP, Azure) and automatically deploy ClearML agents: 
 and shuts down instances as needed, according to a resource budget that you set.
 
 
-### Cloning, Editing, and Enqueuing
+### Reproducing Tasks
 
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)

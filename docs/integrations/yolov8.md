@@ -112,7 +112,7 @@ cloud of your choice (AWS, GCP, Azure) and automatically deploy ClearML agents: 
 shuts down instances as needed, according to a resource budget that you set.
 
 
-### Cloning, Editing, and Enqueuing
+### Reproducing Tasks
 
 ClearML logs all the information required to reproduce a task, but you may also want to change a few parameters 
 and task details when you re-run it, which you can do through ClearML's UI.

@@ -7,7 +7,7 @@ slug: /
 # ClearML Documentation
 
 ## Overview
-Welcome to the documentation for ClearML, the end to end platform for streamlining AI development and deployment. ClearML consists of three essential layers:
+Welcome to the documentation for ClearML, the end-to-end platform for streamlining AI development and deployment. ClearML consists of three essential layers:
 1. [**Infrastructure Control Plane**](#infrastructure-control-plane) (Cloud/On-Prem Agnostic)
 2. [**AI Development Center**](#ai-development-center)
 3. [**GenAI App Engine**](#genai-app-engine)
