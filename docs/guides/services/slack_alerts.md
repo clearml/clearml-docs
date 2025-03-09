@@ -6,11 +6,12 @@ The [Slack alerts example](https://github.com/clearml/clearml/blob/master/exampl
 demonstrates how to use the `clearml.automation.monitor` class to implement a service that monitors the completion and 
 failure of tasks, and posts alert messages on a Slack channel.
 
-![Slack alert example](../../img/examples_slack_alerts.png)
+![Slack alert example](../../img/examples_slack_alerts.png#light-mode-only)
+![Slack alert example](../../img/examples_slack_alerts_dark.png#dark-mode-only)
 
-## Creating a Slack Bot
+## Creating a Slackbot
 
-Before configuring and running the Slack alert service, create a Slack Bot (**ClearML Bot**). 
+Before configuring and running the Slack alert service, create a Slackbot (**ClearML Bot**). 
 
 :::important
 The Slack API token and channel you create are required to configure the Slack alert service.
