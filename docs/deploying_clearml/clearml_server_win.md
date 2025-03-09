@@ -54,7 +54,7 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
    mkdir c:\opt\clearml\logs
    ```
 
-1. Save the ClearML Server docker-compose YAML file.
+1. Save the ClearML Server `docker-compose` YAML file.
  
    ```   
    curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml

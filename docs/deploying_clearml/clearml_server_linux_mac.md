@@ -5,8 +5,8 @@ title: Linux and macOS
 Deploy the ClearML Server in Linux or macOS using the pre-built Docker image.
 
 For ClearML docker images, including previous versions, see [https://hub.docker.com/r/allegroai/clearml](https://hub.docker.com/r/allegroai/clearml). 
-However, pulling the ClearML Docker image directly is not required. ClearML provides a docker-compose YAML file that does this. 
-The docker-compose file is included in the instructions on this page.
+However, pulling the ClearML Docker image directly is not required. ClearML provides a `docker-compose` YAML file that does this. 
+The `docker-compose` file is included in the instructions on this page.
 
 For information about upgrading ClearML Server in Linux or macOS, see [here](upgrade_server_linux_mac.md).
 
@@ -134,7 +134,7 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
        sudo chown -R $(whoami):staff /opt/clearml
        ```
 
-2. Download the ClearML Server docker-compose YAML file.
+2. Download the ClearML Server `docker-compose` YAML file.
       ```
       sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
       ```

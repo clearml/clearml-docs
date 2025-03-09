@@ -212,7 +212,7 @@ Example:
 ClearML serving instances send serving statistics (count/latency) automatically to Prometheus and Grafana can be used 
 to visualize and create live dashboards. 
 
-The default docker-compose installation is preconfigured with Prometheus and Grafana. Notice that by default data/ate 
+The default `docker-compose` installation is preconfigured with Prometheus and Grafana. Notice that by default data/ate 
 of both containers is *not* persistent. To add persistence, adding a volume mount is recommended.
 
 You can also add many custom metrics on the input/predictions of your models. Once a model endpoint is registered, 

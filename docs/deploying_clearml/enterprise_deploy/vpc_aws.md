@@ -8,7 +8,7 @@ It covers the following:
 * Set up security groups and IAM role
 * Create EC2 instance with required disks
 * Install dependencies and mount disks
-* Deploy ClearML version using docker-compose
+* Deploy ClearML version using `docker-compose`
 * Set up load balancer and DNS
 * Set up server backup 
 

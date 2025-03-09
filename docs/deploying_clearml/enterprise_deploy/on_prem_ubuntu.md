@@ -165,9 +165,12 @@ should be reviewed and modified prior to the server installation
    sudo docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_PASSWORD
    ```
    
-1. Start the `docker-compose`  by changing directories to the directory containing the docker-compose files and running the following command:
-sudo docker-compose --env-file constants.env up -d
-
+1. Start the `docker-compose`  by changing directories to the directory containing the `docker-compose` files and running the following command:
+   
+   ```
+   sudo docker-compose --env-file constants.env up -d
+   ```
+   
 1. Verify web access by browsing to your URL (IP address) and port 8080.
 
    ```
