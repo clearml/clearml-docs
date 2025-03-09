@@ -284,7 +284,7 @@ log would usually indicate the reason for the failure.
 
 ## Maintenance
 
-### Removing app containers
+### Removing App Containers
 
 To remove old application containers, add the following to the cron:
 
