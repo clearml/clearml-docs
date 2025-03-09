@@ -18,22 +18,26 @@ The example does the following:
 
 The loss and accuracy metric scalar plots appear in **SCALARS**, along with the resource utilization plots, which are titled **:monitor: machine**.
 
-![image](../../../img/examples_keras_jupyter_08.png)
+![Scalars](../../../img/examples_keras_jupyter_08.png#light-mode-only)
+![Scalars](../../../img/examples_keras_jupyter_08_dark.png#dark-mode-only)
 
 ## Plots
 
 The example calls Matplotlib methods to create several sample plots, and TensorBoard methods to plot histograms for layer density. 
 They appear in **PLOTS**.
 
-![image](../../../img/examples_keras_jupyter_03.png)
+![Plots 1](../../../img/examples_keras_jupyter_03.png#light-mode-only)
+![Plots 1](../../../img/examples_keras_jupyter_03_dark.png#dark-mode-only)
 
-![image](../../../img/examples_keras_jupyter_03a.png)
+![Plots 2](../../../img/examples_keras_jupyter_03a.png#light-mode-only)
+![Plots 2](../../../img/examples_keras_jupyter_03a_dark.png#dark-mode-only)
 
 ## Debug Samples
 
 The example calls Matplotlib methods to log debug sample images. They appear in **DEBUG SAMPLES**.
 
-![image](../../../img/examples_keras_jupyter_04.png)
+![Debug Samples](../../../img/examples_keras_jupyter_04.png#light-mode-only)
+![Debug Samples](../../../img/examples_keras_jupyter_04_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
@@ -55,17 +59,20 @@ task_params['hidden_dim'] = 512
 
 Parameter dictionaries appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **General**.
 
-![image](../../../img/examples_keras_jupyter_20.png)
+![General Hyperparameters](../../../img/examples_keras_jupyter_20.png#light-mode-only)
+![General Hyperparameters](../../../img/examples_keras_jupyter_20_dark.png#dark-mode-only)
 
 The TensorFlow Definitions appear in the **TF_DEFINE** subsection.
 
-![image](../../../img/examples_keras_jupyter_21.png)
+![TF Define](../../../img/examples_keras_jupyter_21.png#light-mode-only)
+![TF Define](../../../img/examples_keras_jupyter_21_dark.png#dark-mode-only)
 
 ## Console
 
 Text printed to the console for training appears in **CONSOLE**.
 
-![image](../../../img/examples_keras_jupyter_07.png)
+![Console Log](../../../img/examples_keras_jupyter_07.png#light-mode-only)
+![Console Log](../../../img/examples_keras_jupyter_07_dark.png#dark-mode-only)
 
 ## Artifacts
 
@@ -74,9 +81,11 @@ created using Keras.
 
 The task info panel shows model tracking, including the model name and design in **ARTIFACTS** **>** **Output Model**.
 
-![image](../../../img/examples_keras_jupyter_23.png)
+![Artifacts](../../../img/examples_keras_jupyter_23.png#light-mode-only)
+![Artifacts](../../../img/examples_keras_jupyter_23_dark.png#dark-mode-only)
 
 Clicking on the model name takes you to the [model's page](../../../webapp/webapp_model_viewing.md), where you can view 
 the model's details and access the model.
 
-![image](../../../img/examples_keras_jupyter_24.png)
+![Model details](../../../img/examples_keras_jupyter_24.png#light-mode-only)
+![Model details](../../../img/examples_keras_jupyter_24_dark.png#dark-mode-only)

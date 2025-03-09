@@ -53,16 +53,19 @@ You can view all the task details in the [WebApp](../webapp/webapp_exp_track_vis
 
 ClearML logs the scalars from training each network. They appear in the task's **SCALARS** tab in the Web UI.
 
-![Optimization scalars](../img/integration_keras_tuner_06.png)
+![Optimization scalars](../img/integration_keras_tuner_06.png#light-mode-only)
+![Optimization scalars](../img/integration_keras_tuner_06_dark.png#dark-mode-only)
 
 ClearML automatically logs the parameters of each task run in the hyperparameter search. They appear in tabular 
 form in the task's **PLOTS**.
 
-![Optimization plot](../img/integration_keras_tuner_07.png)
+![Optimization plot](../img/integration_keras_tuner_07.png#light-mode-only)
+![Optimization plot](../img/integration_keras_tuner_07_dark.png#dark-mode-only)
 
 ClearML automatically stores the output model. It appears in the task's **ARTIFACTS** **>** **Output Model**.
 
-![output model](../img/integration_keras_tuner_03.png)
+![output model](../img/integration_keras_tuner_03.png#light-mode-only)
+![output model](../img/integration_keras_tuner_03_dark.png#dark-mode-only)
 
 ## Example 
 

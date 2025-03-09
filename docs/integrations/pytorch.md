@@ -28,7 +28,8 @@ And that's it! This creates a [ClearML Task](../fundamentals/task.md) which capt
 
 You can view all the task details in the [WebApp](../webapp/webapp_overview.md). 
 
-![Pytorch webapp](../img/examples_pytorch_distributed_example_08.png)
+![Pytorch webapp](../img/examples_pytorch_distributed_example_08.png#light-mode-only)
+![Pytorch webapp](../img/examples_pytorch_distributed_example_08_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your PyTorch script, it captures PyTorch models. But, you may want to have 

@@ -31,7 +31,8 @@ You can view all the task details in the [WebApp](../webapp/webapp_overview.md).
 
 See an example of CatBoost and ClearML in action [here](../guides/frameworks/catboost/catboost.md).
 
-![Task scalars](../img/examples_catboost_scalars.png)
+![Task scalars](../img/examples_catboost_scalars.png#light-mode-only)
+![Task scalars](../img/examples_catboost_scalars_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your CatBoost script, it captures models, and 

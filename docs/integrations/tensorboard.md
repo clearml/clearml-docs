@@ -22,9 +22,11 @@ uncommitted code, Python environment, your TensorBoard metrics, plots, images, a
 
 View the TensorBoard outputs in the [WebApp](../webapp/webapp_overview.md), in the task's page.
 
-![TensorBoard WebApp scalars](../img/examples_pytorch_tensorboard_07.png)
+![TensorBoard WebApp scalars](../img/examples_pytorch_tensorboard_07.png#light-mode-only)
+![TensorBoard WebApp scalars](../img/examples_pytorch_tensorboard_07_dark.png#dark-mode-only)
 
-![Tensorboard WebApp debug samples](../img/examples_tensorboard_toy_pytorch_02.png)
+![Tensorboard WebApp debug samples](../img/examples_tensorboard_toy_pytorch_02.png#light-mode-only)
+![Tensorboard WebApp debug samples](../img/examples_tensorboard_toy_pytorch_02_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your script, it captures all of your TensorBoard plots, images, and metrics. 

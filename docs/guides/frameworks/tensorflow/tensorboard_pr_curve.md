@@ -20,24 +20,29 @@ In the **ClearML Web UI**, the PR Curve summaries appear in the task's page unde
 
 * Blue PR curves
 
-  ![image](../../../img/examples_tensorboard_pr_curve_01.png)
+  ![Blue PR curves](../../../img/examples_tensorboard_pr_curve_01.png#light-mode-only)
+  ![Blue PR curves](../../../img/examples_tensorboard_pr_curve_01_dark.png#dark-mode-only)
 
 * Green PR curves
 
-  ![image](../../../img/examples_tensorboard_pr_curve_02.png)
+  ![Green PR curves](../../../img/examples_tensorboard_pr_curve_02.png#light-mode-only)
+  ![Green PR curves](../../../img/examples_tensorboard_pr_curve_02_dark.png#dark-mode-only)
 
 * Red PR curves
 
-  ![image](../../../img/examples_tensorboard_pr_curve_03.png)
+  ![Red PR curves](../../../img/examples_tensorboard_pr_curve_03.png#light-mode-only)
+  ![Red PR curves](../../../img/examples_tensorboard_pr_curve_03_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs TensorFlow Definitions. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **TF_DEFINE**.
 
-![image](../../../img/examples_tensorboard_pr_curve_04.png)
+![Hyperparameters](../../../img/examples_tensorboard_pr_curve_04.png#light-mode-only)
+![Hyperparameters](../../../img/examples_tensorboard_pr_curve_04_dark.png#dark-mode-only)
 
 ## Console
 
-All other console output appears in **CONSOLE**.
+All console output appears in **CONSOLE** tab.
 
-![image](../../../img/examples_tensorboard_pr_curve_05.png)
+![Console log](../../../img/examples_tensorboard_pr_curve_05.png#light-mode-only)
+![Console log](../../../img/examples_tensorboard_pr_curve_05_dark.png#dark-mode-only)

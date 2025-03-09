@@ -14,25 +14,29 @@ project.
 The `tf.summary.scalar` output appears in the ClearML web UI, in the task's 
 **SCALARS**. Resource utilization plots, which are titled **:monitor: machine**, also appear in the **SCALARS** tab.
 
-![image](../../../img/examples_tensorboard_toy_03.png)
+![Scalars](../../../img/examples_tensorboard_toy_03.png#light-mode-only)
+![Scalars](../../../img/examples_tensorboard_toy_03_dark.png#dark-mode-only)
 
 ## Plots
 
 The `tf.summary.histogram` output appears in **PLOTS**.
 
-![image](../../../img/examples_tensorboard_toy_04.png)
+![Plots](../../../img/examples_tensorboard_toy_04.png#light-mode-only)
+![Plots](../../../img/examples_tensorboard_toy_04_dark.png#dark-mode-only)
 
 ## Debug Samples
 
 ClearML automatically tracks images and text output to TensorFlow. They appear in **DEBUG SAMPLES**.
 
-![image](../../../img/examples_tensorboard_toy_05.png)
+![Debug Samples](../../../img/examples_tensorboard_toy_05.png#light-mode-only)
+![Debug Samples](../../../img/examples_tensorboard_toy_05_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs TensorFlow Definitions. They appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** 
 **TF_DEFINE**.
 
-![image](../../../img/examples_tensorboard_toy_01.png)
+![Hyperparameters](../../../img/examples_tensorboard_toy_01.png#light-mode-only)
+![Hyperparameters](../../../img/examples_tensorboard_toy_01_dark.png#dark-mode-only)
 
 

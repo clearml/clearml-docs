@@ -51,7 +51,8 @@ except ImportError:
 
 You can view all the task details in the [WebApp](../webapp/webapp_overview.md). 
 
-![Task scalars](../img/examples_xgboost_metric_scalars.png)
+![Task scalars](../img/examples_xgboost_metric_scalars.png#light-mode-only)
+![Task scalars](../img/examples_xgboost_metric_scalars_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your XGBoost script, it captures models, and 
