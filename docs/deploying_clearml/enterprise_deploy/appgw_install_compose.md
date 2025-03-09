@@ -13,11 +13,11 @@ The Application Gateway is available under the ClearML Enterprise plan.
 * Credentials for the ClearML/allegroai docker repository  
 * A valid ClearML Server installation
 
-## Host configurations
+## Host Configurations
 
-### Docker installation
+### Docker Installation
 
-Installing docker and docker-compose might vary depending on the specific operating system you’re using. Here is an example for AmazonLinux:
+Installing `docker` and `docker-compose` might vary depending on the specific operating system you’re using. Here is an example for AmazonLinux:
 
 ```
 sudo dnf -y install docker
@@ -33,9 +33,9 @@ sudo docker login
 
 Use the ClearML/allegroai dockerhub credentials when prompted by docker login.
 
-### Docker-compose file
+### Docker-compose File
 
-This is an example of the docker-compose file you will need:
+This is an example of the `docker-compose` file you will need:
 
 ```
 version: '3.5'
@@ -121,11 +121,11 @@ Run the following command to start the router:
 sudo docker compose --env-file runtime.env up -d
 ```
 
-:::Note How to find my jwkskey
+:::note How to find my jwkskey
 
 The *JSON Web Key Set* (*JWKS*) is a set of keys containing the public keys used to verify any JSON Web Token (JWT).
 
-In a docker-compose server installation, this can be found in the `CLEARML__secure__auth__token_secret` env var in the apiserver server component.
+In a `docker-compose` server installation, this can be found in the `CLEARML__secure__auth__token_secret` env var in the apiserver server component.
 
 :::
 

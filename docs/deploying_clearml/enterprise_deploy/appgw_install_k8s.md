@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-page
 --password <GITHUB_TOKEN>
 ```
 
-### Prepare values
+### Prepare Values
 
 Before installing the TTR create an helm-override files named `task-traffic-router.values-override.yaml`:
 

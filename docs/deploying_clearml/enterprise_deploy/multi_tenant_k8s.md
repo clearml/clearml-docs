@@ -305,9 +305,9 @@ spec:
           kubernetes.io/metadata.name: clearml
 ```
 
-## Applications Installation
+## Application Installation
 
-To install ClearML GUI applications, follow these steps: 
+To install ClearML GUI applications: 
 
 1. Get the apps to install and the installation script by downloading and extracting the archive provided by ClearML
 
@@ -491,7 +491,7 @@ To install the ClearML Agent Chart, follow these steps:
    -d '{"name":"default"}'
    ```
 
-### Tenant Namespace isolation with NetworkPolicies
+### Tenant Namespace Isolation with NetworkPolicies
 
 To ensure network isolation for each tenant, you need to create a `NetworkPolicy` in the tenant namespace. This way 
 the entire namespace/tenant will not accept any connection from other namespaces. 
