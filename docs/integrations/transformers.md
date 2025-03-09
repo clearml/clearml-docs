@@ -86,15 +86,14 @@ Use ClearML's web interface to reproduce tasks and edit their details, like hype
 with the new configuration on a remote machine.
 
 When ClearML is integrated into a script, it captures and stores configurations, such as hyperparameters 
-and model settings. Typically, when a ClearML Agent re-executes a task, the agent users the values stored in the task,
-overriding any execution-time settings. This means that if you edit a parameter in the UI, the new value is stored in the 
-task and will be used during execution, taking precedence over any hard-coded values.
+and model settings. When executing a task, the ClearML Agent will, by default, override runtime configuration values 
+(such as hyperparameters and environment variables) with the values specified in the task.
 
 However, for tasks using Transformers, the default behavior is different. By default, Transformers tasks ignore UI 
 overrides and use execution-time parameters (such as environment variables).  This is done to prevent potential issues 
 with environment-specific settings when running tasks on different machines. 
 
-**To reproduce a ClearML task while allowing UI overrides:**
+**To rerun a task with modified configuration:**
 1. Clone the task
 1. Edit the hyperparameters and/or other details. 
 1. In the **CONFIGURATION > HYPERPARAMETERS > Transformers** section, set both `_ignore_hparams_ui_overrides_` and `_ignore_model_config_ui_overrides_` 
