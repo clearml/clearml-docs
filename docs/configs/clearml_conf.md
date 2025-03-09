@@ -515,8 +515,12 @@ These settings define which Docker image and arguments should be used unless [ex
 
 **`agent.package_manager`** (*dict*)
         
-* Dictionary containing the options for the Python package manager. The currently supported package managers are pip, conda, 
-  and, if the repository contains a `poetry.lock` file, poetry.
+* Dictionary containing the options for the Python package manager. 
+* The currently supported package managers are
+  * pip
+  * conda 
+  * uv, if the root repository contains a `uv.lock` or `pyproject.toml` file
+  * poetry, if the repository contains a `poetry.lock` or `pyproject.toml` file
         
 ---
         
@@ -661,13 +665,38 @@ Torch Nightly builds are ephemeral and are deleted from time to time.
     * `pip`
     * `conda`
     * `poetry`
+    * `uv`
   
 * If `pip` or `conda` are used, the agent installs the required packages based on the "Python Packages" section of the 
   Task. If the "Python Packages" section is empty, it will revert to using `requirements.txt` from the repository's root 
-  directory. If `poetry` is selected, and the root repository contains `poetry.lock` or `pyproject.toml`, the "Python 
+  directory. 
+* If `poetry` is selected, and the root repository contains `poetry.lock` or `pyproject.toml`, the "Python 
   Packages" section is ignored, and `poetry` is used. If `poetry` is selected and no lock file is found, it reverts to 
   `pip` package manager behaviour.
-  
+* If `uv` is selected, and the root repository contains `uv.lock` or `pyproject.toml`, the "Python 
+  Packages" section is ignored, and `uv` is used. If `uv` is selected and no lock file is found, it reverts to 
+  `pip` package manager behaviour.
+
+---
+
+**`agent.package_manager.uv_files_from_repo_working_dir`** (*bool*) 
+
+* If set to `true`, the agent will look for the `uv.lock` or `pyproject.toml` file in the provided directory path instead of 
+  the repository's root directory.
+
+---
+
+**`agent.package_manager.uv_sync_extra_args`** (*list*)
+
+* List extra command-line arguments to pass when using `uv`. 
+
+---
+
+**`agent.package_manager.uv_version`** (*string*)
+
+* The `uv` version requirements. For example, `">0.4"`, `"==0.4"`, `""` (empty string will install the latest version).
+
+
 <br/>
 
 #### agent.pip_download_cache

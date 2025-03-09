@@ -13,6 +13,7 @@ multiple tasks (see [Virtual Environment Reuse](clearml_agent_env_caching.md#vir
 ClearML Agent supports working with one of the following package managers: 
 * [`pip`](https://en.wikipedia.org/wiki/Pip_(package_manager)) (default)
 * [`conda`](https://docs.conda.io/en/latest/)
+* [`uv`](https://docs.astral.sh/uv/)
 * [`poetry`](https://python-poetry.org/)
 
 To change the package manager used by the agent, edit the [`package_manager.type`](../configs/clearml_conf.md#agentpackage_manager) 
