@@ -77,16 +77,29 @@ cloud of your choice (AWS, GCP, Azure) and automatically deploy ClearML agents: 
 and shuts down instances as needed, according to a resource budget that you set.
 
 
-### Cloning, Editing, and Enqueuing
+### Reproducing Tasks
 
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5.gif#light-mode-only)
 ![Cloning, editing, enqueuing gif](../img/gif/integrations_yolov5_dark.gif#dark-mode-only)
 
-Use ClearML's web interface to edit task details, like configuration parameters or input models, then execute the task 
-with the new configuration on a remote machine:
-* Clone the task
-* Edit the hyperparameters and/or other details 
-* Enqueue the task
+Use ClearML's web interface to reproduce tasks and edit their details, like hyperparameters or input models, then execute the tasks 
+with the new configuration on a remote machine.
+
+When ClearML is integrated into a script, it captures and stores configurations, such as hyperparameters 
+and model settings. When executing a task, the ClearML Agent will, by default, override runtime configuration values 
+(such as hyperparameters and environment variables) with the values specified in the task.
+
+However, for tasks using Transformers, the default behavior is different. By default, Transformers tasks ignore UI 
+overrides and use execution-time parameters (such as environment variables).  This is done to prevent potential issues 
+with environment-specific settings when running tasks on different machines. 
+
+**To rerun a task with modified configuration:**
+1. Clone the task
+1. Edit the hyperparameters and/or other details. 
+1. In the **CONFIGURATION > HYPERPARAMETERS > Transformers** section, set both `_ignore_hparams_ui_overrides_` and `_ignore_model_config_ui_overrides_` 
+   to `False` . This allows the task to use the new hyperparameter and model
+   configuration values respectively during execution.
+1. Enqueue the task
 
 The ClearML Agent executing the task will use the new values to [override any hard coded values](../clearml_agent.md). 
 
