@@ -103,17 +103,17 @@ Edit it according to the following guidelines:
 * `CLEARML_API_ACCESS_KEY`: ClearML server api key  
 * `CLEARML_API_SECRET_KEY`: ClearML server secret key  
 * `ROUTER_URL`: URL for this router that was previously configured in the load balancer starting with `https://`  
-* `ROUTER_NAME`: unique name for this router  
-* `AUTH_ENABLED`: enable or disable http calls authentication when the router is communicating with the ClearML server  
-* `SSL_VERIFY`: enable or disable SSL certificate validation when the router is communicating with the ClearML server  
-* `AUTH_COOKIE_NAME`: the cookie name used by the ClearML server to store the ClearML authentication cookie. This can usually be found in the `value_prefix` key starting with `allegro_token` in `envoy.yaml` file in the ClearML server installation (`/opt/allegro/config/envoy/envoy.yaml`) (see below)  
-* `AUTH_SECURE_ENABLED`: enable the Set-Cookie `secure` parameter  
-* `AUTH_BASE64_JWKS_KEY`: value form `k` key in the `jwks.json` file in the ClearML server installation  
+* `ROUTER_NAME`: Unique name for this router  
+* `AUTH_ENABLED`: Enable or disable http calls authentication when the router is communicating with the ClearML server  
+* `SSL_VERIFY`: Enable or disable SSL certificate validation when the router is communicating with the ClearML server  
+* `AUTH_COOKIE_NAME`: Cookie name used by the ClearML server to store the ClearML authentication cookie. This can usually be found in the `value_prefix` key starting with `allegro_token` in `envoy.yaml` file in the ClearML server installation (`/opt/allegro/config/envoy/envoy.yaml`) (see below)  
+* `AUTH_SECURE_ENABLED`: Enable the Set-Cookie `secure` parameter  
+* `AUTH_BASE64_JWKS_KEY`: Value form `k` key in the `jwks.json` file in the ClearML server installation  
 * `LISTEN_QUEUE_NAME`: (optional) name of queue to check for tasks (if none, every task is checked)  
-* `EXTRA_BASH_COMMAND`: command to be launched before starting the router  
-* `TCP_ROUTER_ADDRESS`: router external address, can be an IP or the host machine or a load balancer hostname, depends on network configuration  
-* `TCP_PORT_START`: start port for the TCP Session feature  
-* `TCP_PORT_END`: end port port for the TCP Session feature
+* `EXTRA_BASH_COMMAND`: Command to be launched before starting the router  
+* `TCP_ROUTER_ADDRESS`: Router external address, can be an IP or the host machine or a load balancer hostname, depends on network configuration  
+* `TCP_PORT_START`: Start port for the TCP Session feature  
+* `TCP_PORT_END`: End port for the TCP Session feature
 
 Run the following command to start the router:
 
