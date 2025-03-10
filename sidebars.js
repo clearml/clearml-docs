@@ -327,9 +327,10 @@ module.exports = {
             {
                 'Open Source':
                         [
-                           'release_notes/sdk/open_source/ver_1_17',
+                           'release_notes/sdk/open_source/ver_1_18',
                            {
                                 'Older Versions': [
+                                   'release_notes/sdk/open_source/ver_1_17',
                                    'release_notes/sdk/open_source/ver_1_16', 'release_notes/sdk/open_source/ver_1_15',
                                    'release_notes/sdk/open_source/ver_1_14', 'release_notes/sdk/open_source/ver_1_13',
                                    'release_notes/sdk/open_source/ver_1_12', 'release_notes/sdk/open_source/ver_1_11',
