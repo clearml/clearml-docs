@@ -117,10 +117,10 @@ Instance requirements:
 ## Load Balancer
 
 1. Create a TLS certificate:  
-   1. Choose a domain name to be used with the server. The main URL that will be used by the system’s users will be app.\<domain\>  
+   1. Choose a domain name to be used with the server. The main URL that will be used by the system’s users will be `app.<domain>`  
    2. Create a certificate, with the following DNS names:  
-      1. \<domain name\>  
-      2. \*.\<domain name\>
+      1. `<domain name>`  
+      2. `*.<domain name>`
 
 2. Create the `envoy` target group for the server:  
    1. Port: 10000  

@@ -43,7 +43,7 @@ should be reviewed and modified prior to the server installation
 ## Installing ClearML Server 
 ### Preliminary Steps 
 
-1. Install Docker CE
+1. Install Docker CE:
    
    ``` 
    https://docs.docker.com/install/linux/docker-ce/ubuntu/
@@ -113,10 +113,10 @@ should be reviewed and modified prior to the server installation
    sudo systemctl enable disable-thp
    ``` 
 
-1. Restart the machine
+1. Restart the machine.
 
 ### Installing the Server  
-1. Remove any previous installation of ClearML Server
+1. Remove any previous installation of ClearML Server:
 
    ```
    sudo rm -R /opt/clearml/
@@ -141,7 +141,7 @@ should be reviewed and modified prior to the server installation
    sudo mkdir -pv /opt/allegro/config/onprem_poc
    ```
 
-1. Copy the following ClearML configuration files to `/opt/allegro`
+1. Copy the following ClearML configuration files to `/opt/allegro`:
    * `constants.env`
    * `docker-compose.override.yml`
    * `docker-compose.yml`
@@ -171,7 +171,7 @@ should be reviewed and modified prior to the server installation
    sudo docker-compose --env-file constants.env up -d
    ```
    
-1. Verify web access by browsing to your URL (IP address) and port 8080.
+1. Verify web access by browsing to your URL (IP address) and port 8080:
 
    ```
    http://<server_ip_here>:8080
@@ -194,7 +194,10 @@ the following subdomains should be forwarded to the corresponding ports on the s
 * `https://app.<domain>` should be forwarded to port 8080
 * `https://files.<domain>` should be forwarded to port 8081
 
+
+:::warning
 **Critical: Ensure no other ports are open to maintain the highest level of security.**
+:::
 
 Additionally, ensure that the following URLs are correctly configured in the server's environment file:
 

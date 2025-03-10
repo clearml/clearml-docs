@@ -100,9 +100,10 @@ Install the ClearML chart with the required configuration:
 1. Prepare the `overrides.yaml` file and input the following content. Make sure to replace `<BASE_DOMAIN>` and `<SSO_*>` 
    with a valid domain that will have records pointing to the ingress controller accordingly.   
    The credentials specified in `<SUPERVISOR_USER_KEY>` and `<SUPERVISOR_USER_SECRET>` can be used to log in as the 
-   supervisor user in the web UI.  
+   supervisor user in the web UI.
+
    Note that the `<SUPERVISOR_USER_EMAIL>` value must be explicitly quoted. To do so, put `\\"` around the quoted value. 
-   For example `"\\"email@example.com\\””`
+   For example `"\\"email@example.com\\””`.
 
    ```
    imageCredentials:
@@ -192,7 +193,7 @@ Install the ClearML chart with the required configuration:
      enabled: true
    ```
 
-2. Install ClearML
+2. Install ClearML:
 
    ```
    helm install -n clearml \\
