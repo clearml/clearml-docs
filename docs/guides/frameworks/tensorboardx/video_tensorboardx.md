@@ -14,5 +14,6 @@ the `examples` project.
 ClearML automatically captures the video data that is added to the `SummaryWriter` object, using the `add_video` method. 
 The video appears in the task's **DEBUG SAMPLES** tab.
 
-![Debug Samples](../../../img/examples_tensorboardx_debug.png)
+![Debug Samples](../../../img/examples_tensorboardx_debug.png#light-mode-only)
+![Debug Samples](../../../img/examples_tensorboardx_debug_dark.png#dark-mode-only)
 

@@ -30,7 +30,8 @@ You can view all the task details in the [WebApp](../webapp/webapp_overview.md).
 
 See an example of `fastai` and ClearML in action [here](../guides/frameworks/fastai/fastai_with_tensorboard.md).
 
-![Task scalars](../img/examples_reporting_fastai_01.png)
+![Task scalars](../img/examples_reporting_fastai_01.png#light-mode-only)
+![Task scalars](../img/examples_reporting_fastai_01_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your `fastai` script, it captures models and 

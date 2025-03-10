@@ -25,31 +25,36 @@ The example script does the following:
 The loss and accuracy metric scalar plots appear in **SCALARS**, along with the resource utilization plots, 
 which are titled **:monitor: machine**.
 
-![image](../../../img/examples_keras_01.png)
+![Scalars](../../../img/examples_keras_01.png#light-mode-only)
+![Scalars](../../../img/examples_keras_01_dark.png#dark-mode-only)
 
 ## Histograms
 
 Histograms for layer density appear in **PLOTS**.
 
-![image](../../../img/examples_keras_02.png)
+![Histograms](../../../img/examples_keras_02.png#light-mode-only)
+![Histograms](../../../img/examples_keras_02_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
-ClearML automatically logs command line options generated with `argparse`, and TensorFlow Definitions.
+ClearML automatically logs command line options generated with `argparse` and TensorFlow Definitions.
 
 Command line options appear in **CONFIGURATION** **>** **HYPERPARAMETERS** **>** **Args**.
 
-![image](../../../img/examples_keras_00.png)
+![Hyperparameters Args](../../../img/examples_keras_00.png#light-mode-only)
+![Hyperparameters Args](../../../img/examples_keras_00_dark.png#dark-mode-only)
 
 TensorFlow Definitions appear in **TF_DEFINE**.
 
-![image](../../../img/examples_keras_00a.png)
+![TF Defines](../../../img/examples_keras_00a.png#light-mode-only)
+![TF Defines](../../../img/examples_keras_00a_dark.png#dark-mode-only)
 
 ## Console
 
 Text printed to the console for training progress, as well as all other console output, appear in **CONSOLE**.
 
-![image](../../../img/keras_colab_01.png)
+![Console Log](../../../img/keras_colab_01.png#light-mode-only)
+![Console Log](../../../img/keras_colab_01_dark.png#dark-mode-only)
 
 ## Configuration Objects
 
@@ -64,4 +69,5 @@ task.connect_configuration(
 
 It appears in **CONFIGURATION** **>** **CONFIGURATION OBJECTS** **>** **MyConfig**. 
 
-![image](../../../img/keras_colab_02.png)
+![Custom configuration](../../../img/keras_colab_02.png#light-mode-only)
+![Custom configuration](../../../img/keras_colab_02_dark.png#dark-mode-only)
