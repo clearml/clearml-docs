@@ -109,7 +109,7 @@ Edit it according to the following guidelines:
 * `AUTH_COOKIE_NAME`: Cookie name used by the ClearML server to store the ClearML authentication cookie. This can usually be found in the `value_prefix` key starting with `allegro_token` in `envoy.yaml` file in the ClearML server installation (`/opt/allegro/config/envoy/envoy.yaml`) (see below)  
 * `AUTH_SECURE_ENABLED`: Enable the Set-Cookie `secure` parameter  
 * `AUTH_BASE64_JWKS_KEY`: Value form `k` key in the `jwks.json` file in the ClearML server installation  
-* `LISTEN_QUEUE_NAME`: (optional) name of queue to check for tasks (if none, every task is checked)  
+* `LISTEN_QUEUE_NAME`: (*optional*) Name of queue to check for tasks (if none, every task is checked)  
 * `EXTRA_BASH_COMMAND`: Command to be launched before starting the router  
 * `TCP_ROUTER_ADDRESS`: Router external address, can be an IP or the host machine or a load balancer hostname, depends on network configuration  
 * `TCP_PORT_START`: Start port for the TCP Session feature  
