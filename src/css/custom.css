@@ -537,7 +537,7 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
 }
 
 .DocSearch-Button {
-  border: 1px solid var(--ifm-toc-border-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
 }
 
 /* GLOBAL SEARCH PAGE */
