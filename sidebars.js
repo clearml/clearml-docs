@@ -643,7 +643,7 @@ module.exports = {
                    'deploying_clearml/enterprise_deploy/vpc_aws',
                    'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
                 ],
-                'Maintenance': [
+                'Maintenance and Migration': [
                    'deploying_clearml/enterprise_deploy/import_projects',
                    'deploying_clearml/enterprise_deploy/change_artifact_links',
                    'deploying_clearml/enterprise_deploy/delete_tenant',
