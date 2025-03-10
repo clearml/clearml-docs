@@ -232,7 +232,7 @@ ranging from 2 GB to 12 GB (see [clearml-fractional-gpu repository](https://gith
    
    This example runs the ClearML Ubuntu 22 with CUDA 12.3 container on GPU 0, which is limited to use up to 8GB of its memory.
    :::note
-   --pid=host is required to allow the driver to differentiate between the container's processes and other host processes when limiting memory usage
+   `--pid=host` is required to allow the driver to differentiate between the container's processes and other host processes when limiting memory usage
    :::
 1. Run the following command inside the container to verify that the fractional gpu memory limit is working correctly:
    ```bash
