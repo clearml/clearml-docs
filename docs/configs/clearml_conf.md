@@ -1548,7 +1548,7 @@ environment {
 }
 ```
 
-### files section 
+### files section
 
 **`files`** (*dict*)
 
