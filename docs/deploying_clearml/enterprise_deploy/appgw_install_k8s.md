@@ -68,7 +68,7 @@ Edit it accordingly to this guidelines:
 * `tcpSession.portRange.start`: start port for the TCP Session feature  
 * `tcpSession.portRange.end`: end port port for the TCP Session feature
 
-::: How to find my jwkskey
+:::note How to find my jwkskey
 
 The *JSON Web Key Set* (*JWKS*) is a set of keys containing the public keys used to verify any JSON Web Token (JWT).
 
