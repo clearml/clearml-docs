@@ -8,7 +8,7 @@ It covers the following:
 * Set up security groups and IAM role
 * Create EC2 instance with required disks
 * Install dependencies and mount disks
-* Deploy ClearML version using docker-compose
+* Deploy ClearML version using `docker-compose`
 * Set up load balancer and DNS
 * Set up server backup 
 
@@ -117,10 +117,10 @@ Instance requirements:
 ## Load Balancer
 
 1. Create a TLS certificate:  
-   1. Choose a domain name to be used with the server. The main URL that will be used by the system’s users will be app.\<domain\>  
+   1. Choose a domain name to be used with the server. The main URL that will be used by the system’s users will be `app.<domain>`  
    2. Create a certificate, with the following DNS names:  
-      1. \<domain name\>  
-      2. \*.\<domain name\>
+      1. `<domain name>`  
+      2. `*.<domain name>`
 
 2. Create the `envoy` target group for the server:  
    1. Port: 10000  
@@ -284,7 +284,7 @@ log would usually indicate the reason for the failure.
 
 ## Maintenance
 
-### Removing app containers
+### Removing App Containers
 
 To remove old application containers, add the following to the cron:
 

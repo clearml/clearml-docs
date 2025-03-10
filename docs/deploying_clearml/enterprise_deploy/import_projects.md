@@ -36,7 +36,7 @@ them before exporting.
 Execute the data tool within the `apiserver` container.
 
 Open a bash session inside the `apiserver` container of the server:  
-* In docker-compose:
+* In `docker-compose`:
   
   ```commandline
   sudo docker exec -it clearml-apiserver /bin/bash

@@ -22,7 +22,7 @@ The values in the ClearML configuration file can be overridden by environment va
 and command-line arguments. 
 :::
 
-# Editing Your Configuration File
+## Editing Your Configuration File
 
 To add, change, or delete options, edit your configuration file.
 
@@ -1548,7 +1548,7 @@ environment {
 }
 ```
 
-### files section 
+### files section
 
 **`files`** (*dict*)
 
