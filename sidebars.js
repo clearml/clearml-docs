@@ -659,6 +659,7 @@ module.exports = {
             label: 'ClearML Application Gateway',
             items: [
                 'deploying_clearml/enterprise_deploy/appgw_install_compose',
+                'deploying_clearml/enterprise_deploy/appgw_install_compose_hosted',
                 'deploying_clearml/enterprise_deploy/appgw_install_k8s',
             ]
         },
