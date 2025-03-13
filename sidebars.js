@@ -634,59 +634,54 @@ module.exports = {
                 ]},
             ]
         },
-/*        {'Getting Started': [
-            'getting_started/architecture',
-        ]},*/
-        {
-            'Enterprise Server':  {
-                'Deployment Options': [
-                   'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
-                   'deploying_clearml/enterprise_deploy/vpc_aws',
-                   'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
-                ],
-                'Maintenance and Migration': [
-                   'deploying_clearml/enterprise_deploy/import_projects',
-                   'deploying_clearml/enterprise_deploy/change_artifact_links',
-                   'deploying_clearml/enterprise_deploy/delete_tenant',
-                ]
-
-            }
-        },
         {
             type: 'category',
             collapsible: true,
             collapsed: true,
-            label: 'ClearML Application Gateway',
+            label: 'Enterprise Server',
             items: [
-                'deploying_clearml/enterprise_deploy/appgw_install_compose',
-                'deploying_clearml/enterprise_deploy/appgw_install_k8s',
-            ]
-        },
-        'deploying_clearml/enterprise_deploy/custom_billing',
-        {
-            'UI Applications': [
-                'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
-                'deploying_clearml/enterprise_deploy/app_install_ex_server',
-                'deploying_clearml/enterprise_deploy/app_custom',
-            ]
-        },
-        {
-            'User Management': [
-                'user_management/user_groups',
-                'user_management/access_rules',
-                'user_management/admin_vaults',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Identity Provider Integration',
-                    link: {type: 'doc', id: 'user_management/identity_providers'},
-                    items: [
-                        'deploying_clearml/enterprise_deploy/sso_multi_tenant_login',
-                        'deploying_clearml/enterprise_deploy/sso_saml_k8s',
-                        'deploying_clearml/enterprise_deploy/sso_keycloak',
-                        'deploying_clearml/enterprise_deploy/sso_active_directory'
+                {'Deployment Options': [
+                    'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
+                    'deploying_clearml/enterprise_deploy/vpc_aws',
+                    'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
                     ]
+                },
+                {'Maintenance and Migration': [
+                    'deploying_clearml/enterprise_deploy/import_projects',
+                    'deploying_clearml/enterprise_deploy/change_artifact_links',
+                    'deploying_clearml/enterprise_deploy/delete_tenant',
+                    ]
+                },
+                {'ClearML Application Gateway': [
+                    'deploying_clearml/enterprise_deploy/appgw_install_compose',
+                    'deploying_clearml/enterprise_deploy/appgw_install_k8s',
+                    ]
+                },
+                'deploying_clearml/enterprise_deploy/custom_billing',
+                {'UI Applications': [
+                   'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
+                   'deploying_clearml/enterprise_deploy/app_install_ex_server',
+                   'deploying_clearml/enterprise_deploy/app_custom',
+                   ]
+                },
+                {'User Management': [
+                   'user_management/user_groups',
+                   'user_management/access_rules',
+                   'user_management/admin_vaults',
+                   {
+                        type: 'category',
+                        collapsible: true,
+                        collapsed: true,
+                        label: 'Identity Provider Integration',
+                        link: {type: 'doc', id: 'user_management/identity_providers'},
+                        items: [
+                            'deploying_clearml/enterprise_deploy/sso_multi_tenant_login',
+                            'deploying_clearml/enterprise_deploy/sso_saml_k8s',
+                            'deploying_clearml/enterprise_deploy/sso_keycloak',
+                            'deploying_clearml/enterprise_deploy/sso_active_directory'
+                        ]
+                   },
+                   ]
                 },
             ]
         },
