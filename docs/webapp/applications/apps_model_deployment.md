@@ -13,7 +13,7 @@ it serves your model through a secure, publicly accessible network endpoint. The
 shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway
-The vLLM Model Deployment app makes use of the ClearML Traffic Router which implements a secure, authenticated 
+The vLLM Model Deployment app makes use of the AI App Gateway Router which implements a secure, authenticated 
 network endpoint for the model.
 
 If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.

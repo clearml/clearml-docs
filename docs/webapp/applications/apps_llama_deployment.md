@@ -12,7 +12,7 @@ running, it serves your model through a secure, publicly accessible network endp
 and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::important AI Application Gateway
-The llama.cpp Model Deployment app makes use of the ClearML Traffic Router which implements a secure, authenticated 
+The llama.cpp Model Deployment app makes use of the AI App Gateway Router which implements a secure, authenticated 
 network endpoint for the model. 
 
 If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.

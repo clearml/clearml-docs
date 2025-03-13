@@ -3,17 +3,25 @@ title: Kubernetes Deployment
 ---
 
 :::important Enterprise Feature
-The Application Gateway is available under the ClearML Enterprise plan.
+The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
-This guide details the installation of the ClearML AI Application Gateway, specifically the ClearML Task Router Component.
+This guide details the installation of the ClearML AI App Gateway Router.
+The AI App Gateway Router enables access to session-based applications like VSCode and Jupyter.
+It acts as a proxy, discovering ClearML Tasks running within its namespace and configuring them for user access.
+
+:::important 
+The AI App Gateway Router must be installed in the same namespace as a dedicated ClearML Agent.
+It can only discover ClearML Tasks within its own namespace.
+:::
+
 
 ## Requirements
 
 * Kubernetes cluster: `>= 1.21.0-0 < 1.32.0-0`  
 * Helm installed and configured  
-* Helm token to access `allegroai` helm-chart repo  
-* Credentials for `allegroai` docker repo  
+* Helm token to access `clearml` helm-chart repo  
+* Credentials for `clearml` docker repo
 * A valid ClearML Server installation
 
 ## Optional for HTTPS
@@ -26,59 +34,52 @@ This guide details the installation of the ClearML AI Application Gateway, speci
 ### Login
 
 ```
-helm repo add allegroai-enterprise \
+helm repo add clearml-enterprise \
 https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages \
 --username <GITHUB_TOKEN> \
 --password <GITHUB_TOKEN>
 ```
 
+Replace `<GITHUB_TOKEN>` with your valid GitHub token that has access to the ClearML Enterprise Helm charts repository.
+
 ### Prepare Values
 
-Before installing the TTR, create a `helm-override` files named `task-traffic-router.values-override.yaml`:
+Before installing the AI App Gateway Router, create a Helm override file:
 
 ```
 imageCredentials:
- password: "<DOCKERHUB_TOKEN>"
+  password: ""
 clearml:
- apiServerKey: ""
- apiServerSecret: ""
- apiServerUrlReference: "https://api."
- jwksKey: ""
- authCookieName: ""
+  apiServerKey: ""
+  apiServerSecret: ""
+  apiServerUrlReference: ""
+  authCookieName: ""
+  sslVerify: true
 ingress:
- enabled: true
- hostName: "task-router.dev"
+  enabled: true
+  hostName: ""
 tcpSession:
- routerAddress: ""
- portRange:
-   start: 
-   end:
+  routerAddress: ""
+  service:
+    type: LoadBalancer
+  portRange:
+    start: 
+    end:
 ```
 
-Edit it accordingly to these guidelines:
+Edit it according to these guidelines:
 
-* `clearml.apiServerUrlReference`: URL usually starting with `https://api.`  
-* `clearml.apiServerKey`: ClearML server api key  
-* `clearml.apiServerSecret`: ClearML server secret key  
-* `ingress.hostName`: URL of router we configured previously for load balancer starting with `https://`  
-* `clearml.sslVerify`: Enable or disable SSL certificate validation on apiserver calls check  
-* `clearml.authCookieName`: Value from `value_prefix` key starting with `allegro_token` in `envoy.yaml` file in ClearML server installation.  
-* `clearml.jwksKey`: Value form `k` key in `jwks.json` file in ClearML server installation (see below)  
-* `tcpSession.routerAddress`: Router external address can be an IP or the host machine or a load balancer hostname, depends on the network configuration  
-* `tcpSession.portRange.start`: Start port for the TCP Session feature  
-* `tcpSession.portRange.end`: End port for the TCP Session feature
-
-:::note How to find my jwkskey
-
-The *JSON Web Key Set* (*JWKS*) is a set of keys containing the public keys used to verify any JSON Web Token (JWT).
-
-```
-kubectl -n clearml get secret clearml-conf \
--o jsonpath='{.data.secure_auth_token_secret}' \
-| base64 -d && echo
-```
-
-:::
+* `imageCredentials.password`: ClearML DockerHub Access Token.
+* `clearml.apiServerKey`: ClearML server API key.  
+* `clearml.apiServerSecret`: ClearML server secret key.  
+* `clearml.apiServerUrlReference`: ClearML API server URL usually starting with `https://api.`.  
+* `clearml.authCookieName`: Cookie name used by the ClearML server to store the ClearML authentication cookie.
+* `clearml.sslVerify`: Enable or disable SSL certificate validation on `apiserver` calls check.  
+* `ingress.hostName`: Hostname of router used by the ingress controller to access it.  
+* `tcpSession.routerAddress`: The external router address (can be an IP, hostname, or load balancer address) depending on your network setup. Ensure this address is accessible for TCP connections.
+* `tcpSession.service.type`: Service type used to expose TCP functionality, default is `NodePort`.
+* `tcpSession.portRange.start`: Start port for the TCP Session feature.  
+* `tcpSession.portRange.end`: End port for the TCP Session feature.
 
 
 The whole list of supported configuration is available with the command:
@@ -94,9 +95,14 @@ To install the TTR component via Helm use the following command:
 ```
 helm upgrade --install \
 <RELEASE_NAME> \
--n <NAME_SPACE> \
+-n <WORKLOAD_NAMESPACE> \
 allegroai-enterprise/clearml-enterprise-task-traffic-router \
---version <CURRENT CHART VERSION> \
--f task-traffic-router.values-override.yaml
+--version <CHART_VERSION> \
+-f override.yaml
 ```
 
+Replace the placeholders with the following values:
+
+* `<RELEASE_NAME>` - Unique name for the AI App Gateway Router within the namespace. This name will appear in the UI and be used for the redirection URL.
+* `<WORKLOAD_NAMESPACE>` - Namespace that will be shared with a dedicated ClearML Agent.
+* `<CHART_VERSION>` - Version recommended by the ClearML Support Team.

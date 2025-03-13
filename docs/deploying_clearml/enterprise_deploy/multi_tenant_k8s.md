@@ -513,31 +513,30 @@ Create a `NetworkPolicy` in the tenant namespace with the following configuratio
          - podSelector: {}
    ```
 
-### Install Task Traffic Router Chart
+### Install AI App Gateway Router Chart
 
-Install the [Task Traffic Router](appgw.md) in your Kubernetes cluster, allowing it to manage and route tasks:
+Install the AI App Gateway Router in your Kubernetes cluster, allowing it to manage and route tasks:
 
 1. Prepare the `overrides.yaml` file with the following content:
 
    ```
    imageCredentials:
-     password: "<allegroaienterprise_DockerHub_TOKEN>"
+     password: "<clearmlenterprise_DockerHub_TOKEN>"
    clearml:
      apiServerUrlReference: "<http://clearml-enterprise-apiserver.clearml:8008>"
      apiserverKey: "<TENANT_KEY>"
      apiserverSecret: "<TENANT_SECRET>"
-     jwksKey: "<JWKS_KEY>"
    ingress:
      enabled: true
      hostName: "<unique url in same domain as apiserver/webserver>"
    ```
 
-2. Install Task Traffic Router in the specified tenant namespace:
+2. Install AI App Gateway Router in the specified tenant namespace:
 
    ```
    helm install -n <TENANT_NAMESPACE> \\
         clearml-ttr \\
-        allegroai-enterprise/clearml-task-traffic-router \\
+        clearml-enterprise/clearml-task-traffic-router \\
         --create-namespace \\
         -f overrides.yaml
    ```

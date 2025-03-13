@@ -16,7 +16,7 @@ The Gradio launcher monitors the Gradio app activity and shuts down if it is ina
 <a id="traffic_router"/>
 
 :::important AI Application Gateway
-The Gradio Launcher relies on the ClearML Traffic Router which implements user authentication, and redirects requests 
+The Gradio Launcher relies on the ClearML AI App Gateway Router which implements user authentication, and redirects requests 
 to the IP/port served by the Gradio app. 
 
 If the ClearML AI application Gateway is not available, the Gradio app might not be accessible.
