@@ -656,7 +656,8 @@ module.exports = {
                 },
                 {'ClearML Application Gateway': [
                     'deploying_clearml/enterprise_deploy/appgw_install_compose',
-                    'deploying_clearml/enterprise_deploy/appgw_install_k8s',
+                    'deploying_clearml/enterprise_deploy/appgw_install_compose_hosted',
+                'deploying_clearml/enterprise_deploy/appgw_install_k8s',
                     ]
                 },
                 'deploying_clearml/enterprise_deploy/custom_billing',

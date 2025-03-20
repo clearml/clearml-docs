@@ -35,9 +35,10 @@ If your ClearML Deployment does not have the App Gateway Router properly install
 
 #### Installation 
 
-The App Gateway Router supports two deployment options:
+The App Gateway Router supports the following deployment options:
 
 * [Docker Compose](appgw_install_compose.md)  
+* [Docker Compose for hosted servers](appgw_install_compose_hosted.md)  
 * [Kubernetes](appgw_install_k8s.md)
 
 The deployment configuration specifies the external and internal address and port mappings for routing requests.
