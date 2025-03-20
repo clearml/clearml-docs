@@ -268,7 +268,7 @@ metadata:
 spec:
   podSelector: {}
   policyTypes:
-    - Ingress
+   - Ingress
   ingress:
     - from:
       - podSelector: {}
@@ -337,7 +337,7 @@ must be substituted with valid domain names or values from responses.
    APISERVER_SECRET="<APISERVER_SECRET>"
    ```
 
-2. Create a *Tenant* (company):
+2. Create a **Tenant** (company):
 
    ```
    curl $APISERVER_URL/system.create_company \\
@@ -352,7 +352,7 @@ must be substituted with valid domain names or values from responses.
    curl -u $APISERVER_KEY:$APISERVER_SECRET $APISERVER_URL/system.get_companies
    ```
 
-3. Create an *Admin User*:
+3. Create an **Admin User**:
 
    ```
    curl $APISERVER_URL/auth.create_user \\
@@ -363,7 +363,7 @@ must be substituted with valid domain names or values from responses.
 
    This returns the new User ID (`<USER_ID>`).
 
-4. Generate *Credentials* for the new Admin User:
+4. Generate **Credentials** for the new Admin User:
 
    ```
    curl $APISERVER_URL/auth.create_credentials \\
@@ -374,7 +374,7 @@ must be substituted with valid domain names or values from responses.
 
    This returns a set of key and secret credentials associated with the new Admin User.
 
-5. Create an SSO Domain *Whitelist*. The `<USERS_EMAIL_DOMAIN>` is the email domain setup for users to access through SSO.
+5. Create an SSO Domain **Whitelist**. The `<USERS_EMAIL_DOMAIN>` is the email domain setup for users to access through SSO.
 
    ```
    curl $APISERVER_URL/login.set_domains \\
@@ -541,3 +541,51 @@ Install the App Gateway Router in your Kubernetes cluster, allowing it to manage
         -f overrides.yaml
    ```
 
+## Configuring Options per Tenant
+
+### Override Options When Creating a New Tenant
+
+When creating a new tenant company, you can specify several tenant options. These include:
+
+* `features` - Add features to a company  
+* `exclude_features` - Exclude features from a company.  
+* `allowed_users` - Set the maximum number of users for a company.
+
+#### Example: Create a New Tenant with a Specific Feature Set
+
+```
+curl $APISERVER_URL/system.create_company \
+-H "Content-Type: application/json" \
+-u $APISERVER_KEY:$APISERVER_SECRET \
+-d '{"name":"<TENANT_NAME>", "defaults": { "allowed_users": "10", "features": ["experiments"], "exclude_features": ["app_management", "applications", "user_management"] }}'
+```
+
+**Note**: make sure to replace the `<TENANT_NAME>` placeholder.
+
+### Limit Features for all Users
+
+This Helm Chart value in the `overrides.yaml` will have priority over all tenants, and will limit the features 
+available to any user in the system. This means that even if the feature is enabled for the tenant, if it;s not in this 
+list, the user will not see it.
+
+Example: all users will only have the `applications` feature enabled.
+
+```
+apiserver:
+  extraEnvs:
+    - name: CLEARML__services__auth__default_groups__users__features
+      value: "[\"applications\"]"
+```
+
+**Available Features**:
+
+* `applications` - Viewing and running applications  
+* `data_management` - Working with hyper-datasets and dataviews  
+* `experiments` - Viewing experiment table and launching experiments  
+* `queues` - Viewing the queues screen  
+* `queue_management` - Creating and deleting queues   
+* `pipelines` - Viewing/managing pipelines in the system  
+* `reports` - Viewing and managing reports in the system  
+* `show_dashboard` - Show the dashboard screen  
+* `show_projects` - Show the projects menu option  
+* `resource_dashboard` - Display the resource dashboard in the orchestration page
