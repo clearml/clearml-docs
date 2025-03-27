@@ -15,25 +15,29 @@ The example script does the following:
 
 The scalars logged in the task can be visualized in a plot, which appears in the ClearML web UI, in the task's **SCALARS** tab.
 
-![LightGBM scalars](../../../img/examples_lightgbm_scalars.png)
+![LightGBM scalars](../../../img/examples_lightgbm_scalars.png#light-mode-only)
+![LightGBM scalars](../../../img/examples_lightgbm_scalars_dark.png#dark-mode-only)
 
 ## Hyperparameters
 
 ClearML automatically logs the configurations applied to LightGBM. They appear in **CONFIGURATIONS > HYPERPARAMETERS > GENERAL**.
 
-![LightGBM hyperparameters](../../../img/examples_lightgbm_config.png)
+![LightGBM hyperparameters](../../../img/examples_lightgbm_config.png#light-mode-only)
+![LightGBM hyperparameters](../../../img/examples_lightgbm_config_dark.png#dark-mode-only)
 
 ## Artifacts
 
 Models created by the task appear in the task's **ARTIFACTS** tab. ClearML automatically logs and tracks 
 models and any snapshots created using LightGBM. 
 
-![LightGBM model](../../../img/examples_lightgbm_model.png)
+![LightGBM model](../../../img/examples_lightgbm_model.png#light-mode-only)
+![LightGBM model](../../../img/examples_lightgbm_model_dark.png#dark-mode-only)
 
 ## Console
 
 All other console output appears in **CONSOLE**.
 
-![LightGBM console](../../../img/examples_lightgbm_console.png)
+![LightGBM console](../../../img/examples_lightgbm_console.png#light-mode-only)
+![LightGBM console](../../../img/examples_lightgbm_console_dark.png#dark-mode-only)
 
 

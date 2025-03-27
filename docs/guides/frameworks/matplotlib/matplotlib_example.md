@@ -22,18 +22,23 @@ in the `examples` project (in script) or the `Colab notebooks` project (in Jupyt
 
 The scatter plots appear in the **ClearML Web UI**, in **PLOTS**.
 
-![Matplotlib plot 1](../../../img/examples_matplotlib_example_01.png)
+![Matplotlib plot 1](../../../img/examples_matplotlib_example_01.png#light-mode-only)
+![Matplotlib plot 1](../../../img/examples_matplotlib_example_01_dark.png#dark-mode-only)
 
-![Matplotlib plot 2](../../../img/examples_matplotlib_example_02.png)
+![Matplotlib plot 2](../../../img/examples_matplotlib_example_02.png#light-mode-only)
+![Matplotlib plot 2](../../../img/examples_matplotlib_example_02_dark.png#dark-mode-only)
 
-![Matplotlib plot 3](../../../img/examples_matplotlib_example_03.png)
+![Matplotlib plot 3](../../../img/examples_matplotlib_example_03.png#light-mode-only)
+![Matplotlib plot 3](../../../img/examples_matplotlib_example_03_dark.png#dark-mode-only)
 
 ## Debug Samples
 
 The images appear in **DEBUG SAMPLES**. Each debug sample image is associated with a metric.
 
-![Matplotlib image plot](../../../img/examples_matplotlib_example_04.png)
+![Matplotlib image plot](../../../img/examples_matplotlib_example_04.png#light-mode-only)
+![Matplotlib image plot](../../../img/examples_matplotlib_example_04_dark.png#dark-mode-only)
 
 View the debug sample in the image viewer.
 
-![Image viewer](../../../img/examples_matplotlib_example_05.png)
+![Image viewer](../../../img/examples_matplotlib_example_05.png#light-mode-only)
+![Image viewer](../../../img/examples_matplotlib_example_05_dark.png#dark-mode-only)
