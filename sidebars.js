@@ -64,6 +64,7 @@ module.exports = {
         'getting_started/clearml_agent_docker_exec',
         'getting_started/clearml_agent_base_docker',
         'getting_started/clearml_agent_scheduling',
+        'getting_started/scaling_resources',
         {"Deploying Model Endpoints": [
             {
                 type: 'category',
