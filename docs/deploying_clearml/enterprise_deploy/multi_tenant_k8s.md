@@ -589,3 +589,222 @@ apiserver:
 * `show_dashboard` - Show the dashboard screen  
 * `show_projects` - Show the projects menu option  
 * `resource_dashboard` - Display the resource dashboard in the orchestration page
+
+
+## Configuring Groups
+
+Groups in ClearML are used to manage user permissions and control access to specific features within the platform. 
+The following section explains the different types of groups and how to configure them, with a focus on configuration-based, 
+cross-tenant groups.
+
+### Types of Groups
+
+ClearML utilizes several types of groups:
+* **Built-in Groups** - These groups exist by default in every ClearML installation:
+  * **`users`**: All registered users automatically belong to this group. It typically defines the baseline set of 
+  permissions and features available to everyone.  
+  * **`admins`**: Users in this group have administrative privileges.  
+  * **`queue_admins`**: Users in this group have specific permissions to manage execution queues.
+* **Tenant-Specific Groups (UI)** - Additional groups can be created specific to a tenant (organization workspace) 
+  directly through the ClearML Web UI (under **Settings > Users & Groups**). Users can be assigned to these groups via 
+  the UI. These groups are managed *within* a specific tenant. For more information, see [Users & Groups](../../webapp/settings/webapp_settings_users.md).
+* **Cross-Tenant Groups (Configuration)** - These groups are defined centrally in the ClearML configuration files 
+  (e.g., Helm chart values, docker-compose environment variables). They offer several advantages:
+  * **Cross-Tenant Definition:** Defined once in the configuration, applicable across the deployment.  
+  * **Fine-Grained Feature Control:** Allows precise assignment of specific ClearML features to groups.  
+  * **Automation:** Suitable for infrastructure-as-code and automated deployment setups.
+
+
+
+### Configuring Cross-Tenant Groups
+
+To define a cross-tenant group, you need to set specific configuration variables. These are typically set as environment 
+variables for the relevant ClearML services (like `apiserver`). The naming convention follows this
+pattern: `CLEARML__services__auth__default_groups__<GroupName>__<Property>`.
+
+Replace `<GroupName>` with the desired name for your group (e.g., `my_group_name`, `Data_Scientists`, `MLOps_Engineers`).
+
+#### Configuration Variables
+
+For each group you define in the configuration, you need to specify the following properties:
+
+* **`id`**: A unique identifier for the group. This **must** be a standard UUID (Universally Unique Identifier). You can 
+ generate one using various online tools or libraries.  
+    
+  * Variable Name: `CLEARML__services__auth__default_groups__<GroupName>__id`  
+  * Example Value: `"abcd-1234-abcd-1234"`
+
+* **`name`**: The display name of the group. This should match the `<GroupName>` used in the variable path.  
+    
+  * Variable Name: `CLEARML__services__auth__default_groups__<GroupName>__name`  
+  * Example Value: `"My Group Name"`
+
+* **`features`**: A JSON-formatted list of strings, where each string is a feature name to be enabled for this group. See 
+  [Available Features](#available-features) for a list of valid feature names. Note that the features must be defined 
+  for the tenant or for the entire server in order to affect the group. By default, all the features of the tenant are 
+  available to all users.  
+    
+  * Variable Name: `CLEARML__services__auth__default_groups__<GroupName>__features`  
+  * Example Value: `'["applications", "experiments", "pipelines", "reports", "show_dashboard", "show_projects"]'` (Note 
+  the single quotes wrapping the JSON string if setting via YAML/environment variables).
+
+* **`assignable`**: A boolean (`"true"` or `"false"`) indicating whether administrators can add users to this group via 
+  the ClearML Web UI. If `false`, group membership is managed externally or implicitly. Configuration-defined groups 
+  often have this set to `false`.  
+    
+  * Variable Name: `CLEARML__services__auth__default_groups__<GroupName>__assignable`  
+  * Example Value: `"false"`
+
+* **`system`**: A boolean flag. This should **always be set to `"false"`** for custom-defined groups.  
+    
+  * Variable Name: `CLEARML__services__auth__default_groups__<GroupName>__system`  
+  * Example Value: `"false"`
+
+#### Example Configuration
+
+The following example demonstrates how you would define a group named `my_group_name` with a specific set of features 
+that cannot be assigned via the UI:
+
+```
+# Example configuration snippet (e.g., in Helm values.yaml or docker-compose.yml environment section)
+
+# Unique group id for my_group_name
+- name: CLEARML__services__auth__default_groups__my_group_name__id
+  value: "abcd-1234-abcd-1234" # Replace with a newly generated UUID
+
+# Group name for my_group_name
+- name: CLEARML__services__auth__default_groups__my_group_name__name
+  value: "My Group Name"
+
+# List of features for my_group_name
+- name: CLEARML__services__auth__default_groups__my_group_name__features
+  value: '["applications", "experiments", "queues", "pipelines", "reports", "show_dashboard","show_projects"]'
+
+# Prevent assignment via UI for my_group_name
+- name: CLEARML__services__auth__default_groups__my_group_name__assignable
+  value: "false"
+
+# Always false for custom groups
+- name: CLEARML__services__auth__default_groups__my_group_name__system
+  value: "false"
+```
+
+### Available Features
+
+The following features can be assigned to groups via the `features` configuration variable:
+
+| Feature Name | Description | Notes |
+| :---- | :---- | :---- |
+| `user_management` | Allows viewing company users and groups, and editing group memberships. | Only effective if the group is `assignable`. |
+| `user_management_advanced` | Allows direct creation of users (bypassing invites) by admins and system users. | Often requires enabling at the organization level too. |
+| `permissions` | Enables editing of Role-Based Access Control (RBAC) rules. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `applications` | Allows users to work with ClearML Applications (viewing, running). | Excludes management operations (upload/delete). |
+| `app_management` | Allows application management operations: upload, delete, enable, disable. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `experiments` | Allows working with experiments. | *Deprecated/Not Used.* All users have access regardless of this flag. |
+| `queues` | Allows working with queues. | *Deprecated/Not Used.* All users have access regardless of this flag. |
+| `queue_management` | Allows create, update, and delete operations on queues. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `data_management` | Controls access to Hyper-Datasets. | Actual access might also depend on `apiserver.services.excluded`. |
+| `config_vault` | Enables the configuration vaults feature. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `pipelines` | Enables access to Pipelines (building and running). | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `reports` | Enables access to Reports. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `resource_dashboard` | Enables access to the compute resource dashboard feature. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `sso_management` | Enables the SSO (Single Sign-On) configuration wizard. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `service_users` | Enables support for creating and managing service users (API keys). | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `resource_policy` | Enables the resource policy feature. | May default to a trial feature if not explicitly enabled. |
+| `model_serving` | Enables access to the model serving endpoints feature. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `show_dashboard` | Makes the "Dashboard" menu item visible in the UI sidebar. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `show_model_view` | Makes the "Models" menu item visible in the UI sidebar. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `show_projects` | Makes the "Projects" menu item visible in the UI sidebar. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+| `show_orchestration` | Makes the "Orchestration" menu item visible in the UI sidebar. | Available from apiserver version 3.25 |
+| `show_datasets` | Makes the "Datasets" menu item visible in the UI sidebar. | Available from apiserver version 3.25 |
+
+### Feature Assignment Strategy
+
+#### Combining Features
+
+If a user belongs to multiple groups (e.g., the default `users` group and a custom `my_group_name` group), their 
+effective feature set is the **union** (combination) of all features from all groups they belong to.
+
+#### Configuring the Default 'users' Group
+
+Because all users belong to the `users` group, and features are combined, it's crucial to configure the `users` group 
+appropriately. You generally have two options:
+
+1. **Minimum Shared Features:** Assign only the absolute minimum set of features that *every single user* should have to 
+   the `users` group.  
+2. **Empty Feature Set:** Assign an empty list (`[]`) to the `users` group's features. This means users only get features 
+  explicitly granted by other groups they are members of. This is often the cleanest approach when using multiple custom groups.
+
+**Example: Disabling all features by default for the `users` group:**
+
+```
+- name: CLEARML__services__auth__default_groups__users__features
+  value: '[]'
+
+```
+
+:::note
+You typically don't need to define the id, name, assignable, or system properties for built-in groups like users unless 
+you need to override default behavior, but you do configure their features.
+:::
+
+
+### Setting Server-Level or Tenant-level Features
+
+Features must be enabled for the entire server or for the tenant in order to allow setting it for specific groups. 
+Setting server wide feature is done using a different configuration pattern: `CLEARML__services__organization__features__<FeatureName>`.
+
+Setting one of these variables to `"true"` enables the feature globally.
+
+**Example: Enabling `user_management_advanced` for the entire organization:**
+
+```
+- name: CLEARML__services__organization__features__user_management_advanced
+  value: "true"
+```
+
+To enable a feature for a specific tenant, use the following API call:
+
+```
+curl $APISERVER_URL/system.update_company_settings \                                                  
+ -H "Content-Type: application/json" \   
+ -u $APISERVER_KEY:$APISERVER_SECRET \
+ -d '{                      
+   "company": "<company_id>",
+   "features": ["sso_management", "user_management_advanced", ...]
+}'
+```
+
+By default, all users have access to all features, but this can be changed by setting specific features set per group as described above.
+
+### Example: Defining Full Features for Admins
+
+While the `admins` group has inherent administrative privileges, you might want to explicitly ensure they have access to 
+*all* configurable features defined via the `features` list, especially if you've restricted the default `users` group 
+significantly. You might also need to enable certain features organization-wide.
+
+```
+# Enable advanced user management for the whole organization
+- name: CLEARML__services__organization__features__user_management_advanced
+  value: "true"
+
+# (Optional but good practice) Explicitly assign all features to the built-in admins group
+- name: CLEARML__services__auth__default_groups__admins__features
+  value: '["user_management", "user_management_advanced", "permissions", "applications", "app_management", "queues", "queue_management", "data_management", "config_vault", "pipelines", "reports", "resource_dashboard", "sso_management", "service_users", "resource_policy", "model_serving", "show_dashboard", "show_model_view", "show_projects"]' # List all relevant features
+
+# You might still want to define other custom groups with fewer features...
+# - name: CLEARML__services__auth__default_groups__my_group_name__id
+#   value: "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" # Replace with a newly generated UUID
+# - name: CLEARML__services__auth__default_groups__my_group_name__name
+#   value: "my_group_name"
+# - name: CLEARML__services__auth__default_groups__my_group_name__features
+#   value: '["some_feature", "another_feature"]'
+# - name: CLEARML__services__auth__default_groups__my_group_name__assignable
+#   value: "false"
+# - name: CLEARML__services__auth__default_groups__my_group_name__system
+#   value: "false"
+```
+
+By combining configuration-defined groups, careful management of the default users group features, and organization-level 
+settings, you can create a flexible and secure permission model tailored to your ClearML deployment. Remember to 
+restart the relevant ClearML services after applying configuration changes.  
