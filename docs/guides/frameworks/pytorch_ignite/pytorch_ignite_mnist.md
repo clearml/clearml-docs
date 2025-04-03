@@ -161,15 +161,18 @@ When the code runs, the task results can be viewed in the [ClearML Web UI](../..
 View the scalars, including training and validation metrics, in the task's page in the ClearML Web UI, under 
 **SCALARS**.
 
-![Task scalars](../../../img/ignite_training.png)
+![Task scalars](../../../img/ignite_training.png#light-mode-only)
+![Task scalars](../../../img/ignite_training_dark.png#dark-mode-only)
 
 ### Model Snapshots
  
 
 View saved snapshots in the **ARTIFACTS** tab.
 
-![image](../../../img/ignite_artifact.png)
+![Task Artifacts](../../../img/ignite_artifact.png#light-mode-only)
+![Task Artifacts](../../../img/ignite_artifact_dark.png#dark-mode-only)
 
 To view model details, in the **ARTIFACTS** tab, click the model name (or download it).
 
-![image](../../../img/ignite_model.png)
+![Model details](../../../img/ignite_model.png#light-mode-only)
+![Model details](../../../img/ignite_model_dark.png#dark-mode-only)

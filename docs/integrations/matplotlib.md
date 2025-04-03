@@ -28,7 +28,8 @@ This will create a ClearML Task that captures:
 View captured Matplotlib plots and images in the [WebApp](../webapp/webapp_exp_track_visual.md), 
 in the task's **Plots** and **Debug Samples** tabs respectively.
 
-![Task plots](../img/examples_matplotlib_example_01.png)
+![Task plots](../img/examples_matplotlib_example_01.png#light-mode-only)
+![Task plots](../img/examples_matplotlib_example_01_dark.png#dark-mode-only)
 
 ## Automatic Logging Control 
 By default, when ClearML is integrated into your script, it captures all of your matplotlib visualizations. 
@@ -67,12 +68,14 @@ plt.show()
 
 The logged figure is displayed in the task's **Plots** tab. 
 
-![Task Matplotlib plots](../img/manual_matplotlib_reporting_01.png)
+![Task Matplotlib plots](../img/manual_matplotlib_reporting_01.png#light-mode-only)
+![Task Matplotlib plots](../img/manual_matplotlib_reporting_01_dark.png#dark-mode-only)
 
 Matplotlib figures can be logged as images by passing `report_image=True` to `Logger.report_matplotlib_figure()`. 
 View the images in the task's **DEBUG SAMPLES** tab.
 
-![Task debug sample](../img/manual_matplotlib_reporting_03.png)
+![Task debug sample](../img/manual_matplotlib_reporting_03.png#light-mode-only)
+![Task debug sample](../img/manual_matplotlib_reporting_03_dark.png#dark-mode-only)
 
 See [Manual Matplotlib Reporting](../guides/reporting/manual_matplotlib_reporting.md) example.
 

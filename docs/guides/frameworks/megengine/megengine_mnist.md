@@ -17,7 +17,8 @@ The example script does the following:
 ClearML automatically logs command line options defined with `argparse`. They appear in the task's **CONFIGURATION** 
 tab under **HYPERPARAMETERS** **>** **Args**.
 
-![Configuration tab](../../../img/examples_megengine_mnist_config.png)
+![Configuration tab](../../../img/examples_megengine_mnist_config.png#light-mode-only)
+![Configuration tab](../../../img/examples_megengine_mnist_config_dark.png#dark-mode-only)
 
 ## Scalars
 
@@ -28,7 +29,8 @@ These scalars can be visualized in plots, which appear in the ClearML [WebApp](.
 task's **SCALARS** tab.
 
 
-![Scalars tab](../../../img/examples_megengine_mnist_scalars.png)
+![Scalars tab](../../../img/examples_megengine_mnist_scalars.png#light-mode-only)
+![Scalars tab](../../../img/examples_megengine_mnist_scalars_dark.png#dark-mode-only)
 
 ## Models
 
@@ -36,7 +38,8 @@ ClearML automatically captures the model logged using the `megengine.save` metho
 
 View saved snapshots in the task's **ARTIFACTS** tab.
 
-![Artifacts tab](../../../img/examples_megengine_models_1.png) 
+![Artifacts tab](../../../img/examples_megengine_models_1.png#light-mode-only)
+![Artifacts tab](../../../img/examples_megengine_models_1_dark.png#dark-mode-only) 
 
 To view the model details, click the model name in the **ARTIFACTS** page, which will open the model's info tab. Alternatively, download the model.
 
@@ -45,11 +48,13 @@ The model info panel contains the model details, including:
 * Framework
 * Snapshot locations.
 
-![Model info panel](../../../img/examples_megengine_models_2.png)
+![Model info panel](../../../img/examples_megengine_models_2.png#light-mode-only)
+![Model info panel](../../../img/examples_megengine_models_2_dark.png#dark-mode-only)
 
 ## Console
 
 All console output during the script's execution appears in the task's **CONSOLE** page.
 
-![Console tab](../../../img/examples_megengine_console.png)
+![Console tab](../../../img/examples_megengine_console.png#light-mode-only)
+![Console tab](../../../img/examples_megengine_console_dark.png#dark-mode-only)
 

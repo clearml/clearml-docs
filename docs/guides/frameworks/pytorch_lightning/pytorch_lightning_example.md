@@ -16,7 +16,8 @@ The test loss and validation loss plots appear in the task's page in the ClearML
 Resource utilization plots, which are titled **:monitor: machine**, also appear in the **SCALARS** tab. All of these 
 plots are automatically captured by ClearML. 
 
-![PyTorch Lightning scalars](../../../img/examples_pytorch_lightning_scalars.png)
+![PyTorch Lightning scalars](../../../img/examples_pytorch_lightning_scalars.png#light-mode-only)
+![PyTorch Lightning scalars](../../../img/examples_pytorch_lightning_scalars_dark.png#dark-mode-only)
 
 
 ## Hyperparameters
@@ -24,13 +25,15 @@ plots are automatically captured by ClearML.
 ClearML automatically logs command line options defined with argparse and TensorFlow Definitions, which appear in 
 **CONFIGURATIONS > HYPERPARAMETERS > Args** and **TF_DEFINE** respectively. 
 
-![PyTorch Lightning parameters](../../../img/examples_pytorch_lightning_params.png)
+![PyTorch Lightning parameters](../../../img/examples_pytorch_lightning_params.png#light-mode-only)
+![PyTorch Lightning parameters](../../../img/examples_pytorch_lightning_params_dark.png#dark-mode-only)
 
 ## Artifacts
 
 Models created by the task appear in the task's **ARTIFACTS** tab.
 
-![PyTorch Lightning model](../../../img/examples_pytorch_lightning_model.png)
+![PyTorch Lightning model](../../../img/examples_pytorch_lightning_model.png#light-mode-only)
+![PyTorch Lightning model](../../../img/examples_pytorch_lightning_model_dark.png#dark-mode-only)
 
 Clicking on a model name takes you to the [model's page](../../../webapp/webapp_model_viewing.md), where you can view 
 the model's details and access the model.
@@ -39,5 +42,6 @@ the model's details and access the model.
 
 All other console output appears in **CONSOLE**.
 
-![PyTorch Lightning console](../../../img/examples_pytorch_lightning_console.png)
+![PyTorch Lightning console](../../../img/examples_pytorch_lightning_console.png#light-mode-only)
+![PyTorch Lightning console](../../../img/examples_pytorch_lightning_console_dark.png#dark-mode-only)
 

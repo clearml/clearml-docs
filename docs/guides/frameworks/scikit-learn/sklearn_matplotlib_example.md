@@ -15,4 +15,5 @@ The example does the following:
 
 The learning curve plots appear in the **ClearML web UI** under **PLOTS**.
 
-![image](../../../img/examples_sklearn_matplotlib_example_01.png)
+![Learning Curve](../../../img/examples_sklearn_matplotlib_example_01.png#light-mode-only)
+![Learning Curve](../../../img/examples_sklearn_matplotlib_example_01_dark.png#dark-mode-only)

@@ -132,13 +132,14 @@ All the task information that ClearML captures can be viewed in the [WebApp](../
 
 View saved model snapshots in the **ARTIFACTS** tab.
 
-![Model snapshots](../img/ignite_artifact.png)
+![Model snapshots](../img/ignite_artifact.png#light-mode-only)
 
 ### Scalars 
 
 View the scalars in the task's **SCALARS** tab.
 
-![Scalars](../img/examples_cifar_scalars.png)
+![Scalars](../img/examples_cifar_scalars.png#light-mode-only)
+![Scalars](../img/examples_cifar_scalars_dark.png#dark-mode-only)
 
 
 ### Debug Samples
@@ -146,5 +147,6 @@ View the scalars in the task's **SCALARS** tab.
 ClearML automatically tracks images logged to `TensorboardLogger`. They appear in the task's **DEBUG SAMPLES**.
 
 
-![Debug Samples](../img/examples_integration_pytorch_ignite_debug.png)
+![Debug Samples](../img/examples_integration_pytorch_ignite_debug.png#light-mode-only)
+![Debug Samples](../img/examples_integration_pytorch_ignite_debug_dark.png#dark-mode-only)
 

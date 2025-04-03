@@ -24,7 +24,8 @@ params = task.connect(params)  # enabling configuration override by clearml
 ```
 The hyperparameter configurations can be viewed in the WebApp in the task's **CONFIGURATION** tab. 
 
-![image](../../../img/examples_integration_pytorch_ignite_config.png)
+![Hyperparameters](../../../img/examples_integration_pytorch_ignite_config.png#light-mode-only)
+![Hyperparameters](../../../img/examples_integration_pytorch_ignite_config_dark.png#dark-mode-only)
 
 ## Ignite TensorboardLogger
 
@@ -37,7 +38,8 @@ ClearML automatically captures scalars logged through `TensorboardLogger`.
 
 View the scalars in the task's page in the **ClearML Web UI**, in **SCALARS**.
 
-![Task scalars](../../../img/examples_cifar_scalars.png)
+![Task scalars](../../../img/examples_cifar_scalars.png#light-mode-only)
+![Task scalars](../../../img/examples_cifar_scalars_dark.png#dark-mode-only)
 
 
 ## Model Snapshots
@@ -46,18 +48,21 @@ ClearML automatically captures the model logged with Torch, and saves it as an a
 
 View saved snapshots in the task's **ARTIFACTS** tab.
 
-![Task models](../../../img/examples_cifar_artifacts.png)
+![Task models](../../../img/examples_cifar_artifacts.png#light-mode-only)
+![Task models](../../../img/examples_cifar_artifacts_dark.png#dark-mode-only)
 
 To view the model, in the **ARTIFACTS** tab, click the model name (or download it).
 
-![Model details](../../../img/examples_cifar_model.png)
+![Model details](../../../img/examples_cifar_model.png#light-mode-only)
+![Model details](../../../img/examples_cifar_model_dark.png#dark-mode-only)
 
 
 ## Debug Samples
 
 ClearML automatically tracks images logged to TensorboardLogger. They appear in **DEBUG SAMPLES**.
 
-![image](../../../img/examples_integration_pytorch_ignite_debug.png)
+![Debug Samples](../../../img/examples_integration_pytorch_ignite_debug.png#light-mode-only)
+![Debug Samples](../../../img/examples_integration_pytorch_ignite_debug_dark.png#dark-mode-only)
 
 
 ## Ignite ClearMLLogger
