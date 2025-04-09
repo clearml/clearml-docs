@@ -32,11 +32,8 @@ both MIG-enabled and non-MIG devices.
 ![Fractional GPU diagram](../img/fractional_gpu_diagram.png)
 
 ### Bare Metal Deployment
-1. Install the required packages:
+1. Install the required packages, using the command provided by the ClearML staff.
 
-   ```bash
-   pip install clearml-agent clearml-agent-fractional-gpu
-   ```
 1. Start the ClearML agent with dynamic GPU allocation. Use `--gpus` to specify the active GPUs, and use the `--queue` 
    flag to specify the queue name(s) and number (or fraction) of GPUs to allocate to them. 
 
