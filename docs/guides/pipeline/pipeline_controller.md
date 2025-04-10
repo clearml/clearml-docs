@@ -222,20 +222,23 @@ ClearML pipeline page: https://app.clear.ml/pipelines/462f48dba7b441ffb34bddb783
 The pipeline run's page contains the pipeline's structure, the execution status of every step, as well as the run's 
 configuration parameters and output.
 
-![Pipeline DAG](../../img/examples_pipeline_from_tasks_DAG.png)
+![Pipeline DAG](../../img/examples_pipeline_from_tasks_DAG.png#light-mode-only)
+![Pipeline DAG](../../img/examples_pipeline_from_tasks_DAG_dark.png#dark-mode-only)
 
 To view a run's complete information, click **Full details** on the bottom of the **Run Info** panel, which will open 
 the pipeline's [controller task page](../../webapp/webapp_exp_track_visual.md).
 
 Click a step to see its summary information.
 
-![Pipeline step info](../../img/examples_pipeline_from_tasks_step_info.png)
+![Pipeline step info](../../img/examples_pipeline_from_tasks_step_info.png#light-mode-only)
+![Pipeline step info](../../img/examples_pipeline_from_tasks_step_info_dark.png#dark-mode-only)
 
 ### Console
 
 Click **DETAILS** to view a log of the pipeline controller's console output.
 
-![Pipeline console](../../img/examples_pipeline_from_tasks_console.png)
+![Pipeline console](../../img/examples_pipeline_from_tasks_console.png#light-mode-only)
+![Pipeline console](../../img/examples_pipeline_from_tasks_console_dark.png#dark-mode-only)
 
 Click on a step to view its console output. 
 

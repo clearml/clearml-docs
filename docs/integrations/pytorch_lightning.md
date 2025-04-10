@@ -31,7 +31,8 @@ And that's it! This creates a [ClearML Task](../fundamentals/task.md) which capt
 
 You can view all the task details in the [WebApp](../webapp/webapp_overview.md). 
 
-![LightningCLI params](../img/integrations_lightningcli_params.png)
+![LightningCLI params](../img/integrations_lightningcli_params.png#light-mode-only)
+![LightningCLI params](../img/integrations_lightningcli_params_dark.png#dark-mode-only)
 
 See an example of PyTorch Lightning and ClearML in action [here](../guides/frameworks/pytorch_lightning/pytorch_lightning_example.md). 
 
