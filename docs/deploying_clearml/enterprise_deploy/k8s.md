@@ -105,7 +105,7 @@ to manage ML workloads and automate recurring workflows--no code required
 
 Applications are installed on top of the ClearML Server and are provided by the ClearML team.
 
-For more information, see [ClearML Applications](extra_configs/apps.md).
+For more information, see [ClearML Applications](apps_k8s.md).
 
 ## Additional Configuration Options
 

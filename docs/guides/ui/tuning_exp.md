@@ -10,7 +10,7 @@ example script.
 * Clone the [clearml](https://github.com/clearml/clearml) repository.
 * Install the [requirements](https://github.com/clearml/clearml/blob/master/examples/frameworks/tensorflow/requirements.txt) 
   for the TensorFlow examples.
-* Have **ClearML Agent** [installed and configured](../../clearml_agent/clearml_agent_setup.md#installation).
+* Have **ClearML Agent** [installed and configured](../../clearml_agent/clearml_agent_deployment_bare_metal.md#installation).
 
 ## Step 1: Run the Task
 

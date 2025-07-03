@@ -2,6 +2,10 @@
 title: Microsoft AD SAML
 ---
 
+:::info Enterprise Feature
+Identity provider integration is available under the ClearML Enterprise plan.
+:::
+
 This document describes the configuration required for connecting a ClearML Kubernetes server to allow authenticating 
 users with Microsoft AD using SAML.
 

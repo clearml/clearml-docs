@@ -8,7 +8,7 @@ run, will automatically execute the [keras_tensorboard.py](https://github.com/cl
 script.
 
 ## Prerequisites
-* [`clearml-agent`](../../clearml_agent/clearml_agent_setup.md#installation) installed and configured
+* [`clearml-agent`](../../clearml_agent/clearml_agent_deployment_bare_metal.md#installation) installed and configured
 * [`clearml`](../../clearml_sdk/clearml_sdk_setup.md#install-clearml) installed and configured
 * [clearml](https://github.com/clearml/clearml) repo cloned (`git clone https://github.com/clearml/clearml.git`)
 

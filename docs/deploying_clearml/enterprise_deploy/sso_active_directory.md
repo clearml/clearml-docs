@@ -2,6 +2,10 @@
 title: Group Integration in Active Directory SAML
 ---
 
+:::info Enterprise Feature
+Identity provider integration is available under the ClearML Enterprise plan.
+:::
+
 Follow this guide to integrate groups from Active Directory with ClearML.
 
 ## Actions in Active Directory

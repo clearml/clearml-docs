@@ -2,6 +2,10 @@
 title: ClearML Fractional GPU Injector (CFGI)
 ---
 
+:::important Enterprise Feature
+CFGI requires the agent to use a ClearML Enterprise Server
+:::
+
 The **ClearML Enterprise Fractional GPU Injector** (CFGI) allows AI workloads to utilize fractional (non-MIG) GPU slices 
 on Kubernetes clusters, maximizing hardware efficiency and performance.
 
@@ -16,7 +20,7 @@ helm repo update
 
 ### Requirements
 
-* Install the NVIDIA `gpu-operator` using Helm. For instructions, see [Basic Deployment](../extra_configs/gpu_operator.md).
+* Install the NVIDIA `gpu-operator` using Helm. For instructions, see [Basic Deployment](gpu_operator.md).
 * Set the number of GPU slices to 8
 * Add and update the Nvidia Helm repo:
 

@@ -1,5 +1,5 @@
 ---
-title: Installing External Applications Server
+title: External Applications Server Installation
 ---
 
 :::important Enterprise Feature

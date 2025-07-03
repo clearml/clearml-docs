@@ -54,8 +54,8 @@ helm install -n gpu-operator gpu-operator nvidia/gpu-operator --create-namespace
 ## Fractional GPU Support
 
 To enable fractional GPU allocation or manage mixed GPU configurations, refer to the following guides:
-* [ClearML Dynamic MIG Operator](../fractional_gpus/cdmo.md) (CDMO) – Dynamically configures MIG GPUs on supported devices.
-* [ClearML Enterprise Fractional GPU Injector](../fractional_gpus/cfgi.md) (CFGI) – Enables fractional (non-MIG) GPU 
+* [ClearML Dynamic MIG Operator](cdmo.md) (CDMO) – Dynamically configures MIG GPUs on supported devices.
+* [ClearML Enterprise Fractional GPU Injector](cfgi.md) (CFGI) – Enables fractional (non-MIG) GPU 
   allocation for better hardware utilization and workload distribution in Kubernetes.
-* [CDMO and CFGI on the same Cluster](../fractional_gpus/cdmo_cfgi_same_cluster.md) - In clusters with multiple nodes and 
+* [CDMO and CFGI on the same Cluster](cdmo_cfgi_same_cluster.md) - In clusters with multiple nodes and 
   varying GPU types, the `gpu-operator` can be used to manage different device configurations and fractioning modes.

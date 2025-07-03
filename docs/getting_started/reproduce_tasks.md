@@ -3,7 +3,7 @@ title: Reproducing Task Runs
 ---
 
 :::note
-This tutorial assumes that you've already set up [ClearML](../clearml_sdk/clearml_sdk_setup.md) and [ClearML Agent](../clearml_agent/clearml_agent_setup.md).
+This tutorial assumes that you've already set up [ClearML](../clearml_sdk/clearml_sdk_setup.md) and [ClearML Agent](../clearml_agent/clearml_agent_deployment_bare_metal.md).
 :::
 
 Tasks can be reproduced--or **Cloned**--for validation or as a baseline for further experimentation. When you initialize a task in your

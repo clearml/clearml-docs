@@ -2,6 +2,10 @@
 title: Custom Applications
 ---
 
+:::info Enterprise Feature
+The custom applications are available under the ClearML Enterprise plan.
+:::
+
 The following is a guide for creating and installing custom ClearML applications on ClearML on-premises Enterprise servers.
 ClearML applications are Python programs that are run as ClearML tasks whose UI--input form and output dashboard--is 
 defined in an attached configuration file.

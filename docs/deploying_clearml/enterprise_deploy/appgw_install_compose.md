@@ -3,7 +3,7 @@ title: Docker-Compose Deployment
 ---
 
 :::important Enterprise Feature
-The Application Gateway is available under the ClearML Enterprise plan.
+The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
 The AI Application Gateway enables external HTTP(S) or direct TCP access to ClearML tasks and applications running on 

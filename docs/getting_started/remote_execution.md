@@ -3,7 +3,7 @@ title: Remote Execution
 ---
 
 :::note
-This guide assumes that you've already set up [ClearML](../clearml_sdk/clearml_sdk_setup.md) and [ClearML Agent](../clearml_agent/clearml_agent_setup.md).
+This guide assumes that you've already set up [ClearML](../clearml_sdk/clearml_sdk_setup.md) and [ClearML Agent](../clearml_agent/clearml_agent_deployment_bare_metal.md).
 :::
 
 ClearML Agent enables seamless remote execution by offloading computations from a local development environment to a more 

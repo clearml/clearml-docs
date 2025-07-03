@@ -6,7 +6,7 @@ title: Slurm
 Slurm Glue is available under the ClearML Enterprise plan.
 :::
 
-Agents can be deployed bare-metal or inside [`Singularity`](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) 
+Agents can be deployed inside [`Singularity`](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) 
 containers in Linux clusters managed with Slurm. 
 
 ClearML Agent Slurm Glue maps jobs to Slurm batch scripts: associate a ClearML queue to a batch script template, then 

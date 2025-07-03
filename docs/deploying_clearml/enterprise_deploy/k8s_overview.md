@@ -54,7 +54,7 @@ See the [ClearML Server on Kubernetes installation guide](k8s.md).
 ClearML Applications are plugin services that automate ML workloads 
 without any coding. Applications are installed on top of the ClearML Server and are provided by the ClearML team.
 
-See the [Application Installation guide](extra_configs/apps.md).
+See the [Application Installation guide](apps_k8s.md).
 
 ### ClearML Enterprise Agent
 
@@ -75,16 +75,16 @@ See the [AI Application Gateway installation guide](appgw_install_k8s.md).
 
 Deploy the NVIDIA GPU Operator in order to use Nvidia GPUs in ClearML.
 
-See the [GPU Operator Basic Deployment guide](extra_configs/gpu_operator.md).
+See the [GPU Operator Basic Deployment guide](../../clearml_agent/fractional_gpus/gpu_operator.md).
 
 ### Fractional GPU Support
 
 To optimize GPU utilization:
 
-* ClearML Dynamic MIG Orchestrator (CDMO): Manage GPU fractions using NVIDIA MIGs. See the [CDMO guide](fractional_gpus/cdmo.md)
-* ClearML Fractional GPU Injector (CFGI): Use fractional (non-MIG) GPU slices for efficient resource sharing. See the [CFGI guide](fractional_gpus/cfgi.md)
+* ClearML Dynamic MIG Orchestrator (CDMO): Manage GPU fractions using NVIDIA MIGs. See the [CDMO guide](../../clearml_agent/fractional_gpus/cdmo.md)
+* ClearML Fractional GPU Injector (CFGI): Use fractional (non-MIG) GPU slices for efficient resource sharing. See the [CFGI guide](../../clearml_agent/fractional_gpus/cfgi.md)
 * Mixed Deployments: Deploy both CDMO and CFGI in clusters with diverse GPU types. Use the NVIDIA GPU Operator to handle 
-  mixed hardware setups. See the [CDMO and CFGI guide](fractional_gpus/cdmo_cfgi_same_cluster.md).
+  mixed hardware setups. See the [CDMO and CFGI guide](../../clearml_agent/fractional_gpus/cdmo_cfgi_same_cluster.md).
 
 ### Multi-Tenant Setup
 

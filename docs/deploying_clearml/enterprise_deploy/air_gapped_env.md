@@ -96,7 +96,7 @@ For air-gapped SSH applications using the DropBear server (required for non-priv
 
 ### Convert Image Registry
 
-[ClearML Application](extra_configs/apps.md) installation requires running the `convert_image_registry.py` script
+[ClearML Application](apps_k8s.md) installation requires running the `convert_image_registry.py` script
 included in the package. Images that need to be mirrored will be listed in the script output of the same script. Mirror these images
 to your private registry before proceeding 
 with the upload of application packages.

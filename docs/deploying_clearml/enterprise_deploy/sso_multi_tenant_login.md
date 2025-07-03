@@ -2,6 +2,10 @@
 title: Multi-Tenant Login Mode
 ---
 
+:::info Enterprise Feature
+Identity provider integration is available under the ClearML Enterprise plan.
+:::
+
 In a multi-tenant setup, each external tenant can be represented by an SSO client defined in the customer Identity provider 
 (Keycloak). Each ClearML tenant can be associated with a particular external tenant. Currently, only one 
 ClearML tenant can be associated with a particular external tenant

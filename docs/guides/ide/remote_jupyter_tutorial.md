@@ -9,7 +9,7 @@ where a `clearml-agent` will run and spin an instance of the remote session.
 ## Prerequisites
 
 * `clearml-session` package installed (`pip install clearml-session`)
-* At least one `clearml-agent` running on a **remote** host. See [installation details](../../clearml_agent/clearml_agent_setup.md#installation).
+* At least one `clearml-agent` running on a **remote** host. See [installation details](../../clearml_agent/clearml_agent_deployment_bare_metal.md#installation).
   Configure the `clearml-agent` to listen to the `default` queue (`clearml-agent daemon --queue default`)
 * An SSH client installed on machine being used. To verify, open terminal, execute `ssh`, and if no error is received,
     it should be good to go.

@@ -2,6 +2,10 @@
 title: KeyCloak IdP Configuration
 ---
 
+:::info Enterprise Feature
+Identity provider integration is available under the ClearML Enterprise plan.
+:::
+
 This procedure is a step-by-step guide of the configuration process for the ClearML Enterprise Server with the KeyCloak IdP.
 
 In the following sections, the term "publicly accessible" does not have to mean open to the entire world or publicly 
