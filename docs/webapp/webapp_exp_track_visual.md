@@ -349,7 +349,8 @@ are on the left side of the window. The tools include:
   * Time from start - Time since task began
   * Wall time - Local clock time
 * Curve smoothing - Choose which smoothing algorithm to use from the dropdown menu: Exponential moving average, Gaussian, 
-  or Running Average. Use the slider to configure the smoothing factor or specify a value manually. 
+  or Running Average. Use the sliders to configure smoothing factors or specify a value manually.  Use the `Show Originals` 
+  toggle control to show both original and smoothed plots, or smoothed plots only.
 * Show / hide plots - Click <img src="/docs/latest/icons/ico-show.svg" alt="Eye Show" className="icon size-md space-sm" /> to control which 
   plots to display. For example, to display specific plots, click **HIDE ALL**, and then click <img src="/docs/latest/icons/ico-show.svg" alt="Eye Show" className="icon size-md space-sm" /> 
   on each plot you want to view.

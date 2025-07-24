@@ -98,6 +98,9 @@ The queue table shows the following queue information:
 * Last Updated - The last time queue contents were modified
 * In Queue - Number of tasks currently enqueued in the queue
 
+Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
+to find specific queues. You can query by queue name, display name, and ID.
+
 To create a new queue - Click **+ NEW QUEUE** (top left).
 
 Hover over a queue and click <img src="/docs/latest/icons/ico-copy-to-clipboard.svg" alt="Copy" className="icon size-md space-sm" /> 

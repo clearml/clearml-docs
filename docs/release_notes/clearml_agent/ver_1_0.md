@@ -26,8 +26,8 @@ title: Version 1.0
 
 **Bug Fixes**
 
-* Fix agent can return non-zero error code and pods will end up restarting forever ([clearml-agent GitHub Issue 56](https://github.com/clearml/clearml-agent/issues/56))
-* Fix poetry support ([clearml-agent GitHub Issue 57](https://github.com/clearml/clearml-agent/issues/57))
+* Fix agent can return non-zero error code and pods will end up restarting forever ([#56](https://github.com/clearml/clearml-agent/issues/56))
+* Fix poetry support ([#57](https://github.com/clearml/clearml-agent/issues/57))
 * Fix cuda version from driver does not return minor version
 * Fix requirements local path replace back when using cache
 * Fix k8s glue

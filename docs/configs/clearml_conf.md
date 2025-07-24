@@ -307,6 +307,26 @@ optional shell script executes inside the Docker on startup, before the task sta
         
 ---
 
+**`agent.git_use_ms_entra_token`** (*bool*)
+
+* Enable authentication to Azure DevOps repositories using Microsoft Entra tokens.
+  * Set to `true` to authenticate using a Microsoft Entra OAuth token.
+  * `agent.git_use_ms_entra_token` and `agent.git_use_azure_pat` are mutually exclusive. Only one can be set to `true` at a time.
+  * The token is retrieved from the configured Git password (set via `agent.git_pass` or the `CLEARML_AGENT_GIT_PASS` environment variable).
+  * For more information, see the [Azure DevOps authentication guide](https://learn.microsoft.com/en-us/azure/devops/repos/git/auth-overview?view=azure-devops&tabs=Linux#microsoft-entra-oauth-tokens-recommended).
+
+---
+
+**`agent.git_use_azure_pat`** (*bool*)
+
+* Enable authentication to Azure DevOps repositories using a Personal Access Token (PAT).
+  * Set to `true` to authenticate using an Azure DevOps PAT.
+  * `agent.git_use_ms_entra_token` and `agent.git_use_azure_pat` are mutually exclusive. Only one can be set to `true` at a time.
+  * The PAT is retrieved from the configured Git password (set via `agent.git_pass` or the `CLEARML_AGENT_GIT_PASS` environment variable).
+  * For more information, see the [Azure DevOps authentication guide](https://learn.microsoft.com/en-us/azure/devops/repos/git/auth-overview?view=azure-devops&tabs=Linux#personal-access-tokens-alternative-option).
+
+---
+
 <a id="hide_docker"/> 
 
 **`agent.hide_docker_command_env_vars`** (*dict*)

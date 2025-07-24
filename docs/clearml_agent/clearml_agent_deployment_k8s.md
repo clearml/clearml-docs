@@ -24,7 +24,7 @@ You can deploy ClearML Agent onto Kubernetes using one of the following methods:
 1. **ClearML Agent Helm Chart (Recommended)**:
    Use the ClearML Agent Helm Chart to spin up an agent pod acting as a controller. This is the recommended and 
    scalable approach. ClearML provides both [open-source](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml-agent) 
-   and [enterprise](#agent-with-an-enterprise-server) Helm charts. See more details below. 
+   and [Enterprise](#agent-with-an-enterprise-server) Helm charts. See more details below. 
 
 
 ## ClearML Helm Chart

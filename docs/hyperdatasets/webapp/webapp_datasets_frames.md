@@ -73,6 +73,7 @@ Use frame viewer controls to navigate between frames in a Hyper-Dataset Version,
 | Delete | Remove annotation |
 | Alt + ] / [ | Choose a default ROI label by navigating between previous / next labels  |
 | Shift + M | Edit metadata | 
+|Shift + N| Add a new [frame label](../annotations.md#frame-labels) |
 | Shift + Tab | Previous annotation (use after clicking an annotation) |
 
 **Mode-specific annotation controls**

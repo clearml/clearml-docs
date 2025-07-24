@@ -39,8 +39,8 @@ Applications for deploying user interfaces for models:
 Applications for deploying machine learning models as scalable, secure services:
 * [**Embedding Model Deployment**](apps_embed_model_deployment.md) - Deploy embedding models as networking services over a secure endpoint (available under ClearML Enterprise Plan)
 * [**vLLM Model Deployment**](apps_model_deployment.md) - Deploy LLM models as networking services over a secure endpoint (available under ClearML Enterprise Plan)
-* [**llama.cpp**](apps_llama_deployment.md) - Deploy LLM models in GGUF format using [`llama.cpp`](https://github.com/ggerganov/llama.cpp) as networking services over a secure endpoint (available under ClearML Enterprise Plan)
-* [**LLM UI**](apps_llm_ui.md) - Launch a visual chat interface to a deployed model.
+* [**Llama.cpp**](apps_llama_deployment.md) - Deploy LLM models in GGUF format using [`llama.cpp`](https://github.com/ggerganov/llama.cpp) as networking services over a secure endpoint (available under ClearML Enterprise Plan)
+* [**LLM UI**](apps_llm_ui.md) - Launch a visual chat interface to a deployed model (available under ClearML Enterprise Plan)
 
 :::info Autoscalers
 Autoscaling ([AWS Autoscaler](apps_aws_autoscaler.md) and [GCP Autoscaler](apps_gcp_autoscaler.md))

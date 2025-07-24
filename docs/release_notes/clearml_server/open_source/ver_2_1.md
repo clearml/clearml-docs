@@ -8,23 +8,23 @@ title: Version 2.1
 * New UI task creation options
   * Support bash as well as Python scripts
   * Support file upload
-* Add per-project UI scalar view configuration ([ClearML GitHub issue #1377](https://github.com/clearml/clearml/issues/1377))
+* Add per-project UI scalar view configuration ([ClearML #1377](https://github.com/clearml/clearml/issues/1377))
 * Add support for custom x-axis label in UI Task scalars
 * Add global search bar to all UI pages
 * Add filter to UI Model Endpoints table 
-* Add clicking UI breadcrumbs project name of full-screen task opens the project's task table ([ClearML GitHub issue #1376](https://github.com/clearml/clearml/issues/1376))
+* Add clicking UI breadcrumbs project name of full-screen task opens the project's task table ([ClearML #1376](https://github.com/clearml/clearml/issues/1376))
 * Improve UI task debug sample viewer:
-  * Zoom setting persists when navigating between samples ([ClearML GitHub issue #1390](https://github.com/clearml/clearml/issues/1390))
+  * Zoom setting persists when navigating between samples ([ClearML #1390](https://github.com/clearml/clearml/issues/1390))
   * Zoom focuses on cursor position
 
 **Bug Fixes**
-* Fix EMA smoothing in UI scalars is incorrect in first data point ([ClearML Web GitHub issue #101](https://github.com/clearml/clearml-web/issues/101))
-* Improve UI scalar smoothing algorithms (ClearML Web GitHub issues [#101](https://github.com/clearml/clearml-web/issues/101), 
+* Fix EMA smoothing in UI scalars is incorrect in first data point ([ClearML Web #101](https://github.com/clearml/clearml-web/issues/101))
+* Improve UI scalar smoothing algorithms (ClearML [#101](https://github.com/clearml/clearml-web/issues/101), 
   [#102](https://github.com/clearml/clearml-web/issues/102), [#103](https://github.com/clearml/clearml-web/issues/103))
-* Fix UI Plots does not respect plotly `aspectmode` ([ClearML GitHub issue #1389](https://github.com/clearml/clearml/issues/1389))
-* Fix ctrl-f does not open a search bar in UI editor modals ([ClearML Web GitHub issue #99](https://github.com/clearml/clearml-web/issues/99))
-* Fix UI original series of smoothed plots barely visible in dark mode ([ClearML Server GitHub issue #270](https://github.com/clearml/clearml-server/issues/270))
-* Fix webserver configuration environment variables don't load with single-quoted strings ([ClearML Server GitHub issue #271](https://github.com/clearml/clearml-server/issues/271))
+* Fix UI Plots does not respect plotly `aspectmode` ([ClearML #1389](https://github.com/clearml/clearml/issues/1389))
+* Fix ctrl-f does not open a search bar in UI editor modals ([ClearML Web #99](https://github.com/clearml/clearml-web/issues/99))
+* Fix UI original series of smoothed plots barely visible in dark mode ([ClearML Server #270](https://github.com/clearml/clearml-server/issues/270))
+* Fix webserver configuration environment variables don't load with single-quoted strings ([ClearML Server #271](https://github.com/clearml/clearml-server/issues/271))
 * Fix next/previous function not working in UI model plots in full-screen
 * Fix UI pipeline "Preview" tab sometimes displays "Failed to get plot charts" error
 * Fix image plots sometimes not rendered in UI
@@ -37,8 +37,8 @@ title: Version 2.1
 * Fix task status not updating in UI task comparison page
 * Fix manual refresh function sometimes does not work in UI task full screen view
 * Fix recently modified reports not displayed in UI "Recent Reports"
-* Fix UI task plot zoom not maintained between full screen and regular view ([ClearML Web GitHub issue #106](https://github.com/clearml/clearml-web/issues/106))
-* Fix UI scalar graph colors sometimes difficult to see in light mode ([ClearML Web GitHub issue #104](https://github.com/clearml/clearml-web/issues/104))
+* Fix UI task plot zoom not maintained between full screen and regular view ([ClearML Web #106](https://github.com/clearml/clearml-web/issues/106))
+* Fix UI scalar graph colors sometimes difficult to see in light mode ([ClearML Web #104](https://github.com/clearml/clearml-web/issues/104))
 * Fix UI task comparison's metric search bar in Scalars tab is case-sensitive
 * Fix UI task configuration long loading time
 * Fix embedded UI task comparison parallel coordinates plot does not display plot legend

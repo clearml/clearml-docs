@@ -2,6 +2,21 @@
 title: Version 2.0
 ---
 
+### ClearML Agent 2.0.3
+
+**New Feature**
+* Add support for Azure DevOps Git repositories authentication with Azure PAT and MS Entra Token using the `agent.git_use_azure_pat` 
+  and `agent.git_use_ms_entra_token` configuration options (and environment variables `CLEARML_AGENT_GIT_USE_AZURE_PAT` 
+  and `CLEARML_AGENT_GIT_USE_MS_ENTRA_TOKEN`)
+
+**Bug Fix**
+* Fix null ptr ref when skip Python env enabled ([#239](https://github.com/clearml/clearml-agent/issues/239))
+
+### ClearML Agent 2.0.2
+
+**Bug Fix**
+* Fix YAML dump failure causes agent to abort task execution (error log includes expected `SCALAR`, `SEQUENCE-START`, `MAPPING-START`, or `ALIAS`)
+
 ### ClearML Agent 2.0.1
 
 **Bug Fix**
