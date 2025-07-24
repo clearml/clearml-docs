@@ -1,21 +1,21 @@
 ---
-title: AI Application Gateway
+title: Application Gateway
 ---
 
 :::important Enterprise Feature
-The AI Application Gateway is available under the ClearML Enterprise plan.
+The Application Gateway is available under the ClearML Enterprise plan.
 :::
 
 Services running through a cluster orchestrator such as Kubernetes or cloud hyperscaler require meticulous configuration 
 to make them available as these environments do not expose their networks to external users.
 
-The ClearML AI Application Gateway facilitates setting up secure, authenticated access to jobs running on your compute 
+The ClearML Application Gateway facilitates setting up secure, authenticated access to jobs running on your compute 
 nodes from external networks.
 
-Using the AI Application Gateway, services are allocated externally accessible, SSL secure network routes which provide 
-access in adherence to ClearML RBAC privileges. The AI Application Gateway supports HTTP/S as well as raw TCP routing.
+Using the Application Gateway, services are allocated externally accessible, SSL secure network routes which provide 
+access in adherence to ClearML RBAC privileges. The Application Gateway supports HTTP/S as well as raw TCP routing.
 
-The following ClearML UI applications make use of the AI Application Gateway to provide authenticated HTTPS access to 
+The following ClearML UI applications make use of the Application Gateway to provide authenticated HTTPS access to 
 their instances: 
 
 * GPUaaS   
@@ -31,7 +31,7 @@ their instances:
   * [Llama.cpp Model Deployment](../../webapp/applications/apps_llama_deployment.md)
   * [LLM UI](../../webapp/applications/apps_llm_ui.md)
 
-The AI Application Gateway requires an additional component to the ClearML Server deployment: the **ClearML App Gateway Router**.
+The Application Gateway requires an additional component to the ClearML Server deployment: the **ClearML App Gateway Router**.
 If your ClearML Deployment does not have the App Gateway Router properly installed, these application instances may not be accessible. 
 
 #### Installation 

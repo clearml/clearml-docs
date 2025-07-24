@@ -2,13 +2,13 @@
 title: Deployment with Self-Signed Certificates
 ---
 
-This guide covers how to configure the [AI Application Gateway](../appgw.md) and [ClearML Agent](../../../clearml_agent/clearml_agent_deployment_k8s.md#agent-with-an-enterprise-server) 
+This guide covers how to configure the [Application Gateway](../appgw.md) and [ClearML Agent](../../../clearml_agent/clearml_agent_deployment_k8s.md#agent-with-an-enterprise-server) 
 to use self-signed or custom SSL certificates. 
 
 ## Certificate Configuration
 
 To configure certificates, update the applicable overrides file:
-* For AI Application Gateway: `clearml-app-gateway-values.override.yaml` file
+* For Application Gateway: `clearml-app-gateway-values.override.yaml` file
 * For ClearML Agent: `clearml-agent-values.override.yaml` file
 
 ```yaml
@@ -121,7 +121,7 @@ Their names are usually prefixed with the Helm release name, so adjust according
 ### Apply Changes
 
 To apply the changes, run the update command:
-* For AI Application Gateway:
+* For Application Gateway:
 
    ```bash
    helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> clearml-enterprise/clearml-enterprise-app-gateway --version <CHART_VERSION> -f clearml-app-gateway-values.override.yaml
