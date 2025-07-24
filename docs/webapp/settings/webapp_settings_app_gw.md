@@ -2,12 +2,12 @@
 title: Application Gateway
 ---
 
-The ClearML [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md) facilitates setting up secure, 
+The ClearML [Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md) facilitates setting up secure, 
 authenticated access to jobs running on your compute nodes from external networks (see application gateway installation
 for [Kubernetes](../../deploying_clearml/enterprise_deploy/appgw_install_k8s.md), [Docker-Compose Self-Hosted Deployment](../../deploying_clearml/enterprise_deploy/appgw_install_compose.md) 
 or [Docker-Compose Hosted Deployment](../../deploying_clearml/enterprise_deploy/appgw_install_compose_hosted.md)).
 
-The **Application Gateway** table lets you monitor all active application gateway routers, as well as verify gateway functionality. The table shows each router’s:
+The **Application Gateway** table lets you monitor all active app gateway routers, as well as verify gateway functionality. The table shows each router’s:
 * Name 
 * Externally accessible URL 
 * Test Status: The result of the most recent connectivity test 

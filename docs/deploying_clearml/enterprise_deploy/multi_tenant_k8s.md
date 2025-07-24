@@ -209,7 +209,7 @@ described [above](#create-a-tenant).
 In multi-tenant setups, you can separate the tenant workers in different namespaces:
 
 * Create a Kubernetes Namespace for each tenant 
-* Deploy a dedicated ClearML Agent and AI Application Gateway in each Namespace.
+* Deploy a dedicated ClearML Agent and Application Gateway in each Namespace.
 * Configure a tenant Agent and Gateway with credentials created on the ClearML Server by a user of the same tenant.
 
 Additional network separation can be achieved via Kubernetes Network Policies.

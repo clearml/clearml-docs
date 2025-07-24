@@ -3,7 +3,7 @@ title: Kubernetes Deployment
 ---
 
 :::important Enterprise Feature
-The AI Application Gateway is available under the ClearML Enterprise plan.
+The Application Gateway is available under the ClearML Enterprise plan.
 :::
 
 This guide details the installation of the ClearML App Gateway.

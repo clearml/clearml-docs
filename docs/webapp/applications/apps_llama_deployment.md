@@ -11,12 +11,12 @@ The llama.cpp Model Deployment application serves your model on a machine of you
 running, it serves your model through a secure, publicly accessible network endpoint. The app monitors endpoint activity 
 and shuts down if the model remains inactive for a specified maximum idle time.
 
-:::important AI Application Gateway
+:::important Application Gateway
 The llama.cpp Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
 network endpoint for the model. 
 
-If the ClearML AI application Gateway is not available, the model endpoint might not be accessible.
-For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
+If the ClearML Application Gateway is not available, the model endpoint might not be accessible.
+For more information, see [Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
 After starting a llama.cpp Model Deployment instance, you can view the following information in its dashboard:

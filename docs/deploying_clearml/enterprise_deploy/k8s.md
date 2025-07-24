@@ -17,7 +17,7 @@ To deploy a ClearML Server, ensure the following components and configurations a
 - Ingress Controller: An Ingress controller (e.g., `nginx-ingress`) is required. If exposing services externally, configure 
   LoadBalancer-capable solution (e.g. `MetalLB`).
 - Server and workers that communicate on HTTP/S (ports 80 and 443). Additionally, the TCP session feature requires a 
-  range of ports for TCP traffic based on your configuration (see [AI App Gateway installation](appgw_install_k8s.md)).
+  range of ports for TCP traffic based on your configuration (see [Application Gateway installation](appgw_install_k8s.md)).
 - DNS Configuration: A domain with subdomain support is required, ideally with trusted TLS certificates. All entries must 
   be resolvable by the Ingress controller. Example subdomains:
   - Server:
@@ -182,12 +182,12 @@ The ClearML Enterprise Agent enables scheduling and execution of distributed wor
 
 See the [ClearML Agent installation guide](../../clearml_agent/clearml_agent_deployment_k8s.md#agent-with-an-enterprise-server).
 
-### AI Application Gateway
+### Application Gateway
 
-The AI App Gateway enables secure, authenticated access to ClearML application endpoints such as model serving or IDE workloads
+The Application Gateway enables secure, authenticated access to ClearML application endpoints such as model serving or IDE workloads
 based on ClearML user permissions. It routes HTTPS traffic from users to running pods on the cluster.
 
-See the [AI Application Gateway installation guide](appgw_install_k8s.md).
+See the [Application Gateway installation guide](appgw_install_k8s.md).
 
 ## Advanced Options
 ### GPU Operator

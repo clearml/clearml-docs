@@ -97,17 +97,17 @@ these credentials cannot be recovered.
 
 **To revoke ClearML credentials:** hover over the desired credentials, and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash can" className="icon size-md" /> .
 
-### AI Application Gateway Tokens 
+### Application Gateway Tokens 
 
 :::important Enterprise Feature
-The AI Application Gateway is available under the ClearML Enterprise plan.
+The Application Gateway is available under the ClearML Enterprise plan.
 :::
 
-The [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md) enables external access to ClearML 
+The [Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md) enables external access to ClearML 
 tasks and applications. The gateway is configured with an 
 endpoint or external address (ingress), accessible from outside ClearML.
 
-Generate tokens providing API access to the AI Application Gateway endpoints:
+Generate tokens providing API access to the Application Gateway endpoints:
 
 1. Click **Generate a Token**
 1. Under `Expiration`, enter the number of days the token should remain valid 
