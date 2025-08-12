@@ -8,14 +8,14 @@ The vLLM Model Deployment App is available under the ClearML Enterprise plan.
 
 The vLLM Model Deployment application enables users to quickly deploy LLM models as networking services over a secure 
 endpoint. This application supports various model configurations and customizations to optimize performance and resource 
-usage. 
+usage. The vLLM Model Deployment application serves your model(s) on a machine of your choice. Once an app instance is running, 
+it serves your model through a secure, publicly accessible network endpoint. 
 
 The app supports flexible multi-model hosting and Universal Memory features, allowing inactive models to 
 be offloaded from GPU memory to CPU (via configurable `CPU Offload` and `Swap Space` settings). This enables 
 multiple large models to share the same GPU hardware efficiently, freeing GPU resources for active workloads.
 
-The vLLM Model Deployment application serves your model(s) on a machine of your choice. Once an app instance is running, 
-it serves your model through a secure, publicly accessible network endpoint. The app monitors endpoint activity and 
+The app monitors endpoint activity and 
 shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway

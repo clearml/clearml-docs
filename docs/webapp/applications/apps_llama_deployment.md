@@ -15,8 +15,7 @@ memory options to free GPU resources:
 * CPU RAM – via `Automatic CPU Offloading` and configurable` Max CUDA Memory` limits.
 * Disk storage – via `Disk Swapping` (requires `Automatic CPU Offloading` to be disabled).
 
-The app monitors endpoint activity 
-and shuts down if the model remains inactive for a specified maximum idle time.
+The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::important AI Application Gateway
 The llama.cpp Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
