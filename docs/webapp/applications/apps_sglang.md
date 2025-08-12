@@ -9,8 +9,14 @@ The SGLang Model Deployment App is available under the ClearML Enterprise plan.
 The SGLang Model Deployment application enables users to create secure, authenticated LLM endpoints using the SGLang 
 serving engine. This application supports various model configurations and customizations to optimize performance and 
 resource usage. The SGLang Model Deployment application serves your model on a machine of your choice. Once an app 
-instance is running, it serves your model through a secure, publicly accessible network endpoint. The app monitors 
-endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
+instance is running, it serves your model through a secure, publicly accessible network endpoint. 
+
+The app supports multi-model hosting and Universal Memory technology, enabling inactive models to be offloaded to other 
+memory options to free GPU resources:
+* CPU RAM – via `Automatic CPU Offloading` and configurable` Max CUDA Memory` limits.
+* Disk storage – via `Disk Swapping` (requires `Automatic CPU Offloading` to be disabled).
+
+The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway
 The SGLang Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 

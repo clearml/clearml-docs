@@ -7,8 +7,15 @@ The llama.cpp Model Deployment App is available under the ClearML Enterprise pla
 :::
 
 The llama.cpp Model Deployment app enables users to quickly deploy LLM models in GGUF format using [`llama.cpp`](https://github.com/ggerganov/llama.cpp). 
-The llama.cpp Model Deployment application serves your model on a machine of your choice. Once an app instance is 
-running, it serves your model through a secure, publicly accessible network endpoint. The app monitors endpoint activity 
+The llama.cpp Model Deployment application serves your model(s) on a machine of your choice. Once an app instance is 
+running, it serves your model(s) through a secure, publicly accessible network endpoint. 
+
+The app supports multi-model hosting and Universal Memory technology, enabling inactive models to be offloaded to other 
+memory options to free GPU resources:
+* CPU RAM – via `Automatic CPU Offloading` and configurable` Max CUDA Memory` limits.
+* Disk storage – via `Disk Swapping` (requires `Automatic CPU Offloading` to be disabled).
+
+The app monitors endpoint activity 
 and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::important AI Application Gateway
@@ -76,13 +83,23 @@ values from the file, which can be modified before launching the app instance
 * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the 
   llama.cpp Model Deployment app instance task will be enqueued (make sure an agent is assigned to it)  
 **AI Gateway Route** - Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
-* **Model** - A ClearML Model ID or a Hugging Face model. The model must be in GGUF format. If you are using a 
-  HuggingFace model, make sure to pass the path to the GGUF file. For example: `provider/repo/path/to/model.gguf`
+* **Model Configuration**: Configure the behavior and performance of the model engine. 
+  * Model - A ClearML Model ID or a Hugging Face model. The model must be in GGUF format. If you are using a 
+    HuggingFace model, make sure to pass the path to the GGUF file. For example: `provider/repo/path/to/model.gguf`
+  * CLI - Llama.cpp cli arguments. If set, these arguments will be passed to Llama.cpp and all other wizard entries will be ignored, except for the `Model` field.
 * **General**
-  * Hugging Face Token - Token for accessing Hugging Face models that require authentication
-  * Number of GPU Layers - Number of layers to store in VRAM. `9999` indicates that all layers should be loaded in 
-  VRAM. Used to offload the model on the CPU RAM
-* **Advanced Options**
+  * Enable Debug Mode - Run deployment in debug mode
+  * Enable Automatic CPU Offloading - Enable multiple models to share GPUs by offloading unused ones to CPU. If `Max CUDA Memory` 
+    exceeds GPU capacity, this application will offload the surplus to the CPU RAM, virtually increasing the VRAM
+  * Enable Disk Swapping - Load multiple models on the same GPUs by offloading inactive ones to disk (requires `Automatic CPU Offloading` 
+    to be disabled). 
+  * HuggingFace Token - Token for accessing HuggingFace models that require authentication
+  * Max CUDA Memory (GiB): The maximum amount of CUDA memory identified by the system. Can exceed the actual hardware 
+  memory. The surplus memory will be offloaded to the CPU memory. Only usable on amd64 machines.
+  * CUDA Memory Manager Minimum Threshold: Maximum size (Kb) of the allocated chunks that should not be offloaded to CPU 
+  when using automatic CPU offloading. Defaults to `-1` when running on single GPU, and `66000` (64Mib) when running on 
+  multiple GPUs.
+* **Idle Options**
   * Idle Time Limit (Hours) - Maximum idle time after which the app instance will shut down
   * Last Action Report Interval (Seconds) - The frequency at which the last activity made by the application is reported. 
   Used to stop the application from entering an idle state when the machine metrics are low but the application is 
