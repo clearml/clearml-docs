@@ -20,6 +20,51 @@ when each VM instance is spun up.
 
 For more information about how autoscalers work, see [Autoscalers Overview](../../cloud_autoscaling/autoscaling_overview.md#autoscaler-applications).
 
+Once an autoscaler is launched, the autoscaler's dashboard provides information about available VM instances and their 
+status:
+
+* Number of idle instances
+* Number of pending jobs
+* Maximum idle time - The amount of time an instance can be idle before the autoscaler shuts it down 
+* `Shutdown idle instance now` - Click to terminate all idle instances 
+* Autoscaler status and warnings
+* Autoscaler Shutdown Action - Displays what the autoscaler does with instances it launched when it is shut down. 
+  Click `Change shutdown action` to modify the behavior upon shutdown. Options include:
+  * Do nothing (instances remain running)
+  * Shut down all idle cloud instances
+  * Shut down all cloud instances, including those running tasks
+* Instance graphs
+  * Available instances - Number of current running instances and their associated resources
+  * Running Instances by compute resource type over time 
+  * Running instances by instance type over time
+  * Queues and the resource type associated with them
+  * Total uptime by resource type
+* Instance logs - A table of instances that were spun up, including their type, associated resource, and spin-up time.
+
+:::tip Console Debugging   
+To make the autoscaler console log show additional debug information, change an active app instance's log level to DEBUG:
+1. Go to the app instance task's page > **CONFIGURATION** tab > **USER PROPERTIES** section 
+1. Hover over the section > Click `Edit` > Click `+ADD PARAMETER`
+1. Input `log_level` as the key and `DEBUG` as the value of the new parameter.
+
+![Autoscaler debugging](../../img/webapp_autoscaler_debug_log.png)
+
+The console's log level will update in the autoscaler's next iteration.  
+:::
+
+* Instance log files - Click to access the app instance's logs. This takes you to the app instance task's ARTIFACTS tab, 
+  which lists the app instance's logs. In a log's `File Path` field, click <img src="/docs/latest/icons/ico-download-json.svg" alt="Download" className="icon size-md space-sm" /> 
+  to download the complete log. 
+
+![GCP autoscaler dashboard](../../img/apps_gcp_autoscaler.png)
+
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
+are updated live as the app instance(s) updates. The Enterprise Plan and Hosted Service support embedding resources in 
+external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
+
 ## Autoscaler Instance Configuration
 When configuring a new GCP Autoscaler instance, you can fill in the required parameters or reuse the configuration of 
 a previously launched instance.  
@@ -121,44 +166,6 @@ auto_scaler.v1 {
 }
 ```
 :::
-
-## Dashboard
-
-Once an autoscaler is launched, the autoscaler's dashboard provides information about available VM instances and their 
-status.
-
-![GCP autoscaler dashboard](../../img/apps_gcp_autoscaler.png)
-
-The autoscaler dashboard shows:
-* Number of Idle Instances
-* Queues and the resource type associated with them
-* Number of current running instances
-* Console: the application log containing everything printed to stdout and stderr appears in the console log. The log 
-  shows polling results of the autoscaler's associated queues, including the number of tasks enqueued, and updates VM 
-  instances being spun up/down
-
-:::tip Console Debugging   
-To make the autoscaler console log show additional debug information, change an active app instance's log level to DEBUG:
-1. Go to the app instance task's page > **CONFIGURATION** tab > **USER PROPERTIES** section 
-1. Hover over the section > Click `Edit` > Click `+ADD PARAMETER`
-1. Input `log_level` as the key and `DEBUG` as the value of the new parameter.
-
-![Autoscaler debugging](../../img/webapp_autoscaler_debug_log.png)
-
-The console's log level will update in the autoscaler's next iteration.  
-:::
-
-* Instance log files - Click to access the app instance's logs. This takes you to the app instance task's ARTIFACTS tab, 
-  which lists the app instance's logs. In a log's `File Path` field, click <img src="/docs/latest/icons/ico-download-json.svg" alt="Download" className="icon size-md space-sm" /> 
-  to download the complete log. 
-
-:::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan and Hosted Service support embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
-to copy the embed code, and navigate to a report to paste the embed code.
-:::
-
 
 ## Generating GCP Credentials
 
