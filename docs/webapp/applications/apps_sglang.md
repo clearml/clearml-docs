@@ -9,8 +9,13 @@ The SGLang Model Deployment App is available under the ClearML Enterprise plan.
 The SGLang Model Deployment application enables users to create secure, authenticated LLM endpoints using the SGLang 
 serving engine. This application supports various model configurations and customizations to optimize performance and 
 resource usage. The SGLang Model Deployment application serves your model on a machine of your choice. Once an app 
-instance is running, it serves your model through a secure, publicly accessible network endpoint. The app monitors 
-endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
+instance is running, it serves your model through a secure, publicly accessible network endpoint. 
+
+The app supports multi-model hosting and Universal Memory technology, enabling inactive models to be offloaded to other memory options to free GPU resources:
+* CPU RAM – via `Automatic CPU Offloading`, `CPU Offload GiB`, and configurable `Max CUDA Memory` limits.
+* Disk storage – via `Disk Swapping` (when `Automatic CPU Offloading` is disabled).
+
+The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway
 The SGLang Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
@@ -95,6 +100,8 @@ instance task will be enqueued (make sure an agent is assigned to that queue)
   * CLI - SGLang CLI arguments. If set, these arguments will be passed to SGLang. All other deployment form fields will 
   be ignored, except for the `Model` field.
   * Model - A ClearML Model ID or a HuggingFace model name (e.g. `openai-community/gpt2`)
+  * Model Endpoint Name - The name to be used for API access. 
+  * GPUs (Tensor Parallel Size) - Number of GPUs used to load the model. Defaults to the number of GPUs detected on the machine 
 * **LoRA Configuration** 
   * Enable LoRA - If checked, enable handling of [LoRA adapters](https://huggingface.co/docs/diffusers/en/training/lora#lora).
   * LoRA Modules - LoRA module configurations in the format `name=path`. Multiple modules can be specified.
@@ -116,12 +123,36 @@ instance task will be enqueued (make sure an agent is assigned to that queue)
     exceeds GPU capacity, this application will offload the surplus to the CPU RAM, virtually increasing the VRAM
   * Enable Disk Swapping: Load multiple models on the same GPUs by offloading inactive ones to disk (requires `Automatic CPU Offloading` 
     to be disabled). 
+  * Log Requests: Log metadata, inputs, outputs of all requests.
+  * Enable Metrics: Enable logging Prometheus metrics.
+  * Enable Request Time Stats Logging: Record and log the processing time for each individual request to the deployed model.
+  * Disable Chunked Prefix Cache: Disable chunked prefix cache feature for Deepseek.
+  * Disable Fast Image Processor: Adopt base image processor instead of fast image processor.
+  * Enable P2P Check for GPU access
+  * Enable Cache Report: Return number of cached tokens in `usage.prompt_tokens_details` for each `openai` request. 
+  * Trust Remote Code: Select to set Hugging Face [`trust_remote_code`](https://huggingface.co/docs/text-generation-inference/main/en/reference/launcher#trustremotecode) 
+  to `true`.
   * HuggingFace Token: Token for accessing HuggingFace models that require authentication
   * Max CUDA Memory (GiB): The maximum amount of CUDA memory identified by the system. Can exceed the actual hardware 
   memory. The surplus memory will be offloaded to the CPU memory. Only usable on amd64 machines.
   * CUDA Memory Manager Minimum Threshold: Maximum size (Kb) of the allocated chunks that should not be offloaded to CPU 
   when using automatic CPU offloading. Defaults to `-1` when running on single GPU, and `66000` (64Mib) when running on 
   multiple GPUs.
+  * Schedule Policy: How incoming requests are prioritized
+    * lpm: Longest Prefix Match: Requests with largest partial match in the prompt cache prioritized.
+    * random
+    * fcfs: First come, first served. Request processed in order of arrival
+    * dfs-weight: Depth-First Search with weights. Requests prioritized based on a weighted factor
+  * Watchdog Timeout: Set watchdog timeout in seconds.
+  * Load Balance Method: The load balancing strategy for data parallelism.
+  * Log Level: The logging level of all loggers.
+  * Log Level HTTP: The logging level of HTTP server
+  * Log Requests Level: Logging level of requests:
+    * `0`: Log metadata
+    * `1`: Log metadata and partial input/output
+    * `2`: Log every input/output.
+  * Max Running Requests: The maximum number of running requests.
+* **Environment Variables** - Additional environment variable to set inside the container before launching the application
 * **Idle options**: 
   * Idle Time Limit (Hours) - Maximum idle time after which the app instance will shut down
   * Last Action Report Interval (Seconds) - Frequency at which last activity is reported. Prevents idle shutdown while still active.
