@@ -3,14 +3,14 @@ title: Docker-Compose Deployment
 ---
 
 :::important Enterprise Feature
-The AI Application Gateway is available under the ClearML Enterprise plan.
+The Application Gateway is available under the ClearML Enterprise plan.
 :::
 
-The AI Application Gateway enables external HTTP(S) or direct TCP access to ClearML tasks and applications running on 
+The Application Gateway enables external HTTP(S) or direct TCP access to ClearML tasks and applications running on 
 nodes. The gateway is configured with an endpoint or external address, making these services accessible from the user's 
 machine, outside the workload's network.
 
-This guide describes how to install and run the ClearML AI Application Gateway using docker-compose for environments 
+This guide describes how to install and run the ClearML Application Gateway using docker-compose for environments 
 where you manage both the ClearML Server and the workload nodes.
 
 
@@ -97,7 +97,7 @@ TCP_PORT_END=
 ```
 
 **Configuration Options:**
-* `PROXY_TAG`: AI Application Gateway proxy tag. The Docker image tag for the proxy component, which needs to be 
+* `PROXY_TAG`: Application Gateway proxy tag. The Docker image tag for the proxy component, which needs to be 
   specified during installation. This tag is provided by ClearML to ensure compatibility with the recommended version.
 * `ROUTER_TAG`: App Gateway Router tag. The Docker image tag for the router component. It defines the specific version 
   to be installed and is provided by ClearML as part of the setup process.

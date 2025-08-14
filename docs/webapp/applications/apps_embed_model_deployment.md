@@ -12,12 +12,12 @@ cases. The Embedding Model Deployment application serves your model on a machine
 running, it serves your embedding model through a secure, publicly accessible network endpoint. The app monitors 
 endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
-:::info AI Application Gateway
+:::info Application Gateway
 The Embedding Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
 network endpoint for the model.
 
-If the ClearML AI application Gateway is not available, the model endpoint might not be accessible. 
-For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
+If the ClearML Application Gateway is not available, the model endpoint might not be accessible. 
+For more information, see [Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
 After starting an Embedding Model Deployment instance, you can view the following information in its dashboard:
