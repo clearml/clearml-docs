@@ -9,8 +9,15 @@ The Embedding Model Deployment App is available under the ClearML Enterprise pla
 The Embedding Model Deployment app enables users to quickly deploy embedding models as networking services over a secure
 endpoint. This application supports various model configurations and customizations, addressing a range of embedding use
 cases. The Embedding Model Deployment application serves your model on a machine of your choice. Once an app instance is
-running, it serves your embedding model through a secure, publicly accessible network endpoint. The app monitors 
-endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
+running, it serves your embedding model through a secure, publicly accessible network endpoint. 
+
+The app supports multi-model hosting and Universal Memory technology, enabling inactive models to be offloaded to other
+memory options to free GPU resources:
+
+* CPU RAM – via `Automatic CPU Offloading` and configurable `Max CUDA Memory` limits.  
+* Disk storage – via `Disk Swapping` (requires `Automatic CPU Offloading` to be disabled).
+
+The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
 :::info AI Application Gateway
 The Embedding Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
@@ -27,13 +34,21 @@ After starting an Embedding Model Deployment instance, you can view the followin
   * <img src="/docs/latest/icons/ico-embedding-model-idle.svg" alt="Idle instance" className="icon size-md space-sm" /> - App instance is idle
   * <img src="/docs/latest/icons/ico-embedding-model-stopped.svg" alt="Stopped instance" className="icon size-md space-sm" /> - App instance is stopped
 * Idle time - Time elapsed since last activity 
-* Endpoint - The publicly accessible URL of the model endpoint. Active model endpoints are also available in the 
-  [Model Endpoints](../webapp_model_endpoints.md) table, which allows you to view and compare endpoint details and 
-  monitor status over time
-* API base - The base URL for the model endpoint
-* API key - The authentication key for the model endpoint
-* Test Command - An example command line to test the deployed model
-* Requests - Number of requests over time
+* Generate Token - Link to your workspace Settings page, where you can generate a token for accessing your deployed model in the `AI APPLICATION GATEWAY` section
+* Current session ID
+* Deployed models table:
+  * Model name
+  * Endpoint - The publicly accessible URL of the model endpoint. Active model endpoints are also listed in the 
+    [Model Endpoints](../webapp_model_endpoints.md) table, which allows you to view and compare endpoint details and 
+    monitor status over time
+* Model access command line example
+  * Select model the command should access
+  * Prompt - Provide a prompt to send to the model
+  * The `curl` command line to send your prompt to the selected model’s endpoint. Replace `YOUR_GENERATED_TOKEN` with a 
+    valid token generated in the `AI APPLICATION GATEWAY` section of the [Settings](../settings/webapp_settings_profile.md#ai-application-gateway-tokens) 
+    page.
+* Total Number of Requests - Number of requests over time
+* Tokens per Second - Number of tokens processed over time
 * Latency - Request response time (ms) over time
 * Endpoint resource monitoring metrics over time
   * CPU usage 
@@ -74,8 +89,8 @@ to open the app's configuration form.
 ### Configuration Options
 * **Import Configuration** - Import an app instance configuration file. This will fill the configuration form with the 
 values from the file, which can be modified before launching the app instance
-* **Project name** - ClearML Project where your Embedding Model Deployment app instance will be stored
-* **Task name** - Name of ClearML Task for your Embedding Model Deployment app instance
+* **Instance name** - Name for the Embedding Model Deployment instance. This will appear in the instance list
+* **Service Project** - ClearML Project where your Embedding Model Deployment app instance will be stored
 * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the Embedding Model 
 Deployment app instance task will be enqueued (make sure an agent is assigned to it)
 * **AI Gateway Route** - Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
@@ -93,10 +108,32 @@ Deployment app instance task will be enqueued (make sure an agent is assigned to
     * `mean`: Apply Mean pooling 
     * `splade`: Apply SPLADE (Sparse Lexical and Expansion) pooling. This option is only available for `ForMaskedLM` 
     Transformer models
+  * Max Concurrent Requests - The maximum number of concurrent requests for this instance. Having a low limit will deny 
+  client requests instead of having them wait for too long. 
+  * Max Batch Tokens - The total number of tokens allowed within a batch. If the `Max Batch Tokens` is 1000, you could 
+  fit 10 queries of 100 tokens or a single query of 1000 tokens. Generally, this number should be as large as possible 
+  until the model becomes compute bound. 
+  * Max Batch Requests - Set the maximum number of individual requests that can be combined in a batch 
+  * Max Client Batch Size - Set the maximum number of inputs a client can send in a single request 
+  * Payload Limit  - Payload size limit in bytes. Default is 2MB
   * \+ Add item - Add another model endpoint. Each model will be accessible through the same base URL, with the model 
-  name appended to the URL.  
-* **Hugging Face Token** - Token for accessing Hugging Face models that require authentication
-* **Idle Time Limit** (Hours) - Maximum idle time after which the app instance will shut down
+  name appended to the URL. 
+* **General** 
+  * Enable Debug Mode: Run deployment in debug mode  
+  * Enable Automatic CPU Offloading: Enable multiple models to share GPUs by offloading idle models to CPU. If `Max CUDA Memory` 
+  exceeds GPU capacity, this application will offload the surplus to the CPU RAM, virtually increasing the VRAM  
+  * Enable Disk Swapping: Load multiple models on the same GPUs by offloading idle models to disk (requires 
+  `Automatic CPU Offloading` to be disabled).  
+  * Hugging Face Token: Token for accessing Hugging Face models that require authentication  
+  * Log Level of the application logs
+  * Max CUDA Memory (GiB): The maximum amount of CUDA memory identified by the system. Can exceed the actual hardware 
+  memory. The surplus memory will be offloaded to the CPU memory. Only usable on amd64 machines.  
+  * CUDA Memory Manager Minimum Threshold: Maximum size (Kb) of the allocated chunks that should not be offloaded to 
+  CPU when using automatic CPU offloading. Defaults to `-1` when running on single GPU, and `66000` (64Mib) when running on multiple GPUs
+* **Environment Variables** - Additional environment variable to set inside the container before launching the application
+* **Advanced Options**
+  * Idle Time Limit (Hours) - Maximum idle time after which the app instance will shut down
+  * Last Action Report Interval (Seconds): Frequency at which last activity is reported. Prevents idle shutdown while still active.
 * **Export Configuration** - Export the app instance configuration as a JSON file, which you can later import to create a 
 new instance with the same configuration
 
