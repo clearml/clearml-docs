@@ -756,6 +756,7 @@ module.exports = {
                     'deploying_clearml/enterprise_deploy/multi_tenant_k8s',
                     'deploying_clearml/enterprise_deploy/vpc_aws',
                     'deploying_clearml/enterprise_deploy/on_prem_ubuntu',
+                    'deploying_clearml/enterprise_deploy/openshift',
                     'deploying_clearml/enterprise_deploy/air_gapped_env',
                     ]
                 },
