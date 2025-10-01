@@ -121,6 +121,8 @@ The **AI Application Gateway Table** displays all tokens available to the user, 
 
 To revoke a token, hover over the token's row and click <img src="/docs/latest/icons/ico-trash.svg" alt="Trash" className="icon size-md space-sm" />. 
 
+![AI App Gateway Token Table](../../img/settings_token_management.png#light-mode-only)
+![AI App Gateway Token Table](../../img/settings_token_management_dark.png#dark-mode-only)
 
 ### Changing Your Workspace Name
 To change the name of your own workspace, click **Edit workspace name**  <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> 

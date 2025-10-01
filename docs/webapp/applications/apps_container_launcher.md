@@ -39,6 +39,9 @@ If the ClearML AI application Gateway is not available, the application containe
 For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
 :::
 
+![Containerized Application Launcher Dashboard](../../img/apps_container_launcher.png#light-mode-only)
+![Containerized Application Launcher Dashboard](../../img/apps_container_launcher_dark.png#dark-mode-only)
+
 ## Containerized Application Launcher Instance Configuration
 
 When configuring a new Containerized App Launcher instance, you can fill in the required parameters or reuse the 
