@@ -11,10 +11,9 @@ serves your model on a machine of your choice. Once an app instance is running, 
 publicly accessible network endpoint. The app monitors endpoint activity and shuts down if the model remains inactive 
 for a specified maximum idle time.
 
-Note that the `NGC_API_KEY` environment variable needs to be set to a valid NGC API key. You can set the variable in one 
-of the following ways:
-* The NIM app deployment form’s `Environment Variables` field
-* [Configuration vault](../settings/webapp_settings_profile.md#configuration-vault)
+* The `NGC_API_KEY` environment variable needs to be set to a valid NGC API key. You can set the variable in one of the following ways:
+  * The NIM app deployment form’s `Environment Variables` field
+  * [Configuration vault](../settings/webapp_settings_profile.md#configuration-vault)
 
 :::info AI Application Gateway
 The NIM app makes use of the App Gateway Router which implements a secure, authenticated network endpoint for the model.
@@ -81,7 +80,8 @@ values from the file, which can be modified before launching the app instance
 * **Application instance project**: The ClearML project where the app instance is created. Access is determined by 
   project-level permissions (i.e. users with read access can use the app).
 * **NIM Container Image**: Select the containerized application image to use. Note the different tags / versions of each image
-* **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue)  to which the NIM app instance task will be enqueued (make sure an agent is assigned to it)
+* **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue)  to which the NIM app instance task will be enqueued. Make sure an agent 
+  is assigned to this queue and has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
 * **AI Gateway Route**: Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
 * **Idle Time Limit** (Hours): Maximum idle time after which the app instance will shut down
 * **Environment Variables**: Additional environment variable to set inside the container before launching the application 

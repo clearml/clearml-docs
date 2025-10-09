@@ -668,6 +668,7 @@ module.exports = {
                     ]
                 },
                 'clearml_agent/multi_node_training',
+                'clearml_agent/clearml_agent_nvcr',
                 {
                     type: 'category',
                     collapsible: true,
