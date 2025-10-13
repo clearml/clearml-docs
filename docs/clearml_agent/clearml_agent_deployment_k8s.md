@@ -194,6 +194,42 @@ agentk8sglue:
             value: "my_value"
 ```
 
+##### Example: GPU Queues with Shared Memory
+
+This example demonstrates how to configure a queue that uses multiple GPUs and a shared memory volume for improved 
+performance with GPU workloads. 
+
+This example:
+* Creates a 32Gi in-memory volume for the `GPUs_with_shared_memory` queue. Note that you should adjust the memory size based on the GPU's VRAM and the specific 
+  model being shared.
+* Mounts the volume at `/dev/shm` inside the container
+* Assigns 2 GPUs to the container
+* Sets the environment variable `VLLM_SKIP_P2P_CHECK="1"`. This disables 
+  the peer-to-peer GPU memory check used by vLLM. This is often required when using shared memory volumes (`/dev/shm`) 
+  to avoid initialization errors or performance issues in multi-GPU setups.
+
+```yaml
+agentk8sglue:
+  queues:
+    GPUs_with_shared_memory:
+      templateOverrides:
+        resources:
+          limits:
+            nvidia.com/gpu: "2"
+        env:
+          - name: VLLM_SKIP_P2P_CHECK
+            value: "1"
+        volumeMounts:
+          - name: dshm
+            mountPath: /dev/shm
+        volumes:
+          - name: dshm
+            emptyDir:
+              medium: Memory
+              sizeLimit: 32Gi
+```
+
+
 #### Additional Configuration Options
 
 To view available configuration options for the Helm chart, run the following command:
