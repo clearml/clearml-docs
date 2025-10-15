@@ -206,10 +206,74 @@ helm show values clearml-enterprise/clearml-enterprise-agent
 
 ##### Reporting GPU Availability to Orchestration Dashboard
 
-To show GPU availability in the [Orchestration Dashboard](../webapp/webapp_orchestration_dash.md), explicitly set the number of GPUs:
+ClearML Agents running on Kubernetes can report GPU availability to the [Orchestration Dashboard](../webapp/webapp_orchestration_dash.md),
+allowing you to monitor compute capacity across the cluster. You can report GPU availability in one of the following ways:
+
+* **Fixed GPU Reporting**:
+
+  Use `reportMaxGpu` to report a fixed number of GPUs. This setting overrides GPU auto-discovery if both are enabled.
+    
+  ```yaml
+  agentk8sglue:
+    orchestrationDashboard:
+      # -- Agent reporting to Dashboard max GPU available. This will report 2 GPUs.
+      reportMaxGpu: 2
+  ```
+
+* **Automatic GPU Discovery**:
+
+  Enable automatic discovery to have the agent detect and report GPUs across your Kubernetes cluster.
+  This requires cluster-level access (`agentk8sglue.serviceAccountClusterAccess: true`), since the agent must list and evaluate all cluster nodes.
+
+  When GPU discovery is enabled, the Agent identifies which cluster nodes have GPUs and how many GPUs each node provides.
+  These options control how nodes are selected and how GPU counts are determined:
+
+  * `baseSelector` - The default label selector used to identify GPU nodes.
+  * `nodeSelector` - An additional filter applied on top of `baseSelector` to narrow down which nodes are included in discovery. For 
+  example, limit discovery to a specific node pool: `"nodepool=gpu-a100"`.
+  * `gpuCountSelector` - Comma-separate list of labels used to count GPUs per node. The first matching label determines the reported GPU count.
+
+  With discovery enabled, the agent evaluates nodes matching the provided selectors and reports their GPU 
+  availability to the dashboard at the configured interval.
+
+  ```yaml
+  agentk8sglue:
+    # Cluster access is required for GPU discovery
+    serviceAccountClusterAccess: true
+  
+    orchestrationDashboard:
+      discovery:
+        enabled: true
+        baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
+        nodeSelector: ""  # Optional: further restrict discovery
+        gpuCountSelector: "nvidia.com/gpu.count"
+    ```
+
+You can configure how reports are sent and how often:
+
+* `reportType` - How the agent sends reports to the dashboard. Use on of the following options:
+  * `disabled` (or no value) - Do not send any reports. 
+  * `global` - Send a single category-level report that summarizes all agents in the same category. Overrides individual 
+  agent reports. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups). 
+  * `aggregate` - Send a report per agent. The dashboard aggregates all reports in the category automatically. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups)
+* `reportSeconds` - Interval in seconds between dashboard updates. Controls how frequently the agent sends GPU availability data.
 
 ```yaml
 agentk8sglue:
-  # -- Agent reporting to Dashboard max GPU available. This will report 2 GPUs.
-  dashboardReportMaxGpu: 2
+  # Cluster access is required for GPU discovery
+  serviceAccountClusterAccess: true
+
+  orchestrationDashboard:
+    # Enable periodic reporting to the Orchestration Dashboard
+    reportType: "global"   
+    reportSeconds: 600
+    # Overrides GPU discovery
+    reportMaxGpu: 0
+    # Enable GPU discovery
+    discovery:
+      enabled: true
+      baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
+      nodeSelector: ""  # Optional: further restrict discovery
+      gpuCountSelector: "nvidia.com/gpu.count"
 ```
+
