@@ -4,7 +4,7 @@ title: NVCR Access
 
 To allow ClearML Agents to access NVIDIA's container registry (`nvcr.io`), the machine’s Docker infrastructure must first be configured with valid NGC credentials.
 This enables Agents to pull NVIDIA-provided containers, such as those used by the [NVIDIA NIM app](../webapp/applications/apps_nvidia_nim.md). The setup is 
-required once per worker node, not every time you run an app.
+required once per worker node.
 
 Configure Docker access to the `nvcr` repository on [bare-metal/VM](#on-bare-metal--vm) or [Kubernetes](#on-kubernetes). 
 

@@ -70,7 +70,7 @@ agentk8sglue:
 
 * When defining a custom code module, by default the agent will start watching pods in all namespaces 
   across the cluster. If you do not intend to give a `ClusterRole` permission, make sure to set the 
-  `CLEARML_K8S_GLUE_MONITOR_ALL_NAMESPACES` env to `"0"` to prevent the Agent to try listing pods in all namespaces. 
+  `CLEARML_K8S_GLUE_MONITOR_ALL_NAMESPACES` env to `"0"` to prevent the Agent from trying to list pods in all namespaces. 
   Instead, set it to `"1"` if namespace-related changes are needed in the code.
 
   ```yaml

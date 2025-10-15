@@ -13,7 +13,7 @@ For example, `"${CLEARML_TASK.project}"` will be replaced with the Task's projec
 
 ## Single-value Variables
 
-These variable resolve to a single value. You can use them directly in a template, without specifying any path.
+These variables resolve to a single value. You can use them directly in a template, without specifying any path.
 
 For example `"${CLEARML_QUEUE_NAME}"` will be replaced with the name of the queue from which the task was pulled.
 
