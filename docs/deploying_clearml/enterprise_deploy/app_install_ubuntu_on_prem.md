@@ -27,7 +27,7 @@ the `--repo` flag. For example:
 ```
 python convert_image_registry.py \
   --apps-dir /path/to/apps/ \
-  --repo local_registry/clearml-apps
+  --artifactory local-artifactory/clearml_apps
 ```
 
 The script will change the application zip files to point to the new registry, and will output the list of containers 
