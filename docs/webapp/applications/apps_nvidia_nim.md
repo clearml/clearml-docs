@@ -80,8 +80,12 @@ values from the file, which can be modified before launching the app instance
 * **Application instance project**: The ClearML project where the app instance is created. Access is determined by 
   project-level permissions (i.e. users with read access can use the app).
 * **NIM Container Image**: Select the containerized application image to use. Note the different tags / versions of each image
-* **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue)  to which the NIM app instance task will be enqueued. Make sure an agent 
-  is assigned to this queue and has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
+* **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the NIM app instance task will be enqueued. <br/><br/>
+  :::info Agent requirements
+  Make sure the agent assigned to this queue:
+  * Has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
+  * Runs in [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode) if it is a bare-metal agent
+  :::
 * **AI Gateway Route**: Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
 * **Idle Time Limit** (Hours): Maximum idle time after which the app instance will shut down
 * **Environment Variables**: Additional environment variable to set inside the container before launching the application 
