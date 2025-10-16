@@ -46,7 +46,9 @@ the docker images location before installing the applications.
 Use the provided script to modify the application zip files to reference your internal registry:
 
 ```bash
-python convert_image_registry.py --apps-dir "<PATH_TO_APPS_DIR>" --repo <LOCAL_REGISTRY>/clearml-apps
+python convert_image_registry.py \
+--apps-dir "<PATH_TO_APPS_DIR>" \
+--artifactory <LOCAL_REGISTRY>/clearml_apps
 ```
 
 The script will:
