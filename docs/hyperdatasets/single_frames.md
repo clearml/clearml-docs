@@ -69,7 +69,8 @@ This is useful when working with a video. You can give all the video frames the 
 
 The panel below describes the details contained within a `frame`:
 
-<Collapsible type="configuration" title="Frame Structure">
+<Details class="panel configuration">
+<summary class="panel-title">Frame Structure</summary>
 
 * `id` (*string*) - The unique ID of this frame. 
 * `blob` (*string*) - Raw data.
@@ -133,7 +134,7 @@ The panel below describes the details contained within a `frame`:
 * `saved` - The epoch time that the frame was saved.
 * `timestamp` - For images from video, a timestamp that indicates the absolute position of this frame from the source (video).
 
-</Collapsible>
+</Details>
 
 ## WebApp 
 
@@ -143,17 +144,19 @@ WebApp (UI).
 When viewing a frame on the WebApp, all the information associated with it can be viewed, including its frame labels and
 object annotations, its metadata, and other details.
 
-<Collapsible type="screenshot" title="SingleFrame in the WebApp frame viewer">
+<Details class="panel screenshot">
+<summary class="panel-title">SingleFrame in the WebApp frame viewer</summary>
 
 This image shows a SingleFrame in the ClearML Enterprise WebApp (UI) [frame viewer](webapp/webapp_datasets_frames.md#frame-viewer). 
     
 ![SingleFrame in WebApp](../img/hyperdatasets/frame_overview_01.png#light-mode-only)
 ![SingleFrame in WebApp](../img/hyperdatasets/frame_overview_01_dark.png#dark-mode-only)
 
-</Collapsible>
+</Details>
 
 
-<Collapsible type="configuration" title="SingleFrame details represented in the WebApp">
+<Details class="panel configuration">
+<summary class="panel-title">SingleFrame details represented in the WebApp</summary>
 
 ```    
 id : "287024"
@@ -195,7 +198,7 @@ saved_in_version : "6ad8b10c668e419f9dd40422f667592c"
 num_frames : 1
 ```
 
-</Collapsible>
+</Details>
 
 For more information about using Frames in the WebApp, see [Working with Frames](webapp/webapp_datasets_frames.md). 
 

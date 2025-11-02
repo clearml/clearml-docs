@@ -899,35 +899,35 @@ html[data-theme="dark"] .alert.alert--secondary {
 
 /* PANEL COLORS */
 .panel.info {
-  background-color: var(--ifm-color-info-contrast-background);
-  border-color: var(--ifm-color-info-lightest);
+  background-color: var(--ifm-color-info-contrast-background) !important;
+  border-color: var(--ifm-color-info-lightest) !important;
 }
 html[data-theme="dark"] .panel.info {
-  border-color: var(--ifm-color-info-darkest);
+  border-color: var(--ifm-color-info-darkest) !important;
 }
 .panel.tips {
-  background-color: var(--ifm-color-success-contrast-background);
-  border-color: var(--ifm-color-success-dark);
+  background-color: var(--ifm-color-success-contrast-background) !important;
+  border-color: var(--ifm-color-success-dark) !important;
 }
-.panel.alert {
-  background-color: var(--ifm-color-warning-contrast-background);
-  border-color: var(--ifm-color-warning-dark);
+.panel.alert_panel {
+  background-color: var(--ifm-color-warning-contrast-background) !important;
+  border-color: var(--ifm-color-warning-dark) !important;
 }
 .panel.screenshot {
-  background-color: var(--ifm-color-gray-100);
-  border-color: var(--ifm-color-gray-600);
+  background-color: var(--ifm-color-gray-100) !important;
+  border-color: var(--ifm-color-gray-600) !important;
 }
 html[data-theme="dark"] .panel.screenshot {
-  background-color: var(--ifm-toc-background-color);
-  border-color: rgba(255,255,255,0.1);
+  background-color: var(--ifm-toc-background-color) !important;
+  border-color: rgba(255,255,255,0.1) !important;
 }
 .panel.configuration {
-  background-color: var(--ifm-color-gray-100);
-  border-color: var(--ifm-color-gray-600);
+  background-color: var(--ifm-color-gray-100) !important;
+  border-color: var(--ifm-color-gray-600) !important;
 }
 html[data-theme="dark"] .panel.configuration {
-  background-color: var(--ifm-toc-background-color);
-  border-color: rgba(255,255,255,0.1);
+  background-color: var(--ifm-toc-background-color) !important;
+  border-color: rgba(255,255,255,0.1) !important;
 }
 
 /* PANEL TITLE */
@@ -936,10 +936,11 @@ html[data-theme="dark"] .panel.configuration {
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: 12px;
+  padding: 12px 40px 12px 50px !important;
   position: relative;
   cursor: pointer;
   font-size: 16px;
+  font-weight: 600;
   text-align: left;
   background-color: inherit;
   border: none;
@@ -954,10 +955,8 @@ html[data-theme="dark"] .panel-title:hover {
   background-color: var(--ifm-hover-overlay);
 }
 
-.panel-open .panel-title {
-  border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
-}
 
+/* right caret */
 .panel-title:after {
   content:"";
   position: absolute;
@@ -969,45 +968,49 @@ html[data-theme="dark"] .panel-title:hover {
   transition: transform 0.35s;
   background: url('/icons/ico-chevron-down.svg') no-repeat center;
 }
-.panel-open .panel-title:after  {
+.panel[open] .panel-title:after  {
   transform: rotate(-180deg);
 }
 
 /* PANEL CONTENT */
-.panel-content {
-  padding: 12px 40px;
-  max-height: unset;
-  overflow: hidden;
-  transition: padding 0.35s;
-}
-.panel-close .panel-content {
-  padding: 0 40px;
-  max-height: 0;
+.panel [class*="collapsibleContent"] {
+    margin-top: 0;
+    border-top: 0;
+    padding: 0px 50px 12px 50px;
+    color: var(--ifm-font-color-base);
+
 }
 
 /* PANEL ICONS */
 /* info  */
-.panel.info .panel-title:before {
-  background-image: url('/icons/ico-info-circle.svg');
+.panel.info .panel-title::before {
+  background-image: url('/icons/ico-info-circle.svg') !important;
 }
 /* tips  */
-.panel.tips .panel-title:before {
-  background-image: url('/icons/ico-tips.svg');
+.panel.tips .panel-title::before {
+  background-image: url('/icons/ico-tips.svg') !important;
 }
 /* alert  */
-.panel.alert .panel-title:before {
-  background-image: url('/icons/ico-alert.svg');
+.panel.alert_panel .panel-title::before {
+  background-image: url('/icons/ico-alert.svg') !important;
 }
 /* screenshot  */
-.panel.screenshot .panel-title:before {
-  background-image: url('/icons/ico-image.svg');
+.panel.screenshot .panel-title::before {
+  background-image: url('/icons/ico-image.svg') !important;
 }
 /* configuration  */
-.panel.configuration .panel-title:before {
-  background-image: url('/icons/ico-config.svg');
+.panel.configuration .panel-title::before {
+  background-image: url('/icons/ico-config.svg') !important;
 }
+
+
 /* panel icon generic style */
-.panel-title:before {
+.panel-title::before {
+  transition: none !important;
+  transform: none !important;
+  border: none !important;
+  top: 14px !important;
+  left: 12px !important;
   content:"";
   display: flex;
   align-items: center;

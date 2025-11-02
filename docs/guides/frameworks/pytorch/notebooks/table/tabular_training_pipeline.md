@@ -69,7 +69,8 @@ and `fill_numerical_NA`. It will connect a parameter dictionary to the Task whic
 The pipeline will override the values of those keys when the pipeline executes the cloned Tasks of the base Task. In this way, 
 two sets of data are created in the pipeline.
 
-<Collapsible type="info" title="ClearML tracks and reports the preprocessing step">
+<Details class="panel info">
+<summary class="panel-title">ClearML tracks and reports the preprocessing step</summary>
 
 In the preprocessing data Task, the parameter values in ``data_task_id``, ``fill_categorical_NA``, and ``fill_numerical_NA`` are overridden.
 ```python
@@ -107,9 +108,8 @@ The column categories are created and uploaded as artifacts, which appear in app
 
 Finally, the training data and validation data are stored as artifacts.
    
-![image](../../../../../img/preprocessing_and_encoding_07.png)   
-
-</Collapsible>
+![image](../../../../../img/preprocessing_and_encoding_07.png)
+</Details>
    
 
 ### Training Step
@@ -139,7 +139,8 @@ pipe.add_step(
 )
 ```
    
-<Collapsible type="info" title="ClearML tracks and reports the training step">
+<Details class="panel info">
+<summary class="panel-title">ClearML tracks and reports the training step</summary>
 
 In the training Task, the ``data_task_id`` parameter value is overridden. This allows the pipeline controller to pass a 
 different Task ID to each instance of training, where each Task has an artifact containing different data.
@@ -168,7 +169,7 @@ The TensorFlow Definitions appear in the **TF_DEFINE** subsection.
 
 ![image](../../../../../img/train_tabular_predictor_02.png)
    
-</Collapsible>
+</Details>
    
 
 ### Best Model Step
@@ -189,7 +190,8 @@ pipe.add_step(
        
 The IDs of the training Tasks from the steps named `train_1` and `train_2` are passed to the best model Task. They take the form `${<stage-name>.<part-of-Task>}`.           
 
-<Collapsible type="info" title="ClearML tracks and reports the best model step">
+<Details class="panel info">
+<summary class="panel-title">ClearML tracks and reports the best model step</summary>
 
 In the best model Task, the `train_tasks_ids` parameter is overridden with the Task IDs of the two training tasks.
 
@@ -213,7 +215,7 @@ The model details appear in the **MODELS** table **>** **>GENERAL**.
    
 ![image](../../../../../img/tabular_training_pipeline_04.png)
    
-</Collapsible>
+</Details>
    
 
 ### Pipeline Start, Wait, and Cleanup
@@ -229,7 +231,8 @@ pipe.wait()
 pipe.stop()
 ```
 
-<Collapsible type="info" title="ClearML tracks and reports the pipeline's execution">
+<Details class="panel info">
+<summary class="panel-title">ClearML tracks and reports the pipeline's execution</summary>
 
 ClearML reports the pipeline with its steps in **PLOTS**.
    
@@ -239,7 +242,7 @@ By hovering over a step or path between nodes, you can view information about it
        
 ![image](../../../../../img/tabular_training_pipeline_06.png)
    
-</Collapsible>
+</Details>
 
 
 ## Running the Pipeline

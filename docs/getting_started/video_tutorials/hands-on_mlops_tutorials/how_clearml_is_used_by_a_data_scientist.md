@@ -19,7 +19,9 @@ keywords: [mlops, components, machine learning, data scientist]
 
 <br/>
 
-<Collapsible type="info" title="Video Transcript">
+
+<Details class="panel info"> 
+<summary class="panel-title">Video Transcript</summary>
 Welcome to ClearML! In this video, I'll try to walk you through a day in my life where I try to optimize a model, and 
 I'll be teaching you how I used to do it before I was working for ClearML, and then now that I'm using ClearML all the 
 time, what kind of problems it solved and what, how it made my life easier. So let's get started here. 
@@ -318,5 +320,4 @@ you find the best ways forward for your own models.
 So I hope this kind of inspired you a little bit to try out ClearML. It's free to try at [app.clear.ml](https://app.clear.ml), 
 or you can even host your own open source server with the interface that you can see right now. So why not have a go at 
 it? And thank you for watching.
-
-</Collapsible>
+</Details>

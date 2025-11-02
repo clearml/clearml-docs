@@ -29,7 +29,9 @@ pip install clearml
    file already exists.
    :::
 
-   <Collapsible type="info" title="Learn about creating multiple ClearML configuration files">
+   <Details class="panel info">
+   <summary class="panel-title">Learn about creating multiple ClearML configuration files</summary>
+
 
    Additional ClearML configuration files can be created, for example, to use inside Docker containers when executing 
    a Task.
@@ -48,8 +50,8 @@ pip install clearml
    
    For more information about running tasks inside Docker containers, see [ClearML Agent Deployment](../clearml_agent/clearml_agent_deployment_bare_metal.md)
    and [ClearML Agent Reference](../clearml_agent/clearml_agent_ref.md).
-    
-   </Collapsible>
+
+   </Details>
    
 1. The setup wizard prompts for ClearML credentials.
 

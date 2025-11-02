@@ -20,7 +20,8 @@ The examples below demonstrate the `sources` section of a Frame for different ty
 
 This example demonstrates `sources` for video.
 
-<Collapsible type="info" title="Example 1">
+<Details class="panel info">
+<summary class="panel-title">Example 1</summary>
 
 ```json
 /* video from one of four cameras on car */
@@ -46,7 +47,7 @@ This example demonstrates `sources` for video.
     
 ```
 
-</Collapsible>
+</Details>
 
 The `sources` example above details a video from a car that has two cameras. One camera
 is the source with the ID `front` and the other is the source with the ID `rear`.
@@ -67,7 +68,8 @@ Sources includes a variety of content types. This example shows an mp4 video.
 
 This example demonstrates `sources` images.
 
-<Collapsible type="info" title="Example 2">        
+<Details class="panel info">
+<summary class="panel-title">Example 2</summary>        
 
 ```json
 /* camera images */
@@ -82,7 +84,7 @@ This example demonstrates `sources` images.
     }
 ```
 
-</Collapsible>
+</Details>
 
 The `sources` of this frame contains the following information:
 * `content_type` - This frame contains an image in `png` format. 
@@ -95,7 +97,8 @@ The `sources` of this frame contains the following information:
 
 This example demonstrates `sources` for video, `masks`, and `preview`. 
 
-<Collapsible type="info" title="Example 3">
+<Details class="panel info">
+<summary class="panel-title">Example 3</summary>
 
 ```json
 
@@ -170,7 +173,7 @@ This example demonstrates `sources` for video, `masks`, and `preview`.
 }
 ```
 
-</Collapsible>
+</Details>
 
 This frame shows the `masks` section in `sources`, and the top-level `rois` array.
 
