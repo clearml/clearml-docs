@@ -510,7 +510,7 @@ module.exports = {
                     'references/enterprise/definitions',
                     'references/enterprise/apps',
                     'references/enterprise/auth',
-                    'references/enterprise/billing',
+                    // 'references/enterprise/billing',  // everything is community_only
                     'references/enterprise/datasets',
                     'references/enterprise/debug',
                     'references/enterprise/events',
