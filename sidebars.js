@@ -489,9 +489,9 @@ module.exports = {
             ]
         },
         {'Server API': [
+            'references/index',
             {
-                'Open Source':[
-                    'references/api/index',
+                'Open Source Server API':[
                     'references/api/definitions',
                     'references/api/debug',
                     'references/api/events',
@@ -505,8 +505,7 @@ module.exports = {
                     'references/api/tasks',
                     'references/api/workers'
                 ],
-                'Enterprise':[
-                    'references/enterprise/index',
+                'Enterprise Server API':[
                     'references/enterprise/definitions',
                     'references/enterprise/apps',
                     'references/enterprise/auth',
