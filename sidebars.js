@@ -488,55 +488,61 @@ module.exports = {
                 'configs/env_vars'
             ]
         },
-        {'Server API': [
-            'references/index',
-            {
-                'Open Source Server API':[
-                    'references/api/definitions',
-                    'references/api/debug',
-                    'references/api/events',
-                    'references/api/login',
-                    'references/api/models',
-                    'references/api/pipelines',
-                    'references/api/projects',
-                    'references/api/queues',
-                    'references/api/reports',
-                    'references/api/serving',
-                    'references/api/tasks',
-                    'references/api/workers'
-                ],
-                'Enterprise Server API':[
-                    'references/enterprise/definitions',
-                    'references/enterprise/apps',
-                    'references/enterprise/auth',
-                    // 'references/enterprise/billing',  // everything is community_only
-                    'references/enterprise/datasets',
-                    'references/enterprise/debug',
-                    'references/enterprise/events',
-                    'references/enterprise/frames',
-                    'references/enterprise/login',
-                    'references/enterprise/models',
-                    'references/enterprise/organization',
-                    'references/enterprise/permissions',
-                    'references/enterprise/pipelines',
-                    'references/enterprise/projects',
-                    'references/enterprise/queues',
-                    'references/enterprise/reports',
-                    'references/enterprise/resources',
-                    'references/enterprise/routers',
-                    'references/enterprise/server',
-                    'references/enterprise/serving',
-                    'references/enterprise/sso',
-                    'references/enterprise/storage',
-                    'references/enterprise/system',
-                    'references/enterprise/tasks',
-                    'references/enterprise/tenants',
-                    'references/enterprise/users',
-                    'references/enterprise/variables',
-                    'references/enterprise/workers'
-                ]
-            },
-        ]},
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Server API',
+            link: {type: 'doc', id: 'references/api/index'},
+            items: [
+                       {
+                           'Open Source':[
+                               'references/api/definitions',
+                               'references/api/debug',
+                               'references/api/events',
+                               'references/api/login',
+                               'references/api/models',
+                               'references/api/pipelines',
+                               'references/api/projects',
+                               'references/api/queues',
+                               'references/api/reports',
+                               'references/api/serving',
+                               'references/api/tasks',
+                               'references/api/workers'
+                           ],
+                           'Enterprise':[
+                               'references/enterprise/definitions',
+                               'references/enterprise/apps',
+                               'references/enterprise/auth',
+                               // 'references/enterprise/billing',  // everything is community_only
+                               'references/enterprise/datasets',
+                               'references/enterprise/debug',
+                               'references/enterprise/events',
+                               'references/enterprise/frames',
+                               'references/enterprise/login',
+                               'references/enterprise/models',
+                               'references/enterprise/organization',
+                               'references/enterprise/permissions',
+                               'references/enterprise/pipelines',
+                               'references/enterprise/projects',
+                               'references/enterprise/queues',
+                               'references/enterprise/reports',
+                               'references/enterprise/resources',
+                               'references/enterprise/routers',
+                               'references/enterprise/server',
+                               'references/enterprise/serving',
+                               'references/enterprise/sso',
+                               'references/enterprise/storage',
+                               'references/enterprise/system',
+                               'references/enterprise/tasks',
+                               'references/enterprise/tenants',
+                               'references/enterprise/users',
+                               'references/enterprise/variables',
+                               'references/enterprise/workers'
+                           ]
+                       },
+            ]
+        },
         {
             type: 'category',
             collapsible: true,
