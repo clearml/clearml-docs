@@ -495,7 +495,6 @@ module.exports = {
             label: 'Server API',
             link: {type: 'doc', id: 'references/api/index'},
             items: [
-                'references/index',
                 {
                     'Open Source API':[
                         'references/api/definitions',
