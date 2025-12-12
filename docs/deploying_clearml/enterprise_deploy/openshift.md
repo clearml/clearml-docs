@@ -24,7 +24,7 @@ You can expose the ClearML services using one of the following:
 The ClearML Helm chart supports Ingress creation out-of-the-box. If your cluster is configured to use a standard Ingress 
 Controller, enable it with the following snippet in your `values.yaml` file.
 
-```
+```yaml
 # values.yaml
 apiserver:
   ingress:
@@ -56,7 +56,7 @@ To use Routes, you need to disable the default Ingress creation in the Helm char
 
 Set `enabled: false` for all ingresses in your `values.yaml` file:
 
-```
+```yaml
 # values.yaml
 apiserver:
   ingress:
@@ -77,7 +77,7 @@ webserver:
 Create a YAML file (e.g., `clearml-routes.yaml`) with the following definitions to configure Routes for the ClearML 
 services. This single file defines all three required routes.
 
-```
+```yaml
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
@@ -142,7 +142,7 @@ spec:
 
 Apply the configuration to your cluster: 
 
-```
+```bash
 oc apply -f clearml-routes.yaml
 ```
 
@@ -153,7 +153,7 @@ oc apply -f clearml-routes.yaml
 Enable the Ingress for the Application Gateway with the following `values.yaml` snippet. Make sure to replace the example `hostname`
 with your desired hostname.
 
-```
+```yaml
 # values.yaml
 ingress:
   enabled: true
@@ -170,7 +170,7 @@ To use Routes, you need to disable the default Ingress creation in the Helm char
 
 Set `enabled: false` for all ingresses in your `values.yaml` file:
 
-```
+```yaml
 # values.yaml
 ingress:
   enabled: false
@@ -182,7 +182,7 @@ The following Route definition uses a wildcard host, which securely exposes both
 subdomains it requires. Create a file named `clearml-enterprise-app-gateway-route.yaml`. Make sure to replace the example `spec.host`
 with the desired hostname. 
 
-```
+```yaml
 # clearml-enterprise-app-gateway-route.yaml
 apiVersion: route.openshift.io/v1
 kind: Route
@@ -204,7 +204,7 @@ spec:
 ```
 
 Apply the file to your cluster:
-```
+```bash
 oc apply -f clearml-enterprise-app-gateway-route.yaml
 ```
 
@@ -220,7 +220,7 @@ This is a comprehensive example configuration for the core ClearML Server servic
 * Setting the correct external URLs
 * Applying the necessary security contexts for ClearML components, Redis, MongoDB, and Elasticsearch to run in a non-root environment.
 
-```
+```yaml
 apiserver:
   ingress:
     enabled: false
@@ -311,7 +311,7 @@ elasticsearch:
 To install the ClearML Kubernetes Agent (`agent-k8s-glue`), you must apply a restrictive security context to both 
 the agent's controller pod and the task pods it creates:
 
-```
+```yaml
 agentk8sglue:
   containerSecurityContext:
     runAsNonRoot: true

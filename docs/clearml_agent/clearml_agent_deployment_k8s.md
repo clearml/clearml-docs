@@ -70,20 +70,15 @@ ClearML Enterprise adds advanced Kubernetes features, such as:
   :::
  
 - The worker environment must be able to access the ClearML Server over the same network.
-- Helm token to access `clearml-enterprise` Helm chart repo
+- A DockerHub token to access the OCI enterprise Helm charts and Docker images
 - To support **GPU** queues, you must deploy the **NVIDIA GPU Operator** on your Kubernetes cluster. For more information, see [GPU Operator](fractional_gpus/gpu_operator.md).
 
 #### Installation
 
-1. Add the ClearML Helm repository:
+1. Login to the ClearML OCI Registry:
 
    ```bash
-   helm repo add clearml-enterprise https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages --username <HELM_REPO_TOKEN> --password <HELM_REPO_TOKEN>
-   ```
-
-   Update the local repository:
-   ```bash
-   helm repo update
+   helm registry login docker.io --username allegroaienterprise --password <CLEARML_DOCKERHUB_TOKEN>
    ```
 
 1. Create a `clearml-agent-values.override.yaml` file with the following content:
@@ -114,7 +109,7 @@ ClearML Enterprise adds advanced Kubernetes features, such as:
 1. Install the ClearML Enterprise Agent Helm chart:
 
    ```bash
-   helm upgrade -i -n <WORKER_NAMESPACE> clearml-agent clearml-enterprise/clearml-enterprise-agent --create-namespace -f clearml-agent-values.override.yaml
+   helm upgrade -i -n <WORKER_NAMESPACE> clearml-enterprise-agent oci://docker.io/clearml/clearml-enterprise-agent --create-namespace -f clearml-agent-values.override.yaml
    ```
 
 #### Workload Customization
@@ -133,9 +128,9 @@ For more information, see [Custom Workload Configuration](clearml_agent_custom_w
 To view available configuration options for the Helm chart, run the following command:
 
 ```bash
-helm show readme clearml-enterprise/clearml-enterprise-agent
+helm show readme oci://docker.io/clearml/clearml-enterprise-agent
 # or
-helm show values clearml-enterprise/clearml-enterprise-agent
+helm show values oci://docker.io/clearml/clearml-enterprise-agent
 ```
 
 ##### Reporting GPU Capacity to Orchestration Dashboard

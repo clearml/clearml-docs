@@ -129,8 +129,7 @@ Configure the ClearML server to send API logs to Splunk using [Docker Compose](#
 1. Upgrade the Helm release:
 
    ```
-   helm repo update
-   helm upgrade -i clearml allegroai-enterprise/clearml-enterprise -f values-override.yaml
+   helm upgrade -i clearml-enterprise oci://docker.io/clearml/clearml-enterprise -f values-override.yaml
    ```
 
 ### Exclude API Calls from Logs 

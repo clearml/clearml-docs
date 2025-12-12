@@ -90,11 +90,11 @@ To apply the changes, run the update command:
 * For AI Application Gateway:
 
    ```bash
-   helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> clearml-enterprise/clearml-enterprise-app-gateway --version <CHART_VERSION> -f clearml-app-gateway-values.override.yaml
+   helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> oci://docker.io/clearml/clearml-enterprise-app-gateway --version <CHART_VERSION> -f clearml-app-gateway-values.override.yaml
    ```
 
 * For ClearML Agent: 
 
    ```bash
-   helm upgrade -i -n <WORKER_NAMESPACE> clearml-agent clearml-enterprise/clearml-enterprise-agent --create-namespace -f clearml-agent-values.override.yaml
+   helm upgrade -i -n <WORKER_NAMESPACE> clearml-enterprise-agent oci://docker.io/clearml/clearml-enterprise-agent -f clearml-agent-values.override.yaml
    ```

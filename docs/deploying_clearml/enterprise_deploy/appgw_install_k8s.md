@@ -20,10 +20,8 @@ in multiple namespaces, each namespace must have its own App Gateway.
 
 ## Requirements
 
-* Kubernetes cluster: `>= 1.21.0-0 < 1.32.0-0`  
-* Helm installed and configured  
-* Helm token to access `clearml` helm-chart repo  
-* Credentials for `clearml` docker repo
+* Helm installed and configured
+* A DockerHub token to access the OCI enterprise Helm charts and Docker images
 * A valid ClearML Server installation
 
 ## Optional for HTTPS
@@ -33,13 +31,11 @@ in multiple namespaces, each namespace must have its own App Gateway.
 
 ## Helm
 
-### Login
+### Login to the ClearML OCI Registry
 
 ```bash
-helm repo add clearml-enterprise https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages --username <GITHUB_TOKEN> --password <GITHUB_TOKEN>
+helm registry login docker.io --username allegroaienterprise --password <CLEARML_DOCKERHUB_TOKEN>
 ```
-
-Replace `<GITHUB_TOKEN>` with your valid GitHub token that has access to the ClearML Enterprise Helm charts repository.
 
 ### Prepare Values
 
@@ -87,7 +83,7 @@ tcpSession:
 The full list of supported configuration is available with the command:
 
 ```bash
-helm show readme clearml-enterprise/clearml-enterprise-app-gateway
+helm show readme oci://docker.io/clearml/clearml-enterprise-app-gateway
 ```
 
 ### Expose App Gateway via NodePort
@@ -120,7 +116,7 @@ externalURL: "http://<NODE_IP>:<NODE_PORT>"
 To install the App Gateway component via Helm use the following command:
 
 ```bash
-helm upgrade --install <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> clearml-enterprise/clearml-enterprise-app-gateway --version <CHART_VERSION> -f clearml-app-gateway-values.override.yaml
+helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> oci://docker.io/clearml/clearml-enterprise-app-gateway -f clearml-app-gateway-values.override.yaml
 ```
 
 Replace the placeholders with the following values:

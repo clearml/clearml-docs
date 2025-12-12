@@ -120,5 +120,5 @@ clearml-company-inventory:
 Install the Custom Events umbrella chart:
 
 ```bash
-helm install clearml-custom-events clearml-enterprise/clearml-custom-events -f clearml-custom-events-values.override.yaml
+helm upgrade -i clearml-custom-events oci://docker.io/clearml/clearml-custom-events -f clearml-custom-events-values.override.yaml
 ```

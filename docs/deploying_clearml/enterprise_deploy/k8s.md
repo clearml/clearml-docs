@@ -28,9 +28,7 @@ To deploy a ClearML Server, ensure the following components and configurations a
     - `router.<BASE_DOMAIN>`
     - `tcp-router.<BASE_DOMAIN>` (optional, for TCP sessions)
 - Storage: A configured StorageClass and an accessible storage backend.
-- ClearML Enterprise Access:
-  - Helm repository credentials (`<HELM_REPO_TOKEN>`)
-  - DockerHub registry credentials (`<CLEARML_DOCKERHUB_TOKEN>`)
+- A DockerHub token to access the OCI enterprise Helm charts and Docker images (`<CLEARML_DOCKERHUB_TOKEN>`)
 
 ### Recommended Cluster Specifications
 
@@ -42,17 +40,12 @@ For optimal performance, a Kubernetes cluster with at least 3 nodes is recommend
 
 ## Installation
 
-### Add the Helm Repo Locally
+### Login to the ClearML OCI Registry
 
-Add the ClearML Helm repository:
+Login to the ClearML OCI registry:
 
 ```bash
-helm repo add clearml-enterprise https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages --username <HELM_REPO_TOKEN> --password <HELM_REPO_TOKEN>
-```
-
-Update the local repository:
-```bash
-helm repo update
+helm registry login docker.io --username allegroaienterprise --password <CLEARML_DOCKERHUB_TOKEN>
 ```
 
 ### Prepare Values
@@ -96,7 +89,7 @@ clearmlApplications:
 Install the ClearML Enterprise Helm chart using the previous values override file.
 
 ```bash
-helm upgrade -i -n clearml clearml clearml-enterprise/clearml-enterprise --create-namespace -f clearml-values.override.yaml 
+helm upgrade -i -n clearml clearml-enterprise oci://docker.io/clearml/clearml-enterprise --create-namespace -f clearml-values.override.yaml 
 ```
 
 ## Additional Configuration Options
@@ -105,9 +98,9 @@ helm upgrade -i -n clearml clearml clearml-enterprise/clearml-enterprise --creat
 You can view the full set of available and documented values of the chart by running the following command:
 
 ```bash
-helm show readme clearml-enterprise/clearml-enterprise
+helm show readme oci://docker.io/clearml/clearml-enterprise
 # or
-helm show values clearml-enterprise/clearml-enterprise
+helm show values oci://docker.io/clearml/clearml-enterprise
 ```
 :::
 

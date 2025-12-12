@@ -194,7 +194,7 @@ kubectl create secret docker-registry -n <NAMESPACE> <SECRET_NAME> \
 To see all container images used by a ClearML Helm chart:
 
 ```bash
-helm template <CHART_NAME> | yq '..|.image? | select(.)' | sort -u
+helm template oci://docker.io/clearml/<CHART_NAME> | yq '..|.image? | select(.)' | sort -u
 ```
 
 

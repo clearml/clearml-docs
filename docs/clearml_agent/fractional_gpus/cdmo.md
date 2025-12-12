@@ -64,6 +64,12 @@ This guide covers:
 
 ### Installing CDMO 
 
+1. Login to the ClearML OCI Registry:
+
+   ```bash
+   helm registry login docker.io --username allegroaienterprise --password <CLEARML_DOCKERHUB_TOKEN>
+   ```
+
 1. Create a `cdmo-values.override.yaml` file with the following content: 
  
    ```yaml
@@ -74,7 +80,7 @@ This guide covers:
 1. Install the CDMO Helm Chart using the previous override file:
 
    ```bash
-   helm install -n cdmo cdmo clearml-enterprise/clearml-dynamic-mig-operator --create-namespace -f cdmo-values.override.yaml
+   helm upgrade -i -n cdmo cdmo oci://docker.io/clearml/clearml-dynamic-mig-operator --create-namespace -f cdmo-values.override.yaml
    ```
 
 1. Enable the NVIDIA MIG support on your cluster by running the following command on all nodes with a MIG-supported GPU 
@@ -108,7 +114,7 @@ the queue a workload is submitted on:
 * Workloads assigned to the `slice-4` queue will be allocated a single 4 GPU instance, 40GB MIG slice.
 * Workloads assigned to the `slice-7` queue will be allocated a single 7 GPU instance, 80GB MIG slice. 
 
-```
+```yaml
 agentk8sglue:
   queues:
     slice-1:

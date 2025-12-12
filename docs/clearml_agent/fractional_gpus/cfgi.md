@@ -11,11 +11,10 @@ on Kubernetes clusters, maximizing hardware efficiency and performance.
 
 ## Installation
 
-### Add the Local ClearML Helm Repository
+### Login to the ClearML OCI Registry
 
 ```bash
-helm repo add clearml-enterprise https://raw.githubusercontent.com/clearml/clearml-enterprise-helm-charts/gh-pages --username <GITHUB_TOKEN> --password <GITHUB_TOKEN>
-helm repo update
+helm registry login docker.io --username allegroaienterprise --password <CLEARML_DOCKERHUB_TOKEN>
 ```
 
 ### Requirements
@@ -172,7 +171,7 @@ devicePlugin:
 1. Install the CFGI Helm Chart using the previous override file:
 
    ```bash
-   helm install -n cfgi cfgi clearml-enterprise/clearml-fractional-gpu-injector --create-namespace -f cfgi-values.override.yaml
+   helm upgrade -i -n cfgi cfgi oci://docker.io/clearml/clearml-fractional-gpu-injector --create-namespace -f cfgi-values.override.yaml
    ```
 
 ## Usage
@@ -267,21 +266,6 @@ agentk8sglue:
         resources:
           limits:
             nvidia.com/gpu: 1
-```
-
-## Upgrading CFGI Chart
-
-To upgrade to the latest chart version:
-
-```bash
-helm repo update
-helm upgrade -n cfgi cfgi clearml-enterprise/clearml-fractional-gpu-injector
-```
-
-To apply new values to an existing installation:
-
-```bash
-helm upgrade -n cfgi cfgi clearml-enterprise/clearml-fractional-gpu-injector -f cfgi-values.override.yaml
 ```
 
 ## Disabling Fractions
