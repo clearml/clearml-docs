@@ -18,7 +18,7 @@ This document provides a short guide on how to configure an external application
 ## Requirements
 
 * A server, as described in [Server Requirements](#server-requirements)
-* `docker-compose.yml` file provided by ClearML
+* `compose.yaml` file provided by ClearML
 * `constants.env` - Environment file with required credentials 
 * Credentials to access ClearML’s enterprise Dockerhub registry
 
@@ -28,19 +28,29 @@ This document provides a short guide on how to configure an external application
 * CPU: Since applications do not produce a high CPU load, we recommend 2-4 virtual CPUs, assuming around 10 concurrent 
   applications are required
 * Memory: Around 1 GiB of RAM is required per each concurrent application instance
-* Storage: About 100 GB of storage is recommended for the system volume, with an additional 100 GB of storage for 
+* Storage: About 100 GB of storage is recommended for the system volume, with an additional 100 GB of storage for
   application caching. In AWS, `m6a.xlarge` can be used for running up to 10 applications in parallel.
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
 
 ## Installation
 
 :::note
 Installing an external server requires removing the applications’ agent from the ClearML Enterprise Server. This 
-is done by ClearML in hosted environments, or by removing the `apps-agent` service from the `docker-compose` override 
+is done by ClearML in hosted environments, or by removing the `apps-agent` service from the Compose override
 file in VPC and on-premises installations. For K8s environments, please consult the ClearML team.
 :::
 
 1. Install Docker. See [Docker documentation](https://docs.docker.com/engine/install/ubuntu/) 
-1. Copy the `docker-compose.yml` and `constants.env` files to `/opt/allegro`. The
+1. Copy the `compose.yaml` and `constants.env` files to `/opt/allegro`. The
    `constants.env` file should contain following definitions:
     
    * `APISERVER_URL_FOR_EXTERNAL_WORKERS` - URL of the ClearML API server

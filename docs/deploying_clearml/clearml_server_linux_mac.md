@@ -5,8 +5,8 @@ title: Linux and macOS
 Deploy the ClearML Server in Linux or macOS using the pre-built Docker image.
 
 For ClearML docker images, including previous versions, see [https://hub.docker.com/r/clearml/server](https://hub.docker.com/r/clearml/server ). 
-However, pulling the ClearML Docker image directly is not required. ClearML provides a `docker-compose` YAML file that does this. 
-The `docker-compose` file is included in the instructions on this page.
+However, pulling the ClearML Docker image directly is not required. ClearML provides a Compose file that does this.
+The Compose file is included in the instructions on this page.
 
 For information about upgrading ClearML Server in Linux or macOS, see [here](upgrade_server_linux_mac.md).
 
@@ -36,7 +36,17 @@ instructions in the [Security](clearml_server_security.md) page.
 :::
 
 :::info Memory Requirement
-Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.  
+Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
+:::
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
 :::
 
 **To launch ClearML Server on Linux or macOS:**
@@ -70,11 +80,17 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
     1. Click **Preferences** **>** **Resources** **>** **Advanced**, and then set the memory to at least `8192`.
     1. Click **Apply**.
 
-1. For Linux only, install `docker-compose`. Execute the following commands (for more information, see [Install Docker Compose](https://docs.docker.com/compose/install/) in the Docker documentation): 
-   
+1. For Linux only, install Docker Compose V2. For detailed instructions, see [Install Docker Compose](https://docs.docker.com/compose/install/linux/) in the Docker documentation.
+
+   Example installation for Ubuntu/Debian:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install docker-compose-plugin
    ```
-   sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   sudo chmod +x /usr/local/bin/docker-compose
+
+   Verify installation:
+   ```bash
+   docker compose version
    ```
    
 1. Increase `vm.max_map_count` for Elasticsearch in Docker. Execute the following commands, depending upon the operating system:
@@ -140,9 +156,9 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
        sudo chown -R $(whoami):staff /opt/clearml
        ```
 
-2. Download the ClearML Server `docker-compose` YAML file:
+2. Download the ClearML Server Compose file:
       ```
-      sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+      sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/compose.yaml -o /opt/clearml/compose.yaml
       ```
 1. For Linux only, configure the **ClearML Agent Services**:
 
@@ -163,9 +179,9 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
      export CLEARML_AGENT_GIT_PASS=git_password_here
      ```
 
-1. Run `docker-compose` with the downloaded configuration file.
+1. Run Docker Compose with the downloaded configuration file.
       ```
-      docker-compose -f /opt/clearml/docker-compose.yml up -d
+      docker compose -f /opt/clearml/compose.yaml up -d
       ```
 The server is now running on [http://localhost:8080](http://localhost:8080).
  
@@ -184,8 +200,8 @@ After deploying ClearML Server, the services expose the following ports:
 * Stop and then restart the Docker containers by executing the following commands:
 
    ```
-   docker-compose -f /opt/clearml/docker-compose.yml down
-   docker-compose -f /opt/clearml/docker-compose.yml up -d
+   docker compose -f /opt/clearml/compose.yaml down
+   docker compose -f /opt/clearml/compose.yaml up -d
    ```
 
 

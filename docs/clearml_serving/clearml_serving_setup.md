@@ -11,6 +11,16 @@ and orchestration.
 * Kubernetes / Single-instance Machine : Deploying containers
 * CLI : Configuration and model deployment interface
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 ## Initial Setup
 1. Set up your [ClearML Server](../deploying_clearml/clearml_server.md) or use the 
   [free hosted service](https://app.clear.ml)
@@ -57,20 +67,20 @@ and orchestration.
     CLEARML_SERVING_TASK_ID="<serving_service_id_here>"
    ```
 
-1. Spin up the `clearml-serving` containers with `docker-compose` (or if running on Kubernetes, use the helm chart):
-   
+1. Spin up the `clearml-serving` containers with Docker Compose (or if running on Kubernetes, use the helm chart):
+
    ```bash
-   cd docker && docker-compose --env-file example.env -f docker-compose.yml up
+   cd docker && docker compose --env-file example.env -f compose.yaml up
    ```
-    
-   If you need Triton support (Keras/PyTorch/ONNX etc.), use the triton `docker-compose` file:
+
+   If you need Triton support (Keras/PyTorch/ONNX etc.), use the Triton Compose file:
    ```bash
-   cd docker && docker-compose --env-file example.env -f docker-compose-triton.yml up 
+   cd docker && docker compose --env-file example.env -f compose-triton.yaml up
    ```
-   
-   If running on a GPU instance with Triton support (Keras/PyTorch/ONNX etc.), use the triton gpu docker-compose file:
+
+   If running on a GPU instance with Triton support (Keras/PyTorch/ONNX etc.), use the Triton GPU Compose file:
    ```bash
-   cd docker && docker-compose --env-file example.env -f docker-compose-triton-gpu.yml up
+   cd docker && docker compose --env-file example.env -f compose-triton-gpu.yaml up
    ```
     
 :::note
@@ -99,17 +109,17 @@ For further details, see [Configuring Storage](../integrations/storage.md#config
 
 **Upgrading to v1.1**
 
-1. Shut down the serving containers (`docker-compose` or k8s)
-1. Update the `clearml-serving` CLI: 
+1. Shut down the serving containers (Docker Compose or k8s)
+1. Update the `clearml-serving` CLI:
 
    ```
    pip3 install -U clearml-serving
    ```
-   
-1. Re-add a single existing endpoint with `clearml-serving model add ...` (press yes when asked). It will upgrade the 
+
+1. Re-add a single existing endpoint with `clearml-serving model add ...` (press yes when asked). It will upgrade the
    `clearml-serving` session definitions.
-1. Pull the latest serving containers (`docker-compose pull ...` or k8s)
-1. Re-spin serving containers (`docker-compose` or k8s)
+1. Pull the latest serving containers (`docker compose pull ...` or k8s)
+1. Re-spin serving containers (Docker Compose or k8s)
 
 
 ## Next Steps

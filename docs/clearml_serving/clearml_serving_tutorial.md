@@ -24,6 +24,16 @@ This tutorial shows how to go from setting up `clearml-serving` to a locally dep
   
 * Connect `clearml` SDK to the server, see instructions [here](../clearml_sdk/clearml_sdk_setup.md#install-clearml)
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 ## Run Triton-based Serving Inference Container (Docker Compose)
 
 In the following steps, you will set up the inference container with Triton using Docker compose:
@@ -50,10 +60,10 @@ In the following steps, you will set up the inference container with Triton usin
    * `CLEARML_API_SECRET_KEY="<secret_key>"`
    * `CLEARML_SERVING_TASK_ID="<serving_service_id>"`
 
-3. Go to `clearml-serving/docker` and run the following command:   
-   ```bash  
-   ~/clearml-serving/docker$ docker-compose --env-file example.env -f docker-compose-triton.yml up  
-   ```  
+3. Go to `clearml-serving/docker` and run the following command:
+   ```bash
+   ~/clearml-serving/docker$ docker compose --env-file example.env -f compose-triton.yaml up
+   ```
    This spins up the Triton inference container with all its relevant services. Now we can start serving models. 
 
 ## Train a Model

@@ -79,9 +79,8 @@ To set new values for these settings, use the following environment variables:
 
 ### Example: Using Docker Compose
 
-If used in `docker-compose.yml`, these variables should be specified for the `apiserver` service, under the `environment` section as follows:
+If used in `compose.yaml`, these variables should be specified for the `apiserver` service, under the `environment` section as follows:
 ```yaml
-version: "3.6"
 services:
   apiserver:
     ...

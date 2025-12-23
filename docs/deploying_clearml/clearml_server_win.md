@@ -20,7 +20,17 @@ By default, ClearML Server launches with unrestricted access. To restrict ClearM
 :::
 
 :::info Memory Requirement
-Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.  
+Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
+:::
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
 :::
 
 **To deploy ClearML Server on Windows 10:**
@@ -54,16 +64,16 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
    mkdir c:\opt\clearml\logs
    ```
 
-1. Save the ClearML Server `docker-compose` YAML file.
- 
-   ```   
-   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose-win10.yml -o c:\opt\clearml\docker-compose-win10.yml
-   ```
-   
-1. Run `docker-compose`. In PowerShell, execute the following commands:
+1. Download the ClearML Server Compose file.
 
    ```
-   docker-compose -f c:\opt\clearml\docker-compose-win10.yml up
+   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/compose-win10.yaml -o c:\opt\clearml\compose-win10.yaml
+   ```
+
+1. Run Docker Compose. In PowerShell, execute the following commands:
+
+   ```
+   docker compose -f c:\opt\clearml\compose-win10.yaml up
    ```
    The server is now running on [http://localhost:8080](http://localhost:8080).
  
@@ -82,8 +92,8 @@ After deploying ClearML Server, the services expose the following node ports:
 * Stop and then restart the Docker containers by executing the following commands:
 
    ```
-   docker-compose -f c:\opt\clearml\docker-compose-win10.yml down
-   docker-compose -f c:\opt\clearml\docker-compose-win10.yml up -d
+   docker compose -f c:\opt\clearml\compose-win10.yaml down
+   docker compose -f c:\opt\clearml\compose-win10.yaml up -d
    ```
 
 ## Next Step

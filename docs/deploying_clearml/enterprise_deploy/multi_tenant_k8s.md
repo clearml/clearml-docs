@@ -271,7 +271,7 @@ The following example demonstrates how you would define a group named `my_group_
 that cannot be assigned via the UI:
 
 ```yaml
-# Example configuration snippet (e.g., in Helm values.yaml or docker-compose.yml environment section)
+# Example configuration snippet (e.g., in Helm values.yaml or compose.yaml environment section)
 
 # Unique group id for my_group_name
 - name: CLEARML__services__auth__default_groups__my_group_name__id

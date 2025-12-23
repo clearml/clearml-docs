@@ -32,17 +32,27 @@ old copy of your data.
 * Minimum free disk space of at least three times the size of the data.
 * Python version >=2.7 or >=3.6, and Python accessible from the command-line as python
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 ## Before You Begin
 To avoid data corruption, shut down your ClearML server before applying the migration procedure:
 * Linux and macOS
 
   ```bash
-  docker-compose -f /opt/clearml/docker-compose.yml down
+  docker compose -f /opt/clearml/compose.yaml down
   ```
 * Windows
 
   ```bash
-  docker-compose -f c:\opt\clearml\docker-compose-win10.yml down
+  docker compose -f c:\opt\clearml\compose-win10.yaml down
   ```
 
 ## Migrating the Data

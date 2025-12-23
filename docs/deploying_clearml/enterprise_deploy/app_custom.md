@@ -397,7 +397,7 @@ the application, and it's the task's responsibility to update any element displa
 Custom applications require a separate agent then the ClearML built-in applications since their code is downloaded from 
 a different Git repository.
 
-To define a custom-apps agent, add the following to the `docker-compose.yml` or to the `docker-compose.override.yml`:
+To define a custom-apps agent, add the following to the `compose.yaml` or to the `compose.override.yaml`:
 * In the `apiserver` service section, add the following lines in the environment to create a user for handling the custom-apps:
   ```
   - CLEARML__secure__credentials__custom_apps_agent__user_key="${CUSTOM_APPS_AGENT_USER_KEY}"

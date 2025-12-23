@@ -8,7 +8,7 @@ title: Linux or macOS
 MongoDB major version was upgraded from `v5.x` to `6.x`. Please note that if your current ClearML Server version is older than 
 `v1.17` (where MongoDB `v5.x` was first used), you'll need to first upgrade to ClearML Server v1.17.
 
-First upgrade to ClearML Server v1.17 following the procedure below and using [this `docker-compose` file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
+First upgrade to ClearML Server v1.17 following the procedure below and using [this Compose file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
 you can proceed to upgrade to v2.x. 
 
 </Details>
@@ -35,12 +35,22 @@ For backwards compatibility, the environment variables ``TRAINS_HOST_IP``, ``TRA
 
 <br/>
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 **To upgrade ClearML Server Docker deployment:**
 
 1. Shutdown ClearML Server. Execute the following command (which assumes the configuration file is in the environment path):
-   
+
    ```
-   docker-compose -f docker-compose.yml down
+   docker compose -f compose.yaml down
    ```
 
 1. [Backing up data](clearml_server_linux_mac.md#backing-up-and-restoring-data-and-configuration) is recommended and, if the configuration folder is 
@@ -58,17 +68,17 @@ For backwards compatibility, the environment variables ``TRAINS_HOST_IP``, ``TRA
 
 1. If upgrading from ClearML Server version 1.1 or older, you need to migrate your data before upgrading your server. See instructions [here](clearml_server_mongo44_migration.md).
    
-1. Download the latest `docker-compose.yml` file:
+1. Download the latest Compose file:
 
    ```
-   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+   curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/compose.yaml -o /opt/clearml/compose.yaml
    ```
-   
+
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build:
-        
-   ```   
-   docker-compose -f /opt/clearml/docker-compose.yml pull
-   docker-compose -f /opt/clearml/docker-compose.yml up -d
+
+   ```
+   docker compose -f /opt/clearml/compose.yaml pull
+   docker compose -f /opt/clearml/compose.yaml up -d
    ```
 
 If issues arise during your upgrade, see the FAQ page, [How do I fix Docker upgrade errors?](../faq.md#common-docker-upgrade-errors)

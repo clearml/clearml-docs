@@ -8,7 +8,7 @@ It covers the following:
 * Set up security groups and IAM role
 * Create EC2 instance with required disks
 * Install dependencies and mount disks
-* Deploy ClearML version using `docker-compose`
+* Deploy ClearML version using Docker Compose
 * Set up load balancer and DNS
 * Set up server backup 
 
@@ -16,8 +16,18 @@ It covers the following:
 
 * It is recommended to start with 4 CPUs and 32 GB of RAM. An `r6a.xlarge` EC2 instance would accommodate these requirements.
 * An AWS account with at least 2 availability zones is required. It is recommended to install on a region with at least 
-3 availability zones. Having fewer than 3 availability zones would prevent the use of high-availability setups, if 
+3 availability zones. Having fewer than 3 availability zones would prevent the use of high-availability setups, if
 needed in the future.
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
 
 ## Instance Setup
 
@@ -109,10 +119,10 @@ Instance requirements:
    source constants.env  
    sudo docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_PASSWORD
    ```   
-3. Start the dockers:  
+3. Start the dockers:
 
    ```
-   sudo docker-compose --env-file constants.env up -d
+   sudo docker compose --env-file constants.env up -d
    ```
    
 ## Load Balancer

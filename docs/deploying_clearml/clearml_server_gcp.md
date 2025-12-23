@@ -77,6 +77,16 @@ The minimum requirements for ClearML Server are:
 * 2 vCPUs
 * 7.5GB RAM
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 ## Restarting
 
 **To restart ClearML Server Docker deployment:**
@@ -84,8 +94,8 @@ The minimum requirements for ClearML Server are:
 * Stop and then restart the Docker containers by executing the following commands:
 
    ```
-   docker-compose -f /opt/clearml/docker-compose.yml down
-   docker-compose -f /opt/clearml/docker-compose.yml up -d
+   docker compose -f /opt/clearml/compose.yaml down
+   docker compose -f /opt/clearml/compose.yaml up -d
    ```
 
 ## Backing Up and Restoring Data and Configuration

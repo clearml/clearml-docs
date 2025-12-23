@@ -8,14 +8,24 @@ title: AWS EC2 AMIs
 MongoDB major version was upgraded from `v5.x` to `6.x`. Please note that if your current ClearML Server version is older than 
 `v1.17` (where MongoDB `v5.x` was first used), you'll need to first upgrade to ClearML Server v1.17.
 
-First upgrade to ClearML Server v1.17 following the procedure below and using [this `docker-compose` file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
+First upgrade to ClearML Server v1.17 following the procedure below and using [this Compose file](https://github.com/clearml/clearml-server/blob/2976ce69cc91550a3614996e8a8d8cd799af2efd/upgrade/1_17_to_2_0/docker-compose.yml). Once successfully upgraded, 
 you can proceed to upgrade to v2.x. 
 
 </Details>
 
  
-The sections below contain the steps to upgrade ClearML Server on the [same AWS instance](#upgrading-on-the-same-aws-instance), and 
+The sections below contain the steps to upgrade ClearML Server on the [same AWS instance](#upgrading-on-the-same-aws-instance), and
 to upgrade and migrate to a [new AWS instance](#upgrading-and-migrating-to-a-new-aws-instance).
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
 
 ## Upgrading on the Same AWS Instance
 
@@ -27,16 +37,16 @@ Some legacy **Trains Server** AMIs provided an auto-upgrade on restart capabilit
 
 **To upgrade your ClearML Server AWS AMI:**
 
-1. Shutdown the ClearML Server executing the following command (which assumes the configuration file is in the environment path). 
-   
-   ``` 
-   docker-compose -f /opt/clearml/docker-compose.yml down
+1. Shutdown the ClearML Server executing the following command (which assumes the configuration file is in the environment path).
+
    ```
-   
+   docker compose -f /opt/clearml/compose.yaml down
+   ```
+
    If you are upgrading from **Trains Server**, use this command:
 
    ```
-   docker-compose -f /opt/trains/docker-compose.yml down
+   docker compose -f /opt/trains/docker-compose.yml down
    ```
    
 1. [Backing up your data](clearml_server_aws_ec2_ami.md#backing-up-and-restoring-data-and-configuration) is recommended, 
@@ -47,17 +57,17 @@ If upgrading from Trains Server version 0.15 or older, a data migration is requi
    
 1. If upgrading from **Trains Server** to **ClearML Server**, rename `/opt/trains` to `/opt/clearml`.
 
-1. Download the latest `docker-compose.yml` file. Execute the following command:
+1. Download the latest Compose file. Execute the following command:
 
    ```
-   sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/docker-compose.yml -o /opt/clearml/docker-compose.yml
+   sudo curl https://raw.githubusercontent.com/clearml/clearml-server/master/docker/compose.yaml -o /opt/clearml/compose.yaml
    ```
-   
+
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build.
 
-     ``` 
-     docker-compose -f /opt/clearml/docker-compose.yml pull
-     docker-compose -f docker-compose.yml up -d
+     ```
+     docker compose -f /opt/clearml/compose.yaml pull
+     docker compose -f /opt/clearml/compose.yaml up -d
      ```
 
 ## Upgrading and Migrating to a New AWS Instance
@@ -69,7 +79,7 @@ This section contains the steps to upgrade ClearML Server on the new AWS instanc
 1. Shutdown ClearML Server. Executing the following command (which assumes the configuration file is in the environment path).
 
    ```
-   docker-compose down
+   docker compose down
    ```
    
 1. On the old AWS instance, [backup your data](clearml_server_aws_ec2_ami.md#backing-up-and-restoring-data-and-configuration) 
@@ -85,6 +95,6 @@ This section contains the steps to upgrade ClearML Server on the new AWS instanc
 1. Startup ClearML Server. This automatically pulls the latest ClearML Server build.
 
    ```
-   docker-compose -f docker-compose.yml pull
-   docker-compose -f docker-compose.yml up -d
+   docker compose -f compose.yaml pull
+   docker compose -f compose.yaml up -d
    ```

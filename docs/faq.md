@@ -1057,11 +1057,11 @@ ClearML Server uses the following default ports which may be in conflict with ot
 
 You can check for port conflicts in the logs in `/opt/clearml/log`.
 
-If a port conflict occurs, change the MongoDB and/or Elastic ports in the `docker-compose.yml`, and then run the Docker compose commands to restart the ClearML Server instance.
+If a port conflict occurs, change the MongoDB and/or Elastic ports in the `compose.yaml`, and then run the Docker Compose commands to restart the ClearML Server instance.
 
 To change the MongoDB and/or Elastic ports for your ClearML Server, do the following:
 
-1. Edit the `docker-compose.yml` file.
+1. Edit the `compose.yaml` file.
 1. Add the following environment variable(s) in the `services/trainsserver/environment` section:
 
     * For MongoDB:

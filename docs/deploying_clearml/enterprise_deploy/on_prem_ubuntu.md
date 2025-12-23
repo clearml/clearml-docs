@@ -36,9 +36,18 @@ In addition, make sure you have the following (provided by ClearML):
 - `docker-compose.yml` - The main compose file containing the services definitions  
 - `docker-compose.override.yml` - The override file containing additions that are server specific, such as SSO integration  
 - `constants.env` - The `env` file contains values of items in the `docker-compose` that are unique for 
-a specific environment, such as keys and secrets for system users, credentials, and image versions. The constant file 
+a specific environment, such as keys and secrets for system users, credentials, and image versions. The constant file
 should be reviewed and modified prior to the server installation
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
 
 ## Installing ClearML Server 
 ### Preliminary Steps 
@@ -66,16 +75,18 @@ should be reviewed and modified prior to the server installation
    3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading.
    4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.
    ```
-1. Install `docker-compose`:
+1. Install Docker Compose V2. For detailed instructions, see [Install Docker Compose](https://docs.docker.com/compose/install/linux/) in the Docker documentation.
 
+   Example installation for Ubuntu/Debian:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install docker-compose-plugin
    ```
-   sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   sudo chmod +x /usr/local/bin/docker-compose
-   ``` 
 
-   :::note 
-   You might need to downgrade urlib3 by running `sudo pip3 install urllib3==1.26.2`
-   :::
+   Verify installation:
+   ```bash
+   docker compose version
+   ```
 
 1. Increase `vm.max_map_count` for Elasticsearch in Docker: 
 
@@ -166,10 +177,10 @@ should be reviewed and modified prior to the server installation
    sudo docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_PASSWORD
    ```
    
-1. Start the `docker-compose`  by changing directories to the directory containing the `docker-compose` files and running the following command:
-   
+1. Start Docker Compose by changing directories to the directory containing the Compose files and running the following command:
+
    ```
-   sudo docker-compose --env-file constants.env up -d
+   sudo docker compose --env-file constants.env up -d
    ```
    
 1. Verify web access by browsing to your URL (IP address) and port 8080:

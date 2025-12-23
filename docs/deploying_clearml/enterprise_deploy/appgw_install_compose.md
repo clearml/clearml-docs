@@ -23,8 +23,18 @@ deploy three App Gateways, one per network.
 
 * Linux OS (x86) machine  
 * Root access  
-* Credentials for the ClearML/allegroai docker repository  
+* Credentials for the ClearML/allegroai docker repository
 * A valid ClearML Server installation
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
 
 ## Host Configurations
 
@@ -51,7 +61,6 @@ Use the ClearML/allegroai dockerhub credentials when prompted by docker login.
 This is an example of the `docker-compose` file you will need:
 
 ```
-version: '3.5'
 services:
   task_traffic_webserver:
     image: clearml/ai-gateway-proxy:${PROXY_TAG:?err}

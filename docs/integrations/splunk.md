@@ -39,6 +39,16 @@ on the right
 ## Configure ClearML
 Configure the ClearML server to send API logs to Splunk using [Docker Compose](#docker-compose) or [Kubernetes Helm](#kubernetes-helm):
 
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
+:::
+
 ### Docker Compose 
 
 1. Add the following configuration to your `apiserver.conf` file. Make sure to replace `<SPLUNK_URL>`, `<SPLUNK_PORT>`, 
@@ -78,11 +88,11 @@ Configure the ClearML server to send API logs to Splunk using [Docker Compose](#
    CLEARML__apiserver__log_calls=true
    ```
 
-1. Apply configuration with `docker-compose`:
-   
+1. Apply configuration with Docker Compose:
+
    ```
-   docker-compose -f docker-compose.yml down
-   docker-compose -f /opt/clearml/docker-compose.yml --env-file constants.env up -d
+   docker compose -f compose.yaml down
+   docker compose -f /opt/clearml/compose.yaml --env-file constants.env up -d
    ```
  
 

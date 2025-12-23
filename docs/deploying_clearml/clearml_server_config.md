@@ -17,8 +17,18 @@ This page describes the ClearML Server [deployment](#clearml-server-deployment-c
 
 For all configuration options, see the [ClearML Configuration Reference](../configs/clearml_conf.md) page.
 
-:::important 
+:::important
 Using the latest version of ClearML Server is recommended.
+:::
+
+:::note Using Docker Compose V1?
+Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
+The commands in this guide use V2 syntax. If you're still on V1:
+- Replace `docker compose` with `docker-compose`
+- Replace `compose.yaml` with `docker-compose.yml`
+
+We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
+for continued support and new features.
 :::
 
 ## ClearML Server Deployment Configuration
@@ -67,9 +77,9 @@ and the file server is on `https://files.<domain_2>`), image plots stored on the
 WebApp will be unable to make use of the required authentication cookies. 
 
 To mitigate, configure the WebApp to use a proxy when accessing the file server, so that requests will stay within the same domain:
-1. Specify the file server's base URL with `WEBSERVER__fileBaseUrl` under the `environment` section of `webserver` 
-service in the `docker-compose` file. This defines the target URL for the web server to use when proxying the file server
-1. Set `WEBSERVER__useFilesProxy` to `True` in the `environment` section of `webserver` service in the `docker-compose` 
+1. Specify the file server's base URL with `WEBSERVER__fileBaseUrl` under the `environment` section of `webserver`
+service in the Compose file. This defines the target URL for the web server to use when proxying the file server
+1. Set `WEBSERVER__useFilesProxy` to `True` in the `environment` section of `webserver` service in the Compose
 file. This makes the web server use `<web_server_url>/files` as a same domain proxy to your file server, allowing the 
 authentication cookie to be used for accessing files.
 
@@ -247,13 +257,13 @@ opening ports for external access.
 
 To open external access to the Elasticsearch, MongoDB, and Redis ports:
     
-1. Shutdown ClearML Server. Execute the following command (which assumes the configuration file is in the environment path). 
+1. Shutdown ClearML Server. Execute the following command (which assumes the configuration file is in the environment path).
 
    ```
-   docker-compose down
+   docker compose down
    ```
 
-1. Edit the `docker-compose.yml` file as follows:
+1. Edit the `compose.yaml` file as follows:
 
     * In the `elasticsearch` section, add the two lines:
 
@@ -279,8 +289,8 @@ To open external access to the Elasticsearch, MongoDB, and Redis ports:
 1. Startup ClearML Server.
 
     ```
-    docker-compose -f docker-compose.yml pull
-    docker-compose -f docker-compose.yml up -d
+    docker compose -f compose.yaml pull
+    docker compose -f compose.yaml up -d
     ```
 
 
