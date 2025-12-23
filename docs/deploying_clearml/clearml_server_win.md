@@ -27,7 +27,7 @@ Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.
 Docker Compose V1 reached end-of-life in July 2023 and is no longer receiving updates.
 The commands in this guide use V2 syntax. If you're still on V1:
 - Replace `docker compose` with `docker-compose`
-- Replace `compose.yaml` with `docker-compose.yml`
+- Replace `compose-win10.yaml` with `docker-compose-win10.yml`
 
 We strongly recommend [migrating to Docker Compose V2](https://docs.docker.com/compose/migrate/)
 for continued support and new features.
