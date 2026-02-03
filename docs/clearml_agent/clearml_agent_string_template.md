@@ -21,6 +21,8 @@ Available single-value variables:
 - `QUEUE_NAME` - Name of the queue from which the task is pulled
 - `QUEUE_ID` - ID of the queue from which the task is pulled
 - `WORKER_ID` - ID of the agent running the task
+- `PROJECT_NAME` - Task's project name
+- `PROJECT_ID` - Task's project ID
 
 ## Compound Variables (Path-Based)
 
@@ -51,6 +53,23 @@ ${CLEARML_TASK.name}
 ${CLEARML_TASK.id}
 ${CLEARML_TASK.project}
 ${CLEARML_TASK.hyperparams.properties.user_key.value}
+```
+
+## List type variables
+
+If a variable is of type list of simple values (string, number) it will be returned as a comma separated list of values.
+
+E.g. if a task has the tags:
+```
+["tag1", "tag2", "tag3"]
+```
+the variable:
+```
+${CLEARML_TASK.tags}
+```
+will be expanded as:
+```
+tag1,tag2,tag3
 ```
 
 ## Default Fallback
