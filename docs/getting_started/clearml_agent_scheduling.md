@@ -24,7 +24,7 @@ Override worker schedules by:
 Set a schedule for a worker from the command line when running `clearml-agent`. Two properties enable setting working hours:
 
 :::warning
-Use only one of these properties
+Use only one of these properties.
 :::
 
 * `uptime` - Time span during which a worker will actively poll a queue(s) for Tasks, and execute them. Outside this 
@@ -53,7 +53,7 @@ For example:
 Set a schedule for a worker using configuration file options. The options are:
 
 :::warning
-Use only one of these properties
+Use only one of these properties.
 :::
 
 * ``agent.uptime``
@@ -72,7 +72,7 @@ agent.uptime: ["17-20 SUN-TUE", "13-22 WED"]
 Runtime properties override the command line uptime / downtime properties. The runtime properties are:
 
 :::warning
-Use only one of these properties
+Use only one of these properties.
 :::
 
 * `force:on` - Pull and execute Tasks until the property expires.
@@ -96,7 +96,7 @@ curl --user <key>:<secret> --header "Content-Type: application/json" --data '{"w
 Queue tags override command line and runtime properties. The queue tags are the following:
 
 :::warning
-Use only one of these properties
+Use only one of these properties.
 :::
 
 * ``force_workers:on`` - Any worker listening to the queue will keep pulling Tasks from the queue.

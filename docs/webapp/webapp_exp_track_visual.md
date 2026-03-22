@@ -456,7 +456,7 @@ These controls allow you to better analyze the results. Hover over a plot, and t
 | <img src="/docs/latest/icons/ico-download-csv.svg" alt="Download CSV icon" className="icon size-sm space-sm" /> | Download **table** plot data as a CSV file. |
 | <img src="/docs/latest/icons/ico-maximize.svg" alt="Maximize plot icon" className="icon size-sm space-sm" /> | Expand plot to entire window. When used with scalar graphs, full screen mode displays plots with all data points, as opposed to an averaged plot |
 | <img src="/docs/latest/icons/ico-reset.svg" alt="Refresh" className="icon size-sm space-sm" /> | Refresh scalar graphs in full screen mode to update it.  | 
-| <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-sm space-sm" /> | Copy to clipboard the resource embed code. This opens the following options: <ul><li>**Embed in External tool** (available in the ClearML Enterprise plan and Hosted Service) - Copy code to add to external tools (e.g. Notion). </li><li>**Embed in ClearML report** - Copy code to add to a [report](webapp_reports.md)</li></ul> In contrast to static screenshots, embedded resources are retrieved when the tool/report is displayed allowing your tools/reports to show the latest up-to-date data. |
+| <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-sm space-sm" /> | Copy to clipboard the resource embed code. This opens the following options: <ul><li>**Embed in External tool** (available in the ClearML Enterprise plan and Hosted Service) - Copy code to add to third-party platforms that support embedded content (e.g. Notion). </li><li>**Embed in ClearML report** - Copy code to add to a [report](webapp_reports.md)</li></ul> In contrast to static screenshots, embedded resources are retrieved when the tool/report is displayed allowing your tools/reports to show the latest up-to-date data. |
 
  
 
@@ -513,7 +513,7 @@ category.
 You can use tags to filter the tasks in your task table (see [Filtering Columns](webapp_exp_table.md#filtering-columns))
 or when querying tasks in your code (see [Tag Filters](../clearml_sdk/task_sdk.md#tag-filters)). You can trigger 
 task execution according to their tags (see [TriggerScheduler](../references/sdk/trigger.md)) or automatically
-deploy models according to their tags (see [ClearML Serving](../clearml_serving/clearml_serving_tutorial.md#automatic-model-deployment)).
+deploy models according to their tags (see [ClearML Serving](../clearml_serving/clearml_serving_extra.md#automatic-model-deployment)).
 
 **To add tags:**
 1. Click the task **>** Hover over the tag area **>** **+ADD TAG** or <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Bars menu" className="icon size-md space-sm" /> (menu)

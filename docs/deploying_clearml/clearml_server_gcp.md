@@ -91,7 +91,7 @@ The minimum requirements for ClearML Server are:
 ## Backing Up and Restoring Data and Configuration
 
 :::warning
-Stop your server before backing up or restoring data and configuration
+Stop your server before backing up or restoring data and configuration.
 :::
 
 The commands in this section are an example of how to back up and restore data and configuration.

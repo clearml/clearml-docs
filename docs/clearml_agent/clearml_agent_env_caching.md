@@ -1,5 +1,5 @@
 ---
-title: Environment Caching
+title: Python Virtual Environments
 ---
 
 ClearML Agent caches virtual environments so when running tasks multiple times, there's no need to spend time reinstalling 
@@ -17,7 +17,7 @@ installed packages. This means that when executing multiple tasks with the same 
 the same environment will be used.
 
 :::note
-ClearML does not support environment reuse when using Poetry package manager
+ClearML does not support environment reuse when using Poetry package manager.
 :::
 
 To enable virtual environment reuse, modify the `clearml.conf` file and uncomment the `venvs_cache` section.

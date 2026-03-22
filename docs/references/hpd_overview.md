@@ -29,7 +29,7 @@ Starting with version 2.1, the `clearml` Python package provides the following i
 
 :::important Legacy Interface
 The `allegroai` Python package is a legacy SDK that is maintained for backwards compatibility.
-Users are urged to move to newer versions of the clearml Python package
+Users are urged to move to newer versions of the `clearml` Python package.
 :::
 
 The `allegroai` Python package provides the following interface for Hyper-Datasets:

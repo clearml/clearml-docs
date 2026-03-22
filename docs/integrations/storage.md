@@ -58,7 +58,7 @@ sdk {
             extra_args: {}
             
             credentials: [
-                # specifies key/secret credentials to use when handling s3 urls (read or write)
+                # specifies key/secret credentials to use when handling s3 URLs (read or write)
                 {
                     bucket: "my-bucket-name"
                     key: ""
@@ -330,4 +330,4 @@ By default, all artifacts (Models / Artifacts / Datasets) are automatically down
 Some storage mediums (NFS / Local storage) allows for direct access,
 which means that the code would work with the object where it's originally stored and not downloaded to cache first.
 
-To enable direct access, specify the urls to access directly.
+To enable direct access, specify the URLs to access directly.

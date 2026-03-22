@@ -108,7 +108,7 @@ title: Version 1.0
 ### ClearML 1.0.0
 
 :::info Breaking Changes
-Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()` and `Logger.report_matplotlib_figure()` - please use keywords instead of positional arguments
+Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()` and `Logger.report_matplotlib_figure()` - please use keywords instead of positional arguments.
 :::
   
 **Features**

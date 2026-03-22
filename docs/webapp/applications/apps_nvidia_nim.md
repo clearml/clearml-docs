@@ -12,7 +12,7 @@ publicly accessible network endpoint. The app monitors endpoint activity and shu
 for a specified maximum idle time.
 
 * The `NGC_API_KEY` environment variable needs to be set to a valid NGC API key. You can set the variable in one of the following ways:
-  * The NIM app deployment form’s `Environment Variables` field
+  * The NIM app launch form's `Environment Variables` field
   * [Configuration vault](../settings/webapp_settings_profile.md#configuration-vault)
 
 :::info AI Application Gateway
@@ -52,9 +52,8 @@ etc.
 ![Nvidia NIM App](../../img/apps_nvidia_nim_dark.png#dark-mode-only)
 
 :::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan supports embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
@@ -80,7 +79,7 @@ to open the app's configuration form.
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration**: Import an app instance configuration file. This will fill the instance launch form with the 

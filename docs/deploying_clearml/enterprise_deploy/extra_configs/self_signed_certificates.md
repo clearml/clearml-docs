@@ -2,10 +2,10 @@
 title: Deployment with Self-Signed Certificates
 ---
 
-This guide covers how to configure the [AI Application Gateway](../appgw.md) and [ClearML Agent](../../../clearml_agent/clearml_agent_deployment_k8s.md#agent-with-an-enterprise-server) 
+This guide covers how to configure the [AI Application Gateway](../appgw.md) and [ClearML Agents](../../../clearml_agent/clearml_agent_deployment_k8s.md#agent-with-an-enterprise-server) 
 to use self-signed or custom SSL certificates. 
 
-## Certificate Configuration
+## AI Application Gateway and ClearML Agent
 
 To configure certificates, update the applicable overrides file:
 * For AI Application Gateway: `clearml-app-gateway-values.override.yaml` file
@@ -98,3 +98,64 @@ To apply the changes, run the update command:
    ```bash
    helm upgrade -i -n <WORKER_NAMESPACE> clearml-enterprise-agent oci://docker.io/clearml/clearml-enterprise-agent -f clearml-agent-values.override.yaml
    ```
+  
+## ClearML Applications (Apps Agent)
+
+ClearML Application instances are executed by a dedicated agent (the Apps Agent), which creates pods for each application 
+instance.
+
+To make custom certificates available to these pods, update the control-plane `clearml-values.override.yaml` file under 
+the `clearmlApplications` section. 
+
+The `basePodTemplate` defines the base pod specification applied to all application pods created by the Apps Agent.
+
+Example configuration:
+
+```yaml
+clearmlApplications:
+  basePodTemplate:
+    initContainers:
+      - command:
+        - /bin/sh
+        - -c
+        - update-ca-certificates
+        image: allegroai/clearml-enterprise-agent-k8s-base:<AGENT-VERSION-AVAILABLE-ON-REPO>
+        imagePullPolicy: IfNotPresent
+        name: init-task
+        volumeMounts:
+          - name: etc-ssl-certs
+            mountPath: "/etc/ssl/certs"
+          - name: clearml-extra-ca-certs
+            mountPath: "/usr/local/share/ca-certificates"
+    env:
+      - name: REQUESTS_CA_BUNDLE
+        value: "/etc/ssl/certs/ca-certificates.crt"
+      - name: SSL_CERT_FILE
+        value: "/etc/ssl/certs/ca-certificates.crt"
+    volumeMounts:
+      - name: etc-ssl-certs
+        mountPath: "/etc/ssl/certs"
+    volumes:
+      - name: etc-ssl-certs
+        emptyDir: {}
+      - name: clearml-extra-ca-certs
+        projected:
+          defaultMode: 420
+          sources:
+          # LIST HERE CONFIGMAPS CREATED BY THE APPS AGENT IN THE CONTROL PLANE CHART, THE CARDINALITY DEPENDS ON THE NUMBER OF CERTS PROVIDED.
+          - configMap:
+              name: clearml-enterprise-apps-custom-ca-0
+          - configMap:
+              name: clearml-enterprise-apps-custom-ca-1
+  customCertificates:
+    # -- Override system crt certificate bundle. Mutual exclusive with extraCerts.
+    overrideCaCertificatesCrt:
+    # -- Extra certs usable in case of needs of adding more certificates to the standard bundle, Requires root permissions to run update-ca-certificates. Mutual exclusive with overrideCaCertificatesCrt.
+    extraCerts:
+      []
+      # - alias: certificateName
+      #   pem: |
+      #     -----BEGIN CERTIFICATE-----
+      #     ###
+      #     -----END CERTIFICATE-----
+```

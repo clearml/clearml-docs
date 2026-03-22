@@ -5,7 +5,7 @@ title: User Settings
 In the **User Settings** section, manage your personal account details, configure system behavior, and set up 
 credentials for ClearML services.
 
-## Profile 
+## Profile
 The profile tab presents user information.
 
 **To edit the username:**
@@ -58,7 +58,7 @@ In the **Web App Cloud Access** section, enter the following credentials:
 ### Multiple Workspaces
 
 :::info ClearML Hosted Service Feature
-Multiple workspaces is only available on the ClearML Hosted Service
+Multiple workspaces is only available on the ClearML Hosted Service.
 :::
 
 ClearML Hosted Service users can be members of multiple workspaces, which are listed under **WORKSPACE**. 

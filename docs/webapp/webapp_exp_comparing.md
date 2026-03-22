@@ -57,7 +57,7 @@ get the exact same page (including selected tabs etc.).
 To embed plots and debug samples from the comparison pages in your [Reports](webapp_reports.md), hover over the
 resource and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" />, 
 which will copy to clipboard the embed code to put in your Reports. These visualizations are updated live as the 
-tasks update. The Enterprise Plan and Hosted Service support embedding resources in external tools (e.g. Notion).
+tasks update. The Enterprise Plan and Hosted Service support embedding resources in third-party platforms that support embedded content (e.g. Notion).
 
 ## Comparison Modes 
 The comparison pages provide the following views:

@@ -225,7 +225,7 @@ from `system_site_packages`
 **`agent.enable_git_ask_pass`** (*bool*)
 
 :::note
-`enable_git_ask_pass` is supported only on Linux systems
+`enable_git_ask_pass` is supported only on Linux systems.
 :::
 
 * If enabled, uses `GIT_ASKPASS` to pass Git user/pass when cloning/fetching repositories

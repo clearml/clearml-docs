@@ -22,7 +22,7 @@ it can't do that when running from a virtual environment.
 
 :::note
 If ClearML was previously configured, follow [this](#adding-clearml-agent-to-a-configuration-file) to add 
-ClearML Agent specific configurations
+ClearML Agent specific configurations.
 :::
 
 1. In a terminal session, execute
@@ -117,7 +117,7 @@ ClearML Agent specific configurations
    
 :::note
 The ClearML Enterprise server provides a [configuration vault](../webapp/settings/webapp_settings_profile.md#configuration-vault), the contents 
-of which are categorically applied on top of the agent-local configuration
+of which are categorically applied on top of the agent-local configuration.
 :::
 
 

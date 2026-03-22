@@ -179,7 +179,7 @@ apiserver:
 ### Internal Database Authentication
 
 :::important  
-Internal Database Authentication is supported starting from `clearml-enterprise` Helm chart version `10.9.0`  
+Internal Database Authentication is supported starting from `clearml-enterprise` Helm chart version `10.9.0`. 
 :::
 
 By default, the ClearML Enterprise Helm chart deploys its internal DB components (MongoDB, ElasticSearch, and Redis) 
@@ -262,6 +262,11 @@ externalServices:
   # Existing Redis Port to use if redis.enabled is false
   redisPort: 6379
 ```
+
+## Monitoring
+
+Monitoring your ClearML deployment is recommended to ensure service availability and detect performance or resource 
+issues early. For monitoring guidelines and recommended metrics, see [Monitoring](extra_configs/monitoring_k8s.md).
 
 ## Next Steps
 

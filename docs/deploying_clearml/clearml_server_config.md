@@ -169,7 +169,7 @@ For example, given the default `secure.conf` file contents:
 
 :::tip
 If the `secure.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or
-an alternate folder you configured), and input the modified configuration
+an alternate folder you configured), and input the modified configuration.
 :::
 
 You can override the default secret for the system's `apiserver` component by setting the following environment variable: 
@@ -435,7 +435,7 @@ cors {
 
 :::tip
 If the `apiserver.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or
-an alternate folder you configured), and input the modified configuration
+an alternate folder you configured), and input the modified configuration.
 :::
 
 See the [Flask-Cors documentation](https://flask-cors.readthedocs.io/en/latest/api.html) for detailed initialization 
@@ -497,7 +497,7 @@ organization.ui_actions: {
 
 :::tip
 If the `services.conf` file does not exist, create your own in ClearML Server's `/opt/clearml/config` directory (or 
-an alternate folder you configured), and input the modified configuration
+an alternate folder you configured), and input the modified configuration.
 :::
 
 The action will appear in the context menu for the object type in which it was specified:

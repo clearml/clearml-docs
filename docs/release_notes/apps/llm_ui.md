@@ -2,6 +2,10 @@
 title: LLM UI
 ---
 
+### 1.17.1
+
+* Fix chat window interface not loading 
+
 ### 1.17.0
 * Improve security
 

@@ -40,7 +40,7 @@ get the exact same page (including selected tabs etc.).
 To embed plots and debug samples from the comparison pages in your [Reports](webapp_reports.md), hover over the
 resource and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" />, 
 which will copy to clipboard the embed code to put in your Reports. These visualizations are updated live as the 
-models update. The Enterprise Plan and Hosted Service support embedding resources in external tools (e.g. Notion).
+models update. The Enterprise Plan and Hosted Service support embedding resources in third-party platforms that support embedded content (e.g. Notion).
 
 ## Comparison Modes
 The comparison tabs provides the following views:
@@ -68,7 +68,7 @@ The differences between the models are highlighted. You can obscure identical fi
 ![Text comparison](../img/webapp_compare_models_text.png#light-mode-only)
 ![Text comparison](../img/webapp_compare_models_text_dark.png#dark-mode-only)
 
-### Tabular Scalar Comparison 
+### Tabular Scalar Comparison
 The **Scalars** tab (**Values** view) lays out the models' reported metric values in a table: a row per metric/variant and a 
 column for each model. Select from the dropdown menu which metric values to display:
 * Last Values: The last reported values for each model

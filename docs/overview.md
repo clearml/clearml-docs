@@ -42,7 +42,7 @@ The AI Development Center offers a robust environment for developing, training, 
 - **Integrated Development Environment:** A comprehensive IDE for training, testing, and debugging AI models.
 - **Model Training:** Scalable and distributed model training and hyperparameter optimization.
 - **Data Management:** Tools for data preprocessing, management, and versioning.
-- **Experiment Tracking:** Track metrics, artifacts and log. manage versions, and compare results.
+- **Experiment Tracking:** Track metrics, artifacts, and logs. Manage versions, and compare results.
 - **Workflow Automation:** Build pipelines to formalize your workflow
 
 ![AI Dev center](img/gif/ai_dev_center.gif#light-mode-only)

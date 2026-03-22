@@ -2,6 +2,10 @@
 title: Orchestration Dashboard Customization (K8S)
 ---
 
+:::important Enterprise Feature
+The Orchestration Dashboard is available under the ClearML Enterprise plan.
+:::
+
 The ClearML [Orchestration Dashboard](../webapp/webapp_orchestration_dash.md) provides visibility into available and in-use compute resources across your 
 infrastructure. Agent configuration controls how resources are reported to the dashboard and how workers are organized 
 into categories and groups.
@@ -57,7 +61,7 @@ You can configure how reports are sent and how often:
   * `disabled` (or no value) - Do not send any reports. 
   * `global` - Send a single category-level report that sums up all agents into the category total. Overrides individual 
   agent reports. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups). 
-  * `aggregate` - Send a report per agent. The dashboard aggregates all reports in the category automatically. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups)
+  * `aggregate` - Send a report per agent. The dashboard aggregates all reports in the category automatically. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups).
 * `reportSeconds` - Interval in seconds between dashboard updates. Controls how frequently the agent sends GPU capacity data.
 
 ```yaml

@@ -192,7 +192,7 @@ After deploying ClearML Server, the services expose the following ports:
 ## Backing Up and Restoring Data and Configuration
 
 :::warning
-Stop your server before backing up or restoring data and configuration
+Stop your server before backing up or restoring data and configuration.
 :::
 
 The commands in this section are an example of how to back up and to restore data and configuration.

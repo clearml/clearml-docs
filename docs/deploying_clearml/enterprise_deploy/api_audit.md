@@ -142,7 +142,7 @@ curl $APISERVER_URL/auth.create_credentials \
    -u $APISERVER_KEY:$APISERVER_SECRET
 ```
 
-## Customizing API logs
+## Customizing API Logs
 
 The audit logging system provides fine-grained control over which endpoints are logged and which parts of the request/response 
 are included. This section lists the most common options.
@@ -184,7 +184,7 @@ You can also override these defaults for individual endpoints using per-endpoint
 
 ### Per-Endpoint Logging
 
-Specify a non-default logging policy for certain endpoints  according to the following pattern:
+Specify a non-default logging policy for certain endpoints according to the following pattern:
 
 ```
 CLEARML__APISERVER__ENDPOINTS__<endpoint_path>__<log_option>
@@ -200,7 +200,7 @@ CLEARML__apiserver__endpoints__workers__status_report__log_call=true
 CLEARML__apiserver__endpoints__workers__status_report__log_result_data=true
 ```
 
-You can also specify specific fields to log. For example: Enable logging  the `workers.status_reports` endpoint's request's `queue` and `tags` fields. 
+You can also specify specific fields to log. For example: Enable logging the `workers.status_reports` endpoint's request's `queue` and `tags` fields. 
 
 ```
 CLEARML__apiserver__endpoints__workers__status_report__log_data=["queue", "tags"]

@@ -57,7 +57,7 @@ clearml:
 ingress:
   enabled: true
   hostName: ""
-tcpSession:
+streamSession:
   routerAddress: ""
   service:
     type: LoadBalancer
@@ -74,10 +74,10 @@ tcpSession:
 * `clearml.apiServerUrlReference`: ClearML API server URL starting with `https://api.`.  
 * `clearml.authCookieName`: Cookie used by the ClearML server to store the ClearML authentication cookie.
 * `ingress.hostName`: Hostname of App Gateway used by the ingress controller to access it.  
-* `tcpSession.routerAddress`: The external App Gateway address (can be an IP, hostname, or load balancer address) depending on your network setup. Ensure this address is accessible for TCP connections.
-* `tcpSession.service.type`: Service type used to expose TCP functionality, default is `NodePort`.
-* `tcpSession.portRange.start`: Start port for the TCP Session feature.  
-* `tcpSession.portRange.end`: End port for the TCP Session feature.
+* `streamSession.routerAddress`: The external App Gateway address (can be an IP, hostname, or load balancer address) depending on your network setup. Ensure this address is accessible for TCP and UDP connections.
+* `streamSession.service.type`: Service type used to expose TCP and UDP functionality, default is `NodePort`.
+* `streamSession.portRange.start`: Start port for the TCP and UDP Session feature.
+* `streamSession.portRange.end`: End port for the TCP and UDP Session feature.
 
 
 The full list of supported configuration is available with the command:

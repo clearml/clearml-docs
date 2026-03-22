@@ -140,10 +140,8 @@ To assign an admin role to a service account:
 ### Service Account Credentials 
 
 To generate new credentials for a service account:
-1. Hover over the account's row on the table
-2. Click the <img src="/docs/latest/icons/ico-edit.svg" alt="Edit Pencil" className="icon size-md" /> button, which
-   opens the editing panel
-3. Click **Create new credentials**
+1. Click the account's row on the table, which opens the editing panel
+1. Click **Create new credentials**
 
 The dialog displays new credentials, formatted as a ready-to-copy configuration file section.
 

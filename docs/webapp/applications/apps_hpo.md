@@ -18,13 +18,48 @@ applying a user-selected optimization strategy (random search, Bayesian, etc.).
 Control the optimization process with the advanced configuration options, which include time, iteration, and task 
 limits.
 
+Once you have launched an app instance, you can view the following information in its dashboard:
+
+* Optimization Metric - Last reported and maximum / minimum values of objective metric over time
+* Optimization Objective - Objective metric values per task
+* Parallel coordinates - A visualization of parameter value impact on optimization objective
+* Summary - Task summary table: task execution information, objective metric and parameter values.
+* Budget - Available iterations and tasks budget (percentage, out of the values defined in the HPO instance's advanced configuration)
+* Resources - Number of workers servicing the HPO execution queue, and the number of currently running optimization tasks
+
+![HPO Dashboard](../../img/apps_format_overview.png#light-mode-only)
+![HPO Dashboard](../../img/apps_format_overview_dark.png#dark-mode-only)
+
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). The Enterprise Plan and 
+Hosted Service also support embedding resources in third-party platforms that support embedded content (e.g. Notion). These visualizations 
+are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
+
 ## HPO Instance Configuration
+
+When configuring a new HPO instance, you can fill in the required parameters or reuse the configuration of 
+a previously launched instance.  
+
+Launch an app instance with the configuration of a previously launched instance using one of the following options:
+* Cloning a previously launched app instance will open the instance launch form with the original instance's 
+configuration prefilled.
+* Importing an app configuration file. You can export the configuration of a previously launched instance as a JSON file 
+when viewing its configuration.
+
+The prefilled instance launch form can be edited before starting the new app instance. 
+
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+to open the app's instance launch form.
+
+### Configuration Options 
 
 :::note
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
@@ -89,23 +124,3 @@ This section describes the default configuration provided by ClearML
  
 </div>
 
-## Dashboard
-Once an HPO instance is launched, the dashboard displays a summary of the optimization process.
-
-![HPO Dashboard](../../img/apps_format_overview.png#light-mode-only)
-![HPO Dashboard](../../img/apps_format_overview_dark.png#dark-mode-only)
-
-The HPO dashboard shows:
-* Optimization Metric - Last reported and maximum / minimum values of objective metric over time
-* Optimization Objective - Objective metric values per task
-* Parallel coordinates - A visualization of parameter value impact on optimization objective
-* Summary - Task summary table: task execution information, objective metric and parameter values.
-* Budget - Available iterations and tasks budget (percentage, out of the values defined in the HPO instance's advanced configuration)
-* Resources - Number of workers servicing the HPO execution queue, and the number of currently running optimization tasks
-
-:::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan and Hosted Service support embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
-to copy the embed code, and navigate to a report to paste the embed code.
-:::

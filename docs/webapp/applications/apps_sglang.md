@@ -61,9 +61,8 @@ etc.
 ![SGLang Model Deployment App](../../img/apps_sglang_dashboard_dark.png#dark-mode-only)
 
 :::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan supports embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
@@ -89,7 +88,7 @@ to open the app's configuration form.
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration**: Import an app instance configuration file. This will fill the instance launch form with the 
@@ -111,7 +110,7 @@ instance task will be enqueued. Make sure an agent is assigned to that queue.
   customize model selection, parallelism policies, memory management, optimization techniques, and more. See more details 
   about [SGLang configuration options](https://docs.sglang.ai/advanced_features/server_arguments.html#model-and-tokenizer)
   (parameter names appear as their command-line form, e.g., "Max Running Requests" is listed as `--max-running-requests`).
-  * CLI - SGLang CLI arguments. If set, these arguments will be passed to SGLang. All other deployment form fields will 
+  * CLI - SGLang CLI arguments. If set, these arguments will be passed to SGLang. All other launch form fields will 
   be ignored, except for the `Model` field.
   * Model - A ClearML Model ID or a HuggingFace model name (e.g. `openai-community/gpt2`)
   * Model Endpoint Name - The name to be used for API access. 
@@ -153,7 +152,7 @@ instance task will be enqueued. Make sure an agent is assigned to that queue.
   when using automatic CPU offloading. Defaults to `-1` when running on a single GPU, and `66000` (64Mib) when running on 
   multiple GPUs.
   * Schedule Policy: How incoming requests are prioritized
-    * lpm: Longest Prefix Match: Requests with largest partial match in the prompt cache prioritized.
+    * lpm: Longest Prefix Match: Requests with largest partial match in the prompt cache are prioritized.
     * random
     * fcfs: First come, first served. Request processed in order of arrival
     * dfs-weight: Depth-First Search with weights. Requests prioritized based on a weighted factor

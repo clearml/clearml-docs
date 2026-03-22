@@ -14,13 +14,59 @@ Each scheduling job is configured with ClearML tasks and a scheduling specificat
 for execution and recurrence type. The Scheduler app will then launch copies of the specified tasks at their specified 
 times. 
 
+Once you have launched an app instance, you can view the following information in its dashboard:
+
+* Scheduled Tasks - Table of tasks scheduled for execution. The table displays the ID of the task scheduled for execution,
+  the queue where it will be enqueued, and when it is scheduled to be executed. Each row presents a specific time that
+  the task is scheduled to be executed (both recurring and not). In the image below, the task in the first row is
+  scheduled to be launched daily (`day=1`) at 06:20 UTC (`minute=20, hour=6`).
+  The task in the third row is scheduled to be launched every month (`month=1`) on the 15th at 12:00 UTC (`day=15, hour=12`).
+
+  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks.png#light-mode-only)
+  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks_dark.png#dark-mode-only)
+
+* Executed Tasks - Table of tasks that have been executed. The table displays the `started` time, which is the time
+  the task was enqueued, and its `finished` time, which is the time the task's execution was completed. If it says `None`,
+  under the `finished` column, the task has not yet completed its execution.
+
+  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks.png#light-mode-only)
+  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks_dark.png#dark-mode-only)
+
+* Scheduler Log - Application console log containing everything printed to stdout and stderr. The log
+  includes when the scheduler syncs, and when it launches tasks for execution.   
+
+
+![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard.png#light-mode-only)
+![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard_dark.png#dark-mode-only)
+
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
+
 ## Scheduler Instance Configuration
 
+When configuring a new Task Scheduler instance, you can fill in the required parameters or reuse the 
+configuration of a previously launched instance. 
+
+Launch an app instance with the configuration of a previously launched instance using one of the following options:
+* Cloning a previously launched app instance will open the instance launch form with the original instance's 
+configuration prefilled.
+* Importing an app configuration file. You can export the configuration of a previously launched instance as a JSON file 
+when viewing its configuration.
+
+The prefilled configuration form can be edited before launching the new app instance.
+
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+to open the app's configuration form.
+
+### Configuration Options
 :::note
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
@@ -46,37 +92,3 @@ This section describes the default configuration provided by ClearML
 ![TaskScheduler instance launch form](../../img/apps_taskscheduler_wizard_dark.png#dark-mode-only)
 
 </div>
- 
-## Dashboard
-
-Once a Task Scheduler instance is launched, the dashboard displays a summary of the scheduled tasks.
-
-![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard.png#light-mode-only)
-![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard_dark.png#dark-mode-only)
-
-The Task Scheduler dashboard shows:
-* Scheduled Tasks - Table of tasks scheduled for execution. The table displays the ID of the task scheduled for execution,
-  the queue where it will be enqueued, and when it is scheduled to be executed. Each row presents a specific time that 
-  the task is scheduled to be executed (both recurring and not). In the image below, the task in the first row is 
-  scheduled to be launched daily (`day=1`) at 06:20 UTC (`minute=20, hour=6`).
-  The task in the third row is scheduled to be launched every month (`month=1`) on the 15th at 12:00 UTC (`day=15, hour=12`).
-  
-  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks.png#light-mode-only)
-  ![TaskScheduler scheduler tasks](../../img/apps_taskscheduler_scheduled_tasks_dark.png#dark-mode-only)
-
-* Executed Tasks - Table of tasks that have been executed. The table displays the `started` time, which is the time
-  the task was enqueued, and its `finished` time, which is the time the task's execution was completed. If it says `None`,
-  under the `finished` column, the task has not yet completed its execution. 
-  
-  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks.png#light-mode-only)
-  ![TaskScheduler executed tasks](../../img/apps_taskscheduler_executed_tasks_dark.png#dark-mode-only)
-
-* Scheduler Log - Application console log containing everything printed to stdout and stderr. The log 
-  includes when the scheduler syncs, and when it launches tasks for execution.   
- 
-:::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan and Hosted Service support embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
-to copy the embed code, and navigate to a report to paste the embed code.
-:::

@@ -33,6 +33,12 @@ Once you have launched an app instance, you can view the following information i
 ![VS Code Dashboard](../../img/apps_vs_code.png#light-mode-only)
 ![VS Code Dashboard](../../img/apps_vs_code_dark.png#dark-mode-only)
 
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
+
 ## VS Code App Instance Configuration
 When configuring a new VS Code instance, you can fill in the required parameters or reuse the configuration of 
 a previously launched instance.  
@@ -54,7 +60,7 @@ to open the app's instance launch form.
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 

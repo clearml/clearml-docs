@@ -2,6 +2,9 @@
 title: SSH Session
 ---
 
+### 1.17.1
+* Fix app instance fails when non-admin users leave `Interactive Session Project` configuration option blank in launch form
+
 ### 1.17.0
 * Improve security
 
@@ -46,4 +49,4 @@ title: SSH Session
 * Add session workspace backup: clone an app instance and continue with the same session workspace
 
 **Bug Fix**
-* Fix `Project` field is missing from instance deployment form
+* Fix `Project` field is missing from instance launch form

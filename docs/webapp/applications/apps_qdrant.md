@@ -35,8 +35,8 @@ Once you start a Qdrant DB Session instance, you can view the following informat
 * Current database session ID
 * Database Interface - The publicly accessible URL of the database session endpoint.
 * RestAPI Endpoint - The publicly accessible URL of the database session’s Rest API endpoint.
-* Web Interface - The publicly accessible URL of the DB session’s  web interface.
-* Authentication Token - Link to  your workspace settings page, where you can generate an access token for accessing your DB session (under `AI APPLICATION GATEWAY`).
+* Web Interface - The publicly accessible URL of the DB session's web interface.
+* Authentication Token - Link to your workspace settings page, where you can generate an access token for accessing your DB session (under `AI APPLICATION GATEWAY`).
 * DB connect command - An example Python script to connect to the DB session
 * Performance metrics
   * CPU usage
@@ -50,6 +50,12 @@ Once you start a Qdrant DB Session instance, you can view the following informat
 
 ![Qdrant Dashboard](../../img/apps_qdrant.png#light-mode-only)
 ![Qdrant Dashboard](../../img/apps_qdrant_dark.png#dark-mode-only) 
+
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
 
 ## Qdrant DB Session Instance Configuration
 
@@ -66,6 +72,13 @@ To configure a new app instance, click `Launch New` <img src="/docs/latest/icons
 to open the app's configuration form.
 
 ### Configuration Options
+
+:::note
+Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
+modify field names and/or available options and defaults. 
+
+This section describes the default configuration provided by ClearML.
+:::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
   values from the file, which can be modified before launching the app instance

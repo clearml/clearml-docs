@@ -13,6 +13,14 @@ The application features persistent workspaces, allowing you to restore previous
 relaunched, ensuring continuity for long-running tasks. The launcher also enables flexible network configurations, 
 allowing secure access to applications over HTTPS or through raw TCP connections.
 
+:::info AI Application Gateway
+The Containerized Application Launcher makes use of the App Gateway Router which implements a secure, authenticated
+network endpoint for the application container.
+
+If the ClearML AI Application Gateway is not available, the application container might not be accessible.
+For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
+:::
+
 Once you have launched an app instance, you can view the following information in its dashboard:
 
 * App status indicator  
@@ -34,16 +42,14 @@ Once you have launched an app instance, you can view the following information i
 * Server resources monitoring (CPU / GPU / vMem utilization)  
 * Console - The console log shows the instance's activity, including environment setup progress, status changes
 
-:::info AI Application Gateway
-The Containerized Application Launcher makes use of the App Gateway Router which implements a secure, authenticated 
-network endpoint for the application container.
-
-If the ClearML AI Application Gateway is not available, the application container might not be accessible.
-For more information, see [AI Application Gateway](../../deploying_clearml/enterprise_deploy/appgw.md).
-:::
-
 ![Containerized Application Launcher Dashboard](../../img/apps_container_launcher.png#light-mode-only)
 ![Containerized Application Launcher Dashboard](../../img/apps_container_launcher_dark.png#dark-mode-only)
+
+:::tip EMBEDDING CLEARML VISUALIZATION
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+to copy the embed code, and navigate to a report to paste the embed code.
+:::
 
 ## Containerized Application Launcher Instance Configuration
 
@@ -65,7 +71,7 @@ To configure a new app instance, click `Launch New` Add new to open the app's in
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the values from the file, which can be modified before launching the app instance  

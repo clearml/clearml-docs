@@ -64,7 +64,7 @@ to open the app's instance launch form.
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 

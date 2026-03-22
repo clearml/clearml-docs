@@ -64,9 +64,8 @@ After starting an Embedding Model Deployment instance, you can view the followin
 ![Embedding Model Deployment app](../../img/apps_embedding_model_deployment_dark.png#dark-mode-only)
 
 :::tip EMBEDDING CLEARML VISUALIZATION
-You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). These visualizations 
-are updated live as the app instance(s) updates. The Enterprise Plan supports embedding resources in 
-external tools (e.g. Notion). Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
+You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
+(e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
@@ -92,7 +91,7 @@ to open the app's configuration form.
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the configuration form with the 
@@ -153,7 +152,7 @@ new instance with the same configuration
 
 <div class="max-w-65">
 
-![Embedding Model Deployment form](../../img/apps_embedding_model_deployment_form.png#light-mode-only)
-![Embedding Model Deployment form](../../img/apps_embedding_model_deployment_form_dark.png#dark-mode-only)
+![Embedding Model Launch form](../../img/apps_embedding_model_deployment_form.png#light-mode-only)
+![Embedding Model Launch form](../../img/apps_embedding_model_deployment_form_dark.png#dark-mode-only)
 
 </div>

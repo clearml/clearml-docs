@@ -68,7 +68,7 @@ The top card displays the policy information:
 * Policy name
 * Current usage - The number of resources currently in use (i.e. by currently running jobs)
 * Resource consumption breakdown - Click <img src="/docs/latest/icons/ico-resource-list.svg" alt="task list" className="icon size-md space-sm" />
-  to view tasks currently using  this policy’s resources: Task name, number of resources consumed, and more. Click a task name to go to its [task page](webapp_exp_track_visual.md).
+  to view tasks currently using this policy’s resources: Task name, number of resources consumed, and more. Click a task name to go to its [task page](webapp_exp_track_visual.md).
 * Reserved resources
 * Resource limit
 * User group that the policy applies to - click to show list of users in the group

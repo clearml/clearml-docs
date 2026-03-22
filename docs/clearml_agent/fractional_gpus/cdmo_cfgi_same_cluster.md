@@ -3,7 +3,7 @@ title: Install CDMO and CFGI on the Same Cluster
 ---
 
 :::important Enterprise Feature
-CDMO and CFGI require the agent to use a ClearML Enterprise Server
+CDMO and CFGI require the agent to use a ClearML Enterprise Server.
 :::
 
 You can install both CDMO (ClearML Dynamic MIG Orchestrator) and CFGI (ClearML Fractional GPU Injector) on a shared Kubernetes cluster. 

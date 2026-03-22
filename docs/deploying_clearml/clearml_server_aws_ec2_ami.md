@@ -71,7 +71,7 @@ The pre-built ClearML Server storage configuration is the following:
 ## Backing Up and Restoring Data and Configuration
 
 :::warning
-Stop your server before backing up or restoring data and configuration
+Stop your server before backing up or restoring data and configuration.
 :::
 
 :::note

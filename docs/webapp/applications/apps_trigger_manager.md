@@ -19,13 +19,35 @@ The events which can activate a trigger include:
 
 The app monitors your workspace for trigger events and will launch copies of the specified task when the trigger is activated.
 
+Once you have launched an app instance, you can view the console log in the instance's dashboard. The log shows the 
+instance's activity: periodic polling and triggered events.
+
+![Trigger dashboard](../../img/apps_trigger_manager_dashboard.png#light-mode-only)
+![Trigger dashboard](../../img/apps_trigger_manager_dashboard_dark.png#dark-mode-only)
+
 ## Trigger Manager Instance Configuration 
+
+When configuring a new Trigger Manager instance, you can fill in the required parameters or reuse the 
+configuration of a previously launched instance. 
+
+Launch an app instance with the configuration of a previously launched instance using one of the following options:
+* Cloning a previously launched app instance will open the instance launch form with the original instance's 
+configuration prefilled.
+* Importing an app configuration file. You can export the configuration of a previously launched instance as a JSON file 
+when viewing its configuration.
+
+The prefilled configuration form can be edited before launching the new app instance.
+
+To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
+to open the app's configuration form.
+
+### Configuration Options
 
 :::note
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults. 
 
-This section describes the default configuration provided by ClearML
+This section describes the default configuration provided by ClearML.
 :::
 
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
@@ -66,10 +88,3 @@ This section describes the default configuration provided by ClearML
 
 </div>
 
-## Dashboard 
-
-The Trigger Manager app instance's dashboard displays its console log. The log shows the instance's activity: periodic 
-polling, and events triggered
-
-![Trigger dashboard](../../img/apps_trigger_manager_dashboard.png#light-mode-only)
-![Trigger dashboard](../../img/apps_trigger_manager_dashboard_dark.png#dark-mode-only)
