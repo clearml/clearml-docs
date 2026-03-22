@@ -773,6 +773,7 @@ module.exports = {
                 },
                 'clearml_agent/multi_node_training',
                 'clearml_agent/clearml_agent_nvcr',
+                'clearml_agent/fractional_gpus/gpu_operator',
                 {
                     type: 'category',
                     collapsible: true,
@@ -791,11 +792,6 @@ module.exports = {
                         {
                             type: 'doc',
                             id: 'clearml_agent/fractional_gpus/cdmo_cfgi_same_cluster'
-                        },
-                        {
-                            type: 'doc',
-                            label: 'GPU Operator Basic Deployment',
-                            id: 'clearml_agent/fractional_gpus/gpu_operator'
                         },
                     ],
                 },

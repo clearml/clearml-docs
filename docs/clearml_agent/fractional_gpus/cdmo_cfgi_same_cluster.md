@@ -85,6 +85,26 @@ toolkit:
 ```
 :::
 
+
+:::note MicroK8s
+If using MicroK8s, you must configure the `containerd` paths used by MicroK8s. Add the following entries to your 
+`gpu-operator.override.yaml`:
+
+```yaml
+toolkit:
+ env:
+   - name: CONTAINERD_CONFIG
+     value: "/var/snap/microk8s/current/args/containerd-template.toml"
+   - name: CONTAINERD_SOCKET
+     value: "/var/snap/microk8s/common/run/containerd.sock"
+   - name: CONTAINERD_RUNTIME_CLASS
+     value: "nvidia"
+   - name: CONTAINERD_SET_AS_DEFAULT
+     value: "true"
+```
+:::
+
+
 ## Applying Configuration to Nodes
 
 Label each Kubernetes node accordingly to activate a specific GPU mode:

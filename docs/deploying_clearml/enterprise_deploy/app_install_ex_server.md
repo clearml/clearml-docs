@@ -36,7 +36,7 @@ This document provides a short guide on how to configure an external application
 :::note
 Installing an external server requires removing the applications’ agent from the ClearML Enterprise Server. This 
 is done by ClearML in hosted environments, or by removing the `apps-agent` service from the `docker-compose` override 
-file in VPC and on-premises installations. For K8s environments, please consult the ClearML team.
+file in VPC and on-premises installations. For K8S environments, please consult the ClearML team.
 :::
 
 1. Install Docker. See [Docker documentation](https://docs.docker.com/engine/install/ubuntu/) 

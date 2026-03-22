@@ -81,7 +81,7 @@ specific GPUs to the agents. They can also be deployed as dockers in a Kubernete
 
 The Agent supports the following running modes:
 * **Virtual Environment Mode** - The agent creates a new virtual environment for the task, installs the required 
-  python packages based on the Task specification, clones the code repository, applies the uncommitted changes and 
+  Python packages based on the Task specification, clones the code repository, applies the uncommitted changes and 
   finally executes the code while monitoring it. This mode uses smart caching so packages and environments can be reused
   over multiple tasks (see [Virtual Environment Reuse](../clearml_agent/clearml_agent_env_caching.md#virtual-environment-reuse)). 
 

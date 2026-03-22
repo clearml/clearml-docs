@@ -106,7 +106,7 @@ For more information, see [Docker Mode](clearml_agent_execution_env.md#docker-mo
 Fractional GPU containers can be used to limit the memory consumption of your Kubernetes Job/Pod, and have multiple 
 containers share GPU devices without interfering with each other.
 
-For example, the following configures a K8s pod to run using the `clearml/fractional-gpu:u22-cu12.3-8gb` container, 
+For example, the following configures a K8S pod to run using the `clearml/fractional-gpu:u22-cu12.3-8gb` container, 
 which limits the pod to 8 GB of the GPU's memory:
 ```
 apiVersion: v1
@@ -140,7 +140,7 @@ through your NVIDIA device plugin.
 
 The standard way to configure a Kubernetes pod template to use specific MIG slices is for the template to specify the 
 requested GPU slices under `Containers.resources.limits`. For example, the 
-following configures a K8s pod to run a `3g.20gb` MIG device:
+following configures a K8S pod to run a `3g.20gb` MIG device:
 
 ```
 # tf-benchmarks-mixed.yaml

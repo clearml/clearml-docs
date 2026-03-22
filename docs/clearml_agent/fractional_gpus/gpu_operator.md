@@ -1,5 +1,5 @@
 ---
-title: Basic Deployment - Suggested GPU Operator Values
+title: K8S GPU Operator
 ---
 
 This guide provides recommended configuration values for deploying the NVIDIA GPU Operator alongside ClearML Enterprise. 
@@ -48,13 +48,32 @@ devicePlugin:
 ```
 
 :::note k3s
-If using **k3s**, you must set the `containerd` socket path.  Add the following entry to your `gpu-operator.override.yaml`:
+If using **k3s**, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
 
 ```yaml
 toolkit:
   env:
     - name: CONTAINERD_SOCKET
       value: "/run/k3s/containerd/containerd.sock"
+```
+:::
+
+
+:::note MicroK8s
+If using MicroK8s, you must configure the `containerd` paths used by MicroK8s. Add the following entries to your 
+`gpu-operator.override.yaml`:
+
+```yaml
+toolkit:
+ env:
+   - name: CONTAINERD_CONFIG
+     value: "/var/snap/microk8s/current/args/containerd-template.toml"
+   - name: CONTAINERD_SOCKET
+     value: "/var/snap/microk8s/common/run/containerd.sock"
+   - name: CONTAINERD_RUNTIME_CLASS
+     value: "nvidia"
+   - name: CONTAINERD_SET_AS_DEFAULT
+     value: "true"
 ```
 :::
 

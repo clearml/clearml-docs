@@ -32,6 +32,12 @@ helm registry login docker.io --username allegroaienterprise --password <CLEARML
 
 ### GPU Operator Configuration
 
+To enable fractional GPU support, configure the NVIDIA GPU Operator using the appropriate device plugin configuration for 
+your CFGI version.
+
+In addition, some Kubernetes platforms (k3s, MicroK8s, or OpenShift) require additional configuration entries 
+(see [below](#platform-specific-configuration)).
+
 #### For CFGI Version >= 1.3.0
 
 1. Create a Docker Registry secret named `clearml-dockerhub-access` in the `gpu-operator` namespace. Make sure to replace `<CLEARML_DOCKERHUB_TOKEN>` with your token.
@@ -108,15 +114,9 @@ helm registry login docker.io --username allegroaienterprise --password <CLEARML
                  replicas: 8
    ```
    
-   :::note k3s
-   If using **k3s**, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
-
-   ```yaml
-   toolkit:
-     env:
-       - name: CONTAINERD_SOCKET
-         value: "/run/k3s/containerd/containerd.sock"
-   ```
+   :::important
+   If you are using k3s, MicroK8s, or OpenShift Kubernetes distribution, additional configuration is required. 
+   See [Platform-Specific Configuration](#platform-specific-configuration) below.
    :::
 
 #### For CFGI version < 1.3.0 (Legacy)
@@ -164,16 +164,81 @@ devicePlugin:
                 replicas: 8
 ```
 
-:::note k3s
-If using **k3s**, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
+:::important
+If you are using k3s, MicroK8s, or OpenShift Kubernetes distribution, additional configuration is required. 
+See [Platform-Specific Configuration](#platform-specific-configuration) below.
+:::
+
+#### Platform-Specific Configuration
+Some Kubernetes distributions require custom configuration for the GPU Operator.
+
+These adjustments apply to all CFGI versions.
+
+##### K3s
+If using k3s, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
 
 ```yaml
 toolkit:
-  env:
-    - name: CONTAINERD_SOCKET
-      value: "/run/k3s/containerd/containerd.sock"
+ env:
+   - name: CONTAINERD_SOCKET
+     value: "/run/k3s/containerd/containerd.sock"
 ```
-:::
+
+##### MicroK8s
+If using MicroK8s, you must configure the `containerd` paths used by MicroK8s. Add the following entries to your 
+`gpu-operator.override.yaml`:
+
+```yaml
+toolkit:
+ env:
+   - name: CONTAINERD_CONFIG
+     value: "/var/snap/microk8s/current/args/containerd-template.toml"
+   - name: CONTAINERD_SOCKET
+     value: "/var/snap/microk8s/common/run/containerd.sock"
+   - name: CONTAINERD_RUNTIME_CLASS
+     value: "nvidia"
+   - name: CONTAINERD_SET_AS_DEFAULT
+     value: "true"
+```
+
+##### OpenShift
+If using OpenShift, the NVIDIA GPU Operator is installed through Operator Hub. In this case, GPU Operator configuration 
+is managed using a ClusterPolicy resource rather than a Helm values file.
+
+To configure the device plugin for CFGI, create a ConfigMap containing the device plugin configuration and reference it 
+from the `devicePlugin.config` section of the ClusterPolicy.
+
+1. Create a file named `device-plugin-config.yaml`:
+
+   ```yaml
+   apiVersion: v1
+   kind: ConfigMap
+   metadata:
+    name: nvidia-device-plugin-config
+    namespace: nvidia-gpu-operator
+   data:
+    config.yaml: |
+      version: v1
+      flags:
+        migStrategy: mixed
+   ```
+
+1. Apply the ConfigMap to the cluster:
+
+   ```bash
+   oc apply -f device-plugin-config.yaml
+   ```
+   
+1. Edit or create the NVIDIA GPU Operator ClusterPolicy and add the following configuration:
+
+   ```yaml
+   spec:
+    devicePlugin:
+      enabled: true
+      config:
+        name: nvidia-device-plugin-config
+        default: config.yaml
+   ```
 
 ### Install GPU Operator and CFGI 
 
@@ -292,30 +357,36 @@ agentk8sglue:
 
 ## Disabling Fractions
 
-To revert to standard GPU scheduling (without time slicing), remove the `devicePlugin.config` section from the `gpu-operator.override.yaml` 
-file and upgrade the `gpu-operator`:
+To revert to standard GPU scheduling (without time slicing): 
+1. Remove the `devicePlugin.config` section from the `gpu-operator.override.yaml`:  
 
-```yaml
-toolkit:
-  env:
-    - name: ACCEPT_NVIDIA_VISIBLE_DEVICES_ENVVAR_WHEN_UNPRIVILEGED
-      value: "false"
-    - name: ACCEPT_NVIDIA_VISIBLE_DEVICES_AS_VOLUME_MOUNTS
-      value: "true"
-    - name: NVIDIA_CONTAINER_TOOLKIT_OPT_IN_FEATURES
-      value: "disable-cuda-compat-lib-hook"
-devicePlugin:
-  env:
-    - name: PASS_DEVICE_SPECS
-      value: "true"
-    - name: FAIL_ON_INIT_ERROR
-      value: "true"
-    - name: DEVICE_LIST_STRATEGY # Use volume-mounts
-      value: volume-mounts
-    - name: DEVICE_ID_STRATEGY
-      value: uuid
-    - name: NVIDIA_VISIBLE_DEVICES
-      value: all
-    - name: NVIDIA_DRIVER_CAPABILITIES
-      value: all
-```
+    ```yaml
+    toolkit:
+      env:
+        - name: ACCEPT_NVIDIA_VISIBLE_DEVICES_ENVVAR_WHEN_UNPRIVILEGED
+          value: "false"
+        - name: ACCEPT_NVIDIA_VISIBLE_DEVICES_AS_VOLUME_MOUNTS
+          value: "true"
+        - name: NVIDIA_CONTAINER_TOOLKIT_OPT_IN_FEATURES
+          value: "disable-cuda-compat-lib-hook"
+    devicePlugin:
+      env:
+        - name: PASS_DEVICE_SPECS
+          value: "true"
+        - name: FAIL_ON_INIT_ERROR
+          value: "true"
+        - name: DEVICE_LIST_STRATEGY # Use volume-mounts
+          value: volume-mounts
+        - name: DEVICE_ID_STRATEGY
+          value: uuid
+        - name: NVIDIA_VISIBLE_DEVICES
+          value: all
+        - name: NVIDIA_DRIVER_CAPABILITIES
+          value: all
+    ```
+
+1. Upgrade the `gpu-operator`:
+
+   ```bash
+   helm upgrade -n gpu-operator gpu-operator nvidia/gpu-operator -f gpu-operator.override.yaml
+   ```

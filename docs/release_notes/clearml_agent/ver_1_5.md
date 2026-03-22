@@ -60,7 +60,7 @@ configuration option, defaults to every 120 seconds)
 for user/password when cloning/fetching repositories)
 * Fix setting `CLEARML_API_DEFAULT_REQ_METHOD` raises an error
 * Fix `get_task_session()` may cause an old copy of the `APIClient` to be used containing a reference to the previous session
-* K8s Glue
+* K8S Glue
   * Fix `agent.system_site_packages` is not turned on by default in k8s glue
   * Make sure git_user/pass is passed to the task pod
   * Remove support for `kubectl run`

@@ -19,6 +19,6 @@ This release is not backwards compatible.
 * Fix live update of model preprocessing code
 * Add `pandas` to the default serving container
 * Add per endpoint/variable statistics collection control
-* Add `CLEARML_EXTRA_PYTHON_PACKAGES` for easier additional python package support (serving inference container)
+* Add `CLEARML_EXTRA_PYTHON_PACKAGES` for easier additional Python package support (serving inference container)
 * Upgrade Nvidia Triton base container image to 22.04 (requires Nvidia drivers 510+)
 * Add Kubernetes Helm chart

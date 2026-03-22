@@ -7,7 +7,7 @@ Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 
 The ClearML Hyper-Datasets SDK interface is provided through:
-* Main interface: `clearml` python package (as of v2.1.0)
+* Main interface: `clearml` Python package (as of v2.1.0)
 * Legacy interface: `allegroai` Python package
 
 Both packages provide a programmatic interface for ClearML's Hyper-Datasets, albeit through a slightly different class hierarchy.

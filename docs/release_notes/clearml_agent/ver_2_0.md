@@ -93,7 +93,7 @@ title: Version 2.0
   * Fix `uv_replace_pip` feature
   * Fix UV cache based on sync/pip-replacement
   * Fix if UV fails but lock file is missing, revert to UV as pip drop in replacement
-  * Fix use UV bin instead of UV python package to avoid nested `VIRTUAL_ENV` issues
+  * Fix use UV bin instead of UV Python package to avoid nested `VIRTUAL_ENV` issues
   * Fix UV `pip freeze` fails
   * Fix UV as pip drop-in replacement print
 * Fix cached venv tries to reinstall priority packages even through they are preinstalled
