@@ -158,14 +158,14 @@ Each router's `runtime.env` file should include:
 
   ```
   ROUTER_NAME=router-a
-  LISTEN_QUEUE_NAME=queue1,queue2
+  LISTEN_QUEUE_NAME=queue1 queue2
   ```
 
 * Router B:
 
   ```
   ROUTER_NAME=router-b
-  LISTEN_QUEUE_NAME=queue3,queue4
+  LISTEN_QUEUE_NAME=queue3 queue4
   ```
 
 Make sure `LISTEN_QUEUE_NAME` is set in the  [`docker-compose` environment variables](#docker-compose-file) for each router instance.

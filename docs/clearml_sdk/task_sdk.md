@@ -41,6 +41,12 @@ task = Task.init(
 )
 ```
 
+:::warning
+Call `Task.init()` at the very beginning of your script's execution, ideally after `if __name__ == "__main__":`. 
+Since ClearML automatically logs data from frameworks like PyTorch and TensorFlow, these frameworks should not start executing
+before a Task is initialized. This may lead to memory leaks, hanging child processes, etc. 
+:::
+
 Once a task is created, the task object can be accessed from anywhere in the code by calling [`Task.current_task()`](../references/sdk/task.md#taskcurrent_task).
 
 If multiple tasks need to be created in the same process (for example, for logging multiple manual runs), 

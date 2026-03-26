@@ -176,7 +176,7 @@ CLEARML__apiserver__endpoints___default__log_result_data=true
 * Set a variable to `true` to enable logging for all unspecified endpoints.  
 * Set a variable to `false` to disable logging by default.
 
-:::caution
+:::warning
 `log_data` and especially `log_result_data` can generate large payloads, particularly for endpoints like frame streaming or worker status reporting.  
 :::
 

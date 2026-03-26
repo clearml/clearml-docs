@@ -4,7 +4,7 @@ title: Deleting Tenants from ClearML
 
 The following is a step-by-step guide for deleting tenants (i.e. companies, workspaces) from ClearML.
 
-:::caution 
+:::warning
 Deleting a tenant is a destructive operation that cannot be undone.
 * Make sure you have the data prior to deleting the tenant.
 * Backing up the system before deleting is recommended.

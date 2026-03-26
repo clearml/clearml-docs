@@ -108,11 +108,11 @@ cat /etc/ssl/certs/ca-certificates.crt /path/to/private-ca.crt > /path/to/your/c
 Now you can integrate ClearML into your code! Continue [here](../getting_started/auto_log_exp.md).
 
 ### Jupyter Notebook
-To use ClearML with Jupyter Notebook, you need to configure ClearML Server access credentials for your notebook.
+To use ClearML with Jupyter Notebook, you need to configure ClearML Server access credentials for your notebook:
 
 1. Get ClearML credentials. Open the ClearML Web UI in a browser. On the [**SETTINGS > WORKSPACE**](https://app.clear.ml/settings/workspace-configuration) 
    page, click **Create new credentials**. The **JUPYTER NOTEBOOK** tab shows the commands required to configure your 
    notebook (a copy to clipboard action is available on hover)
 1. Add these commands to your notebook
 
-Now you can use ClearML in your notebook!
+Now you can use ClearML in your notebook! Continue [here](../getting_started/auto_log_exp.md).

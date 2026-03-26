@@ -1,5 +1,5 @@
 ---
-title: Custom Workload Configuration (K8S)
+title: Custom Workload Configuration (K8s)
 ---
 
 The ClearML Agent monitors [ClearML queues](../fundamentals/agents_and_queues.md) and pulls tasks that are scheduled for execution.

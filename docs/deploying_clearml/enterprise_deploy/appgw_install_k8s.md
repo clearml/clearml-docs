@@ -12,7 +12,7 @@ It acts as a proxy, identifying ClearML Tasks running within its [K8s namespace]
 and making them available for network access.
 
 :::important 
-The App Gateway must be installed in the same K8S namespace as a dedicated ClearML Agent.
+The App Gateway must be installed in the same K8s namespace as a dedicated ClearML Agent.
 It can only configure access for ClearML Tasks within its own namespace. This means that if you have multiple agents running 
 in multiple namespaces, each namespace must have its own App Gateway.
 :::
@@ -121,7 +121,7 @@ helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> oci://docker.io/clearml/c
 
 Replace the placeholders with the following values:
 
-* `<RELEASE_NAME>` - Unique name for the App Gateway within the K8S namespace. This is a required parameter in 
+* `<RELEASE_NAME>` - Unique name for the App Gateway within the K8s namespace. This is a required parameter in 
   Helm, which identifies a specific installation of the chart. The release name also defines the App Gateway's name and 
   appears in the UI within AI workload application URLs (e.g. Remote IDE URLs). This can be customized to support multiple installations within the same 
   namespace by assigning different release names.

@@ -94,7 +94,7 @@ following methods:
 
    Automatically assign new users to a tenant based on their email domain.
 
-   :::caution
+   :::warning
    Note that providing the same domain name for multiple tenants will result in unstable behavior and should be avoided.
    :::
 
@@ -117,7 +117,7 @@ following methods:
    Note that you can create more than one list per tenant (using multiple API calls). This way you can create one list 
    for admin users and another for non-admin users.
 
-   :::caution
+   :::warning
    Note that including the same email address in more than a single tenant's list will result in unstable behavior and 
    should be avoided.
    :::

@@ -2,7 +2,7 @@
 title: LDAP
 ---
 
-This document explains how to connect ClearML to authenticate a user using existing customer's LDAP.
+This guide explains how to connect ClearML to authenticate a user using existing customer's LDAP.
 
 1. ClearML is configured with the customer’s LDAP server address and admin credentials.  
 2. When a user attempts to log in through the ClearML login screen, they enter their LDAP username and password in the 

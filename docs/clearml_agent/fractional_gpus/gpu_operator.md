@@ -1,5 +1,5 @@
 ---
-title: K8S GPU Operator
+title: K8s GPU Operator
 ---
 
 This guide provides recommended configuration values for deploying the NVIDIA GPU Operator alongside ClearML Enterprise. 
@@ -84,6 +84,10 @@ helm install -n gpu-operator gpu-operator nvidia/gpu-operator --create-namespace
 ```
 
 ## Fractional GPU Support
+
+:::important Enterprise Feature
+Dynamic GPU slicing is available under the ClearML Enterprise plan. 
+:::
 
 To enable fractional GPU allocation or manage mixed GPU configurations, refer to the following guides:
 * [ClearML Dynamic MIG Operator](cdmo.md) (CDMO) – Dynamically configures MIG GPUs on supported devices.

@@ -2,6 +2,24 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.5
+
+**Bug fixes and improvements**
+* Add task method to remove tags
+* Fix `_SaveFramesRequestNoValidate` in offline mode ([#1517](https://github.com/clearml/clearml/issues/1517))
+
+### ClearML 2.1.4
+**New Features and Bug Fixes**
+* Fix syntax error on Python 3.14 ([#1521](https://github.com/clearml/clearml/pull/1521))
+* Add support for boto3 S3 specific configuration ([#1516](https://github.com/clearml/clearml/pull/1516))
+* Add option to close squashed dataset ([#1513](https://github.com/clearml/clearml/pull/1513))
+* Move `None` check earlier in `CacheContext.get_local_copy` ([#1570](https://github.com/clearml/clearml/pull/1570))
+* Update to `examples/hyperdatasets/finetune_qa_lora.py` 
+* Fix race condition with not using incremental logging config 
+* Validate queue visibility in job scheduler
+* Use UTC everywhere in `clearml/automation/scheduler.py` 
+* Implement improvement in `is_within_directory`
+
 ### ClearML 2.1.3
 
 **New Features and Bug Fixes**

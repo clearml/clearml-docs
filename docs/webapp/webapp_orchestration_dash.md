@@ -34,7 +34,7 @@ The **Total** section displays:
 utilization falls below 80%.
 * CPUs - The total number of CPUs in currently running workers out of the total number of CPUs in all provisioned workers, and the number of idle CPUs. CPUs are considered idle when their average 
 utilization falls below 30%.
-* Workers - The number of currently running workers out of the total number of provisioned workers (through autoscalers or K8S), and the number of idle 
+* Workers - The number of currently running workers out of the total number of provisioned workers (through autoscalers or K8s), and the number of idle 
 workers. Workers are considered idle if all of their GPUs and CPUs are idle or if they are not executing any task.
 
 Category sections display the resource count and utilization for:

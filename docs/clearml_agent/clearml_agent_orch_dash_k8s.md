@@ -1,5 +1,5 @@
 ---
-title: Orchestration Dashboard Customization (K8S)
+title: Orchestration Dashboard Customization (K8s)
 ---
 
 :::important Enterprise Feature
@@ -57,7 +57,7 @@ configure the agent in one of the following ways:
 
 You can configure how reports are sent and how often:
 
-* `reportType` - How the agent sends reports to the dashboard. Use on of the following options:
+* `reportType` - How the agent sends reports to the dashboard. Use one of the following options:
   * `disabled` (or no value) - Do not send any reports. 
   * `global` - Send a single category-level report that sums up all agents into the category total. Overrides individual 
   agent reports. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups). 
@@ -104,15 +104,15 @@ The following defaults are used by the agent helm chart:
 
   ```yaml
   agentk8sglue:
-   # K8S Agent Worker ID
+   # K8s Agent Worker ID
    workerIdOverride: "k8s:my-agent"
-   # Default Worker ID template for nodes spawned by the K8S Agent
+   # Default Worker ID template for nodes spawned by the K8s Agent
    taskWorkerIdOverride: "k8s:my-group:{task_id}"
   ```
 
 :::important
 Make sure the **CATEGORY** portion (the first segment before `:`) is the same in both `workerIdOverride` and `taskWorkerIdOverride` 
-if you want the K8S Agent and its Tasks to appear in the same dashboard category box.
+if you want the K8s Agent and its Tasks to appear in the same dashboard category box.
 :::
 
 Worker ID templates support the following dynamic variables using the `"{variable_name}"` syntax:

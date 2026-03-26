@@ -2,7 +2,7 @@
 title: MongoDB Chart Migration Guide
 ---
 
-This document provides a comprehensive procedure for migrating MongoDB from the Bitnami Helm chart to the MongoDB Kubernetes Operator (MCK) with zero data loss and minimal downtime for ClearML chart versions 10.11.6 and earlier.
+This guide provides a comprehensive procedure for migrating MongoDB from the Bitnami Helm chart to the MongoDB Kubernetes Operator (MCK) with zero data loss and minimal downtime for ClearML chart versions 10.11.6 and earlier.
 
 This migration procedure ensures a smooth transition from Bitnami MongoDB to MCK MongoDB with minimal service disruption. The phased approach allows for thorough testing at each stage, reducing the risk of production issues.
 

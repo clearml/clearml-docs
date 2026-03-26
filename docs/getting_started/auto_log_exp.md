@@ -26,6 +26,8 @@ To control what ClearML automatically logs, see this [FAQ](../faq.md#controlling
 
    :::tip Full Automatic Logging
    To ensure full automatic logging, it is recommended to import the `clearml` package at the top of your entry script.
+   Initializing the Task before training frameworks (e.g. TensorFlow, PyTorch) start executing prevents synchronization issues that 
+   can lead to memory leaks or hanging child processes.
    :::
 
 1. Initialize the Task object in your `main()` function, or the beginning of the script.

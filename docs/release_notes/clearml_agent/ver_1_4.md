@@ -21,7 +21,7 @@ title: Version 1.4
 * Allow overriding pytorch lookup page (see `torch_page`, `torch_nightly_page` and `torch_url_template_prefix` under the 
   `agent.package_manager` configuration settings)
 * Add support for abort callback registration
-* K8S glue
+* K8s glue
   * Add `CLEARML_K8S_GLUE_START_AGENT_SCRIPT_PATH` environment variable to allow customizing the agent startup script location
   * Add debug environment variable `CLEARML_AGENT_DEBUG_INFO`
   * Add `CLEARML_AGENT_CHILD_AGENTS_COUNT_CMD` environment variable to allow overriding child agent count command in k8s
@@ -37,7 +37,7 @@ title: Version 1.4
 * Fix second .ssh temp mount fails if container changes the files inside
 * Fix GCP load balancer does not forward GET request body (allow changing default request action to `PUT/POST/GET`. See 
   `api.http.default_method` or `CLEARML_API_DEFAULT_REQ_METHOD`)
-* K8S glue
+* K8s glue
   * Fix resolving k8s pending queue may cause a queue with a UUID name to be created
   * Fix template namespace should override default namespace
   * Fix `extra_bash_init_cmd` location in initial bash script

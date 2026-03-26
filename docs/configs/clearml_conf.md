@@ -927,6 +927,10 @@ metrics, network, AWS S3 buckets and credentials, Google Cloud Storage, Azure St
     * `signature_version` (*string*) - AWS Signature version to use when signing requests. 
     * `read_timeout` (*float* / *integer*) - Time till a timeout exception is thrown when attempting to read from a 
     connection (in seconds). The default is 60 seconds.
+    * `s3` (*dict*) - Additional S3-specific configuration passed to Boto3 client. Configuration options include:
+      * `addressing_style` (*string*) - Override the S3 URL addressing style. Options are: "auto", "virtual", "path".
+      * `payload_signing_enabled` (*bool*) - Specifies whether to compute and send a checksum with every request.
+      * For more information and configuration options, see the [Boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/configuration.html).
   
   * **`sdk.aws.s3`** (*dict*) - AWS S3 options:
     * `credentials` (*[dict]*) - List of dictionaries specifying credentials for individual S3 buckets or hosts.See more information [below](#sdkawss3credentials). 

@@ -252,7 +252,7 @@ clearml-serving model auto-update [-h] [--endpoint ENDPOINT] --engine ENGINE
 
 |Name|Description|Mandatory|
 |---|---|---|
-|`--endpoint`|   Base model endpoint (must be unique)| <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--endpoint`| Base model endpoint (must be unique)| <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
 |`--engine`| Model endpoint serving engine (triton, sklearn, xgboost, lightgbm)| <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
 |`--max-versions`|Max versions to store (and create endpoints) for the model. Highest number is the latest version | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--name`| Specify model name to be selected and auto-updated (notice regexp selection use `"$name^"` for exact match) | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|

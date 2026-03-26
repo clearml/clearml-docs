@@ -179,9 +179,9 @@ If using k3s, you must set the `containerd` socket path. Add the following entry
 
 ```yaml
 toolkit:
- env:
-   - name: CONTAINERD_SOCKET
-     value: "/run/k3s/containerd/containerd.sock"
+  env:
+    - name: CONTAINERD_SOCKET
+      value: "/run/k3s/containerd/containerd.sock"
 ```
 
 ##### MicroK8s

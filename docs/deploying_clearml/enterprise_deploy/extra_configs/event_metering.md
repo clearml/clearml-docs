@@ -159,7 +159,7 @@ Metering Service (daily aggregation)
 ```
 
 Reporting scripts are available for:
-* K8S Compute nodes
+* K8s Compute nodes
 * ClearML tenant users
 * ClearML Fileserver storage consumption
 

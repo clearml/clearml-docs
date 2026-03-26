@@ -133,13 +133,13 @@ If you need to define your own credentials to be used instead, replace the defau
 ```yaml
 clearml:
   # Replace the following values to use custom internal credentials.
-  apiserverKey: ""
-  apiserverSecret: ""
-  fileserverKey: ""
-  fileserverSecret: ""
-  secureAuthTokenSecret: ""
-  testUserKey: ""
-  testUserSecret: ""
+  apiserverKey: "<generated_key>"
+  apiserverSecret: "<generated_key>"
+  fileserverKey: "<generated_key>"
+  fileserverSecret: "<generated_key>"
+  secureAuthTokenSecret: "<generated_key>"
+  testUserKey: "<generated_key>"
+  testUserSecret: "<generated_key>"
 ```
 
 In a shell, if `openssl` is installed, you can use this simple command to generate random strings suitable as keys and secrets:
