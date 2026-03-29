@@ -182,8 +182,16 @@ should be reviewed and modified prior to the server installation
 To ensure the server's security, it's crucial to open only the necessary ports.
 
 ### Working with HTTP
-Directly accessing the server using `HTTP` is not recommended. However, if you choose to do so, only the following ports 
-should be open to any location where a ClearML client (`clearml-agent`, SDK, or web browser) may operate:
+Accessing the server via `HTTP` is disabled by default. While we strongly recommend using HTTPS for security, you can enable insecure connections by modifying your docker-compose.yaml as follows:
+
+```
+services:
+  apiserver:
+    environment:
+      - CLEARML__apiserver__auth__cookies__secure=false
+```
+
+Only the following ports should be open to any location where a ClearML client (`clearml-agent`, SDK, or web browser) may operate:
 * Port 8080 for accessing the WebApp
 * Port 8008 for accessing the API server
 * Port 8081 for accessing the file server

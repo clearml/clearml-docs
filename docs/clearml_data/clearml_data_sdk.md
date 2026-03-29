@@ -26,7 +26,7 @@ from clearml import Dataset
 ClearML Data supports multiple ways to create datasets programmatically, which provides for a variety of use-cases:
 * [`Dataset.create()`](#datasetcreate) - Create a new dataset. Parent datasets can be specified, from which the new dataset 
   will inherit its data
-* [`Dataset.squash()`](#datasetsquash) - Generate a new dataset from by squashing together a set of related datasets
+* [`Dataset.squash()`](#datasetsquash) - Generate a new dataset by squashing together a set of related datasets
 
 You can add metadata to your datasets using [`Dataset.set_metadata()`](../references/sdk/dataset.md#set_metadata), 
 and access the metadata using [`Dataset.get_metadata()`](../references/sdk/dataset.md#get_metadata).
@@ -77,11 +77,10 @@ they are merged in order of specification. Each parent overrides any overlapping
 
 ### Dataset.squash()
 
-To improve deep dataset DAG storage and speed, dataset squashing was introduced. The [`Dataset.squash`](../references/sdk/dataset.md#datasetsquash) 
-class method generates a new dataset by squashing a set of dataset versions, and merging down all changes introduced in 
-their lineage DAG, creating a new, flat, independent version.
+Use the [`Dataset.squash`](../references/sdk/dataset.md#datasetsquash) class method to merge multiple dataset versions (including their full lineage DAG) into 
+a new, flat, independent version. This reduces storage complexity and improves data access speeds.
 
-The datasets being squashed into a single dataset can be specified by their IDs or by project and name pairs. 
+The source datasets can be specified either by their IDs or by project and name pairs. 
 
 ```python
 # option 1 - list dataset IDs
@@ -98,8 +97,16 @@ squashed_dataset_2 = Dataset.squash(
 )
 ```
 
-In addition, the target storage location for the squashed dataset can be specified using the `output_uri` parameter of
-[`Dataset.squash()`](../references/sdk/dataset.md#datasetsquash).
+By default, the squashed dataset is uploaded and finalized. To keep the resulting dataset in a *draft* state for further 
+modification, set `close_squashed_dataset=False`. 
+
+Use the `output_uri` parameter to specify a network storage target to upload the dataset files, and associated information 
+(such as previews) to. For example:
+* A shared folder: `/mnt/share/folder`
+* S3: `s3://bucket/folder`
+* Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. 
+* Google Cloud Storage: `gs://bucket-name/folder`
+* Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`
 
 ## Accessing Datasets
 Once a dataset has been created and uploaded to a server, the dataset can be accessed programmatically from anywhere. 
