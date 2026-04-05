@@ -34,7 +34,7 @@ clearml-data create [-h] [--parents [PARENTS [PARENTS ...]]] [--project PROJECT]
 |`--project`|Dataset's project| <img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" /> |
 |`--version` |Dataset version. Use the [semantic versioning](https://semver.org) scheme. If not specified a version will automatically be assigned | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 |`--parents`|IDs of the dataset's parents. The dataset inherits all of its parents' content. Multiple parents can be entered, but they are merged in the order they were entered| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-|`--storage`| Remote storage to use for the dataset files. Default: files_server | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+|`--storage`| Network storage target to upload the dataset files and associated information (Default: files_server). <br/> For example: <ul><li>A shared folder: `/mnt/share/folder`</li><li>S3: `s3://bucket/folder`</li><li>Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. </li><li>Google Cloud Storage: `gs://bucket-name/folder`</li><li>Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--tags` |Dataset user tags. The dataset can be labeled, which can be useful for organizing datasets| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 
 </div>
@@ -149,7 +149,7 @@ clearml-data close [-h] [--id ID] [--storage STORAGE] [--disable-upload]
 |Name|Description|Mandatory|
 |---|---|---|
 |`--id`| Dataset's ID. Default: previously created / accessed dataset| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
-|`--storage`| Remote storage to use for the dataset files. Default: files_server | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
+|`--storage`| Network storage target to upload the dataset files and associated information (Default: files_server). <br/> For example: <ul><li>A shared folder: `/mnt/share/folder`</li><li>S3: `s3://bucket/folder`</li><li>Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. </li><li>Google Cloud Storage: `gs://bucket-name/folder`</li><li>Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--disable-upload` | Disable automatic upload when closing the dataset | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 |`--chunk-size`| Set dataset artifact upload chunk size in MB. Default 512, (pass -1 for a single chunk). Example: 512, dataset will be split and uploaded in 512 MB chunks. | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--verbose` | Verbose reporting | <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
@@ -184,7 +184,7 @@ clearml-data sync [-h] [--id ID] [--dataset-folder DATASET_FOLDER] --folder FOLD
 |`--id`| Dataset's ID. Default: previously created / accessed dataset| <img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" /> |
 |`--dataset-folder`|Dataset base folder to add the files to (default: Dataset root)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--folder`|Local folder to sync. Wildcard selection is supported, for example: `~/data/*.jpg ~/data/json`|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--storage`|Remote storage to use for the dataset files. Default: files server |<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--storage`| Network storage target to upload the dataset files and associated information (Default: files_server). <br/> For example: <ul><li>A shared folder: `/mnt/share/folder`</li><li>S3: `s3://bucket/folder`</li><li>Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. </li><li>Google Cloud Storage: `gs://bucket-name/folder`</li><li>Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--parents`|IDs of the dataset's parents (i.e. merge all parents). All modifications made to the folder since the parents were synced will be reflected in the dataset|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--project`|If creating a new dataset, specify the dataset's project name|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--name`|If creating a new dataset, specify the dataset's name|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
@@ -389,9 +389,9 @@ clearml-data squash [-h] --name NAME --ids [IDS [IDS ...]] [--storage STORAGE] [
 
 |Name|Description|Mandatory|
 |---|---|---|
-|`--name`|Create squashed dataset name|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
+|`--name`|Squashed dataset name|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
 |`--ids`|Source dataset IDs to squash (merge down)|<img src="/docs/latest/icons/ico-optional-yes.svg" alt="Yes" className="icon size-md center-md" />|
-|`--storage`|Remote storage to use for the dataset files. Default: files_server |<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--storage`| Network storage target to upload the dataset files and associated information (Default: files_server). <br/> For example: <ul><li>A shared folder: `/mnt/share/folder`</li><li>S3: `s3://bucket/folder`</li><li>Non-AWS S3-like services (such as MinIO): `s3://host_addr:port/bucket`. **Note that port specification is required**. </li><li>Google Cloud Storage: `gs://bucket-name/folder`</li><li>Azure Storage: `azure://<account name>.blob.core.windows.net/path/to/file`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--verbose`|Verbose report all file changes (instead of summary)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 
 </div>

@@ -85,7 +85,7 @@ The source datasets can be specified either by their IDs or by project and name 
 ```python
 # option 1 - list dataset IDs
 squashed_dataset_1 = Dataset.squash(
-  dataset_name='squashed dataset\'s name',
+  dataset_name='squashed dataset name',
   dataset_ids=[DS1_ID, DS2_ID, DS3_ID]
 )
 

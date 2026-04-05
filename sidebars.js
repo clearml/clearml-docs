@@ -500,7 +500,7 @@ module.exports = {
             {type: 'ref', id: 'clearml_data/clearml_data_cli'},
             'apps/clearml_param_search',
             {type: 'ref', id: 'apps/clearml_session'},
-            {type: 'ref', id: 'clearml_serving/clearml_serving_cli'},
+            'clearml_serving/clearml_serving_cli',
             ]
         },
         {'ClearML Agent': [

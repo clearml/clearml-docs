@@ -89,13 +89,13 @@ module.exports = {
           to: '/docs/',
           label: 'Overview',
           position: 'left',
-          activeBaseRegex: '^/docs/latest/docs/(fundamentals/agents_and_queues|hyper_datasets|clearml_agent(/(clearml_agent_dynamic_gpus|clearml_agent_fractional_gpus)?|)?|cloud_autoscaling/autoscaling_overview|remote_session|model_registry|deploying_clearml/enterprise_deploy/appgw|build_interactive_models|deploying_models|custom_apps)?$',
+          activeBaseRegex: '^/docs/latest/docs/(fundamentals/agents_and_queues|hyper_datasets|clearml_agent(/(clearml_agent_dynamic_gpus|clearml_agent_fractional_gpus)?|)?|cloud_autoscaling/autoscaling_overview|remote_session|model_registry|deploying_clearml/enterprise_deploy/appgw|build_interactive_models|deploying_models|custom_apps|webapp/platform_management_center)?$',
         },
         {
           to: '/docs/clearml_sdk/clearml_sdk_setup',
           label: 'Setup',
           position: 'left',
-          activeBaseRegex: '^/docs/latest/docs/(deploying_clearml(?!/enterprise_deploy/appgw(/.*)?$)(/.*)?$|clearml_sdk/clearml_sdk_setup|user_management(/.*)?|clearml_agent/(clearml_agent_setup|clearml_agent_deployment_bare_metal|clearml_agent_deployment_k8s|clearml_agent_deployment_slurm|clearml_agent_execution_env|clearml_agent_env_caching|clearml_agent_services_mode)|integrations/storage)/?$',
+          activeBaseRegex: '^/docs/latest/docs/(deploying_clearml(?!/enterprise_deploy/appgw(/.*)?$)(/.*)?$|clearml_sdk/clearml_sdk_setup|user_management(/.*)?|clearml_agent/(clearml_agent_setup|clearml_agent_deployment_bare_metal|clearml_agent_deployment_k8s|clearml_agent_deployment_slurm(_(singularity|pyxis))?|clearml_agent_execution_env|clearml_agent_env_caching|clearml_agent_data_caching|clearml_agent_hf_caching|clearml_agent_services_mode|clearml_agent_custom_workload|clearml_agent_string_template|clearml_agent_conditional_template|dynamic_edit_task_pod_template|multi_node_training|clearml_agent_nvcr|clearml_agent_orch_dash_k8s|fractional_gpus(/.*)?)|integrations/storage)/?$',
         },
         {
           to: '/docs/getting_started/auto_log_exp',
@@ -105,9 +105,9 @@ module.exports = {
         },
         {
           label: 'Developer Center',
-          position: 'left', // or 'right'
+          position: 'left',
           to: '/docs/fundamentals/projects',
-          activeBaseRegex: '^/docs/latest/docs/(fundamentals(?!/agents_and_queues)(/.*)?|configs/configuring_clearml|getting_started/video_tutorials(/.*)?|clearml_sdk(?!/clearml_sdk_setup)(/.*)?|pipelines(/.*)?|hyperdatasets(/.*)?|clearml_data(/.*)?|hyperdatasets(/webapp)(/.*)?|references(/.*)?|webapp(/.*)?|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)(/.*)?|configs/(clearml_conf|env_vars)(/.*)?|apps/(clearml_task|clearml_param_search)(/.*)?|best_practices(/.*)?|guides(/.*)?|integrations(/.*)?|faq|release_notes(/.*)?)$',
+          activeBaseRegex: '^/docs/latest/docs/(fundamentals(?!/agents_and_queues)(/.*)?|configs/configuring_clearml|getting_started/video_tutorials(/.*)?|clearml_sdk(?!/clearml_sdk_setup)(/.*)?|pipelines(/.*)?|hyperdatasets(/.*)?|clearml_data(/.*)?|references(/.*)?|webapp/(?!platform_management_center$)(.*)?|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)(/.*)?|configs/(clearml_conf|env_vars)(/.*)?|apps/(clearml_task|clearml_param_search)(/.*)?|best_practices(/.*)?|guides(/.*)?|integrations/(?!storage(/.*)?$).+|faq|release_notes(/.*)?)$',
           activeClassName: 'navbar__link--active',
           items: [
             {
@@ -118,7 +118,7 @@ module.exports = {
             {
               label: 'References',
               to: '/docs/references/sdk/task',
-              activeBaseRegex: '^/docs/latest/docs/(references/.*|webapp/.*|hyperdatasets/webapp/.*|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)|configs/(clearml_conf|env_vars)|apps/(clearml_task|clearml_param_search))(/.*)?$',
+              activeBaseRegex: '^/docs/latest/docs/(references/.*|webapp/.*|hyperdatasets/webapp/.*|clearml_agent/(clearml_agent_ref|clearml_agent_env_var)|configs/(configuring_clearml|clearml_conf|env_vars)|apps/(clearml_task|clearml_param_search))(/.*)?$',
             },
             {
               label: 'Best Practices',

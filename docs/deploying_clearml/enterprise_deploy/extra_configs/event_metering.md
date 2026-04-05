@@ -53,14 +53,12 @@ Events are configured in the Usage Aggregator configuration file, which by defau
 
 For each event type, the following definitions are required:
 * `count_strategy` – How daily values are aggregated. The options are:
-* `sum` - Sum all reported values for a daily total
-* `max` - Store the maximum reported value for the day
-* `labels` – Events reported for this type
-
-For each event (label) pricing information can, optionally, be included:
-* `price` – Event unit price
-* `units` – How many reported units apply to the unit price
-* `currency` – Optional (defaults to USD)
+  * `sum` - Sum all reported values for a daily total
+  * `max` - Store the maximum reported value for the day
+* `labels` – Events reported for this type. Each event (label) can include optional `pricing` information:
+  * `price` – Event unit price
+  * `units` – How many reported units apply to the unit price
+  * `currency` – Optional (defaults to USD)
 
 The following example defines a `users` event type with `admins` and `users` labels. It uses the `max` aggregation 
 strategy, meaning only the maximum value reported each day will be stored. It also specifies pricing information such 
