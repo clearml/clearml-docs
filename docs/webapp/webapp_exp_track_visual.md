@@ -232,7 +232,7 @@ The **INFO** tab shows extended task information:
 
 ### Latest Events Log
 
-:::info Hosted Service and Enterprise Feature
+:::note Hosted Service and Enterprise Feature
 The latest events log is available only on the ClearML Hosted Service and under the ClearML Enterprise plan.
 :::
 
@@ -312,7 +312,7 @@ with all variants overlaid within.
 The series are subsampled for 
 display efficiency. For high resolution, view a series in full screen mode by hovering over the graph and clicking <img src="/docs/latest/icons/ico-maximize.svg" alt="Maximize plot icon" className="icon size-md space-sm" />.
 
-:::info Full Screen Refresh
+:::note Full Screen Refresh
 Scalar graphs in full screen mode do not auto-refresh. Click <img src="/docs/latest/icons/ico-reset.svg" alt="Refresh" className="icon size-md space-sm medium-zoom-image" /> 
 to update the graph. 
 :::

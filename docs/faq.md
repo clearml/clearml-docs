@@ -926,7 +926,7 @@ You can also use the `CLEARML_LOG_ENVIRONMENT` variable to track environment var
   export CLEARML_LOG_ENVIRONMENT=
   ```
 
-:::note Overriding clearml.conf
+:::note[Overriding clearml.conf]
 The `CLEARML_LOG_ENVIRONMENT` variable always overrides the `clearml.conf` file. 
 :::
 

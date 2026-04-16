@@ -89,7 +89,7 @@ The table highlights values that cross user configured thresholds.
 
 Click <img src="/docs/latest/icons/ico-tune.svg" alt="Tune" className="icon size-md" /> to define the threshold values. 
 
-:::info
+:::note
 The threshold values applied to the dashboard table affect all workspace users who view the page 
 :::
 

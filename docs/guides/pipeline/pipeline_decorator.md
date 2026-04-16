@@ -37,7 +37,7 @@ In the example script, the controller defines the interactions between the pipel
 1. Returned data from the second step's output, `X_test` and `y_test`, and the output from the third step `model` is
   passed to `step_four`.
 
-:::info Local Execution
+:::note[Local Execution]
 In this example, the pipeline is set to run in local mode by using 
 [`PipelineDecorator.run_locally()`](../../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorrun_locally)
 before calling the pipeline function. See pipeline execution options [here](../../pipelines/pipelines_sdk_function_decorators.md#running-the-pipeline). 
@@ -67,7 +67,7 @@ Use the [`PipelineDecorator.set_default_execution_queue`](../../references/sdk/a
 method to specify the execution queue of all pipeline steps. The `execution_queue` parameter of the `@PipelineDecorator.component` 
 decorator overrides the default queue value for the specific step for which it was specified.
 
-:::note Execution Modes
+:::note[Execution Modes]
 ClearML provides different pipeline execution modes to accommodate development and production use cases. For additional 
 details, see [Execution Modes](../../pipelines/pipelines.md#running-your-pipelines).
 :::

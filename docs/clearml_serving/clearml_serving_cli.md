@@ -27,7 +27,7 @@ clearml-serving [-h] [--debug] [--yes] [--id ID] {list,create,metrics,config,mod
 
 </div>
 
-:::info Service ID
+:::note Service ID
 The Serving Service's ID (`--id`) is required to execute the `metrics`, `config`, and `model` commands.
 :::
 

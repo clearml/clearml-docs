@@ -2,7 +2,7 @@
 title: GCP Autoscaler
 ---
 
-:::info Pro Plan Offering
+:::note Pro Plan Offering
 The ClearML GCP Autoscaler App is available under the ClearML Pro plan.
 :::
 

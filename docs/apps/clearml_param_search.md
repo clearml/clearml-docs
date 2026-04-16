@@ -95,7 +95,7 @@ clearml-param-search --script keras_simple.py --params-search '{"type": "Uniform
 
 <a id="json_note"></a>
 
-:::important JSON format for Windows Users
+:::important[JSON format for Windows Users]
 Windows users must add escapes (`\`) when using quotation marks (`"`) in JSON format inputs. For example: 
 
 ```bash

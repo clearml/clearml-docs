@@ -185,7 +185,7 @@ To draw a new annotation:
 
 You can use the **Default ROI Label(s)** list to automatically set labels to all new annotations. 
 
-:::info Annotation color
+:::note Annotation color
 Each annotation label is automatically assigned a color based on its value. The annotation color is automatically 
 calculated based on the colors of its labels.
 

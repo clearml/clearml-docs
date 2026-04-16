@@ -19,7 +19,7 @@ memory options to free GPU resources:
 
 The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
-:::info AI Application Gateway
+:::note AI Application Gateway
 The Embedding Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
 network endpoint for the model.
 

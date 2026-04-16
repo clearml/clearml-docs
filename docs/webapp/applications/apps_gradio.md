@@ -2,7 +2,7 @@
 title: Gradio Launcher
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Gradio Launcher App is available under the ClearML Enterprise plan.
 :::
 
@@ -15,7 +15,7 @@ The Gradio launcher monitors the Gradio app activity and shuts down if it is ina
 
 <a id="traffic_router"></a>
 
-:::important AI Application Gateway
+:::important[AI Application Gateway]
 The Gradio Launcher relies on the ClearML App Gateway Router which implements user authentication, and redirects requests 
 to the IP/port served by the Gradio app. 
 

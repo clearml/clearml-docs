@@ -2,7 +2,7 @@
 title: NVIDIA NIM
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The NIM App is available under the ClearML Enterprise plan.
 :::
 
@@ -15,7 +15,7 @@ for a specified maximum idle time.
   * The NIM app launch form's `Environment Variables` field
   * [Configuration vault](../settings/webapp_settings_profile.md#configuration-vault)
 
-:::info AI Application Gateway
+:::note[AI Application Gateway]
 The NIM app makes use of the App Gateway Router which implements a secure, authenticated network endpoint for the model.
 
 If the ClearML AI Application Gateway is not available, the model endpoint might not be accessible.
@@ -51,7 +51,7 @@ etc.
 ![Nvidia NIM App](../../img/apps_nvidia_nim.png#light-mode-only)
 ![Nvidia NIM App](../../img/apps_nvidia_nim_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -88,7 +88,7 @@ values from the file, which can be modified before launching the app instance
   project-level permissions (i.e. users with read access can use the app).
 * **NIM Container Image**: Select the containerized application image to use. Note the different tags / versions of each image
 * **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the NIM app instance task will be enqueued. <br/><br/>
-  :::info Agent requirements
+  :::note Agent requirements
   Make sure the agent assigned to this queue:
   * Has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
   * Runs in [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode) if it is a bare-metal agent

@@ -16,7 +16,7 @@ Run the ClearML AWS autoscaler in one of these ways:
   script locally
 * Launch through your [`services` queue](../../clearml_agent/clearml_agent_services_mode.md)
 
-:::note AMIs
+:::important
 The AWS autoscaler can make use of any AMI (e.g. `NVIDIA Deep Learning AMI v20.11.0-46a68101-e56b-41cd-8e32-631ac6e5d02b`), 
 available to your AWS account. Note that AWS frequently updates its available AMIs. 
 
@@ -33,7 +33,7 @@ su -l ubuntu -c '/usr/bin/bash /home/ubuntu/.profile'
 
 ### Running the Script
 
-:::info Self deployed ClearML server
+:::note[Self deployed ClearML server]
 A template `AWS Auto-Scaler` task is available in the `DevOps Services` project.
 You can clone it, adapt its [configuration](#configuration) to your needs, and enqueue it for execution directly from the ClearML UI. 
 :::

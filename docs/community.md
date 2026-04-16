@@ -17,5 +17,5 @@ For more in-depth resources and updates, check out the following:
 * **Blog**: Read the [ClearML Blog](https://clear.ml/blog) for technical insights, dev tips, and best practices for AI workflows.  
 * **YouTube Channel**: Subscribe to the [ClearML YouTube Channel](https://www.youtube.com/c/ClearML) to watch tutorials, presentations, and community discussions.  
 * **Announcements**:
-  * Follow [@clearmlapp on X (Twitter)](https://twitter.com/clearmlapp) for announcements and discussions.  
+  * Follow [@clearmlapp on X (Twitter)](https://x.com/clearmlapp) for announcements and discussions.  
   * Follow ClearML on [LinkedIn](https://www.linkedin.com/company/clearml).

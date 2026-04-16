@@ -44,7 +44,7 @@ the task. If you don't input a queue, the task is created in *draft* status, and
 To specify your code's branch and commit ID, pass the `--branch <branch_name> --commit <commit_id>` options.
 If unspecified, `clearml-task` will use the latest commit from the 'master' branch.
 
-:::note GitHub Default Branch
+:::note[GitHub Default Branch]
 For GitHub repositories, it is recommended to explicitly specify your default branch (e.g. `--branch main`) to avoid
 errors in identifying the correct default branch.
 :::

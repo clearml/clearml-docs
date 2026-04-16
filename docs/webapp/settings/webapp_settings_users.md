@@ -7,7 +7,7 @@ ClearML Hosted Service users can add users to their workspace.
 Additionally, administrators on the ClearML Enterprise plan can define [user groups](#user-groups) to control access 
 privileges, and create [service accounts](#service-accounts) for automations. 
 
-:::info Hosted Service Feature
+:::note[Hosted Service Feature]
 Inviting new teammates is only available on the ClearML Hosted Service.
 :::
 
@@ -56,7 +56,7 @@ user can only rejoin your workspace when you re-invite them.
 
 ## Service Accounts
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Service accounts are available under the ClearML Enterprise plan.
 :::
 
@@ -72,7 +72,7 @@ A service account has all the privileges of a normal user in ClearML, with the f
   * Used to run an Autoscaler application, this will allow you to make use of the `Apply Task Owner Vault Configuration`
   option.
 
-:::info Access Rules 
+:::note[Access Rules ]
 When [access controls](webapp_settings_access_rules.md) are provisioned, they apply to service accounts the same as for ClearML users.
 Therefore, in order to use a service account to run an agent in daemon mode, the service account must have access to the 
 queue the agent will service.
@@ -102,7 +102,7 @@ To create a service account:
    service account to assume the identity of a task owner 
 4. Click **Save**
 
-:::info Impersonation 
+:::note[Impersonation ]
 Service accounts are members of the `Users` group, meaning they can access the resources available to all users. When 
 impersonation is enabled, a task run by the service account (i.e. by an agent or autoscaler using the service accounts' 
 credentials) is executed as if by the owner of the task, meaning it will have access to the task owner's configuration 
@@ -207,7 +207,7 @@ To delete a service account:
 
 ## User Groups
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 User groups are available under the ClearML Enterprise plan, as part of the [Access Rules](webapp_settings_access_rules.md) 
 feature.
 :::

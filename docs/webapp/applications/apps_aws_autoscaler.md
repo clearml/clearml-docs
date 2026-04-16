@@ -2,7 +2,7 @@
 title: AWS Autoscaler
 ---
 
-:::info Pro Plan Offering
+:::note[Pro Plan Offering]
 The ClearML AWS Autoscaler App is available under the ClearML Pro plan.
 :::
 
@@ -19,7 +19,7 @@ each instance is spun up.
 
 For more information about how autoscalers work, see [Autoscalers Overview](../../cloud_autoscaling/autoscaling_overview.md#autoscaler-applications).
 
-:::info AWS NVIDIA GPU Support   
+:::note AWS NVIDIA GPU Support   
 * Recent NVIDIA AMIs only install the required drivers on initial user login. To make use of such AMIs, the autoscaler 
   needs to mimic an initial user login. This can be accomplished by, adding the following script to the `Init script`
   field in the app instance launch form:

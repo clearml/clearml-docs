@@ -598,7 +598,8 @@ html[data-theme="dark"] input[class^="searchQueryInput"] {
   background: url('/img/ico-youtube.svg') no-repeat left center;
   background-size: 1rem;
 }
-.footer__link-item[href*="twitter"] {
+.footer__link-item[href*="twitter"],
+.footer__link-item[href*="x.com"] {
   padding-left: 1.4rem;
   background: url('/img/ico-twitter.svg') no-repeat left center;
   background-size: 1rem;
@@ -617,6 +618,7 @@ html[data-theme="dark"] input[class^="searchQueryInput"] {
 html[data-theme="light"] .footer__link-item[href*="slack"],
 html[data-theme="light"] .footer__link-item[href*="youtube"],
 html[data-theme="light"] .footer__link-item[href*="twitter"],
+html[data-theme="light"] .footer__link-item[href*="x.com"],
 html[data-theme="light"] .footer__link-item[href*="linkedin"],
 html[data-theme="light"] .footer__link-item[href*="stackoverflow"] {
   filter: brightness(0.5);

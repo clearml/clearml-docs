@@ -11,7 +11,7 @@ The example does the following:
 * Trains a neural network on the CIFAR-10 dataset for image classification.
 * Uses an OutputModel object to log the model, its label enumeration and configuration dictionary.
 
-:::note Disabling automatic framework logging
+:::note[Disabling automatic framework logging]
 This example disables the default automatic capturing of PyTorch outputs, to demonstrate how to manually control what is 
 logged from PyTorch. See [this FAQ](../../../faq.md#controlling_logging) for more information. 
 ::: 
@@ -43,7 +43,7 @@ enumeration = {k: v for v, k in enumerate(classes, 1)}
 Task.current_task().connect_label_enumeration(enumeration)
 ```
 
-:::note Directly Setting Model Enumeration
+:::note[Directly Setting Model Enumeration]
 You can set a model's label enumeration directly using the [`OutputModel.update_labels`](../../../references/sdk/model_outputmodel.md#update_labels) 
 method.
 :::

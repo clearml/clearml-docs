@@ -55,7 +55,7 @@ For datasets created with `clearml` v1.6 or newer on ClearML Server v1.6 or newe
 For datasets created with earlier versions of `clearml`, or if using an earlier version of ClearML Server, find the ID in the task header of the [dataset task's info panel](../webapp/webapp_exp_track_visual.md).  
 :::
 
-:::info Dataset Version
+:::note Dataset Version
 Input the dataset's version using the [semantic versioning](https://semver.org) scheme (for example: `1.0.1`, `2.0`). If a version 
 is not input, the method tries finding the latest dataset version with the specified `dataset_name` and `dataset_project` 
 and auto-increments the version number. 

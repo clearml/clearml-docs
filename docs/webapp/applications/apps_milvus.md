@@ -2,7 +2,7 @@
 title: Milvus DB Session
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Milvus DB Session App is available under the ClearML Enterprise plan.
 :::
 
@@ -13,7 +13,7 @@ and stored, ensuring data persistence. You can clone previous application instan
 
 The app monitors endpoint activity and shuts down if the database session remains inactive for a specified maximum idle time.
 
-:::important AI Application Gateway
+:::important[AI Application Gateway]
 The Milvus DB Session app makes use of the App Gateway Router which implements a secure, authenticated network endpoint 
 for the database session.
 
@@ -46,7 +46,7 @@ Once you start a Milvus DB Session instance, you can view the following informat
 ![Milvus Dashboard](../../img/apps_milvus.png#light-mode-only)
 ![Milvus Dashboard](../../img/apps_milvus_dark.png#dark-mode-only) 
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.

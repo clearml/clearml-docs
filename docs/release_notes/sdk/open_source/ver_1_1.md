@@ -184,7 +184,7 @@ title: Version 1.1
 
 ### ClearML 1.1.0
 
-:::info Breaking Changes
+:::note Breaking Changes
 - New PipelineController v2 was introduced. New constructor is not backwards compatible!
 - ClearML will no longer try to use the demo server by default (change this by setting the `CLEARML_NO_DEFAULT_SERVER=0` environment variable)
 - `Task.completed()` was deprecated, use `Task.mark_completed()` instead

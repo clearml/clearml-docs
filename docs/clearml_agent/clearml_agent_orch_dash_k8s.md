@@ -10,20 +10,23 @@ The ClearML [Orchestration Dashboard](../webapp/webapp_orchestration_dash.md) pr
 infrastructure. Agent configuration controls how resources are reported to the dashboard and how workers are organized 
 into categories and groups.
 
-## Reporting GPU Capacity
+## Reporting Cluster Capacity
+
+### GPU Capacity
 
 To show the GPUs available to the agent in the Orchestration Dashboard,
 configure the agent in one of the following ways:
 
 * **Fixed Value**:
 
-  Use `reportMaxGpu` to report a fixed number of GPUs. This setting overrides GPU auto-discovery if both are enabled.
-    
+  Use `gpu.reportMax` to report a fixed number of GPUs. This setting overrides GPU auto-discovery if both are enabled.
+
   ```yaml
   agentk8sglue:
     orchestrationDashboard:
-      # -- Agent reporting to Dashboard max GPU available. This will report 2 GPUs.
-      reportMaxGpu: 2
+      gpu:
+        # -- Reporting to Dashboard max GPU available. This will report 2 GPUs.
+        reportMax: 2
   ```
 
 * **Automatic GPU Discovery**:
@@ -37,7 +40,7 @@ configure the agent in one of the following ways:
   * `baseSelector` - The default label selector used to identify GPU nodes.
   * `nodeSelector` - An additional filter applied on top of `baseSelector` to narrow down which nodes are included in discovery. For 
   example, to limit discovery to a specific node pool, use `"nodepool=gpu-a100"`.
-  * `gpuCountSelector` - Comma-separate list of labels used to count GPUs per node. The first matching label determines the reported GPU count.
+  * `gpuCountSelector` - Comma-separated list of labels used to count GPUs per node. The first matching label determines the reported GPU count.
 
   With discovery enabled, the agent evaluates nodes matching the provided selectors and reports their GPU 
   capacity to the dashboard at the configured interval.
@@ -48,12 +51,63 @@ configure the agent in one of the following ways:
     serviceAccountClusterAccess: true
   
     orchestrationDashboard:
-      discovery:
-        enabled: true
-        baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
-        nodeSelector: ""  # Optional: further restrict discovery
-        gpuCountSelector: "nvidia.com/gpu.count"
-    ```
+      gpu:
+        discovery:
+          enabled: true
+          baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
+          nodeSelector: ""  # Optional: further restrict discovery
+          gpuCountSelector: "nvidia.com/gpu.count"
+  ```
+
+### CPU Capacity
+
+To show the CPUs available to the agent in the Orchestration Dashboard,
+configure the agent in one of the following ways:
+
+* **Fixed Value**:
+
+  Use `cpu.reportMax` to report a fixed number of CPUs. This setting overrides CPU auto-discovery if both are enabled.
+
+  ```yaml
+  agentk8sglue:
+    orchestrationDashboard:
+      cpu:
+        # -- Reporting to Dashboard max CPU available. This will report 8 CPUs.
+        reportMax: 8
+  ```
+
+* **Automatic CPU Discovery**:
+
+  Enable automatic discovery to have the agent detect and report CPUs across your Kubernetes cluster.
+  This requires cluster-level access (`agentk8sglue.serviceAccountClusterAccess: true`), since the agent must list and evaluate all cluster nodes.
+
+  * `nodeSelector` - Filter to narrow down which nodes are included in CPU discovery. Selector is in AND condition (comma-separated list of Label=Value).
+
+  ```yaml
+  agentk8sglue:
+    # Cluster access is required for CPU discovery
+    serviceAccountClusterAccess: true
+  
+    orchestrationDashboard:
+      cpu:
+        discovery:
+          enabled: true
+          nodeSelector: ""  # Optional: restrict discovery to specific nodes
+  ```
+
+* **Namespace-scoped CPU Reporting**:
+
+  To report CPUs scoped to a single namespace, enable `reportNamespaced`. By default, the agent's own namespace is used. Use `reportNamespaceOverride` to specify a different namespace.
+
+  ```yaml
+  agentk8sglue:
+    orchestrationDashboard:
+      cpu:
+        reportNamespaced: true
+        reportNamespaceOverride: "my-namespace"  # Optional: defaults to agent's namespace
+  ```
+
+### Report Configuration
 
 You can configure how reports are sent and how often:
 
@@ -62,25 +116,37 @@ You can configure how reports are sent and how often:
   * `global` - Send a single category-level report that sums up all agents into the category total. Overrides individual 
   agent reports. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups). 
   * `aggregate` - Send a report per agent. The dashboard aggregates all reports in the category automatically. For more information about agent categorization, see [Resource Categories and Groups](../webapp/webapp_orchestration_dash.md#resource-categories-and-groups).
-* `reportSeconds` - Interval in seconds between dashboard updates. Controls how frequently the agent sends GPU capacity data.
+* `reportSeconds` - Interval in seconds between dashboard updates. Controls how frequently the agent sends capacity data.
 
 ```yaml
 agentk8sglue:
-  # Cluster access is required for GPU discovery
+  # Cluster access is required for discovery
   serviceAccountClusterAccess: true
 
   orchestrationDashboard:
     # Enable periodic reporting to the Orchestration Dashboard
     reportType: "global"   
     reportSeconds: 600
-    # Overrides GPU discovery
-    reportMaxGpu: 0
-    # Enable GPU discovery
-    discovery:
-      enabled: true
-      baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
-      nodeSelector: ""  # Optional: further restrict discovery
-      gpuCountSelector: "nvidia.com/gpu.count"
+    # GPU reporting
+    gpu:
+      # Overrides GPU discovery
+      reportMax: 0
+      # Enable GPU discovery
+      discovery:
+        enabled: true
+        baseSelector: "kubernetes.io/os=linux,nvidia.com/gpu.present=true"
+        nodeSelector: ""  # Optional: further restrict discovery
+        gpuCountSelector: "nvidia.com/gpu.count"
+    # CPU reporting
+    cpu:
+      # Overrides CPU discovery
+      reportMax: 0
+      # Enable CPU discovery
+      discovery:
+        enabled: true
+        nodeSelector: ""  # Optional: restrict discovery to specific nodes
+      reportNamespaced: false
+      reportNamespaceOverride: ""
 ```
 
 ## Customizing Worker IDs

@@ -28,7 +28,7 @@ Disable for default desktop scale.
 WebApp. Note that if enabled, the WebApp will not display debug samples, [Hyper-Dataset frame previews](../../hyperdatasets/previews.md), 
 and embedded resources in [reports](../webapp_reports.md).
 
-  :::info
+  :::note
   Script blocking can be enforced by administrators through server-side configuration.  
   When set, the UI toggle is disabled and users cannot change the setting.
   :::
@@ -37,7 +37,7 @@ and embedded resources in [reports](../webapp_reports.md).
 When printed, the variable values are replaced with `********`. By default, `CLEARML_API_SECRET_KEY`, `CLEARML_AGENT_GIT_PASS`,
 `AWS_SECRET_ACCESS_KEY`, and `AZURE_STORAGE_KEY` values are redacted. To modify the hidden container argument list, click **Edit**.
 
-:::info Self-hosted ClearML Server 
+:::note[Self-hosted ClearML Server ]
 The self-hosted ClearML Server has an additional option to enable sharing anonymous telemetry data with the ClearML 
 engineering team.
 :::
@@ -57,7 +57,7 @@ In the **Web App Cloud Access** section, enter the following credentials:
 
 ### Multiple Workspaces
 
-:::info ClearML Hosted Service Feature
+:::note[ClearML Hosted Service Feature]
 Multiple workspaces is only available on the ClearML Hosted Service.
 :::
 
@@ -105,7 +105,7 @@ these credentials cannot be recovered.
 
 ### AI Application Gateway Tokens
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 
@@ -163,7 +163,7 @@ in that workspace. You can rejoin the workspace only if you are re-invited.
 
 ### Configuration Vault
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Configuration vaults are available under the ClearML Enterprise plan.
 :::
 

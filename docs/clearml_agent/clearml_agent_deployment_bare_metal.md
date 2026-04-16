@@ -12,7 +12,7 @@ To install [ClearML Agent](../clearml_agent.md), execute
 pip install clearml-agent
 ```
 
-:::info
+:::important
 Install ClearML Agent as a system Python package and not in a Python virtual environment.
 An agent that runs in Virtual Environment Mode or Conda Environment Mode needs to create virtual environments, and
 it can't do that when running from a virtual environment.
@@ -222,7 +222,7 @@ clearml-agent daemon <arguments> --stop
 ### Allocating Resources
 To specify GPUs associated with the agent, add the `--gpus` flag.
 
-:::info Docker Mode
+:::note Docker Mode
 Make sure to include the `--docker` flag, as GPU management through the agent is only supported in [Docker Mode](clearml_agent_execution_env.md#docker-mode).
 :::
 

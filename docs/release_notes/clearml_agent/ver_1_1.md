@@ -21,7 +21,7 @@ title: Version 1.1
 
 ### ClearML Agent 1.1.0
 
-:::info Breaking Changes
+:::note Breaking Changes
 ClearML Agent will no longer try to use the demo server by default (change this by setting the `CLEARML_NO_DEFAULT_SERVER=0` environment variable)
 
 ClearML k8s glue default pod label was changed to `CLEARML=agent` (instead of `TRAINS=agent`)

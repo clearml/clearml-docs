@@ -19,7 +19,7 @@ and delete all cookies under the ClearML Server URL.
 By default, ClearML Server launches with unrestricted access. To restrict ClearML Server access, follow the instructions in the [Security](clearml_server_security.md) page.
 :::
 
-:::info Memory Requirement
+:::note Memory Requirement
 Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.  
 :::
 

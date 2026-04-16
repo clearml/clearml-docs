@@ -18,7 +18,7 @@ The `PipelineController` class includes functionality to create a pipeline contr
 
 In this pipeline example, the data preprocessing Task and training Task are each added to the pipeline twice (each is in two steps). When the pipeline runs, the data preprocessing Task and training Task are cloned twice, and the newly cloned Tasks execute. The Task they are cloned from, called the base Task, does not execute. The pipeline controller passes different data to each cloned Task by overriding parameters. In this way, the same Task can run more than once in the pipeline, but with different data.
 
-:::note Download Data
+:::note[Download Data]
 The data download Task is not a step in the pipeline, see [download_and_split](https://github.com/clearml/clearml/blob/master/examples/frameworks/pytorch/notebooks/table/download_and_split.ipynb).
 :::
     

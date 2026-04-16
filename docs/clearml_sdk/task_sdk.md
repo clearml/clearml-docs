@@ -232,7 +232,7 @@ task = Task.create(
 If the code does not contain a `Task.init()` call, pass `add_task_init_call=True`, and the code will be patched when 
 executed by a ClearML Agent. 
 
-:::info Argument Specification
+:::important Argument Specification
 When specifying arguments in `argparse_args`, use the full argument name (e.g., `--lr`) instead of the short form 
 (e.g., `-l`).  ClearML works by connecting with the argument parser and replacing the associated variable name, not the 
 flag. In most cases, the full argument name and the variable name are the same, but the short version is different and 
@@ -1018,7 +1018,7 @@ This returns a nested dictionary of the scalar graph values:
 }
 ```
 
-:::info
+:::note
 This call is not cached. If the Task has many reported scalars, it might take a long time for the call to return.
 :::
 

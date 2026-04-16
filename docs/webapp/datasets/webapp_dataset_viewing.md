@@ -2,7 +2,7 @@
 title: Dataset Details
 ---
 
-:::tip SDK version compatibility
+:::tip[SDK version compatibility]
 The datasets page shows datasets created with `clearml` v1.6 or newer.  
 Datasets created with earlier versions of `clearml` are available in their original project.  
 :::
@@ -28,13 +28,13 @@ Each node in the graph represents a dataset version, and shows the following det
 * Version details button - Hover over the version and click <img src="/docs/latest/icons/ico-console.svg" alt="console" className="icon size-md space-sm" /> 
   to view the version's [details panel](#version-details-panel) 
   
-:::tip archiving versions
+:::tip[archiving versions]
 You can archive dataset versions so the versions list doesn't get too cluttered. Click **OPEN ARCHIVE** on the top of 
 the list to open the archive and view all archived versions. From the archive, you can restore 
 versions to remove them from the archive. You can also permanently delete versions.
 :::
 
-:::tip Download Version List
+:::tip[Download Version List]
 You can download the dataset version list as a CSV file by clicking <img src="/docs/latest/icons/ico-download.svg" alt="Download" className="icon size-md space-sm" /> 
 and choosing one of these options:
 * **Download onscreen items** - Download the values for versions currently visible on screen  

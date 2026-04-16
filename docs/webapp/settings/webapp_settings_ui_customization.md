@@ -2,7 +2,7 @@
 title: UI Customization
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The UI Customization admin settings page is available under the ClearML Enterprise plan.
 :::
 

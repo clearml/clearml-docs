@@ -2,7 +2,7 @@
 title: Datasets Page
 ---
 
-:::tip SDK version compatibility
+:::tip[SDK version compatibility]
 The datasets page shows datasets created with `clearml` v1.6 or newer.  
 Datasets created with earlier versions of `clearml` are available in their original project.  
 :::
@@ -18,15 +18,16 @@ top-level projects are displayed. Click on a project card to view the project's 
 Click on a dataset card to navigate to its [Version List](webapp_dataset_viewing.md), where you can view the 
 dataset versions' lineage and contents. 
 
-Filter the datasets to find the one you're looking for more easily. These filters can be applied by clicking <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />:
+Filter page contents by specific fields <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />
+or through free form search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" />:
 * My Work - Show only datasets that you created
 * Tags - Choose which tags to filter by from a list of tags used in the datasets.
   * Filter by multiple tag values using the **ANY** or **ALL** options, which correspond to the logical "AND" and "OR" 
   respectively. These options appear on the top of the tag list.
   * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
+* User - Filter datasets by the user who created them.
 
-Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
-to find specific datasets. You can query by the dataset name, ID, or description. To search using regex, click the `.*` 
+Free form search queries dataset name, ID, and description. To search using regex, click the `.*` 
 icon on the search bar.
 
 ![Dataset page](../../img/webapp_dataset_page.png#light-mode-only)

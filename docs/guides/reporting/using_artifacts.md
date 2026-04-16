@@ -32,7 +32,7 @@ After the second task is initialized, the script uses the [`Task.get_task()`](..
 class method to get the first task and access its artifacts, specifically the `data file` artifact. The `get_local_copy` 
 method downloads the files and returns a path. 
 
-:::info Cache
+:::note[Cache]
 ClearML manages a cache of all downloaded content, so the code won't download the 
 same data multiple times. See [Caching](../../integrations/storage.md#caching) for configuration options.
 :::

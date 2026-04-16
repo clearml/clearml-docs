@@ -17,7 +17,7 @@ This reference page is organized by configuration file section:
 See an [example configuration file](https://github.com/clearml/clearml-agent/blob/master/docs/clearml.conf)
 in the ClearML Agent GitHub repository. 
 
-:::info
+:::note
 The values in the ClearML configuration file can be overridden by environment variables, the [configuration vault](../webapp/settings/webapp_settings_profile.md#configuration-vault), 
 and command-line arguments. 
 :::

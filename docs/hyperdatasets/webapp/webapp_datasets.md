@@ -16,13 +16,17 @@ top-level projects are displayed. Click on a project card to view the project's 
 Click on a Hyper-Dataset card to open the dataset's [version list](webapp_datasets_versioning.md), where you can view 
 and manage the dataset versions' lineage and contents. 
 
-Filter the hyper-datasets to find the one you're looking for more easily. These filters can be applied by clicking <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />:
+Filter page contents by specific fields <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />
+or through free form search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" />:
 * My Work - Show only hyper-datasets that you created
 * Tags - Choose which tags to filter by from a list of tags used in the hyper-datasets.
   * Filter by multiple tag values using the **ANY** or **ALL** options, which correspond to the logical "AND" and "OR" 
   respectively. These options appear on the top of the tag list.
   * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
+* User - Filter hyper-datasets by the user who created them.
 
+Free form search queries hyper-dataset name, ID, tags, and project. To search using regex, click the `.*` 
+icon on the search bar.
 
 ![Hyper-Dataset page](../../img/hyperdatasets/datasets_01.png#light-mode-only)
 ![Hyper-Dataset page](../../img/hyperdatasets/datasets_01_dark.png#dark-mode-only)

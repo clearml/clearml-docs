@@ -4,7 +4,7 @@ title: Kubernetes
 
 To upgrade an existing ClearML Server Kubernetes deployment, see [here](upgrade_server_kubernetes_helm.md).
 
-:::info
+:::note
 If ClearML Server is being reinstalled, clearing browser cookies for ClearML Server is recommended. For example, 
 for Firefox, go to Developer Tools > Storage > Cookies, and for Chrome, go to Developer Tools > Application > Cookies,
 and delete all cookies under the ClearML Server URL.

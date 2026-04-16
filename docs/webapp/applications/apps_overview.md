@@ -2,7 +2,7 @@
 title: ClearML Applications
 ---
 
-:::info Pro Plan Offering
+:::note[Pro Plan Offering]
 ClearML Applications are available under the ClearML Pro plan.
 :::
 
@@ -55,7 +55,7 @@ Applications utilizing NVIDIA AI Enterprise's (NVAIE) suite of software tools:
 * [**NIM**](apps_nvidia_nim.md) - Launch [NVIDIA NIM](https://developer.nvidia.com/nim) models through their specific containers (available under ClearML Enterprise Plan)
 
 
-:::info Autoscalers
+:::note[Autoscalers]
 Autoscaling ([AWS Autoscaler](apps_aws_autoscaler.md) and [GCP Autoscaler](apps_gcp_autoscaler.md))
 was previously available through the Applications page. The autoscaler functionality has been moved to the [Orchestration page](https://app.clear.ml/workers-and-queues/autoscalers) 
 in the WebApp. 
@@ -79,7 +79,7 @@ Each application's page is split into two sections:
 1. Fill in the configuration details
 1. **Launch**
 
-:::tip Configuration shortcuts
+:::tip[Configuration shortcuts]
 You can also launch an app instance with the configuration of a previously launched instance:
 * Cloning a previously launched app instance will open the instance launch form with the original instance's configuration 
   prefilled.

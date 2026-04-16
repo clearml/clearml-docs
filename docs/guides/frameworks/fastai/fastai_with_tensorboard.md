@@ -4,7 +4,7 @@ title: Fast.ai
 The [fastai_with_tensorboard_example.py](https://github.com/clearml/clearml/blob/master/examples/frameworks/fastai/legacy/fastai_with_tensorboard_example.py) 
 example demonstrates the integration of ClearML into code that uses FastAI v1 and TensorBoard. 
 
-:::note FastAI V2
+:::note[FastAI V2]
 The ClearML repository also includes [examples using FastAI v2](https://github.com/clearml/clearml/tree/master/examples/frameworks/fastai).
 :::
 

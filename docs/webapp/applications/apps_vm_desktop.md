@@ -2,7 +2,7 @@
 title: Virtual Machine Remote Desktop
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Virtual Machine Remote Desktop application is available under the ClearML Enterprise plan.
 :::
 
@@ -15,7 +15,7 @@ This ensures that all your work is preserved and can be easily accessed in futur
 The remote desktop session is set up using a [ClearML Agent](../../clearml_agent.md). When configuring an app instance, 
 select a queue, and the agent servicing that queue will set up the remote environment. 
 
-:::important AI Application Gateway
+:::important[AI Application Gateway]
 The Virtual Machine Remote Desktop relies on the ClearML App Gateway Router which implements user authentication and 
 securely routes incoming requests to the remote desktop session. 
 
@@ -45,7 +45,7 @@ Once you have launched an app instance, you can view the following information i
 ![VM Desktop Dashboard](../../img/apps_vm_desktop.png#light-mode-only)
 ![VM Desktop Dashboard](../../img/apps_vm_desktop_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -85,7 +85,7 @@ This section describes the default configuration provided by ClearML.
   project-level permissions (i.e. users with read access can use the app).
 * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which theVM Remote Desktop 
   app instance task will be enqueued. <br/><br/> 
-  :::info Agent requirements
+  :::note Agent requirements
   Make sure the agent assigned to this queue runs in an environment with Sysbox installed
   :::
 * **Idle Time Limit** (Hours): Maximum time of inactivity, after which the session will shut down. Configure idleness 

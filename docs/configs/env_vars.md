@@ -4,7 +4,7 @@ title: Environment Variables
 
 This page lists the available environment variables for configuring ClearML. 
 
-:::info
+:::note
 ClearML's environment variables override the clearml.conf file, SDK, and [configuration vault](../webapp/settings/webapp_settings_profile.md#configuration-vault), 
 but can be overridden by command-line arguments. 
 :::

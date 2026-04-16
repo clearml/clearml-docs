@@ -2,7 +2,7 @@
 title: Administrator Vaults
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Administrator vaults are available under the ClearML Enterprise plan.
 :::
 
@@ -21,7 +21,7 @@ where a task is executed. Vault values will be applied to tasks run by members o
 New entries will extend the configuration in the local ClearML [configuration file](../../configs/clearml_conf.md). 
 Most existing configuration file entries will be overridden by the vault values.
 
-:::info 
+:::note 
 The following configuration values are machine and/or agent specific, so they can't be set in a configuration vault:
 * `agent.cuda_version`
 * `agent.cudnn_version`

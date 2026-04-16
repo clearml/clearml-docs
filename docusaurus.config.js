@@ -13,7 +13,7 @@ const path = require('path');
 
 const config = {
   future: {
-    experimental_faster: true,
+    faster: true,
   },
 };
 
@@ -166,10 +166,10 @@ module.exports = {
           'aria-label': 'YouTube',
         },
         {
-          href: 'https://twitter.com/clearmlapp',
+          href: 'https://x.com/clearmlapp',
           position: 'right',
           className: 'header-ico header-ico--twitter',
-          'aria-label': 'Twitter',
+          'aria-label': 'X (formerly Twitter)',
         },
         {
           href: 'https://www.linkedin.com/company/clearml',
@@ -200,8 +200,8 @@ module.exports = {
               href: 'https://www.youtube.com/c/ClearML',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/clearmlapp',
+              label: 'X (formerly Twitter)',
+              href: 'https://x.com/clearmlapp',
             },
             {
               label: 'Stack Overflow',

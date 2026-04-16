@@ -26,7 +26,7 @@ This sets the following arguments:
 * `--args batch_size=64 epochs=1` - Arguments passed to the script. This uses the `argparse` object to get CLI parameters
 * `--queue default` - Selected queue to send the task to
 
-:::note Adding Requirements
+:::note[Adding Requirements]
 `clearml-task` automatically finds the requirements.txt file in remote repositories. 
 If a remote repo does not have such a file, make sure to either add one with all the required Python packages, 
 or add the `--packages "<package_name>"` option to the command (for example: `--packages "tqdm>=2.1" "scikit-learn"`).

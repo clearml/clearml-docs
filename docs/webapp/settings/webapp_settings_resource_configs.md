@@ -2,7 +2,7 @@
 title: Resource Configuration
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Resource Configuration is available under the ClearML Enterprise plan.
 :::
 

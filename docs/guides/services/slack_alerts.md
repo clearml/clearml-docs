@@ -38,7 +38,7 @@ The Slack API token and channel you create are required to configure the Slack a
 
 ## Running the Script
 
-:::info Self deployed ClearML server
+:::note[Self deployed ClearML server]
 A template `Slack Alerts` task is available in the `DevOps Services` project. You can clone it, adapt its [configuration](#configuration) 
 to your needs and enqueue for execution directly from the ClearML UI. 
 :::

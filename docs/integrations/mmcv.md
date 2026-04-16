@@ -2,7 +2,7 @@
 title: MMCV v1.x
 ---
 
-:::info
+:::note
 `ClearMLLoggerHook` is supported by mmcv `=>1.5.1` and `<=1.7.0`. 
 :::
 

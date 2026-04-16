@@ -2,7 +2,7 @@
 title: SGLang Model Deployment
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The SGLang Model Deployment App is available under the ClearML Enterprise plan.
 :::
 
@@ -17,7 +17,7 @@ The app supports multi-model hosting and Universal Memory technology, enabling i
 
 The app monitors endpoint activity and shuts down if the model remains inactive for a specified maximum idle time.
 
-:::info AI Application Gateway
+:::note[AI Application Gateway]
 The SGLang Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
 network endpoint for the model.
 
@@ -60,7 +60,7 @@ etc.
 ![SGLang Model Deployment App](../../img/apps_sglang_dashboard.png#light-mode-only)
 ![SGLang Model Deployment App](../../img/apps_sglang_dashboard_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.

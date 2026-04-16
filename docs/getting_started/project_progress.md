@@ -23,7 +23,7 @@ For more information, see [Project Overview](../webapp/webapp_project_overview.m
 
 ## Project Dashboard 
 
-:::info Pro Plan Offering
+:::note Pro Plan Offering
 The Project Dashboard app is available under the ClearML Pro plan.
 :::
 

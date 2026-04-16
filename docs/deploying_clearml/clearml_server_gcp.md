@@ -9,7 +9,7 @@ provides custom images for each released version of ClearML Server. For a list o
 To keep track of your experiments and/or data, the `clearml` package needs to communicate with the server you have deployed. 
 For instruction to connect the ClearML SDK to the server, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup.md).
 
-:::info
+:::note
 In order for `clearml` to work with a ClearML Server on GCP, set `CLEARML_API_DEFAULT_REQ_METHOD=PUT` or 
 set `api.http.default_method` to `"PUT"` in the [`clearml.conf`](../configs/clearml_conf.md) file. 
 :::

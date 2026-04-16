@@ -13,16 +13,20 @@ top-level projects are displayed. Click on a project card to view the project's 
 Click on a pipeline card to navigate to its [Pipeline Runs Table](webapp_pipeline_table.md), where you can view the 
 pipeline structure, configuration, and outputs of all the pipeline's runs, as well as create new runs.
 
-Filter the pipelines to find the one you're looking for more easily. These filters can be applied by clicking <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />:
+Filter page contents by specific fields <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />
+or through free form search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" />:
 * My Work - Show only pipelines that you created
 * Tags - Choose which tags to filter by from a list of tags used in the pipelines.
   * Filter by multiple tag values using the **ANY** or **ALL** options, which correspond to the logical "AND" and "OR" 
   respectively. These options appear on the top of the tag list.
   * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
+* User - Filter pipelines by the user who created them.
 
+Free form search queries pipeline name and ID. To search using regex, click the `.*` 
+icon on the search bar.
 
-![Pipelines page](../../img/webapp_pipeline_table.png#light-mode-only)
-![Pipelines page](../../img/webapp_pipeline_table_dark.png#dark-mode-only)
+![Pipelines page](../../img/webapp_pipeline_page.png#light-mode-only)
+![Pipelines page](../../img/webapp_pipeline_page_dark.png#dark-mode-only)
 
 ## Project Cards
 In Project view, project cards display a project's summarized pipeline information:

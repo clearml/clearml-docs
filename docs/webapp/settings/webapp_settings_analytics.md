@@ -2,7 +2,7 @@
 title: Analytics
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Custom event analytics are available under the ClearML Enterprise plan.
 :::
 

@@ -18,9 +18,17 @@ contents (i.e. tasks, models etc.) via the folder with the bracketed (`[ ]`) pro
 If a project does not contain any subprojects, clicking on its folder will open its task table (or [Project Overview](webapp_project_overview.md)
 page when relevant).
 
-Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
-to find specific projects. You can query by the project’s name and ID.
-To search using regex, click the `.*` icon on the search bar.
+Filter page contents by specific fields <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />
+or through free form search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" />:
+* My Work - Show only projects that you created
+* Tags - Choose which tags to filter by from a list of tags used in the projects.
+  * Filter by multiple tag values using the **ANY** or **ALL** options, which correspond to the logical "AND" and "OR" 
+  respectively. These options appear on the top of the tag list.
+  * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
+* User - Filter projects by the user who created them.
+
+Free form search queries project name and ID. To search using regex, click the `.*` 
+icon on the search bar.
 
 ## Project Folders
 

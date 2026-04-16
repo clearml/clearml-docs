@@ -13,7 +13,7 @@ The application features persistent workspaces, allowing you to restore previous
 relaunched, ensuring continuity for long-running tasks. The launcher also enables flexible network configurations, 
 allowing secure access to applications over HTTPS or through raw TCP connections.
 
-:::info AI Application Gateway
+:::note AI Application Gateway
 The Containerized Application Launcher makes use of the App Gateway Router which implements a secure, authenticated
 network endpoint for the application container.
 
