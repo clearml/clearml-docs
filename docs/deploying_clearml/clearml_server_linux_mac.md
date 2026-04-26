@@ -35,7 +35,7 @@ By default, ClearML Server launches with unrestricted access. To restrict ClearM
 instructions in the [Security](clearml_server_security.md) page.
 :::
 
-:::note Memory Requirement
+:::note[Memory Requirement]
 Deploying the server requires a minimum of 8 GB of memory, 16 GB is recommended.  
 :::
 

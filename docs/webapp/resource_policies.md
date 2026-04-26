@@ -2,7 +2,7 @@
 title: Resource Policies
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Resource Policies are available under the ClearML Enterprise plan.
 ::: 
 
@@ -48,7 +48,7 @@ profile is allocated the profile’s defined amount of resources).
     * Profile - select the resource profile. 
 1. Click **Connect**
 
-:::note Available Profiles
+:::note[Available Profiles]
 Only profiles that are part of the currently provisioned [resource configuration](settings/webapp_settings_resource_configs.md) 
 are available for selection (Profiles that are part of a configuration that has been saved but not yet provisioned 
 will not appear in the list).

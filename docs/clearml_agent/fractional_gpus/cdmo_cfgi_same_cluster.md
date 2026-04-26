@@ -2,7 +2,7 @@
 title: Install CDMO and CFGI on the Same Cluster
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 CDMO and CFGI require the agent to use a ClearML Enterprise Server.
 :::
 
@@ -74,7 +74,7 @@ devicePlugin:
           migStrategy: mixed
 ```
 
-:::note k3s
+:::note[k3s]
 If using **k3s**, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
 
 ```yaml
@@ -86,7 +86,7 @@ toolkit:
 :::
 
 
-:::note MicroK8s
+:::note[MicroK8s]
 If using MicroK8s, you must configure the `containerd` paths used by MicroK8s. Add the following entries to your 
 `gpu-operator.override.yaml`:
 

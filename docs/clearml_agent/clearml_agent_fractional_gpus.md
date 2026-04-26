@@ -15,7 +15,7 @@ limits to run multiple containers on the same GPU (**Available as part of the Cl
  
 ## Dynamic GPU Fractions
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Dynamic GPU slicing is available under the ClearML Enterprise plan. 
 :::
 

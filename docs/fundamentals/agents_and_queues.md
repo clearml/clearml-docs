@@ -87,7 +87,7 @@ The Agent supports the following running modes:
 
   ClearML Agent supports using the following package managers: `pip` (default), `conda`, `poetry`. 
 
-  :::tip Agents and virtual environments 
+  :::tip[Agents and virtual environments ]
   An agent that runs in Virtual Environment Mode needs to create virtual environments, and
   it can't do that when running from a virtual environment. You can run agents in these modes with 
   system Python.

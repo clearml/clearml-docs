@@ -79,7 +79,7 @@ The ClearML UI provides two search options on most pages:
   * Pipeline Runs:  show reports whose name, ID, or description match the searched text 
   <br/>
 
-  :::tip Additional filtering
+  :::tip[Additional filtering]
   ClearML's object tables (e.g. [tasks](webapp_exp_table.md), [models](webapp_model_table.md), [pipelines](pipelines/webapp_pipeline_table.md), 
   and [datasets](datasets/webapp_dataset_page.md)) provide column filters to easily focus your search by object properties
   (e.g. status, creation/update time, metric values, etc.).

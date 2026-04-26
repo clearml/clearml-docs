@@ -69,7 +69,7 @@ title: Version 1.0
 - Add logging for Nvidia driver and Cuda version
 - Add optional ignored packages in script requirements (currently used for `pywin32`)
 - Update examples
-  * Increase channel result to support max of 1K channels for finding slack channel and use cursor in Slack Alerts monitoring service
+  * Increase channel result to support max of 1K channels for finding Slack channel and use cursor in Slack Alerts monitoring service
   * Add `csv` data sample to `data_samples`
   * Remove deprecated examples
 
@@ -107,7 +107,7 @@ title: Version 1.0
 
 ### ClearML 1.0.0
 
-:::note Breaking Changes
+:::important[Breaking Changes]
 Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()` and `Logger.report_matplotlib_figure()` - please use keywords instead of positional arguments.
 :::
   
@@ -139,7 +139,7 @@ Arguments order changed in `Logger.report_line_plot()`, `Logger.report_plotly()`
 * Support ClearML server API v2.13
 * Add Python 3.9 to the support table
 * Improve documentation and examples
-  * Improve documentation for clearml-data, clearml-task
+  * Improve documentation for `clearml-data`, `clearml-task`
   * Add `multiple_tasks_single_process` example script for multiple Tasks created in same code
   * Add `using_artifacts_example` and `execute_remotely_example` example scripts
   * Update `requirements.txt` for `KerasTuner` example

@@ -254,7 +254,7 @@ clearml-session --continue-session <session_id> --store-workspace ~/workspace
 | `--user-folder` | Specify the path for the session's remote base folder for the session. | Home folder(`~/`) or previously entered user folder path |
 | `--username`| Set your own SSH username for the interactive session. | `root` or a previously used username | 
 | `--verbose` | Increase verbosity of logging. | `none` |
-| `--version`| Display the clearml-session utility version. | N/A|
+| `--version`| Display the `clearml-session` utility version. | N/A|
 | `--vscode-extensions` |Install additional VSCode extensions and VSCode Python extensions (example: `ms-python.python,ms-python.black-formatter,ms-python.pylint,ms-python.flake8`). |`none`|
 | `--vscode-server` | Install VSCode on interactive session. | `true` |
 | `--vscode-version` | Set VSCode server (code-server) version, as well as VSCode Python extension version `<vscode:python-ext>` (example: "3.7.4:2020.10.332292344").| `4.14.1:2023.12.0`|

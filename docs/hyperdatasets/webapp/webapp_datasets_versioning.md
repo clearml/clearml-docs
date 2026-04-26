@@ -2,7 +2,7 @@
 title: Dataset Versions
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 
@@ -60,7 +60,7 @@ Access dataset version actions, by right-clicking a version, or through the menu
 * **Delete** - Delete the version. Only *Draft* versions can be deleted.  
 * **Publish** - Make a *Draft* version read-only to preserve its contents. 
  
-:::tip Publishing versions
+:::tip[Publishing versions]
 When publishing a version, you can create an additional working copy. The new version is created in a *draft* state, and 
 inherits all the published version's frames. By default, the newly created working copy inherits the original version's 
 name, while the published original version is automatically renamed to reflect its published state. The template for 
@@ -356,7 +356,7 @@ samples of frames that contain an ROI with the same label.
 
       ![ROI Match Query](../../img/hyperdatasets/roi_match_query.png#light-mode-only)
       ![ROI Match Query](../../img/hyperdatasets/roi_match_query_dark.png#dark-mode-only)
-      :::note Property N/A group
+      :::note[Property N/A group]
       If there are frames which have no value for the grouped by property, a sample of them will be provided as a final
       group. If you sample according to an ROI property, this group will NOT include frames that have no ROIS at all.
       :::
@@ -386,7 +386,7 @@ annotations) are not available in this view.
 ![All sources preview](../../img/hyperdatasets/preview_all_sources.png#light-mode-only)
 ![All sources preview](../../img/hyperdatasets/preview_all_sources_dark.png#dark-mode-only)
 
-:::note Unavailable Source
+:::note[Unavailable Source]
 If a FrameGroup doesn't have the selected preview source, the preview displays the "Source not available" message.
 ::: 
 

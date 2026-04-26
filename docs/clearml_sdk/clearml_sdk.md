@@ -6,7 +6,7 @@ The ClearML Python Package supports the [automatic logging](../fundamentals/logg
 tasks for you, and an extensive set of powerful features and functionality you can use to improve experimentation 
 and other workflows.
 
-:::tip Installation
+:::tip[Installation]
 For installation instructions, see [ClearML Setup](../clearml_sdk/clearml_sdk_setup.md#install-clearml). 
 :::
 

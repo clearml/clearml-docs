@@ -2,7 +2,7 @@
 title: Application Installation on Kubernetes
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 UI application deployment is available under the ClearML Enterprise plan.
 :::
 

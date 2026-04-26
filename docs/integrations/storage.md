@@ -261,7 +261,7 @@ sdk {
 }
 ```
 
-:::tip Direct Decoding
+:::tip[Direct Decoding]
 From v1.13.2, `clearml` supports directly decoding JSON from the `credentials_json` argument. If ClearML
 fails to load the credentials as a file, it will attempt to decode the JSON directly. 
 :::

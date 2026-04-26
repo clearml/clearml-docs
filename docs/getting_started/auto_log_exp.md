@@ -11,7 +11,7 @@ When you integrate the ClearML SDK with your code, the ClearML task manager auto
 * Model files, parameters, scalars, and plots from popular ML frameworks such as TensorFlow and PyTorch (see list of [supported frameworks](../clearml_sdk/task_sdk.md#automatic-logging))
 * Console output
 
-:::tip Automatic logging control
+:::tip[Automatic logging control]
 To control what ClearML automatically logs, see this [FAQ](../faq.md#controlling_logging).
 :::
 
@@ -24,7 +24,7 @@ To control what ClearML automatically logs, see this [FAQ](../faq.md#controlling
    from clearml import Task
    ```
 
-   :::tip Full Automatic Logging
+   :::tip[Full Automatic Logging]
    To ensure full automatic logging, it is recommended to import the `clearml` package at the top of your entry script.
    Initializing the Task before training frameworks (e.g. TensorFlow, PyTorch) start executing prevents synchronization issues that 
    can lead to memory leaks or hanging child processes.

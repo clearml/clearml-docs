@@ -1,15 +1,17 @@
-# Customizing the ClearML Web UI 
+---
+title: Customizing the ClearML Web UI
+---
 
-:::important Enterprise Feature  
+:::important[Enterprise Feature]  
 ClearML Web UI customization is available under the ClearML Enterprise plan.  
-::::
+:::
 
 ClearML enables organizations to offer a custom branded Web UI through a flexible customization mechanism.
 
 These customizations are implemented through container start-time parameters, passed as environment variables when 
 launching the ClearML UI container. For example:
 
-```
+```c
 docker run -e PARAM_NAME=value ... clearml-ui-image 
 ```
 

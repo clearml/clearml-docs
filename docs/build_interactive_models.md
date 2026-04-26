@@ -2,7 +2,7 @@
 title: Build Interactive Model Demos
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Gradio Launcher and Streamlit Apps are available under the ClearML Enterprise plan.
 :::
 

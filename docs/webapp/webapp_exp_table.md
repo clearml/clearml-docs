@@ -185,7 +185,7 @@ tasks in the table.
 * Click <img src="/docs/latest/icons/ico-settings.svg" alt="Setting Gear" className="icon size-md" /> **>** **+ HYPERPARAMETERS** **>** Expand a section **>** Select the
   hyperparameter checkboxes.
   
-:::note Float Values Display
+:::note[Float Values Display]
 By default, the task table displays rounded up float values. Hover over a float to view its precise value in the 
 tooltip that appears. To view all precise values in a column, hover over a float and click <img src="/docs/latest/icons/ico-line-expand.svg" alt="Expand" className="icon size-md" />.  
 :::
@@ -247,7 +247,7 @@ to open the context menu
 | Move to Project | Move a task to another project. | Any state | None                                            |
 | Compare | Compare selected tasks (see [Comparing Tasks](webapp_exp_comparing.md)) | Any state | None                                            |
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The ClearML Enterprise Server provides a mechanism to define your own custom actions, which will 
 appear in the context menu. Create a custom action by defining an HTTP request to issue when clicking on the context menu
 action. For more information see [Custom UI Context Menu Actions](../deploying_clearml/clearml_server_config.md#custom-ui-context-menu-actions).

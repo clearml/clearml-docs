@@ -2,7 +2,7 @@
 title: Task Dataviews
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Dataviews are available under the ClearML Enterprise plan.
 :::
 

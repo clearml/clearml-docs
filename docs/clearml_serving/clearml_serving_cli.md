@@ -27,7 +27,7 @@ clearml-serving [-h] [--debug] [--yes] [--id ID] {list,create,metrics,config,mod
 
 </div>
 
-:::note Service ID
+:::note[Service ID]
 The Serving Service's ID (`--id`) is required to execute the `metrics`, `config`, and `model` commands.
 :::
 
@@ -231,7 +231,7 @@ clearml-serving model canary [-h] [--endpoint ENDPOINT] [--weights WEIGHTS [WEIG
 
 </div>
 
-### auto-update 
+### auto-update
 
 Add/Modify model auto-update service.
 

@@ -10,7 +10,7 @@ and continue here once successfully completed.
 In v1.2, the MongoDB subsystem of ClearML Server has been upgraded from version 3.6 to version 4.4. This change 
 necessitates the migration of the database contents to be compatible with the new version.
 
-:::note Kubernetes installations
+:::note[Kubernetes installations]
 [ClearML’s helm chart](https://github.com/clearml/clearml-helm-charts/tree/main/charts/clearml) is already running 
 mongodb version 4.4. If your ClearML server had been deployed with this chart (with the default mongodb bitnami chart) - 
 You can stop reading here, as no migration is required.

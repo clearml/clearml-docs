@@ -16,7 +16,7 @@ set `api.http.default_method` to `"PUT"` in the [`clearml.conf`](../configs/clea
 
 For information about upgrading ClearML server on GCP, see [here](upgrade_server_gcp.md).
 
-:::note Reinstallation
+:::note[Reinstallation]
 If ClearML Server is being reinstalled, clearing browser cookies for ClearML Server is recommended. For example, 
 for Firefox, go to Developer Tools > Storage > Cookies, and for Chrome, go to Developer Tools > Application > Cookies,
 and delete all cookies under the ClearML Server URL.

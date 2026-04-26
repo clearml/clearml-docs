@@ -102,7 +102,7 @@ To create a service account:
    service account to assume the identity of a task owner 
 4. Click **Save**
 
-:::note[Impersonation ]
+:::note[Impersonation]
 Service accounts are members of the `Users` group, meaning they can access the resources available to all users. When 
 impersonation is enabled, a task run by the service account (i.e. by an agent or autoscaler using the service accounts' 
 credentials) is executed as if by the owner of the task, meaning it will have access to the task owner's configuration 

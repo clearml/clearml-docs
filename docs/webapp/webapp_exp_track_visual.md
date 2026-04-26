@@ -232,7 +232,7 @@ The **INFO** tab shows extended task information:
 
 ### Latest Events Log
 
-:::note Hosted Service and Enterprise Feature
+:::note[Hosted Service and Enterprise Feature]
 The latest events log is available only on the ClearML Hosted Service and under the ClearML Enterprise plan.
 :::
 
@@ -248,7 +248,7 @@ To download the task history as a CSV file, hover over the log and click <img sr
 ![Task audit log](../img/webapp_info_audit_log.png#light-mode-only)
 ![Task audit log](../img/webapp_info_audit_log_dark.png#dark-mode-only)
 
-:::note Limited persistency
+:::note[Limited persistency]
 ClearML maintains a system-wide, large but strict limit for task history items. Once the limit is reached, the oldest entries are purged to make room for fresh entries.
 :::
 
@@ -282,7 +282,7 @@ The **Task Details** section lists information describing the task:
 
 ## Task Results
 
-:::tip Embedding ClearML Visualization
+:::tip[Embedding ClearML Visualization]
 You can embed task plots and debug samples into ClearML [Reports](webapp_reports.md). These visualizations are 
 updated live as the task(s) updates. The Enterprise Plan and Hosted Service support embedding resources in external 
 tools (e.g. Notion). See [Plot Controls](#plot-controls).  
@@ -312,7 +312,7 @@ with all variants overlaid within.
 The series are subsampled for 
 display efficiency. For high resolution, view a series in full screen mode by hovering over the graph and clicking <img src="/docs/latest/icons/ico-maximize.svg" alt="Maximize plot icon" className="icon size-md space-sm" />.
 
-:::note Full Screen Refresh
+:::note[Full Screen Refresh]
 Scalar graphs in full screen mode do not auto-refresh. Click <img src="/docs/latest/icons/ico-reset.svg" alt="Refresh" className="icon size-md space-sm medium-zoom-image" /> 
 to update the graph. 
 :::
@@ -355,7 +355,7 @@ are on the left side of the window. The tools include:
   plots to display. For example, to display specific plots, click **HIDE ALL**, and then click <img src="/docs/latest/icons/ico-show.svg" alt="Eye Show" className="icon size-md space-sm" /> 
   on each plot you want to view.
 
-:::tip Default scalar display
+:::tip[Default scalar display]
 After adjusting the scalar display (e.g. grouping, axis, smoothing), click **Set as default** to save the current 
 configuration as the default view for the project’s task and model scalars.
 :::

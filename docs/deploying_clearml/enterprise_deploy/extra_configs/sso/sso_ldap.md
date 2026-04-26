@@ -75,8 +75,8 @@ can configure the system to use different attributes, like this:
 
 ```
 CLEARML__apiserver__auth__fixed_user_providers__ldap__attributes__name=<user name attribute>
-CLEARML__apiserver__auth__fixed_user_providers__ldap__mail=<user email attribute>
-CLEARML__apiserver__auth__fixed_user_providers__ldap__<some_custom_attrib>=<custom attribute name in ldap>
+CLEARML__apiserver__auth__fixed_user_providers__ldap__attributes__mail=<user email attribute>
+CLEARML__apiserver__auth__fixed_user_providers__ldap__attributes__<some_custom_attrib>=<custom attribute name in ldap>
 ```
 
 ### Configuring a User as a ClearML Admin

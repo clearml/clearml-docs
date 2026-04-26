@@ -2,7 +2,7 @@
 title: Orchestration Dashboard
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Orchestration Dashboard is available under the ClearML Enterprise plan.
 :::
 

@@ -2,7 +2,7 @@
 title: Multi-Tenant Login Mode
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Identity provider integration is available under the ClearML Enterprise plan.
 :::
 

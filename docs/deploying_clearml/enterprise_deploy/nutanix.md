@@ -54,7 +54,7 @@ sdk {
 }
 ```
 
-:::note Configuration Vaults
+:::note[Configuration Vaults]
 Configuration can be applied by users in their personal configuration vault, or centrally by an administrator through an 
 [admin vault](../../webapp/settings/webapp_settings_admin_vaults.md).
 ::: 

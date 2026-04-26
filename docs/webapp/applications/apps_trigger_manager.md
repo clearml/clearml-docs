@@ -2,7 +2,7 @@
 title: Trigger Manager
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Trigger Manager application is available under the ClearML Enterprise plan.
 :::
 

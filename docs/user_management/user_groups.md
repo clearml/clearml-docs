@@ -2,7 +2,7 @@
 title: User Groups
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 User Groups are available under the ClearML Enterprise plan.
 :::
 

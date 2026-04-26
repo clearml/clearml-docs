@@ -2,7 +2,7 @@
 title: vLLM Model Deployment
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The vLLM Model Deployment App is available under the ClearML Enterprise plan.
 :::
 
@@ -17,7 +17,7 @@ The app supports multi-model hosting and Universal Memory technology, enabling i
 
 The app monitors endpoint activity and shuts down if the model remains inactive over a specified maximum idle time.
 
-:::note AI Application Gateway
+:::note[AI Application Gateway]
 The vLLM Model Deployment app makes use of the App Gateway Router which implements a secure, authenticated 
 network endpoint for the model.
 
@@ -61,7 +61,7 @@ etc.
 ![vLLM Model Deployment App](../../img/apps_model_deployment.png#light-mode-only)
 ![vLLM Model Deployment App](../../img/apps_model_deployment_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -100,7 +100,7 @@ values from the file, which can be modified before launching the app instance
 * **Queue**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the vLLM Model Deployment app 
 instance task will be enqueued. Make sure an agent is assigned to that queue.
 
-  :::tip Multi-GPU inference
+  :::tip[Multi-GPU inference]
   To run multi-GPU inference, ensure the queue's pod specification (from the base template and/or `templateOverrides`) defines multiple GPUs. See [GPU Queues with Shared Memory](../../clearml_agent/clearml_agent_custom_workload.md#example-gpu-queues-with-shared-memory)
   for an example configuration of a queue that allocates multiple GPUs and shared memory.
   :::

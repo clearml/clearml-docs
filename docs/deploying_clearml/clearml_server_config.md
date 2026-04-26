@@ -59,7 +59,7 @@ For example, a domain is called `mydomain.com`, and a subdomain named `clearml.m
 
 Accessing the [ClearML Web UI](../webapp/webapp_overview.md) with `app.clearml.mydomain.com` will automatically send API requests to `api.clearml.mydomain.com`.
 
-:::important Image Plot Display
+:::important[Image Plot Display]
 The ClearML web UI uses [plotly](https://github.com/plotly/plotly.js) to display plots. Image plots are stored on 
 network storage (e.g. the ClearML file server).
 
@@ -84,7 +84,7 @@ services:
 ```
 :::
 
-:::note Cloudflare Tunnels
+:::note[Cloudflare Tunnels]
 If using Cloudflare Tunnels as a reverse proxy, create three tunnels, one for each respective service. Importantly, the SSL certs (in the free tier) will only be valid for one level of subdomain, so instead use `app.mydomain.com`, `api.mydomain.com`, and `files.mydomain.com` in order to avoid [version-cipher-mismatch errors](https://developers.cloudflare.com/ssl/troubleshooting/version-cipher-mismatch/#multi-level-subdomains).
 :::
 
@@ -327,7 +327,7 @@ Without web login authentication, ClearML Server does not restrict access (by de
     }
     ```
    
-    :::important Enterprise Feature
+    :::important[Enterprise Feature]
     Under the Enterprise plan, you can grant admin privileges by adding `admin: true` to the relevant user entry. 
     For example:
 
@@ -458,7 +458,7 @@ CLEARML_FILES_HOST="http://localhost:8081"
 
 ### Custom UI Context Menu Actions
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Custom UI context menu actions are available under the ClearML Enterprise plan.
 :::
 

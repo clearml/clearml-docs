@@ -61,7 +61,7 @@ the `train.py` script.
 python train.py --project my_project --name my_training --img 640 --batch 16 --epochs 3 --data coco128.yaml --weights yolov5s.pt --cache
 ```
 
-:::tip project names 
+:::tip[project names]
 ClearML uses `/` as a delimiter for subprojects: using `example/sample` as a name will create the `sample` 
 task within the `example` project. 
 :::

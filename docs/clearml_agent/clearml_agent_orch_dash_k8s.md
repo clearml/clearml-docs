@@ -2,7 +2,7 @@
 title: Orchestration Dashboard Customization (K8s)
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Orchestration Dashboard is available under the ClearML Enterprise plan.
 :::
 
@@ -81,19 +81,19 @@ configure the agent in one of the following ways:
   Enable automatic discovery to have the agent detect and report CPUs across your Kubernetes cluster.
   This requires cluster-level access (`agentk8sglue.serviceAccountClusterAccess: true`), since the agent must list and evaluate all cluster nodes.
 
-  * `nodeSelector` - Filter to narrow down which nodes are included in CPU discovery. Selector is in AND condition (comma-separated list of Label=Value).
+  * `nodeSelector` - Filter to narrow down which nodes are included in CPU discovery. Selector is in AND condition (comma-separated list of Label=Value). 
 
-  ```yaml
-  agentk8sglue:
-    # Cluster access is required for CPU discovery
-    serviceAccountClusterAccess: true
-  
-    orchestrationDashboard:
-      cpu:
-        discovery:
-          enabled: true
-          nodeSelector: ""  # Optional: restrict discovery to specific nodes
-  ```
+    ```yaml
+    agentk8sglue:
+      # Cluster access is required for CPU discovery
+      serviceAccountClusterAccess: true
+ 
+      orchestrationDashboard:
+        cpu:
+          discovery:
+            enabled: true
+            nodeSelector: ""  # Optional: restrict discovery to specific nodes
+    ```
 
 * **Namespace-scoped CPU Reporting**:
 

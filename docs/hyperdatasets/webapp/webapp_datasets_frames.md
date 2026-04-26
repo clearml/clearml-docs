@@ -2,7 +2,7 @@
 title: Working with Frames
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 
@@ -102,7 +102,7 @@ Use frame viewer controls to navigate between frames in a Hyper-Dataset Version,
     * Optionally, filter annotations by confidence level using the **Minimum confidence** slider.
     * Add, change, and delete [annotations](#annotations) and [frame metadata](#frame-metadata).
       
-:::important Saving Frame Changes
+:::important[Saving Frame Changes]
 To save frames changes at any time, click **SAVE** (below the annotation list area).
 :::
  
@@ -185,7 +185,7 @@ To draw a new annotation:
 
 You can use the **Default ROI Label(s)** list to automatically set labels to all new annotations. 
 
-:::note Annotation color
+:::note[Annotation color]
 Each annotation label is automatically assigned a color based on its value. The annotation color is automatically 
 calculated based on the colors of its labels.
 

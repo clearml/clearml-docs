@@ -17,7 +17,7 @@ To clone a task:
    * Project - The project where the task will be saved
    * Name - The name for the new task. 
    
-     :::note New task name template
+     :::note[New task name template]
      By default, the new task is named `Clone of <original_task_name>`.
      
      This default name can be customized:

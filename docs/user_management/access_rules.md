@@ -2,7 +2,7 @@
 title: Access Rules (RBAC)
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Access Rules are available under the ClearML Enterprise plan.
 :::
 

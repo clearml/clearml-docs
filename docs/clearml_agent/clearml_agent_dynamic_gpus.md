@@ -2,7 +2,7 @@
 title: Dynamic GPU Allocation
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Dynamic GPU allocation is available under the ClearML Enterprise plan.
 :::
 
@@ -18,7 +18,7 @@ flag to specify the queue name and number of GPUs:
 clearml-agent daemon --dynamic-gpus --gpus 0-2 --queue dual_gpus=2 single_gpu=1 --docker 
 ```
 
-:::note Docker mode
+:::note[Docker mode]
 Make sure to include the `--docker` flag, as dynamic GPU allocation is only supported in [Docker Mode](clearml_agent_execution_env.md#docker-mode).
 :::
 

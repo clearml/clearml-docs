@@ -2,7 +2,7 @@
 title: Annotation Tasks
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Annotation tasks are available under the ClearML Enterprise plan.
 :::
 

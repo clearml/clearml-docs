@@ -13,7 +13,7 @@ populate it with:
 * Argparse arguments (default and specific to the current execution)
 * Reports to Tensorboard and Matplotlib and model checkpoints.
 
-:::tip Ensuring Reproducibility 
+:::tip[Ensuring Reproducibility]
 To ensure every run will provide the same results, ClearML controls the deterministic behaviors of the `tensorflow`, 
 `pytorch`, and `random` packages by setting a fixed initial seed. See [Setting Random Seed](#setting-random-seed).
 :::
@@ -190,7 +190,7 @@ This will retain all of its previous artifacts / models / logs.
 The task will continue reporting its outputs based on the iteration in which it had left off. For example: a task's last 
 train/loss scalar reported was for iteration 100, when continued, the next report will be as iteration 101.  
 
-:::note Reproducibility
+:::note[Reproducibility]
 Continued tasks may not be reproducible. To guarantee task reproducibility, you must ensure that all steps are 
 done in the same order (e.g. maintaining learning rate profile, ensuring data is fed in the same order).
 :::
@@ -232,7 +232,7 @@ task = Task.create(
 If the code does not contain a `Task.init()` call, pass `add_task_init_call=True`, and the code will be patched when 
 executed by a ClearML Agent. 
 
-:::important Argument Specification
+:::important[Argument Specification]
 When specifying arguments in `argparse_args`, use the full argument name (e.g., `--lr`) instead of the short form 
 (e.g., `-l`).  ClearML works by connecting with the argument parser and replacing the associated variable name, not the 
 flag. In most cases, the full argument name and the variable name are the same, but the short version is different and 
@@ -331,7 +331,7 @@ task_filter={
 }
 ```
 
-:::tip Order tasks by metrics
+:::tip[Order tasks by metrics]
 You can order the returned tasks by performance in a specific metric with `'order_by': [last_metrics.<md5-encoded-metric-title>.<md5-encoded-metric-variant>.<value_type>]`.
 * `<md5-encoded-metric-title>` and `<md5-encoded-metric-variant>` - MD5 encoded metric and variant names. In Python, you 
 can encode the strings with `hashlib.md5(str("<metric_name_string>").encode("utf-8")).hexdigest()`
@@ -496,7 +496,7 @@ Arguments passed to the function are automatically logged in the
 task's **CONFIGURATION** tab under the **HYPERPARAMETERS > Function** section. 
 Like any other arguments, they can be changed from the UI or programmatically.
 
-:::note Function Task Creation
+:::note[Function Task Creation]
 Function tasks must be created from within a regular task, created by calling `Task.init`
 :::
 
@@ -805,7 +805,7 @@ task = Task.init(
 )
 ```
 
-:::tip Output URI Formats
+:::tip[Output URI Formats]
 Specify the model storage URI location using the relevant format: 
 * A shared folder: `/mnt/share/folder`
 * S3: `s3://bucket/folder`
@@ -843,7 +843,7 @@ task.set_parameters({'Args/epochs':7, 'lr': 0.5})
 task.set_parameter(name='decay', value=0.001)
 ```
 
-:::warning Overwriting Parameters
+:::warning[Overwriting Parameters]
 `Task.set_parameters()` replaces any existing hyperparameters in the task.
 :::
 
@@ -878,7 +878,7 @@ the parameter name and section.
 param = task.get_parameter(name="Args/batch_size")
 ```
 
-:::note Case sensitivity
+:::note[Case sensitivity]
 The parameters and their section names are case-sensitive 
 :::
 

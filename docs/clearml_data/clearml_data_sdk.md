@@ -21,7 +21,7 @@ Import the `Dataset` class, and let's get started!
 from clearml import Dataset
 ```
 
-## Creating Datasets 
+## Creating Datasets
 
 ClearML Data supports multiple ways to create datasets programmatically, which provides for a variety of use-cases:
 * [`Dataset.create()`](#datasetcreate) - Create a new dataset. Parent datasets can be specified, from which the new dataset 
@@ -50,12 +50,12 @@ dataset = Dataset.create(
 )
 ```
 
-:::tip Locating Dataset ID
+:::tip[Locating Dataset ID]
 For datasets created with `clearml` v1.6 or newer on ClearML Server v1.6 or newer, find the ID in the dataset version's info panel in the [Dataset UI](../webapp/datasets/webapp_dataset_viewing.md).  
 For datasets created with earlier versions of `clearml`, or if using an earlier version of ClearML Server, find the ID in the task header of the [dataset task's info panel](../webapp/webapp_exp_track_visual.md).  
 :::
 
-:::note Dataset Version
+:::note[Dataset Version]
 Input the dataset's version using the [semantic versioning](https://semver.org) scheme (for example: `1.0.1`, `2.0`). If a version 
 is not input, the method tries finding the latest dataset version with the specified `dataset_name` and `dataset_project` 
 and auto-increments the version number. 

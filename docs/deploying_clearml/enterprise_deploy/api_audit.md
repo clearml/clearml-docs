@@ -55,7 +55,7 @@ To enable API logging to standard output, set the following environment variable
 * Enable API call logging: `CLEARML__APISERVER__log_calls=true`   
 * Use the logging adapter for stdout JSON output: `CLEARML__APISERVER__apilog__adapter=raw_log`
 
-:::note Helm Setup Alternative
+:::note[Helm Setup Alternative]
 If deploying the server via the ClearML Helm chart, logging can be enabled using a single override:
 
 ```

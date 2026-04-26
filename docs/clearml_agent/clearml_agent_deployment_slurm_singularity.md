@@ -2,7 +2,7 @@
 title: Slurm with Singularity
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Slurm Glue is available under the ClearML Enterprise plan.
 :::
 
@@ -21,7 +21,7 @@ Install the Slurm Glue on a machine where you can run `sbatch` / `squeue` etc.
 pip3 install -U --extra-index-url https://*****@*****.allegro.ai/repository/clearml_agent_slurm/simple clearml-agent-slurm
 ```
    
-:::tip Python repository credentials
+:::tip[Python repository credentials]
 Your credentials for `--extra-index-url` are available in the WebApp under the **Help** menu  <img src="/docs/latest/icons/ico-help-outlined.svg" alt="Help menu" className="icon size-md space-sm" /> **>** 
 **ClearML Python Package setup** **>** **Install** step.
 :::
@@ -69,7 +69,7 @@ srun singularity exec ${CLEARML_AGENT_EXECUTE}
 ${CLEARML_POST_SETUP}
 ```
 
-:::note Template variables
+:::note[Template variables]
 For details on available template variables, see [Slurm (Native)](clearml_agent_deployment_slurm.md#dynamic-template-variables).
 :::
 

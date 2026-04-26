@@ -162,7 +162,7 @@ represents the full path to the configuration field being set. Elements of the c
 `__` (double underscore). For example, set the `CLEARML_AGENT__AGENT__DEFAULT_DOCKER__IMAGE` environment variable to 
 deploy an agent with a different value to what is specified for `agent.default_docker.image` in the clearml.conf.
 
-:::note NOTES
+:::note[NOTES]
 * Since configuration fields may contain JSON-parsable values, make sure to always quote strings (otherwise the agent 
 might fail to parse them)
 * To comply with environment variables standards, it is recommended to use only upper-case characters in 
@@ -189,7 +189,7 @@ You can spin up an agent on any machine: on-prem and/or cloud instance. When spi
 service a queue(s). Utilize the machine by enqueuing tasks to the queue that the agent is servicing, and the agent will 
 pull and execute the tasks. 
 
-:::tip cross-platform execution
+:::tip[cross-platform execution]
 ClearML Agent is platform-agnostic. When using the ClearML Agent to execute tasks cross-platform, set platform 
 specific environment variables before launching the agent.
 
@@ -222,7 +222,7 @@ clearml-agent daemon <arguments> --stop
 ### Allocating Resources
 To specify GPUs associated with the agent, add the `--gpus` flag.
 
-:::note Docker Mode
+:::note[Docker Mode]
 Make sure to include the `--docker` flag, as GPU management through the agent is only supported in [Docker Mode](clearml_agent_execution_env.md#docker-mode).
 :::
 

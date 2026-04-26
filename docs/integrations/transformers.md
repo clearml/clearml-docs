@@ -41,7 +41,7 @@ All of this is captured into a [ClearML Task](../fundamentals/task.md). By defau
 in the `HuggingFace Transformers` project. To change the task's name or project, use the `CLEARML_PROJECT` and `CLEARML_TASK`
 environment variables
 
-:::tip project names 
+:::tip[project names]
 ClearML uses `/` as a delimiter for subprojects: using `example/sample` as a name will create the `sample` 
 task within the `example` project. 
 :::

@@ -16,7 +16,7 @@ time.
 
 <a id="traffic_router"></a>
 
-:::important AI Application Gateway
+:::important[AI Application Gateway]
 The Streamlit Launcher relies on the ClearML App Gateway Router which implements user authentication, and redirects requests 
 to the IP/port served by the Streamlit app. 
 

@@ -1,4 +1,6 @@
-# ClearML Integrations
+---
+title: ClearML Integrations
+---
 
 ClearML seamlessly integrates with a wide range of popular machine learning frameworks, tools, and platforms to enhance your ML development workflow. Our integrations enable automatic experiment tracking, model management, and pipeline orchestration across your preferred tools.
 

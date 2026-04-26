@@ -4,7 +4,7 @@ title: Version 1.1
 
 ### ClearML Serving 1.1.0 
 
-:::warning Backwards Compatibility
+:::warning[Backwards Compatibility]
 This release is not backwards compatible. See `Upgrading from v1.0` note below. 
 :::
 
@@ -19,16 +19,16 @@ This release is not backwards compatible. See `Upgrading from v1.0` note below.
 * Hugging Face Transformer support
 * `Preprocess` class as module (see `Preprocess Class` note below)
 
-:::note Upgrading from v1.0
+:::note[Upgrading from v1.0]
 1. Take down the serving containers (docker-compose or k8s)
-1. Update the clearml-serving CLI: `pip3 install -U clearml-serving`
+1. Update the `clearml-serving` CLI: `pip3 install -U clearml-serving`
 1. Re-add a single existing endpoint: `clearml-serving model add ...` (press `yes` when asked). This will upgrade the 
-clearml-serving session definitions
+`clearml-serving` session definitions
 1. Pull latest serving containers (`docker-compose pull ...` or k8s)
 1. Re-spin serving containers (docker-compose or k8s)
 :::
 
-:::note Preprocess Class
+:::note[Preprocess Class]
 You can now add a `Preprocess` class from a module. The entire module folder will be packaged.
 
 ```

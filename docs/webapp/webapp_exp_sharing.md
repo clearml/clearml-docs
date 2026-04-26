@@ -2,7 +2,7 @@
 title: Sharing Tasks and Models
 ---
 
-:::note Hosted Service Feature
+:::note[Hosted Service Feature]
 This is a ClearML Hosted Service feature only.
 :::
 

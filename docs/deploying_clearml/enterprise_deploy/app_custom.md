@@ -2,7 +2,7 @@
 title: Custom Applications
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The custom applications are available under the ClearML Enterprise plan.
 :::
 

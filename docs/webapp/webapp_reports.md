@@ -113,7 +113,7 @@ resources will be displayed. See [Dynamic Queries](#dynamic-queries) below.
 * `company` - Workspace ID. Applicable to the ClearML hosted service, for embedding content from a different workspace 
 * `light` - add parameter to switch visualization to light theme
 
-:::tip URL encoding
+:::tip[URL encoding]
 For strings, make sure to use the appropriate URL encoding. For example, if the metric name is "Metric Name", 
 write `Metric%20Name`
 :::
@@ -159,7 +159,7 @@ used.
   
 <a id="event_id"></a>
 
-:::tip Metric/Variant IDs
+:::tip[Metric/Variant IDs]
 Metric names need to be MD5 encoded for parallel coordinate plots and for ordering query results by metric
 performance. You can encode the strings in Python with `hashlib.md5(str("<metric_string>").encode("utf-8")).hexdigest()`,
 and use the returned MD5 hash in your query.

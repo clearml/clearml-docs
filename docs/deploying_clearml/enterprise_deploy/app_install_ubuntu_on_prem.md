@@ -2,7 +2,7 @@
 title: Application Installation on On-Prem and VPC Servers
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 UI application deployment is available under the ClearML Enterprise plan.
 :::
 

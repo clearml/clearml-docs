@@ -2,7 +2,7 @@
 title: Event Metering
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Event metering is available under the ClearML Enterprise plan.
 :::
 

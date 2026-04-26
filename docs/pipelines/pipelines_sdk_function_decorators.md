@@ -15,7 +15,7 @@ Using the [`@PipelineDecorator.pipeline`](../references/sdk/automation_controlle
 decorator transforms the function which implements your pipeline's execution logic to a ClearML pipeline controller, 
 an independently executed task.
 
-:::tip Multi-file Pipeline Implementation 
+:::tip[Multi-file Pipeline Implementation]
 In the case your pipeline is implemented across multiple files, make sure the pipeline step implementation (files containing
 functions decorated with `@PipelineDecorator.component`) is imported before `@PipelineDecorator.pipeline`. 
 :::
@@ -80,7 +80,7 @@ decorator transforms a function into a ClearML pipeline step when called from a 
 
 When the pipeline controller calls a pipeline step, a corresponding ClearML task is created. 
 
-:::tip Package Imports
+:::tip[Package Imports]
 In the case that the `skip_global_imports` parameter of [`@PipelineDecorator.pipeline`](../references/sdk/automation_controller_pipelinedecorator.md#pipelinedecoratorpipeline) 
 is set to `False`, all global imports will be automatically imported at the beginning of each step's execution. 
 Otherwise, if set to `True`, make sure that each function which makes up a pipeline step contains package imports, which 
@@ -218,9 +218,9 @@ if __name__ == '__main__':
    print('pipeline completed')
 ```
 
-:::tip RUN PIPELINE CONTROLLER LOCALLY
+:::tip[RUN PIPELINE CONTROLLER LOCALLY]
 You can run the pipeline logic locally, while keeping the pipeline components execution remote
-(enqueued and executed by the clearml-agent). Pass `pipeline_execution_queue=None` to the `@PipelineDecorator.pipeline` decorator.
+(enqueued and executed by the `clearml-agent`). Pass `pipeline_execution_queue=None` to the `@PipelineDecorator.pipeline` decorator.
 ```python
 @PipelineDecorator.pipeline(
    name='custom pipeline logic', project='examples', version='0.0.5', pipeline_execution_queue=None

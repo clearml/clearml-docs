@@ -17,7 +17,7 @@ pip install clearml
 
 ## Connect ClearML SDK to the Server 
 
-:::note Private Network / Custom CA Configuration 
+:::note[Private Network / Custom CA Configuration] 
 If your ClearML Server makes use of a private or internal CA certificate, you must configure the ClearML SDK to accept
 that certificate by setting the `REQUESTS_CA_BUNDLE` environment variable to your CA bundle before running your code:
 

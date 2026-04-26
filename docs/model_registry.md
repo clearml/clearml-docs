@@ -203,7 +203,7 @@ and [InputModel](references/sdk/model_inputmodel.md) reference pages.
 
 ## Creating Visual Web Interface
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Streamlit and Gradio launcher apps are available under the ClearML Enterprise plan.
 :::
 

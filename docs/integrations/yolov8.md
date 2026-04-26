@@ -84,7 +84,7 @@ the following ways:
    yolo TASK MODE project=new_project name=new_task_name
   ```
 
-:::tip project names 
+:::tip[project names]
 ClearML uses `/` as a delimiter for subprojects: using `example/sample` as a name will create the `sample` 
 task within the `example` project. 
 :::

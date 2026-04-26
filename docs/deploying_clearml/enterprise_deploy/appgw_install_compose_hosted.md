@@ -2,7 +2,7 @@
 title: Docker-Compose - Hosted Server
 ---
 
-:::important Enterprise Feature 
+:::important[Enterprise Feature] 
 The AI Application Gateway is available under the ClearML Enterprise plan.
 :::
 

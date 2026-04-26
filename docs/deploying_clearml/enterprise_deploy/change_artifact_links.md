@@ -53,7 +53,7 @@ script changes the values in the databases, and can't be undone.
     :::important
     Before running the script, verify that this is indeed the correct version (`apiserver` v3.20 or higher, 
     or that the script provided by ClearML was copied into the container).
-    ::::
+    :::
  
     ```commandline
     python3 fix_fileserver_urls.py \
@@ -63,7 +63,7 @@ script changes the values in the databases, and can't be undone.
     --host-target "<new fileserver host and/or port>" --datasets
     ```
 
-:::note Notes
+:::note[Notes]
 * If MongoDB or ElasticSearch services are accessed from the `apiserver` container using custom addresses, then 
 `--mongo-host` and `--elastic-host` arguments should be updated accordingly.  
 * If ElasticSearch is set up to require authentication then the following arguments should be used to pass the user 

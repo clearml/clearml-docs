@@ -2,7 +2,7 @@
 title: Multi-Node Training
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Multi-node training is only supported by a ClearML Enterprise Server.
 :::
 

@@ -2,7 +2,7 @@
 title: Dynamic GPU Fractions on Bare Metal and VMs
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Dynamic Fractional GPUs are available under the ClearML Enterprise plan.
 :::
 
@@ -22,7 +22,7 @@ This guide covers how to dynamically slice GPUs on **bare metal**/**VMs** .
    pip install -U --extra-index-url https://shared:******@packages.allegro.ai/repository/clearml_agent_fractional_gpu/simple clearml-agent-fractional-gpu
    ```
    
-   :::tip Python repository credentials
+   :::tip[Python repository credentials]
    Your credentials for `--extra-index-url` are available in the WebApp under the **Help** menu  <img src="/docs/latest/icons/ico-help-outlined.svg" alt="Help menu" className="icon size-md space-sm" /> **>** 
    **ClearML Python Package setup** **>** **Install** step.
    :::

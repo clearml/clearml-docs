@@ -2,7 +2,7 @@
 title: Managing GPU Fractions with ClearML Dynamic MIG Operator (CDMO)
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 GPU fraction management is only supported by a ClearML Enterprise Server.
 :::
 
@@ -56,7 +56,7 @@ This guide covers:
         value: all
   ```
 
-  :::note k3s
+  :::note[k3s]
   If using **k3s**, you must set the `containerd` socket path. Add the following entry to your `gpu-operator.override.yaml`:
 
   ```yaml
@@ -67,7 +67,7 @@ This guide covers:
   ```
   :::
 
-  :::note MicroK8s
+  :::note[MicroK8s]
   If using MicroK8s, you must configure the `containerd` paths used by MicroK8s. Add the following entries to your 
   `gpu-operator.override.yaml`:
   
@@ -119,7 +119,7 @@ This guide covers:
    nvidia-smi -mig 1
    ```
 
-   :::note notes
+   :::note[notes]
    * A node reboot may be required if the command output indicates so.
    
    * For convenience, this command can be run from within the `nvidia-device-plugin-daemonset` pod running on the related node.

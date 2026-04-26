@@ -88,7 +88,7 @@ values from the file, which can be modified before launching the app instance
   project-level permissions (i.e. users with read access can use the app).
 * **NIM Container Image**: Select the containerized application image to use. Note the different tags / versions of each image
 * **Compute Resource (Queue)**: The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the NIM app instance task will be enqueued. <br/><br/>
-  :::note Agent requirements
+  :::note[Agent requirements]
   Make sure the agent assigned to this queue:
   * Has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
   * Runs in [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode) if it is a bare-metal agent

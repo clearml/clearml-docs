@@ -2,7 +2,7 @@
 title: Custom Events
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Sending custom events is available under the ClearML Enterprise plan.
 :::
 
@@ -13,7 +13,7 @@ This feature can be used to implement custom billing.
 
 ## Enabling Custom Events in ClearML Server 
 
-:::important Prerequisite
+:::important[Prerequisite]
 **Precondition**: Customer Kafka for custom events is installed and reachable from the `apiserver`.
 :::
 
@@ -67,7 +67,7 @@ curl $APISERVER_URL/system.update_company_custom_events_config -H "Content-Type:
 
 ## Sending Custom Events to the API Server
 
-:::important Prerequisite
+:::important[Prerequisite]
 **Precondition:** Dedicated custom-events Redis instance installed and reachable from all the custom events deployments.
 :::
 

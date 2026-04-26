@@ -2,7 +2,7 @@
 title: Hyper-Datasets
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 

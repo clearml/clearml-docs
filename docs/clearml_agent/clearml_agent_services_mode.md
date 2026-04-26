@@ -13,7 +13,7 @@ clearml-agent daemon --services-mode --queue services --create-queue --docker <d
 To limit the number of simultaneous tasks run in services mode, pass the maximum number immediately after the 
 `--services-mode` option (for example: `--services-mode 5`).
 
-:::note Notes
+:::note[Notes]
 * `services-mode` currently only supports Docker mode. Each service spins on its own Docker image.
 * The default `clearml-server` configuration already runs a single `clearml-agent` in services mode that listens to the 
   `services` queue.

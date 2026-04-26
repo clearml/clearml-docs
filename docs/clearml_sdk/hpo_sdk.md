@@ -110,12 +110,12 @@ optimization.
          )
    ```
 
-   :::tip Locating Task ID
+   :::tip[Locating Task ID]
    To locate the base task's ID, go to the task's info panel in the [WebApp](../webapp/webapp_overview.md). The ID appears 
    in the task header.
    :::
 
-   :::tip Multi-objective Optimization
+   :::tip[Multi-objective Optimization]
    If you are using the Optuna framework (see [Supported Optimizers](#supported-optimizers)), you can list multiple optimization objectives. 
    When doing so, make sure the `objective_metric_title`, `objective_metric_series`, and `objective_metric_sign` lists 
    are the same length. Each title will be matched to its respective series and sign. 
@@ -136,7 +136,7 @@ or [`HyperParameterOptimizer.start_locally()`](../references/sdk/hpo_optimizatio
 Both methods run the optimizer controller locally. `start()` launches the base task clones through a queue 
 specified when instantiating the controller, while `start_locally()` runs the tasks locally.
 
-:::tip Remote Execution
+:::tip[Remote Execution]
 You can also launch the optimizer controller through a queue by using [`Task.execute_remotely()`](../references/sdk/task.md#execute_remotely) 
 before starting the optimizer.  
 ::: 

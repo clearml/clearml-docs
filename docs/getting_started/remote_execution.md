@@ -75,7 +75,7 @@ a_func_task = task.create_function_task(
 )
 ```
 
-:::important Function Task Creation
+:::important[Function Task Creation]
 Function tasks must be created from within a regular task, created by calling `Task.init`
 :::
 

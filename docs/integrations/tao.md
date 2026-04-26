@@ -24,12 +24,12 @@ logging metrics, model files, plots, debug samples, and more, so you can gain mo
    clearml-init
    ```
    
-   :::tip Jupyter Notebook 
+   :::tip[Jupyter Notebook]
    If you're using Jupyter Notebook, in the **New Credential** modal, click "Jupyter Notebook", and copy the credential and paste
    them in your notebook 
    :::
 
-   :::tip Set Credentials in TAO Toolkit Launcher
+   :::tip[Set Credentials in TAO Toolkit Launcher]
    You can set environment variables with your ClearML credentials via the TAO Toolkit launcher. Add your credentials 
    to the `Envs` element of the `~/.tao_mounts.json` file as shown below:
    ```json

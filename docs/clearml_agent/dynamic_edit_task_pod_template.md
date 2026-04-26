@@ -2,7 +2,7 @@
 title: Dynamic Task Pod Templates
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Dynamic task Pod templates are only supported by a ClearML Enterprise Server.
 :::
 
@@ -61,7 +61,7 @@ agentk8sglue:
           return {"template": template}
 ```
 
-:::note notes
+:::note[Notes]
 * Always include `*args, **kwargs` at the end of the function's argument list and only use keyword arguments. 
   This is needed to maintain backward compatibility.
 

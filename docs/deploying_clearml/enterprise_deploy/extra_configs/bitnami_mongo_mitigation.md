@@ -15,7 +15,7 @@ mongodb:
     mountPath: /data/db
 ```
 
-:::warning Deployment Mode Limitation
+:::warning[Deployment Mode Limitation]
 
 This configuration is only compatible with deployments that use the default `mongodb.architecture` value set to `standalone`.
 

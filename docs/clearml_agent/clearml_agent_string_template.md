@@ -2,7 +2,7 @@
 title: Custom Pod Manifests with String Templates
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Customizing pod manifests with string templates is only supported by a ClearML Enterprise Server.
 :::
 

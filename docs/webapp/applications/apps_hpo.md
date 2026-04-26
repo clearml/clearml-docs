@@ -84,7 +84,7 @@ This section describes the default configuration provided by ClearML.
         * Discrete Parameters - A set of values to sample
             * Values - Comma separated list of values to sample
     * Name - The original task's configuration parameter name (including section name e.g. `Args/lr`)  <br/><br/>
-    :::tip Hydra Parameters
+    :::tip[Hydra Parameters]
     For tasks using Hydra, input parameters from the OmegaConf in the following format:
     `Hydra/<param>`. Specify `<param>` using dot notation. For example, if your OmegaConf looks like this: 
     ```

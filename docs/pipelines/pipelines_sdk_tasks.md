@@ -136,7 +136,7 @@ Examples:
 Creating a pipeline step from a function means that when the function is called, it will be transformed into a ClearML task, 
 translating its arguments into parameters, and returning values into artifacts.  
 
-:::note Package Imports
+:::note[Package Imports]
 In the case that the `skip_global_imports` parameter of [`PipelineController`](../references/sdk/automation_controller_pipelinecontroller.md) 
 is set to `False`, all global imports will be automatically imported at the beginning of each step's execution. 
 Otherwise, if set to `True`, make sure that each function which makes up a pipeline step contains package imports, which 

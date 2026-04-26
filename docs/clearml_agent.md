@@ -39,7 +39,7 @@ The preceding diagram demonstrates a typical flow where an agent executes a task
    1.  Set up the Python environment and required packages.
 1. The task's script/code is executed.  
 
-:::note Python Version
+:::note[Python Version]
 ClearML Agent uses the Python version available in the environment or container in which it executes the code. It does not 
 install Python, so make sure to use a container or environment with the version you need.
 ::: 

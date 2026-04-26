@@ -85,7 +85,7 @@ This section describes the default configuration provided by ClearML.
   project-level permissions (i.e. users with read access can use the app).
 * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which theVM Remote Desktop 
   app instance task will be enqueued. <br/><br/> 
-  :::note Agent requirements
+  :::note[Agent requirements]
   Make sure the agent assigned to this queue runs in an environment with Sysbox installed
   :::
 * **Idle Time Limit** (Hours): Maximum time of inactivity, after which the session will shut down. Configure idleness 

@@ -19,7 +19,7 @@ each instance is spun up.
 
 For more information about how autoscalers work, see [Autoscalers Overview](../../cloud_autoscaling/autoscaling_overview.md#autoscaler-applications).
 
-:::note AWS NVIDIA GPU Support   
+:::note[AWS NVIDIA GPU Support]
 * Recent NVIDIA AMIs only install the required drivers on initial user login. To make use of such AMIs, the autoscaler 
   needs to mimic an initial user login. This can be accomplished by, adding the following script to the `Init script`
   field in the app instance launch form:
@@ -74,7 +74,7 @@ their status in the dashboard:
 * Instance logs - A table of instances that were spun up, including their type, associated resource, and spin-up time.
 * Console: the application log containing everything printed to stdout and stderr appears in the console log. The log shows polling results of the autoscaler's associated queues, including the number of tasks enqueued, and updates EC2 instances being spun up/down.
 
-:::tip Console Debugging   
+:::tip[Console Debugging]
 To make the autoscaler console log show additional debug information, change an active app instance's log level to DEBUG:
 1. Go to the app instance task's page > **CONFIGURATION** tab > **USER PROPERTIES** section 
 1. Hover over the section > Click `Edit` > Click `+ADD PARAMETER`
@@ -92,7 +92,7 @@ The console's log level will update in the autoscaler's next iteration.
 ![Autoscaler dashboard](../../img/apps_aws_autoscaler.png#light-mode-only)
 ![Autoscaler dashboard](../../img/apps_aws_autoscaler_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). The Enterprise Plan and 
 Hosted Service also support embedding resources in third-party platforms that support embedded content (e.g. Notion). These visualizations 
 are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
@@ -187,7 +187,7 @@ This section describes the default configuration provided by ClearML.
       to launch this resource in
     * AMI ID - The AWS AMI to launch
      
-      :::note AMI prerequisites
+      :::note[AMI prerequisites]
       The AMI used for the autoscaler must include docker runtime and virtualenv.
       :::
   
@@ -235,7 +235,7 @@ and [AWS API Reference: RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/
 
 ### Configuration Vault
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 The Configuration Vault is available under the ClearML Enterprise plan.
 :::
 

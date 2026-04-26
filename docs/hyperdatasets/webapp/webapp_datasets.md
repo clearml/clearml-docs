@@ -2,7 +2,7 @@
 title: Hyper-Datasets Page
 ---
 
-:::important ENTERPRISE FEATURE
+:::important[ENTERPRISE FEATURE]
 Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 
@@ -72,7 +72,7 @@ In List view, the Hyper-Dataset cards display summarized dataset information:
   Dataset version is *Draft*, then no labels appear
 * Tags
 
-:::note Change Label Color
+:::note[Change Label Color]
 To change the label color coding, hover over a label color, click the hand pointer, and then select a new color.
 :::
 

@@ -103,7 +103,7 @@ See more details in the [Artifacts Reporting example](../guides/reporting/artifa
 ClearML can be configured to upload artifacts to any of the supported types of storage, which include local and shared 
 folders, AWS S3 buckets, Google Cloud Storage, and Azure Storage. For more information, see [Storage](../integrations/storage.md). 
 
-:::note Debug Sample Storage
+:::note[Debug Sample Storage]
 Debug samples are handled differently, see [`Logger.set_default_upload_destination`](../references/sdk/logger.md#set_default_upload_destination).
 :::
 

@@ -32,13 +32,13 @@ the following types of parameters:
 * [Hydra](../integrations/hydra.md) - ClearML logs the `OmegaConf` which holds all the configuration files, 
   as well as values overridden during runtime.
 
-:::tip Disabling Automatic Logging
+:::tip[Disabling Automatic Logging]
 Automatic logging can be disabled. See [Control Automatic Logging](../clearml_sdk/task_sdk.md#control-automatic-logging).
 :::
 
 ### Environment Variables
 
-:::important Task Reproducibility
+:::important[Task Reproducibility]
 Relying on environment variables makes a task not fully reproducible, since ClearML Agent can't reproduce them at 
 runtime.
 :::
@@ -66,7 +66,7 @@ You can also specify environment variables using the `CLEARML_LOG_ENVIRONMENT` e
    export CLEARML_LOG_ENVIRONMENT=
    ```
   
-:::note Overriding clearml.conf
+:::note[Overriding clearml.conf]
 The `CLEARML_LOG_ENVIRONMENT` variable always overrides the `clearml.conf` file. 
 :::
 

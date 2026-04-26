@@ -3,7 +3,7 @@ title: Execution Environments
 ---
 ClearML Agent has two primary execution modes: [Virtual Environment Mode](#virtual-environment-mode) and [Docker Mode](#docker-mode). 
 
-## Virtual Environment Mode 
+## Virtual Environment Mode
 
 In Virtual Environment Mode, the agent creates a virtual environment for the task, installs the required Python 
 packages based on the task specification, clones the code repository, applies the uncommitted changes and finally 
@@ -20,7 +20,7 @@ To change the package manager used by the agent, edit the [`package_manager.type
 field in the of the `clearml.conf`. If extra channels are needed for `conda`, add the missing channels in the 
 `package_manager.conda_channels` field in the `clearml.conf`. 
 
-:::note Using Poetry with Pyenv
+:::note[Using Poetry with Pyenv]
 Some versions of poetry (using `install-poetry.py`) do not respect `pyenv global`.  
 If you are using pyenv to control the environment where you use ClearML Agent, you can:
   * Use poetry v1.2 and above (which fixes [this issue](https://github.com/python-poetry/poetry/issues/5077))
@@ -28,7 +28,7 @@ If you are using pyenv to control the environment where you use ClearML Agent, y
 :::
 
 ## Docker Mode
-:::note notes
+:::note[Notes]
 * Docker Mode is only supported in Linux.
 * Docker Mode requires docker service v19.03 or higher installed.
 * If your machine requires root permissions to run Docker, the ClearML Agent in Docker Mode must also run with root permissions. 
@@ -41,7 +41,7 @@ When executing the ClearML Agent in Docker mode, it will:
    
 ClearML Agent uses the provided default Docker container, which can be overridden from the UI. 
 
-:::tip Setting Docker Container via UI
+:::tip[Setting Docker Container via UI]
 You can set the docker container via the UI: 
 1. Clone the task
 2. Set the Docker in the cloned task's **Execution** tab **> Container** section

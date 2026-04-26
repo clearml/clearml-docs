@@ -2,7 +2,7 @@
 title: ClearML Fractional GPU Injector (CFGI)
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 CFGI is only supported by a ClearML Enterprise Server.
 :::
 

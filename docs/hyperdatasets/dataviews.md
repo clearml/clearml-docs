@@ -120,7 +120,7 @@ and specify Dataset versions, ROI and/or frame queries, and other criteria.
 
 Use the `dataset_name` and `version_name` arguments to specify the Dataset Version the query applies to. 
 
-:::note Multi-version queries
+:::note[Multi-version queries]
 `dataset_name` and `version_name` support wildcard input (`*`) meaning all Dataview datasets or all Dataview versions respectively.
 At least one of the Dataview queries must specify a Dataset explicitly, for "All Dataview datasets" to be meaningful
 :::

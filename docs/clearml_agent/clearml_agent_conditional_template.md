@@ -2,7 +2,7 @@
 title: Conditional Templates
 ---
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 Conditional Templates are only supported by a ClearML Enterprise Server.
 :::
 
@@ -16,7 +16,7 @@ Conditional templates are configured through the `CLEARML_K8S_GLUE_COND_CUST_TEM
 - **Template** — [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md) snippet that defines Pod template fields.  
 - **Separator** — Condition and template are separated by a pipe (`|`).  
 
-:::note Notes
+:::note
 Conditional Templates do not support overriding list fields such as `spec.containers[0]`.
 :::
 

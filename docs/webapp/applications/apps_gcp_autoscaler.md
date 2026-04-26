@@ -2,7 +2,7 @@
 title: GCP Autoscaler
 ---
 
-:::note Pro Plan Offering
+:::note[Pro Plan Offering]
 The ClearML GCP Autoscaler App is available under the ClearML Pro plan.
 :::
 
@@ -41,7 +41,7 @@ status:
   * Total uptime by resource type
 * Instance logs - A table of instances that were spun up, including their type, associated resource, and spin-up time.
 
-:::tip Console Debugging   
+:::tip[Console Debugging]
 To make the autoscaler console log show additional debug information, change an active app instance's log level to DEBUG:
 1. Go to the app instance task's page > **CONFIGURATION** tab > **USER PROPERTIES** section 
 1. Hover over the section > Click `Edit` > Click `+ADD PARAMETER`
@@ -59,7 +59,7 @@ The console's log level will update in the autoscaler's next iteration.
 ![GCP autoscaler dashboard](../../img/apps_gcp_autoscaler.png#light-mode-only)
 ![GCP autoscaler dashboard](../../img/apps_gcp_autoscaler_dark.png#dark-mode-only)
 
-:::tip EMBEDDING CLEARML VISUALIZATION
+:::tip[EMBEDDING CLEARML VISUALIZATION]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md). The Enterprise Plan and 
 Hosted Service also support embedding resources in third-party platforms that support embedded content (e.g. Notion). These visualizations 
 are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
@@ -158,7 +158,7 @@ This section describes the default configuration provided by ClearML.
 
 <a id="configuration_vault"></a>
 
-:::important Enterprise Feature
+:::important[Enterprise Feature]
 You can utilize the [configuration vault](../settings/webapp_settings_profile.md#configuration-vault) to configure GCP 
 credentials for the autoscaler in the following format: 
 

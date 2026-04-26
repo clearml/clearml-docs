@@ -144,7 +144,7 @@ object, setting the following optimization parameters:
       objective_metric_sign='max',
   ```
   
-  :::tip Multi-objective Optimization
+  :::tip[Multi-objective Optimization]
   If you are using the Optuna framework (see [Set the Search Strategy for Optimization](#set-the-search-strategy-for-optimization)), 
   you can list multiple optimization objectives. When doing so, make sure the `objective_metric_title`, 
   `objective_metric_series`, and `objective_metric_sign` lists are 

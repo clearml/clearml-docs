@@ -27,7 +27,7 @@ And that's it! This creates a [ClearML Task](../fundamentals/task.md) which capt
 * Hyperparameters created with standard Python packages (e.g. argparse, click, Python Fire, etc.)
 * And more
 
-:::tip Logging Plots
+:::tip[Logging Plots]
 ClearML automatically logs plots displayed using Matplotlib. To automatically log XGBoost plots, like tree and
 feature importance plots, pass `matplotlib.pyplot.show()` after the plot creation method:
 

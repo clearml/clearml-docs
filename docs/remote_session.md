@@ -25,7 +25,7 @@ meets resource needs:
   * [JupyterLab](webapp/applications/apps_jupyter_lab.md) - Launch a JupyterLab session on a remote machine 
   * [VS Code](webapp/applications/apps_vscode.md) - Launch a VS Code session on a remote machine 
 
-:::note Remote PyCharm
+:::note[Remote PyCharm]
 You can also work with PyCharm in a remote session over SSH. Use the [PyCharm Plugin](guides/ide/integration_pycharm.md) 
 to automatically sync local configurations with a remote session.
 :::

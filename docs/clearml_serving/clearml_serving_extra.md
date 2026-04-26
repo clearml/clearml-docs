@@ -29,7 +29,7 @@ or with the `clearml-serving` CLI.
    clearml-serving --id <service_id> model add --engine sklearn --endpoint "test_model_sklearn" --preprocess "examples/sklearn/preprocess.py" --model-id <newly_created_model_id_here>
    ```
 
-:::note Model Storage
+:::note[Model Storage]
 You can also provide a different storage destination for the model, such as S3/GS/Azure, by using
 `--destination`. For example:
 
@@ -155,7 +155,7 @@ x0=0,0.1,0.5,1,10 x1=0,0.1,0.5,1,10 y=0,0.1,0.5,0.75,1
 This will create a distribution histogram (buckets specified via a list of less-equal values after `=` sign),
 that you will be able to visualize on Grafana.
 
-:::note time-series values
+:::note[time-series values]
 You can also log time-series values with `--variable-value x2` or discrete results (e.g. classifications strings) with 
 `--variable-enum animal=cat,dog,sheep`. Additional custom variables can be added in the preprocess and postprocess with 
 a call to `collect_custom_statistics_fn({'new_var': 1.337})`. See [preprocess_template.py](https://github.com/clearml/clearml-serving/blob/main/clearml_serving/preprocess/preprocess_template.py).
