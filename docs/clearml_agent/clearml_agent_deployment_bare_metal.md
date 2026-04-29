@@ -162,7 +162,7 @@ represents the full path to the configuration field being set. Elements of the c
 `__` (double underscore). For example, set the `CLEARML_AGENT__AGENT__DEFAULT_DOCKER__IMAGE` environment variable to 
 deploy an agent with a different value to what is specified for `agent.default_docker.image` in the clearml.conf.
 
-:::note[NOTES]
+:::note[Notes]
 * Since configuration fields may contain JSON-parsable values, make sure to always quote strings (otherwise the agent 
 might fail to parse them)
 * To comply with environment variables standards, it is recommended to use only upper-case characters in 

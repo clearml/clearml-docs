@@ -145,7 +145,7 @@ ClearML Python package information can be obtained by using `pip freeze`.
 
 For example: 
 
-```
+```bash
 pip freeze|grep clearml
 ```
 

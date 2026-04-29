@@ -33,7 +33,7 @@ Once you have launched an app instance, you can view the following information i
 ![VS Code Dashboard](../../img/apps_vs_code.png#light-mode-only)
 ![VS Code Dashboard](../../img/apps_vs_code_dark.png#dark-mode-only)
 
-:::tip[EMBEDDING CLEARML VISUALIZATION]
+:::tip[Embedding ClearML Visualization]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -77,7 +77,18 @@ This section describes the default configuration provided by ClearML.
   * Image - container image used to run the IDE in
   * Docker arguments - `docker run` arguments, as a single string
   * Init script - Bash script that is executed upon container boot (comments are supported only at the beginning of the 
-    line)
+    line) <br/><br/>
+
+  :::important 
+  The selected container image must include required Python packages for the application or allow installing them at runtime.
+  
+  To view the required packages, hover over **Container requirements** in the application page under the app description.
+  
+  In air-gapped environments, ensure one of the following:
+  * Required packages are pre-installed in the image
+  * The container can access a local PyPI proxy or package repository
+  :::
+
 * **Extra Packages** - Extra Python packages to be installed
 * **Persistent Workspace Path** - Specify your workspace root directory. It will be automatically stored when the session 
   is closed and available for restoring into new sessions (example: `~/workspace`)

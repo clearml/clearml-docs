@@ -46,7 +46,7 @@ Once you start a Milvus DB Session instance, you can view the following informat
 ![Milvus Dashboard](../../img/apps_milvus.png#light-mode-only)
 ![Milvus Dashboard](../../img/apps_milvus_dark.png#dark-mode-only) 
 
-:::tip[EMBEDDING CLEARML VISUALIZATION]
+:::tip[Embedding ClearML Visualization]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -80,7 +80,18 @@ from the file, which can be modified before launching the app instance
 * **Container**
   * Image - Milvus container image to use. For example: `milvus/milvus:v1.12.5`. Note that different database versions 
     can be specified by selecting the relevant container image.
-  * Container Arguments - Override container environment variables using the format `--env key=value`
+  * Container Arguments - Override container environment variables using the format `--env key=value` <br/><br/>
+
+  :::important 
+  The selected container image must include required Python packages for the application or allow installing them at runtime.
+  
+  To view the required packages, hover over **Container requirements** in the application page under the app description.
+  
+  In air-gapped environments, ensure one of the following:
+  * Required packages are pre-installed in the image
+  * The container can access a local PyPI proxy or package repository
+  :::
+
 * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which the Milvus DB session 
   app instance task will be enqueued. Make sure an agent is assigned to that queue.
 * **Database Session Name** - An optional name for the database session for better visibility

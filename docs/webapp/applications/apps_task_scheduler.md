@@ -39,7 +39,7 @@ Once you have launched an app instance, you can view the following information i
 ![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard.png#light-mode-only)
 ![TaskScheduler dashboard](../../img/apps_taskscheduler_dashboard_dark.png#dark-mode-only)
 
-:::tip[EMBEDDING CLEARML VISUALIZATION]
+:::tip[Embedding ClearML Visualization]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -72,7 +72,8 @@ This section describes the default configuration provided by ClearML.
 * **Import Configuration** - Import an app instance configuration file. This will fill the instance launch form with the 
   values from the file, which can be modified before launching the app instance
 * **Scheduled Tasks** 
-  * **Base Task ID** - ID of a ClearML task to clone and enqueue for execution at the specified time. 
+  * **Base Task ID** - Select a task or enter its ID. This task will be cloned and enqueued for execution at the specified 
+    time. Click **Select** to open the task selection modal, where you can browse and search for a task, then apply it.
   * **Destination Project** - The project where the task will be cloned to.
   * **Queue** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) to which scheduled tasks are enqueued (make sure an agent is assigned to that queue)
   * **Recurrence** - Recurrence type, select one of the following options:

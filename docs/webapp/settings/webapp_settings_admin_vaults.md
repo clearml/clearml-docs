@@ -93,7 +93,30 @@ The **Administrator Vaults** table lists all currently defined vaults, and the f
 * Vault Content - Vault content summary
 * Update - Last update time
 
-Hover over a vault in the table to **Download**, **Edit**, or **Delete** a vault.  
+Hover over a vault in the table and click <img src="/docs/latest/icons/ico-dots-v-menu.svg" alt="Dot menu" className="icon size-md space-sm" />
+to access vault actions:
+* Download
+* Edit
+* Delete
+* View log - View a history of vault activity: vault action (e.g. activate, deactivate, edit, etc.), acting user, and action time.  
 
 ![Admin vaults](../../img/settings_admin_vaults.png#light-mode-only)
 ![Admin vaults](../../img/settings_admin_vaults_dark.png#dark-mode-only)
+
+## Activity Log 
+
+The activity log displays a detailed history of activity across all admin vaults:
+* Vault name
+* Action: Operation performed on the vault
+  * Create / Delete
+  * Activate / Deactivate
+  * Edit 
+* Action time
+* User who performed the action.
+
+Use the column filters <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" /> to 
+filter the log by vault name, action, time range, or acting user.
+
+![Admin vaults](../../img/settings_admin_vaults_log.png#light-mode-only)
+![Admin vaults](../../img/settings_admin_vaults_log_dark.png#dark-mode-only)
+

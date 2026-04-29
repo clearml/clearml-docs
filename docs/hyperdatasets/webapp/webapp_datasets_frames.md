@@ -2,7 +2,7 @@
 title: Working with Frames
 ---
 
-:::important[ENTERPRISE FEATURE]
+:::important[Enterprise Feature]
 Hyper-Datasets are available under the ClearML Enterprise plan.
 :::
 

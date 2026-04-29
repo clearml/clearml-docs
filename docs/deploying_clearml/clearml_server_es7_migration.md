@@ -2,7 +2,7 @@
 title: Upgrading Server from v0.15 or Older to ClearML Server
 ---
 
-:::important[updating to ClearML Server v1.2+]
+:::important[Updating to ClearML Server v1.2+]
 If you are upgrading your ClearML Server to version 1.2 or newer, you will need to migrate your database contents to be compatible with the new version, 
 after performing the migration instructions below. 
 :::

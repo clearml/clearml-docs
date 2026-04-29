@@ -33,7 +33,7 @@ su -l ubuntu -c '/usr/bin/bash /home/ubuntu/.profile'
 
 ### Running the Script
 
-:::note[Self deployed ClearML server]
+:::note[Self-deployed ClearML server]
 A template `AWS Auto-Scaler` task is available in the `DevOps Services` project.
 You can clone it, adapt its [configuration](#configuration) to your needs, and enqueue it for execution directly from the ClearML UI. 
 :::

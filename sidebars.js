@@ -316,9 +316,10 @@ module.exports = {
             {
                 'Enterprise':
                         [
-                           'release_notes/clearml_server/enterprise/ver_3_28',
+                           'release_notes/clearml_server/enterprise/ver_3_29',
                            {
                                 'Older Versions': [
+                                     'release_notes/clearml_server/enterprise/ver_3_28',
                                      'release_notes/clearml_server/enterprise/ver_3_27', 'release_notes/clearml_server/enterprise/ver_3_26',
                                      'release_notes/clearml_server/enterprise/ver_3_25', 'release_notes/clearml_server/enterprise/ver_3_24',
                                      'release_notes/clearml_server/enterprise/ver_3_23', 'release_notes/clearml_server/enterprise/ver_3_22',
@@ -698,7 +699,9 @@ module.exports = {
                         'webapp/settings/webapp_settings_resource_configs',
                         'webapp/settings/webapp_settings_app_gw',
                         'webapp/settings/webapp_settings_usage_billing',
-                        'webapp/settings/webapp_settings_storage_credentials',
+                        {
+                            "Storage": ['webapp/settings/webapp_settings_storage_volumes', 'webapp/settings/webapp_settings_storage_credentials',]
+                        },
                         'webapp/settings/webapp_settings_analytics',
                         'webapp/settings/webapp_settings_ui_customization'
                     ]
@@ -904,6 +907,7 @@ module.exports = {
                    'user_management/user_groups',
                    'user_management/access_rules',
                    'user_management/admin_vaults',
+                   'deploying_clearml/enterprise_deploy/extra_configs/api_cred_expiration_policy'
                    ]
                 },
                 'deploying_clearml/enterprise_deploy/extra_configs/event_metering',

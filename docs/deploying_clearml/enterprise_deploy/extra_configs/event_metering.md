@@ -51,16 +51,18 @@ Events are configured in the Usage Aggregator configuration file, which by defau
 /opt/clearml/usage_aggregator.conf
 ```
 
-For each event type, the following definitions are required:
+For each event category, the following definitions are required:
 * `count_strategy` – How daily values are aggregated. The options are:
   * `sum` - Sum all reported values for a daily total
   * `max` - Store the maximum reported value for the day
-* `labels` – Events reported for this type. Each event (label) can include optional `pricing` information:
+* `labels` – Events reported for this category. Each event (label) can include optional `pricing` information:
   * `price` – Event unit price
   * `units` – How many reported units apply to the unit price
   * `currency` – Optional (defaults to USD)
+* `type`  - Optional UI indicator information. The Analytics UI uses this value to present the data with type-specific 
+  styling or icons. Available options: `compute`, `storage`, `model_tokens`, `users`.
 
-The following example defines a `users` event type with `admins` and `users` labels. It uses the `max` aggregation 
+The following example defines a `users` event category with `admins` and `users` labels. It uses the `max` aggregation 
 strategy, meaning only the maximum value reported each day will be stored. It also specifies pricing information such 
 that admin users cost $0.2 per user per day, and non-admin users cost $0.1 per user per day.
 
@@ -73,6 +75,7 @@ pricing {
 events {
     users: {
         count_strategy: max
+        type: users # optional
         labels: {
             admins {
                 pricing {
@@ -250,197 +253,255 @@ The API returns a JSON object containing usage information for each tenant:
     "tenants":
     [
         {
+            "currency": "USD",
+            "tenant": "1",
+            "total_cost": 66.9286,
             "categories":
             {
                 "compute":
                 {
+                    "type": "compute",
+                    "display_name": "compute",
+                    "free": false,
+                    "count_strategy": "sum",
+                    "unit_name": "sec",
+                    "total_usage_type": "total",
+                    "dates":
+                    [
+                        "2026-01-20",
+                        "2026-01-21",
+                        "2026-01-22"
+                    ],
+                    "usages":
+                    [
+                        0,
+                        0,
+                        0
+                    ],
                     "costs":
                     [
                         0.0,
                         0.0,
                         0.0
                     ],
-                    "count_strategy": "sum",
-                    "dates":
-                    [
-                        "2026-01-20",
-                        "2026-01-21",
-                        "2026-01-22"
-                    ],
-                    "display_name": "compute",
-                    "free": false,
+                    "total_usage": 0,
+                    "total_cost": 0.0,
                     "labels":
                     {
                         "gpu1":
                         {
-                            "costs":
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
                             "display_name": "gpu1",
                             "pricing":
                             {
                                 "price": 2.5,
                                 "units": 3600
                             },
-                            "total_cost": 0.0,
-                            "total_usage": 0,
                             "usages":
                             [
                                 0,
                                 0,
                                 0
-                            ]
+                            ],
+                            "costs":
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            "total_usage": 0,
+                            "total_cost": 0.0
                         }
-                    },
-                    "total_cost": 0.0,
-                    "total_usage": 0,
-                    "total_usage_type": "total",
-                    "unit_name": "sec",
-                    "usages":
-                    [
-                        0,
-                        0,
-                        0
-                    ]
+                    }
                 },
                 "storage":
                 {
+                    "type": "storage",
+                    "display_name": "storage",
+                    "free": false,
+                    "count_strategy": "max",
+                    "unit_name": "MB",
+                    "total_usage_type": "latest",
+                    "dates":
+                    [
+                        "2026-01-20",
+                        "2026-01-21",
+                        "2026-01-22"
+                    ],
+                    "usages":
+                    [
+                        5280.5177,
+                        5280.5177,
+                        5280.5177
+                    ],
                     "costs":
                     [
                         12.3762,
                         12.3762,
                         12.3762
                     ],
-                    "count_strategy": "max",
-                    "dates":
-                    [
-                        "2026-01-20",
-                        "2026-01-21",
-                        "2026-01-22"
-                    ],
-                    "display_name": "storage",
-                    "free": false,
+                    "total_usage": 5280.5177,
+                    "total_cost": 37.1286,
                     "labels":
                     {
                         "fileserver":
                         {
-                            "costs":
-                            [
-                                12.3762,
-                                12.3762,
-                                12.3762
-                            ],
                             "display_name": "fileserver",
                             "pricing":
                             {
                                 "price": 2.4,
                                 "units": 1024
                             },
-                            "total_cost": 37.1286,
-                            "total_usage": 5280.517719268799,
                             "usages":
                             [
                                 5280.517719268799,
                                 5280.517719268799,
                                 5280.517719268799
-                            ]
+                            ],
+                            "costs":
+                            [
+                                12.3762,
+                                12.3762,
+                                12.3762
+                            ],
+                            "total_usage": 5280.517719268799,
+                            "total_cost": 37.1286
                         }
-                    },
-                    "total_cost": 37.1286,
-                    "total_usage": 5280.5177,
-                    "total_usage_type": "latest",
-                    "unit_name": "MB",
-                    "usages":
-                    [
-                        5280.5177,
-                        5280.5177,
-                        5280.5177
-                    ]
+                    }
                 },
                 "users":
                 {
-                    "costs":
-                    [
-                        9.6,
-                        9.8,
-                        9.8
-                    ],
+                    "type": "users",
+                    "display_name": "users",
+                    "free": false,
                     "count_strategy": "max",
+                    "unit_name": "",
+                    "total_usage_type": "latest",
                     "dates":
                     [
                         "2026-01-20",
                         "2026-01-21",
                         "2026-01-22"
                     ],
-                    "display_name": "users",
-                    "free": false,
+                    "usages":
+                    [
+                        60.0,
+                        62.0,
+                        62.0
+                    ],
+                    "costs":
+                    [
+                        9.6,
+                        9.8,
+                        9.8
+                    ],
+                    "total_usage": 62.0,
+                    "total_cost": 29.2,
                     "labels":
                     {
                         "admins":
                         {
-                            "costs":
-                            [
-                                7.2,
-                                7.2,
-                                7.2
-                            ],
                             "display_name": "admins",
                             "pricing":
                             {
                                 "price": 0.2,
                                 "units": 1
                             },
-                            "total_cost": 21.6,
-                            "total_usage": 36.0,
                             "usages":
                             [
                                 36.0,
                                 36.0,
                                 36.0
-                            ]
+                            ],
+                            "costs":
+                            [
+                                7.2,
+                                7.2,
+                                7.2
+                            ],
+                            "total_usage": 36.0,
+                            "total_cost": 21.6
                         },
                         "users":
                         {
-                            "costs":
-                            [
-                                2.4,
-                                2.6,
-                                2.6
-                            ],
                             "display_name": "users",
                             "pricing":
                             {
                                 "price": 0.1,
                                 "units": 1
                             },
-                            "total_cost": 7.6,
-                            "total_usage": 26.0,
                             "usages":
                             [
                                 24.0,
                                 26.0,
                                 26.0
-                            ]
+                            ],
+                            "costs":
+                            [
+                                2.4,
+                                2.6,
+                                2.6
+                            ],
+                            "total_usage": 26.0,
+                            "total_cost": 7.6
                         }
-                    },
-                    "total_cost": 29.2,
-                    "total_usage": 62.0,
-                    "total_usage_type": "latest",
+                    }
+                },
+                "service_accounts":
+                {
+                    "type": "service_accounts",
+                    "display_name": "Service Accounts",
+                    "free": false,
+                    "count_strategy": "max",
                     "unit_name": "",
+                    "total_usage_type": "latest",
+                    "dates":
+                    [
+                        "2026-01-20",
+                        "2026-01-21",
+                        "2026-01-22"
+                    ],
                     "usages":
                     [
-                        60.0,
-                        62.0,
-                        62.0
-                    ]
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "costs":
+                    [
+                        0.2,
+                        0.2,
+                        0.2
+                    ],
+                    "total_usage": 2.0,
+                    "total_cost": 0.6,
+                    "labels":
+                    {
+                        "accounts":
+                        {
+                            "display_name": "accounts",
+                            "pricing":
+                            {
+                                "price": 0.1,
+                                "units": 1
+                            },
+                            "usages":
+                            [
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "costs":
+                            [
+                                0.2,
+                                0.2,
+                                0.2
+                            ],
+                            "total_usage": 2.0,
+                            "total_cost": 0.6
+                        }
+                    }
                 }
-            },
-            "currency": "USD",
-            "tenant": "1",
-            "total_cost": 66.3286
+            }
         }
     ]
 }

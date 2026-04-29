@@ -17,7 +17,7 @@ point to the data.
 
 ### Version Confirmation
 
-To change the links, use the `fix_fileserver_urls.py` script, located inside the `allegro-apiserver` 
+To change the links, use the `fix_fileserver_urls.py` script, located inside the `clearml-apiserver` 
 Docker container. This script will be executed from within the `apiserver` container. Make sure the `apiserver` version 
 is 3.20 or higher.
 
@@ -33,7 +33,7 @@ script changes the values in the databases, and can't be undone.
    * In `docker-compose`:
     
       ```commandline
-      sudo docker exec -it allegro-apiserver /bin/bash
+      sudo docker exec -it clearml-apiserver /bin/bash
        ```
     
    * In Kubernetes:

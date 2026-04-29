@@ -14,6 +14,8 @@ including:
 * [Plots](#plots) - Other plots and data, for example: Matplotlib, Plotly, and ClearML explicit reporting.
 * [Debug samples](#debug-samples) - Images, audio, video, and HTML.
 
+You can download the task information (execution details, configuration parameters etc.) as a JSON file by clicking  <img src="/docs/latest/icons/ico-export.svg" alt="Profile button" className="icon size-md space-sm" />.
+
 ## Viewing Modes
 
 The ClearML Web UI provides two viewing modes for task details:

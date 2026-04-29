@@ -41,7 +41,7 @@ agentk8sglue:
      value: "custom_code:update_template"
   fileMounts:
     - name: "custom_code.py"
-      folderPath: "/root"
+      folderPath: "/home/nonroot"
       fileContent: |-
         import json
         from pprint import pformat 
@@ -103,7 +103,7 @@ agentk8sglue:
      value: "custom_code:update_template"
   fileMounts:
     - name: "custom_code.py"
-      folderPath: "/root"
+      folderPath: "/home/nonroot"
       fileContent: |-
         import json
         from pprint import pformat 
@@ -146,7 +146,7 @@ agentk8sglue:
      value: "custom_code:update_template"
   fileMounts:
     - name: "custom_code.py"
-      folderPath: "/root"
+      folderPath: "/home/nonroot"
       fileContent: |-
         import json
         from pprint import pformat
@@ -223,7 +223,7 @@ agentk8sglue:
             - ReadWriteOnce
     # Custom code module for updating the Pod template
     - name: "custom_code.py"
-      folderPath: "/root"
+      folderPath: "/home/nonroot"
       fileContent: |-
         import json
         from pprint import pformat 

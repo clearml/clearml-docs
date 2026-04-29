@@ -121,17 +121,17 @@ helm upgrade -i <RELEASE_NAME> -n <WORKLOAD_NAMESPACE> oci://docker.io/clearml/c
 
 Replace the placeholders with the following values:
 
-* `<RELEASE_NAME>` - Unique name for the App Gateway within the K8s namespace. This is a required parameter in 
+* `<RELEASE_NAME>`: Unique name for the App Gateway within the K8s namespace. This is a required parameter in 
   Helm, which identifies a specific installation of the chart. The release name also defines the App Gateway's name and 
   appears in the UI within AI workload application URLs (e.g. Remote IDE URLs). This can be customized to support multiple installations within the same 
   namespace by assigning different release names.
-* `<WORKLOAD_NAMESPACE>` - [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) 
+* `<WORKLOAD_NAMESPACE>`: [Kubernetes Namespace](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/) 
   where workloads will be executed. This namespace must be shared between a dedicated ClearML Agent and an App 
   Gateway. The agent is responsible for monitoring its assigned task queues and spawning workloads within this 
   namespace. The App Gateway monitors the same namespace for AI workloads (e.g. remote IDE applications). The App Gateway has a 
   namespace-limited scope, meaning it can only detect and manage tasks within its 
   assigned namespace.
-* `<CHART_VERSION>` - Version recommended by the ClearML Support Team.
+* `<CHART_VERSION>`: Version recommended by the ClearML Support Team.
 
 ## Monitoring and Testing the Gateway
 

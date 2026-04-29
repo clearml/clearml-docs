@@ -84,6 +84,10 @@ You can create credentials for any workspace that you are a member of.
 
 1. In the dialog that pops up, you can input a label for the new credentials 
 
+  :::important[Credential Expiration]
+  The ClearML Hosted Service and the ClearML Enterprise plan support setting an expiration period for API credentials.
+  :::
+
 The dialog displays new credentials, formatted as a ready-to-copy configuration file section (including server configuration 
 information).
 

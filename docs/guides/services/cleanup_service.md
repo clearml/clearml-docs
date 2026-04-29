@@ -10,7 +10,7 @@ Modify the cleanup service's parameters to specify which archived tasks to delet
 
 ### Running the Cleanup Service
 
-:::note[Self deployed ClearML server]
+:::note[Self-deployed ClearML server]
 A template `Cleanup Service` task is available in the `DevOps Services` project. You can clone it, adapt its [configuration](#configuration) 
 to your needs, and enqueue it for execution directly from the ClearML UI. 
 :::

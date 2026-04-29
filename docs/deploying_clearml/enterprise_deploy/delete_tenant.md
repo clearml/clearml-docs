@@ -22,7 +22,7 @@ Any external artifacts (ex: AWS S3, GCS, minio) can be removed manually.
    * In `docker-compose`:
 
      ```
-     sudo docker exec -it allegro-apiserver /bin/bash
+     sudo docker exec -it clearml-apiserver /bin/bash
      ```
    * In Kubernetes:
 
@@ -75,7 +75,7 @@ To remove a tenant's data from the fileserver, you can choose one of the followi
    * In `docker-compose`:
 
      ```
-     sudo docker exec -it allegro-fileserver /bin/bash
+     sudo docker exec -it clearml-fileserver /bin/bash
      ```
    * In Kubernetes:
 
@@ -98,7 +98,7 @@ To remove a tenant's data from the fileserver, you can choose one of the followi
 Run the following:
 
 ```
-rm -rf /opt/allegro/data/fileserver/<tenant-id>
+rm -rf ${CLEARML_ROOT}/data/fileserver/<tenant-id>
 ```
 
 #### Kubernetes

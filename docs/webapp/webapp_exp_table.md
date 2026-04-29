@@ -245,6 +245,7 @@ to open the context menu
 | Add Tag | Tag tasks with color-coded labels to assist you in organizing your work. See [tagging tasks](webapp_exp_track_visual.md#tagging-tasks). | Any state | None                                            |
 | Clone | Make an exact, editable copy of a task (for example, to reproduce a task, but keep the original). | *Draft* | Newly cloned task is *Draft*              |
 | Move to Project | Move a task to another project. | Any state | None                                            |
+| Export | Export the task object (execution details, configuration parameters, etc.) as a JSON file. | Any state | None                                            |
 | Compare | Compare selected tasks (see [Comparing Tasks](webapp_exp_comparing.md)) | Any state | None                                            |
 
 :::important[Enterprise Feature]

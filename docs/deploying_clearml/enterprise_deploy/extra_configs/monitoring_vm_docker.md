@@ -40,7 +40,7 @@ A usage spike can happen during normal operation. But very high spikes (above 6G
 For example, the following comment retrieves the API server's information from the Docker server:
 
 ```commandline
-sudo curl -s --unix-socket /var/run/docker.sock http://localhost/containers/allegro-apiserver/stats?stream=false  
+sudo curl -s --unix-socket /var/run/docker.sock http://localhost/containers/clearml-apiserver/stats?stream=false  
 ```
 
 We recommend monitoring the API server memory in addition to the system's available RAM. Alerts should be triggered 

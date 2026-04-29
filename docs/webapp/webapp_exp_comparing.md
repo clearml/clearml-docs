@@ -31,8 +31,7 @@ The comparison page opens in the **DETAILS** tab with the tasks [compared side b
 
 ### Modifying Task Selection
 
-Click the `TASKS` button to view your currently compared tasks. Click `X` on a listed task to remove
-it from the comparison.
+Click `TASKS` to view the tasks currently included in the comparison.
 
 ![Tasks list](../img/webapp_compare_exp_select_2.png#light-mode-only)
 ![Tasks list](../img/webapp_compare_exp_select_2_dark.png#dark-mode-only)
@@ -48,6 +47,17 @@ compared tasks at the top.
 appropriate column header controls. Alternatively, use the search bar to find tasks by name.
 1. Select tasks to include in the comparison (and/or clear the selection of any tasks you wish to remove).
 1. Click **APPLY**.
+
+### Task Actions
+Use the task actions menu <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> 
+on a task in the comparison to perform actions on it:
+* View task in new tab - Open the task page to view all details.
+* Rename
+* Archive
+* Remove from Comparison
+
+![Task actions](../img/webapp_compare_exp_actions.png#light-mode-only)
+![Task actions](../img/webapp_compare_exp_actions_dark.png#dark-mode-only)
 
 ## Sharing Comparison Page
 To share a comparison page, copy the full URL from the address bar and send it to a teammate to collaborate. They will 

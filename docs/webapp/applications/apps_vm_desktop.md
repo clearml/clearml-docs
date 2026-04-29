@@ -45,7 +45,7 @@ Once you have launched an app instance, you can view the following information i
 ![VM Desktop Dashboard](../../img/apps_vm_desktop.png#light-mode-only)
 ![VM Desktop Dashboard](../../img/apps_vm_desktop_dark.png#dark-mode-only)
 
-:::tip[EMBEDDING CLEARML VISUALIZATION]
+:::tip[Embedding ClearML Visualization]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.

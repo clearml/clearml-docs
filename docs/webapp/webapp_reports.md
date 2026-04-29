@@ -175,8 +175,19 @@ or in List view <img src="/docs/latest/icons/ico-flat-view.svg" alt="List view" 
 view, all reports are shown side-by-side. In Project view, reports are organized according to their projects, and 
 top-level projects are displayed. Click on a project card to view the project's reports.
 
-Use the search bar <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
-to find specific reports. You can query by the report name, ID, tags, project, description, and report content.
+Filter page contents by specific fields  <img src="/docs/latest/icons/ico-filter-off.svg" alt="Filter" className="icon size-md" />
+or through free form search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" />.
+
+Field filters support:
+* My Work - Show only reports that you created
+* Tags - Choose which tags to filter by from a list of tags used in the reports.
+  * Filter by multiple tag values using the **ANY** or **ALL** options, which correspond to the logical "AND" and "OR" 
+  respectively. These options appear on the top of the tag list.
+  * Filter by the absence of a tag (logical "NOT") by clicking its checkbox twice. An X will appear in the tag's checkbox.
+* User – Filter reports by the user who created them.
+* Status (available in List view only) – Filter reports by their status (Published or Draft).
+
+Free form search queries report name, ID, tags, project, description, and report content. 
 To search using regex, click the `.*` icon on the search bar.
 
 ![Report page](../img/webapp_report_page.png#light-mode-only)

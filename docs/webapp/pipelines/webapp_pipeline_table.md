@@ -108,10 +108,28 @@ Click **Advanced configurations** to change the run's execution queue.
 
 After clicking **RUN**, the new pipeline run is enqueued in the specified queue, and the run is added to the pipeline run table. 
 
+### Create New Pipeline
+You can select to create a run in a new pipeline. This is useful, for example, when you want to use an existing pipeline 
+run as a starting point but develop it as a separate pipeline.
+
+Click the dropdown arrow next to **+ NEW RUN** and select **Run in New Pipeline**. This opens a modal where you define the new pipeline:
+* Pipeline's name - Name of the new pipeline.
+* Initial version - The version number for the new run
+* Project - ClearML project where the new pipeline will be stored. By default, this is the same project as the original pipeline.
+* Parameters – If the pipeline includes custom parameters, specify their values. The cloned run's values are pre-filled.
+* Configuration
+  * Pipeline controller queue - Queue to which the pipeline run will be enqueued (make sure an agent is assigned to that queue).
+ 
+<div class="max-w-75">
+
+![New pipeline modal](../../img/webapp_pipeline_clone.png#light-mode-only)
+![New pipeline modal](../../img/webapp_pipeline_clone_dark.png#dark-mode-only)
+
+</div> 
 
 ## Run Actions
 
-The following table describes the actions that can be done from the run table, including the [states](../../fundamentals/task.md#task-states)
+The following table describes the actions that can be performed from the run table, including the [states](../../fundamentals/task.md#task-states)
 that allow each operation.  
 
 Access these actions with the context menu in any of the following ways:
@@ -122,12 +140,14 @@ Access these actions with the context menu in any of the following ways:
 |---|---|---|---|
 | Details | View pipeline details. Can also be accessed by double-clicking a run in the pipeline runs table. | Any state |  None  |
 | Run | Create a pipeline run. Configure and enqueue it for execution. See [Create Run](#create-run).  | Any State | *Pending* |
+| Run in New Pipeline | Create a run in a new pipeline based on the selected run's configuration. See [Create New Pipeline](#create-new-pipeline).| Any State | *Pending* |
 | Abort | Manually stop / cancel a run. | *Running* / *Pending* | *Aborted* |
 | Continue | Rerun with the same parameters. |  *Aborted* | *Pending* |
 | Add Tag | User-defined labels added to runs for grouping and organization. | Any state |  None  |
 | Archive | Move pipeline run to the pipeline's archive. | Any state |  *Pending* to *Draft*  |
 | Restore | Action available in the archive. Restore a run to the active pipeline runs table. | Any state | None |
 | Delete | Action available in the archive. Delete a run and its steps, which will also remove all their logs, results, artifacts and debug samples | Any State | N/A |
+| Export | Export pipeline run information (step execution details, configuration parameters etc.) as a JSON file. | Any State | None |
 
 <div class="max-w-50">
 

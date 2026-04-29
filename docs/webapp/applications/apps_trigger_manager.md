@@ -54,8 +54,8 @@ This section describes the default configuration provided by ClearML.
   values from the file, which can be modified before launching the app instance
 * **Name** - Name for the app instance. This will appear in the instance list
 * **Triggers** - Events whose occurrence will cause a task to be executed
-  * Task ID - ID of a ClearML task to clone and enqueue 
-  for execution when the trigger is activated. 
+  * Task ID - Select a task or enter its ID. This task will be cloned and enqueued for execution when the trigger is activated. 
+    Click **Select** to open the task selection modal, where you can browse and search for a task, then apply it.
   * Target Project - The project where the task will be cloned to
   * Queue - The ClearML Queue to which cloned tasks are enqueued (make sure an agent is assigned to that queue)
   * Override Task Hyperparameters - Override parameters in the cloned task. Input the original task's configuration 

@@ -127,7 +127,7 @@ set up in advance.
 * `maxServices` - The maximum number of sessions the agent will spawn
 
 For example: 
-```
+```yaml
 # -- Sessions internal service configuration
 sessions:
   # -- Enable/Disable sessions portmode WARNING: only one Agent deployment can have this set to true

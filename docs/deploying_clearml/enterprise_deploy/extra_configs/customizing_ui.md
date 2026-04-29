@@ -11,7 +11,7 @@ ClearML enables organizations to offer a custom branded Web UI through a flexibl
 These customizations are implemented through container start-time parameters, passed as environment variables when 
 launching the ClearML UI container. For example:
 
-```c
+```bash
 docker run -e PARAM_NAME=value ... clearml-ui-image 
 ```
 

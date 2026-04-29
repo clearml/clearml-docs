@@ -74,3 +74,11 @@ of a pipeline card to open its context menu and access pipeline actions.
 * **Add Tag** - Add label to the pipeline to help easily classify groups of pipelines.
 * **Delete** - Delete the pipeline: delete all its runs and any models/artifacts produced (a list of remaining artifacts 
   is returned). To delete a pipeline, all its runs must first be archived. 
+* **Clone** -  Create a new pipeline based on the pipeline's last run. Add the following details:  
+  * New Pipeline Details
+    * Pipeline name - Name for the new pipeline (required).
+    * Initial version - The version number of the first run in the new pipeline 
+    * Project - ClearML project where the new pipeline will be stored. By default, this is the same project as the original pipeline.
+  * Parameters - If the pipeline includes custom parameters, specify their values. The cloned run’s values are pre-filled.
+  * Configuration 
+    * Pipeline controller queue - Queue to which the new pipeline run will be enqueued (make sure an agent is assigned to that queue).

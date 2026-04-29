@@ -135,25 +135,40 @@ connections.
 
 ## Access Tokens
 
-Tokens provide access to AI Application Gateway endpoints. The **Access Tokens** table lists all manually created tokens 
-in the system. The table shows each token's:
+Tokens provide access to AI Application Gateway endpoints. 
+
+Two token types are available:
+* User tokens - Grant access according to ClearML user (or service account) identity privileges
+* Endpoint tokens - Grant access to designated endpoints regardless of user identity
+
+The **Access Tokens** table lists all manually created tokens in the system. The table shows each token's:
 * Label
+* Type - User or Endpoint 
 * Creation Time
 * Expiration Time
-* User - The user or service account the token grants access as
+* Scope - The token access privileges: user identity for user tokens or endpoint list for endpoint tokens
+* Metadata - Additional key-value metadata attached to the token (for endpoint tokens)
 * Created by - User who generated the token
 
 ![Application Gateway token table](../../img/settings_app_gateway_tokens.png#light-mode-only)
 ![Application Gateway token table](../../img/settings_app_gateway_tokens_dark.png#dark-mode-only)
 
 You can search <img src="/docs/latest/icons/ico-search.svg" alt="Magnifying glass" className="icon size-md space-sm" /> 
-the tokens list using labels or usernames.
+the tokens list by label or username.
 
 ### Generating an Access Token
 To generate an access token:
 1. Click **Generate a Token**
-1. Under `Label`, enter a descriptive name for the token
-1. Under `Expiration`, enter the number of days the token should remain valid
+2. Select the token type and enter token details:
+   * User token
+     * `Label` - A descriptive name for the token
+     * `User` - The ClearML user identity whose privileges will be used for authorizing endpoint access
+     * `Expiration` - The number of days the token should remain valid
+   * Endpoint token
+     * `Label` - A descriptive name for the token
+     * `Endpoints` - Select the endpoints the token will authorize access to (out of the non-public endpoints available under Static Routes).
+     * `Additional Token Metadata` - Optional custom key-value metadata attached to the token. 
+     * `Expiration` - The number of days the token should remain valid
 1. Click `Generate`, which creates a token and copies it to your clipboard
 
 ### Revoking an Access Token

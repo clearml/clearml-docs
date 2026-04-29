@@ -44,7 +44,7 @@ Once you have launched an app instance, you can view the following information i
 ![SSH Session Dashboard](../../img/apps_ssh_session_dashboard.png#light-mode-only)
 ![SSH Session Dashboard](../../img/apps_ssh_session_dashboard_dark.png#dark-mode-only)
 
-:::tip[EMBEDDING CLEARML VISUALIZATION]
+:::tip[Embedding ClearML Visualization]
 You can embed plots from the app instance dashboard into [ClearML Reports](../webapp_reports.md) and other third-party platforms that support embedded content
 (e.g. Notion). These visualizations are updated live as the app instance(s) updates. Hover over the plot and click <img src="/docs/latest/icons/ico-plotly-embed-code.svg" alt="Embed code" className="icon size-md space-sm" /> 
 to copy the embed code, and navigate to a report to paste the embed code.
@@ -89,7 +89,18 @@ values from the file, which can be modified before launching the app instance
   * Image - Container image to launch
   * Docker Arguments - Additional arguments for the Docker image
   * Init Script - Bash script that is executed upon container boot (comments are supported only at the beginning of the 
-  line)
+  line) <br/><br/>
+
+  :::important 
+  The selected container image must include required Python packages for the application or allow installing them at runtime.
+  
+  To view the required packages, hover over **Container requirements** in the application page under the app description.
+  
+  In air-gapped environments, ensure one of the following:
+  * Required packages are pre-installed in the image
+  * The container can access a local PyPI proxy or package repository
+  :::
+  
 * **Extra Packages** - Specify Python packages to install when setting up the remote environment
 * **Persistent Workspace Path** - Specify your workspace root directory. It will be automatically stored when the session 
   is closed and available for restoring into new sessions (example: `~/workspace`)

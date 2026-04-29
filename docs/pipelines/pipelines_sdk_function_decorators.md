@@ -218,7 +218,7 @@ if __name__ == '__main__':
    print('pipeline completed')
 ```
 
-:::tip[RUN PIPELINE CONTROLLER LOCALLY]
+:::tip[Run Pipeline Controller Locally]
 You can run the pipeline logic locally, while keeping the pipeline components execution remote
 (enqueued and executed by the `clearml-agent`). Pass `pipeline_execution_queue=None` to the `@PipelineDecorator.pipeline` decorator.
 ```python

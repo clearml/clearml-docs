@@ -72,7 +72,7 @@ A service account has all the privileges of a normal user in ClearML, with the f
   * Used to run an Autoscaler application, this will allow you to make use of the `Apply Task Owner Vault Configuration`
   option.
 
-:::note[Access Rules ]
+:::note[Access Rules]
 When [access controls](webapp_settings_access_rules.md) are provisioned, they apply to service accounts the same as for ClearML users.
 Therefore, in order to use a service account to run an agent in daemon mode, the service account must have access to the 
 queue the agent will service.
@@ -98,9 +98,12 @@ Hover over a service account in the table to **Edit** or **Delete** it.
 
 To create a service account:
 1. Click **+ ADD SERVICE ACCOUNT**
-2. In the **ADD SERVICE ACCOUNT** modal input a name for the new account. Select `Allow impersonation` to allow the 
-   service account to assume the identity of a task owner 
-4. Click **Save**
+2. In the **ADD SERVICE ACCOUNT** modal:
+   * Input a name for the new account
+   * Select `Allow impersonation` to allow the service account to assume the identity of the owners of the tasks it is running.
+   * Select `Set as Admin` to grant the service account administrator privileges. See [Setting a Service Account as Administrator](#setting-a-service-account-as-administrator) for details on enabling admin service accounts. 
+   * Set the expiration period for the service account’s initial set of credentials
+3. Click **Save**
 
 :::note[Impersonation]
 Service accounts are members of the `Users` group, meaning they can access the resources available to all users. When 
@@ -142,6 +145,9 @@ To assign an admin role to a service account:
 To generate new credentials for a service account:
 1. Click the account's row on the table, which opens the editing panel
 1. Click **Create new credentials**
+2. In the **Create Credentials** modal:
+   * Under `Label`, enter a descriptive name for the credentials 
+   * Set the expiration period for credentials
 
 The dialog displays new credentials, formatted as a ready-to-copy configuration file section.
 

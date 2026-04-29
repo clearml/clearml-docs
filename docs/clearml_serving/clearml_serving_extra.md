@@ -51,7 +51,7 @@ This simplifies CI/CD workflows, as a single API automatically deploys (or remov
 
 ### Automatic Model Deployment Example
 
-1. Configure the model auto-update on the Serving Service  (for more details, see clearml-serving [model auto-update subcommand](clearml_serving_cli.md#auto-update)): 
+1. Configure the model auto-update on the Serving Service  (for more details, see `clearml-serving` [model auto-update subcommand](clearml_serving_cli.md#auto-update)): 
 
    ```bash
    clearml-serving --id <service_id> model auto-update --engine sklearn --endpoint "test_model_sklearn_auto" --preprocess "preprocess.py" --name "train sklearn model" --project "serving examples" --max-versions 2`

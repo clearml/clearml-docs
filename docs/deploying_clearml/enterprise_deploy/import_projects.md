@@ -93,7 +93,7 @@ Open a bash session inside the `apiserver` container of the server:
 * In `docker-compose`:
   
   ```commandline
-  sudo docker exec -it allegro-apiserver /bin/bash
+  sudo docker exec -it clearml-apiserver /bin/bash
   ```
   
 * In Kubernetes:
@@ -156,7 +156,7 @@ The data tool should be executed from within the `apiserver` docker container.
    * In `docker-compose`:
   
      ```commandline
-     sudo docker exec -it allegro-apiserver /bin/bash
+     sudo docker exec -it clearml-apiserver /bin/bash
      ```
   
    * In Kubernetes:
@@ -200,7 +200,7 @@ Data in the file server is organized by project. For each project, all data refe
 stored in a folder bearing the name of the project. This folder can be located in: 
 
 ```
-/opt/clearml/data/fileserver/<project name>
+${CLEARML_ROOT}/data/fileserver/<project name>
 ```
 
 The entire projects' folders content should be copied to the target server (see [Importing Fileserver Data](#importing-file-server-data)).
@@ -211,8 +211,13 @@ Data in the file server is organized by tenant and project. For each project, al
 project is stored in a folder bearing the name of the project. This folder can be located in:
 
 ```
-/opt/allegro/data/fileserver/<company_id>/<project name>
+${CLEARML_ROOT}/data/fileserver/<company_id>/<project name>
 ```
+:::note
+The file server root is defined by `CLEARML_ROOT` in `constants.env`.
+Earlier versions used `/opt/allegro` by default. When migrating, ensure `CLEARML_ROOT` points to the existing data directory.
+:::
+
 
 The entire projects' folders content should be copied to the target server (see  [Importing Fileserver Data](#importing-file-server-data)).
 
@@ -223,7 +228,7 @@ The entire projects' folders content should be copied to the target server (see 
 Place the exported projects' folder(s) content into the target file server's storage in the following folder:
 
 ```
-/opt/allegro/data/fileserver/<company_id>/<project name>
+${CLEARML_ROOT}/data/fileserver/<company_id>/<project name>
 ```
 
 ### Fixing Registered URLs

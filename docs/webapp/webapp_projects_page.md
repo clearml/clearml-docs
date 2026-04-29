@@ -85,6 +85,19 @@ of a project folder to open its context menu and access the following project ac
   * **Scalar View Defaults** - Configure the default scalar view configuration for tasks and models
     * **Scalar view setting** - Grouping, X-axis units and plot smoothing (see [Scalar Plot Tools](webapp_exp_track_visual.md#scalar-plot-tools))
     * **Default scalars** - Choose which metrics are visible by default when viewing task/model scalars.
+  * **Storage Mounts (Enterprise Only)** - Specify storage configuration the ClearML Agent will apply when running tasks 
+    in this project. To add a mountpoint:
+    1. Click **Add Mountpoint**
+    2. Input the following information:
+       * Volume -  Select storage volume. Available volumes are predefined by administrators. 
+       * Volume Configuration - Additional configuration can be specified based on the volume template specified by the 
+         admin, such as the container mount point. 
+         
+         Click **Available System Variables** in the Project Settings window for built-in variables that can be used in volume configuration. 
+
+         ![Mountpoint settings](../img/webapp_project_setting_mounts.png#light-mode-only)
+         ![Mountpoint settings](../img/webapp_project_setting_mounts_dark.png#dark-mode-only)
+       
 * **New Project** - Create a new project (by default a subproject). 
 * **Move to** - Move the project into another project. If the target project does not exist, it is created on-the-fly.
 * **Delete** - Delete the project. To delete a project, all of its contents (i.e. any pipelines/reports/datasets) must

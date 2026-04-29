@@ -2,7 +2,7 @@
 title: Modifying Dataviews
 ---
 
-:::important[ENTERPRISE FEATURE]
+:::important[Enterprise Feature]
 Dataviews are available under the ClearML Enterprise plan.
 :::
 

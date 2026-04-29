@@ -14,8 +14,7 @@ To select models to compare:
 The comparison page opens in the **DETAILS** tab, with the models compared [side by side](#side-by-side-textual-comparison).
 
 ### Modifying Model Selection
-Click the `MODELS` button to view your currently compared models. Click `X` on a listed model to remove
-it from the comparison.
+Click `MODELS` to view the models currently included in the comparison.
 
 ![Models list](../img/webapp_compare_model_select_1.png#light-mode-only)
 ![Models list](../img/webapp_compare_model_select_1_dark.png#dark-mode-only)
@@ -31,6 +30,17 @@ compared models at the top.
 appropriate column header controls. Alternatively, use the search bar to find models by name.
 1. Select models to include in the comparison (and/or clear the selection of any models you wish to remove).
 1. Click **APPLY**.
+
+### Model Actions
+Use the model actions menu <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> 
+on a menu in the comparison to perform actions on it:
+* View menu in new tab - Open the menu page to view all details.
+* Rename
+* Archive
+* Remove from Comparison
+
+![Model actions](../img/webapp_compare_model_actions.png#light-mode-only)
+![Model actions](../img/webapp_compare_model_actions_dark.png#dark-mode-only)
 
 ## Sharing Comparison Page
 To share a comparison page, copy the full URL from the address bar and send it to a teammate to collaborate. They will 

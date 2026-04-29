@@ -110,7 +110,7 @@ The Logger class provides methods to control aspects of ClearML's logging.
 Set the default storage URI for uploading debug samples using the [`Logger.set_default_upload_destination`](../references/sdk/logger.md#set_default_upload_destination) method.
 The debug samples are uploaded separately. A link to each sample is reported.
 
-:::note[DESTINATION STORAGE CREDENTIALS]
+:::note[Destination Storage Credentials]
 Credentials for the destination storage are specified in the [ClearML configuration file](../configs/clearml_conf.md#sdk-section). 
 :::
 

@@ -22,11 +22,11 @@ The following are required for the ClearML on-premises server:
   - Data  
     - For storing Elastic and Mongo databases  
     - Size depends on the usage. Recommended not to start with less than 100 GB  
-    - Mounted to `/opt/allegro/data`  
+    - Mounted to `${CLEARML_ROOT}/data`  
   - File Server  
     - For storing `fileserver` files (models and debug samples)  
     - Size depends on usage  
-    - Mounted to `/opt/allegro/data/fileserver`  
+    - Mounted to `${CLEARML_ROOT}/data/fileserver`  
 - User for running ClearML services with administrator privileges  
 - Ports 8080, 8081, and 8008 available for the ClearML Server services
 
@@ -35,9 +35,11 @@ In addition, make sure you have the following (provided by ClearML):
 - Docker hub credentials to access the ClearML images  
 - `docker-compose.yml` - The main compose file containing the services definitions  
 - `docker-compose.override.yml` - The override file containing additions that are server specific, such as SSO integration  
-- `constants.env` - The `env` file contains values of items in the `docker-compose` that are unique for 
-a specific environment, such as keys and secrets for system users, credentials, and image versions. The constant file 
-should be reviewed and modified prior to the server installation
+- `constants.env` - The file contains values for `docker-compose` variables that are unique for 
+a specific environment, such as keys and secrets for system users, credentials, and image versions. The constants file 
+should be reviewed and modified prior to the server installation. Specifically, make sure `CLEARML_ROOT`, the base directory 
+for all ClearML data and configuration files, is defined as expected here (e.g. `grep CLEARML_ROOT constants.env`)
+
 
 
 ## Installing ClearML Server 
@@ -121,33 +123,34 @@ should be reviewed and modified prior to the server installation
    ```
    sudo rm -R /opt/clearml/
    sudo rm -R /opt/allegro/
+   [ -n "${CLEARML_ROOT}" ] && sudo rm -R "${CLEARML_ROOT}"
    ```
    
 1. Create local directories for the databases and storage:
 
    ```
-   sudo mkdir -pv /opt/allegro/data/elastic7plus
-   sudo chown 1000:1000 /opt/allegro/data/elastic7plus
-   sudo mkdir -pv /opt/allegro/data/mongo_4/configdb
-   sudo mkdir -pv /opt/allegro/data/mongo_4/db
-   sudo mkdir -pv /opt/allegro/data/redis
-   sudo mkdir -pv /opt/allegro/data/fileserver
-   sudo mkdir -pv /opt/allegro/data/fileserver/tmp
-   sudo mkdir -pv /opt/allegro/logs/apiserver
-   sudo mkdir -pv /opt/allegro/documentation
-   sudo mkdir -pv /opt/allegro/logs/fileserver
-   sudo mkdir -pv /opt/allegro/logs/fileserver-proxy
-   sudo mkdir -pv /opt/allegro/data/fluentd/buffer
-   sudo mkdir -pv /opt/allegro/config/webserver_external_files
-   sudo mkdir -pv /opt/allegro/config/onprem_poc
+   sudo mkdir -pv ${CLEARML_ROOT}/data/elastic7plus
+   sudo chown 1000:1000 ${CLEARML_ROOT}/data/elastic7plus
+   sudo mkdir -pv ${CLEARML_ROOT}/data/mongo_4/configdb
+   sudo mkdir -pv ${CLEARML_ROOT}/data/mongo_4/db
+   sudo mkdir -pv ${CLEARML_ROOT}/data/redis
+   sudo mkdir -pv ${CLEARML_ROOT}/data/fileserver
+   sudo mkdir -pv ${CLEARML_ROOT}/data/fileserver/tmp
+   sudo mkdir -pv ${CLEARML_ROOT}/logs/apiserver
+   sudo mkdir -pv ${CLEARML_ROOT}/documentation
+   sudo mkdir -pv ${CLEARML_ROOT}/logs/fileserver
+   sudo mkdir -pv ${CLEARML_ROOT}/logs/fileserver-proxy
+   sudo mkdir -pv ${CLEARML_ROOT}/data/fluentd/buffer
+   sudo mkdir -pv ${CLEARML_ROOT}/config/webserver_external_files
+   sudo mkdir -pv ${CLEARML_ROOT}/config/onprem_poc
    ```
 
-1. Copy the following ClearML configuration files to `/opt/allegro`:
+1. Copy the following ClearML configuration files to `${CLEARML_ROOT}`:
    * `constants.env`
    * `docker-compose.override.yml`
    * `docker-compose.yml`
 
-1. Create an initial ClearML configuration file `/opt/allegro/config/onprem_poc/apiserver.conf` with a fixed user:
+1. Create an initial ClearML configuration file `${CLEARML_ROOT}/config/onprem_poc/apiserver.conf` with a fixed user:
 
    ``` 
    auth {
@@ -249,28 +252,28 @@ Create a directory for the CA certificate and build a combined certificate bundl
 
 ```bash
 # Create directory
-sudo mkdir -p /opt/allegro/config/ca-certificates
+sudo mkdir -p ${CLEARML_ROOT}/config/ca-certificates
 
 # Copy your private CA certificate (adjust source path as needed)
-sudo cp /path/to/private-ca.crt /opt/allegro/config/ca-certificates/
+sudo cp /path/to/private-ca.crt ${CLEARML_ROOT}/config/ca-certificates/
 ```
 
 :::note
 If your IT department provides a complete CA bundle (containing both system CAs and your private CA), you can
 skip the combination step below and copy the provided bundle directly to
-`/opt/allegro/config/ca-certificates/ca-certificates.crt`.
+`${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt`.
 :::
 
 Create a combined bundle that includes both the system CAs and your private CA:
 
 ```bash
-sudo cat /etc/ssl/certs/ca-certificates.crt /opt/allegro/config/ca-certificates/private-ca.crt \
-  | sudo tee /opt/allegro/config/ca-certificates/ca-certificates.crt > /dev/null
+sudo cat /etc/ssl/certs/ca-certificates.crt ${CLEARML_ROOT}/config/ca-certificates/private-ca.crt \
+  | sudo tee ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt > /dev/null
 ```
 
 Set the appropriate permissions:
 ```bash
-sudo chmod 644 /opt/allegro/config/ca-certificates/ca-certificates.crt
+sudo chmod 644 ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt
 ```
 
 ### Configuring clearml-apps-agent
@@ -288,13 +291,13 @@ apps-agent:
     - SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
     - CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
     # CA configuration for child containers (add the above environment variables to the existing CLEARML_AGENT_EXTRA_DOCKER_ARGS)
-    - CLEARML_AGENT_EXTRA_DOCKER_ARGS=-e CLEARML_DISABLE_VAULT_SUPPORT=1 -e CLEARML_AGENT_DISABLE_VAULT_SUPPORT=1 -e REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -e SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt -e CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -v /opt/allegro/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro --log-driver json-file --log-opt max-size=10m --log-opt max-file=3
+    - CLEARML_AGENT_EXTRA_DOCKER_ARGS=-e CLEARML_DISABLE_VAULT_SUPPORT=1 -e CLEARML_AGENT_DISABLE_VAULT_SUPPORT=1 -e REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -e SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt -e CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -v ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro --log-driver json-file --log-opt max-size=10m --log-opt max-file=3
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - /opt/allegro/data/agent/app-agent:/root/.clearml
-    - /opt/allegro/data/agent/app-agent_tmp:/tmp
+    - ${CLEARML_ROOT}/data/agent/app-agent:/root/.clearml
+    - ${CLEARML_ROOT}/data/agent/app-agent_tmp:/tmp
     # CA certificate bundle mount
-    - /opt/allegro/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
+    - ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro
 ```
 
 :::important
@@ -317,11 +320,11 @@ services-agent:
     - CLEARML_FILES_HOST=https://files.${SERVER_URL}
     - CLEARML_WEB_HOST=https://app.${SERVER_URL}
     # CA configuration for child service containers only
-    - CLEARML_AGENT_EXTRA_DOCKER_ARGS=--memory=1024m -e REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -e SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt -e CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -v /opt/allegro/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro --log-driver json-file --log-opt max-size=10m --log-opt max-file=3
+    - CLEARML_AGENT_EXTRA_DOCKER_ARGS=--memory=1024m -e REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -e SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt -e CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt -v ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro --log-driver json-file --log-opt max-size=10m --log-opt max-file=3
   volumes:
     - /var/run/docker.sock:/var/run/docker.sock
-    - /opt/allegro/data/services/services-agent/cache:/root/.clearml
-    - /opt/allegro/data/services/services-agent/tmp:/tmp
+    - ${CLEARML_ROOT}/data/services/services-agent/cache:/root/.clearml
+    - ${CLEARML_ROOT}/data/services/services-agent/tmp:/tmp
 ```
 
 :::important
@@ -394,7 +397,7 @@ Your IT department may provide either:
 **RHEL-based child images:** If spawned containers use RHEL-based images, also add the following volume mount
 to `CLEARML_AGENT_EXTRA_DOCKER_ARGS`:
 ```
--v /opt/allegro/config/ca-certificates/ca-certificates.crt:/etc/pki/tls/certs/ca-bundle.crt:ro
+-v ${CLEARML_ROOT}/config/ca-certificates/ca-certificates.crt:/etc/pki/tls/certs/ca-bundle.crt:ro
 ```
 
 **When services-agent CA is needed:** The services-agent child containers only need CA configuration if
@@ -456,9 +459,9 @@ The system should be constantly monitored, however it is important to check the 
 
 ### API Server
 
-In case of failures in the `allegro-apiserver` container, or in cases in which the web application gets unexpected errors, 
+In case of failures in the `clearml-apiserver` container, or in cases in which the web application gets unexpected errors, 
 and the browser's developer tools (F12) network tab shows error codes being returned by the server, also check the log 
-of the `apiserver` which is written to `/opt/allegro/logs/apiserver/apiserver.log`.  
+of the `apiserver` which is written to `${CLEARML_ROOT}/logs/apiserver/apiserver.log`.  
 Additionally, you can check the server availability using:
 
 ```
@@ -476,4 +479,12 @@ curl http://<server’s IP address>:8080/configuration.json |
 ```
 
 
+## Upgrading Server to v3.29 and Greater
 
+Starting with v3.29, in Docker Compose deployments, the `apiserver` and `fileserver` containers no longer run as root. 
+They now run as a non-root user (UID `65532`).
+
+Before upgrading, you must update the ownership of existing data and log directories to UID `65532`. If this step is not 
+completed, the containers will fail to start due to permission errors.
+
+For upgrade instructions, see [here](docker_compose_upgrade_3_29.md). 
