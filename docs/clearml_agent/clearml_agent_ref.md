@@ -69,16 +69,13 @@ With the `daemon` command you can configure your agent's behavior: allocate reso
 in a Docker, and more. 
 
 ```bash
-clearml-agent daemon [-h] [--foreground] [--queue QUEUES [QUEUES ...]] [--order-fairness] 
-                     [--standalone-mode] [--services-mode [SERVICES_MODE]] 
-                     [--child-report-tags CHILD_REPORT_TAGS [CHILD_REPORT_TAGS ...]]
-                     [--create-queue] [--detached] [--stop] [--dynamic-gpus] 
-                     [--uptime [UPTIME [UPTIME ...]]] [--downtime [DOWNTIME [DOWNTIME ...]]] 
-                     [--status] [--use-owner-token] [-O] 
-                     [--git-user GIT_USER] [--git-pass GIT_PASS] 
-                     [--log-level {DEBUG,INFO,WARN,WARNING,ERROR,CRITICAL}] 
-                     [--gpus GPUS] [--cpu-only] 
-                     [--docker [DOCKER [DOCKER ...]]] [--force-current-version]
+clearml-agent daemon [-h] [--polling-interval POLLING_INTERVAL] [--foreground] [--queue QUEUES [QUEUES ...]]
+                     [--order-fairness] [--standalone-mode] [--services-mode [SERVICES_MODE]]
+                     [--child-report-tags CHILD_REPORT_TAGS [CHILD_REPORT_TAGS ...]] [--create-queue]
+                     [--detached] [--stop [STOP ...]] [--dynamic-gpus] [--uptime [UPTIME ...]]
+                     [--downtime [DOWNTIME ...]] [--status] [--check-bootstrap] [--use-owner-token] [-O] 
+                     [--git-user GIT_USER] [--git-pass GIT_PASS] [--log-level {DEBUG,INFO,WARN,WARNING,ERROR,CRITICAL}] 
+                     [--gpus GPUS] [--cpu-only] [--podman [PODMAN ...]] [--docker [DOCKER ...]] [--force-current-version]
 ```
 
                            
@@ -88,6 +85,7 @@ clearml-agent daemon [-h] [--foreground] [--queue QUEUES [QUEUES ...]] [--order-
 
 |Name | Description| Mandatory |
 |---|----|---|
+|`--check-bootstrap`| On daemon startup, check whether the installed `clearml-agent-bootstrap` package is the latest released version and print a warning if not. Has no effect if `bootstrap` is not detected.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--child-report-tags`| List of tags to send with the status reports from the worker that executes a task.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--cpu-only`| If running in Docker mode (see the `--docker` option), disable GPU access for the Docker container or virtual environment.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--create-queue`| If the queue name provided with `--queue` does not exist in the server, create it on-the-fly and use it.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
@@ -104,6 +102,8 @@ clearml-agent daemon [-h] [--foreground] [--queue QUEUES [QUEUES ...]] [--order-
 |`--log-level`| SDK log level. The values are:<ul><li>`DEBUG`</li><li>`INFO`</li><li>`WARN`</li><li>`WARNING`</li><li>`ERROR`</li><li>`CRITICAL`</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`-O`| Compile optimized pyc code (see [python documentation](https://docs.python.org/3/using/cmdline.html#cmdoption-O)). Repeat for more optimization.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--order-fairness`| Pull from each queue in a round-robin order, instead of priority order.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+| `--podman` | Run execution task inside a container using Podman. Optionally, specify `args <image> <arguments>`, or set the default docker image and arguments in `agent.default_docker.image` / `agent.default_docker.arguments` in the `clearml.conf`. Use `--gpus`/`--cpu-only` (or set `NVIDIA_VISIBLE_DEVICES`) to limit GPU visibility for docker. This behaves identically to `--docker`, except the resulting `docker run` command includes the adjustments required by Podman.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
+|`--polling-interval`|Polling interval in seconds. Minimum value is `5` (default `5`)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--queue`| Specify the queues which the worker is listening to. The values can be any combination of:<ul><li>One or more queue IDs</li><li>One or more queue names</li><li>`default` indicating the default queue</li></ul>|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--services-mode`| Launch multiple long-term docker services. Spin multiple, simultaneous Tasks, each in its own Docker container, on the same machine. Each Task will be registered as a new node in the system, providing tracking and transparency capabilities. Start up and shutdown of each Docker is verified. Use in CPU mode (`--cpu-only`) only. <br/> To limit the number of simultaneous tasks run in services mode, pass the maximum number immediately after the `--services-mode` option (e.g. `--services-mode 5`)|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|
 |`--standalone-mode`| Do not use any network connects. This assumes all requirements are pre-installed.|<img src="/docs/latest/icons/ico-optional-no.svg" alt="No" className="icon size-md center-md" />|            

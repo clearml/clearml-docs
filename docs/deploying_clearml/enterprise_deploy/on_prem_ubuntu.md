@@ -4,6 +4,12 @@ title: On-Premises on Ubuntu
 
 This guide provides step-by-step instruction for installing the ClearML Enterprise Server on a single Linux Ubuntu server.
 
+:::important[Upgrading Server to v3.29 and Greater]
+Starting with v3.29, Docker Compose deployments use updated container permissions.
+
+To avoid permission issues, follow the [required upgrade steps](docker_compose_upgrade_3_29.md). 
+:::
+
 ## Prerequisites
 The following are required for the ClearML on-premises server:
 
@@ -478,13 +484,3 @@ Check the webserver availability by running the following:
 curl http://<server’s IP address>:8080/configuration.json |
 ```
 
-
-## Upgrading Server to v3.29 and Greater
-
-Starting with v3.29, in Docker Compose deployments, the `apiserver` and `fileserver` containers no longer run as root. 
-They now run as a non-root user (UID `65532`).
-
-Before upgrading, you must update the ownership of existing data and log directories to UID `65532`. If this step is not 
-completed, the containers will fail to start due to permission errors.
-
-For upgrade instructions, see [here](docker_compose_upgrade_3_29.md). 

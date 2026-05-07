@@ -156,6 +156,9 @@ The Orchestration Dashboard organizes agents in a 2-level hierarchy of **Categor
 The resource dashboard shows high-level aggregate utilization across the resource categories, with specific agent details 
 listed in the workload table, grouped by resource group.
 
+![Orchestration Dashboard](../img/orchestration_dashboard_custom.png#light-mode-only)
+![Orchestration Dashboard](../img/orchestration_dashboard_custom_dark.png#dark-mode-only)
+
 Agent categorization is controlled through the ID it assigned on launch, according to the following format:
 
 ```

@@ -712,6 +712,12 @@ Torch Nightly builds are ephemeral and are deleted from time to time.
 
 ---
 
+**`agent.package_manager.uv_sync_locked_if_lock_file`** (*bool*)
+
+* If `True` (default), passes `--locked` to `uv sync` when a lockfile exists in the repository.
+
+---
+
 **`agent.package_manager.uv_version`** (*string*)
 
 * The `uv` version requirements. For example, `">0.4"`, `"==0.4"`, `""` (empty string will install the latest version).
@@ -1069,6 +1075,13 @@ metrics, network, AWS S3 buckets and credentials, Google Cloud Storage, Azure St
 
 ---
 
+**`sdk.development.default_shell_binary`** (*str*)
+
+* Path to the executable binary [`Task.create()`](../references/sdk/task.md#taskcreate) will use as the default value 
+  for the new task’s script.binary,
+
+---
+
 
 **`sdk.development.force_analyze_entire_repo`** (*bool*)
       
@@ -1323,6 +1336,13 @@ will not exceed the value of `matplotlib_untitled_history_size`
         
 * The maximum number of digits after the decimal point in plot reporting. This can reduce the report size.
         
+---
+        
+**`sdk.metrics.plot_upload_destination`** (*str*)
+        
+* Upload destination for plots only (e.g. `"https://files.clearml.com"`). If set to a destination other than the ClearML 
+  file server, plots will be uploaded as debug samples instead of being reported as plots.  
+
 ---
         
 **`sdk.metrics.tensorboard_single_series_per_graph`** (*bool*)

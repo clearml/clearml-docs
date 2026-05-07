@@ -2,6 +2,21 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.6
+
+**Bug Fixes and Improvements**
+
+* Add default shell binary option for script execution ([#1586](https://github.com/clearml/clearml/pull/1586))
+* Add option to set plots upload destination ([#1587](https://github.com/clearml/clearml/pull/1587))
+* Add `exc_info` param to improve error logging ([#1550](https://github.com/clearml/clearml/issues/1550))
+* Raise duplicate `InputModel` import log from debug to info ([#1582](https://github.com/clearml/clearml/pull/1582))
+* Add pickle file integrity hash verification for `pd.DataFrame` pickled artifacts ([#1599](https://github.com/clearml/clearml/pull/1599))
+* Add check to avoid `KeyError` in dataset ([#1598](https://github.com/clearml/clearml/pull/1598))
+* Routing fixes when using queues on autoscaler instances ([#1602](https://github.com/clearml/clearml/pull/1602))
+* Refactor `clearml/storage`
+* Add hash comparison for external link change detection, subset file pulling in `Dataset.get_local_copy()`, and stale 
+  link entry pruning in `Dataset.sync_folder` ([#1611](https://github.com/clearml/clearml/pull/1611))
+
 ### ClearML 2.1.5
 
 **Bug fixes and improvements**

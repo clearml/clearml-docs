@@ -372,9 +372,10 @@ module.exports = {
         ]},
         {'ClearML Agent':
             [
-                'release_notes/clearml_agent/ver_2_0',
+                'release_notes/clearml_agent/ver_3_0',
                 {
                     'Older Versions': [
+                        'release_notes/clearml_agent/ver_2_0',
                         'release_notes/clearml_agent/ver_1_9', 'release_notes/clearml_agent/ver_1_8',
                         'release_notes/clearml_agent/ver_1_7', 'release_notes/clearml_agent/ver_1_6',
                         'release_notes/clearml_agent/ver_1_5', 'release_notes/clearml_agent/ver_1_4',
@@ -383,6 +384,58 @@ module.exports = {
                         'release_notes/clearml_agent/ver_0_17', 'release_notes/clearml_agent/ver_0_16',
                         'release_notes/clearml_agent/ver_0_15', 'release_notes/clearml_agent/ver_0_14',
                         'release_notes/clearml_agent/ver_0_13', 'release_notes/clearml_agent/ver_0_12',
+                    ]
+                }
+            ]
+        },
+        {
+            'Enterprise Helm Charts': [
+                {
+                    'ClearML Server': [
+                        'release_notes/helm/clearml-enterprise/10.12',
+
+                        {
+                            'Older Versions': [
+                                'release_notes/helm/clearml-enterprise/10.11',
+                                'release_notes/helm/clearml-enterprise/10.10', 'release_notes/helm/clearml-enterprise/10.9',
+                                'release_notes/helm/clearml-enterprise/10.8', 'release_notes/helm/clearml-enterprise/10.7'
+                            ]
+                        }
+                    ]
+                },
+                {
+                    'ClearML Agent': [
+                        'release_notes/helm/clearml-enterprise-agent/6.12',
+
+                        {
+                            'Older Versions': [
+                                'release_notes/helm/clearml-enterprise-agent/6.11',
+                                'release_notes/helm/clearml-enterprise-agent/6.10', 'release_notes/helm/clearml-enterprise-agent/6.9',
+                            ]
+                        }
+                    ]
+                },
+                {
+                    'AI Application Gateway': [
+                        'release_notes/helm/clearml-enterprise-app-gateway/3.1',
+
+                        {
+                            'Older Versions': [
+                                'release_notes/helm/clearml-enterprise-app-gateway/3.0',
+                                'release_notes/helm/clearml-enterprise-app-gateway/2.1', 'release_notes/helm/clearml-enterprise-app-gateway/2.0'
+                            ]
+                        }
+                    ]
+                },
+                {
+                    'Platform Management Center': [
+                        'release_notes/helm/clearml-enterprise-platform-management/1.2',
+
+                        {
+                            'Older Versions': [
+                                'release_notes/helm/clearml-enterprise-platform-management/1.1',
+                            ]
+                        }
                     ]
                 }
             ]
