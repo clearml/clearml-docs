@@ -96,3 +96,10 @@ script, so any jobs pushed to this queue will be executed according to the defin
 ```commandline
 clearml-agent-slurm --singularity-mode --template-files slurm.example_singularity.template --queue default
 ```
+
+## User Impersonation
+
+By default, Slurm jobs are submitted as the Linux user running the glue process.
+
+You can configure the agent to submit jobs as different Linux users based on the ClearML user who enqueued the task. 
+See [Slurm User Impersonation](clearml_agent_slurm_impersonation.md).

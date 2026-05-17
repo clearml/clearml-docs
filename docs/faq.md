@@ -96,8 +96,9 @@ title: FAQ
 * [How do I fix Docker upgrade errors?](#common-docker-upgrade-errors)
 * [Why is web login authentication not working?](#port-conflict)
 * [How do I bypass a proxy configuration to access my local ClearML Server?](#proxy-localhost)
-* [Trains is failing to update ClearML Server. I get an error 500 (or 400). How do I fix this?](#elastic_watermark)
-* [Why is my Trains WebApp (UI) not showing any data?](#web-ui-empty)
+* [Why am I getting a `413 Request Entity Too Large` error when uploading files?](#request-too-large)
+* [The ClearML Server keeps returning HTTP 500 (or 400) errors. How do I fix this?](#elastic_watermark)
+* [Why is my ClearML WebApp (UI) not showing any data?](#web-ui-empty)
 * [Why can't I access my ClearML Server when I run my code in a virtual machine?](#vm_server)
 
 **ClearML Agent**
@@ -1154,9 +1155,56 @@ Do the following:
    ClearML setup completed successfully.
    ```
 
-<a className="tr_top_negative" id="elastic_watermark"></a>
+<br/>
+
+
+#### Why am I getting a `413 Request Entity Too Large` error when uploading files?  <a id="request-too-large"></a>
+
+`413 Request Entity Too Large` error indicates that the request payload exceeds the maximum size allowed by the HTTP 
+server, reverse proxy, or load balancer fronting your ClearML server. This can occur, for example, when ClearML is 
+deployed on K8s behind an NGINX ingress controller, where the default request size limit is typically 1 MB.
+
+To resolve this issue, Increase the allowed request body size in your HTTP server configuration.
+For example, if you are using a K8s NGINX ingress controller, add the following configuration under both the `apiserver` 
+and `fileserver` sections of your Helm values override file (e.g. `clearml-values.override.yaml`).
+
+```yaml
+apiserver:
+ ingress:
+   enabled: true
+   annotations:
+     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+
+fileserver:
+ ingress:
+   enabled: true
+   annotations:
+     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
+```
+
+Adjust the value (`100m`) based on your requirements, or set it to `"0"` to remove the limit entirely.
+
+##### Apply the changes
+
+Apply the configuration using `helm upgrade`.
+* ClearML Enterprise:
+ 
+    ```
+    helm upgrade -i -n clearml clearml-enterprise \
+      oci://docker.io/clearml/clearml-enterprise \
+      --create-namespace \
+      -f clearml-values.override.yaml
+    ```
+
+* Open Source: 
+    ```
+    helm upgrade clearml clearml/clearml \
+      --version <CURRENT_CHART_VERSION> \
+      -f clearml-values.override.yaml
+    ```
 
 <br/>
+
 
 #### The ClearML Server keeps returning HTTP 500 (or 400) errors. How do I fix this?   <a id="elastic_watermark"></a>
 

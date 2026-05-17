@@ -40,6 +40,30 @@ Refer to the configuration file of a specific application to view the property I
 The `app-id`, configuration-parameter, and property names for a specific app are the same ones used in the `wizard` 
 section of its configuration file.
 
+:::important[Kubernetes]
+In Kubernetes deployments, the `applications.conf` file needs to be mounted into the ClearML server pod so that the 
+`app_wizard_overrides` take effect.  Use the Helm chart `fileMounts` to do this. For example:
+
+```yaml
+apiserver:
+  fileMounts:
+    - name: "applications.conf"
+      folderPath: "/etc/opt/seematics/services"
+      fileContent: |-
+        app_wizard_overrides {
+          "jupyter-lab" {
+            "container" {
+              "default": "python:3.11"
+              "options": ["python:3.12", "python:3.11", "python:3.8"]
+            }
+          }
+        }
+```
+This mounts the configuration file into the expected path inside the server container. After updating the values file, 
+upgrade the Helm release for the changes to take effect.
+:::
+
+
 :::tip[Live configuration reference]
 Admins can get the required field names for a specific application through a built-in reference in the app’s UI form as follows: 
 * Click the `+` to open the app instance launch form

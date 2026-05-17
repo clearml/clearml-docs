@@ -6,7 +6,7 @@ title: Analytics
 Custom event analytics are available under the ClearML Enterprise plan.
 :::
 
-The Analytics section is available where the service administrators have configured [custom event metering](../../deploying_clearml/enterprise_deploy/extra_configs/event_metering.md), 
+The Analytics section is available where the service administrators have configured [custom event metering](../../deploying_clearml/enterprise_deploy/extra_configs/event_metering.mdx), 
 enabling administrators to monitor usage and spend over a selected time period, based on custom events metered by their server. 
 Spend estimates are provided for events that have cost associated to them by the service administrators.
 

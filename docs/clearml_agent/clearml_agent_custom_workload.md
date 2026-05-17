@@ -154,3 +154,123 @@ This is useful for grouping workers in the [Orchestration Dashboard](../webapp/w
 (i.e. task container configuration takes precedence).
 * `useImageEntrypoint` - Whether to use the container's default entrypoint or override it. When `true`, the ClearML Agent 
 will not override the image's entrypoint. This is typically used for containers that depend on their own startup scripts or entrypoints.
+
+## Agent-Level Resource Limits
+
+In addition to per-queue configuration, the agent can enforce global resource limits across all queues using 
+`agentk8sglue.monitoredResources`.
+
+This allows the agent to control how much total capacity it consumes, based on values extracted from each scheduled Pod. 
+When the configured limit is reached, additional tasks remain pending until resources are freed.
+
+### Basic Usage (GPU Limit)
+
+By default, the agent monitors GPU usage based on the value of `nvidia.com/gpu` defined under `resources.limits` in the 
+Pod specification.
+
+The following configuration limits the Agent to scheduling a maximum of 3 GPUs simultaneously, across all queues:
+
+```
+agentk8sglue:
+  monitoredResources:  
+    maxResources: 3
+```
+
+With this configuration:
+
+* Each scheduled Pod contributes its GPU request (from `resources.limits.nvidia.com/gpu`) to the total
+* The agent keeps track of the sum across all running Pods
+* Once the total reaches `3`, additional GPU tasks are not scheduled
+* Tasks remain in queue until GPU usage drops below the limit
+
+### Custom Resource Fields
+
+By default, the Agent reads resource usage directly from the Pod’s `resources.limits`. You can configure the agent to 
+read from a different field using:
+
+```
+monitoredResources:  
+  minResourcesFieldName: "<field path>"  
+  maxResourcesFieldName: "<field path>"
+```
+
+The field path uses a pipe-separated (`|`) format to reference values within the Pod definition. For example:
+
+```
+metadata|labels|clear.ml/resource-usage
+```
+
+This tells the agent to read the value of the label `clear.ml/resource-usage` from each Pod and use it as the resource 
+unit.
+
+### Advanced Usage: Normalizing Heterogeneous GPU Resources
+
+In environments that use multiple GPU types (e.g. full GPUs and MIG slices), resource requests are not directly 
+comparable.
+
+To enable consistent scheduling, you can define a normalized resource value per Pod (for example, "1 = one full GPU"), 
+and have the agent track usage based on that value.
+
+This is done by:
+* Adding a label to each Pod that represents its normalized resource usage
+* Configuring `monitoredResources` to read from that label
+* Setting a global limit using `maxResources`
+
+#### Example: Mixed GPU Types
+
+In the example configuration below:
+
+* Each queue defines both:
+  * The actual Kubernetes resource request (`resources.limits`)
+  * A normalized usage value (via `labels`)
+* The Agent reads the label value (`clear.ml/resource-usage`) from each Pod
+* It sums these values across all running tasks
+* New tasks are scheduled only if the total remains below `maxResources`
+
+For example, with `maxResources: 1`, the Agent allows:
+
+* One full GPU task (`1`)
+* Two half-GPU tasks (`0.5 + 0.5`)
+* Multiple smaller slices whose total is `≤1`
+
+Any combination exceeding this limit is kept pending.
+
+```yaml
+agentk8sglue:
+  monitoredResources:
+    # Read normalized usage from a Pod label
+    minResourcesFieldName: "metadata|labels|clear.ml/resource-usage"
+    maxResourcesFieldName: "metadata|labels|clear.ml/resource-usage"
+
+    # Allow up to one full GPU equivalent
+    maxResources: 1
+
+  createQueues: true
+  queues:
+    full-GPU:
+      templateOverrides:
+        labels:
+          # Represents one full GPU
+          clear.ml/resource-usage: "1"
+        resources:
+          limits:
+            nvidia.com/gpu: "1"
+
+    1g-GPU:
+      templateOverrides:
+        labels:
+          # Represents ~1/7 of a GPU
+          clear.ml/resource-usage: "0.14"
+        resources:
+          limits:
+            nvidia.com/mig-1g.18gb: "1"
+ 
+    3g-GPU:
+      templateOverrides:
+        labels:
+          # Represents half a GPU
+          clear.ml/resource-usage: "0.5"
+        resources:
+          limits:
+            nvidia.com/mig-3g.71gb: "1"
+```

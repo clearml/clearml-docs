@@ -24,7 +24,8 @@ Platform maintainers can view tenant usage and spend information in the tenant p
 
 ## Service Setup
 
-To enable the ClearML metering service, set the following in your Helm `values.yaml` file (or override file):
+The ClearML metering service is deployed as part of the ClearML control plane. To enable it on Kubernetes, set the 
+following in your control plane Helm `values.yaml` file (or override file):
 
 ```yaml
 usageAggregator:
@@ -45,11 +46,11 @@ The metering service configuration includes:
 
 ### Usage Aggregator Definitions
 
-Events are configured in the Usage Aggregator configuration file, which by default is located at
+Events are configured in the Usage Aggregator configuration:
+* In Kubernetes deployments, define it in the control plane Helm chart using `usageAggregator.configuration`. 
+* In Docker Compose deployments, define it in the Usage Aggregator configuration file, which by default is located 
+  at: `/opt/clearml/usage_aggregator.conf`. 
 
-```
-/opt/clearml/usage_aggregator.conf
-```
 
 For each event category, the following definitions are required:
 * `count_strategy` – How daily values are aggregated. The options are:
@@ -67,32 +68,78 @@ strategy, meaning only the maximum value reported each day will be stored. It al
 that admin users cost $0.2 per user per day, and non-admin users cost $0.1 per user per day.
 
 
-```
-pricing {
-   currency: USD
-}
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-events {
-    users: {
-        count_strategy: max
-        type: users # optional
-        labels: {
+<Tabs>
+  <TabItem value="kubernetes" label="Kubernetes" default>
+
+  Add the configuration to the Control Plane Helm chart values file:
+
+  ```
+  usageAggregator:
+    configuration: |
+      pricing {
+        currency: USD
+      } 
+    
+      events {
+        users: {
+          count_strategy: max
+          type: users # optional
+          labels: {
             admins {
-                pricing {
-                    price: 0.2
-                    units: 1
-                }
+              pricing {
+                price: 0.2
+                units: 1
+              }
             }
             users {
-                pricing {
-                    price: 0.1
-                    units: 1
-                }
+              pricing {
+                price: 0.1
+                units: 1
+              }
             }
+          }
         }
-    }
-}
-```
+      }
+  ```
+
+  </TabItem>
+  <TabItem value="docker compose" label="Docker Compose">
+
+  Save the configuration in `/opt/clearml/usage_aggregator.conf`:
+
+  ```
+  pricing {
+     currency: USD
+  }
+
+  events {
+      users: {
+          count_strategy: max
+          type: users # optional
+          labels: {
+              admins {
+                  pricing {
+                      price: 0.2
+                      units: 1
+                  }
+              }
+              users {
+                  pricing {
+                      price: 0.1
+                      units: 1
+                  }
+              }
+          }
+      }
+  }
+  ```
+
+  </TabItem>
+</Tabs>
+
 
 ### API Server Definitions
 

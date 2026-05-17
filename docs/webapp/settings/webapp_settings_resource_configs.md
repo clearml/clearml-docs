@@ -41,6 +41,43 @@ following information:
 * Number of resources currently in use out of the total available resources
 * Execution Priority - List of [linked profiles](#connecting-profiles-to-pools) in order of execution priority. 
 
+### Assigning Resources to Pools
+
+To utilize a resource pool for task execution, ClearML agents are assigned to the pool servicing its specific queues. 
+Tasks assigned by the resource policy manager to that pool will be sent to these queues for execution.
+
+To configure an agent for a resource pool:
+
+1. Open the resource pool’s information panel by clicking <img src="/docs/latest/icons/ico-info.svg" alt="Info" className="icon size-md space-sm" /> on the pool card. This displays:   
+   * Resource profiles linked to the pool  
+   * Resource allocation per task  
+   * Correlated Queue information
+
+	![Resource_pool_info](../../img/resource_pool_info.png#light-mode-only)
+	![Resource_pool_info](../../img/resource_pool_info_dark.png#dark-mode-only)
+
+2. Copy the ID for the queue you want the agent to service.  
+3. Configure an agent to listen to the queue. For example, on Kubernetes:   
+   ```yaml
+   agentk8sglue:  
+     queues:  
+       <pool_queue_id>:   # Paste the Queue ID from the Resource Pool card here  
+         templateOverrides:   
+          resources:  
+            limits:  
+              nvidia.com/gpu: 2
+
+   ```
+   :::important
+   The Resource Manager performs logical scheduling and accounting only. It does not control the actual hardware 
+   allocated to a task.
+
+   You must explicitly configure the ClearML Agent (for example, by setting GPU limits in `templateOverrides`) to match 
+   the resource profile. Otherwise, tasks may be scheduled correctly but still run with incorrect resource allocation.
+   :::
+
+Tasks assigned to the resource profile connected to this pool will now be executed by your agent..
+
 ## Resource Profiles 
 Resource profiles represent the resource consumption requirements of jobs, such as the number of GPUs needed. They are 
 the interface that administrators use to provide users with access to the available resource pools based on their job 

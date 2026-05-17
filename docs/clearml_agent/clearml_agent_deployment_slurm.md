@@ -122,3 +122,10 @@ clearml-agent-slurm --template-files slurm.template1 slurm.template2 --queue que
 To enable debug logging for the ClearML Agent Slurm Glue, set the `CLEARML_SLURM_GLUE_DEBUG=1` environment variable 
 before launching.
 :::
+
+## User Impersonation
+
+By default, Slurm jobs are submitted as the Linux user running the glue process.
+
+You can configure the agent to submit jobs as different Linux users based on the ClearML user who enqueued the task. 
+See [Slurm User Impersonation](clearml_agent_slurm_impersonation.md).

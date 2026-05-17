@@ -14,8 +14,9 @@ type (i.e. spin up new instances if there are pending jobs on the queue).
 
 When running, the autoscaler periodically polls your AWS cluster. It automatically terminates idle instances 
 based on a specified maximum idle time, or spins up new instances when there aren't enough to execute pending tasks in a 
-queue (until reaching the defined maximum number of instances). You can add an init script, which will be executed when 
-each instance is spun up. 
+queue (until reaching the defined maximum number of instances). You can add an init script to customize the instance 
+environment, which is executed when each instance is spun up (for example, installing dependencies or 
+[configuring runtimes such as Sysbox](#running-autoscaler-instances-with-sysbox)).
 
 For more information about how autoscalers work, see [Autoscalers Overview](../../cloud_autoscaling/autoscaling_overview.md#autoscaler-applications).
 
@@ -407,3 +408,86 @@ to an IAM user, and create credentials keys for that user to configure in the au
 1. Attach the created policy to an IAM user/group whose credentials will be used in the autoscaler app (you can create a 
    new IAM user/group for this purpose)
 1. Obtain a set of AWS IAM credentials for the user/group to which you have attached the created policy in the previous step  
+
+## Running Autoscaler Instances with Sysbox
+
+To support workloads that require nested container environments, such as the ClearML [Virtual Machine Remote Desktop](apps_vm_desktop.md) 
+app, you can configure autoscaler instances to run containers using the Sysbox runtime.
+
+This requires installing Sysbox and configuring Docker accordingly on each EC2 instance at launch time using the 
+autoscaler's `Init script`.
+
+### Init Script Example
+The following example init script shows one way to install and configure Sysbox on autoscaler instances. Modify it as 
+needed for your environment.
+
+```
+apt-get update
+apt-get install -y ffmpeg libsm6 libxext6 jq wget
+sed -i '/precedence ::ffff:0:0\/96  100/ s/^#//' /etc/gai.conf
+/usr/bin/bash /home/ubuntu/.profile
+uname -a
+docker version
+
+echo "trying to install a specific docker version because v29.x breaks sysbox"
+DOCKER_VER=$(
+ apt list --all-versions docker-ce 2>/dev/null \
+   | awk '/docker-ce\// {print $2}' \
+   | awk -F'[.:~-]' '$2 < 29' \
+   | sort -V \
+   | tail -1
+)
+echo DOCKER_VER="$DOCKER_VER"
+
+for i in {1..10}; do
+ apt-get install -y --allow-downgrades \
+   docker-ce=$DOCKER_VER docker-ce-cli=$DOCKER_VER \
+   containerd.io docker-buildx-plugin docker-compose-plugin && break
+ echo "Attempt $i failed, retrying in 5 sec..."
+ sleep 5
+done
+
+systemctl restart docker
+docker version
+
+SYSBOX_VER="0.7.0"
+curl -L -o /tmp/sysbox_amd.deb https://downloads.nestybox.com/sysbox/releases/v$SYSBOX_VER/sysbox-ce_$SYSBOX_VER-0.linux_amd64.deb
+
+max_attempts=10
+attempt=1
+until apt-get install -y /tmp/sysbox_amd.deb ; do
+   if [ "$attempt" -ge "$max_attempts" ]; then
+       echo "FAILED INSTALLING SYSBOX: Reached maximum attempts ($max_attempts). Exiting."
+       exit 1
+   fi
+   echo "$(date '+%Y-%m-%d %H:%M:%S') - attempt ${attempt} failed, retrying in 10 seconds..."
+   attempt=$((attempt + 1))
+   sleep 10
+   curl -L -o /tmp/sysbox_amd.deb https://downloads.nestybox.com/sysbox/releases/v$SYSBOX_VER/sysbox-ce_$SYSBOX_VER-0.linux_amd64.deb
+done
+
+docker info | grep -i runtime
+
+python3 -m pip install -U "setuptools<82.0.0"
+python3 -m pip install -U clearml_agent==2.0.7rc7
+
+export MACHINE_IP=$(hostname -I | awk '{print $1}')
+
+cat /etc/docker/daemon.json
+sed -i 's|"runtimes": {|"exec-opts": ["native.cgroupdriver=cgroupfs"], "runtimes": {|g' /etc/docker/daemon.json
+cat /etc/docker/daemon.json
+
+sed -i 's|#no-cgroups = false|no-cgroups = false|g' /etc/nvidia-container-runtime/config.toml
+cat /etc/nvidia-container-runtime/config.toml
+
+systemctl daemon-reload
+systemctl restart docker
+
+docker login nvcr.io -u '$oauthtoken' -p 'nvapi-<your-token>'
+
+echo "first try nvidia"
+docker run -t --rm --ipc=host --gpus all bitnami/minideb:bullseye bash -c "nvidia-smi && apt update && nvidia-smi"
+
+echo "second try nvidia with sysbox"
+docker run -t --rm --runtime sysbox-runc --gpus all bitnami/minideb:bullseye bash -c "nvidia-smi && apt update && nvidia-smi"
+```

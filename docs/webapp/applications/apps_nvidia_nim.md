@@ -93,6 +93,10 @@ values from the file, which can be modified before launching the app instance
   * Has access to NVIDIA's container registry (`nvcr.io`). See [NVCR Access](../../clearml_agent/clearml_agent_nvcr.md) for more information.
   * Runs in [Docker mode](../../clearml_agent/clearml_agent_execution_env.md#docker-mode) if it is a bare-metal agent
   :::
+  :::tip[NIM Model Caching]
+  See [NIM Cache](../../clearml_agent/clearml_agent_nim_caching.md) on how to configure persistent caching for NIM 
+  models for Kubernetes.
+  :::
 * **AI Gateway Route**: Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
 * **Idle Time Limit** (Hours): Maximum idle time after which the app instance will shut down
 * **Environment Variables**: Additional environment variable to set inside the container before launching the application 

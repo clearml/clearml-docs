@@ -2,6 +2,17 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.7
+
+**Bug fixes and improvements**
+* Add optional (opt-out) parameter to prevent processing of pickled artifacts ([#1619](https://github.com/clearml/clearml/pull/1619), 
+  [#1621](https://github.com/clearml/clearml/pull/1621)):
+  * Use `task.artifacts[0].get(block_unsafe_artifacts=True)`, or
+  * Via configuration with the environment variable `CLEARML_BLOCK_PICKLED_ARTIFACTS=1`
+  * Via `sdk.storage.block_pickled_artifacts: true`
+* Prevent resource leak during interrupted queries in `GPUStatCollection._new_query_nvidia` ([#1617](https://github.com/clearml/clearml/pull/1617))
+* Add vulnerability check in `Task.import_offline_session` when extracting `.zip` archives to prevent path-traversal attacks ([#1620](https://github.com/clearml/clearml/pull/1620))
+
 ### ClearML 2.1.6
 
 **Bug Fixes and Improvements**

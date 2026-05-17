@@ -187,16 +187,37 @@ kubectl create secret docker-registry -n <NAMESPACE> <SECRET_NAME> \
 
 ### List Images Used in a ClearML Helm Chart
 
-To see all container images used by a ClearML Helm chart:
+ClearML is deployed using several Helm charts, each with its own set of container images.
 
-```bash
-helm template oci://docker.io/clearml/<CHART_NAME> | yq '..|.image? | select(.)' | sort -u
-```
-
+To see all container images used by each chart use the following commands:
 
 :::note
 This requires the `helm` and `yq` commands to be installed.
 :::
+
+* `clearml-enterprise` (Control Plane): 
+  ```
+  helm template oci://docker.io/clearml/clearml-enterprise | yq '..|.image? | select(.)' | sort -u
+  ```
+  
+* `clearml-enterprise-agent`  (ClearML k8s Agent):
+   ```
+   helm template oci://docker.io/clearml/clearml-enterprise-agent | yq '..|.image? | select(.)' | sort -u
+   ```
+
+* `clearml-enterprise-app-gateway` (ClearML Application Gateway):
+   ```
+   helm template oci://docker.io/clearml/clearml-enterprise-app-gateway \
+     --set clearml.apiKey=dummy \
+     --set clearml.apiSecret=dummy \
+     --set clearml.apiServerUrlReference=dummy | yq '..|.image? | select(.)' | sort -u
+   ```
+  
+  :::note
+  The Application Gateway chart requires placeholder values for required parameters (`apiKey`, `apiSecret`,
+  `apiServerUrlReference`) to render successfully with helm template. 
+  :::
+
 
 
 ## Customize Agent Containers Start Script

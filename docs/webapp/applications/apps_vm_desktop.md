@@ -87,6 +87,9 @@ This section describes the default configuration provided by ClearML.
   app instance task will be enqueued. <br/><br/> 
   :::note[Agent requirements]
   Make sure the agent assigned to this queue runs in an environment with Sysbox installed
+ 
+  If you are using autoscaled cloud instances, whose images do not have Sysbox installed, configure the autoscaler to 
+  install and enable Sysbox. See [Running Autoscaler Instances with Sysbox](apps_aws_autoscaler.md#running-autoscaler-instances-with-sysbox).
   :::
 * **Idle Time Limit** (Hours): Maximum time of inactivity, after which the session will shut down. Configure idleness 
   definitions under Advanced Options.

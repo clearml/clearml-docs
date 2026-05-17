@@ -155,3 +155,9 @@ If using the **srun approach** add `--srun-delegation` to the command line:
 clearml-agent-slurm --srun-delegation --template-files slurm.example_pyxis.template --queue default
 ``` 
 
+## User Impersonation
+
+By default, Slurm jobs are submitted as the Linux user running the glue process.
+
+You can configure the agent to submit jobs as different Linux users based on the ClearML user who enqueued the task. 
+See [Slurm User Impersonation](clearml_agent_slurm_impersonation.md).

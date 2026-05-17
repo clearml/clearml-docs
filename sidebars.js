@@ -405,11 +405,11 @@ module.exports = {
                 },
                 {
                     'ClearML Agent': [
-                        'release_notes/helm/clearml-enterprise-agent/6.12',
+                        'release_notes/helm/clearml-enterprise-agent/6.13',
 
                         {
                             'Older Versions': [
-                                'release_notes/helm/clearml-enterprise-agent/6.11',
+                                'release_notes/helm/clearml-enterprise-agent/6.12', 'release_notes/helm/clearml-enterprise-agent/6.11',
                                 'release_notes/helm/clearml-enterprise-agent/6.10', 'release_notes/helm/clearml-enterprise-agent/6.9',
                             ]
                         }
@@ -795,6 +795,11 @@ module.exports = {
                                     label: 'With Pyxis',
                                     id: 'clearml_agent/clearml_agent_deployment_slurm_pyxis'
                                 },
+                                {
+                                    type: 'doc',
+                                    label: 'User Impersonation',
+                                    id: 'clearml_agent/clearml_agent_slurm_impersonation'
+                                },
                             ]
                         }
                     ]
@@ -805,6 +810,7 @@ module.exports = {
                         'clearml_agent/clearml_agent_env_caching',
                         'clearml_agent/clearml_agent_data_caching',
                         'clearml_agent/clearml_agent_hf_caching',
+                        'clearml_agent/clearml_agent_nim_caching',
                     ]
                 },
                 'clearml_agent/clearml_agent_services_mode',
@@ -936,6 +942,7 @@ module.exports = {
                         'deploying_clearml/enterprise_deploy/delete_tenant',
                         'deploying_clearml/enterprise_deploy/api_audit',
                         'deploying_clearml/enterprise_deploy/extra_configs/backups',
+                        'deploying_clearml/enterprise_deploy/container_debug',
                         {
                            type: 'category',
                            collapsible: true,

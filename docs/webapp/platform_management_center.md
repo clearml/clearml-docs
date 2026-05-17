@@ -19,7 +19,7 @@ For each tenant, its name, UUID, and the list of its administrators and their e-
 Select a tenant to open its administrative dashboard.
 
 ### Tenant Dashboard
-The tenant dashboard shows a tenant's [metered events](../deploying_clearml/enterprise_deploy/extra_configs/event_metering.md) along with additional usage metrics. Cost totals and breakdown 
+The tenant dashboard shows a tenant's [metered events](../deploying_clearml/enterprise_deploy/extra_configs/event_metering.mdx) along with additional usage metrics. Cost totals and breakdown 
 is available for metered events that have associated costs defined.
 
 
@@ -47,7 +47,7 @@ The dashboard shows the tenant's estimated cost for the selected period, summed 
 
 :::important
 Estimated costs and cost breakdowns are displayed only if any costs are associated with any of the metered events. See 
-[Event metering](../deploying_clearml/enterprise_deploy/extra_configs/event_metering.md).
+[Event metering](../deploying_clearml/enterprise_deploy/extra_configs/event_metering.mdx).
 :::
 
 Metered events plots display:
