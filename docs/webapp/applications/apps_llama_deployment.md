@@ -106,6 +106,18 @@ values from the file, which can be modified before launching the app instance
 * **Model Configuration**: Configure the behavior and performance of the model serving engine.   
   * CLI: Llama.cpp CLI arguments. If set, these arguments will be passed to Llama.cpp and all following entries will be 
   ignored, except for the `Model` field.  
+  
+  :::important 
+  For models that use `mmproj` (multimodal projection) weights, such as vision models, you must explicitly specify the 
+  mmproj weights URL with the  `--mmproj-url` argument. Without this, the model's vision capabilities will not function. 
+  
+  For example, for Qwen3.6 35B:
+
+  ```
+  -m unsloth/Qwen3.6-35B-A3B-GGUF/main/Qwen3.6-35B-A3B-UD-Q4_K_XL.gguf --mmproj-url https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/resolve/main/mmproj-F16.gguf
+  ```
+  :::
+
   * Verbose: Enable detailed logging   
   * No MMAP: Disable memory-mapping of model files. May improve performance on some systems but increases memory usage.  
   * Continuous Batching: Enable continuous batching for processing multiple requests efficiently. Improves throughput for 

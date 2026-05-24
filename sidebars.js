@@ -806,6 +806,11 @@ module.exports = {
                 },
                 'clearml_agent/clearml_agent_execution_env',
                 {
+                    type: 'doc',
+                    label: 'Bootstrap',
+                    id: 'clearml_agent/clearml_agent_bootstrap',
+                },
+                {
                     'File Caching': [
                         'clearml_agent/clearml_agent_env_caching',
                         'clearml_agent/clearml_agent_data_caching',

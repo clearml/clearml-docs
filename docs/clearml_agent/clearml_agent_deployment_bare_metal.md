@@ -18,6 +18,15 @@ An agent that runs in Virtual Environment Mode or Conda Environment Mode needs t
 it can't do that when running from a virtual environment.
 :::
 
+:::tip[ClearML Agent Bootstrap]
+Bootstrap provides self-contained Python, Git, and other required binaries,
+allowing tasks to run in minimal container images that do not include these tools.
+
+It can be installed on this machine independently of agent initialization and does not require a ClearML Server connection. 
+
+For details, see [ClearML Agent Bootstrap](clearml_agent_bootstrap.md).
+:::
+
 ## Configuration
 
 :::note

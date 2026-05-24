@@ -112,6 +112,10 @@ ClearML Enterprise adds advanced Kubernetes features, such as:
    helm upgrade -i -n <WORKER_NAMESPACE> clearml-enterprise-agent oci://docker.io/clearml/clearml-enterprise-agent --create-namespace -f clearml-agent-values.override.yaml
    ```
 
+#### Bootstrap
+ClearML Agent Bootstrap can be enabled to allow tasks to run in minimal container images without pre-installed 
+dependencies. For details, see [ClearML Agent Bootstrap](clearml_agent_bootstrap.md). 
+
 #### Workload Customization
 
 The ClearML Agent monitors [ClearML queues](../fundamentals/agents_and_queues.md) for tasks that are scheduled for execution.

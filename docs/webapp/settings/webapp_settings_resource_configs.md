@@ -245,6 +245,14 @@ still be available in Editor mode.
     * Description - Optional free form text for additional descriptive information
 1. Click **Create**
 
+:::important[Sizing Guidance]
+The "Number of Resources" value should match the physical capacity of the underlying cluster, expressed in whole GPUs. 
+For example, a cluster of 2 servers with 8 GPUs each should be configured as a pool of 16, regardless of whether jobs will consume whole GPUs, fractional GPUs or MIG slices. 
+Compute resources draw down from the pool are controlled by the profile's Resource Allotment (Resource Profiles)  e.g. 1 for a full GPU, 0.5 for a half, or approximately 0.143 (1/7) for a 1g.10gb MIG slice. 
+Keeping the pool sized to physical quantities ensures the accounting layer stays aligned with real hardware across all consumption patterns.
+:::
+
+
 **To modify a resource pool** 
 1. Click <img src="/docs/latest/icons/ico-bars-menu.svg" alt="Menu" className="icon size-md space-sm" /> on the relevant 
 resource pool card **>** click **Edit**
