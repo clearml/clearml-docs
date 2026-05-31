@@ -405,10 +405,11 @@ module.exports = {
                 },
                 {
                     'ClearML Agent': [
-                        'release_notes/helm/clearml-enterprise-agent/6.13',
+                        'release_notes/helm/clearml-enterprise-agent/6.14',
 
                         {
                             'Older Versions': [
+                                'release_notes/helm/clearml-enterprise-agent/6.13',
                                 'release_notes/helm/clearml-enterprise-agent/6.12', 'release_notes/helm/clearml-enterprise-agent/6.11',
                                 'release_notes/helm/clearml-enterprise-agent/6.10', 'release_notes/helm/clearml-enterprise-agent/6.9',
                             ]
@@ -658,6 +659,9 @@ module.exports = {
                         {"UI Dev": [
                             'webapp/applications/apps_gradio',
                             'webapp/applications/apps_streamlit'
+                        ]},
+                        {"Cluster": [
+                            'webapp/applications/apps_multi_node_trainer',
                         ]},
                         {"Deploy": [
                             'webapp/applications/apps_embed_model_deployment',

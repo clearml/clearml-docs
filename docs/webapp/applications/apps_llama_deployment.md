@@ -37,13 +37,14 @@ in the `AI APPLICATION GATEWAY` section
 * Deployed models table:  
   * Model name  
   * Endpoint - The publicly accessible URL of the model endpoint. Active model endpoints are also listed in the 
-  [Model Endpoints](https://clear.ml/docs/latest/docs/webapp/webapp_model_endpoints) table, which allows you to view and 
+  [Model Endpoints](../webapp_model_endpoints.md) table, which allows you to view and 
   compare endpoint details and monitor their status over time  
 * Model access command line example  
   * Select model the command should access  
   *  Prompt - Provide a prompt to send to the model.  
   * The `curl` command line to send your prompt to the selected model’s endpoint. Replace `YOUR_GENERATED_TOKEN` with a 
-  valid token generated in the `AI APPLICATION GATEWAY` section of the [Settings](http://settings) page.
+  valid token generated in the `AI APPLICATION GATEWAY` section of the [Settings](../settings/webapp_settings_profile.md#ai-application-gateway-tokens) 
+  page.
 * Total Number of Requests - Number of requests over time
 * Tokens per Second - Number of tokens processed over time
 * Latency - Request response time (ms) over time
@@ -66,7 +67,7 @@ You can embed plots from the app instance dashboard into [ClearML Reports](../we
 to copy the embed code, and navigate to a report to paste the embed code.
 :::
 
-### Llama.cpp Model Deployment Instance Configuration
+## Llama.cpp Model Deployment Instance Configuration
 
 When configuring a new llama.cpp Model Deployment instance, you can fill in the required parameters or reuse the 
 configuration of a previously launched instance.
@@ -80,7 +81,7 @@ The prefilled configuration form can be edited before launching the new app inst
 To configure a new app instance, click `Launch New` <img src="/docs/latest/icons/ico-add.svg" alt="Add new" className="icon size-md space-sm" /> 
 to open the app's configuration form.
 
-## Configuration Options
+### Configuration Options
 
 :::note
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 

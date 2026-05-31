@@ -61,7 +61,7 @@ Applications utilizing NVIDIA AI Enterprise's (NVAIE) suite of software tools:
 Applications for deploying and managing scalable compute clusters for distributed workloads:
 * **Deploy Slurm Cluster** - Deploy a dynamic Slurm cluster for HPC and distributed workloads (available under ClearML Enterprise Plan)
 * **K3s Deployment** - Deploy a Kubernetes cluster with a configurable number of worker nodes (available under ClearML Enterprise Plan)
-* **Multi-node trainer** - Orchestrate distributed training across multiple nodes (available under ClearML Enterprise Plan)
+* [**Multi-Node Trainer**](apps_multi_node_trainer.md) - Orchestrate distributed training across multiple nodes (available under ClearML Enterprise Plan)
 
 :::note[Autoscalers]
 Autoscaling ([AWS Autoscaler](apps_aws_autoscaler.md) and [GCP Autoscaler](apps_gcp_autoscaler.md))

@@ -59,7 +59,7 @@ This simplifies CI/CD workflows, as a single API automatically deploys (or remov
 1. Deploy the inference container (if not already deployed)
 1. Publish a new model in the model repository in one of the following ways:
     - Go to the "serving examples" project in the ClearML web UI, click on the Models Tab, search for "train sklearn model" right-click and select "Publish"
-    - Use the RestAPI (see [details](https://clear.ml/docs/latest/docs/references/api/models#post-modelspublish_many))
+    - Use the RestAPI (see [details](../references/api/models.md#post-modelspublish_many))
     - Use Python interface:
    
        ```python

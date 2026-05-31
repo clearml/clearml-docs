@@ -9,14 +9,13 @@ Event metering is available under the ClearML Enterprise plan.
 ClearML facilitates the tracking of custom usage metrics via a metering service, by enabling administrators to:
 * Define their metrics of interest
 * Periodically report these metrics to the metering service
-* Querying the aggregated data through API/UI.
+* Querying the aggregated data through API/UI
 
-The service also supports attaching a unit price to a custom event definition. When a unit price is configured, the 
-service provides both the event count and the estimated cost information. 
+The service also supports attaching a unit price to a custom event definition. When a unit price is configured, the service provides both the event count and estimated cost.
 
-The metering service records daily aggregates of reported events, by either
-* Summing all reported events for the day
-* Keeping the maximal value reported that day.
+The metering service records daily aggregates of reported events, by either:
+* Summing all reported values for the day
+* Storing the maximum value reported that day
 
 Tenant admins can view detailed usage and spend information through the [**Settings > Analytics**](../../../webapp/settings/webapp_settings_analytics.md) page.
 
@@ -24,13 +23,68 @@ Platform maintainers can view tenant usage and spend information in the tenant p
 
 ## Service Setup
 
-The ClearML metering service is deployed as part of the ClearML control plane. To enable it on Kubernetes, set the 
-following in your control plane Helm `values.yaml` file (or override file):
+The ClearML metering service is deployed as part of the ClearML control plane. It is enabled by the [`usageAggregator`](#usage-aggregator) parameter in the `clearml-enterprise` chart. Events are reported into it by built-in reporters or your own custom scripts.
+
+The `clearml-enterprise` chart provides built-in [control plane event reporters](#control-plane-usage-events). An additional built-in reporter, [`clearml-compute-resources-exporter`](#compute-resources-events), is provided as a standalone Helm chart and reports Kubernetes compute usage from a workload cluster.
+
+Each is enabled independently.
+
+### Usage Aggregator
+
+Enable the metering service on Kubernetes by setting the following in your control plane Helm `values.yaml` file (or override file):
 
 ```yaml
 usageAggregator:
- enabled: true
+  enabled: true
 ```
+
+By default, the metering service stores its data in the MongoDB instance bundled with `clearml-enterprise`. To point it at an external MongoDB deployment instead, set the connection string under `externalServices`:
+
+```yaml
+usageAggregator:
+  enabled: true
+  externalServices:
+    mongodbConnectionString: "mongodb://user:pass@mongo.example.com:27017"
+```
+
+For event definitions and pricing configuration, see [Defining Events](#defining-events) below.
+
+### Control Plane Usage Events
+
+The `usageScripts` chart parameter controls two reporters of control plane usage events:
+
+- `storageResourcesExporter` — reports storage usage from the ClearML fileserver.
+- `companyLifecycle` — reports the number of tenant users and service accounts.
+
+Enable `usageScripts` in your override file to activate both reporters:
+
+```yaml
+usageScripts:
+  enabled: true
+```
+
+To disable an individual reporter, set its `enabled: false` while keeping the parent enabled. The example below keeps `storageResourcesExporter` running on its default schedule but disables `companyLifecycle`:
+
+```yaml
+usageScripts:
+  enabled: true
+  companyLifecycle:
+    enabled: false
+```
+
+Each reporter runs hourly by default. To change the schedule, override the `schedule` field on the relevant reporter using standard cron syntax:
+
+```yaml
+usageScripts:
+  enabled: true
+  storageResourcesExporter:
+    cronJob:
+      schedule: "0 */6 * * *"   # every 6 hours
+```
+
+### Compute Resources Events
+
+To report compute usage from a Kubernetes workload cluster to the metering service, deploy the standalone `clearml-compute-resources-exporter` Helm chart on the workload cluster.
 
 ## Defining Events
 
@@ -206,15 +260,15 @@ API Server (templates → formatted usage events)
 Metering Service (daily aggregation)
 ```
 
-Reporting scripts are available for:
-* K8s Compute nodes
-* ClearML tenant users
-* ClearML Fileserver storage consumption
+Built-in reporters are available for:
+* [K8s Compute nodes](#compute-resources-events)
+* [ClearML tenant users](#control-plane-usage-events)
+* [ClearML Fileserver storage consumption](#control-plane-usage-events)
 
 Events are sent to the ClearML API server using the `tenants.custom_events` endpoint. 
 
 All events in a single report must belong to the same event type, designated by the template_key parameter.
-The events may belong to one or more (when reported by a platform admin) tenants 
+The events may belong to one or more (when reported by a platform admin) tenants.
 
 An event report is comprised of:
 * `template_key` - Identifies the event type
@@ -553,5 +607,3 @@ The API returns a JSON object containing usage information for each tenant:
     ]
 }
 ```
-
-

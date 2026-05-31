@@ -2,6 +2,14 @@
 title: Version 3.0
 ---
 
+### ClearML Agent 3.0.2
+**New Features and Bug Fixes**
+
+* Fix `setuptools`'s `pkg_resources` deprecation affects Python 3.9 and up
+* Add support for forbidden docker args configuration using the `agent.forbidden_docker_args` setting to prevent user 
+  configuration from interfering with task startup process
+* Add k8s glue support for delayed pod cleanup (for debugging purposes)
+
 ### ClearML Agent 3.0.1
 
 **New Features**

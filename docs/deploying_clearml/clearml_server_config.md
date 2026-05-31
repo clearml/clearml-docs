@@ -234,6 +234,38 @@ The following example, which is based on AWS load balancing, demonstrates the co
 1. Restart ClearML Server.
 
 
+### Elasticsearch Index Configuration
+By default, ClearML Server creates all Elasticsearch indices with:
+* 1 shard
+* 0 replicas
+
+If you are running a multinode Elasticsearch setup, you may want to adjust these values.
+
+Increasing the number of shards can improve performance in a multinode setup, but reduces the total number of indices 
+the cluster can host.
+
+* An Elasticsearch cluster can host up to `number of nodes × 1,000` shards 
+* Each index consumes `number_of_replicas × number_of_shards` shards
+
+Plan your shard and replica counts carefully before your first deployment, since shard counts cannot be changed on 
+existing indices.
+
+Configure shard and replica counts using environment variables in the ClearML Server `apiserver` service configuration:
+```
+CLEARML__services___elastic__mappings__events__number_of_replicas=1   # replicas for task events indices
+CLEARML__services___elastic__mappings__workers__number_of_replicas=1  # replicas for workers and queue statistics indices
+CLEARML__SERVICES___elastic__mappings__events__number_of_shards=3     # shards for task events indices
+CLEARML__SERVICES___elastic__mappings__workers__number_of_shards=3    # shards for workers and queue statistics indices
+```
+
+These settings apply only to newly created indices and do not affect existing indices. 
+
+If your deployment runs both `apiserver` and `apiserver-es` services, set these variables identically on both.
+
+#### Updating Existing Indices
+* Replica counts can be updated at any time using the Elasticsearch API.
+* Shard counts cannot be changed after index creation. To use a different shard count, you must recreate the index
+
 
 ### Opening Elasticsearch, MongoDB, and Redis for External Access
 

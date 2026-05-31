@@ -23,7 +23,7 @@ And that's it! This creates a [ClearML Task](../fundamentals/task.md) which capt
 * Installed packages
 * TensorFlow definitions
 * TensorFlow model files 
-* [TensorBoard](https://www.tensorflow.org/tensorboard) outputs (see example [here](https://clear.ml/docs/latest/docs/guides/frameworks/tensorflow/tensorboard_toy/))
+* [TensorBoard](https://www.tensorflow.org/tensorboard) outputs (see example [here](../guides/frameworks/tensorflow/tensorboard_toy.md))
 * Scalars (loss, learning rates)
 * Console output
 * General details such as machine details, runtime, creation date etc.
