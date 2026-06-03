@@ -418,11 +418,11 @@ module.exports = {
                 },
                 {
                     'AI Application Gateway': [
-                        'release_notes/helm/clearml-enterprise-app-gateway/3.1',
+                        'release_notes/helm/clearml-enterprise-app-gateway/3.2',
 
                         {
                             'Older Versions': [
-                                'release_notes/helm/clearml-enterprise-app-gateway/3.0',
+                                'release_notes/helm/clearml-enterprise-app-gateway/3.1', 'release_notes/helm/clearml-enterprise-app-gateway/3.0',
                                 'release_notes/helm/clearml-enterprise-app-gateway/2.1', 'release_notes/helm/clearml-enterprise-app-gateway/2.0'
                             ]
                         }

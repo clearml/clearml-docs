@@ -35,7 +35,7 @@ Where `<app_id>` is the application ID.
 
 :::tip[Finding App ID]
 You can find an app ID in the following locations:
-* In the application's app.conf file, under the id key. 
+* In the application's `app.conf` file, under the `id` key. 
 * In the application's UI page: 
   1. Click `+` to open the application launch form
   1. Hover over <img src="/docs/latest/icons/ico-info.svg" alt="Info" className="icon size-md space-sm" /> next to 
