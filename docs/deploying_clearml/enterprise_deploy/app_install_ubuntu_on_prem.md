@@ -74,3 +74,10 @@ python3 upload_apps.py \
   --dir "DIRECTORY_CONTAINING_APPS_ZIP_FILES"
 ```
 
+## Application Instance Visibility 
+
+By default, all users can view all application instances in the ClearML UI. You can configure different visibility 
+policies globally or for specific applications, for example to restrict access to the application owner or allow sharing 
+only with selected user groups.
+
+For more information, see [Application Instance Visibility Policy](app_visibility_policy.md). 

@@ -4,10 +4,11 @@ title: On-Premises on Ubuntu
 
 This guide provides step-by-step instruction for installing the ClearML Enterprise Server on a single Linux Ubuntu server.
 
-:::important[Upgrading Server to v3.29 and Greater]
-Starting with v3.29, Docker Compose deployments use updated container permissions.
+:::important[Upgrading an Existing Server to v3.29 and Greater]
+ClearML Server v3.29 introduces multiple changes to the Docker Compose configuration files.
 
-To avoid permission issues, follow the [required upgrade steps](docker_compose_upgrade_3_29.md). 
+If you are **upgrading an existing deployment from v3.28 or earlier**, follow the [required upgrade steps](docker_compose_upgrade_3_29.md)
+to accommodate these changes before pulling the new images.
 :::
 
 ## Prerequisites
@@ -74,16 +75,12 @@ for all ClearML data and configuration files, is defined as expected here (e.g. 
    3. The Docker daemon created a new container from that image which runs the executable that produces the output you are currently reading.
    4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.
    ```
-1. Install `docker-compose`:
+1. Install the Docker Compose V2 plugin following the [official Docker Compose installation
+   instructions](https://docs.docker.com/compose/install/) for your distribution, then verify:
 
    ```
-   sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-   sudo chmod +x /usr/local/bin/docker-compose
-   ``` 
-
-   :::note 
-   You might need to downgrade urlib3 by running `sudo pip3 install urllib3==1.26.2`
-   :::
+   docker compose version
+   ```
 
 1. Increase `vm.max_map_count` for Elasticsearch in Docker: 
 
@@ -142,13 +139,32 @@ for all ClearML data and configuration files, is defined as expected here (e.g. 
    sudo mkdir -pv ${CLEARML_ROOT}/data/redis
    sudo mkdir -pv ${CLEARML_ROOT}/data/fileserver
    sudo mkdir -pv ${CLEARML_ROOT}/data/fileserver/tmp
+   sudo mkdir -pv ${CLEARML_ROOT}/data/metrics
+   sudo mkdir -pv ${CLEARML_ROOT}/data/services/services-agent/cache
+   sudo mkdir -pv ${CLEARML_ROOT}/data/agent/app-agent
    sudo mkdir -pv ${CLEARML_ROOT}/logs/apiserver
+   sudo mkdir -pv ${CLEARML_ROOT}/logs/async_delete
+   sudo mkdir -pv ${CLEARML_ROOT}/logs/task_cleaner
    sudo mkdir -pv ${CLEARML_ROOT}/documentation
    sudo mkdir -pv ${CLEARML_ROOT}/logs/fileserver
    sudo mkdir -pv ${CLEARML_ROOT}/logs/fileserver-proxy
    sudo mkdir -pv ${CLEARML_ROOT}/data/fluentd/buffer
    sudo mkdir -pv ${CLEARML_ROOT}/config/webserver_external_files
    sudo mkdir -pv ${CLEARML_ROOT}/config/onprem_poc
+   ```
+
+1. Update ownership of the required directories: 
+
+   ```
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/apiserver
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/async_delete
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/task_cleaner
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/fileserver
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/onprem_poc
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/fileserver
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/metrics
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/agent/app-agent
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/services/services-agent
    ```
 
 1. Copy the following ClearML configuration files to `${CLEARML_ROOT}`:
@@ -174,13 +190,53 @@ for all ClearML data and configuration files, is defined as expected here (e.g. 
    ```
    sudo docker login -u=$DOCKERHUB_USER -p=$DOCKERHUB_PASSWORD
    ```
-   
-1. Start the `docker-compose`  by changing directories to the directory containing the `docker-compose` files and running the following command:
-   
+
+1. Set the ID of the host's docker group (the group that owns `/var/run/docker.sock`):
+
+   1. Determine the Docker group ID on your host:
+
+      ```
+      stat -c '%g' /var/run/docker.sock
+      ```
+  
+   2. Add the value to your env file:    
+
+      ```
+      DOCKER_GID=<value-from-stat>
+      ```
+     
+   :::tip[Future Proofing Group ID configuration]
+   Instead of storing `DOCKER_GID` in the env file, you can specify it as part of the Docker Compose invocation. This 
+   avoids relying on a potentially outdated value if the host's docker group GID changes. 
+   :::
+
+1. Start the deployment: 
+
    ```
-   sudo docker-compose --env-file constants.env up -d
+   docker compose --env-file constants.env pull
+   docker compose --env-file constants.env up -d
    ```
-   
+
+   :::tip[Future Proofing Group ID configuration]
+   To avoid any discrepancy with underlying changes to the host OS configuration, you can provide the `DOCKER_GID` value 
+   dynamically as part of the docker compose invocation instead of setting it statically in the env file: 
+
+   ```
+   DOCKER_GID=$(stat -c '%g' /var/run/docker.sock) \
+       docker compose --env-file constants.env pull
+   DOCKER_GID=$(stat -c '%g' /var/run/docker.sock) \
+       docker compose --env-file constants.env up -d
+   ```
+
+   If you need to use `sudo`, place it BEFORE the variable assignment as `sudo` strips environment variables the variable 
+   is required by the docker compose command.
+
+   ```
+   sudo DOCKER_GID=$(stat -c '%g' /var/run/docker.sock) \
+   docker compose --env-file constants.env up -d
+   ```
+   :::
+
 1. Verify web access by browsing to your URL (IP address) and port 8080:
 
    ```
@@ -289,6 +345,10 @@ configuration for both the agent container and its spawned child containers.
 
 Add the following configuration to your `docker-compose.override.yml`:
 
+:::note[In-container path changed in v3.29]
+The `apps-agent` mount target shown below is `/root/.clearml`, which applies to v3.28 and earlier. From v3.29 onwards the agent runs as a non-root user, and the in-container path is `/home/nonroot/.clearml`. On v3.29+, substitute the mount target accordingly.
+:::
+
 ```yaml
 apps-agent:
   environment:
@@ -318,6 +378,10 @@ the agent container itself does not need CA configuration. However, the spawned 
 the external fileserver URL, so they need the CA configuration.
 
 Add the following to your `docker-compose.override.yml`:
+
+:::note[In-container path changed in v3.29]
+The `services-agent` mount target shown below is `/root/.clearml`, which applies to v3.28 and earlier. From v3.29 onwards the agent runs as a non-root user, and the in-container path is `/home/nonroot/.clearml`. On v3.29+, substitute the mount target accordingly.
+:::
 
 ```yaml
 services-agent:
@@ -483,4 +547,3 @@ Check the webserver availability by running the following:
 ```
 curl http://<server’s IP address>:8080/configuration.json |
 ```
-

@@ -991,11 +991,20 @@ module.exports = {
             ]
         },
         {'UI Applications': [
-            'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
-            'deploying_clearml/enterprise_deploy/apps_k8s',
-            'deploying_clearml/enterprise_deploy/app_install_ex_server',
-            'deploying_clearml/enterprise_deploy/app_custom',
-            'deploying_clearml/enterprise_deploy/app_launch_form_custom',
+            {
+                'Installation': [
+                    'deploying_clearml/enterprise_deploy/app_install_ubuntu_on_prem',
+                    'deploying_clearml/enterprise_deploy/apps_k8s',
+                    'deploying_clearml/enterprise_deploy/app_install_ex_server',
+                    'deploying_clearml/enterprise_deploy/app_custom',
+                ]
+            },
+            {
+                'Configuration': [
+                    'deploying_clearml/enterprise_deploy/app_launch_form_custom',
+                    'deploying_clearml/enterprise_deploy/app_visibility_policy',
+                ]
+            }
             ]
         },
         {

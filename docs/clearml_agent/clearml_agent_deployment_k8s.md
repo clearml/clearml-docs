@@ -58,6 +58,11 @@ ClearML Enterprise adds advanced Kubernetes features, such as:
 - **Multi-Queue Support**: Service multiple ClearML queues within the same Kubernetes cluster.
 - **Pod-Specific Templates**: Define resource configurations per queue using pod templates.
 
+:::warning[Upgrading to Agent Chart v6.12.3 or greater]
+The agent image in chart v6.12.3 now runs as a non-root user. Depending on your configuration, some changes to your 
+`values.yaml` may be required before upgrading. See [Upgrading to Agent Chart v6.12.3 or greater](enterprise_agent_upgrade_6_12_3.md) 
+for details. 
+:::
 
 #### Prerequisites
 

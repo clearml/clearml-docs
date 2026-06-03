@@ -4,6 +4,13 @@ title: AWS VPC
 
 This guide provides step-by-step instructions for installing the ClearML Enterprise Server on AWS using a Virtual Private Cloud (VPC). 
 
+:::important[Upgrading Server to v3.29 and Greater]
+ClearML Server v3.29 introduces multiple changes to the Docker Compose configuration files.
+
+If you are **upgrading an existing deployment from v3.28 or earlier**, follow the [required upgrade steps](docker_compose_upgrade_3_29.md)
+to accommodate these changes before pulling the new images.
+:::
+
 It covers the following:
 * Set up security groups and IAM role
 * Create EC2 instance with required disks

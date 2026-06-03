@@ -2,9 +2,23 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.8
+
+**New Features Improvements**
+* HyperDatasets
+  * Add ability to publish a HyperDataset via single method call
+  * Add HyperDataset tagging 
+* Datasets
+  * Add path traversal check in `Dataset._merge_datasets`
+  * Add `status` attribute in `Dataset.list_datasets` dataset return values
+* Add support for `DefaultAzureCredential`
+
+**Bug Fix**
+* Fix issue that users restricted to a project cannot create Dataviews
+
 ### ClearML 2.1.7
 
-**Bug fixes and improvements**
+**Bug fixes and Improvements**
 * Add optional (opt-out) parameter to prevent processing of pickled artifacts ([#1619](https://github.com/clearml/clearml/pull/1619), 
   [#1621](https://github.com/clearml/clearml/pull/1621)):
   * Use `task.artifacts[0].get(block_unsafe_artifacts=True)`, or

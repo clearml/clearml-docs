@@ -76,3 +76,11 @@ python3 upload_apps.py --host <APISERVER_URL> --key <ACCESS_KEY> --secret <SECRE
 ```bash
 python3 upload_apps.py --host <APISERVER_URL> --key <ACCESS_KEY> --secret <SECRET_KEY> --command upload --dir "<PATH_TO_APPS_DIR>" -ml
 ```
+
+## Application Instance Visibility 
+
+By default, all users can view all application instances in the ClearML UI. You can configure different visibility 
+policies globally or for specific applications, for example to restrict access to the application owner or allow sharing 
+only with selected user groups.
+
+For more information, see [Application Instance Visibility Policy](app_visibility_policy.md). 

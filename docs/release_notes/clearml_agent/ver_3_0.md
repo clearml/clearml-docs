@@ -2,6 +2,17 @@
 title: Version 3.0
 ---
 
+### ClearML Agent 3.0.3
+
+**New Features and Bug Fixes**
+
+* Fix MD5 hashing compatibility with FIPS-enabled systems on Python 3.6+
+* Add `agent.package_manager.uv_run_extra_args` configuration option to pass extra arguments to `uv run` (mirrors `uv_sync_extra_args`)
+* Add `agent.git_fetch_args` configuration option to pass extra arguments to `git fetch` when refreshing cached repositories
+* Add `agent.docker_apply_environment_from_vault` configuration option to inject task owner's vault environment variables 
+  as `docker -e args` when running in `host/docker` mode
+* Consolidate `k8s-glue` Dockerfiles into a single multi-provider build (`glue-build`)
+
 ### ClearML Agent 3.0.2
 **New Features and Bug Fixes**
 
