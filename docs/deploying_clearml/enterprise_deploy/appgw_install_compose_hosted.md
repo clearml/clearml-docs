@@ -112,7 +112,7 @@ TCP_PORT_END=
 
 * `ROUTER_NAME`: In the case of [multiple routers on the same tenant](#multiple-router-in-the-same-tenant), each router
    needs to have a unique name.
-* `CLEARML_API_ACCESS_KEY, CLEARML_API_SECRET_KEY:` API credentials for Admin user or Service Account with admin privileges
+* `CLEARML_API_ACCESS_KEY`, `CLEARML_API_SECRET_KEY`: API credentials for Admin user or Service Account with admin privileges
   created in the ClearML web UI. Make sure to label these credentials clearly, so that they will not be revoked by mistake.
 * `ROUTER_URL`: External address to access the router. This can be the IP address or DNS of the node where the router
    is running, or the address of a load balancer if the router operates behind a proxy/load balancer. This URL is used
