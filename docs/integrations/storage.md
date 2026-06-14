@@ -93,8 +93,9 @@ sdk {
 ``` 
 
 #### Non-AWS Endpoints
-ClearML supports any S3-compatible services, such as [MinIO](https://github.com/minio/minio) as well as other 
-cloud-based or locally deployed storage services. For non-AWS endpoints, use a configuration like this:
+ClearML supports any S3-compatible services, such as [MinIO](https://github.com/minio/minio) and
+[Backblaze B2](https://www.backblaze.com/docs/cloud-storage-s3-compatible-api) as well as other cloud-based or locally
+deployed storage services. For non-AWS endpoints, use a configuration like this:
 
 ```
 sdk {
