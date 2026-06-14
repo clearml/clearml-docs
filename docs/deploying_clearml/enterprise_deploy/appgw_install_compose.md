@@ -60,7 +60,10 @@ services:
     container_name: ai-gateway-proxy
     volumes:
     - ./application-gateway/config/nginx:/etc/nginx/conf.d:ro
-    - ./application-gateway/config/lua:/usr/local/openresty/nginx/lua:ro
+    - ./application-gateway/config/lua:/opt/openresty/nginx/lua:ro
+    - ./application-gateway/var/run/openresty:/var/run/openresty
+    environment:
+    - ROUTER__WEBSERVER__AUTO_RELOAD_CONFIG=true
   ai-gateway-router:
     image: clearml/ai-gateway-router:${ROUTER_TAG:?err}
     restart: unless-stopped
@@ -68,8 +71,9 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
     - ./application-gateway/config/nginx:/etc/nginx/conf.d:rw
-    - ./application-gateway/config/lua:/usr/local/openresty/nginx/lua:rw
+    - ./application-gateway/config/lua:/opt/openresty/nginx/lua:rw
     environment:
+    - ROUTER__WEBSERVER__AUTO_RELOAD_CONFIG=true
     - ROUTER_NAME=${ROUTER_NAME:?err}
     - ROUTER__WEBSERVER__SERVER_PORT=${ROUTER__WEBSERVER__SERVER_PORT:?err}
     - ROUTER_URL=${ROUTER_URL:?err}
@@ -86,8 +90,8 @@ services:
 Create a `runtime.env` file containing the following entries:
 
 ```
-PROXY_TAG=1.8.1
-ROUTER_TAG=2.14.0
+PROXY_TAG=1.9.0
+ROUTER_TAG=2.16.1
 ROUTER_NAME=main-router
 ROUTER__WEBSERVER__SERVER_PORT=8010
 ROUTER_URL=
@@ -129,6 +133,12 @@ Run the following command to start the router:
 ```
 sudo docker compose --env-file runtime.env up -d
 ```
+
+:::note[Non-root images]
+Starting from router `2.16.1` and proxy `1.9.0`, the App Gateway containers run as a non-root user. If you are
+upgrading from an earlier deployment, some changes to your `docker-compose.yaml` and folder permissions may be
+required. See [Migrating the AI App Gateway to Non-Root Images](appgw_migrate_nonroot.md) for details.
+:::
 
 ### Advanced Configuration
 

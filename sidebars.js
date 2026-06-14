@@ -951,6 +951,7 @@ module.exports = {
                         'deploying_clearml/enterprise_deploy/delete_tenant',
                         'deploying_clearml/enterprise_deploy/api_audit',
                         'deploying_clearml/enterprise_deploy/extra_configs/backups',
+                        'deploying_clearml/enterprise_deploy/clearml_server_image_scanning',
                         'deploying_clearml/enterprise_deploy/container_debug',
                         {
                            type: 'category',
