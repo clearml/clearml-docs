@@ -20,12 +20,14 @@ Agents can also utilize **Singularity** or **Pyxis** containers in Linux cluster
 
 ## 1. Install the Slurm Glue
 
-Install the Slurm Glue on a machine where you can run `sbatch` / `squeue` etc. 
-   
+Install the Slurm Glue on a machine where you can run Slurm commands such as `sbatch` and `squeue` (typically the login node).
+One instance is sufficient for the entire cluster; there is no need to install it on every node.
+
 ```
 pip3 install -U --extra-index-url https://*****@*****.allegro.ai/repository/clearml_agent_slurm/simple clearml-agent-slurm
 ```
-   
+
+  
 :::tip[Python repository credentials]
 Your credentials for `--extra-index-url` are available in the WebApp under the **Help** menu  <img src="/docs/latest/icons/ico-help-outlined.svg" alt="Help menu" className="icon size-md space-sm" /> **>** 
 **ClearML Python Package setup** **>** **Install** step.
@@ -112,7 +114,7 @@ clearml-agent-slurm --template-files slurm.example.template --queue default
 ```
    
 You can also pass multiple templates and queues. For example: the following associates the `queue1` queue to the 
-`slurm.example.template1` script and `queue2` queue to the `slurm.example.template2` script :
+`slurm.example.template1` script and `queue2` queue to the `slurm.example.template2` script:
 
 ```commandline
 clearml-agent-slurm --template-files slurm.template1 slurm.template2 --queue queue1 queue2

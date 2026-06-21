@@ -7,9 +7,9 @@ and orchestration.
 
 ## Prerequisites
 
-* ClearML-Server : Model repository, Service Health, Control plane
-* Kubernetes / Single-instance Machine : Deploying containers
-* CLI : Configuration and model deployment interface
+* ClearML-Server: Model repository, Service Health, Control plane
+* Kubernetes / Single-instance Machine: Deploying containers
+* CLI: Configuration and model deployment interface
 
 ## Initial Setup
 1. Set up your [ClearML Server](../deploying_clearml/clearml_server.md) or use the 

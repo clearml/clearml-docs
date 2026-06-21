@@ -2,6 +2,15 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.9
+
+**Bug fixes and Improvements**
+
+* Add method to create a Hyper-Dataset version snapshot
+* Implement static route validator `RouterService` class
+* Fix syntax-related error in the `Dataset.get()` ([#1648](https://github.com/clearml/clearml/pull/1648))
+* Improvements in formatting via f-strings instead of `.format`
+
 ### ClearML 2.1.8
 
 **New Features Improvements**

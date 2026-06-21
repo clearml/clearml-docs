@@ -12,7 +12,7 @@ distributed training environment for all nodes.
 
 The execution script can use any distributed training framework, including PyTorch (`torchrun`) and Hugging Face 
 Accelerate. Training code can be provided either through a Git repository or prepackaged inside the container image. To 
-run across multiple nodes, the configured queue must  support executing multiple tasks simultaneously (e.g. serviced by 
+run across multiple nodes, the configured queue must support executing multiple tasks simultaneously (e.g. serviced by 
 an autoscaler or multiple agents). 
 
 Once you start a Multi-Node Trainer instance, you can view the following information in its dashboard:

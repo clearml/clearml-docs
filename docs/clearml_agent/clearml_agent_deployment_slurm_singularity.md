@@ -15,7 +15,8 @@ This integration works similarly to the [Native Slurm](clearml_agent_deployment_
 
 ## 1. Install the Slurm Glue
 
-Install the Slurm Glue on a machine where you can run `sbatch` / `squeue` etc. 
+Install the Slurm Glue on a machine where you can run Slurm commands such as `sbatch` and `squeue` (typically the login node).
+One instance is sufficient for the entire cluster; there is no need to install it on every node.
    
 ```
 pip3 install -U --extra-index-url https://*****@*****.allegro.ai/repository/clearml_agent_slurm/simple clearml-agent-slurm

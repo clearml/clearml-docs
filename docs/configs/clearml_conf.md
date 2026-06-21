@@ -1078,7 +1078,7 @@ metrics, network, AWS S3 buckets and credentials, Google Cloud Storage, Azure St
 **`sdk.development.default_shell_binary`** (*str*)
 
 * Path to the executable binary [`Task.create()`](../references/sdk/task.md#taskcreate) will use as the default value 
-  for the new task’s script.binary,
+  for the new task’s `script.binary`,
 
 ---
 

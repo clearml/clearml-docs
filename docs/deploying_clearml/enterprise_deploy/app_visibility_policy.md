@@ -13,7 +13,7 @@ The value options are:
 * `all` - All users can see application instances (default)
 * `owner` - Only the user who launched the application instance can see it
 * `group` - Allows the user launching the application instance to select whether to keep the instance private (visible 
-  only to them) or allow  specific user groups to see it as well: The launch form will include a **Shared Access** 
+  only to them) or allow specific user groups to see it as well: The launch form will include a **Shared Access** 
   toggle; when enabled, the user can choose the groups to share the instance with. 
 
 For example, to set the default visibility to group on Kubernetes, add the following to clearml-values.override.yaml: 

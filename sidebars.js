@@ -392,11 +392,12 @@ module.exports = {
             'Enterprise Helm Charts': [
                 {
                     'ClearML Server': [
-                        'release_notes/helm/clearml-enterprise/10.12',
+                        'release_notes/helm/clearml-enterprise/11.0',
 
                         {
                             'Older Versions': [
-                                'release_notes/helm/clearml-enterprise/10.11',
+                                'release_notes/helm/clearml-enterprise/10.13',
+                                'release_notes/helm/clearml-enterprise/10.12', 'release_notes/helm/clearml-enterprise/10.11',
                                 'release_notes/helm/clearml-enterprise/10.10', 'release_notes/helm/clearml-enterprise/10.9',
                                 'release_notes/helm/clearml-enterprise/10.8', 'release_notes/helm/clearml-enterprise/10.7'
                             ]

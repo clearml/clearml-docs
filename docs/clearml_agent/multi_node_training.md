@@ -81,7 +81,7 @@ Tasks define their GPU and node requirements through the following [Task user pr
 ## Queue Level Multi-Node Configuration 
 
 Instead of specifying GPU requirements in each specific Task, you can have the ClearML agent apply the resource 
-configuration based on the queue a task was serviced through so that all Tasks enqueued on that queue  will use the same 
+configuration based on the queue a task was serviced through so that all Tasks enqueued on that queue will use the same 
 multi-node configuration.  
 
 ```yaml
