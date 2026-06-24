@@ -6,7 +6,7 @@ title: Platform Management Center
 The Platform Management Center is available under the ClearML Enterprise plan.
 :::
 
-This guide describes how to deploy the [Platform Management Center](../../../webapp/platform_management_center.md) on 
+This guide describes how to deploy the [Platform Management Center](../../../platform_management_center.md) on 
 Kubernetes.
 
 This procedure assumes you have already set up the [ClearML control plane](../../../deploying_clearml/enterprise_deploy/k8s.md). 

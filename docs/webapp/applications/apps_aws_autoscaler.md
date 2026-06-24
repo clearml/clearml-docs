@@ -2,8 +2,8 @@
 title: AWS Autoscaler
 ---
 
-:::note[Pro Plan Offering]
-The ClearML AWS Autoscaler App is available under the ClearML Pro plan.
+:::note[Pro Plan and Enterprise Offering]
+The ClearML AWS Autoscaler App is available under the ClearML Pro and Enterprise plans. 
 :::
 
 The AWS Autoscaler Application optimizes AWS EC2 instance usage according to a user-defined resource budget: define your 

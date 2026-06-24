@@ -128,7 +128,7 @@ function Home() {
               <span className={styles.indexCtasGitHubButtonWrapper}>
                 <iframe
                   className={styles.indexCtasGitHubButton}
-                  src="https://ghbtns.com/github-btn.html?user=allegroai&amp;repo=clearml&amp;type=star&amp;count=true&amp;size=large"
+                  src="https://ghbtns.com/github-btn.html?user=clearml&repo=clearml&type=star&count=true&size=large"
                   width={160}
                   height={30}
                   title="GitHub Stars"

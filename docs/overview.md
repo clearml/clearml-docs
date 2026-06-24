@@ -66,12 +66,13 @@ The GenAI App Engine is designed to deploy large language models (LLM) into GPU 
 
 ## Platform Management Center
 
-The [Platform Management Center](webapp/platform_management_center.md) provides an administrative dashboard for all 
+The [Platform Management Center](platform_management_center.md) provides an administrative dashboard for all 
 tenants across a ClearML deployment. 
 
 It enables platform administrators to monitor tenant activity, usage, and costs.
 
-![Platform Management Center](img/platform_management.png)
+![Platform Management Center](img/pmc_platform_usage.png#light-mode-only)
+![Platform Management Center](img/pmc_platform_usage_dark.png#dark-mode-only)
 
 
 ---

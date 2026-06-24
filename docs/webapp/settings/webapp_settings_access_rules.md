@@ -15,6 +15,7 @@ service accounts, and/or user groups have access permissions to the following wo
 * [Dataviews](../../hyperdatasets/dataviews.md) 
 * [Datasets](../../hyperdatasets/dataset.md)
 * [Queues](../../fundamentals/agents_and_queues.md#what-is-a-queue) 
+* [Application Categories](../applications/apps_overview.md)
 
 By default, all users have **READ & MODIFY** access to all resources.
 
@@ -25,7 +26,8 @@ Access privileges can be viewed, defined, and edited in the **Access Rules** tab
 1. Select the resource to grant privileges to. To select a specific resource object (e.g. a 
    specific project or task), click the input box, and select the object from the list that appears. Filter the 
    list by typing part of the desired object name
-1. Select the permission type - **Read Only** or **Read & Modify**
+1. Select the permission type - **Read Only** or **Read & Modify**. Note that this distinction has no bearing on App 
+   Categories which always apply **Read & Modify** access. 
 1. Assign users, [service accounts](webapp_settings_users.md#service-accounts), and/or [user groups](webapp_settings_users.md#user-groups) 
    to be given access. Click the 
    desired input box, and select the users / service accounts / groups from the list that appears. Filter the list by 

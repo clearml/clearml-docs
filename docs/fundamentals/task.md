@@ -122,6 +122,7 @@ Available task types are:
 * *training* (default) - Training a model 
 * *testing* - Testing a component, for example model performance
 * *inference* - Model inference job (e.g. offline / batch model execution)
+* *agent* - Agentic AI workloads
 * *controller* - A task that lays out the logic for other tasks' interactions, manual or automatic (e.g. a pipeline 
   controller) 
 * *optimizer* - A specific type of controller for optimization tasks (e.g. [hyperparameter optimization](../getting_started/hpo.md))

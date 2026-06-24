@@ -2,8 +2,8 @@
 title: ClearML Applications
 ---
 
-:::note[Pro Plan Offering]
-ClearML Applications are available under the ClearML Pro plan.
+:::note[Pro Plan and Enterprise Offering]
+ClearML Applications are available under the ClearML Pro and Enterprise plans.
 :::
 
 Use ClearML's GUI Applications to manage ML workloads and automatically run your recurring workflows without any coding. 
@@ -48,18 +48,18 @@ Applications for deploying machine learning models as scalable, secure services:
 * [**SGLang Model Deployment**](apps_sglang.md) - Deploy LLMs using [SGLang](https://docs.sglang.ai/) as networking services over a secure endpoint (available under ClearML Enterprise Plan)
 * [**Containerized Application Launcher**](apps_container_launcher.md) - Launch and application containers with persistent workspaces and flexible networking (available under ClearML Enterprise Plan)
 * [**LLM UI**](apps_llm_ui.md) - Launch a visual chat interface to a deployed model (available under ClearML Enterprise Plan)
-* **MCP Server Deploy** - Deploy remote MCP (Model Context Protocol) servers as containerized services over a secure network endpoint (available under ClearML Enterprise Plan).
+* [**MCP Server Deploy**](apps_mcp_server.md) - Deploy remote MCP (Model Context Protocol) servers as containerized services over a secure network endpoint (available under ClearML Enterprise Plan).
 
 ### NVAIE
 
 Applications utilizing NVIDIA AI Enterprise's (NVAIE) suite of software tools:
 * [**NIM**](apps_nvidia_nim.md) - Launch [NVIDIA NIM](https://developer.nvidia.com/nim) models through their specific containers (available under ClearML Enterprise Plan)
-* **NVIDIA Dynamo** - Deploy NVIDIA Dynamo's distributed LLM inference pipeline as a multi-service stack for high-throughput model serving (available under ClearML Enterprise Plan)
+* [**NVIDIA Dynamo**](apps_nvidia_dynamo.md) - Deploy NVIDIA Dynamo's distributed LLM inference pipeline as a multi-service stack for high-throughput model serving (available under ClearML Enterprise Plan)
 * **NVIDIA NIM RAG** - Launch an Nvidia NIM RAG session (available under ClearML Enterprise Plan)
 
 ### Cluster
 Applications for deploying and managing scalable compute clusters for distributed workloads:
-* **Deploy Slurm Cluster** - Deploy a dynamic Slurm cluster for HPC and distributed workloads (available under ClearML Enterprise Plan)
+* [**Deploy Slurm Cluster**](apps_deploy_slurm.md) - Deploy a dynamic Slurm cluster for HPC and distributed workloads (available under ClearML Enterprise Plan)
 * **K3s Deployment** - Deploy a Kubernetes cluster with a configurable number of worker nodes (available under ClearML Enterprise Plan)
 * [**Multi-Node Trainer**](apps_multi_node_trainer.md) - Orchestrate distributed training across multiple nodes (available under ClearML Enterprise Plan)
 

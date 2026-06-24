@@ -42,7 +42,7 @@ The following configuration values are machine and/or agent specific, so they ca
    to view configuration file reference). To import an existing configuration file, click <img src="/docs/latest/icons/ico-import.svg" alt="Import" className="icon size-md space-sm" />. 
 1. Click **Save** 
 
-## UI Storage Credentials   
+## UI Storage Credentials
 UI storage credential vaults configure UI access to cloud storage credentials for a designated group of users. 
 
 **To create a vault:**

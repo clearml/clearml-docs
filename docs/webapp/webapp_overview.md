@@ -14,6 +14,18 @@ The **ClearML Web UI** is the graphical user interface for the ClearML platform,
 ![WebApp screenshots gif](../img/gif/webapp_screenshots.gif#light-mode-only)
 ![WebApp screenshots gif](../img/gif/webapp_screenshots_dark.gif#dark-mode-only)
 
+## UI Structure
+
+How the WebApp is organized depends on your ClearML plan:
+
+* **Open Source / Hosted Service** - All modules appear in a single sidebar. Personal and
+  administrator settings are both accessed from the **Settings** page in the user menu.
+* **Enterprise** - The WebApp presents a [role-based UI](role_based_ui.md): the sidebar is
+  filtered by the active view (AI Admin, AI Builder, or AI Consumer), which is selected from
+  the user menu. The **Settings** page in the user menu shows personal settings only;
+  administrator settings are accessed from a [Settings](admin_settings.md) sidebar item in the
+  AI Admin view.
+
 ## UI Modules 
 The WebApp's sidebar provides access to the following modules:
 
@@ -46,13 +58,14 @@ to access the following:
   * Manage [workspace API credentials](settings/webapp_settings_profile.md#clearml-api-credentials) 
   * Manage [personal configuration vault](settings/webapp_settings_profile.md#configuration-vault) (Enterprise offering)
   * Configure [cloud storage access credentials](settings/webapp_settings_profile.md#browser-cloud-storage-access) for the ClearML Web UI
-  * Administrator settings
-    * Manage [users and workspaces](settings/webapp_settings_users.md)
-    * View [usage and billing](settings/webapp_settings_usage_billing.md) information (Free Hosted Service)
-    * Manage [access rules](settings/webapp_settings_access_rules.md) (available in the ClearML Enterprise plan)
-    * Define [configuration vaults](settings/webapp_settings_admin_vaults.md) to apply to designated user groups (available in the ClearML Enterprise plan)
-    * Manage [server identity providers](settings/webapp_settings_id_providers.md) (available in the ClearML Enterprise plan)
-    * Define the [resource access policies](settings/webapp_settings_resource_configs.md) (available in the ClearML Enterprise plan)
+  * [Administrator settings](admin_settings.md)
+
+  :::note
+  Under the ClearML Enterprise plan [role-based UI](role_based_ui.md), administrator settings are
+  not shown in this menu. They are accessed from the [Settings](admin_settings.md) sidebar item in
+  the AI Admin view instead.
+  :::
+
 * Workspace Control (Free Hosted Service)
   * **Invite a User** to your workspace (supported in hosted service). Click **Invite a User** > input user's 
   email > click **ADD** > page redirects to the [Users & Groups](settings/webapp_settings_users.md#user-groups) section of 
@@ -72,12 +85,12 @@ The ClearML UI provides two search options on most pages:
   for filtering the objects shown on that page. This search focuses on attributes relevant to that object type:
   * Projects: show projects whose name or ID match the searched text 
   * Tasks: show tasks whose name, ID, description, or input/output models match the searched text
-  * Models:  show models whose name, ID, or description match the searched text.
-  * Dataviews:  show dataviews whose name, ID, description, hyper-datasets, or hyper-dataset versions match the searched text.
+  * Models: show models whose name, ID, or description match the searched text.
+  * Dataviews: show dataviews whose name, ID, description, hyper-datasets, or hyper-dataset versions match the searched text.
   * Reports: show reports whose name, ID, tags, project, description, or content match the searched text.
   * Datasets: show datasets whose name, ID, or description match the searched text 
-  * Pipeline Runs:  show reports whose name, ID, or description match the searched text 
-  <br/>
+  * Pipeline Runs: show reports whose name, ID, or description match the searched text 
+  <br/><br/>
 
   :::tip[Additional filtering]
   ClearML's object tables (e.g. [tasks](webapp_exp_table.md), [models](webapp_model_table.md), [pipelines](pipelines/webapp_pipeline_table.md), 

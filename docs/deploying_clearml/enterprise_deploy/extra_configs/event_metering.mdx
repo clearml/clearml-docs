@@ -17,9 +17,9 @@ The metering service records daily aggregates of reported events, by either:
 * Summing all reported values for the day
 * Storing the maximum value reported that day
 
-Tenant admins can view detailed usage and spend information through the [**Settings > Analytics**](../../../webapp/settings/webapp_settings_analytics.md) page.
+Tenant admins can view detailed usage and spend information through the [**Analytics**](../../../webapp/webapp_admin_dashboard.md#analytics) tab of the Admin Dashboard.
 
-Platform maintainers can view tenant usage and spend information in the tenant page of the [platform management center](../../../webapp/platform_management_center.md).
+Platform maintainers can view tenant usage and spend information in the tenant page of the [platform management center](../../../platform_management_center.md).
 
 ## Service Setup
 
@@ -101,9 +101,9 @@ The metering service configuration includes:
 ### Usage Aggregator Definitions
 
 Events are configured in the Usage Aggregator configuration:
-* In Kubernetes deployments, define it in the control plane Helm chart using `usageAggregator.configuration`. 
-* In Docker Compose deployments, define it in the Usage Aggregator configuration file, which by default is located 
-  at: `/opt/clearml/usage_aggregator.conf`. 
+* In Kubernetes deployments, define it in the control plane Helm chart using `usageAggregator.configuration`.
+* In Docker Compose deployments, define it in the Usage Aggregator configuration file, which by default is located
+  at: `/opt/clearml/usage_aggregator.conf`.
 
 
 For each event category, the following definitions are required:
@@ -274,7 +274,7 @@ An event report is comprised of:
 * `template_key` - Identifies the event type
 * `id` - A unique identifier for the event 
 * `clearml_tenant` - The tenant ID the event belongs to. You can find the tenant ID in the following places:
-   * [Platform Management Center](../../../webapp/platform_management_center.md) tenant list (landing page). Click `ID` 
+   * [Platform Management Center](../../../platform_management_center.md) tenant list (landing page). Click `ID`
    on the relevant row to copy the tenant ID
    * [**WebApp settings > Profile**](../../../webapp/settings/webapp_settings_profile.md) under `Company`. Click `ID` to 
    copy the tenant ID   
@@ -302,8 +302,8 @@ curl -XPOST -u "$ADMIN_USER_KEY":"$ADMIN_USER_SECRET" \
 ## Accessing Aggregated Data
 
 Data aggregated in the metering service is available in:
-* Tenant admin settings UI [Analytics](../../../webapp/settings/webapp_settings_analytics.md) section
-* [Platform management center](../../../webapp/platform_management_center.md) UI tenant pages
+* The [Analytics](../../../webapp/webapp_admin_dashboard.md#analytics) tab of the Admin Dashboard
+* [Platform management center](../../../platform_management_center.md) UI tenant pages
 
 The metering service also makes the data accessible through direct API to facilitate connecting with 3rd party billing 
 systems, BI platforms, etc.

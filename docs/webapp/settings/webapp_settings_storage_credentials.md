@@ -2,7 +2,8 @@
 title: Storage Cleanup 
 ---
 
-To enable ClearML to delete task artifacts stored in cloud storage when a task is deleted, configure access credentials for your storage provider:
+To enable ClearML to delete task artifacts stored in cloud storage when a task is deleted, administrators can configure 
+access credentials for storage providers in use:
 * [Google Cloud Storage](#google-cloud-storage)
 * [AWS S3 Storage](#aws-s3-storage)
 * [Azure](#azure)
@@ -20,7 +21,7 @@ Set up credentials for Google Cloud buckets:
   * Project
   * Credentials JSON
 
-## AWS S3 Storage 
+## AWS S3 Storage
 Set up credentials for S3 protocol storage (i.e. AWS S3, MinIO, etc.): 
 * Default credentials - These credentials apply to all buckets unless bucket-specific credentials are set:
   * Access Key - Default access key for the storage service.

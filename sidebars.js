@@ -50,7 +50,7 @@ module.exports = {
                 'custom_apps'
             ]
         },
-        'webapp/platform_management_center',
+        'platform_management_center',
     ],
     usecaseSidebar: [
         /*'getting_started/main',*/
@@ -316,10 +316,10 @@ module.exports = {
             {
                 'Enterprise':
                         [
-                           'release_notes/clearml_server/enterprise/ver_3_29',
+                           'release_notes/clearml_server/enterprise/ver_3_30',
                            {
                                 'Older Versions': [
-                                     'release_notes/clearml_server/enterprise/ver_3_28',
+                                     'release_notes/clearml_server/enterprise/ver_3_29', 'release_notes/clearml_server/enterprise/ver_3_28',
                                      'release_notes/clearml_server/enterprise/ver_3_27', 'release_notes/clearml_server/enterprise/ver_3_26',
                                      'release_notes/clearml_server/enterprise/ver_3_25', 'release_notes/clearml_server/enterprise/ver_3_24',
                                      'release_notes/clearml_server/enterprise/ver_3_23', 'release_notes/clearml_server/enterprise/ver_3_22',
@@ -634,6 +634,28 @@ module.exports = {
             label: 'WebApp',
             link: {type: 'doc', id: 'webapp/webapp_overview'},
             items: [
+                'webapp/role_based_ui',
+                'webapp/webapp_admin_dashboard',
+                {
+                    type: 'category',
+                    collapsible: true,
+                    collapsed: true,
+                    label: 'Administrator Settings',
+                    link: {type: 'doc', id: 'webapp/admin_settings'},
+                    items: [
+                        'webapp/settings/webapp_settings_admin_vaults',
+                        'webapp/settings/webapp_settings_users',
+                        'webapp/settings/webapp_settings_access_rules',
+                        'webapp/settings/webapp_settings_id_providers',
+                        'webapp/settings/webapp_settings_resource_configs',
+                        'webapp/settings/webapp_settings_app_gw',
+                        {
+                            "Storage": ['webapp/settings/webapp_settings_storage_volumes', 'webapp/settings/webapp_settings_storage_credentials',]
+                        },
+                        'webapp/settings/webapp_settings_ui_customization',
+                        'webapp/settings/webapp_settings_usage_billing',
+                    ]
+                },
                 {
                     type: 'category',
                     collapsible: true,
@@ -662,6 +684,7 @@ module.exports = {
                             'webapp/applications/apps_streamlit'
                         ]},
                         {"Cluster": [
+                            'webapp/applications/apps_deploy_slurm',
                             'webapp/applications/apps_multi_node_trainer',
                         ]},
                         {"Deploy": [
@@ -671,9 +694,11 @@ module.exports = {
                             'webapp/applications/apps_sglang',
                             'webapp/applications/apps_container_launcher',
                             'webapp/applications/apps_llm_ui',
+                            'webapp/applications/apps_mcp_server',
                         ]},
                         {"NVAIE":[
                             'webapp/applications/apps_nvidia_nim',
+                            'webapp/applications/apps_nvidia_dynamo',
                         ]}
                     ]
                 },
@@ -750,20 +775,22 @@ module.exports = {
                     link: {type: 'doc', id: 'webapp/settings/webapp_settings_overview'},
                     items: [
                         'webapp/settings/webapp_settings_profile',
-                        'webapp/settings/webapp_settings_admin_vaults',
-                        'webapp/settings/webapp_settings_users',
-                        'webapp/settings/webapp_settings_access_rules',
-                        'webapp/settings/webapp_settings_id_providers',
-                        'webapp/settings/webapp_settings_resource_configs',
-                        'webapp/settings/webapp_settings_app_gw',
-                        'webapp/settings/webapp_settings_usage_billing',
-                        {
-                            "Storage": ['webapp/settings/webapp_settings_storage_volumes', 'webapp/settings/webapp_settings_storage_credentials',]
-                        },
-                        'webapp/settings/webapp_settings_analytics',
-                        'webapp/settings/webapp_settings_ui_customization'
                     ]
                 },
+            ]
+        },
+        {
+            type: 'category',
+            collapsible: true,
+            collapsed: true,
+            label: 'Platform Management Center',
+            link: {type: 'doc', id: 'platform_management_center/pmc_overview'},
+            items: [
+                'platform_management_center/pmc_platform_overview',
+                'platform_management_center/pmc_tenants',
+                'platform_management_center/pmc_volumes',
+                'platform_management_center/pmc_template_variables',
+                'platform_management_center/pmc_apps',
             ]
         },
     ],
