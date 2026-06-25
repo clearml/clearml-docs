@@ -86,7 +86,7 @@ to open the app's configuration form.
 
 ### Configuration Options
 
-**:::note**  
+:::note
 Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and modify field names and/or available options and defaults.
 
 This section describes the default configuration provided by ClearML.  

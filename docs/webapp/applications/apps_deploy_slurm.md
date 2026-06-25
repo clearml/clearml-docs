@@ -67,7 +67,7 @@ to open the app's configuration form.
 ### Configuration Options 
 
 :::note
-Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom) the launch form and 
+Administrators can [customize](../../deploying_clearml/enterprise_deploy/app_launch_form_custom.md) the launch form and 
 modify field names and/or available options and defaults.
 
 This section describes the default configuration provided by ClearML.  
@@ -78,9 +78,9 @@ This section describes the default configuration provided by ClearML.
 * **Instance Name** - Name for the app instance. This will appear in the instance list.   
 * **Service Project - Access Control** - The ClearML project where the app instance is created. App instance network 
   access is determined by project-level permissions (i.e. users with read access can access app endpoints).   
-* **Login Node Compute Resource** - The [ClearML Queue](../../fundamentals/agents_and_queues#what-is-a-queue) through 
+* **Login Node Compute Resource** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) through 
   which the login node task will be deployed. Make sure an agent is assigned to that queue.   
-* **Worker Node Compute Resource** - The [ClearML Queue](../../fundamentals/agents_and_queues#what-is-a-queue) through 
+* **Worker Node Compute Resource** - The [ClearML Queue](../../fundamentals/agents_and_queues.md#what-is-a-queue) through 
   which worker nodes will be deployed. The queue must support executing multiple tasks simultaneously (e.g. serviced by 
   an autoscaler or multiple agents).   
 * **Number of Workers** - Number of worker nodes to provision for the cluster.  
