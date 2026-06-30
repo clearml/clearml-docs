@@ -85,7 +85,7 @@ Use the tabs above the graph to switch between views:
   * Available Memory - Total and Free RAM
   * Free Home Storage
   * Network Throughput - Rx/Tx 
-* **Consumption vs. Quota** - Displays GPU, CPU, or Worker consumption relative to configured quotas over time. Use the 
+* **Consumption** - Displays GPU, CPU, or Worker consumption relative to configured quotas over time. Use the 
   dropdown to select the resource type. 
 
 #### Resource Groups

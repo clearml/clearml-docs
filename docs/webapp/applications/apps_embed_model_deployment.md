@@ -108,7 +108,8 @@ Deployment app instance task will be enqueued. Make sure an agent is assigned to
 
 * **AI Gateway Route** - Select an available, admin-preconfigured route to use as the service endpoint. If none is selected, an ephemeral endpoint will be created.
 * **Model Configuration**
-  * Model - A ClearML Model ID or a Hugging Face model name (e.g. `openai-community/gpt2`)
+  * Model - A ClearML Model ID or a Hugging Face model name (e.g. `Qwen/Qwen3-Embedding-8B`). Models must be compatible 
+    with Hugging Face Text Embeddings Inference. ClearML Models are supported if they reference a compatible model. See [Supported Models](https://github.com/huggingface/text-embeddings-inference#supported-models). 
   * Revision - The specific Hugging Face version of the model you want to use. You can use a specific commit ID or a 
   branch like `refs/pr/2`
   * Tokenization Workers - Number of tokenizer workers used for payload tokenization, validation, and truncation. 

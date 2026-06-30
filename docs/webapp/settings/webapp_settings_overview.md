@@ -7,7 +7,7 @@ Use the **Settings** page to manage your personal ClearML account and workspace 
 To navigate to the **Settings** page, click the <img src="/docs/latest/icons/ico-me.svg" alt="Profile button" className="icon size-lg space-sm" /> 
 button in the top right corner of the web UI screen, then click **Settings**. 
 
-The contents of the Settings page vary by deployment:
+The contents of the Settings page vary by offering:
 * Enterprise Server - The Settings page contains personal settings only. Administrator settings are managed separately 
   from the AI Admin view. See [Administrator Settings](../admin_settings.md).
 * Hosted Service (Free/Pro) - The Settings page contains both personal settings and [Administrator Settings](../admin_settings.md).
