@@ -2,6 +2,14 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.10
+
+**Bug fixes and Improvements**
+
+* Improve HPO resilience by pruning trials ([#1652](https://github.com/clearml/clearml/pull/1652))
+* Deprecate `HyperDataset` class `parent_ids` parameter in favor of `parent_id` (still supported for backward compatibility) ([#1655](https://github.com/clearml/clearml/pull/1655))
+* Use `usedforsecurity=False` in `hashlibeverywhere` where hashing is used ([#1651](https://github.com/clearml/clearml/issues/1651))
+
 ### ClearML 2.1.9
 
 **Bug fixes and Improvements**
