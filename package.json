@@ -37,7 +37,8 @@
     "@cmfcmf/docusaurus-search-local": {
       "@docusaurus/core": "^3.5.2",
       "cheerio": "1.0.0-rc.12"
-    }
+    },
+    "serialize-javascript": "7.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
