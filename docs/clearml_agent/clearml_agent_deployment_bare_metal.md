@@ -231,18 +231,14 @@ clearml-agent daemon <arguments> --stop
 ### Allocating Resources
 To specify GPUs associated with the agent, add the `--gpus` flag.
 
-:::note[Docker Mode]
-Make sure to include the `--docker` flag, as GPU management through the agent is only supported in [Docker Mode](clearml_agent_execution_env.md#docker-mode).
-:::
-
 To execute multiple agents on the same machine (usually assigning GPU for the different agents), run:
 ```bash
-clearml-agent daemon --gpus 0 --queue default --docker
-clearml-agent daemon --gpus 1 --queue default --docker
+clearml-agent daemon --gpus 0 --queue default
+clearml-agent daemon --gpus 1 --queue default
 ```
 To allocate more than one GPU, provide a list of allocated GPUs
 ```bash
-clearml-agent daemon --gpus 0,1 --queue dual_gpu --docker
+clearml-agent daemon --gpus 0,1 --queue dual_gpu
 ```
 
 ### Queue Prioritization

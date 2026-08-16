@@ -50,7 +50,7 @@ module.exports = {
                 'custom_apps'
             ]
         },
-        'platform_management_center',
+        'webapp/platform_management_center',
     ],
     usecaseSidebar: [
         /*'getting_started/main',*/
@@ -150,7 +150,7 @@ module.exports = {
             {'Automation': ['guides/automation/manual_random_param_search_example', 'guides/automation/task_piping']},
             {'ClearML Task': ['guides/clearml-task/clearml_task_tutorial']},
             {'ClearML Agent': ['guides/clearml_agent/executable_exp_containers', 'guides/clearml_agent/exp_environment_containers', 'guides/clearml_agent/reproduce_exp']},
-            {'Datasets': ['clearml_data/data_management_examples/data_man_cifar_classification', 'clearml_data/data_management_examples/data_man_python']},
+            {'Datasets': ['clearml_data/data_management_examples/data_man_simple', 'clearml_data/data_management_examples/data_man_folder_sync', 'clearml_data/data_management_examples/data_man_cifar_classification', 'clearml_data/data_management_examples/data_man_python']},
             {id: 'hyperdatasets/code_examples', type: 'doc', label: 'Hyper-Datasets'},
             {'Distributed': ['guides/distributed/distributed_pytorch_example', 'guides/distributed/subprocess_example']},
             {'Docker': ['guides/docker/extra_docker_shell_script']},
@@ -208,6 +208,8 @@ module.exports = {
             'fundamentals/models',
             'fundamentals/logger',
         ]},
+        'pipelines/pipelines',
+        'clearml_data/clearml_data',
         {
             type: 'category',
             collapsible: true,
@@ -218,42 +220,14 @@ module.exports = {
                 'clearml_sdk/task_sdk',
                 'clearml_sdk/model_sdk',
                 'clearml_sdk/hpo_sdk',
-                'clearml_sdk/apiclient_sdk'
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Pipelines',
-            link: {type: 'doc', id: 'pipelines/pipelines'},
-            items: [
-               'pipelines/pipelines_sdk_tasks',
-               'pipelines/pipelines_sdk_function_decorators'
-            ]
-
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'ClearML Data',
-            link: {type: 'doc', id: 'clearml_data/clearml_data'},
-            items: [
-                'clearml_data/clearml_data_cli',
+                'clearml_sdk/apiclient_sdk',
                 'clearml_data/clearml_data_sdk',
                 {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Workflows',
-                    link: {type: 'doc', id: 'clearml_data/data_management_examples/workflows'},
-                    items: [
-                        'clearml_data/data_management_examples/data_man_simple',
-                        'clearml_data/data_management_examples/data_man_folder_sync',
-                        'clearml_data/data_management_examples/data_man_cifar_classification',
-                        'clearml_data/data_management_examples/data_man_python'
-                    ]
+                    'Pipelines':
+                        [
+                            'pipelines/pipelines_sdk_tasks',
+                            'pipelines/pipelines_sdk_function_decorators'
+                        ]
                 },
             ]
         },
@@ -316,10 +290,10 @@ module.exports = {
             {
                 'Enterprise':
                         [
-                           'release_notes/clearml_server/enterprise/ver_3_30',
+                           'release_notes/clearml_server/enterprise/ver_3_29',
                            {
                                 'Older Versions': [
-                                     'release_notes/clearml_server/enterprise/ver_3_29', 'release_notes/clearml_server/enterprise/ver_3_28',
+                                     'release_notes/clearml_server/enterprise/ver_3_28',
                                      'release_notes/clearml_server/enterprise/ver_3_27', 'release_notes/clearml_server/enterprise/ver_3_26',
                                      'release_notes/clearml_server/enterprise/ver_3_25', 'release_notes/clearml_server/enterprise/ver_3_24',
                                      'release_notes/clearml_server/enterprise/ver_3_23', 'release_notes/clearml_server/enterprise/ver_3_22',
@@ -406,11 +380,11 @@ module.exports = {
                 },
                 {
                     'ClearML Agent': [
-                        'release_notes/helm/clearml-enterprise-agent/6.14',
+                        'release_notes/helm/clearml-enterprise-agent/6.15',
 
                         {
                             'Older Versions': [
-                                'release_notes/helm/clearml-enterprise-agent/6.13',
+                                'release_notes/helm/clearml-enterprise-agent/6.14', 'release_notes/helm/clearml-enterprise-agent/6.13',
                                 'release_notes/helm/clearml-enterprise-agent/6.12', 'release_notes/helm/clearml-enterprise-agent/6.11',
                                 'release_notes/helm/clearml-enterprise-agent/6.10', 'release_notes/helm/clearml-enterprise-agent/6.9',
                             ]
@@ -634,28 +608,6 @@ module.exports = {
             label: 'WebApp',
             link: {type: 'doc', id: 'webapp/webapp_overview'},
             items: [
-                'webapp/role_based_ui',
-                'webapp/webapp_admin_dashboard',
-                {
-                    type: 'category',
-                    collapsible: true,
-                    collapsed: true,
-                    label: 'Administrator Settings',
-                    link: {type: 'doc', id: 'webapp/admin_settings'},
-                    items: [
-                        'webapp/settings/webapp_settings_admin_vaults',
-                        'webapp/settings/webapp_settings_users',
-                        'webapp/settings/webapp_settings_access_rules',
-                        'webapp/settings/webapp_settings_id_providers',
-                        'webapp/settings/webapp_settings_resource_configs',
-                        'webapp/settings/webapp_settings_app_gw',
-                        {
-                            "Storage": ['webapp/settings/webapp_settings_storage_volumes', 'webapp/settings/webapp_settings_storage_credentials',]
-                        },
-                        'webapp/settings/webapp_settings_ui_customization',
-                        'webapp/settings/webapp_settings_usage_billing',
-                    ]
-                },
                 {
                     type: 'category',
                     collapsible: true,
@@ -775,22 +727,20 @@ module.exports = {
                     link: {type: 'doc', id: 'webapp/settings/webapp_settings_overview'},
                     items: [
                         'webapp/settings/webapp_settings_profile',
+                        'webapp/settings/webapp_settings_admin_vaults',
+                        'webapp/settings/webapp_settings_users',
+                        'webapp/settings/webapp_settings_access_rules',
+                        'webapp/settings/webapp_settings_id_providers',
+                        'webapp/settings/webapp_settings_resource_configs',
+                        'webapp/settings/webapp_settings_app_gw',
+                        'webapp/settings/webapp_settings_usage_billing',
+                        {
+                            "Storage": ['webapp/settings/webapp_settings_storage_volumes', 'webapp/settings/webapp_settings_storage_credentials',]
+                        },
+                        'webapp/settings/webapp_settings_analytics',
+                        'webapp/settings/webapp_settings_ui_customization'
                     ]
                 },
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'Platform Management Center',
-            link: {type: 'doc', id: 'platform_management_center/pmc_overview'},
-            items: [
-                'platform_management_center/pmc_platform_overview',
-                'platform_management_center/pmc_tenants',
-                'platform_management_center/pmc_volumes',
-                'platform_management_center/pmc_template_variables',
-                'platform_management_center/pmc_apps',
             ]
         },
     ],

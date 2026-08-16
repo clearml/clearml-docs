@@ -2,6 +2,12 @@
 title: PipelineController
 ---
 
+The following page provides an overview of the basic Pythonic interface of the `PipelineController` class, which
+lets you define and configure a pipeline controller and its steps directly in code, as functions or existing
+ClearML tasks. For an alternative that uses decorators instead, see
+[PipelineDecorator](pipelines_sdk_function_decorators.md). For a broader introduction to ClearML pipelines, see
+[Pipelines](pipelines.md).
+
 ## The PipelineController Class
 
 Create the [`PipelineController`](../references/sdk/automation_controller_pipelinecontroller.md), where you will define

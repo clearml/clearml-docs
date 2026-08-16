@@ -2,6 +2,14 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.11
+
+**Bug Fixes and Improvements**
+
+* Add in-memory data streaming capability to storage manager
+* Add `DataView` class `get` method to retrieve them from the API server
+* Add upper limit of 100 Mb for registration request payload size of data entries
+
 ### ClearML 2.1.10
 
 **Bug fixes and Improvements**

@@ -5,8 +5,8 @@ displayed_sidebar: installationSidebar
 
 ClearML Server v3.29 introduces several updates to the Docker Compose configuration files:
 
-* The `apiserver`, `fileserver`, `apps-agent`, and `services-agent` containers now run as a non-root user
-  (UID/GID `65532`). Existing host data and log directories must have their ownership updated.
+* The `apiserver`, `fileserver`, `webserver-config`, `apps-agent`, and `services-agent` containers now run as a
+  non-root user (UID/GID `65532`). Existing host data and log directories must have their ownership updated.
 * The `apps-agent` and `services-agent` containers must be granted membership in the host's docker group so that the 
   non-root user can access the mounted `/var/run/docker.sock`.
 * The compose files now use the `CLEARML_ROOT` environment variable to identify host filesystem paths (previously 
@@ -140,6 +140,7 @@ Verify the current ownership of the following ClearML data directories
 
 ```
 stat -c '%u' ${CLEARML_ROOT}/config/onprem_poc
+stat -c '%u' ${CLEARML_ROOT}/config/webserver_external_files
 stat -c '%u' ${CLEARML_ROOT}/data/fileserver
 stat -c '%u' ${CLEARML_ROOT}/data/metrics
 stat -c '%u' ${CLEARML_ROOT}/data/services
@@ -157,6 +158,7 @@ to update ownership of the required directories and all their contents to UID/GI
 
 ```
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/onprem_poc
+sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/webserver_external_files
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/fileserver
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/metrics

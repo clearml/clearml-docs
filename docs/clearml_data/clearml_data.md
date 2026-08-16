@@ -35,6 +35,18 @@ them into one output folder for you to work with.
 The [Dataset Versions](../webapp/datasets/webapp_dataset_viewing.md) page in the web UI displays dataset versions' 
 lineage and content information. See [dataset UI](../webapp/datasets/webapp_dataset_page.md) for more details.
 
+## Dataset Version States
+The following table displays the possible states for a dataset version. 
+
+
+| State | Description |
+|---|---|
+|*Uploading* | Dataset creation is in progress  |
+|*Failed* | Dataset creation was terminated with an error|
+|*Aborted* | Dataset creation was aborted by user before it was finalization |
+|*Final* | A dataset was created and finalized successfully | 
+|*Published* | The dataset is read-only. Publish a dataset to prevent changes to it | 
+
 ## Setup
 
 `clearml-data` comes built-in with the `clearml` Python package! Check out the [ClearML Setup](../clearml_sdk/clearml_sdk_setup.md) 
@@ -48,15 +60,12 @@ ClearML Data supports two interfaces:
 
 For an overview of recommendations for ClearML Data workflows and practices, see [Best Practices](../best_practices/data_best_practices.md).
 
-## Dataset Version States
-The following table displays the possible states for a dataset version. 
-
-
-| State | Description |
-|---|---|
-|*Uploading* | Dataset creation is in progress  |
-|*Failed* | Dataset creation was terminated with an error|
-|*Aborted* | Dataset creation was aborted by user before it was finalization |
-|*Final* | A dataset was created and finalized successfully | 
-|*Published* | The dataset is read-only. Publish a dataset to prevent changes to it | 
+Take a look at the following examples, which demonstrate common workflows using the `clearml-data` CLI and the
+`Dataset` class:
+* [Dataset Management with CLI](data_management_examples/data_man_simple.md) - Tutorial for creating, modifying, and consuming dataset with CLI.
+* [Folder Sync with CLI](data_management_examples/data_man_folder_sync.md) - Tutorial for using `clearml-data sync` CLI option to update a dataset according
+  to a local folder.
+* [Dataset Management with CLI and SDK](data_management_examples/data_man_cifar_classification.md) - Tutorial for creating a dataset with the CLI
+  then programmatically ingesting the data with the SDK.
+* [Data Management with Python](data_management_examples/data_man_python.md) - Example scripts for creating and consuming a dataset with the SDK.
 

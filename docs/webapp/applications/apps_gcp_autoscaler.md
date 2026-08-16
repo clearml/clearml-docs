@@ -3,7 +3,7 @@ title: GCP Autoscaler
 ---
 
 :::note[Pro Plan and Enterprise Offering]
-The ClearML GCP Autoscaler App is available under the ClearML Pro and Enterprise plans. 
+The ClearML GCP Autoscaler App is available under the ClearML Pro and Enterprise plans.
 :::
 
 The GCP Autoscaler Application optimizes GCP VM instance usage according to a user defined instance budget: Define your 

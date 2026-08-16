@@ -2,6 +2,12 @@
 title: PipelineDecorator
 ---
 
+The following page provides an overview of the basic Pythonic interface of the `PipelineDecorator` class, a set of
+Python decorators which transform your existing functions into the pipeline controller and its steps. For an
+alternative that can also build pipelines from existing ClearML tasks, see
+[PipelineController](pipelines_sdk_tasks.md). For a broader introduction to ClearML pipelines, see
+[Pipelines](pipelines.md).
+
 ## Creating Pipelines Using Function Decorators
 
 Use the [`PipelineDecorator`](../references/sdk/automation_controller_pipelinedecorator.md#class-automationcontrollerpipelinedecorator) 
