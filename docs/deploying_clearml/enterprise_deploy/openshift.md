@@ -498,12 +498,12 @@ agentk8sglue:
 
 ## Troubleshooting
 
-### `Warning: would violate PodSecurity "restricted:latest"` during install
+### "Warning: would violate PodSecurity 'restricted:latest'" during install
 
 Informational only on OpenShift (see [Understanding Admission Warnings and Errors](#understanding-admission-warnings-and-errors)).
 No action needed unless pods actually fail to start.
 
-### `unable to validate against any security context constraint`
+### "unable to validate against any security context constraint"
 
 Found in namespace events (`oc get events`) or on the owning Deployment/StatefulSet. The pod was rejected by SCC
 admission. Read the `restricted-v2` entries in the error message to identify the field that caused admission to fail:

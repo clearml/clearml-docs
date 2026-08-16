@@ -20,8 +20,8 @@ in the ClearML Enterprise plan. See [Resource Policies](resource_policies.md))
 
 ## Autoscalers
 
-:::important[Pro Plan Offering]
-The ClearML Autoscaler apps are available under the ClearML Pro plan.
+:::important
+The ClearML Autoscaler apps are available under the ClearML Pro and Enterprise plans.
 :::
 
 Use the **AUTOSCALERS** tab to access ClearML's cloud autoscaling applications:
