@@ -141,6 +141,7 @@ Verify the current ownership of the following ClearML data directories
 ```
 stat -c '%u' ${CLEARML_ROOT}/config/onprem_poc
 stat -c '%u' ${CLEARML_ROOT}/config/webserver_external_files
+stat -c '%u' ${CLEARML_ROOT}/config/webserver
 stat -c '%u' ${CLEARML_ROOT}/data/fileserver
 stat -c '%u' ${CLEARML_ROOT}/data/metrics
 stat -c '%u' ${CLEARML_ROOT}/data/services
@@ -158,6 +159,7 @@ to update ownership of the required directories and all their contents to UID/GI
 
 ```
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/onprem_poc
+sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/webserver
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/webserver_external_files
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs
 sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/fileserver
@@ -174,7 +176,7 @@ stat -c '%u:%g' <path>
 
 A return value of `65532:65532` indicates the directory has been correctly re-owned.
 
-:::note
+:::important
 The `elasticsearch`, `mongo`, and `redis` data directories are not involved in this change. Leave their ownership 
 unchanged. Elasticsearch's data directory should remain owned by `1000:1000`.
 :::

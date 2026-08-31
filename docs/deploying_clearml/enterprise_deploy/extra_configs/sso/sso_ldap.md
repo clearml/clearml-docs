@@ -86,6 +86,53 @@ To set certain users as ClearML admins provide their LDAP IDs like this:
 CLEARML__apiserver__auth__fixed_user_providers__ldap__admin_users=["user1_id","user2_id"]
 ```
 
+### User Group Integration
+ClearML can sync group membership from LDAP/Active Directory groups.
+
+To enable this feature, set the following environment variable for the `apiserver`:
+
+```
+CLEARML__apiserver__auth__fixed_user_providers__ldap__groups__enabled=true
+```
+
+Upon login, the user is added to any existing ClearML [user groups](../../../../webapp/settings/webapp_settings_users.md#user-groups)
+whose name matches the first CN part of the user's AD group. For example, if the user is a member of the AD group
+`cn=employees,cn=groups,cn=accounts,dc=demo1,dc=freeipa,dc=org`, they become a member of the ClearML group `employees`
+(assuming this ClearML group exists).
+
+#### Restricting Login to Users with a Matching Group
+To allow login only for users who have at least one matching group in ClearML, set the following environment variable:
+
+```
+CLEARML__apiserver__auth__fixed_user_providers__ldap__groups__prohibit_user_login_if_not_in_group=true
+```
+
+#### Setting ClearML Administrators by Group
+To designate users as ClearML admins based on their AD group membership, list the CN names of the admin groups:
+
+```
+CLEARML__apiserver__auth__fixed_user_providers__ldap__groups__admins=["<cn name of group1>","<cn name of group2>"]
+```
+
+Users who belong to any of the groups whose first CN name is listed become ClearML admins upon login.
+
+#### Case-Sensitive Group Name Matching
+By default, group name matching between ClearML and AD is case-sensitive. To make the matching case-insensitive, set:
+
+```
+CLEARML__apiserver__auth__fixed_user_providers__ldap__case_sensitive=false
+```
+
+#### Using Full Group DNs
+By default, ClearML matches groups using the first CN part of the AD group name. If you want to work with full group
+DNs instead, set the following environment variable:
+
+```
+CLEARML__apiserver__auth__fixed_user_providers__ldap__group_name_parsing="none"
+```
+
+When using this option, create the ClearML groups with names matching the full DN of the AD groups.
+
 ### User or Domain Whitelisting
 
 ClearML supports restricting access so that only approved users or email domains can register and log into the system.

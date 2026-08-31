@@ -93,7 +93,7 @@ AZURE_STORAGE_ACCOUNT
 AZURE_STORAGE_KEY
 ```
 
-For further details, see [Configuring Storage](../integrations/storage.md#configuring-storage).
+For further details, see [Configuring Network Storage](../integrations/storage.md#configuring-network-storage).
 
 ## Upgrading ClearML Serving
 

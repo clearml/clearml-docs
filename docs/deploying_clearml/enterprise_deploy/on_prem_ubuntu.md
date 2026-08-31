@@ -150,6 +150,7 @@ for all ClearML data and configuration files, is defined as expected here (e.g. 
    sudo mkdir -pv ${CLEARML_ROOT}/logs/fileserver-proxy
    sudo mkdir -pv ${CLEARML_ROOT}/data/fluentd/buffer
    sudo mkdir -pv ${CLEARML_ROOT}/config/webserver_external_files
+   sudo mkdir -pv ${CLEARML_ROOT}/config/webserver
    sudo mkdir -pv ${CLEARML_ROOT}/config/onprem_poc
    ```
 
@@ -161,6 +162,7 @@ for all ClearML data and configuration files, is defined as expected here (e.g. 
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/task_cleaner
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/logs/fileserver
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/onprem_poc
+   sudo chown -R 65532:65532 ${CLEARML_ROOT}/config/webserver
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/fileserver
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/metrics
    sudo chown -R 65532:65532 ${CLEARML_ROOT}/data/agent/app-agent

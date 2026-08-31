@@ -7,10 +7,17 @@ This guide provides step-by-step instructions for installing the ClearML Enterpr
 The ClearML Enterprise Server includes the ClearML `apiserver`, `fileserver`, and `webserver` components. 
 The package also includes MongoDB, ElasticSearch, and Redis as Helm dependencies.
 
-:::warning[Upgrading from chart versions 10.11.6 and below]
-Starting in chart version `10.11.7`, ClearML is transitioning to a new mongodb chart source (mckMongodb).
+:::important[Upgrading an Existing Installation]
+Upgrading an existing deployment requires additional steps, depending on your current chart version. If both apply,
+complete them in order:
 
-To upgrade an existing installation follow the [MongoDB chart Migration Guide](k8s_mckmongo_migration.md) to ensure data consistency and compatibility with future chart versions.
+1. **From chart version 10.11.6 and below** - starting in chart version `10.11.7`, ClearML is transitioning to a new
+   mongodb chart source (mckMongodb). Follow the [MongoDB chart Migration Guide](k8s_mckmongo_migration.md) to ensure
+   data consistency and compatibility with future chart versions.
+2. **To chart version 11.0.0 and greater** - chart version `11.0.0` (ClearML Server v3.29) introduces a breaking
+   change: server containers now run rootless by default. Follow the
+   [required upgrade steps](helm_upgrade_11_0.md) to re-own the fileserver's existing data before deploying the new
+   chart version.
 :::
 
 ## Prerequisites

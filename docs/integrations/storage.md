@@ -3,43 +3,54 @@ title: Storage
 ---
 
 
-ClearML is able to interface with the most popular storage solutions in the market for storing model checkpoints, artifacts
-and charts.
+ClearML integrates with popular storage solutions for storing model checkpoints, artifacts, datasets and charts.
 
 Supported storage mediums include:
 
 ![Supported storage](../../static/icons/ClearML_Supported_Storage--on-light.png)
 
 To use cloud storage with ClearML, [install](#installation) the `clearml` package for your cloud storage type, and then 
-[configure](#configuring-storage) your storage credentials.
+[configure](#configuring-network-storage) your storage credentials.
 
 :::note
 Once uploading an object to a storage medium, each machine that uses the object must have access to it.
 :::
 
-## Installation 
+## Installation
 
-For cloud storage, install the ClearML package for your cloud storage type:
+Install the ClearML package for your cloud storage type:
 * AWS S3 - `pip install clearml[s3]`
 * Azure - `pip install clearml[azure]`
 * Google Storage - `pip install clearml[gs]`
 
-## Configuring Storage
+## Configuring Network Storage
 
-Configuration for storage is done by editing the [clearml.conf](../configs/clearml_conf.md).
+You can configure storage using any of the following methods, listed in order of precedence (higher ordered methods 
+override the lower ones):
+1. Command-line arguments (e.g. [clearml-task](../apps/clearml_task.md), [clearml-agent](../clearml_agent/clearml_agent_ref.md), 
+   [clearml-session](../apps/clearml_session.md), [clearml-data](../clearml_data/clearml_data_cli.md) arguments)
+1. [Environment variables](../configs/env_vars.md)
+1. [Configuration Vaults](../webapp/settings/webapp_settings_profile.md#configuration-vault) (available under the ClearML Enterprise plan)
+1. [clearml.conf](../configs/clearml_conf.md)
 
-The ClearML configuration file uses [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md) format, which supports runtime environment variable access.
+:::note
+Most examples below use the configuration file, but the same parameters can be applied via Vaults
+:::
 
-### Configuring AWS S3
+The ClearML configuration file uses [HOCON](https://github.com/lightbend/config/blob/main/HOCON.md) format, which lets you 
+reference environment variables from within the file's own values (as shown in the examples below), separately from the 
+environment variable overrides mentioned above.
 
-Modify the `sdk.aws.s3` section of the `clearml.conf` to add the key, secret, and region of the S3 bucket.
+### AWS S3
 
-You can also give access to specific S3 buckets in the `sdk.aws.s3.credentials` section. The default configuration 
-provided in the `sdk.aws.s3` section is applied to any bucket without a bucket-specific configuration. 
+You can configure S3 credentials under the `sdk.aws.s3` section of the `clearml.conf`.
 
-You can also enable using a credentials chain to let Boto3 
-pick the right credentials. This includes picking credentials from environment variables, a credential file, and metadata service 
-with an IAM role configured. For more details, see [Boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#configuring-credentials).
+You can also give access to specific S3 buckets in the `sdk.aws.s3.credentials` section. If no bucket-specific 
+configuration is provided, the default values under `sdk.aws.s3` are used.
+
+You can also enable using a credentials chain allowing Boto3 
+to select the right credentials from environment variables, a credentials file, and metadata service with an IAM role 
+configured. For more details, see [Boto3 documentation](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/credentials.html#configuring-credentials).
 
 You can specify additional [ExtraArgs](https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html#the-extraargs-parameter) 
 to pass to Boto3 when uploading files. You can set this on a per-bucket basis. 
@@ -126,7 +137,7 @@ To force usage of a non-AWS endpoint, port declaration is *always* needed (e.g. 
 even for standard ports like `433` for HTTPS (e.g. `host: "my-minio-host:433"`).
 
 :::important
-Port specification is mandatory whenever you specify non-AWS S3 endpoint access. Use the following URI 
+Port specification is required for non-AWS S3 endpoint access. Use the following URI 
 format: `s3://<hostname>:<port>/<bucket-name>/path`.
 
 This applies when:
@@ -161,12 +172,12 @@ sdk {
 }
 ```
 
-Use the `sdk.aws.s3.credentials.verify` configuration option to control SSL certificate verification:
+To control SSL certificate verification, use the `sdk.aws.s3.credentials.verify` configuration option:
 * By default, verify is set to `true`, meaning certificate verification is enabled
 * You can provide a path or a URL to a CA bundle for custom certificate verification
 
 ##### Dell PowerScale with S3
-When using Dell PowerScale as your S3-compatible storage backend, set `sdk.aws.boto3.signature_version` to `"s3"`  in your clearml.conf:
+When using Dell PowerScale as your S3-compatible storage backend, set `sdk.aws.boto3.signature_version` to `"s3"`:
 
 ```
 sdk {
@@ -180,11 +191,11 @@ sdk {
 This ensures Boto3 uses the correct signature version required by PowerScale's S3 interface.
 
 :::note
-You still need to configure access credentials and endpoint information under `sdk.aws.s3` and `sdk.aws.s3.credentials` as 
+You still must configure access credentials and endpoint information under `sdk.aws.s3` and `sdk.aws.s3.credentials` as 
 described [above](#non-aws-endpoints).
 :::
 
-### Configuring Azure
+### Azure
 To configure Azure blob storage specify the account name and key.
 
 ```
@@ -201,7 +212,7 @@ sdk {
 }
 ```
 
-Azure's storage access parameters can be specified by referencing the standard environment variables if already defined.
+You can specify Azure's storage access parameters by referencing the standard environment variables if already defined.
 
 For example:
 ```
@@ -218,7 +229,7 @@ sdk {
 }
 ```
 
-### Configuring Google Storage
+### Google Storage
 To configure Google Storage, specify the project and the path to the credentials JSON file.
 
 It's also possible to specify credentials for a specific bucket in the `google.storage.credentials` section. The default 
@@ -245,7 +256,7 @@ sdk {
 }
 ```
 
-GCP storage access parameters can be specified by referencing the standard environment variables if already defined.
+You can specify GCP storage access parameters by referencing the standard environment variables if already defined.
 
 ```
 sdk {
@@ -267,20 +278,35 @@ From v1.13.2, `clearml` supports directly decoding JSON from the `credentials_js
 fails to load the credentials as a file, it will attempt to decode the JSON directly. 
 :::
 
-## Storage Manager
+## Client Configuration
 
-ClearML provides the [StorageManager](../references/sdk/storage.md) class to manage downloading, uploading, and caching of 
-content directly from code.
+This section covers how ClearML clients interact with configured storage services.
 
-See [StorageManager Examples](../guides/storage/examples_storagehelper.md).
+### StorageManager
 
-### Path Substitution
+The [StorageManager](../references/sdk/storage.md) class provides a storage-agnostic interface for downloading, uploading, 
+and caching content directly from code, so you don't need to handle each storage backend's own SDK or API. It supports 
+HTTP(S), S3, Google Cloud Storage, Azure, and local file system paths.
+
+StorageManager provides methods for:
+* Downloading a [file](../guides/storage/examples_storagehelper.md#downloading-a-file) or 
+  [folder](../guides/storage/examples_storagehelper.md#downloading-a-folder) from remote storage to a local path, with 
+  automatic caching so the same object isn't downloaded twice
+* Uploading a local [file](../guides/storage/examples_storagehelper.md#uploading-a-file) or 
+  [folder](../guides/storage/examples_storagehelper.md#uploading-a-folder) to remote storage, with configurable retry 
+  behavior on failure
+* [Limiting the number of files](../guides/storage/examples_storagehelper.md#setting-cache-limits) kept in the local cache
+
+See [StorageManager Examples](../guides/storage/examples_storagehelper.md) for the full set of code samples, including 
+folder upload/download, upload retries, download/upload progress reporting, and cache file limits.
+
+#### Path Substitution
 The ClearML StorageManager supports local path substitution when fetching files.
 
 This is especially useful when managing data using [`clearml-data`](../clearml_data/clearml_data_cli.md)! If different data consumers have the data physically stored in different locations, path 
 substitution allows for registering the data into `clearml-data` once, and then storing and accessing it in multiple locations.
 
-To enable path substitution, modify the clearml.conf file and configure:
+To enable path substitution, configure the following:
 
 ```bash
 sdk {
@@ -301,11 +327,26 @@ sdk {
 }
 ```
 
-## Caching
+### Per-task Storage Control
+In addition to global storage configuration, each task can control where its own artifacts and models are stored by 
+setting the `Task.output_uri` property.
+
+* If `output_uri` is set, all artifacts and models logged by the task will be stored under the specified location.
+* The URI can point to any supported storage backend (e.g. `s3://bucket/path`, `gs://bucket/path`, `azure://container/path`, 
+  or `file:///mnt/shared/path`).
+* If `output_uri` is not set, ClearML falls back to the global storage configuration.
+
+```python
+from clearml import Task
+task = Task.init(project_name="Demo", task_name="Train Model")
+task.output_uri = "s3://my-bucket/training-runs/"
+```
+
+### Caching
 ClearML also manages a cache of all downloaded content so nothing is duplicated, and code won't need to download the same
 piece twice!
 
-Configure cache location by modifying the [clearml.conf](../configs/clearml_conf.md) file:
+Set cache location by configuring the following:
 
 ```
 sdk {
@@ -324,6 +365,10 @@ sdk {
     }
 }
 ```
+
+Additional cache options are available, such as limiting the number of cached files and choosing a disk-space-based 
+eviction strategy instead. See the [clearml.conf Reference](../configs/clearml_conf.md#sdkstoragecache) for the 
+full list.
 
 ### Direct Access
 By default, all artifacts (Models / Artifacts / Datasets) are automatically downloaded to the cache before they're used.

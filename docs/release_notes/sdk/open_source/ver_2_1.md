@@ -2,6 +2,17 @@
 title: Version 2.1
 ---
 
+### ClearML 2.1.12
+
+**Bug fixes and improvements**
+* Add method for deleting data entries in hyperdatasets
+* Add functionality for setting labels on dataviews
+* Add hyperdataset metadata management (`get`/`set` methods)
+* Add methods to manage label mapping rules for dataviews
+* Add hyperdataset method to get an iterator for it
+* Add hyperdataset method wrappers
+* Fix dataview race conditions 
+
 ### ClearML 2.1.11
 
 **Bug Fixes and Improvements**

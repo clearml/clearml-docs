@@ -85,7 +85,7 @@ This method downloads a remote folder recursively, maintaining the sub-folder st
 the remote storage.
 
 For example: if you have a remote file `s3://bucket/sub/file.ext`, then 
-`StorageManager.download_folder(remote_url="s3://bucket/", local_file="/folder/")` will create `/folder/sub/file.ext`.
+`StorageManager.download_folder(remote_url="s3://bucket/", local_folder="/folder/")` will create `/folder/sub/file.ext`.
 
 You can input `match_wildcard` so only files matching the wildcard are downloaded.
 
@@ -95,13 +95,13 @@ class method. Specify the local folder to upload as the `local_folder` argument 
 `remote_url` argument. 
 
 ```python
-StorageManager.upload_folder(local_file="/LocalFolder", remote_url="s3://MyBucket/MyFolder")
+StorageManager.upload_folder(local_folder="/LocalFolder", remote_url="s3://MyBucket/MyFolder")
 ```
 
 This method uploads the local folder recursively to remote storage, maintaining the sub-folder structure from the local 
 storage. 
 
-For example: If you have a local file `/LocalFolder/sub/file.ext` then `StorageManager.upload_folder(local_file="/LocalFolder", remote_url="s3://MyBucket/MyFolder")`
+For example: If you have a local file `/LocalFolder/sub/file.ext` then `StorageManager.upload_folder(local_folder="/LocalFolder", remote_url="s3://MyBucket/MyFolder")`
 will create `s3://bucket/sub/file.ext`.
 
 Use the `retries` parameter to set the number of upload attempts for each file in the folder in case 

@@ -219,9 +219,9 @@ module.exports = {
             items: [
                 'clearml_sdk/task_sdk',
                 'clearml_sdk/model_sdk',
-                'clearml_sdk/hpo_sdk',
                 'clearml_sdk/apiclient_sdk',
                 'clearml_data/clearml_data_sdk',
+                'clearml_sdk/hpo_sdk',
                 {
                     'Pipelines':
                         [
@@ -229,6 +229,8 @@ module.exports = {
                             'pipelines/pipelines_sdk_function_decorators'
                         ]
                 },
+                'clearml_sdk/task_scheduler_sdk',
+                'clearml_sdk/trigger_scheduler_sdk',
             ]
         },
         {
@@ -393,10 +395,11 @@ module.exports = {
                 },
                 {
                     'AI Application Gateway': [
-                        'release_notes/helm/clearml-enterprise-app-gateway/3.2',
+                        'release_notes/helm/clearml-enterprise-app-gateway/3.3',
 
                         {
                             'Older Versions': [
+                                'release_notes/helm/clearml-enterprise-app-gateway/3.2',
                                 'release_notes/helm/clearml-enterprise-app-gateway/3.1', 'release_notes/helm/clearml-enterprise-app-gateway/3.0',
                                 'release_notes/helm/clearml-enterprise-app-gateway/2.1', 'release_notes/helm/clearml-enterprise-app-gateway/2.0'
                             ]
@@ -467,31 +470,9 @@ module.exports = {
     referenceSidebar: [
         {'SDK': [
             'references/sdk/task',
-            'references/sdk/logger',
             {'Model': ['references/sdk/model_model',
                 'references/sdk/model_inputmodel', 'references/sdk/model_outputmodel',]},
-            'references/sdk/storage',
             'references/sdk/dataset',
-            {'Pipeline': [
-                'references/sdk/automation_controller_pipelinecontroller',
-                'references/sdk/automation_controller_pipelinedecorator',
-                'references/sdk/automation_job_clearmljob'
-                ]
-            },
-            'references/sdk/scheduler',
-            'references/sdk/trigger',
-            {'HyperParameter Optimization': [
-                'references/sdk/hpo_optimization_hyperparameteroptimizer',
-                'references/sdk/hpo_optimization_gridsearch',
-                'references/sdk/hpo_optimization_randomsearch',
-                'references/sdk/hpo_optuna_optuna_optimizeroptuna',
-                'references/sdk/hpo_hpbandster_bandster_optimizerbohb',
-                'references/sdk/hpo_parameters_discreteparameterrange',
-                'references/sdk/hpo_parameters_uniformintegerparameterrange',
-                'references/sdk/hpo_parameters_uniformparameterrange',
-                'references/sdk/hpo_parameters_parameterset',
-            ]},
-            'references/sdk/http_router',
             {
 
                 type: 'category',
@@ -524,6 +505,30 @@ module.exports = {
                     }
                 ]
             },
+            {'Automation': [
+                {'HyperParameter Optimization': [
+                    'references/sdk/hpo_optimization_hyperparameteroptimizer',
+                    'references/sdk/hpo_optimization_gridsearch',
+                    'references/sdk/hpo_optimization_randomsearch',
+                    'references/sdk/hpo_optuna_optuna_optimizeroptuna',
+                    'references/sdk/hpo_hpbandster_bandster_optimizerbohb',
+                    'references/sdk/hpo_parameters_discreteparameterrange',
+                    'references/sdk/hpo_parameters_uniformintegerparameterrange',
+                    'references/sdk/hpo_parameters_uniformparameterrange',
+                    'references/sdk/hpo_parameters_parameterset',
+                ]},
+                {'Pipeline': [
+                    'references/sdk/automation_controller_pipelinecontroller',
+                    'references/sdk/automation_controller_pipelinedecorator',
+                    'references/sdk/automation_job_clearmljob'
+                    ]
+                },
+                'references/sdk/scheduler',
+                'references/sdk/trigger',
+            ]},
+            'references/sdk/http_router',
+            'references/sdk/logger',
+            'references/sdk/storage',
         ]},
         {'CLI Tools': [
             'apps/clearml_task',
