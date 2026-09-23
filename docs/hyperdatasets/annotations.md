@@ -2,6 +2,11 @@
 title: Annotations
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 With ClearML Enterprise, annotations can be applied to video and image frames. [Frames](single_frames.md) support 
 two types of annotations: **Frame objects** and **Frame labels**.
 

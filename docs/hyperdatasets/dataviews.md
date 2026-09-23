@@ -2,6 +2,11 @@
 title: Dataviews
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 Dataviews is a powerful and easy-to-use ClearML Enterprise feature for creating and managing local views of remote 
 Datasets. Dataviews can use sophisticated queries to input data from a subset of a Dataset 
 or combinations of Datasets. 

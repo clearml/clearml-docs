@@ -2,6 +2,11 @@
 title: Masks
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 Masks are source data used in deep learning for image segmentation. Mask URIs are a property of a SingleFrame.
 
 ClearML applies the masks in one of two modes:

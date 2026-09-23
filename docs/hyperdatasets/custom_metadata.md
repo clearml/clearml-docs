@@ -2,6 +2,11 @@
 title: Custom Metadata
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 Metadata can be customized as needed using: **meta** dictionaries: 
 * As a top-level key for metadata applying to entire frame
 * In `rois` dictionaries, for metadata applying to individual ROIs.

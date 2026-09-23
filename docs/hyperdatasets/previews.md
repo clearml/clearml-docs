@@ -2,6 +2,11 @@
 title: Previews
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 Previews are optional images or videos that can be used in the ClearML Enterprise
 WebApp (UI) to help visualize selected content in a Hyper-Dataset.
 

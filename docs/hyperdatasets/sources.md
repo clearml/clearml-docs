@@ -2,6 +2,11 @@
 title: Sources
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 Each frame contains `sources`, a list of dictionaries containing: 
 * Attributes of the source data (image raw data)
 * A `URI` pointing to the source data (image or video)

@@ -11,8 +11,8 @@ contains one or more **Data Sub-Entries**, each pointing to a [source file](sour
 and carrying its own metadata and annotations.
 
 This replaces the old `SingleFrame`/`FrameGroup` split: 
-* A `DataEntry` with a single sub-entry corresponds to a `SingleFrame`.
-* A `DataEntry` with multiple sub-entries corresponds to a `FrameGroup`.
+* A `DataEntry` with a single sub-entry corresponds to the legacy `SingleFrame`.
+* A `DataEntry` with multiple sub-entries corresponds to the legacy `FrameGroup`.
 
 ## Entry Types
 

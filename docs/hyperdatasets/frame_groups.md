@@ -2,6 +2,11 @@
 title: FrameGroups
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 The ClearML Enterprise provides **FrameGroup**s as an easy-to-use type of frame supporting multiple sources. 
 Add a list of SingleFrames to a FrameGroup, and then register FrameGroups in a Dataset version. 
 [View and edit](webapp/webapp_datasets_frames.md) FrameGroups and the SingleFrames they contain 

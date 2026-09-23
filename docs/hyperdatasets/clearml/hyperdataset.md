@@ -10,7 +10,7 @@ ClearML Enterprise's **`HyperDataset`** class represents a dataset and provides 
 following purposes:
 * Connecting source data to the ClearML Enterprise platform
 * Using ClearML Enterprise's Git-like [dataset versioning](#hyperdataset-versioning)
-* Integrating the powerful features of [Dataviews](dataviews.md) with a task
+* Feeding a task with a subset of one or more dataset versions, using [Dataviews](dataviews.md) to query, filter, and iterate over entries
 * [Annotating](../webapp/webapp_datasets_frames.md#annotations) images and videos
 
 A `HyperDataset` object is a handle bound to a specific dataset **version**. A dataset can have multiple

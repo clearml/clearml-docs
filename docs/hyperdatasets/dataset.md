@@ -2,11 +2,16 @@
 title: Datasets and Dataset Versions
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 ClearML Enterprise's **Datasets** and **Dataset versions** provide the internal data structure 
 and functionality for the following purposes:
 * Connecting source data to the ClearML Enterprise platform
 * Using ClearML Enterprise's Git-like [Dataset versioning](#dataset-versioning)
-* Integrating the powerful features of [Dataviews](dataviews.md) with a task
+* Feeding a task with a subset of one or more dataset versions, using [Dataviews](dataviews.md) to query, filter, and iterate over frames
 * [Annotating](webapp/webapp_datasets_frames.md#annotations) images and videos
 
 Datasets consist of versions with SingleFrames and/or FrameGroups. Each Dataset can contain multiple versions, which 

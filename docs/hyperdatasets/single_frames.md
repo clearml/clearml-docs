@@ -2,6 +2,10 @@
 title: SingleFrames
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
 
 A `SingleFrame` contains metadata pointing to raw data, and other metadata and data, which supports experimentation and 
 ClearML Enterprise's Git-like Hyper-Dataset versioning.

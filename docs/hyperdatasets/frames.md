@@ -2,6 +2,11 @@
 title: Frames Overview
 ---
 
+:::important[Legacy Interface]
+This page describes the legacy `allegroai` Python package.
+For the current interface, available through the `clearml` Python package (v2.1 and above), see [Hyper-Datasets](overview.md).
+:::
+
 The concept of a **Frame** represents the basic building block of data in ClearML Enterprise. 
 
 Two types of frames are supported:
