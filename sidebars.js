@@ -221,6 +221,7 @@ module.exports = {
                 'clearml_sdk/model_sdk',
                 'clearml_sdk/apiclient_sdk',
                 'clearml_data/clearml_data_sdk',
+                'clearml_sdk/http_router',
                 'clearml_sdk/hpo_sdk',
                 {
                     'Pipelines':
@@ -231,36 +232,61 @@ module.exports = {
                 },
                 'clearml_sdk/task_scheduler_sdk',
                 'clearml_sdk/trigger_scheduler_sdk',
-            ]
-        },
-        {
-            type: 'category',
-            collapsible: true,
-            collapsed: true,
-            label: 'Hyper-Datasets',
-            link: {type: 'doc', id: 'hyperdatasets/overview'},
-            items: [
-                'hyperdatasets/dataset',
                 {
                     type: 'category',
                     collapsible: true,
                     collapsed: true,
-                    label: 'Frames',
-                    link: {type: 'doc', id: 'hyperdatasets/frames'},
+                    label: 'Hyper-Datasets',
+                    link: {type: 'doc', id: 'hyperdatasets/overview'},
                     items: [
-                        'hyperdatasets/single_frames',
-                        'hyperdatasets/frame_groups',
-                        'hyperdatasets/sources',
-                        'hyperdatasets/annotations',
-                        'hyperdatasets/masks',
-                        'hyperdatasets/previews',
-                        'hyperdatasets/custom_metadata'
+                        'hyperdatasets/clearml/hyperdataset',
+                        {
+                            type: 'category',
+                            collapsible: true,
+                            collapsed: true,
+                            label: 'Data Entries',
+                            link: {type: 'doc', id: 'hyperdatasets/clearml/data_entries'},
+                            items: [
+                                'hyperdatasets/clearml/sources',
+                                'hyperdatasets/clearml/annotations',
+                                'hyperdatasets/clearml/masks',
+                                'hyperdatasets/clearml/previews',
+                                'hyperdatasets/clearml/custom_metadata',
+                            ]
+                        },
+                        'hyperdatasets/clearml/dataviews',
+                        'hyperdatasets/clearml/vector_search',
+                        {
+                            type: 'category',
+                            collapsible: true,
+                            collapsed: true,
+                            label: 'Legacy (allegroai)',
+                            link: {type: 'doc', id: 'hyperdatasets/legacy_overview'},
+                            items: [
+                                'hyperdatasets/dataset',
+                                {
+                                    type: 'category',
+                                    collapsible: true,
+                                    collapsed: true,
+                                    label: 'Frames',
+                                    link: {type: 'doc', id: 'hyperdatasets/frames'},
+                                    items: [
+                                        'hyperdatasets/single_frames',
+                                        'hyperdatasets/frame_groups',
+                                        'hyperdatasets/sources',
+                                        'hyperdatasets/annotations',
+                                        'hyperdatasets/masks',
+                                        'hyperdatasets/previews',
+                                        'hyperdatasets/custom_metadata'
+                                    ]
+                                },
+                                'hyperdatasets/dataviews',
+                            ]
+                        },
                     ]
                 },
-                'hyperdatasets/dataviews',
             ]
         },
-
     ],
     rnSidebar: [
         {'Server': [

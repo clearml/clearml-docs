@@ -63,6 +63,12 @@ as well as retrieving them for use in code.
 
 See [ClearML Data](../clearml_data/clearml_data.md) or the [Dataset SDK reference page](../references/sdk/dataset.md).
 
+### HttpRouter
+The `HttpRouter` class lets you expose an application running inside a task as an HTTP endpoint: route and 
+intercept local traffic through a proxy, and request a publicly accessible endpoint for it.
+
+See an [overview](http_router.md) of `HttpRouter` usage, or the [HttpRouter SDK reference page](../references/sdk/http_router.md).
+
 ### Hyperparameter Optimization 
 
 ClearML's `optimization` module includes classes that support hyperparameter optimization (HPO):
