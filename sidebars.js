@@ -360,9 +360,10 @@ module.exports = {
             {
                 'Enterprise':
                         [
-                           'release_notes/sdk/enterprise/ver_3_14',
+                           'release_notes/sdk/enterprise/ver_3_15',
                            {
                                 'Older Versions': [
+                                   'release_notes/sdk/enterprise/ver_3_14',
                                    'release_notes/sdk/enterprise/ver_3_13',
                                    'release_notes/sdk/enterprise/ver_3_12',
                                    'release_notes/sdk/enterprise/ver_3_11',
