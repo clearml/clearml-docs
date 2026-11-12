@@ -374,9 +374,10 @@ module.exports = {
         ]},
         {'ClearML Agent':
             [
-                'release_notes/clearml_agent/ver_3_0',
+                'release_notes/clearml_agent/ver_4_0',
                 {
                     'Older Versions': [
+                        'release_notes/clearml_agent/ver_3_0',
                         'release_notes/clearml_agent/ver_2_0',
                         'release_notes/clearml_agent/ver_1_9', 'release_notes/clearml_agent/ver_1_8',
                         'release_notes/clearml_agent/ver_1_7', 'release_notes/clearml_agent/ver_1_6',

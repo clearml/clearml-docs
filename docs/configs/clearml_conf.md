@@ -74,6 +74,18 @@ for information about using environment variables with Windows in the configurat
 continue running. When set to `true`, the agent crashes when encountering an exception.
 
 ---
+
+<a id="crash_backoff"></a>
+
+**`agent.crash_backoff`** (*bool*)
+
+* Controls how long the agent daemon waits before restarting its task loop after an exception:
+  * `false` (default) - The daemon always waits one second.
+  * `true` - The wait doubles with each repeated exception, up to one minute. This prevents the agent from contacting a 
+    failing server every second.
+* The environment variable `CLEARML_AGENT_CRASH_BACKOFF` overrides this configuration option.
+
+---
         
 **`agent.cuda_version`** (*float*)
         
@@ -750,6 +762,194 @@ Torch Nightly builds are ephemeral and are deleted from time to time.
 
 <br/>
 
+#### agent.snug
+
+**`agent.snug`** (*dict*)
+
+* Dictionary containing options for SNUG, the agent's opt-in LLM usage metering module. When enabled, SNUG meters the 
+  token and byte usage of LLM calls made by tasks and reports it to ClearML. It does not weaken TLS (certificate 
+  validation stays in the task's own TLS library), and it only meters hosts that match the [whitelist](#snug_whitelist).
+
+---
+
+<a id="snug_enabled"></a>
+
+**`agent.snug.enabled`** (*bool*)
+
+* Enables or disables SNUG. When `false` (default), SNUG is turned off and has no effect on the agent.
+* The environment variable `CLEARML_AGENT_SNUG_ENABLED` overrides this configuration option.
+
+---
+
+<a id="snug_app_mode"></a>
+
+**`agent.snug.app_mode`** (*string*)
+
+* Opt-in metering for desktop and CLI AI apps that statically link their TLS stack and so cannot be metered by the default 
+  mechanism. When set, the agent launches a local forward proxy and routes the app's traffic through it.
+* The values are:
+  * `""` (default) - Disable app mode
+  * `claude_desktop` - Built-in profile for Claude Desktop
+  * `cli` - Generic mode for terminal AI coding CLIs (for example, Claude Code, Codex, OpenCode). Set the binary to wrap 
+    with `agent.snug.wrap_bins` and its runtime with `agent.snug.wrap_kind`
+* The environment variable `CLEARML_AGENT_SNUG_APP_MODE` overrides this configuration option.
+
+---
+
+<a id="snug_wrap_bins"></a>
+
+**`agent.snug.wrap_bins`** (*string*)
+
+* For `app_mode: "cli"`: comma- or space-separated basenames of the CLI binaries to wrap on `PATH` (for example, `"claude"` 
+  or `"codex"`).
+* The environment variable `CLEARML_AGENT_SNUG_WRAP_BINS` overrides this configuration option.
+
+---
+
+<a id="snug_wrap_kind"></a>
+
+**`agent.snug.wrap_kind`** (*string*)
+
+* For `app_mode: "cli"`: the CA-trust and proxy recipe that matches the CLI's runtime. The values are:
+  * `node_bun` (default) - Node or Bun runtimes (uses `NODE_EXTRA_CA_CERTS`)
+  * `rust_ssl_cert` / `go_ssl_cert` - Rust or Go runtimes (uses `SSL_CERT_FILE` with a combined CA bundle)
+* The environment variable `CLEARML_AGENT_SNUG_WRAP_KIND` overrides this configuration option.
+
+---
+
+<a id="snug_report_usage_events"></a>
+
+**`agent.snug.report_usage_events`** (*bool*)
+
+* When `true`, report metered token counts to the ClearML Server so usage appears in the AI usage dashboard. Only 
+  whitelist-matched hosts are reported. Default: `false`.
+* The environment variable `CLEARML_AGENT_SNUG_REPORT_USAGE_EVENTS` overrides this configuration option.
+
+:::info Enterprise Feature
+Reporting usage events requires a ClearML Enterprise server.
+:::
+
+---
+
+<a id="snug_report_task_metrics"></a>
+
+**`agent.snug.report_task_metrics`** (*bool*)
+
+* When `true`, report metered per-request usage to the task's own **SCALARS** tab. Only whitelist-matched hosts are 
+  reported. Select the reported signals with `agent.snug.task_metrics_fields`. Default: `false`.
+* The environment variable `CLEARML_AGENT_SNUG_REPORT_TASK_METRICS` overrides this configuration option.
+
+---
+
+<a id="snug_task_metrics_fields"></a>
+
+**`agent.snug.task_metrics_fields`** (*[string]*)
+
+* The per-request signals reported to the task's **SCALARS** tab when `agent.snug.report_task_metrics` is enabled. 
+  Each field is reported as its own scalar plot, with a series per provider/host. By default, all fields are reported:
+  * `tokens_in` - Fresh (non-cached) prompt tokens
+  * `tokens_out` - Response (completion) tokens
+  * `cache_read_tokens` - Prompt tokens served from the provider cache
+  * `cache_write_tokens` - Prompt tokens written into the provider cache
+  * `requests` - Cumulative count of metered requests
+  * `latency_ms` - Time from request start to completion
+  * `bytes_tx` / `bytes_rx` - Plaintext bytes sent / received
+  * `tool_calls` / `tool_call_errors` - Tool activity: a signal series, a per-tool series, and cumulative totals
+* For Anthropic, OpenAI, and Gemini, token counts are the exact usage reported by the provider. For other hosts, they 
+  are estimates based on the configured tokenizer.
+* The environment variable `CLEARML_AGENT_SNUG_TASK_METRICS_FIELDS` (comma-separated) overrides this configuration option.
+
+---
+
+<a id="snug_whitelist"></a>
+
+**`agent.snug.whitelist`** (*dict*)
+
+* The hosts that SNUG meters. It contains:
+  * `version` - Whitelist format version (`1`)
+  * `default_action` - How to handle hosts that do not match any rule: `meter` (count bytes) or `ignore` (pass through untouched)
+  * `rules` - List of rules, each with the following fields:
+    * `host` - Case-insensitive host name. A leading and/or trailing `*` acts as a wildcard (for example, `*.anthropic.com`, 
+      `api.openai.*`, `*googleapis*`, or `*` for any host)
+    * `path_prefix` - Path prefix to match (default: `/`)
+    * `inject_headers` - Whether to add `project:` / `session:` attribution headers to requests (default: `false`). 
+      Enable only when a downstream system (such as your own LLM gateway) uses these headers to attribute requests to tasks
+    * `tokenizer` - Tokenizer used for estimates: `claude`, `cl100k`, or `approx` (default)
+* By default, the whitelist meters `api.openai.com`, `api.anthropic.com`, `claude.ai`, and `generativelanguage.googleapis.com` 
+  without injecting headers. Set `rules: []` for an empty whitelist.
+* The whitelist is merged across configuration layers: a whitelist set by an administrator in the configuration vault 
+  is a protected base. A user's `clearml.conf` whitelist can add hosts on top of it, but cannot remove or override 
+  administrator rules.
+
+---
+
+**`agent.snug.default_tokenizer`** (*string*)
+
+* Tokenizer applied to connections without a whitelist rule, so token estimates are available for every metered request. 
+  Whitelist rules can override it per host. The values are: `claude`, `cl100k`, or `approx` (default).
+
+---
+
+<a id="snug_call_history"></a>
+
+**`agent.snug.call_history`** (*string*)
+
+* Call-history capture mode: logs the most recent full request/response pairs to LLM providers, for debugging. 
+  Credentials are redacted. The values are:
+  * `off` (default) - Capture nothing
+  * `collect` - Keep the pairs in a buffer without printing them
+  * `dump` - Print the buffered pairs once, then revert to `collect`
+  * `continuous` - Print each request/response pair as it completes
+* The environment variable `CLEARML_AGENT_SNUG_CALL_HISTORY` overrides this configuration option.
+* You can change the mode for a specific task while it is running by setting the `_snug_call_history` user property in the task's 
+  **CONFIGURATION > USER PROPERTIES**.
+
+---
+
+**`agent.snug.call_history_buffer`** (*integer*)
+
+* Number of most recent request/response pairs kept in the call-history buffer. Default: `50`.
+
+---
+
+**`agent.snug.call_history_cap_bytes`** (*integer*)
+
+* Maximum number of bytes captured per direction (request and response each) for a call-history entry. Entries exceeding 
+  this size are truncated. Set to `0` for no limit. Default: `262144`.
+
+---
+
+**`agent.snug.poll_interval_sec`** (*integer*)
+
+* How often (in seconds) to check the task's user properties for SNUG setting changes. Default: `10`.
+
+---
+
+**`agent.snug.aggregator_url`** (*string*)
+
+* Endpoint to forward metered request events to, for sending usage data to a system other than the ClearML Server. 
+  Events are batched and sent as newline-delimited JSON (`application/json-lines`). Default: `null` (disabled).
+
+---
+
+<a id="snug_debug_log"></a>
+
+**`agent.snug.debug_log`** (*bool*)
+
+* When `true`, print verbose SNUG diagnostics for every process. Errors are always logged. Default: `false`.
+* The environment variable `CLEARML_AGENT_SNUG_DEBUG_LOG` overrides this configuration option.
+
+:::tip Per-task SNUG controls
+Users can adjust SNUG for an individual task by adding the following user properties in the task's **CONFIGURATION > USER PROPERTIES** 
+(before launch or while the task is running):
+* `_snug_call_history` - Call-history capture mode (`off`, `collect`, `dump`, or `continuous`)
+* `_snug_whitelist` - Additional hosts to meter for this task, as a comma/space/newline-separated host list or a JSON list 
+  of whitelist rules (for example, `[{"host": "api.my-llm.com", "inject_headers": true}]`). Administrator rules always take precedence
+* `_snug_user_properties_poll_rate` - How often (in seconds) to re-read these properties
+:::
+
+<br/>
+
 #### agent.vcs_cache
         
 **`agent.vcs_cache`** (*dict*)
@@ -772,6 +972,34 @@ Torch Nightly builds are ephemeral and are deleted from time to time.
 **`agent.vcs_cache.path`** (*string*)
         
 * The version control system cache clone folder when executing tasks.
+
+---
+
+**`agent.vcs_cache.lock_timeout_sec`** (*integer*)
+
+* Number of seconds to wait for another agent holding the lock of a cached repository. Default: `300`.
+* On timeout, the repository is cloned directly into the task's working folder, without using the cache.
+
+---
+
+**`agent.vcs_cache.temp_cache_on_lock_timeout`** (*bool*)
+
+* Set to `true` to revert to the legacy behavior on lock timeout: clone into a new temporary VCS cache folder (named 
+  `<name>.<hash>_<digits>`), which is removed once the repository is copied into the task's working folder. Default: `false`.
+
+---
+
+**`agent.vcs_cache.cleanup_orphans`** (*bool*)
+
+* On agent startup, remove leftover VCS cache folders created by older agent versions when the repository lock timed 
+  out (folders named `<name>.<hash>_<digits>`). Default: `true`.
+
+---
+
+**`agent.vcs_cache.orphan_min_age_sec`** (*integer*)
+
+* When `agent.vcs_cache.cleanup_orphans` is enabled, only remove leftover folders older than this value (in seconds). 
+  Newer folders might still be in use by an older agent running alongside. Default: `432000` (5 days).
      
 <br/>
 
