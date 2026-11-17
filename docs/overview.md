@@ -90,6 +90,6 @@ For detailed instructions on each step, refer to the respective sections in this
 ## Support
 For feature requests or bug reports, see ClearML on [GitHub](https://github.com/clearml/clearml/issues).
 
-If you have any questions, join the discussion on the **ClearML** [Slack channel](https://joinslack.clear.ml), or tag your questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/clearml) with the **clearml** tag.
+If you have any questions, join the discussion on the **ClearML** [Slack channel](https://joinslack.clear.ml).
 
 Lastly, you can always find us at [support@clearml.ai](mailto:support@clearml.ai?subject=ClearML).

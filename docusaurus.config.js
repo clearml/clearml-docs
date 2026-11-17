@@ -204,10 +204,6 @@ module.exports = {
               href: 'https://x.com/clearmlapp',
             },
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/clearml',
-            },
-            {
               label: 'LinkedIn',
               href: 'https://www.linkedin.com/company/clearml',
             },

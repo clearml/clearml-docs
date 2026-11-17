@@ -7,7 +7,6 @@ title: Community Resources
 If you're looking to contribute or have questions about ClearML, here are some ways to get involved with the community:
 
 * Post your questions or join discussions on the [ClearML Slack channel](https://joinslack.clear.ml).  
-* Ask questions on StackOverflow, using the [clearml tag](https://stackoverflow.com/questions/tagged/clearml).  
 * Reach us directly via email at [support@clear.ml](mailto:support@clear.ml).
 
 ## Additional ClearML Resources

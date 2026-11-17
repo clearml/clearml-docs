@@ -403,8 +403,7 @@ pip install -U clearml
 Your firewall may be preventing the connection. Try one of the following solutions:
 
 * Direct Python "requests" to use the enterprise certificate file by setting the OS environment variables `CURL_CA_BUNDLE` 
-  or `REQUESTS_CA_BUNDLE`. For a detailed discussion of this topic, see the [Requests documentation](https://requests.readthedocs.io/en/latest/user/advanced/#ssl-cert-verification) 
-  and this [Stack Overflow discussion](https://stackoverflow.com/questions/48391750/disable-python-requests-ssl-validation-for-an-imported-module).
+  or `REQUESTS_CA_BUNDLE`. For a detailed discussion of this topic, see the [Requests documentation](https://requests.readthedocs.io/en/latest/user/advanced/#ssl-cert-verification).
 * Disable certificate verification   
   
   :::warning
@@ -986,7 +985,7 @@ see [Deploying ClearML Server: Kubernetes using Helm](deploying_clearml/clearml_
 
 #### My Docker cannot load a local host directory on SELinux?   <a id="selinux"></a>
 
-If you are using SELinux, run the following command (see this [discussion](https://stackoverflow.com/a/24334000)):
+If you are using SELinux, run the following command:
 
 ```
 chcon -Rt svirt_sandbox_file_t /opt/clearml
