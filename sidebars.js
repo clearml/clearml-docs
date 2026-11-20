@@ -129,6 +129,7 @@ module.exports = {
             'integrations/click',
             'integrations/fastai',
             {"Hugging Face": ['integrations/transformers', 'integrations/accelerate']},
+            'integrations/halo',
             'integrations/hydra', 'integrations/jsonargparse',
             'integrations/keras', 'integrations/keras_tuner',
             'integrations/langchain',

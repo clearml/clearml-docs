@@ -12,6 +12,7 @@ ClearML seamlessly integrates with a wide range of popular machine learning fram
 * [YOLO v8](yolov8.md)
 * [Hugging Face Accelerate](accelerate.md)
 * [Hugging Face Transformers](transformers.md)
+* [Halo](halo.md) - Hugging Face training with faster kernels and lower peak memory
 * [MMEngine](mmengine.md)
 * [MMCV](mmcv.md)
 * [MONAI](monai.md)
